@@ -37,8 +37,13 @@ npm run build      # typecheck + production build into dist/
 npm run typecheck
 ```
 
-> **Note.** `npm install` fails inside the Google Drive mirror (`EBADF` / `EPERM` on
-> `node_modules`). Develop from a local checkout of the repo, not from the Drive folder.
+> **Working from Google Drive.** Drive's sync layer cannot host `node_modules` (`npm install` dies
+> with `EBADF` / `EPERM`) and cannot host a `.git` directory either. The Drive copy is therefore set
+> up with `git init --separate-git-dir`: the working tree is
+> `G:\My Drive\Red Shell\Golden Task Hub`, the git store is
+> `C:\Users\PABLO\repos\golden-task-hub-drive.git`, and a one-line `.git` *file* points at it. Commit
+> and push from the Drive folder as normal — but run `npm` from an ordinary local clone, or let CI
+> build.
 
 Deployed to GitHub Pages by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on every
 push to `main`. Routing is hash-based so deep links survive a static host with no SPA rewrite.
