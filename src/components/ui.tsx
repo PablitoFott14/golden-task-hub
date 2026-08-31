@@ -52,6 +52,50 @@ export function IconFile({ size = 14 }: { size?: number }) {
     </svg>
   );
 }
+export function IconHome({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
+      <path d="M2.5 7 8 2.5 13.5 7" />
+      <path d="M3.7 6.4V13h8.6V6.4" />
+    </svg>
+  );
+}
+export function IconTasks({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
+      <rect x="2.3" y="2.3" width="4.6" height="4.6" rx="1" />
+      <rect x="9.1" y="2.3" width="4.6" height="4.6" rx="1" />
+      <rect x="2.3" y="9.1" width="4.6" height="4.6" rx="1" />
+      <rect x="9.1" y="9.1" width="4.6" height="4.6" rx="1" />
+    </svg>
+  );
+}
+export function IconSpec({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
+      <path d="M4 2h5l3 3v9H4z" />
+      <path d="M6 8h4M6 10.5h4M6 5.5h2" />
+    </svg>
+  );
+}
+export function IconChecklist({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
+      <path d="M2.6 5.2 4 6.6l2-2.4" />
+      <path d="M2.6 11 4 12.4l2-2.4" />
+      <path d="M8.6 5h5M8.6 11h5" />
+    </svg>
+  );
+}
+export function IconProcess({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
+      <circle cx="4" cy="4" r="1.7" />
+      <circle cx="12" cy="12" r="1.7" />
+      <path d="M4 5.7v2.6a2 2 0 0 0 2 2h4.3" />
+    </svg>
+  );
+}
 
 /* ---------------------------------------------------------------- bits */
 

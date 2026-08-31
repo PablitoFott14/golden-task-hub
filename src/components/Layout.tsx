@@ -1,20 +1,48 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import CommandPalette from "./CommandPalette";
-import { IconArrow, IconMenu, IconSearch } from "./ui";
+import {
+  IconChecklist,
+  IconHome,
+  IconProcess,
+  IconSearch,
+  IconSpec,
+  IconTasks,
+} from "./ui";
 import { cx } from "../lib/hooks";
+import { tasks, taskById } from "../data";
+import { clarifications } from "../data/spec";
+import { totalChecks } from "../data/checklist";
 
 const NAV = [
-  { to: "/", label: "Start here", end: true },
-  { to: "/golden-tasks", label: "Golden tasks" },
-  { to: "/spec", label: "Spec doc" },
-  { to: "/checklist", label: "Pre-submit" },
+  { to: "/", label: "Overview", icon: <IconHome />, end: true },
+  { to: "/golden-tasks", label: "Golden Tasks", icon: <IconTasks />, count: tasks.length },
+  { to: "/spec", label: "Spec & Clarifications", icon: <IconSpec />, count: clarifications.length },
+  { to: "/checklist", label: "Pre-Submit Checklist", icon: <IconChecklist />, count: totalChecks },
 ];
+
+/** Human breadcrumb for the top bar, derived from the path. */
+function useCrumbs(pathname: string): { label: string; to?: string }[] {
+  if (pathname === "/") return [{ label: "Overview" }];
+  if (pathname.startsWith("/golden-tasks/")) {
+    const id = pathname.split("/")[2];
+    const t = taskById(id);
+    return [
+      { label: "Golden Tasks", to: "/golden-tasks" },
+      { label: t?.meta.title ?? id },
+    ];
+  }
+  if (pathname.startsWith("/golden-tasks")) return [{ label: "Golden Tasks" }];
+  if (pathname.startsWith("/spec")) return [{ label: "Spec & Clarifications" }];
+  if (pathname.startsWith("/checklist")) return [{ label: "Pre-Submit Checklist" }];
+  return [{ label: "Not found" }];
+}
 
 export default function Layout({ children }: { children: ReactNode }) {
   const [cmdk, setCmdk] = useState(false);
-  const [sheet, setSheet] = useState(false);
+  const [drawer, setDrawer] = useState(false);
   const { pathname, hash } = useLocation();
+  const crumbs = useCrumbs(pathname);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -28,7 +56,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    setSheet(false);
+    setDrawer(false);
     if (hash) {
       const el = document.getElementById(hash.slice(1));
       if (el) {
@@ -39,70 +67,99 @@ export default function Layout({ children }: { children: ReactNode }) {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   }, [pathname, hash]);
 
-  return (
-    <>
-      <header className="nav">
-        <div className="shell nav__inner">
-          <Link className="nav__brand" to="/">
-            Golden Task Hub <span>Red Shell</span>
-          </Link>
+  const isTasks = (to: string) => to === "/golden-tasks" && pathname.startsWith("/golden-tasks");
 
-          <nav className="nav__rail" aria-label="Sections">
-            {NAV.map((l) => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                end={l.end}
-                className={({ isActive }) =>
-                  cx("nav__link", (isActive || (l.to === "/golden-tasks" && pathname.startsWith("/golden-tasks"))) && "is-active")
-                }
-              >
-                {l.label}
-              </NavLink>
+  const brand = (
+    <Link className="sidebar__brand" to="/" onClick={() => setDrawer(false)}>
+      <span className="sidebar__mark" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="square">
+          <path d="M3 8.4 6.4 12 13 5" />
+        </svg>
+      </span>
+      <span className="sidebar__brand-text">
+        <b>Golden Task Hub</b>
+        <span>Red Shell</span>
+      </span>
+    </Link>
+  );
+
+  return (
+    <div className="app">
+      <aside className={cx("sidebar", drawer && "is-open")} aria-label="Primary">
+        {brand}
+
+        <button className="sidebar__search" onClick={() => setCmdk(true)} aria-label="Search the hub">
+          <IconSearch />
+          <span>Search everything</span>
+          <kbd>⌘K</kbd>
+        </button>
+
+        <nav className="sidebar__nav" aria-label="Sections">
+          {NAV.map((l) => (
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.end}
+              className={({ isActive }) => cx("navitem", (isActive || isTasks(l.to)) && "is-active")}
+            >
+              <span className="navitem__icon">{l.icon}</span>
+              {l.label}
+              {typeof l.count === "number" && <span className="navitem__count">{l.count}</span>}
+            </NavLink>
+          ))}
+
+          <p className="sidebar__group label">Reference</p>
+          <Link className="navitem" to="/#process">
+            <span className="navitem__icon"><IconProcess /></span>
+            The Process
+          </Link>
+        </nav>
+
+        <div className="sidebar__foot">
+          <p>Source of truth</p>
+          <p><code>[External] OpenClaw MM Rubrics MULTI TURN — Guidelines</code></p>
+        </div>
+      </aside>
+
+      {drawer && <div className="scrim is-open" onClick={() => setDrawer(false)} aria-hidden="true" />}
+
+      <div className="main">
+        <div className="mobilebar">
+          <button className="iconbtn" onClick={() => setDrawer(true)} aria-label="Open menu" aria-expanded={drawer}>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round">
+              <path d="M2 4h12M2 8h12M2 12h12" />
+            </svg>
+          </button>
+          {brand}
+          <button className="iconbtn" onClick={() => setCmdk(true)} aria-label="Search the hub">
+            <IconSearch size={16} />
+          </button>
+        </div>
+
+        <div className="topbar">
+          <nav className="crumbs" aria-label="Breadcrumb">
+            <Link to="/">Hub</Link>
+            {crumbs.map((c, i) => (
+              <span key={c.label + i} style={{ display: "contents" }}>
+                <span className="crumbs__sep" aria-hidden="true">/</span>
+                {c.to && i < crumbs.length - 1 ? (
+                  <Link to={c.to}>{c.label}</Link>
+                ) : (
+                  <span className="crumbs__here">{c.label}</span>
+                )}
+              </span>
             ))}
           </nav>
-
-          <div className="nav__spacer" />
-
-          <button className="searchpill" onClick={() => setCmdk(true)} aria-label="Search the hub">
-            <IconSearch />
-            <span className="searchpill__text">Search everything</span>
-            <kbd>⌘K</kbd>
-          </button>
-
-          <button className="nav__menu" onClick={() => setSheet((s) => !s)} aria-expanded={sheet} aria-label="Menu">
-            <IconMenu />
+          <span className="topbar__spacer" />
+          <button className="btn btn--sm btn--ghost" onClick={() => setCmdk(true)}>
+            <IconSearch size={14} /> Search <kbd>⌘K</kbd>
           </button>
         </div>
 
-        {sheet && (
-          <div className="navsheet">
-            <div className="shell">
-              {NAV.map((l) => (
-                <Link key={l.to} to={l.to}>
-                  {l.label}
-                  <IconArrow />
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </header>
-
-      <main>{children}</main>
-
-      <footer className="foot-line">
-        <div className="shell foot-line__row">
-          <span>Golden Task Hub · OpenClaw MM Rubrics MULTI TURN · Red Shell</span>
-          <span className="nav__spacer" />
-          <Link to="/golden-tasks">Golden tasks</Link>
-          <Link to="/spec">Spec doc</Link>
-          <Link to="/checklist">Pre-submit</Link>
-          <span>Source of truth: [External] OpenClaw MM Rubrics MULTI TURN – Guidelines</span>
-        </div>
-      </footer>
+        <main>{children}</main>
+      </div>
 
       <CommandPalette open={cmdk} onClose={() => setCmdk(false)} />
-    </>
+    </div>
   );
 }

@@ -1,7 +1,8 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Index-First · theme: Cobalt
- * enrichment: none (typography only) · nav: N13 inline ⌘K pill · footer: Ft2 inline single line
+/* Hallmark · genre: modern-minimal · macrostructure: Workbench · theme: Cobalt (retuned)
+ * enrichment: none (typography only) · nav: N3 side-rail · footer: sidebar meta line
  * axes: paper=cool-light · display=grotesk-sans · accent=electric-cobalt
- * pre-emit critique: P5 H5 E4 S5 R4 V5
+ * outlier: JetBrains Mono, one role — machine readout (filenames, ids, labels, code, numerals)
+ * pre-emit critique: P5 H5 E5 S5 R5 V4
  */
 
 :root {
@@ -12,92 +13,110 @@
   --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --text-xs: 0.688rem;
-  --text-sm: 0.8125rem;
-  --text-base: 0.9375rem;
-  --text-md: 1.0625rem;
-  --text-lg: 1.3125rem;
-  --text-xl: 1.625rem;
-  --text-2xl: 2.0625rem;
-  --text-3xl: 2.5rem;
-  --text-display-s: clamp(2rem, 3.2vw + 0.9rem, 3rem);
-  --text-display: clamp(2.4rem, 4.4vw + 0.9rem, 4.25rem);
+  /* Compact, product-grade scale. 14px base for working density. */
+  --text-xs: 0.6875rem;   /* 11 */
+  --text-sm: 0.8125rem;   /* 13 */
+  --text-base: 0.875rem;  /* 14 */
+  --text-md: 1rem;        /* 16 */
+  --text-lg: 1.1875rem;   /* 19 */
+  --text-xl: 1.4375rem;   /* 23 */
+  --text-2xl: 1.75rem;    /* 28 */
+  --text-3xl: clamp(1.9rem, 1.2vw + 1.4rem, 2.375rem); /* page titles */
 
-  /* ---- colour ---------------------------------------------------------- */
-  --color-paper: oklch(98.5% 0.004 250);
-  --color-paper-2: oklch(96.6% 0.006 252);
-  --color-paper-3: oklch(94.2% 0.008 252);
-  --color-rule: oklch(90.5% 0.008 252);
-  --color-rule-2: oklch(84% 0.011 252);
-  --color-muted: oklch(46% 0.016 255);
-  --color-ink-2: oklch(36% 0.018 257);
-  --color-ink: oklch(24% 0.02 258);
-  /* translucent veil behind the sticky nav, and the modal scrim */
-  --color-paper-veil: oklch(98.5% 0.004 250 / 0.88);
-  --color-scrim: oklch(24% 0.02 258 / 0.72);
+  /* ---- neutral surfaces ------------------------------------------------ */
+  /* Canvas is the working ground; surfaces (cards, sidebar) sit on it as
+     white planes separated by hairlines — no drop shadows in the resting UI. */
+  --color-canvas: oklch(97.6% 0.0035 258);
+  --color-surface: oklch(100% 0 0);
+  --color-surface-2: oklch(98.4% 0.003 258);   /* subtle fill: hover, thead, code */
+  --color-surface-3: oklch(96.2% 0.005 258);   /* stronger fill */
+  --color-sidebar: oklch(99% 0.0025 258);
 
-  --color-accent: oklch(52% 0.19 259);
-  --color-accent-hi: oklch(46% 0.19 259);
-  --color-accent-ink: oklch(99% 0.004 250);
-  --color-accent-wash: oklch(95.4% 0.028 258);
-  --color-focus: oklch(52% 0.19 259);
+  /* legacy aliases kept so nothing breaks — mapped onto the new surfaces */
+  --color-paper: var(--color-surface);
+  --color-paper-2: var(--color-surface-2);
+  --color-paper-3: var(--color-surface-3);
 
-  --color-graphite: oklch(22% 0.016 260);
-  --color-graphite-rule: oklch(34% 0.016 260);
-  --color-graphite-ink: oklch(93% 0.008 255);
-  --color-graphite-muted: oklch(69% 0.013 256);
-  /* the accent, lifted so it still reads on the graphite band */
-  --color-accent-on-dark: oklch(76% 0.13 258);
+  /* ---- ink ------------------------------------------------------------- */
+  --color-ink: oklch(24% 0.021 265);     /* headings */
+  --color-ink-2: oklch(37% 0.018 262);   /* body */
+  --color-muted: oklch(52% 0.015 262);   /* secondary */
+  --color-faint: oklch(63% 0.012 262);   /* tertiary, placeholders */
 
-  /* semantic signals — chips and dots only, always paired with a label */
-  --color-ok: oklch(42% 0.1 152);
-  --color-ok-wash: oklch(95.5% 0.032 152);
-  --color-no: oklch(45% 0.16 25);
-  --color-no-wash: oklch(95.6% 0.03 25);
-  --color-warn: oklch(44% 0.1 72);
-  --color-warn-wash: oklch(96% 0.045 82);
+  /* ---- hairlines ------------------------------------------------------- */
+  --color-rule: oklch(92.4% 0.004 262);
+  --color-rule-2: oklch(88% 0.006 262);
 
-  /* ---- space ----------------------------------------------------------- */
+  /* ---- veils ----------------------------------------------------------- */
+  --color-surface-veil: oklch(100% 0 0 / 0.82);
+  --color-canvas-veil: oklch(97.6% 0.0035 258 / 0.86);
+  --color-scrim: oklch(24% 0.021 265 / 0.42);
+
+  /* ---- accent (indigo / cobalt) --------------------------------------- */
+  --color-accent: oklch(51% 0.196 264);
+  --color-accent-hi: oklch(45% 0.2 264);
+  --color-accent-ink: oklch(99% 0.004 258);
+  --color-accent-soft: oklch(96.2% 0.03 264);      /* active nav, wash */
+  --color-accent-line: oklch(80% 0.09 264);
+  --color-accent-wash: var(--color-accent-soft);
+  --color-focus: oklch(51% 0.196 264);
+
+  /* ---- semantic status (dot + label; wash only on callout strips) ----- */
+  --color-ok: oklch(50% 0.12 152);
+  --color-ok-soft: oklch(96% 0.03 152);
+  --color-no: oklch(52% 0.17 25);
+  --color-no-soft: oklch(96.4% 0.028 25);
+  --color-warn: oklch(58% 0.11 70);
+  --color-warn-soft: oklch(96.6% 0.045 82);
+  --color-ok-wash: var(--color-ok-soft);
+  --color-no-wash: var(--color-no-soft);
+  --color-warn-wash: var(--color-warn-soft);
+
+  /* ---- space (4pt) ----------------------------------------------------- */
   --space-3xs: 0.125rem;
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
-  --space-xl: 2.5rem;
-  --space-2xl: 4rem;
-  --space-3xl: 6rem;
-  --space-4xl: 9rem;
+  --space-xl: 2.25rem;
+  --space-2xl: 3.5rem;
+  --space-3xl: 5rem;
 
   /* ---- shape ----------------------------------------------------------- */
   --radius-sm: 4px;
-  --radius: 6px;
+  --radius: 7px;
   --radius-lg: 10px;
+  --radius-pill: 999px;
   --rule-hair: 1px;
-  --shadow-whisper: 0 1px 2px oklch(24% 0.02 258 / 0.06);
-  --shadow-panel: 0 18px 48px -28px oklch(24% 0.02 258 / 0.42);
+
+  /* ---- elevation (overlays + hover only) ------------------------------ */
+  --shadow-sm: 0 1px 2px oklch(24% 0.021 265 / 0.05);
+  --shadow-lift: 0 6px 20px -12px oklch(24% 0.021 265 / 0.24);
+  --shadow-panel: 0 24px 60px -30px oklch(24% 0.021 265 / 0.45);
 
   /* ---- motion ---------------------------------------------------------- */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --dur-micro: 120ms;
-  --dur-short: 220ms;
-  --dur-long: 420ms;
+  --dur-short: 200ms;
+  --dur-long: 380ms;
 
   /* ---- layers ---------------------------------------------------------- */
   --z-base: 1;
   --z-raised: 10;
-  --z-dropdown: 100;
   --z-sticky: 200;
-  --z-sticky-nav: 260;
+  --z-topbar: 240;
+  --z-sidebar: 300;
+  --z-drawer: 360;
   --z-modal: 400;
-  --z-toast: 500;
-  --z-tooltip: 600;
 
-  /* nav height — sticky in-page heads dock beneath it */
-  --banner-height: 58px;
-
+  /* ---- shell metrics --------------------------------------------------- */
+  --sidebar-w: 16.5rem;
+  --topbar-h: 3.5rem;
+  --content-max: 60rem;   /* reading measure for prose columns */
+  --content-wide: 78rem;  /* wide surfaces (library, tables) */
+  --toc-w: 13.5rem;
   --measure: 68ch;
-  --shell: 76rem;
 }

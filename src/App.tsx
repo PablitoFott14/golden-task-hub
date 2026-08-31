@@ -9,18 +9,18 @@ import { IconArrow } from "./components/ui";
 
 function NotFound() {
   return (
-    <section className="page">
-      <div className="shell stack">
+    <div className="content">
+      <div className="stack">
         <p className="label">404</p>
-        <h1 style={{ fontSize: "var(--text-xl)" }}>That page is not in the hub.</h1>
+        <h1 style={{ fontSize: "var(--text-2xl)" }}>That page is not in the hub.</h1>
         <p className="lede">Press ⌘K and search for what you were after.</p>
         <p>
           <Link className="btn btn--primary" to="/">
-            Back to the index <IconArrow size={12} />
+            Back to the overview <IconArrow size={12} />
           </Link>
         </p>
       </div>
-    </section>
+    </div>
   );
 }
 

@@ -69,9 +69,10 @@ export default function Rubrics({ rubrics }: { rubrics: Rubric[] }) {
               </span>
               <div>
                 <div className="chiprow" style={{ marginBottom: "var(--space-xs)" }}>
-                  <Chip tone={bad ? "no" : "ok"} dot>
+                  <span className={cx("status", bad ? "status--no" : "status--ok")}>
+                    <span className="status__dot" />
                     {bad ? "Model A failed" : "Model A satisfied"}
-                  </Chip>
+                  </span>
                   {r.polarity === "negative" && <Chip tone="warn">negative</Chip>}
                   <Chip>{r.category}</Chip>
                   <Chip>{r.target}</Chip>
