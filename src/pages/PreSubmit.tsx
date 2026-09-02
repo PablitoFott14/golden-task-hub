@@ -1,231 +1,370 @@
-import { useMemo } from "react";
-import { motion } from "framer-motion";
-import { AlertTriangle, Check, Clock, Download, RotateCcw, ShieldCheck } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  AlertTriangle,
+  Check,
+  CheckCircle2,
+  ClipboardList,
+  Download,
+  FileText,
+  Gauge,
+  Image as ImageIcon,
+  Layers,
+  RotateCcw,
+  ScrollText,
+  Send,
+  Sparkles,
+  Wand2,
+} from "lucide-react";
 import { checklist, checklistMeta } from "../data/checklist";
-import { Crosslinks, Reveal, SectionRail } from "../components/ui";
+import type { Check as CheckItem, ChecklistSection } from "../data/types";
+import { Crosslinks, Reveal, SectionHeading } from "../components/ui";
 import { useScrollSpy } from "../lib/useScrollSpy";
-import { usePersisted } from "../lib/usePersisted";
 import { asset, cx } from "../lib/util";
 
-const SECTIONS = checklist.map((s) => ({ id: s.id, label: `${s.n}. ${s.title}` }));
-const IDS = SECTIONS.map((s) => s.id);
-const ALL = checklist.flatMap((s) => s.checks.map((c) => c.id));
+const CHECKS_KEY = "rsh.presubmit.checks.v1";
+
+const sectionIcon: Record<string, typeof FileText> = {
+  s1: Layers,
+  s2: ImageIcon,
+  s3: FileText,
+  s4: ClipboardList,
+  s5: ScrollText,
+  s6: Wand2,
+  s7: Gauge,
+};
 
 export default function PreSubmit() {
-  const active = useScrollSpy(IDS);
-  const [ticked, setTicked] = usePersisted<string[]>("rsh.checklist.v2", []);
+  const [checked, setChecked] = useState<Set<string>>(() => {
+    try {
+      const raw = localStorage.getItem(CHECKS_KEY);
+      return raw ? new Set<string>(JSON.parse(raw)) : new Set<string>();
+    } catch {
+      return new Set<string>();
+    }
+  });
+  const [justReset, setJustReset] = useState(false);
 
-  const done = useMemo(() => new Set(ticked), [ticked]);
-  const count = ALL.filter((id) => done.has(id)).length;
-  const pct = Math.round((count / ALL.length) * 100);
-  const ready = count === ALL.length;
+  useEffect(() => {
+    try {
+      localStorage.setItem(CHECKS_KEY, JSON.stringify([...checked]));
+    } catch {
+      /* private window */
+    }
+  }, [checked]);
 
-  const toggle = (id: string) =>
-    setTicked(done.has(id) ? ticked.filter((x) => x !== id) : [...ticked, id]);
+  const ids = useMemo(() => checklist.map((s) => s.id), []);
+  const activeId = useScrollSpy(ids);
+
+  const { total, done } = useMemo(() => {
+    const items = checklist.flatMap((s) => s.checks);
+    return { total: items.length, done: items.filter((i) => checked.has(i.id)).length };
+  }, [checked]);
+
+  const pct = total ? Math.round((done / total) * 100) : 0;
+  const allDone = total > 0 && done === total;
+
+  const toggle = (id: string) => {
+    setJustReset(false);
+    setChecked((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const setMany = (itemIds: string[], value: boolean) => {
+    setJustReset(false);
+    setChecked((prev) => {
+      const next = new Set(prev);
+      itemIds.forEach((id) => (value ? next.add(id) : next.delete(id)));
+      return next;
+    });
+  };
+
+  const submit = () => {
+    setChecked(new Set());
+    setJustReset(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.setTimeout(() => setJustReset(false), 4000);
+  };
+
+  const jump = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
-    <div>
-      <section className="relative overflow-hidden border-b border-ink-200/70 bg-surface">
-        <div className="pointer-events-none absolute inset-0 bg-aurora opacity-70" />
-        <div className="wrap relative py-14">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="chip bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300">
-              <Clock size={11} /> {checklistMeta.estimate}
-            </span>
-            <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
-              {ALL.length} checks · {checklist.length} sections
-            </span>
-          </div>
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+      <Reveal>
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <SectionHeading
+            eyebrow="Pre-Submit Gate"
+            title="One last pass before you submit"
+            sub={checklistMeta.subtitle}
+          />
+          <a href={asset(checklistMeta.pdf)} target="_blank" rel="noreferrer" className="btn-ghost shrink-0">
+            <Download size={15} /> Printable PDF
+          </a>
+        </div>
+      </Reveal>
 
-          <h1 className="mt-5 font-display text-[34px] font-bold tracking-tight text-ink-900 sm:text-[44px]">
-            {checklistMeta.title}
-          </h1>
-          <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600">
-            {checklistMeta.subtitle}
+      <Reveal>
+        <div className="mt-5 rounded-xl border border-amber-300/70 bg-amber-50/60 p-4 dark:border-amber-500/30 dark:bg-amber-500/10">
+          <div className="mb-1.5 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">
+            <AlertTriangle size={13} /> Rubrics are the biggest source of rejections
+          </div>
+          <p className="text-[13px] leading-relaxed text-ink-700">
+            {checklistMeta.warning.split(". ").slice(1).join(". ")} {checklistMeta.banner}
           </p>
+        </div>
+      </Reveal>
 
-          <div className="mt-6 max-w-2xl rounded-xl border border-amber-300/70 bg-amber-50/60 p-4 dark:border-amber-500/30 dark:bg-amber-500/10">
-            <div className="mono-label mb-1.5 flex items-center gap-1.5 text-amber-700 dark:text-amber-300">
-              <AlertTriangle size={13} /> {checklistMeta.warning.split(".")[0]}
+      <div className="mt-8 lg:grid lg:grid-cols-[270px_1fr] lg:gap-8">
+        {/* Sidebar: progress + jump nav */}
+        <aside className="mb-6 lg:mb-0 lg:sticky lg:top-20 lg:self-start">
+          <div className="card p-4">
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-ink-400">Progress</span>
+              <span className="text-sm font-extrabold text-ink-900">
+                {done}/{total}
+              </span>
             </div>
-            <p className="text-[13px] leading-relaxed text-ink-700">{checklistMeta.banner}</p>
-          </div>
+            <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-ink-200/70">
+              <motion.div
+                className={cx("h-full rounded-full", allDone ? "bg-emerald-500" : "bg-brand-500")}
+                initial={false}
+                animate={{ width: `${pct}%` }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              />
+            </div>
 
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a
-              href={asset(checklistMeta.pdf)}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-primary"
-            >
-              <Download size={15} /> Open the printable PDF
-            </a>
-            {count > 0 && (
-              <button onClick={() => setTicked([])} className="btn-ghost">
-                <RotateCcw size={15} /> Reset ticks
-              </button>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Sticky progress */}
-      <div className="sticky top-16 z-30 border-b border-ink-200/70 bg-ink-50/90 backdrop-blur-md">
-        <div className="wrap flex items-center gap-4 py-3">
-          <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-ink-200">
-            <motion.div
-              className={cx(
-                "h-full rounded-full",
-                ready ? "bg-emerald-500" : "bg-gradient-to-r from-brand-600 to-brand-400"
+            <AnimatePresence>
+              {(justReset || allDone) && (
+                <motion.p
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="mt-2 flex items-center gap-1.5 overflow-hidden text-[12px] font-semibold text-emerald-600 dark:text-emerald-400"
+                >
+                  <CheckCircle2 size={14} className="shrink-0" />
+                  {justReset ? "Reset, ready for the next task." : "All clear. You are good to submit."}
+                </motion.p>
               )}
-              initial={false}
-              animate={{ width: `${pct}%` }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            />
+            </AnimatePresence>
+
+            <div className="mt-3 flex gap-2">
+              <button onClick={submit} className="btn-primary flex-1 px-3 py-2 text-sm">
+                <Send size={15} /> Submit &amp; reset
+              </button>
+              {done > 0 && (
+                <button
+                  onClick={() => setChecked(new Set())}
+                  className="btn-ghost px-2.5 py-2 text-sm"
+                  title="Clear all checks"
+                >
+                  <RotateCcw size={15} />
+                </button>
+              )}
+            </div>
+
+            <p className="mt-3 text-[11.5px] leading-relaxed text-ink-400">
+              Ticks are stored in this browser only. They are a convenience, never a record.
+            </p>
           </div>
-          <span className="shrink-0 font-mono text-[12px] font-semibold text-ink-600">
-            {count} / {ALL.length}
-          </span>
-          <span
-            className={cx(
-              "chip shrink-0",
-              ready
-                ? "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300"
-                : "bg-amber-500/12 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-300"
-            )}
-          >
-            {ready ? <ShieldCheck size={11} /> : <AlertTriangle size={11} />}
-            <span className="hidden sm:inline">
-              {ready ? checklistMeta.ready.title : checklistMeta.fix.title}
-            </span>
-          </span>
-        </div>
-      </div>
 
-      <div className="wrap py-12">
-        <div className="gap-12 lg:grid lg:grid-cols-[1fr_220px]">
-          <div className="min-w-0 space-y-14">
+          {/* Jump nav (scrollspy) */}
+          <nav className="mt-3 flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:gap-1 lg:overflow-visible lg:pb-0">
             {checklist.map((s) => {
-              const sectionDone = s.checks.filter((c) => done.has(c.id)).length;
+              const Icon = sectionIcon[s.id] ?? FileText;
+              const sectionDone = s.checks.filter((i) => checked.has(i.id)).length;
+              const complete = sectionDone === s.checks.length;
+              const on = activeId === s.id;
               return (
-                <section key={s.id} id={s.id} className="scroll-mt-32">
-                  <div className="flex flex-wrap items-baseline gap-3 border-b border-ink-200/70 pb-4">
-                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-brand-600 font-mono text-[13px] font-bold text-white">
-                      {s.n}
-                    </span>
-                    <h2 className="font-display text-[22px] font-bold tracking-tight text-ink-900">
-                      {s.title}
-                    </h2>
-                    <span className="ml-auto font-mono text-[12px] text-ink-400">
-                      {sectionDone} / {s.checks.length}
-                    </span>
-                  </div>
-                  <p className="mt-3 text-[14px] italic leading-relaxed text-ink-500">{s.prompt}</p>
-
-                  <ul className="mt-5 space-y-3">
-                    {s.checks.map((c) => {
-                      const isDone = done.has(c.id);
-                      return (
-                        <Reveal key={c.id}>
-                          <li
-                            className={cx(
-                              "rounded-2xl border bg-surface p-4 transition duration-200 sm:p-5",
-                              isDone
-                                ? "border-emerald-300/60 bg-emerald-50/30 dark:border-emerald-500/25 dark:bg-emerald-500/[0.06]"
-                                : "border-ink-200/70"
-                            )}
-                          >
-                            <div className="flex items-start gap-3.5">
-                              <button
-                                onClick={() => toggle(c.id)}
-                                role="checkbox"
-                                aria-checked={isDone}
-                                aria-label={`Mark ${c.id} as checked`}
-                                className={cx(
-                                  "mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md border-2 transition duration-200",
-                                  isDone
-                                    ? "border-emerald-500 bg-emerald-500 text-white"
-                                    : "border-ink-300 text-transparent hover:border-brand-400"
-                                )}
-                              >
-                                <Check size={14} strokeWidth={3} />
-                              </button>
-
-                              <div className="min-w-0 flex-1">
-                                <div className="flex flex-wrap items-center gap-2">
-                                  <span className="rounded bg-ink-100 px-1.5 py-0.5 font-mono text-[11px] font-bold text-ink-600">
-                                    {c.id}
-                                  </span>
-                                  <span className="font-mono text-[11px] text-ink-400">{c.ref}</span>
-                                </div>
-                                <p
-                                  className={cx(
-                                    "mt-2 text-[14px] font-medium leading-relaxed",
-                                    isDone ? "text-ink-500" : "text-ink-800"
-                                  )}
-                                >
-                                  {c.q}
-                                </p>
-                                {c.f && (
-                                  <p className="mt-2 border-l-2 border-ink-200 pl-3 text-[12.5px] leading-relaxed text-ink-500">
-                                    {c.f}
-                                  </p>
-                                )}
-                                <Crosslinks links={c.links} className="mt-3" />
-                              </div>
-                            </div>
-                          </li>
-                        </Reveal>
-                      );
-                    })}
-                  </ul>
-                </section>
+                <button
+                  key={s.id}
+                  onClick={() => jump(s.id)}
+                  className={cx(
+                    "group flex shrink-0 items-center gap-2.5 rounded-xl px-3 py-2 text-left text-sm font-semibold transition lg:w-full",
+                    on
+                      ? "bg-brand-50 text-brand-700 dark:bg-brand-500/10 dark:text-brand-300"
+                      : "text-ink-600 hover:bg-ink-100"
+                  )}
+                >
+                  <Icon
+                    size={15}
+                    className={cx("shrink-0", on ? "text-brand-600 dark:text-brand-300" : "text-ink-400")}
+                  />
+                  <span className="flex-1 whitespace-nowrap lg:whitespace-normal">{s.title}</span>
+                  <span
+                    className={cx(
+                      "ml-auto hidden items-center rounded-full px-1.5 text-[11px] font-bold lg:inline-flex",
+                      complete
+                        ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-200"
+                        : "bg-ink-100 text-ink-500"
+                    )}
+                  >
+                    {complete ? <Check size={11} /> : `${sectionDone}/${s.checks.length}`}
+                  </span>
+                </button>
               );
             })}
+          </nav>
+        </aside>
 
-            {/* Verdict */}
-            <section className="scroll-mt-32">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div
-                  className={cx(
-                    "rounded-2xl border p-5 transition",
-                    ready
-                      ? "border-emerald-400 bg-emerald-50/60 shadow-soft dark:border-emerald-500/40 dark:bg-emerald-500/10"
-                      : "border-ink-200/70 bg-surface opacity-60"
-                  )}
-                >
-                  <div className="mono-label mb-2 flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300">
-                    <ShieldCheck size={13} /> {checklistMeta.ready.title}
-                  </div>
-                  <p className="text-[13px] leading-relaxed text-ink-700">
-                    {checklistMeta.ready.body}
-                  </p>
-                </div>
-                <div
-                  className={cx(
-                    "rounded-2xl border p-5 transition",
-                    !ready
-                      ? "border-amber-400 bg-amber-50/60 shadow-soft dark:border-amber-500/40 dark:bg-amber-500/10"
-                      : "border-ink-200/70 bg-surface opacity-60"
-                  )}
-                >
-                  <div className="mono-label mb-2 flex items-center gap-1.5 text-amber-700 dark:text-amber-300">
-                    <AlertTriangle size={13} /> {checklistMeta.fix.title}
-                  </div>
-                  <p className="text-[13px] leading-relaxed text-ink-700">
-                    {checklistMeta.fix.body}
-                  </p>
-                </div>
+        {/* All sections, always visible */}
+        <div className="min-w-0 space-y-5">
+          {checklist.map((s) => (
+            <SectionBlock key={s.id} section={s} checked={checked} onToggle={toggle} onSetMany={setMany} />
+          ))}
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div
+              className={cx(
+                "rounded-2xl border p-5 transition",
+                allDone
+                  ? "border-emerald-400 bg-emerald-50/60 shadow-soft dark:border-emerald-500/40 dark:bg-emerald-500/10"
+                  : "border-ink-200/70 bg-surface opacity-60"
+              )}
+            >
+              <div className="mb-2 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-300">
+                <Sparkles size={13} /> {checklistMeta.ready.title}
               </div>
-              <p className="mt-5 text-[12.5px] text-ink-400">
-                Ticks are stored in this browser only. They are a convenience, never a record.
-              </p>
-            </section>
+              <p className="text-[13px] leading-relaxed text-ink-700">{checklistMeta.ready.body}</p>
+            </div>
+            <div
+              className={cx(
+                "rounded-2xl border p-5 transition",
+                !allDone
+                  ? "border-amber-400 bg-amber-50/60 shadow-soft dark:border-amber-500/40 dark:bg-amber-500/10"
+                  : "border-ink-200/70 bg-surface opacity-60"
+              )}
+            >
+              <div className="mb-2 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">
+                <AlertTriangle size={13} /> {checklistMeta.fix.title}
+              </div>
+              <p className="text-[13px] leading-relaxed text-ink-700">{checklistMeta.fix.body}</p>
+            </div>
           </div>
-
-          <SectionRail sections={SECTIONS} active={active} />
         </div>
       </div>
     </div>
+  );
+}
+
+function SectionBlock({
+  section,
+  checked,
+  onToggle,
+  onSetMany,
+}: {
+  section: ChecklistSection;
+  checked: Set<string>;
+  onToggle: (id: string) => void;
+  onSetMany: (ids: string[], value: boolean) => void;
+}) {
+  const Icon = sectionIcon[section.id] ?? FileText;
+  const doneCount = section.checks.filter((i) => checked.has(i.id)).length;
+  const complete = doneCount === section.checks.length;
+  const itemIds = section.checks.map((i) => i.id);
+
+  return (
+    <section id={section.id} className="card scroll-mt-24 overflow-hidden">
+      <div className="flex items-start gap-3 border-b border-ink-200/70 p-5">
+        <span
+          className={cx(
+            "grid h-10 w-10 shrink-0 place-items-center rounded-xl transition",
+            complete
+              ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300"
+              : "bg-brand-100 text-brand-700 dark:bg-brand-500/15 dark:text-brand-300"
+          )}
+        >
+          {complete ? <Check size={20} /> : <Icon size={20} />}
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <h2 className="font-display text-lg font-bold tracking-tight text-ink-900">
+              {section.n}. {section.title}
+            </h2>
+            <span
+              className={cx(
+                "chip",
+                complete
+                  ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-200"
+                  : "bg-ink-100 text-ink-500"
+              )}
+            >
+              {doneCount}/{section.checks.length}
+            </span>
+          </div>
+          <p className="mt-0.5 text-[13px] leading-relaxed text-ink-500">{section.prompt}</p>
+        </div>
+        <button
+          onClick={() => onSetMany(itemIds, !complete)}
+          className="shrink-0 self-center rounded-lg border border-ink-200 bg-surface px-2.5 py-1.5 text-xs font-semibold text-ink-600 transition hover:border-brand-300 hover:text-brand-700"
+        >
+          {complete ? "Uncheck all" : "Check all"}
+        </button>
+      </div>
+
+      <ul className="divide-y divide-ink-200/70">
+        {section.checks.map((item) => (
+          <ItemRow key={item.id} item={item} on={checked.has(item.id)} onToggle={() => onToggle(item.id)} />
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function ItemRow({ item, on, onToggle }: { item: CheckItem; on: boolean; onToggle: () => void }) {
+  return (
+    <li className={cx("transition", on && "bg-emerald-50/40 dark:bg-emerald-500/[0.05]")}>
+      <div className="flex items-start gap-3 p-4">
+        <button
+          onClick={onToggle}
+          role="checkbox"
+          aria-checked={on}
+          aria-label={`Mark ${item.id} as checked`}
+          className={cx(
+            "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-md border-2 transition",
+            on
+              ? "border-emerald-500 bg-emerald-500 text-white"
+              : "border-ink-300 bg-surface text-transparent hover:border-brand-400"
+          )}
+        >
+          <Check size={13} strokeWidth={3} />
+        </button>
+
+        <div className="min-w-0 flex-1">
+          <button onClick={onToggle} className="block w-full text-left">
+            <span className="mb-1.5 flex flex-wrap items-center gap-2">
+              <span className="rounded bg-ink-100 px-1.5 py-0.5 font-mono text-[11px] font-bold text-ink-600">
+                {item.id}
+              </span>
+              <span className="font-mono text-[11px] text-ink-400">{item.ref}</span>
+            </span>
+            <span
+              className={cx(
+                "block text-[14px] font-semibold leading-snug transition",
+                on ? "text-ink-400 line-through" : "text-ink-800"
+              )}
+            >
+              {item.q}
+            </span>
+          </button>
+          {item.f && (
+            <p
+              className={cx(
+                "mt-2 border-l-2 border-ink-200 pl-3 text-[12.5px] leading-relaxed transition",
+                on ? "text-ink-400" : "text-ink-500"
+              )}
+            >
+              {item.f}
+            </p>
+          )}
+          <Crosslinks links={item.links} className="mt-3" />
+        </div>
+      </div>
+    </li>
   );
 }

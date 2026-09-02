@@ -2,8 +2,11 @@ import type { GoldenTask, SearchEntry } from "./types";
 import { vendorCloseout } from "./tasks/vendorCloseout";
 import { methodSteps } from "./method";
 import { checklist } from "./checklist";
-import { specDimensions } from "./specDoc";
+import { authoringStandards, rubricQualityIssues, specGroups, weightBuckets } from "./specDoc";
 import { faq } from "./faq";
+
+/** Matches the nav ids the Spec Doc page derives from its group names. */
+const slug = (s: string) => s.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 
 export const tasks: GoldenTask[] = [vendorCloseout];
 
@@ -90,15 +93,39 @@ export const searchIndex: SearchEntry[] = [
     }))
   ),
 
-  ...specDimensions.flatMap<SearchEntry>((d) =>
-    d.questions.map((q) => ({
+  ...specGroups.flatMap<SearchEntry>((g) =>
+    g.dimensions.map((d) => ({
       kind: "QC spec" as const,
-      title: `${d.name} · ${q.name}`,
-      hint: q.body,
-      to: `/spec#${d.id}`,
-      terms: `${q.fails} ${d.purpose}`,
+      title: `${g.group} · ${d.name}`,
+      hint: d.question,
+      to: `/spec#${slug(g.group)}`,
+      terms: [d.description, d.errorTags.map((t) => t.label).join(" "), d.options.map((o) => o.text).join(" ")].join(" "),
     }))
   ),
+
+  ...rubricQualityIssues.map<SearchEntry>((i) => ({
+    kind: "QC spec",
+    title: `${i.severity} issue · ${i.name}`,
+    hint: i.definition.split("\n")[0],
+    to: "/spec#rubric-quality",
+    terms: i.definition,
+  })),
+
+  ...weightBuckets.map<SearchEntry>((b) => ({
+    kind: "QC spec",
+    title: `Weight ${b.score > 0 ? `+${b.score}` : b.score} · ${b.level}`,
+    hint: b.definition.split("\n")[0],
+    to: "/spec#weights",
+    terms: `${b.definition} ${b.examples.join(" ")}`,
+  })),
+
+  ...authoringStandards.map<SearchEntry>((st) => ({
+    kind: "QC spec",
+    title: st.name,
+    hint: st.body.split("\n")[0],
+    to: "/spec#standards",
+    terms: st.body,
+  })),
 
   ...faq.map<SearchEntry>((f) => ({
     kind: "FAQ",

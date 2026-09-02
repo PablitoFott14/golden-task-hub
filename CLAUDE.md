@@ -12,8 +12,8 @@ Rubrics multi-turn project. Six routes:
 | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. Nine method cards, the mindset, the hard requirements, the FAQ CTA, the Golden Task spotlight. |
 | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | Index of worked tasks. |
 | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The full breakdown, twelve sections. |
-| `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks with persisted ticks. |
-| `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | Map of the QC spec, plus a link out to the live viewer. |
+| `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks, progress sidebar with persisted ticks. |
+| `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
 | `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions from `F&Q.md`. |
 
 Deployed to GitHub Pages from `main` by [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
@@ -104,7 +104,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | --- | --- |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/rationale.md` | [src/data/method.ts](src/data/method.ts) |
 | `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
-| `Project clarifications - outstanding to do's/rubric-spec-viewer.html` (and its CSVs) | [src/data/specDoc.ts](src/data/specDoc.ts) |
+| <https://qc-spec-mt-rubrics.vercel.app/> (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
 | `F&Q.md` in this repo | [src/data/faq.ts](src/data/faq.ts) |
 | `Tasks/6a7965b63b7d368e70c7de4a` | [src/data/tasks/vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) + `public/tasks/vendor-closeout/` |
 
@@ -114,6 +114,23 @@ copy of it.
 
 The pre-submit PDF is generated from `checklist.md`; read that rather than the PDF when
 re-transcribing checks, and re-copy the regenerated PDF into `public/docs/`.
+
+### `specDoc.ts` is generated, not hand-written
+
+Everything above `dimensionLinks` in [src/data/specDoc.ts](src/data/specDoc.ts) comes out of
+[scripts/gen_spec.py](scripts/gen_spec.py), which parses the deployed QC spec viewer. When the spec
+sheet is re-exported and redeployed:
+
+```bash
+curl -s https://qc-spec-mt-rubrics.vercel.app/ -o qcspec.html
+python scripts/gen_spec.py qcspec.html
+```
+
+Parse the deployed page, not the CSVs sitting on Drive. Those exports are currently a revision
+behind and are missing `Milestones - Milestone Annotations`. Question text, guidance, option
+wording and appendix definitions are stored **verbatim**, em dashes and curly quotes included,
+because that block is a transcription of the standard rather than hub copy. Only `dimensionLinks`
+at the foot of the file is hand-authored, so update it there when a dimension is added or renamed.
 
 ### The method is the spine
 
@@ -129,6 +146,22 @@ points at the Golden Task section where the principle landed. That relationship,
 
 Adding a method step means adding it to `methodSteps` and deciding which task section it points at.
 Adding a task section means adding it to `SECTIONS` with its `step`.
+
+### The spec and the checklist follow the Golden Task Viewer's layout
+
+Both pages deliberately reproduce the structure of
+<https://pablitofott14.github.io/golden-task-viewer/>, because that is the pattern the project
+already reads well:
+
+- **`/spec`** is tabbed, not scrolled. A left rail lists the eight dimension groups and the three
+  appendix sections with counts, one pane renders at a time, and the first group is what you land
+  on. A search box above the rail (focused with `/`, cleared with `Escape`) replaces the panes with
+  matches across dimensions, rubric quality issues, weights and authoring standards, with hits
+  wrapped in `<mark>`. Inbound `/spec#<group-slug>` links select the tab through the `hash` effect
+  at the top of the component, which is why the slugs must keep matching the group names.
+- **`/checklist`** keeps every section on the page and puts progress in a sticky sidebar: the
+  counter and bar, `Submit & reset`, and a jump nav driven by the scroll spy. Section cards carry a
+  `Check all` toggle, and a ticked item strikes through.
 
 ### Cross-linking is the product
 
@@ -169,8 +202,8 @@ a field renders an empty section rather than failing, so fill every field or tri
 - **`asset()` in [src/lib/util.ts](src/lib/util.ts)** resolves `public/` paths against
   `import.meta.env.BASE_URL` and percent-encodes each segment. Input filenames contain spaces
   (`Screenshot 2026-02-10 143217.png`), so never build those URLs by hand.
-- **`usePersisted` is for conveniences only** (checklist ticks under `rsh.checklist.v2`). It is
-  per-device, wrapped in try/catch for private windows, and is never a record of anything.
+- **Checklist ticks are a per-device convenience only**, stored under `rsh.presubmit.checks.v1`,
+  wrapped in try/catch for private windows, and never a record of anything.
 - **A sticky element that is a direct grid child needs `self-start`**, otherwise it stretches to
   the full row height and sticky does nothing. `SectionRail` carries it.
 - **`Reveal` needs `className="h-full"`** when it wraps a card in a stretch grid, or the card stops
@@ -201,7 +234,8 @@ reintroduce `tokens.css` / `app.css`.
 ## Copy rules
 
 - **No em dashes, and no hyphen used as a dash.** Use commas, periods or "and". Hyphens survive
-  only inside established compounds (`multi-turn`, `cross-modal`, `pre-submit`).
+  only inside established compounds (`multi-turn`, `cross-modal`, `pre-submit`). The one exception
+  is generated `specDoc.ts`, which is verbatim source text.
 - Short sentences. The hub is a practical reference, not a second copy of the guidelines. If a
   section is growing into documentation, cut it and link to the guidelines instead.
 - **Do not invent statuses or answers.** Everything in `src/data/` is what a source document
