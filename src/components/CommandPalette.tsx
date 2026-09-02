@@ -1,141 +1,168 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { search, searchIndex } from "../data";
+import { AnimatePresence, motion } from "framer-motion";
+import { CornerDownLeft, Search } from "lucide-react";
+import { searchIndex } from "../data";
 import type { SearchEntry } from "../data/types";
-import { cx, useDismissable } from "../lib/hooks";
-import { IconSearch } from "./ui";
+import { cx } from "../lib/util";
 
-/** Shown before anything is typed — the four places people actually go. */
-const SUGGESTED: SearchEntry[] = [
-  {
-    kind: "Golden task",
-    title: "Vendor closeout pack",
-    hint: "The worked example, end to end",
-    to: "/golden-tasks/vendor-closeout",
-    terms: "",
-  },
-  { kind: "Clarification", title: "All eight clarifications", hint: "With the proposals on the table", to: "/spec", terms: "" },
-  { kind: "Pre-submit check", title: "Pre-submit gate", hint: "29 checks, about five minutes", to: "/checklist", terms: "" },
-  { kind: "Process", title: "The nine steps", hint: "Explore the universe → the subjective block", to: "/#process", terms: "" },
-];
+const kindTone: Record<SearchEntry["kind"], string> = {
+  Method: "bg-brand-500/12 text-brand-700 dark:text-brand-300",
+  "Golden task": "bg-gold-500/15 text-gold-700 dark:text-gold-300",
+  "Pre-submit check": "bg-emerald-500/12 text-emerald-700 dark:text-emerald-300",
+  "QC spec": "bg-sky-500/12 text-sky-700 dark:text-sky-300",
+  FAQ: "bg-violet-500/12 text-violet-700 dark:text-violet-300",
+};
 
-export default function CommandPalette({ open, onClose }: { open: boolean; onClose: () => void }) {
+function score(entry: SearchEntry, q: string): number {
+  const title = entry.title.toLowerCase();
+  const hint = entry.hint.toLowerCase();
+  const terms = entry.terms.toLowerCase();
+  let total = 0;
+  for (const word of q.split(/\s+/).filter(Boolean)) {
+    if (title.startsWith(word)) total += 8;
+    else if (title.includes(word)) total += 5;
+    else if (hint.includes(word)) total += 3;
+    else if (terms.includes(word)) total += 1;
+    else return 0;
+  }
+  return total;
+}
+
+export default function CommandPalette({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) {
   const [q, setQ] = useState("");
-  const [i, setI] = useState(0);
+  const [cursor, setCursor] = useState(0);
   const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement>(null);
-  const listRef = useRef<HTMLDivElement>(null);
 
-  useDismissable(open, onClose);
-
-  const results = useMemo(() => (q.trim() ? search(q) : SUGGESTED), [q]);
+  const results = useMemo(() => {
+    const query = q.trim().toLowerCase();
+    if (!query) return searchIndex.slice(0, 8);
+    return searchIndex
+      .map((e) => ({ e, s: score(e, query) }))
+      .filter((r) => r.s > 0)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, 12)
+      .map((r) => r.e);
+  }, [q]);
 
   useEffect(() => {
     if (open) {
       setQ("");
-      setI(0);
-      const t = window.setTimeout(() => inputRef.current?.focus(), 20);
-      return () => window.clearTimeout(t);
+      setCursor(0);
+      const t = setTimeout(() => inputRef.current?.focus(), 40);
+      return () => clearTimeout(t);
     }
   }, [open]);
 
-  useEffect(() => setI(0), [q]);
+  useEffect(() => setCursor(0), [q]);
 
   useEffect(() => {
     if (!open) return;
-    listRef.current?.querySelector(".is-active")?.scrollIntoView({ block: "nearest" });
-  }, [i, open]);
-
-  const go = (entry: SearchEntry) => {
-    onClose();
-    navigate(entry.to);
-  };
-
-  const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      setI((n) => (results.length ? (n + 1) % results.length : 0));
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      setI((n) => (results.length ? (n - 1 + results.length) % results.length : 0));
-    } else if (e.key === "Enter" && results[i]) {
-      e.preventDefault();
-      go(results[i]);
-    }
-  };
-
-  // Group headings appear only once per run of the same kind.
-  let lastKind = "";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        setCursor((c) => Math.min(results.length - 1, c + 1));
+      }
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        setCursor((c) => Math.max(0, c - 1));
+      }
+      if (e.key === "Enter" && results[cursor]) {
+        e.preventDefault();
+        navigate(results[cursor].to);
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, results, cursor, navigate, onClose]);
 
   return (
-    <div
-      className={cx("overlay", "overlay--cmdk", open && "is-open")}
-      aria-hidden={!open}
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
-      }}
-    >
+    <AnimatePresence>
       {open && (
-        <div className="cmdk" role="dialog" aria-modal="true" aria-label="Search the hub">
-          <div className="cmdk__field">
-            <span className="dim" aria-hidden="true">
-              <IconSearch size={16} />
-            </span>
-            <input
-              ref={inputRef}
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              onKeyDown={onKeyDown}
-              placeholder={`Search ${searchIndex.length} entries — a vendor, a rubric, a check id…`}
-              aria-label="Search the hub"
-              autoComplete="off"
-              spellCheck={false}
-            />
-            <kbd>esc</kbd>
-          </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.15 }}
+          className="fixed inset-0 z-50 flex items-start justify-center bg-ink-950/40 px-4 pt-[12vh] backdrop-blur-sm"
+          onClick={onClose}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: -12, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.99 }}
+            transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="w-full max-w-xl overflow-hidden rounded-2xl border border-ink-200 bg-surface shadow-lift"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center gap-3 border-b border-ink-200/70 px-4">
+              <Search size={16} className="shrink-0 text-ink-400" />
+              <input
+                ref={inputRef}
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                placeholder="Search the method, the task, the checks, the spec…"
+                className="h-14 w-full bg-transparent text-[15px] text-ink-900 outline-none placeholder:text-ink-400"
+              />
+              <kbd className="hidden shrink-0 rounded border border-ink-200 bg-ink-100 px-1.5 py-0.5 font-mono text-[10px] text-ink-500 sm:block">
+                esc
+              </kbd>
+            </div>
 
-          <div className="cmdk__results" ref={listRef}>
-            {results.length === 0 && (
-              <p className="cmdk__empty">
-                Nothing matches “{q}”. Try a vendor name, a check id like <code className="tok">E2</code>, or a word from a
-                clarification.
-              </p>
-            )}
-            {results.map((r, n) => {
-              const head = r.kind !== lastKind ? r.kind : null;
-              lastKind = r.kind;
-              return (
-                <div key={`${r.to}-${r.title}-${n}`}>
-                  {head && <p className="cmdk__group">{q.trim() ? head : "Start here"}</p>}
+            <ul className="max-h-[52vh] overflow-y-auto p-2">
+              {results.length === 0 && (
+                <li className="px-3 py-8 text-center text-sm text-ink-400">
+                  Nothing matches “{q}”.
+                </li>
+              )}
+              {results.map((r, i) => (
+                <li key={r.to + r.title}>
                   <button
-                    className={cx("cmdk__item", n === i && "is-active")}
-                    onMouseEnter={() => setI(n)}
-                    onClick={() => go(r)}
+                    onMouseEnter={() => setCursor(i)}
+                    onClick={() => {
+                      navigate(r.to);
+                      onClose();
+                    }}
+                    className={cx(
+                      "flex w-full items-start gap-3 rounded-xl px-3 py-2.5 text-left transition",
+                      i === cursor ? "bg-brand-500/10" : "hover:bg-ink-100"
+                    )}
                   >
-                    <span>
-                      <strong>{r.title}</strong>
-                      <small>{r.hint}</small>
+                    <span
+                      className={cx(
+                        "mt-0.5 shrink-0 rounded px-1.5 py-0.5 font-mono text-[9.5px] font-bold uppercase tracking-wider",
+                        kindTone[r.kind]
+                      )}
+                    >
+                      {r.kind}
                     </span>
-                    <span className="cmdk__kind">{r.kind}</span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-[13.5px] font-semibold text-ink-900">
+                        {r.title}
+                      </span>
+                      <span className="mt-0.5 block truncate text-[12px] text-ink-500">
+                        {r.hint}
+                      </span>
+                    </span>
+                    {i === cursor && (
+                      <CornerDownLeft size={13} className="mt-1 shrink-0 text-ink-400" />
+                    )}
                   </button>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="cmdk__foot">
-            <span>
-              <kbd>↑</kbd> <kbd>↓</kbd> move
-            </span>
-            <span>
-              <kbd>↵</kbd> open
-            </span>
-            <span>
-              <kbd>esc</kbd> close
-            </span>
-          </div>
-        </div>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </motion.div>
       )}
-    </div>
+    </AnimatePresence>
   );
 }

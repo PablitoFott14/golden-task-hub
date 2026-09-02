@@ -1,61 +1,177 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  AlertTriangle,
+  ArrowLeft,
+  ArrowUpRight,
+  ExternalLink,
+  FileText,
+  Image as ImageIcon,
+  Lightbulb,
+  PenLine,
+  Quote,
+  Sparkles,
+  Target,
+  X,
+} from "lucide-react";
 import { taskById } from "../data";
-import type { InputAsset } from "../data/types";
+import { methodSteps } from "../data/method";
+import type { InputAsset, Trap, XLink } from "../data/types";
+import { Callout, Crosslinks, Reveal, SectionRail, Stat } from "../components/ui";
 import Ledger from "../components/Ledger";
-import Rubrics from "../components/Rubrics";
-import { Chip, Code, Crosslinks, Disclose, FileLink, IconArrow, Lightbox } from "../components/ui";
-import { asset, cx, useReveal, useScrollSpy } from "../lib/hooks";
+import Rubrics, { Ticks } from "../components/Rubrics";
+import { useScrollSpy } from "../lib/useScrollSpy";
+import { asset, cx } from "../lib/util";
 
-const SECTIONS = [
-  { id: "scenario", label: "Scenario" },
-  { id: "conversation", label: "The conversation" },
-  { id: "inputs", label: "The inputs" },
-  { id: "format", label: "The format spec" },
-  { id: "universe", label: "The universe" },
-  { id: "answer", label: "The answer" },
-  { id: "ledger", label: "Evidence ledger" },
-  { id: "rubrics", label: "Objective rubrics" },
-  { id: "subjective", label: "Subjective block" },
-  { id: "model-a", label: "What Model A did" },
+const SECTIONS: { id: string; label: string; step?: number }[] = [
+  { id: "universe", label: "The universe", step: 1 },
+  { id: "inputs", label: "Multimodal inputs", step: 2 },
+  { id: "format", label: "The format spec", step: 2 },
+  { id: "turns", label: "The four prompts", step: 3 },
+  { id: "answer", label: "The resolved answer", step: 3 },
+  { id: "ledger", label: "Evidence ledger", step: 3 },
+  { id: "model-a", label: "Where Model A broke", step: 5 },
+  { id: "rubrics", label: "Objective rubrics", step: 6 },
+  { id: "golden", label: "Golden deliverables", step: 8 },
+  { id: "subjective", label: "Subjective block", step: 9 },
   { id: "traps", label: "Designed friction" },
-  { id: "takeaways", label: "Takeaways" },
+  { id: "takeaways", label: "What to copy" },
 ];
 
-const ROLE_TONE = {
-  evidence: "ok",
-  contradicts: "warn",
-  distractor: "no",
-  spec: "accent",
-} as const;
+const IDS = SECTIONS.map((s) => s.id);
 
-const ROLE_LABEL = {
-  evidence: "load-bearing",
-  contradicts: "contradicts",
-  distractor: "distractor",
-  spec: "format spec",
-} as const;
+const roleTone: Record<InputAsset["role"], { label: string; chip: string }> = {
+  evidence: {
+    label: "Evidence",
+    chip: "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300",
+  },
+  contradicts: {
+    label: "Contradicts",
+    chip: "bg-amber-500/12 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-300",
+  },
+  distractor: {
+    label: "Distractor",
+    chip: "bg-rose-500/12 text-rose-700 ring-1 ring-rose-500/25 dark:text-rose-300",
+  },
+  spec: {
+    label: "Format spec",
+    chip: "bg-brand-500/12 text-brand-700 ring-1 ring-brand-500/25 dark:text-brand-300",
+  },
+};
 
-function isImage(a: InputAsset) {
-  return a.kind === "image" || a.kind === "photo" || a.kind === "handwriting";
+const kindIcon: Record<InputAsset["kind"], JSX.Element> = {
+  image: <ImageIcon size={13} />,
+  photo: <ImageIcon size={13} />,
+  handwriting: <PenLine size={13} />,
+  pdf: <FileText size={13} />,
+  doc: <FileText size={13} />,
+};
+
+/** A section heading that names the method step it implements. */
+function SectionHead({
+  id,
+  title,
+  sub,
+}: {
+  id: string;
+  title: string;
+  sub?: string;
+}) {
+  const meta = SECTIONS.find((s) => s.id === id);
+  const step = meta?.step ? methodSteps.find((m) => m.n === meta.step) : undefined;
+  return (
+    <div className="mb-6">
+      {step && (
+        <Link
+          to={`/#${step.id}`}
+          className="group mb-3 inline-flex items-center gap-2 rounded-lg border border-ink-200 bg-surface px-2.5 py-1.5 text-[11.5px] transition hover:border-brand-300"
+        >
+          <span className="grid h-4 w-4 place-items-center rounded bg-brand-600 font-mono text-[9px] font-bold text-white">
+            {step.n}
+          </span>
+          <span className="font-semibold text-ink-600 group-hover:text-ink-900">{step.slogan}</span>
+          <ArrowUpRight size={12} className="text-ink-400" />
+        </Link>
+      )}
+      <h2 className="font-display text-[26px] font-bold tracking-tight text-ink-900">{title}</h2>
+      {sub && <p className="mt-2 max-w-2xl text-[14.5px] leading-relaxed text-ink-500">{sub}</p>}
+    </div>
+  );
+}
+
+function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-ink-950/70 p-6 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-white transition hover:bg-white/20"
+      >
+        <X size={18} />
+      </button>
+      <motion.img
+        initial={{ scale: 0.97, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+        src={src}
+        alt={alt}
+        className="max-h-full max-w-full rounded-xl object-contain shadow-lift"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </motion.div>
+  );
+}
+
+function TrapCard({ t }: { t: Trap }) {
+  const step = t.step ? methodSteps.find((m) => m.n === t.step) : undefined;
+  /** The method step first, then whatever else the trap points at. */
+  const links: XLink[] = [
+    ...(step ? [{ to: `/#${step.id}`, tag: `M${step.n}`, label: step.title }] : []),
+    ...(t.links ?? []),
+  ];
+  return (
+    <div className="card h-full p-5">
+      <div className="flex items-start gap-3">
+        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-amber-500/12 text-amber-600 dark:text-amber-300">
+          <AlertTriangle size={15} />
+        </span>
+        <div className="min-w-0">
+          <h3 className="font-display text-[15.5px] font-bold leading-snug text-ink-900">
+            {t.title}
+          </h3>
+          <div className="mt-1 font-mono text-[11.5px] text-ink-400">{t.where}</div>
+        </div>
+      </div>
+      <p className="mt-3.5 text-[13px] leading-relaxed text-ink-600">{t.body}</p>
+      <div className="mt-3.5 rounded-lg bg-raised px-3 py-2.5">
+        <div className="mono-label mb-1 text-ink-400">What it tests</div>
+        <p className="text-[12.5px] leading-relaxed text-ink-700">{t.tests}</p>
+      </div>
+      <Crosslinks links={links} className="mt-3.5" />
+    </div>
+  );
 }
 
 export default function TaskDetail() {
   const { id } = useParams();
-  const task = taskById(id);
-  const [zoom, setZoom] = useState<InputAsset | null>(null);
-  const active = useScrollSpy(SECTIONS.map((s) => s.id));
-  useReveal([task?.meta.id]);
+  const task = taskById(id ?? "");
+  const active = useScrollSpy(IDS);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   if (!task) {
     return (
-      <div className="content">
-        <div className="stack">
-          <h1 style={{ fontSize: "var(--text-xl)" }}>No task with that id.</h1>
-          <Link className="btn" to="/golden-tasks">
-            Back to golden tasks <IconArrow size={12} />
-          </Link>
-        </div>
+      <div className="wrap py-28 text-center">
+        <h1 className="font-display text-2xl font-bold text-ink-900">No task with that id.</h1>
+        <Link to="/golden-tasks" className="btn-primary mt-6">
+          Back to Golden Tasks
+        </Link>
       </div>
     );
   }
@@ -63,411 +179,518 @@ export default function TaskDetail() {
   const t = task;
 
   return (
-    <div className="content">
-      <header className="phead">
-        <div className="chiprow" style={{ marginBottom: "var(--space-md)" }}>
-          <span className="status status--accent"><span className="status__dot" />{t.meta.status}</span>
-          <Chip>{t.meta.category}</Chip>
-          <Chip>{t.meta.subcategory}</Chip>
-          <Chip>{t.meta.turns} turns</Chip>
-          <Chip>{t.meta.serviceId}</Chip>
+    <div>
+      {/* Hero */}
+      <section className="relative overflow-hidden border-b border-ink-200/70 bg-surface">
+        <div className="pointer-events-none absolute inset-0 bg-aurora opacity-80" />
+        <div className="wrap relative py-12">
+          <Link
+            to="/golden-tasks"
+            className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-ink-500 transition hover:text-brand-600"
+          >
+            <ArrowLeft size={14} /> Golden Tasks
+          </Link>
+
+          <div className="mt-5 flex flex-wrap items-center gap-2">
+            <span className="chip bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300">
+              <Sparkles size={11} /> {t.meta.status}
+            </span>
+            <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
+              {t.meta.category}
+            </span>
+            <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
+              {t.meta.subcategory}
+            </span>
+            <span className="chip bg-ink-100 font-mono text-ink-500 ring-1 ring-ink-200">
+              {t.meta.serviceId}
+            </span>
+          </div>
+
+          <h1 className="mt-4 max-w-3xl font-display text-[32px] font-bold leading-tight tracking-tight text-ink-900 sm:text-[44px]">
+            {t.meta.title}
+          </h1>
+          <p className="mt-4 max-w-3xl text-[16px] leading-relaxed text-ink-600">{t.premise}</p>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <Stat label="Universe" value={t.meta.universe} />
+            <Stat label="Persona" value={t.meta.persona} />
+            <Stat label="Turns" value={`${t.meta.turns}, with one revision turn`} />
+            <Stat label="Model A result" value={t.run.score} tone="no" />
+          </div>
         </div>
-        <h1 className="phead__title" style={{ maxWidth: "24ch" }}>{t.meta.title}</h1>
-        <p className="lede phead__lede">{t.meta.oneLiner}</p>
-        <div className="phead__stats">
-          <span className="stat"><span className="stat__l">Persona</span><span className="small strong-ink">{t.meta.persona}</span></span>
-          <span className="stat"><span className="stat__l">Universe</span><span className="small strong-ink">{t.meta.universe}</span></span>
-          <span className="stat"><span className="stat__l">Modalities</span><span className="small strong-ink">{t.meta.modalities.join(" · ")}</span></span>
-        </div>
-      </header>
+      </section>
 
-      <div className="doc">
-        <div className="doc__body">
-          {/* ------------------------------------------------ scenario */}
-          <section id="scenario" className="section">
-            <div className="section__head"><h2>The scenario</h2></div>
-            <p className="lede">{t.premise}</p>
-            <ul style={{ listStyle: "none", marginTop: "var(--space-lg)" }} className="stack-sm">
-              {t.whyGolden.map((w, i) => (
-                <li key={i} className="note note--accent">{w}</li>
-              ))}
-            </ul>
-          </section>
-
-          {/* -------------------------------------------- conversation */}
-          <section id="conversation" className="section">
-            <div className="section__head">
-              <h2>The conversation</h2>
-              <p>
-                What the agent actually received. Everything else — the objective, the desired outcome, the rubrics —
-                is invisible to it.
-              </p>
-            </div>
-
-            {t.turns.map((turn) => (
-              <article key={turn.n} className="turn">
-                <span className="turn__n">Turn {turn.n}</span>
-                <div>
-                  <div className="code code--light" style={{ marginBottom: "var(--space-md)" }}>
-                    <div className="code__label">
-                      <span>User</span>
-                      <span>{turn.produces.join(" · ")}</span>
+      <div className="wrap py-12">
+        <div className="gap-12 lg:grid lg:grid-cols-[1fr_220px]">
+          <div className="min-w-0 space-y-20">
+            {/* Universe */}
+            <section id="universe" className="scroll-mt-24">
+              <SectionHead
+                id="universe"
+                title="The universe did the choosing"
+                sub="The scenario was not invented and then looked for. Two channels in the Harmony Games universe carried a real shutdown, and the task took its shape from what was already in them."
+              />
+              <div className="grid gap-4 sm:grid-cols-2">
+                {t.universeNotes.map((n) => (
+                  <Reveal key={n.title} className="h-full">
+                    <div className="card h-full p-5">
+                      <h3 className="font-display text-[15px] font-bold text-ink-900">{n.title}</h3>
+                      <p className="mt-2 text-[13px] leading-relaxed text-ink-600">{n.body}</p>
                     </div>
-                    <pre>{turn.text}</pre>
-                  </div>
-
-                  <table className="kv">
-                    <tbody>
-                      <tr><th>Adds</th><td>{turn.adds}</td></tr>
-                      <tr><th>Consumes</th><td>{turn.consumes}</td></tr>
-                    </tbody>
-                  </table>
-
-                  {turn.notes?.map((n) => (
-                    <div key={n.title} className={cx("note", n.tone && `note--${n.tone}`)} style={{ marginTop: "var(--space-md)" }}>
-                      <b>{n.title}.</b> {n.body}
-                    </div>
-                  ))}
-                </div>
-              </article>
-            ))}
-
-            <Crosslinks
-              links={[
-                { to: "/checklist#s3", tag: "C3", label: "3 to 5 turns, each consuming the last" },
-                { to: "/checklist#s3", tag: "C4", label: "One turn changes the brief" },
-                { to: "/spec#c-1", tag: "#1", label: "How far can a follow-up drift?" },
-              ]}
-            />
-          </section>
-
-          {/* ------------------------------------------------- inputs */}
-          <section id="inputs" className="section">
-            <div className="section__head">
-              <h2>The inputs</h2>
-              <p>
-                {t.inputs.length} files. Ten carry a fact the task cannot be finished without; one is there to be
-                correctly ignored. Click any image to read it at full size.
-              </p>
-            </div>
-
-            <div className="grid">
-              {t.inputs.map((a) => (
-                <button
-                  key={a.file}
-                  className="thumb"
-                  onClick={() => isImage(a) && setZoom(a)}
-                  style={!isImage(a) ? { cursor: "default" } : undefined}
-                  aria-label={isImage(a) ? `Open ${a.file}` : a.file}
-                >
-                  <figure>
-                    {isImage(a) ? (
-                      <img src={asset(a.src)} alt={a.shows} loading="lazy" width={640} height={360} />
-                    ) : (
-                      <span className="thumb__slug">{a.kind === "pdf" ? "PDF" : "MARKDOWN"}</span>
-                    )}
-                    <figcaption>
-                      <span className="thumb__name">{a.file}</span>
-                      <div className="chiprow" style={{ marginBottom: "var(--space-xs)" }}>
-                        <Chip tone={ROLE_TONE[a.role]} dot>{ROLE_LABEL[a.role]}</Chip>
-                        {a.vendors.map((v) => <Chip key={v}>{v}</Chip>)}
-                      </div>
-                      <p className="small dim">{a.shows}</p>
-                      <p className="small" style={{ marginTop: "var(--space-xs)", color: "var(--color-ink-2)" }}>
-                        <span className="label" style={{ marginRight: "0.45rem" }}>Carries</span>
-                        {a.carries}
-                      </p>
-                    </figcaption>
-                  </figure>
-                </button>
-              ))}
-            </div>
-
-            <Crosslinks
-              links={[
-                { to: "/checklist#s2", tag: "B2", label: "Take the attachments away — still solvable?" },
-                { to: "/checklist#s2", tag: "B3", label: "Every file carries a needed fact" },
-              ]}
-            />
-          </section>
-
-          {/* -------------------------------------------------- format */}
-          <section id="format" className="section">
-            <div className="section__head">
-              <h2>The format spec</h2>
-              <p>
-                The rules the receipts must follow live in an input file, not in the prompt. Stating them in the prompt
-                would have removed the work the task exists to grade.
-              </p>
-            </div>
-            <Code label={t.format.file} note="input file">{t.format.body}</Code>
-            <div className="note note--warn" style={{ marginTop: "var(--space-md)" }}>
-              <b>The field rules are where the difficulty hides.</b> Cancellation date is “the date confirmed in the
-              slack channel”, formatted <code className="tok">YYYY-MM-DD</code> in <b>PST</b> — which is what turns a
-              UTC timestamp into 2026-02-10 for Helpshift. Confirmed by is “the person whose Slack message confirms or
-              provides the latest evidence”, which is what makes Robert correct for Soundly.
-            </div>
-            <Crosslinks links={[{ to: "/checklist#s3", tag: "C2", label: "Policies live in the inputs" }]} />
-          </section>
-
-          {/* ------------------------------------------------ universe */}
-          <section id="universe" className="section">
-            <div className="section__head">
-              <h2>The universe</h2>
-              <p>Twelve of the twenty pool vendors have no attachment at all. Only the channel classifies them.</p>
-            </div>
-            <div className="grid grid--2">
-              {t.universeNotes.map((n) => (
-                <div key={n.title} className="card">
-                  <div className="card__head"><span className="card__title" style={{ fontSize: "var(--text-base)" }}>{n.title}</span></div>
-                  <div className="card__body"><p className="small">{n.body}</p></div>
-                </div>
-              ))}
-            </div>
-            <Crosslinks links={[{ to: "/checklist#s2", tag: "B1", label: "One fact only the universe holds" }]} />
-          </section>
-
-          {/* -------------------------------------------------- answer */}
-          <section id="answer" className="section">
-            <div className="section__head">
-              <h2>The answer</h2>
-              <p>Resolved before the task was built. If you cannot state it yourself, the scenario is not ready.</p>
-            </div>
-
-            <div className="card">
-              <div className="card__head"><span className="label">Headline figures</span></div>
-              <div className="card__body">
-                <div className="chiprow" style={{ gap: "var(--space-md)", alignItems: "baseline" }}>
-                  <span className="tnum" style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-2xl)", fontWeight: 700, letterSpacing: "-0.03em", color: "var(--color-ink)" }}>
-                    {t.answer.total}
-                  </span>
-                  <span className="tnum" style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-xl)", fontWeight: 600, color: "var(--color-accent)" }}>
-                    {t.answer.percent}
-                  </span>
-                  {t.answer.counts.map((c) => (
-                    <Chip key={c.label} tone={c.tone as "ok" | "warn" | "plain"} dot>{c.n} {c.label}</Chip>
-                  ))}
-                </div>
-                <p className="mono small dim" style={{ marginTop: "var(--space-sm)" }}>{t.answer.basis}</p>
+                  </Reveal>
+                ))}
               </div>
-            </div>
+            </section>
 
-            <h3 className="subhead">The expected final state</h3>
-            <div className="grid grid--2">
-              {t.deliverables.map((d) => (
-                <FileLink key={d.file} file={d.file} src={d.src} what={d.what} />
-              ))}
-            </div>
-
-            <div className="note" style={{ marginTop: "var(--space-md)" }}>
-              <b>The SVG is a reference build, not a format to match.</b> Layout, colour and styling are free. Only the
-              figures and the names are graded — and they have to agree with the receipts and the email exactly.
-            </div>
-
-            <Disclose summary="See the golden vendor_cancellation.svg" meta="render">
-              <img
-                src={asset("tasks/vendor-closeout/gt/vendor_cancellation.svg")}
-                alt="Golden infographic — total owed and percentage at the top, then the three vendor groups"
-                style={{ width: "100%", border: "1px solid var(--color-rule)", borderRadius: "var(--radius-lg)" }}
+            {/* Inputs */}
+            <section id="inputs" className="scroll-mt-24">
+              <SectionHead
+                id="inputs"
+                title="Eleven files, every one with a job"
+                sub="Recovered in a rush during the cancellation week, in the formats that week would actually produce. Two of them exist to be resisted rather than used."
               />
-            </Disclose>
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                {t.inputs.map((inp) => {
+                  const isImage = ["image", "photo", "handwriting"].includes(inp.kind);
+                  const url = asset(inp.src);
+                  return (
+                    <Reveal key={inp.file} className="h-full">
+                      <div className="card flex h-full flex-col overflow-hidden">
+                        {isImage ? (
+                          <button
+                            onClick={() => setLightbox({ src: url, alt: inp.shows })}
+                            className="group relative block aspect-[16/10] w-full overflow-hidden bg-ink-100"
+                          >
+                            <img
+                              src={url}
+                              alt={inp.shows}
+                              loading="lazy"
+                              className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.03]"
+                            />
+                          </button>
+                        ) : (
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="group flex aspect-[16/10] w-full items-center justify-center gap-2 bg-raised text-ink-400 transition hover:text-brand-600"
+                          >
+                            <FileText size={26} />
+                            <span className="text-[12.5px] font-semibold">Open the file</span>
+                            <ExternalLink size={13} />
+                          </a>
+                        )}
 
-            <Crosslinks links={[{ to: "/checklist#s4", tag: "D2", label: "The end state, without pre-filled answers" }]} />
-          </section>
+                        <div className="flex flex-1 flex-col p-4">
+                          <div className="flex flex-wrap items-center gap-1.5">
+                            <span className={cx("chip", roleTone[inp.role].chip)}>
+                              {roleTone[inp.role].label}
+                            </span>
+                            <span className="chip bg-ink-100 text-ink-500 ring-1 ring-ink-200">
+                              {kindIcon[inp.kind]}
+                              {inp.kind}
+                            </span>
+                          </div>
+                          <div className="mt-2.5 break-all font-mono text-[11.5px] font-semibold text-ink-800">
+                            {inp.file}
+                          </div>
+                          <p className="mt-2 text-[12.5px] leading-relaxed text-ink-600">
+                            {inp.shows}
+                          </p>
+                          <div className="mt-3 border-t border-ink-200/70 pt-3">
+                            <div className="mono-label mb-1 text-ink-400">Carries</div>
+                            <p className="text-[12.5px] leading-relaxed text-ink-700">
+                              {inp.carries}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Reveal>
+                  );
+                })}
+              </div>
+            </section>
 
-          {/* -------------------------------------------------- ledger */}
-          <section id="ledger" className="section">
-            <div className="section__head">
-              <h2>The evidence ledger</h2>
-              <p>
-                Every vendor in the pool, the two sources that speak to it, and why they land where they do. This is
-                the artifact that makes the rubric set checkable.
-              </p>
-            </div>
-            <Ledger rows={t.ledger} />
-            <Crosslinks links={[{ to: "/checklist#s7", tag: "G2", label: "The golden passes the complete set" }]} />
-          </section>
-
-          {/* ------------------------------------------------- rubrics */}
-          <section id="rubrics" className="section">
-            <div className="section__head">
-              <h2>Objective rubrics</h2>
-              <p>
-                {t.rubrics.length} criteria. Read any one with the prompt closed and you can still rate it — the
-                amount, the filename, the timestamp and the person are all inside the criterion.
-              </p>
-            </div>
-            <Rubrics rubrics={t.rubrics} />
-            <div className="note note--warn" style={{ marginTop: "var(--space-lg)" }}>
-              <b>Criterion 18 is the counter-example.</b> It carries neither a category nor an evaluation target in the
-              source file. Everything else in the set does. E7 in the pre-submit gate is the check that catches it.
-            </div>
-            <Crosslinks
-              links={[
-                { to: "/checklist#s5", tag: "E2", label: "Rate it with the prompt closed" },
-                { to: "/checklist#s5", tag: "E7", label: "Category and evaluation target" },
-                { to: "/checklist#s5", tag: "E8", label: "Negatives name failures the setup invites" },
-              ]}
-            />
-          </section>
-
-          {/* ---------------------------------------------- subjective */}
-          <section id="subjective" className="section">
-            <div className="section__head">
-              <h2>The subjective block</h2>
-              <p>{t.subjectiveNote}</p>
-            </div>
-
-            <ol style={{ listStyle: "none" }}>
-              {t.subjective.map((s) => (
-                <li key={s.n} className="check" style={{ gridTemplateColumns: "2.5rem minmax(0, 1fr)" }}>
-                  <span className="check__id tnum" style={{ paddingTop: "0.15rem" }}>{String(s.n).padStart(2, "0")}</span>
-                  <p className="check__q">{s.text}</p>
-                </li>
-              ))}
-            </ol>
-
-            <h3 className="subhead">Why Model A failed on presentation</h3>
-            <div className="stack-sm">
-              {t.subjectiveFailures.map((f) => (
-                <p key={f.n} className="note note--no"><b>{f.n}.</b> {f.body}</p>
-              ))}
-            </div>
-
-            <Disclose summary="See Model A’s vendor_cancellation.svg" meta="render">
-              <img
-                src={asset("tasks/vendor-closeout/ot/vendor_cancellation.svg")}
-                alt="Model A infographic — $2,650.00 and a placeholder where the percentage should be"
-                style={{ width: "100%", border: "1px solid var(--color-rule)", borderRadius: "var(--radius-lg)" }}
+            {/* Format */}
+            <section id="format" className="scroll-mt-24">
+              <SectionHead
+                id="format"
+                title="The rule lives in an attachment"
+                sub="Nothing in the prompt says what a receipt looks like. The template is one of the eleven files, which is what makes finding and following it part of the work."
               />
-            </Disclose>
-
-            <Crosslinks
-              links={[
-                { to: "/checklist#s6", tag: "F1", label: "One element, one visible property" },
-                { to: "/spec#c-3", tag: "#3", label: "Grading content nobody asked for" },
-                { to: "/spec#conflicts", tag: "!", label: "Sources disagree on subjective negatives" },
-              ]}
-            />
-          </section>
-
-          {/* ------------------------------------------------- model A */}
-          <section id="model-a" className="section">
-            <div className="section__head">
-              <h2>What Model A actually did</h2>
-              <p>{t.run.summary}</p>
-            </div>
-
-            <p className="note note--no"><b>{t.run.score}</b></p>
-
-            <div className="scroller" style={{ marginTop: "var(--space-lg)" }}>
-              <table className="spec">
-                <thead>
-                  <tr>
-                    <th style={{ minWidth: "13rem" }}>Finding</th>
-                    <th style={{ minWidth: "20rem" }}>Expected</th>
-                    <th style={{ minWidth: "20rem" }}>Actual</th>
-                    <th style={{ minWidth: "7rem" }}>Criteria</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {t.run.observations.map((o) => (
-                    <tr key={o.title}>
-                      <td><strong className="strong-ink">{o.title}</strong></td>
-                      <td>{o.expected}</td>
-                      <td>{o.actual}</td>
-                      <td className="mono tnum">{o.rubrics.join(", ")}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <h3 className="subhead">The artifacts it produced</h3>
-            <div className="grid grid--2">
-              {t.run.artifacts.map((d) => (
-                <FileLink key={d.file} file={d.file} src={d.src} what={d.what} />
-              ))}
-            </div>
-
-            <Crosslinks
-              links={[
-                { to: "/checklist#s1", tag: "A4", label: "The 50% failure threshold" },
-                { to: "/checklist#s7", tag: "G3", label: "Download the trajectory once per turn" },
-              ]}
-            />
-          </section>
-
-          {/* --------------------------------------------------- traps */}
-          <section id="traps" className="section">
-            <div className="section__head">
-              <h2>Designed friction</h2>
-              <p>
-                The part worth copying. None of it makes the task longer — all of it makes the task harder to get right
-                by guessing.
-              </p>
-            </div>
-
-            <div className="stack-lg">
-              {t.traps.map((p) => (
-                <article key={p.id} className="card">
-                  <div className="card__head">
-                    <span className="card__title" style={{ fontSize: "var(--text-base)" }}>{p.title}</span>
-                    <span className="card__spacer" />
-                    <span className="label mono">{p.where}</span>
-                  </div>
-                  <div className="card__body">
-                    <p>{p.body}</p>
-                    <p className="small" style={{ marginTop: "var(--space-sm)" }}>
-                      <span className="label" style={{ marginRight: "0.5rem" }}>Tests</span>
-                      {p.tests}
-                    </p>
-                    <Crosslinks links={p.links} />
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          {/* ----------------------------------------------- takeaways */}
-          <section id="takeaways" className="section">
-            <div className="section__head"><h2>Take these to your own task</h2></div>
-            <div className="stack-lg">
-              {t.takeaways.map((k) => (
-                <div key={k.title}>
-                  <h3 className="subhead" style={{ marginTop: 0 }}>{k.title}</h3>
-                  <p className="measure">{k.body}</p>
-                  <Crosslinks links={k.links} />
+              <div className="card overflow-hidden">
+                <div className="flex items-center gap-2 border-b border-ink-200/70 px-5 py-3">
+                  <FileText size={14} className="text-ink-400" />
+                  <span className="font-mono text-[12px] font-semibold text-ink-700">
+                    {t.format.file}
+                  </span>
+                  <a
+                    href={asset(t.format.src)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ml-auto inline-flex items-center gap-1 text-[12px] font-semibold text-brand-600 hover:underline dark:text-brand-300"
+                  >
+                    Open <ExternalLink size={12} />
+                  </a>
                 </div>
-              ))}
-            </div>
+                <pre className="overflow-x-auto p-5 font-mono text-[12.5px] leading-relaxed text-ink-700">
+                  {t.format.body}
+                </pre>
+              </div>
+              <Callout title="Why it matters" tone="accent" icon={<Lightbulb size={13} />}>
+                The PST clause in this file is the only thing that settles the Helpshift date. An
+                agent that reads the template block and stops there gets the date wrong on exactly
+                one of the four receipts.
+              </Callout>
+            </section>
 
-            <div className="btnrow" style={{ marginTop: "var(--space-xl)" }}>
-              <Link className="btn btn--primary" to="/checklist">Run the pre-submit gate <IconArrow size={12} /></Link>
-              <Link className="btn" to="/spec">Check the clarifications</Link>
-            </div>
-          </section>
+            {/* Turns */}
+            <section id="turns" className="scroll-mt-24">
+              <SectionHead
+                id="turns"
+                title="Four turns, each one standing on the last"
+                sub="Read the consumes line on each turn. None of them would work as an opening prompt, which is the whole test in Turn Structure."
+              />
+              <div className="space-y-5">
+                {t.turns.map((turn) => (
+                  <Reveal key={turn.n}>
+                    <div className="card overflow-hidden">
+                      <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
+                        <span className="grid h-6 w-6 place-items-center rounded-lg bg-brand-600 font-mono text-[11px] font-bold text-white">
+                          {turn.n}
+                        </span>
+                        <span className="text-[13px] font-bold text-ink-900">Turn {turn.n}</span>
+                        <div className="ml-auto flex flex-wrap gap-1.5">
+                          {turn.produces.map((p) => (
+                            <span
+                              key={p}
+                              className="rounded-md border border-ink-200 bg-surface px-2 py-0.5 font-mono text-[10.5px] text-ink-600"
+                            >
+                              {p}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="p-5">
+                        <blockquote className="relative rounded-xl border border-ink-200/70 bg-raised p-4 pl-9">
+                          <Quote
+                            size={14}
+                            className="absolute left-3.5 top-4 text-ink-300"
+                            aria-hidden
+                          />
+                          <p className="whitespace-pre-wrap text-[13.5px] leading-relaxed text-ink-700">
+                            {turn.text}
+                          </p>
+                        </blockquote>
+
+                        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                          <div className="rounded-lg border border-ink-200/70 px-3.5 py-2.5">
+                            <div className="mono-label mb-1 text-ink-400">Adds</div>
+                            <p className="text-[12.5px] leading-relaxed text-ink-700">{turn.adds}</p>
+                          </div>
+                          <div className="rounded-lg border border-ink-200/70 px-3.5 py-2.5">
+                            <div className="mono-label mb-1 text-ink-400">Consumes</div>
+                            <p className="text-[12.5px] leading-relaxed text-ink-700">
+                              {turn.consumes}
+                            </p>
+                          </div>
+                        </div>
+
+                        {turn.notes && turn.notes.length > 0 && (
+                          <div className="mt-4 space-y-2.5">
+                            {turn.notes.map((n) => (
+                              <Callout
+                                key={n.title}
+                                title={n.title}
+                                tone={n.tone === "warn" ? "warn" : n.tone === "no" ? "no" : "accent"}
+                                icon={<Target size={12} />}
+                              >
+                                {n.body}
+                              </Callout>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </section>
+
+            {/* Answer */}
+            <section id="answer" className="scroll-mt-24">
+              <SectionHead
+                id="answer"
+                title="The answer existed before the run did"
+                sub="The GTFA resolved every vendor, every amount and every date up front. Grading became verification instead of reconstruction."
+              />
+              <div className="card overflow-hidden">
+                <div className="grid gap-4 border-b border-ink-200/70 bg-raised p-6 sm:grid-cols-2">
+                  <div>
+                    <div className="mono-label text-ink-400">Total owed</div>
+                    <div className="mt-1 font-display text-4xl font-bold text-ink-900">
+                      {t.answer.total}
+                    </div>
+                  </div>
+                  <div>
+                    <div className="mono-label text-ink-400">Of the shutdown estimate</div>
+                    <div className="mt-1 font-display text-4xl font-bold text-ink-900">
+                      {t.answer.percent}
+                    </div>
+                  </div>
+                  <div className="sm:col-span-2">
+                    <div className="mono-label mb-1 text-ink-400">Basis</div>
+                    <p className="font-mono text-[12.5px] leading-relaxed text-ink-600">
+                      {t.answer.basis}
+                    </p>
+                  </div>
+                </div>
+                <div className="grid gap-3 p-6 sm:grid-cols-3">
+                  {t.answer.counts.map((c) => (
+                    <Stat key={c.label} label={c.label} value={String(c.n)} tone={c.tone} />
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Ledger */}
+            <section id="ledger" className="scroll-mt-24">
+              <SectionHead
+                id="ledger"
+                title="Every vendor, and why it lands where it does"
+                sub="One rule, stated once in turn 1, run against twenty vendors. Open a row to see the Slack line and the attachment that decide it."
+              />
+              <Ledger rows={t.ledger} />
+            </section>
+
+            {/* Model A */}
+            <section id="model-a" className="scroll-mt-24">
+              <SectionHead
+                id="model-a"
+                title="Where the run actually broke"
+                sub={t.run.summary}
+              />
+              <div className="space-y-4">
+                {t.run.observations.map((o) => (
+                  <Reveal key={o.title}>
+                    <div className="card p-5">
+                      <h3 className="font-display text-[16px] font-bold text-ink-900">{o.title}</h3>
+                      <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                        <div className="rounded-lg border border-emerald-300/50 bg-emerald-50/50 p-3.5 dark:border-emerald-500/25 dark:bg-emerald-500/10">
+                          <div className="mono-label mb-1 text-emerald-700 dark:text-emerald-300">
+                            Expected
+                          </div>
+                          <p className="text-[12.5px] leading-relaxed text-ink-700">{o.expected}</p>
+                        </div>
+                        <div className="rounded-lg border border-rose-300/50 bg-rose-50/50 p-3.5 dark:border-rose-500/25 dark:bg-rose-500/10">
+                          <div className="mono-label mb-1 text-rose-700 dark:text-rose-300">
+                            Actual
+                          </div>
+                          <p className="text-[12.5px] leading-relaxed text-ink-700">{o.actual}</p>
+                        </div>
+                      </div>
+                      <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                        <span className="mono-label text-ink-400">Criteria</span>
+                        {o.rubrics.map((n) => (
+                          <span
+                            key={n}
+                            className="rounded border border-ink-200 bg-raised px-1.5 py-0.5 font-mono text-[11px] text-ink-600"
+                          >
+                            {n}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+
+              <div className="mt-6">
+                <div className="mono-label mb-3 text-ink-400">What Model A actually shipped</div>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {t.run.artifacts.map((a) => (
+                    <a
+                      key={a.file}
+                      href={a.src ? asset(a.src) : undefined}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="card card-hover flex items-start gap-3 p-4"
+                    >
+                      <FileText size={15} className="mt-0.5 shrink-0 text-ink-400" />
+                      <span className="min-w-0 flex-1">
+                        <span className="block break-all font-mono text-[11.5px] font-semibold text-ink-800">
+                          {a.file}
+                        </span>
+                        <span className="mt-1 block text-[12.5px] leading-relaxed text-ink-500">
+                          {a.what}
+                        </span>
+                      </span>
+                      <ExternalLink size={13} className="mt-0.5 shrink-0 text-ink-300" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Rubrics */}
+            <section id="rubrics" className="scroll-mt-24">
+              <SectionHead
+                id="rubrics"
+                title={`${t.rubrics.length} objective criteria`}
+                sub="Read any one of them with the prompt closed. The amount, the filename, the date and the person are all inside the criterion, which is what makes it ratable by someone who was never in the room."
+              />
+              <Rubrics rubrics={t.rubrics} />
+            </section>
+
+            {/* Golden */}
+            <section id="golden" className="scroll-mt-24">
+              <SectionHead
+                id="golden"
+                title="What the golden hands over"
+                sub="Finished artifacts only. The model reached these itself, steered with intent level prompts that never named a value."
+              />
+              <div className="grid gap-2 sm:grid-cols-2">
+                {t.deliverables.map((d) => {
+                  const inner = (
+                    <>
+                      <FileText size={15} className="mt-0.5 shrink-0 text-gold-500" />
+                      <span className="min-w-0 flex-1">
+                        <span className="block break-all font-mono text-[11.5px] font-semibold text-ink-800">
+                          {d.file}
+                        </span>
+                        <span className="mt-1 block text-[12.5px] leading-relaxed text-ink-500">
+                          {d.what}
+                        </span>
+                      </span>
+                      {d.src && (
+                        <ExternalLink size={13} className="mt-0.5 shrink-0 text-ink-300" />
+                      )}
+                    </>
+                  );
+                  return d.src ? (
+                    <a
+                      key={d.file}
+                      href={asset(d.src)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="card card-hover flex items-start gap-3 p-4"
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <div key={d.file} className="card flex items-start gap-3 p-4">
+                      {inner}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* Subjective */}
+            <section id="subjective" className="scroll-mt-24">
+              <SectionHead
+                id="subjective"
+                title="Ten criteria from one side by side comparison"
+                sub={t.subjectiveNote}
+              />
+              <ol className="space-y-2">
+                {t.subjective.map((s) => (
+                  <li key={s.n} className="card flex items-start gap-3 p-4">
+                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-lg bg-brand-500/10 font-mono text-[11px] font-bold text-brand-700 dark:text-brand-300">
+                      {s.n}
+                    </span>
+                    <p className="text-[13px] leading-relaxed text-ink-700">
+                      <Ticks text={s.text} />
+                    </p>
+                  </li>
+                ))}
+              </ol>
+
+              <div className="mt-6">
+                <div className="mono-label mb-3 text-ink-400">
+                  What the comparison actually caught
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {t.subjectiveFailures.map((f) => (
+                    <div
+                      key={f.n}
+                      className="rounded-xl border border-rose-300/50 bg-rose-50/40 p-4 dark:border-rose-500/25 dark:bg-rose-500/10"
+                    >
+                      <div className="mono-label mb-1.5 text-rose-700 dark:text-rose-300">
+                        Criterion {f.n}
+                      </div>
+                      <p className="text-[12.5px] leading-relaxed text-ink-700">{f.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Traps */}
+            <section id="traps" className="scroll-mt-24">
+              <SectionHead
+                id="traps"
+                title="Seven pieces of designed friction"
+                sub="None of these is a gotcha. Each one is a place where two real sources have to be reconciled, which is where genuine difficulty comes from."
+              />
+              <div className="grid gap-4 sm:grid-cols-2">
+                {t.traps.map((trap) => (
+                  <Reveal key={trap.id} className="h-full">
+                    <TrapCard t={trap} />
+                  </Reveal>
+                ))}
+              </div>
+            </section>
+
+            {/* Takeaways */}
+            <section id="takeaways" className="scroll-mt-24">
+              <SectionHead
+                id="takeaways"
+                title="What to copy into your own task"
+                sub="Five habits this task is built on. None of them depend on the scenario being about vendors."
+              />
+              <div className="space-y-3">
+                {t.takeaways.map((tk, i) => (
+                  <Reveal key={tk.title}>
+                    <div className="card p-5">
+                      <div className="flex items-start gap-3">
+                        <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-gold-500/15 font-mono text-[11px] font-bold text-gold-700 dark:text-gold-300">
+                          {i + 1}
+                        </span>
+                        <div className="min-w-0">
+                          <h3 className="font-display text-[15.5px] font-bold text-ink-900">
+                            {tk.title}
+                          </h3>
+                          <p className="mt-2 text-[13px] leading-relaxed text-ink-600">{tk.body}</p>
+                          <Crosslinks links={tk.links} className="mt-3" />
+                        </div>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+
+              <div className="mt-8 rounded-2xl border border-ink-200/70 bg-raised p-5">
+                <div className="mono-label mb-2 text-ink-400">Raw source</div>
+                <p className="break-all font-mono text-[12px] text-ink-600">{t.meta.sourcePath}</p>
+              </div>
+            </section>
+          </div>
+
+          <SectionRail sections={SECTIONS} active={active} />
         </div>
-
-        <nav className="toc" aria-label="On this page">
-          <p className="toc__label label">On this page</p>
-          <ol>
-            {SECTIONS.map((s) => (
-              <li key={s.id}>
-                <Link to={{ hash: `#${s.id}` }} className={cx(active === s.id && "is-active")}>{s.label}</Link>
-              </li>
-            ))}
-          </ol>
-        </nav>
       </div>
 
-      <Lightbox
-        open={!!zoom}
-        src={zoom ? asset(zoom.src) : ""}
-        name={zoom?.file ?? ""}
-        caption={zoom?.carries}
-        onClose={() => setZoom(null)}
-      />
+      <AnimatePresence>
+        {lightbox && (
+          <Lightbox
+            src={lightbox.src}
+            alt={lightbox.alt}
+            onClose={() => setLightbox(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

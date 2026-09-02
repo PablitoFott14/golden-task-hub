@@ -1,247 +1,198 @@
-import { useEffect, useId, useState, type ReactNode } from "react";
+import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { ArrowUpRight, CornerDownRight } from "lucide-react";
 import type { XLink } from "../data/types";
-import { asset, cx, useDismissable } from "../lib/hooks";
+import { cx } from "../lib/util";
 
-/* --------------------------------------------------------------- icons */
-/* One stroke voice, drawn here rather than pulled from three libraries. */
-
-const S = { fill: "none", stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
-
-export function IconSearch({ size = 15 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <circle cx="7" cy="7" r="4.5" />
-      <path d="M10.4 10.4 14 14" />
-    </svg>
-  );
-}
-export function IconArrow({ size = 13 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <path d="M3 8h10M9 4l4 4-4 4" />
-    </svg>
-  );
-}
-export function IconCheck({ size = 12 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S} strokeWidth={2.4}>
-      <path d="M3 8.4l3.4 3.4L13 5" />
-    </svg>
-  );
-}
-export function IconMenu({ size = 15 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <path d="M2 4h12M2 8h12M2 12h12" />
-    </svg>
-  );
-}
-export function IconClose({ size = 14 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <path d="M4 4l8 8M12 4l-8 8" />
-    </svg>
-  );
-}
-export function IconFile({ size = 14 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <path d="M4 2h5l3 3v9H4z" />
-      <path d="M9 2v3h3" />
-    </svg>
-  );
-}
-export function IconHome({ size = 16 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <path d="M2.5 7 8 2.5 13.5 7" />
-      <path d="M3.7 6.4V13h8.6V6.4" />
-    </svg>
-  );
-}
-export function IconTasks({ size = 16 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <rect x="2.3" y="2.3" width="4.6" height="4.6" rx="1" />
-      <rect x="9.1" y="2.3" width="4.6" height="4.6" rx="1" />
-      <rect x="2.3" y="9.1" width="4.6" height="4.6" rx="1" />
-      <rect x="9.1" y="9.1" width="4.6" height="4.6" rx="1" />
-    </svg>
-  );
-}
-export function IconSpec({ size = 16 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <path d="M4 2h5l3 3v9H4z" />
-      <path d="M6 8h4M6 10.5h4M6 5.5h2" />
-    </svg>
-  );
-}
-export function IconChecklist({ size = 16 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <path d="M2.6 5.2 4 6.6l2-2.4" />
-      <path d="M2.6 11 4 12.4l2-2.4" />
-      <path d="M8.6 5h5M8.6 11h5" />
-    </svg>
-  );
-}
-export function IconProcess({ size = 16 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" aria-hidden="true" {...S}>
-      <circle cx="4" cy="4" r="1.7" />
-      <circle cx="12" cy="12" r="1.7" />
-      <path d="M4 5.7v2.6a2 2 0 0 0 2 2h4.3" />
-    </svg>
-  );
-}
-
-/* ---------------------------------------------------------------- bits */
-
-export function Chip({
-  tone = "plain",
+/** Fade and rise on first view. Safe on filtered content, unlike an observer. */
+export function Reveal({
   children,
-  dot,
+  delay = 0,
+  className,
 }: {
-  tone?: "plain" | "ok" | "no" | "warn" | "accent";
   children: ReactNode;
-  dot?: boolean;
+  delay?: number;
+  className?: string;
 }) {
   return (
-    <span className={cx("chip", tone !== "plain" && `chip--${tone}`)}>
-      {dot && <span className="chip__dot" />}
+    <motion.div
+      initial={{ opacity: 0, y: 14 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
       {children}
-    </span>
+    </motion.div>
   );
 }
 
-export function Crosslinks({ links, label = "See also" }: { links?: XLink[]; label?: string }) {
-  if (!links?.length) return null;
+export function Eyebrow({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <div className="xlinks">
-      <span className="label">{label}</span>
-      {links.map((l) => (
-        <Link key={l.to + l.label} className="xlink" to={l.to}>
-          {l.tag && <b>{l.tag}</b>}
-          {l.label}
-          <IconArrow size={11} />
-        </Link>
-      ))}
+    <div className={cx("mono-label mb-2 text-brand-600 dark:text-brand-300", className)}>
+      {children}
     </div>
   );
 }
 
-export function Disclose({
-  summary,
-  meta,
+export function SectionHeading({
+  eyebrow,
+  title,
+  sub,
+  align = "left",
+}: {
+  eyebrow?: string;
+  title: ReactNode;
+  sub?: ReactNode;
+  align?: "left" | "center";
+}) {
+  return (
+    <div className={cx(align === "center" && "mx-auto max-w-2xl text-center")}>
+      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+      <h2 className="font-display text-2xl font-bold tracking-tight text-ink-900 sm:text-[28px]">
+        {title}
+      </h2>
+      {sub && <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-500">{sub}</p>}
+    </div>
+  );
+}
+
+/** A labelled figure. Used for task metadata and answer counts. */
+export function Stat({
+  label,
+  value,
+  tone,
+}: {
+  label: string;
+  value: ReactNode;
+  tone?: string;
+}) {
+  return (
+    <div className="rounded-xl border border-ink-200/70 bg-raised px-4 py-3">
+      <div className="mono-label text-ink-400">{label}</div>
+      <div
+        className={cx(
+          "mt-1 text-sm font-semibold text-ink-900",
+          tone === "ok" && "text-emerald-600 dark:text-emerald-400",
+          tone === "warn" && "text-amber-600 dark:text-amber-400",
+          tone === "no" && "text-rose-600 dark:text-rose-400"
+        )}
+      >
+        {value}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * The cross-link row. Links are authored in both directions, so a pre-submit
+ * check points at the golden-task section that demonstrates it and that
+ * section points back at the check.
+ */
+export function Crosslinks({ links, className }: { links?: XLink[]; className?: string }) {
+  if (!links || links.length === 0) return null;
+  return (
+    <div className={cx("flex flex-wrap gap-2", className)}>
+      {links.map((l) => {
+        const external = l.to.startsWith("http");
+        const body = (
+          <>
+            {l.tag && (
+              <span className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-brand-600 dark:text-brand-300">
+                {l.tag}
+              </span>
+            )}
+            <span className="text-ink-600 group-hover:text-ink-900">{l.label}</span>
+            {external ? (
+              <ArrowUpRight size={12} className="shrink-0 text-ink-400" />
+            ) : (
+              <CornerDownRight size={12} className="shrink-0 text-ink-300" />
+            )}
+          </>
+        );
+        const cls =
+          "group inline-flex items-center gap-1.5 rounded-lg border border-ink-200/80 bg-surface px-2.5 py-1.5 text-[12px] font-medium transition hover:-translate-y-px hover:border-brand-300 hover:shadow-soft";
+        return external ? (
+          <a key={l.to + l.label} href={l.to} target="_blank" rel="noreferrer" className={cls}>
+            {body}
+          </a>
+        ) : (
+          <Link key={l.to + l.label} to={l.to} className={cls}>
+            {body}
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
+/** A boxed aside. `tone` sets the accent, never the meaning on its own. */
+export function Callout({
+  title,
+  tone = "accent",
+  icon,
   children,
-  defaultOpen = false,
 }: {
-  summary: ReactNode;
-  meta?: ReactNode;
+  title: string;
+  tone?: "accent" | "warn" | "no" | "gold" | "ok";
+  icon?: ReactNode;
   children: ReactNode;
-  defaultOpen?: boolean;
 }) {
-  const [open, setOpen] = useState(defaultOpen);
-  const id = useId();
+  const frame: Record<string, string> = {
+    accent: "border-brand-300/70 bg-brand-50/60 dark:border-brand-500/30 dark:bg-brand-500/10",
+    warn: "border-amber-300/70 bg-amber-50/60 dark:border-amber-500/30 dark:bg-amber-500/10",
+    no: "border-rose-300/70 bg-rose-50/60 dark:border-rose-500/30 dark:bg-rose-500/10",
+    gold: "border-gold-300/70 bg-gold-50/70 dark:border-gold-500/30 dark:bg-gold-500/10",
+    ok: "border-emerald-300/70 bg-emerald-50/60 dark:border-emerald-500/30 dark:bg-emerald-500/10",
+  };
+  const head: Record<string, string> = {
+    accent: "text-brand-700 dark:text-brand-300",
+    warn: "text-amber-700 dark:text-amber-300",
+    no: "text-rose-700 dark:text-rose-300",
+    gold: "text-gold-700 dark:text-gold-300",
+    ok: "text-emerald-700 dark:text-emerald-300",
+  };
   return (
-    <div className="disclose">
-      <button className="disclose__btn" aria-expanded={open} aria-controls={id} onClick={() => setOpen((o) => !o)}>
-        <span>{summary}</span>
-        <span className="disclose__mark">{meta ?? (open ? "hide" : "show")}</span>
-      </button>
-      <div id={id} hidden={!open} className="disclose__body">
-        {children}
+    <div className={cx("rounded-xl border p-4", frame[tone])}>
+      <div className={cx("mono-label mb-1.5 flex items-center gap-1.5", head[tone])}>
+        {icon}
+        {title}
       </div>
+      <div className="text-[13px] leading-relaxed text-ink-700">{children}</div>
     </div>
   );
 }
 
-export function Code({ label, note, children, light }: { label: string; note?: string; children: string; light?: boolean }) {
-  return (
-    <div className={cx("code", light && "code--light")}>
-      <div className="code__label">
-        <span>{label}</span>
-        {note && <span>{note}</span>}
-      </div>
-      <pre>{children}</pre>
-    </div>
-  );
-}
-
-/* ------------------------------------------------------------ lightbox */
-
-export function Lightbox({
-  open,
-  src,
-  name,
-  caption,
-  onClose,
+/** The sticky in-page rail used by long documents. */
+export function SectionRail({
+  sections,
+  active,
 }: {
-  open: boolean;
-  src: string;
-  name: string;
-  caption?: string;
-  onClose: () => void;
+  sections: { id: string; label: string }[];
+  active: string;
 }) {
-  useDismissable(open, onClose);
-  useEffect(() => {
-    if (!open) return;
-    const el = document.getElementById("lightbox-close");
-    el?.focus();
-  }, [open, src]);
   return (
-    <div
-      className={cx("overlay", "overlay--lightbox", open && "is-open")}
-      aria-hidden={!open}
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
-      }}
-    >
-      {open && (
-        <div className="lightbox" role="dialog" aria-modal="true" aria-label={name}>
-          <div className="lightbox__bar">
-            <span>{name}</span>
-            {caption && <span style={{ opacity: 0.72 }}>{caption}</span>}
-            <button id="lightbox-close" className="btn btn--sm" style={{ marginLeft: "auto" }} onClick={onClose}>
-              <IconClose /> Close
-            </button>
-          </div>
-          <img src={src} alt={name} />
-        </div>
-      )}
-    </div>
+    <nav aria-label="On this page" className="sticky top-24 hidden self-start lg:block">
+      <div className="mono-label mb-3 text-ink-400">On this page</div>
+      <ul className="space-y-0.5 border-l border-ink-200">
+        {sections.map((s) => (
+          <li key={s.id}>
+            <Link
+              to={{ hash: `#${s.id}` }}
+              className={cx(
+                "-ml-px block border-l-2 py-1.5 pl-3 text-[13px] transition",
+                active === s.id
+                  ? "border-brand-500 font-semibold text-brand-700 dark:text-brand-300"
+                  : "border-transparent text-ink-500 hover:border-ink-300 hover:text-ink-800"
+              )}
+            >
+              {s.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 
-/** A file that is not an image — offered as a link, never faked as a preview. */
-export function FileLink({ file, src, what }: { file: string; src?: string; what: string }) {
-  const body = (
-    <>
-      <span className="thumb__name">{file}</span>
-      <span className="small dim">{what}</span>
-    </>
-  );
-  if (!src) {
-    return (
-      <div className="panel" style={{ padding: "var(--space-sm) var(--space-md)" }}>
-        {body}
-      </div>
-    );
-  }
-  return (
-    <a
-      className="panel"
-      href={asset(src)}
-      target="_blank"
-      rel="noreferrer"
-      style={{ display: "block", padding: "var(--space-sm) var(--space-md)", textDecoration: "none" }}
-    >
-      {body}
-      <span className="xlink" style={{ marginTop: "var(--space-xs)" }}>
-        <IconFile /> Open file
-      </span>
-    </a>
-  );
-}

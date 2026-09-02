@@ -4,14 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Golden Task Hub · Red Shell</title>
-    <meta name="description" content="The central reference point for contributors building multi-turn multimodal rubric tasks: worked golden tasks, project clarifications, and the pre-submit gate." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f7f8fb'/%3E%3Crect x='5.5' y='5.5' width='21' height='21' rx='3.5' fill='none' stroke='%232b5cf0' stroke-width='2'/%3E%3Cpath d='M11 16.4l3.4 3.4L21.5 12' fill='none' stroke='%232b5cf0' stroke-width='2.4' stroke-linecap='square'/%3E%3C/svg%3E" />
+    <meta
+      name="description"
+      content="The practical reference for Red Shell contributors: the method behind a strong multi turn task, a worked Golden Task, the pre submit gate, the QC spec and the questions everyone asks."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23211a4d'/%3E%3Cpath d='M16 6.5l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3 1.2-6.8-5-4.9 6.9-1z' fill='%23eab435'/%3E%3C/svg%3E"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // Apply the stored theme before first paint so there is no flash.
+      (function () {
+        try {
+          var t = localStorage.getItem("gth-theme");
+          if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

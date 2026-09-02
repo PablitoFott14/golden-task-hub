@@ -3,3 +3,9 @@ dist
 .DS_Store
 *.local
 .vite
+
+# Source material mirrored onto Drive beside the repo. The hub transcribes it
+# into src/data/; the raw folders are not site content and stay out of git.
+task */
+Task_Data_*.csv
+\[External\]*Guidelines*.md

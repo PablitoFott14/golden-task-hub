@@ -1,20 +1,48 @@
 /**
- * Every entity in the hub carries an `id` that is stable and URL-addressable,
- * because the whole point of the hub is that one person can send another
- * person a link to the exact thing they mean.
+ * Every entity in the hub carries a stable, URL-addressable `id`, because the
+ * whole point of the hub is that one person can send another person a link to
+ * the exact thing they mean.
  */
 
 /** A pointer from one resource to another. Rendered by <Crosslinks />. */
 export interface XLink {
-  /** Where it goes. */
+  /** Where it goes: `/route#section-id`, or an absolute URL. */
   to: string;
-  /** Short mono prefix — the id of the target ("E2", "#4", "GT"). */
+  /** Short mono prefix, the id of the target ("E2", "M4", "GT"). */
   tag?: string;
   /** Human label. */
   label: string;
 }
 
-/* ------------------------------------------------------------ golden tasks */
+/* ------------------------------------------------------------------- method */
+
+/**
+ * One step of the method, derived from `rationale.md` and cross-read against
+ * the project guidelines. The slogan is the memorable half, `means` the
+ * minimal explanation, and `inTask` the line that ties it to the Golden Task.
+ */
+export interface MethodStep {
+  n: number;
+  id: string;
+  /** Short name for the step. */
+  title: string;
+  /** The principle, in one memorable line. */
+  slogan: string;
+  /** Two or three sentences. Never more. */
+  means: string;
+  /** Concrete moves, three or four bullets. */
+  moves: string[];
+  /** What this step hands to the next one. */
+  produces: string;
+  /** How the principle shows up in the worked task. */
+  inTask: { body: string; link: XLink };
+  /** Optional hard rule worth pinning, taken from the guidelines. */
+  rule?: { label: string; body: string };
+  /** Which phase of the workflow the step belongs to. */
+  phase: "Design" | "Leg A" | "Leg B" | "Grade";
+}
+
+/* --------------------------------------------------------------- golden task */
 
 export type Verdict = "receipt" | "unconfirmed" | "not-cancelled" | "out-of-pool" | "skipped";
 
@@ -48,7 +76,7 @@ export interface InputAsset {
   carries: string;
   /** Vendors it speaks to. */
   vendors: string[];
-  /** Why it is in the pack — the design intent. */
+  /** Why it is in the pack, the design intent. */
   role: "evidence" | "contradicts" | "distractor" | "spec";
 }
 
@@ -61,11 +89,11 @@ export interface Turn {
   consumes: string;
   /** Named outputs the turn asks for. */
   produces: string[];
-  /** Notes worth reading — traps planted in the wording. */
+  /** Notes worth reading, traps planted in the wording. */
   notes?: { title: string; body: string; tone?: "accent" | "warn" | "no" }[];
 }
 
-/** One row of the evidence ledger — the heart of the task. */
+/** One row of the evidence ledger, the heart of the task. */
 export interface LedgerRow {
   vendor: string;
   verdict: Verdict;
@@ -95,12 +123,11 @@ export interface Rubric {
 export interface SubjectiveRubric {
   n: number;
   text: string;
-  /** Present / not present against Model A. */
   modelA?: "present" | "not-present";
   note?: string;
 }
 
-/** A designed difficulty — the part worth copying. */
+/** A designed difficulty, the part worth copying. */
 export interface Trap {
   id: string;
   title: string;
@@ -108,6 +135,8 @@ export interface Trap {
   body: string;
   /** What it tests about the model. */
   tests: string;
+  /** The method step this friction came out of. */
+  step?: number;
   links?: XLink[];
 }
 
@@ -130,14 +159,19 @@ export interface GoldenTask {
   meta: TaskMeta;
   /** The scenario in the contributor's words, not the user's. */
   premise: string;
-  /** What makes it golden — three or four lines, no more. */
+  /** What makes it golden. Three or four lines, no more. */
   whyGolden: string[];
   turns: Turn[];
   inputs: InputAsset[];
   /** The one written spec the agent must follow. */
   format: { file: string; src: string; body: string };
   universeNotes: { title: string; body: string }[];
-  answer: { total: string; percent: string; basis: string; counts: { label: string; n: number; tone: string }[] };
+  answer: {
+    total: string;
+    percent: string;
+    basis: string;
+    counts: { label: string; n: number; tone: string }[];
+  };
   deliverables: Deliverable[];
   ledger: LedgerRow[];
   rubrics: Rubric[];
@@ -150,63 +184,7 @@ export interface GoldenTask {
   takeaways: { title: string; body: string; links?: XLink[] }[];
 }
 
-/* ------------------------------------------------------- spec / clarifications */
-
-export type ClarificationStatus = "open" | "proposed" | "blocks-taxonomy";
-
-export interface Clarification {
-  n: number;
-  title: string;
-  /** The short version — what a CB actually wants to know. */
-  question: string;
-  /** The full set of sub-questions from the source doc. */
-  asks: string[];
-  /** Framing that is not itself a question. */
-  context: string[];
-  /** The proposal on the table, from purposed_solution.md. */
-  proposal?: string[];
-  status: ClarificationStatus;
-  tags: string[];
-  links?: XLink[];
-}
-
-export interface HistoryEntry {
-  id: string;
-  /** Which part of the taxonomy it belongs to. */
-  area: string;
-  change: string;
-  why: string;
-  /** "settled" = written into the new taxonomy, "flagged" = needs a decision. */
-  state: "settled" | "flagged";
-}
-
-export interface Todo {
-  n: number;
-  title: string;
-  detail: string;
-  status: "in progress" | "not started" | "blocked";
-  dependsOn?: string;
-  links?: XLink[];
-}
-
-/** A place where two source documents currently say different things. */
-export interface Conflict {
-  id: string;
-  title: string;
-  a: { source: string; says: string };
-  b: { source: string; says: string };
-  guidance: string;
-  links?: XLink[];
-}
-
 /* ---------------------------------------------------------------- checklist */
-
-export interface ContextBlock {
-  lead: string;
-  body?: string;
-  tone?: "accent" | "warn" | "plain";
-  examples?: { ok: boolean; text: string }[];
-}
 
 export interface Check {
   id: string;
@@ -221,25 +199,47 @@ export interface ChecklistSection {
   id: string;
   title: string;
   prompt: string;
-  context: ContextBlock[];
   checks: Check[];
 }
 
-/* ------------------------------------------------------------------ process */
+/* ----------------------------------------------------------------- spec doc */
 
-export interface ProcessStep {
-  n: string;
+/** One scored question in the QC spec. */
+export interface SpecQuestion {
   id: string;
-  title: string;
+  name: string;
+  /** What the reviewer is actually judging. */
   body: string;
-  produces: string;
+  /** The failing option, in plain words. */
+  fails: string;
+  links?: XLink[];
+}
+
+export interface SpecDimension {
+  id: string;
+  name: string;
+  /** One line on what this dimension protects. */
+  purpose: string;
+  questions: SpecQuestion[];
+}
+
+/* --------------------------------------------------------------------- faq */
+
+export interface FaqItem {
+  n: number;
+  id: string;
+  q: string;
+  /** The answer, sanitized. Paragraphs. */
+  a: string[];
+  /** Grouping shown as a filter. */
+  topic: string;
   links?: XLink[];
 }
 
 /* ------------------------------------------------------------------- search */
 
 export interface SearchEntry {
-  kind: "Golden task" | "Clarification" | "Pre-submit check" | "Process" | "History" | "Conflict";
+  kind: "Method" | "Golden task" | "Pre-submit check" | "QC spec" | "FAQ";
   title: string;
   hint: string;
   to: string;

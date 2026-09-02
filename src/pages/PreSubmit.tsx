@@ -1,178 +1,230 @@
-import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
-import { checklist, totalChecks, verdict } from "../data/checklist";
-import { Crosslinks, IconArrow, IconCheck, IconFile } from "../components/ui";
-import { asset, cx, usePersisted, useReveal, useScrollSpy } from "../lib/hooks";
+import { useMemo } from "react";
+import { motion } from "framer-motion";
+import { AlertTriangle, Check, Clock, Download, RotateCcw, ShieldCheck } from "lucide-react";
+import { checklist, checklistMeta } from "../data/checklist";
+import { Crosslinks, Reveal, SectionRail } from "../components/ui";
+import { useScrollSpy } from "../lib/useScrollSpy";
+import { usePersisted } from "../lib/usePersisted";
+import { asset, cx } from "../lib/util";
+
+const SECTIONS = checklist.map((s) => ({ id: s.id, label: `${s.n}. ${s.title}` }));
+const IDS = SECTIONS.map((s) => s.id);
+const ALL = checklist.flatMap((s) => s.checks.map((c) => c.id));
 
 export default function PreSubmit() {
-  const [ticked, setTicked] = usePersisted<Record<string, boolean>>("rsh.checklist.v1", {});
-  const [hideDone, setHideDone] = useState(false);
-  const active = useScrollSpy(checklist.map((s) => s.id));
-  useReveal();
+  const active = useScrollSpy(IDS);
+  const [ticked, setTicked] = usePersisted<string[]>("rsh.checklist.v2", []);
 
-  const done = useMemo(() => checklist.flatMap((s) => s.checks).filter((c) => ticked[c.id]).length, [ticked]);
-  const pct = Math.round((done / totalChecks) * 100);
-  const complete = done === totalChecks;
+  const done = useMemo(() => new Set(ticked), [ticked]);
+  const count = ALL.filter((id) => done.has(id)).length;
+  const pct = Math.round((count / ALL.length) * 100);
+  const ready = count === ALL.length;
 
-  const toggle = (id: string) => setTicked((p) => ({ ...p, [id]: !p[id] }));
+  const toggle = (id: string) =>
+    setTicked(done.has(id) ? ticked.filter((x) => x !== id) : [...ticked, id]);
 
   return (
-    <div className="content">
-      <header className="phead">
-        <p className="phead__eyebrow label">Pre-submit gate</p>
-        <h1 className="phead__title">Run this once, when you think you are finished.</h1>
-        <p className="lede phead__lede">
-          {totalChecks} checks, about five minutes. Tick a box only when you have actually looked — not when you
-          assume. Not a replacement for the guidelines: the section refs point into them, and they stay the source of
-          truth.
-        </p>
-
-        <div style={{ marginTop: "var(--space-lg)", maxWidth: "34rem" }}>
-          <div className="progress-row">
-            <span className="tnum">{done} / {totalChecks} ticked</span>
-            <span className="progress-row__spacer" />
-            <span className="tnum">{pct}%</span>
+    <div>
+      <section className="relative overflow-hidden border-b border-ink-200/70 bg-surface">
+        <div className="pointer-events-none absolute inset-0 bg-aurora opacity-70" />
+        <div className="wrap relative py-14">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="chip bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300">
+              <Clock size={11} /> {checklistMeta.estimate}
+            </span>
+            <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
+              {ALL.length} checks · {checklist.length} sections
+            </span>
           </div>
-          <div className="meter" role="progressbar" aria-valuenow={done} aria-valuemin={0} aria-valuemax={totalChecks}>
-            <i className={cx(complete && "is-complete")} style={{ transform: `scaleX(${done / totalChecks})`, width: "100%" }} />
+
+          <h1 className="mt-5 font-display text-[34px] font-bold tracking-tight text-ink-900 sm:text-[44px]">
+            {checklistMeta.title}
+          </h1>
+          <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600">
+            {checklistMeta.subtitle}
+          </p>
+
+          <div className="mt-6 max-w-2xl rounded-xl border border-amber-300/70 bg-amber-50/60 p-4 dark:border-amber-500/30 dark:bg-amber-500/10">
+            <div className="mono-label mb-1.5 flex items-center gap-1.5 text-amber-700 dark:text-amber-300">
+              <AlertTriangle size={13} /> {checklistMeta.warning.split(".")[0]}
+            </div>
+            <p className="text-[13px] leading-relaxed text-ink-700">{checklistMeta.banner}</p>
+          </div>
+
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a
+              href={asset(checklistMeta.pdf)}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary"
+            >
+              <Download size={15} /> Open the printable PDF
+            </a>
+            {count > 0 && (
+              <button onClick={() => setTicked([])} className="btn-ghost">
+                <RotateCcw size={15} /> Reset ticks
+              </button>
+            )}
           </div>
         </div>
+      </section>
 
-        <div className="btnrow" style={{ marginTop: "var(--space-lg)" }}>
-          <button className="btn" aria-pressed={hideDone} onClick={() => setHideDone((h) => !h)}>
-            {hideDone ? "Show every check" : "Show only what is left"}
-          </button>
-          <a className="btn" href={asset("docs/presubmit-gate.pdf")} target="_blank" rel="noreferrer">
-            <IconFile /> Printable PDF
-          </a>
-          {done > 0 && (
-            <button className="btn" onClick={() => setTicked({})}>Reset for a new task</button>
-          )}
+      {/* Sticky progress */}
+      <div className="sticky top-16 z-30 border-b border-ink-200/70 bg-ink-50/90 backdrop-blur-md">
+        <div className="wrap flex items-center gap-4 py-3">
+          <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-ink-200">
+            <motion.div
+              className={cx(
+                "h-full rounded-full",
+                ready ? "bg-emerald-500" : "bg-gradient-to-r from-brand-600 to-brand-400"
+              )}
+              initial={false}
+              animate={{ width: `${pct}%` }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            />
+          </div>
+          <span className="shrink-0 font-mono text-[12px] font-semibold text-ink-600">
+            {count} / {ALL.length}
+          </span>
+          <span
+            className={cx(
+              "chip shrink-0",
+              ready
+                ? "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300"
+                : "bg-amber-500/12 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-300"
+            )}
+          >
+            {ready ? <ShieldCheck size={11} /> : <AlertTriangle size={11} />}
+            <span className="hidden sm:inline">
+              {ready ? checklistMeta.ready.title : checklistMeta.fix.title}
+            </span>
+          </span>
         </div>
-        <p className="small dim" style={{ marginTop: "var(--space-sm)" }}>
-          Ticks are remembered in this browser only. Reset before you start the next task.
-        </p>
-      </header>
+      </div>
 
-      <div className="doc">
-        <div className="doc__body">
-          {checklist.map((s) => {
-            const checks = hideDone ? s.checks.filter((c) => !ticked[c.id]) : s.checks;
-            const n = s.checks.filter((c) => ticked[c.id]).length;
-            const full = n === s.checks.length;
-            if (hideDone && checks.length === 0) {
+      <div className="wrap py-12">
+        <div className="gap-12 lg:grid lg:grid-cols-[1fr_220px]">
+          <div className="min-w-0 space-y-14">
+            {checklist.map((s) => {
+              const sectionDone = s.checks.filter((c) => done.has(c.id)).length;
               return (
-                <section key={s.id} id={s.id} className="section">
-                  <div className="section__head" style={{ marginBottom: 0 }}>
-                    <h2 style={{ fontSize: "var(--text-md)" }}>{s.n}. {s.title}</h2>
-                    <p><span className="status status--ok"><span className="status__dot" />all {s.checks.length} ticked</span></p>
-                  </div>
-                </section>
-              );
-            }
-            return (
-              <section key={s.id} id={s.id} className="section">
-                <div className="section__head">
-                  <div className="chiprow" style={{ marginBottom: "var(--space-xs)" }}>
-                    <span className={cx("status", full ? "status--ok" : "status--accent")}>
-                      <span className="status__dot" />{n} / {s.checks.length}
+                <section key={s.id} id={s.id} className="scroll-mt-32">
+                  <div className="flex flex-wrap items-baseline gap-3 border-b border-ink-200/70 pb-4">
+                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-brand-600 font-mono text-[13px] font-bold text-white">
+                      {s.n}
+                    </span>
+                    <h2 className="font-display text-[22px] font-bold tracking-tight text-ink-900">
+                      {s.title}
+                    </h2>
+                    <span className="ml-auto font-mono text-[12px] text-ink-400">
+                      {sectionDone} / {s.checks.length}
                     </span>
                   </div>
-                  <h2>{s.n}. {s.title}</h2>
-                  <p>{s.prompt}</p>
-                </div>
+                  <p className="mt-3 text-[14px] italic leading-relaxed text-ink-500">{s.prompt}</p>
 
-                {s.context.length > 0 && (
-                  <div className="grid grid--2" style={{ marginBottom: "var(--space-lg)" }}>
-                    {s.context.map((b) => (
-                      <div key={b.lead} className={cx("note", b.tone === "warn" && "note--warn", b.tone === "accent" && "note--accent")}>
-                        <b>{b.lead}</b>
-                        {b.body && <p style={{ marginTop: "var(--space-2xs)" }}>{b.body}</p>}
-                        {b.examples && (
-                          <div className="stack-sm" style={{ marginTop: "var(--space-xs)" }}>
-                            {b.examples.map((ex, i) => (
-                              <span key={i} className={cx("exline", ex.ok ? "exline--yes" : "exline--no")}>
-                                <i>{ex.ok ? "✓" : "✗"}</i>
-                                <span>{ex.text}</span>
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
+                  <ul className="mt-5 space-y-3">
+                    {s.checks.map((c) => {
+                      const isDone = done.has(c.id);
+                      return (
+                        <Reveal key={c.id}>
+                          <li
+                            className={cx(
+                              "rounded-2xl border bg-surface p-4 transition duration-200 sm:p-5",
+                              isDone
+                                ? "border-emerald-300/60 bg-emerald-50/30 dark:border-emerald-500/25 dark:bg-emerald-500/[0.06]"
+                                : "border-ink-200/70"
+                            )}
+                          >
+                            <div className="flex items-start gap-3.5">
+                              <button
+                                onClick={() => toggle(c.id)}
+                                role="checkbox"
+                                aria-checked={isDone}
+                                aria-label={`Mark ${c.id} as checked`}
+                                className={cx(
+                                  "mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md border-2 transition duration-200",
+                                  isDone
+                                    ? "border-emerald-500 bg-emerald-500 text-white"
+                                    : "border-ink-300 text-transparent hover:border-brand-400"
+                                )}
+                              >
+                                <Check size={14} strokeWidth={3} />
+                              </button>
 
-                <ul style={{ listStyle: "none" }}>
-                  {checks.map((c) => {
-                    const on = !!ticked[c.id];
-                    return (
-                      <li key={c.id} className={cx("check", on && "is-done")}>
-                        <button
-                          className="check__box"
-                          aria-pressed={on}
-                          aria-label={`${on ? "Untick" : "Tick"} ${c.id}`}
-                          onClick={() => toggle(c.id)}
-                        >
-                          <IconCheck />
-                        </button>
-                        <div>
-                          <p className="check__q">
-                            <span className="check__id">{c.id}</span>
-                            {c.q}
-                          </p>
-                          <p className="check__f">
-                            {c.f} <span className="check__ref">{c.ref}</span>
-                          </p>
-                          <Crosslinks links={c.links} label="Worked example" />
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
-            );
-          })}
-
-          <section className="section">
-            <div className="grid grid--2">
-              <div className="card" style={complete ? { borderColor: "var(--color-ok)" } : undefined}>
-                <div className="card__head">
-                  <span className="status status--ok"><span className="status__dot" />{verdict.go.title}</span>
-                </div>
-                <div className="card__body"><p className="small">{verdict.go.body}</p></div>
-              </div>
-              <div className="card">
-                <div className="card__head">
-                  <span className="status status--no"><span className="status__dot" />{verdict.no.title}</span>
-                </div>
-                <div className="card__body"><p className="small">{verdict.no.body}</p></div>
-              </div>
-            </div>
-
-            <div className="btnrow" style={{ marginTop: "var(--space-xl)" }}>
-              <Link className="btn btn--primary" to="/golden-tasks/vendor-closeout">See a passing task <IconArrow size={12} /></Link>
-              <Link className="btn" to="/spec#conflicts">Open conflicts</Link>
-            </div>
-          </section>
-        </div>
-
-        <nav className="toc" aria-label="Sections">
-          <p className="toc__label label">Sections</p>
-          <ol>
-            {checklist.map((s) => {
-              const n = s.checks.filter((c) => ticked[c.id]).length;
-              return (
-                <li key={s.id}>
-                  <Link to={{ hash: `#${s.id}` }} className={cx(active === s.id && "is-active")}>
-                    {s.n}. {s.title}
-                    <span className="toc__count">{n}/{s.checks.length}</span>
-                  </Link>
-                </li>
+                              <div className="min-w-0 flex-1">
+                                <div className="flex flex-wrap items-center gap-2">
+                                  <span className="rounded bg-ink-100 px-1.5 py-0.5 font-mono text-[11px] font-bold text-ink-600">
+                                    {c.id}
+                                  </span>
+                                  <span className="font-mono text-[11px] text-ink-400">{c.ref}</span>
+                                </div>
+                                <p
+                                  className={cx(
+                                    "mt-2 text-[14px] font-medium leading-relaxed",
+                                    isDone ? "text-ink-500" : "text-ink-800"
+                                  )}
+                                >
+                                  {c.q}
+                                </p>
+                                {c.f && (
+                                  <p className="mt-2 border-l-2 border-ink-200 pl-3 text-[12.5px] leading-relaxed text-ink-500">
+                                    {c.f}
+                                  </p>
+                                )}
+                                <Crosslinks links={c.links} className="mt-3" />
+                              </div>
+                            </div>
+                          </li>
+                        </Reveal>
+                      );
+                    })}
+                  </ul>
+                </section>
               );
             })}
-          </ol>
-        </nav>
+
+            {/* Verdict */}
+            <section className="scroll-mt-32">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div
+                  className={cx(
+                    "rounded-2xl border p-5 transition",
+                    ready
+                      ? "border-emerald-400 bg-emerald-50/60 shadow-soft dark:border-emerald-500/40 dark:bg-emerald-500/10"
+                      : "border-ink-200/70 bg-surface opacity-60"
+                  )}
+                >
+                  <div className="mono-label mb-2 flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300">
+                    <ShieldCheck size={13} /> {checklistMeta.ready.title}
+                  </div>
+                  <p className="text-[13px] leading-relaxed text-ink-700">
+                    {checklistMeta.ready.body}
+                  </p>
+                </div>
+                <div
+                  className={cx(
+                    "rounded-2xl border p-5 transition",
+                    !ready
+                      ? "border-amber-400 bg-amber-50/60 shadow-soft dark:border-amber-500/40 dark:bg-amber-500/10"
+                      : "border-ink-200/70 bg-surface opacity-60"
+                  )}
+                >
+                  <div className="mono-label mb-2 flex items-center gap-1.5 text-amber-700 dark:text-amber-300">
+                    <AlertTriangle size={13} /> {checklistMeta.fix.title}
+                  </div>
+                  <p className="text-[13px] leading-relaxed text-ink-700">
+                    {checklistMeta.fix.body}
+                  </p>
+                </div>
+              </div>
+              <p className="mt-5 text-[12.5px] text-ink-400">
+                Ticks are stored in this browser only. They are a convenience, never a record.
+              </p>
+            </section>
+          </div>
+
+          <SectionRail sections={SECTIONS} active={active} />
+        </div>
       </div>
     </div>
   );

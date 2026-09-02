@@ -1,132 +1,110 @@
 import type { GoldenTask, SearchEntry } from "./types";
 import { vendorCloseout } from "./tasks/vendorCloseout";
+import { methodSteps } from "./method";
 import { checklist } from "./checklist";
-import { clarifications, conflicts, history } from "./spec";
-import { process } from "./process";
+import { specDimensions } from "./specDoc";
+import { faq } from "./faq";
 
 export const tasks: GoldenTask[] = [vendorCloseout];
 
-export function taskById(id: string | undefined): GoldenTask | undefined {
+export function taskById(id: string): GoldenTask | undefined {
   return tasks.find((t) => t.meta.id === id);
 }
 
-/** One flat index over everything the hub holds. Feeds the ⌘K palette. */
+/**
+ * The ⌘K index. Written per content type rather than generated, so a new
+ * content shape stays invisible to search until it is mapped here.
+ * `terms` is folded into the match but never displayed, which is how a search
+ * for a vendor name finds the evidence ledger.
+ */
 export const searchIndex: SearchEntry[] = [
+  ...methodSteps.map<SearchEntry>((s) => ({
+    kind: "Method",
+    title: `${s.n}. ${s.title}`,
+    hint: s.slogan,
+    to: `/#${s.id}`,
+    terms: [s.means, s.produces, s.moves.join(" "), s.rule?.body ?? "", s.inTask.body].join(" "),
+  })),
+
+  ...tasks.map<SearchEntry>((t) => ({
+    kind: "Golden task",
+    title: t.meta.title,
+    hint: `${t.meta.category} · ${t.meta.turns} turns · ${t.meta.status}`,
+    to: `/golden-tasks/${t.meta.id}`,
+    terms: [
+      t.meta.oneLiner,
+      t.meta.universe,
+      t.meta.persona,
+      t.meta.subcategory,
+      t.meta.deliverables.join(" "),
+      t.meta.modalities.join(" "),
+      t.premise,
+    ].join(" "),
+  })),
+
   ...tasks.flatMap<SearchEntry>((t) => [
     {
       kind: "Golden task",
-      title: t.meta.title,
-      hint: `${t.meta.category} · ${t.meta.subcategory} · ${t.meta.turns} turns`,
-      to: `/golden-tasks/${t.meta.id}`,
-      terms: `${t.meta.oneLiner} ${t.meta.universe} ${t.meta.persona} ${t.meta.deliverables.join(" ")}`,
-    },
-    {
-      kind: "Golden task",
-      title: "The conversation — four annotated turns",
-      hint: t.meta.title,
-      to: `/golden-tasks/${t.meta.id}#conversation`,
-      terms: `prompt turns follow-up revision ${t.turns.map((x) => x.adds).join(" ")}`,
-    },
-    {
-      kind: "Golden task",
-      title: "The inputs — eleven attached files",
-      hint: t.meta.title,
-      to: `/golden-tasks/${t.meta.id}#inputs`,
-      terms: t.inputs.map((i) => `${i.file} ${i.shows} ${i.vendors.join(" ")}`).join(" "),
-    },
-    {
-      kind: "Golden task",
-      title: "The evidence ledger — every vendor, both sources",
-      hint: t.meta.title,
+      title: "Evidence ledger",
+      hint: `All ${t.ledger.length} vendors, and why each lands where it does`,
       to: `/golden-tasks/${t.meta.id}#ledger`,
-      terms: t.ledger.map((r) => `${r.vendor} ${r.verdict} ${r.amount ?? ""}`).join(" "),
+      terms: t.ledger.map((r) => `${r.vendor} ${r.verdict} ${r.why}`).join(" "),
     },
     {
       kind: "Golden task",
-      title: "The rubric set — 21 objective criteria",
-      hint: t.meta.title,
+      title: "The four prompts",
+      hint: "What each turn adds, and the state it consumes",
+      to: `/golden-tasks/${t.meta.id}#turns`,
+      terms: t.turns.map((x) => `${x.text} ${x.adds} ${x.consumes}`).join(" "),
+    },
+    {
+      kind: "Golden task",
+      title: "Objective rubrics",
+      hint: `${t.rubrics.length} criteria, rated against Model A`,
       to: `/golden-tasks/${t.meta.id}#rubrics`,
-      terms: t.rubrics.map((r) => r.text).join(" "),
+      terms: t.rubrics.map((r) => `${r.text} ${r.category} ${r.target}`).join(" "),
     },
     {
       kind: "Golden task",
-      title: "The subjective block — 10 presentation criteria",
-      hint: t.meta.title,
-      to: `/golden-tasks/${t.meta.id}#subjective`,
-      terms: t.subjective.map((r) => r.text).join(" "),
-    },
-    {
-      kind: "Golden task",
-      title: "What Model A actually did",
-      hint: t.meta.title,
-      to: `/golden-tasks/${t.meta.id}#model-a`,
-      terms: `${t.run.summary} ${t.run.observations.map((o) => `${o.title} ${o.actual}`).join(" ")}`,
-    },
-    ...t.traps.map<SearchEntry>((p) => ({
-      kind: "Golden task",
-      title: p.title,
-      hint: `Designed friction · ${p.where}`,
+      title: "Designed friction",
+      hint: `${t.traps.length} traps, and what each one tests`,
       to: `/golden-tasks/${t.meta.id}#traps`,
-      terms: `${p.body} ${p.tests} trap friction`,
-    })),
+      terms: t.traps.map((x) => `${x.title} ${x.where} ${x.body} ${x.tests}`).join(" "),
+    },
+    {
+      kind: "Golden task",
+      title: "Multimodal inputs",
+      hint: `${t.inputs.length} files, and the fact each one carries`,
+      to: `/golden-tasks/${t.meta.id}#inputs`,
+      terms: t.inputs.map((i) => `${i.file} ${i.shows} ${i.carries}`).join(" "),
+    },
   ]),
-  ...clarifications.map<SearchEntry>((c) => ({
-    kind: "Clarification",
-    title: `${c.n}. ${c.title}`,
-    hint: c.tags.join(" · "),
-    to: `/spec#c-${c.n}`,
-    terms: `${c.question} ${c.asks.join(" ")} ${c.context.join(" ")} ${(c.proposal ?? []).join(" ")}`,
-  })),
-  ...conflicts.map<SearchEntry>((c) => ({
-    kind: "Conflict",
-    title: c.title,
-    hint: "Sources disagree — open",
-    to: `/spec#conflicts`,
-    terms: `${c.a.says} ${c.b.says} ${c.guidance}`,
-  })),
+
   ...checklist.flatMap<SearchEntry>((s) =>
-    s.checks.map<SearchEntry>((c) => ({
-      kind: "Pre-submit check",
-      title: `${c.id} — ${c.q}`,
-      hint: `${s.n}. ${s.title} · ${c.ref}`,
+    s.checks.map((c) => ({
+      kind: "Pre-submit check" as const,
+      title: `${c.id} · ${s.title}`,
+      hint: c.q,
       to: `/checklist#${s.id}`,
-      terms: c.f,
-    })),
+      terms: `${c.f} ${c.ref} ${s.prompt}`,
+    }))
   ),
-  ...process.map<SearchEntry>((p) => ({
-    kind: "Process",
-    title: `Step ${p.n} — ${p.title}`,
-    hint: p.produces,
-    to: `/#${p.id}`,
-    terms: p.body,
-  })),
-  ...history.map<SearchEntry>((h) => ({
-    kind: "History",
-    title: h.change,
-    hint: `${h.area} · ${h.state === "flagged" ? "needs a decision" : "settled"}`,
-    to: "/spec#history",
-    terms: h.why,
+
+  ...specDimensions.flatMap<SearchEntry>((d) =>
+    d.questions.map((q) => ({
+      kind: "QC spec" as const,
+      title: `${d.name} · ${q.name}`,
+      hint: q.body,
+      to: `/spec#${d.id}`,
+      terms: `${q.fails} ${d.purpose}`,
+    }))
+  ),
+
+  ...faq.map<SearchEntry>((f) => ({
+    kind: "FAQ",
+    title: f.q,
+    hint: f.a[0],
+    to: `/faq#${f.id}`,
+    terms: `${f.a.join(" ")} ${f.topic}`,
   })),
 ];
-
-/** Cheap subsequence-free scoring: all terms must appear somewhere. */
-export function search(q: string, limit = 24): SearchEntry[] {
-  const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
-  if (!needles.length) return [];
-  const scored: { e: SearchEntry; score: number }[] = [];
-  for (const e of searchIndex) {
-    const title = e.title.toLowerCase();
-    const hay = `${title} ${e.hint} ${e.terms}`.toLowerCase();
-    if (!needles.every((n) => hay.includes(n))) continue;
-    let score = 0;
-    for (const n of needles) {
-      if (title.startsWith(n)) score += 6;
-      else if (title.includes(n)) score += 4;
-      else if (e.hint.toLowerCase().includes(n)) score += 2;
-      else score += 1;
-    }
-    scored.push({ e, score });
-  }
-  scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, limit).map((s) => s.e);
-}

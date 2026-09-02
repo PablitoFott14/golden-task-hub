@@ -1,32 +1,34 @@
 # Golden Task Hub
 
-The central reference point for contributors building **multi-turn multimodal rubric tasks** on the
+The practical reference for contributors building **multi-turn multimodal rubric tasks** on the
 Red Shell / OpenClaw MM Rubrics project.
 
-It exists to answer four questions quickly, and then get out of the way:
+The hub exists to answer five questions quickly, and then get out of the way:
 
-- **What does a strong completed task actually look like?** → Golden tasks
-- **What are the latest project clarifications, and has this grey area already been addressed?** → Spec doc
-- **What should I check before submitting?** → Pre-submit
-- **What is the expected process, step by step?** → the nine steps on the home page
+- **How do I design a task that holds up?** → the nine method cards on the landing page
+- **What does that method look like in a real task?** → Golden Tasks
+- **What will a reviewer score me against?** → QC Spec
+- **What should I check before submitting?** → Pre-Submit
+- **Everyone asks this in their first week** → FAQ
 
-Press <kbd>⌘K</kbd> (or <kbd>Ctrl</kbd>+<kbd>K</kbd>) anywhere to search every task section, clarification,
-pre-submit check, process step and change-log entry at once.
+Press <kbd>⌘K</kbd> (or <kbd>Ctrl</kbd>+<kbd>K</kbd>) anywhere to search every method step, task
+section, pre-submit check, QC dimension and FAQ answer at once.
 
 ---
 
-## The four tabs
+## The five tabs
 
 | Tab | What is in it |
 | --- | --- |
-| **Start here** | An index of the questions people actually arrive with, the nine-step workflow, and everything currently open or unresolved. |
-| **Golden tasks** | One worked task per page: the conversation as the agent received it, the input pack, the evidence ledger behind every decision, the objective and subjective rubric sets, and what the failing run actually did. |
-| **Spec doc** | The eight clarifications with the proposal drafted against each, the places two source documents currently disagree, the decision history, and the outstanding rollout items. |
-| **Pre-submit** | The 29-check gate, ticked per check with progress kept in the browser. The printable PDF is one click away. |
+| **The Method** | Nine steps derived from the rationale behind a task that passed. Each card carries the principle in one line, the minimal explanation, the moves it takes, the rule attached to it, and a link into the place in the Golden Task where it landed. |
+| **Golden Tasks** | One worked task per page: the conversation as the agent received it, the input pack, the evidence ledger behind every decision, the objective and subjective rubric sets, the designed friction, and what the failing run actually did. Every section names the method step it came from. |
+| **Pre-Submit** | The 28-check gate in seven sections, ticked per check with progress kept in the browser. The printable PDF is one click away. |
+| **QC Spec** | A map of the 21 scored questions across 8 dimensions, what each one protects, and the thing that fails it, plus the rubric error catalogue. The live spec viewer is one click away and stays the source of truth. |
+| **FAQ** | The seven questions new contributors actually ask, each linked back into the method, the task or the checks that govern it. |
 
-Resources are cross-linked in both directions. A pre-submit check points at the part of the golden
-task that demonstrates it; a section of the golden task points back at the checks and the
-clarifications that govern it.
+Resources are cross-linked in both directions. A pre-submit check points at the part of the Golden
+Task that demonstrates it; a section of the Golden Task points back at the checks, the QC dimension
+and the method step that produced it.
 
 ## Running it
 
@@ -42,7 +44,7 @@ npm run typecheck
 > up with `git init --separate-git-dir`: the working tree is
 > `G:\My Drive\Red Shell\Golden Task Hub`, the git store is
 > `C:\Users\PABLO\repos\golden-task-hub-drive.git`, and a one-line `.git` *file* points at it. Commit
-> and push from the Drive folder as normal — but run `npm` from an ordinary local clone, or let CI
+> and push from the Drive folder as normal, but run `npm` from an ordinary local clone, or let CI
 > build.
 
 Deployed to GitHub Pages by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on every
@@ -52,11 +54,11 @@ push to `main`. Routing is hash-based so deep links survive a static host with n
 
 1. Add `src/data/tasks/<id>.ts` exporting a `GoldenTask` (the shape is in
    [`src/data/types.ts`](src/data/types.ts)).
-2. Drop the real artifacts under `public/tasks/<id>/` — `inputs/`, `gt/`, `ot/`.
+2. Drop the real artifacts under `public/tasks/<id>/`, in `inputs/`, `gt/`, `ot/`.
 3. Register it in the `tasks` array in [`src/data/index.ts`](src/data/index.ts).
 
-That is the whole change. The task appears on the Golden tasks tab, is indexed in ⌘K, and any
-`XLink` pointing at it resolves — no page edits.
+That is the whole change. The task appears on Golden Tasks, is indexed in ⌘K, and any `XLink`
+pointing at it resolves, with no page edits.
 
 ## Where the content came from
 
@@ -65,21 +67,21 @@ guidelines win.
 
 | Source | Feeds |
 | --- | --- |
-| `[External] OpenClaw MM Rubrics MULTI TURN – Guidelines` | The source of truth every section ref points into |
-| `Coruses & Screenings/Guidelines/presubmit-gate.pdf` | The pre-submit tab, and the PDF shipped in `public/docs/` |
-| `Project clarifications - outstanding to do's/clarifications.md` | The eight clarifications |
-| `…/purposed_solution.md` | The proposal on each clarification |
-| `…/taxonomy_updates.md` | The decision history and the flagged decisions |
-| `…/outstanding_todo's.md` | The rollout to-do list |
+| `[External] OpenClaw MM Rubrics MULTI TURN – Guidelines - v2` | The source of truth every section ref points into |
+| `task 1 (…)/rationale.md` | The nine method steps on the landing page |
+| `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | The Pre-Submit tab, and the PDF shipped in `public/docs/` |
+| `rubric-spec-viewer.html` and its CSVs, deployed at <https://qc-spec-mt-rubrics.vercel.app/> | The QC Spec tab |
+| `F&Q.md` in this repo | The FAQ tab, with grammar cleaned up and meaning unchanged |
 | `Tasks/6a7965b63b7d368e70c7de4a` | The vendor closeout golden task, including its real artifacts |
 
 Content is transcribed into typed data files rather than parsed at build time, so the hub does not
-go stale silently when a source document moves — but it does mean **editing a source document is
-only half the change**. Update the matching entry here and redeploy.
+go stale silently when a source document moves. It does mean **editing a source document is only
+half the change**: update the matching entry here and redeploy.
 
 ## Design
 
-Built with the Hallmark design system: modern-minimal genre, Cobalt theme, Index-First
-macrostructure. Space Grotesk display, IBM Plex Sans body, JetBrains Mono for the machine-readout
-register (filenames, ids, labels, code, numerals). Tokens live in
-[`src/tokens.css`](src/tokens.css); nothing outside that file declares a colour or a font.
+Tailwind, with one neutral ramp (`ink-50` … `ink-950`) backed by CSS variables that invert under
+`html.dark`, so light and dark are one set of utilities rather than two. `brand` is the indigo
+action colour, `gold` the Golden Task accent. Space Grotesk display, Inter body, JetBrains Mono for
+the machine-readout register: filenames, ids, labels, code, numerals. Component classes live in the
+`@layer components` block of [`src/index.css`](src/index.css).
