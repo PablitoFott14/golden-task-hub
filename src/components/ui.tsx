@@ -164,35 +164,54 @@ export function Callout({
   );
 }
 
-/** The sticky in-page rail used by long documents. */
+/**
+ * The sticky walkthrough rail. Steps are numbered in reading order, and the
+ * active one is marked by the number, the bar and the weight together, never
+ * by colour alone.
+ */
 export function SectionRail({
   sections,
   active,
+  title = "Walkthrough",
 }: {
   sections: { id: string; label: string }[];
   active: string;
+  title?: string;
 }) {
   return (
-    <nav aria-label="On this page" className="sticky top-24 hidden self-start lg:block">
-      <div className="mono-label mb-3 text-ink-400">On this page</div>
-      <ul className="space-y-0.5 border-l border-ink-200">
-        {sections.map((s) => (
-          <li key={s.id}>
-            <Link
-              to={{ hash: `#${s.id}` }}
-              className={cx(
-                "-ml-px block border-l-2 py-1.5 pl-3 text-[13px] transition",
-                active === s.id
-                  ? "border-brand-500 font-semibold text-brand-700 dark:text-brand-300"
-                  : "border-transparent text-ink-500 hover:border-ink-300 hover:text-ink-800"
-              )}
-            >
-              {s.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <nav aria-label={title} className="sticky top-24 hidden self-start lg:block">
+      <div className="mono-label mb-3 text-ink-400">{title}</div>
+      <ol className="space-y-0.5">
+        {sections.map((s, i) => {
+          const on = active === s.id;
+          return (
+            <li key={s.id}>
+              <Link
+                to={{ hash: `#${s.id}` }}
+                aria-current={on ? "true" : undefined}
+                className={cx(
+                  "group flex items-center gap-2.5 rounded-xl py-2 pl-2 pr-2.5 text-[13px] leading-snug transition duration-200",
+                  on
+                    ? "bg-brand-500/10 font-semibold text-brand-700 ring-1 ring-inset ring-brand-500/20 dark:text-brand-300"
+                    : "text-ink-500 hover:bg-ink-100 hover:text-ink-900"
+                )}
+              >
+                <span
+                  className={cx(
+                    "grid h-6 w-6 shrink-0 place-items-center rounded-lg font-mono text-[11px] font-bold transition duration-200",
+                    on
+                      ? "bg-brand-600 text-white shadow-glow"
+                      : "bg-ink-100 text-ink-500 group-hover:bg-ink-200 group-hover:text-ink-800"
+                  )}
+                >
+                  {i + 1}
+                </span>
+                <span className="min-w-0 flex-1">{s.label}</span>
+              </Link>
+            </li>
+          );
+        })}
+      </ol>
     </nav>
   );
 }
-

@@ -9,12 +9,12 @@ Rubrics multi-turn project. Six routes:
 
 | Route | Page | What it holds |
 | --- | --- | --- |
-| `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. Nine method cards, the mindset, the hard requirements, the FAQ CTA, the Golden Task spotlight. |
-| `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | Index of worked tasks. |
-| `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The full breakdown, twelve sections. |
-| `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks, progress sidebar with persisted ticks. |
+| `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. Nine method cards, the mindset, the FAQ CTA, the hard requirements. |
+| `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
+| `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, twelve sections, numbered rail on the left. |
+| `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks in dense rows, progress sidebar with persisted ticks. |
 | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
-| `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions from `F&Q.md`. |
+| `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions, answers always open, each with its guidelines references. |
 
 Deployed to GitHub Pages from `main` by [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
 
@@ -126,6 +126,9 @@ curl -s https://qc-spec-mt-rubrics.vercel.app/ -o qcspec.html
 python scripts/gen_spec.py qcspec.html
 ```
 
+The UI never links out to that URL. The spec lives inside the hub, so `SPEC_URL` stays in the data
+as provenance for the generator and is not rendered anywhere.
+
 Parse the deployed page, not the CSVs sitting on Drive. Those exports are currently a revision
 behind and are missing `Milestones - Milestone Annotations`. Question text, guidance, option
 wording and appendix definitions are stored **verbatim**, em dashes and curly quotes included,
@@ -137,12 +140,12 @@ at the foot of the file is hand-authored, so update it there when a dimension is
 `methodSteps` in [src/data/method.ts](src/data/method.ts) is nine steps derived from `rationale.md`.
 Each step carries `slogan` / `means` / `moves` / `produces` / `rule` / `inTask`, and `inTask.link`
 points at the Golden Task section where the principle landed. That relationship,
-**principle → decision → implementation**, is rendered in three places and must stay consistent:
+**principle → decision → implementation**, is rendered in two places and must stay consistent:
 
-1. The method cards and detail panel on `/`.
+1. The method cards and detail panel on `/`. The card shows `title` then `slogan` only, and the
+   panel below it carries `means`, `moves`, `rule` and `inTask`.
 2. The `SECTIONS` array in [TaskDetail.tsx](src/pages/TaskDetail.tsx), where each section carries a
    `step` number and renders a badge linking back to `/#<step-id>`.
-3. The step list in the Golden Task spotlight on `/`, and the chip row on `/golden-tasks`.
 
 Adding a method step means adding it to `methodSteps` and deciding which task section it points at.
 Adding a task section means adding it to `SECTIONS` with its `step`.
@@ -160,8 +163,11 @@ already reads well:
   wrapped in `<mark>`. Inbound `/spec#<group-slug>` links select the tab through the `hash` effect
   at the top of the component, which is why the slugs must keep matching the group names.
 - **`/checklist`** keeps every section on the page and puts progress in a sticky sidebar: the
-  counter and bar, `Submit & reset`, and a jump nav driven by the scroll spy. Section cards carry a
-  `Check all` toggle, and a ticked item strikes through.
+  counter and bar, `Submit & reset`, a `Show guidance` density toggle, and a jump nav driven by the
+  scroll spy. Section cards carry a `Check all` toggle, and a ticked item strikes through. Rows are
+  deliberately dense, one line each: the footnote and the cross-links appear only when guidance is
+  on, stored under `rsh.presubmit.detail.v1`. Twenty eight checks have to be runnable without
+  scrolling through oversized cards, so keep any addition to this page inside a row.
 
 ### Cross-linking is the product
 
@@ -176,6 +182,14 @@ arrow). Section ids are hardcoded in a `SECTIONS` array at the top of
 renaming a section means updating that array and every `XLink` aimed at it.** Nothing validates
 this, so grep the old anchor before renaming.
 
+### The FAQ answers name their guidelines section
+
+Every `FaqItem` carries `refs: GuidelineRef[]`, `{ section, title }` pairs pointing at the numbered
+section of `[External] OpenClaw MM Rubrics MULTI TURN – Guidelines - v2.md` that governs the answer.
+They render as the References panel beside each answer, and they are folded into the ⌘K terms.
+The field is required, so a new question needs at least one ref. Answers are never collapsed:
+question and answer are always on screen together.
+
 ### The ⌘K index is hand-derived
 
 `searchIndex` in [src/data/index.ts](src/data/index.ts) flattens every content type into
@@ -189,9 +203,14 @@ is how a search for a vendor name finds the evidence ledger.
 2. Real artifacts under `public/tasks/<id>/`, in `inputs/`, `gt/`, `ot/`.
 3. Add it to the `tasks` array in `src/data/index.ts`.
 
-It appears on `/golden-tasks`, gets a detail page, joins the ⌘K index, and resolves any `XLink`
-pointing at it. `TaskDetail`'s `SECTIONS` array assumes the full `GoldenTask` shape; a task missing
-a field renders an empty section rather than failing, so fill every field or trim the array.
+It appears on `/golden-tasks`, gets a walkthrough page, joins the ⌘K index, and resolves any
+`XLink` pointing at it. `TaskDetail`'s `SECTIONS` array assumes the full `GoldenTask` shape; a task
+missing a field renders an empty section rather than failing, so fill every field or trim the array.
+
+The card on `/golden-tasks` builds its image strip from the first four `inputs` that are not a
+`pdf` or a `doc`, so ship at least one real image or the card falls back to a placeholder. The card
+shows title, one-liner, category and subcategory, and never a difficulty. **The index page is built
+for many tasks**: keep it a grid of equal cards, and keep the reference-only disclaimer above it.
 
 ## Conventions that bite
 
@@ -204,6 +223,8 @@ a field renders an empty section rather than failing, so fill every field or tri
   (`Screenshot 2026-02-10 143217.png`), so never build those URLs by hand.
 - **Checklist ticks are a per-device convenience only**, stored under `rsh.presubmit.checks.v1`,
   wrapped in try/catch for private windows, and never a record of anything.
+- **`SectionRail` is the walkthrough rail**, numbered in reading order and rendered as the first
+  grid child so it sits on the left. Its `title` defaults to `Walkthrough`.
 - **A sticky element that is a direct grid child needs `self-start`**, otherwise it stretches to
   the full row height and sticky does nothing. `SectionRail` carries it.
 - **`Reveal` needs `className="h-full"`** when it wraps a card in a stretch grid, or the card stops
@@ -238,6 +259,9 @@ reintroduce `tokens.css` / `app.css`.
   is generated `specDoc.ts`, which is verbatim source text.
 - Short sentences. The hub is a practical reference, not a second copy of the guidelines. If a
   section is growing into documentation, cut it and link to the guidelines instead.
+- **Keep the internals out of the copy.** No page says which document a rationale came from, which
+  file was transcribed, or where a folder sits on Drive. That is provenance for whoever maintains
+  the hub, so it lives in this file and in code comments, never on screen.
 - **Do not invent statuses or answers.** Everything in `src/data/` is what a source document
   actually says. Where the evidence is genuinely ambiguous, the data says so.
 

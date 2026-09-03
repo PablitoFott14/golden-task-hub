@@ -19,7 +19,7 @@ export const checklistMeta = {
   warning:
     "Rubrics are the biggest source of rejections. A Major issue fails the task above 10% of the criteria set.",
   banner:
-    "Section refs point into [External] OpenClaw MM Rubrics MULTI TURN – Guidelines, which stays the source of truth. Tick a box only when you have actually looked, not when you assume.",
+    "Tick a box only when you have actually looked, not when you assume.",
   pdf: "docs/presubmit-gate.pdf",
   ready: {
     title: "Ready to submit",

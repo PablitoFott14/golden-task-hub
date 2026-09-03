@@ -221,7 +221,9 @@ export default function TaskDetail() {
       </section>
 
       <div className="wrap py-12">
-        <div className="gap-12 lg:grid lg:grid-cols-[1fr_220px]">
+        <div className="gap-12 lg:grid lg:grid-cols-[240px_1fr]">
+          <SectionRail sections={SECTIONS} active={active} />
+
           <div className="min-w-0 space-y-20">
             {/* Universe */}
             <section id="universe" className="scroll-mt-24">
@@ -670,15 +672,8 @@ export default function TaskDetail() {
                   </Reveal>
                 ))}
               </div>
-
-              <div className="mt-8 rounded-2xl border border-ink-200/70 bg-raised p-5">
-                <div className="mono-label mb-2 text-ink-400">Raw source</div>
-                <p className="break-all font-mono text-[12px] text-ink-600">{t.meta.sourcePath}</p>
-              </div>
             </section>
           </div>
-
-          <SectionRail sections={SECTIONS} active={active} />
         </div>
       </div>
 

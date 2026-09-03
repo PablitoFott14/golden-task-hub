@@ -6,7 +6,6 @@ import {
   CircleCheck,
   CircleSlash,
   ClipboardCheck,
-  ExternalLink,
   FileText,
   Flag,
   Image as ImageIcon,
@@ -23,7 +22,6 @@ import {
   XCircle,
 } from "lucide-react";
 import {
-  SPEC_URL,
   authoringStandards,
   difficultyDimensions,
   dimensionLinks,
@@ -207,28 +205,20 @@ export default function SpecDoc() {
 
       {!searching && (
         <Reveal>
-          <a
-            href={SPEC_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="group mt-4 flex items-center gap-3 rounded-2xl border border-brand-200/80 bg-brand-50/70 p-4 transition hover:border-brand-400 dark:border-brand-500/30 dark:bg-brand-500/10"
-          >
+          <div className="mt-4 flex items-center gap-3 rounded-2xl border border-brand-200/80 bg-brand-50/70 p-4 dark:border-brand-500/30 dark:bg-brand-500/10">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-600 text-white shadow-glow">
               <ClipboardCheck size={17} />
             </span>
             <span className="min-w-0 flex-1">
               <span className="block text-[10px] font-bold uppercase tracking-[0.18em] text-brand-700 dark:text-brand-200">
-                Source of truth
+                What a reviewer scores you on
               </span>
-              <span className="mt-0.5 block truncate text-[12.5px] text-ink-600">
-                Transcribed from the live QC spec viewer at{" "}
-                <span className="font-mono text-ink-800">{SPEC_URL}</span>
+              <span className="mt-0.5 block text-[12.5px] leading-relaxed text-ink-600">
+                Every dimension, every scored option and the full appendix, in the reviewer's own
+                wording. Nothing is summarised.
               </span>
             </span>
-            <span className="btn-ghost shrink-0 px-3 py-1.5 text-xs">
-              Open <ExternalLink size={13} />
-            </span>
-          </a>
+          </div>
         </Reveal>
       )}
 

@@ -18,7 +18,6 @@ import {
 } from "lucide-react";
 import { methodSteps, mindset, hardRequirements } from "../data/method";
 import { tasks } from "../data";
-import { SPEC_URL } from "../data/specDoc";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
 import { cx } from "../lib/util";
 
@@ -62,7 +61,7 @@ function StepCard({
       onClick={onSelect}
       aria-pressed={active}
       className={cx(
-        "group flex h-full flex-col rounded-2xl border p-5 text-left transition duration-300 ease-out",
+        "group flex h-full w-full flex-col rounded-2xl border p-5 text-left transition duration-300 ease-out",
         active
           ? "border-brand-400 bg-brand-50/70 shadow-glow dark:border-brand-500/50 dark:bg-brand-500/10"
           : "border-ink-200/70 bg-surface shadow-soft hover:-translate-y-1 hover:border-brand-300 hover:shadow-lift"
@@ -87,14 +86,10 @@ function StepCard({
         />
       </div>
 
-      <h3 className="mt-4 font-display text-[17px] font-bold leading-snug tracking-tight text-ink-900">
-        {s.slogan}
+      <h3 className="mt-3.5 font-display text-[16px] font-bold leading-snug tracking-tight text-ink-900">
+        {s.title}
       </h3>
-      <p className="mb-4 mt-2 line-clamp-3 text-[13px] leading-relaxed text-ink-500">{s.means}</p>
-
-      <div className="mt-auto flex items-center gap-1.5 border-t border-ink-200/70 pt-3.5">
-        <span className="mono-label text-ink-400">{s.title}</span>
-      </div>
+      <p className="mt-1.5 text-[13px] leading-relaxed text-ink-500">{s.slogan}</p>
     </button>
   );
 }
@@ -118,7 +113,6 @@ export default function Method() {
     });
   }, []);
   const tone = phaseTone[step.phase];
-  const task = tasks[0];
 
   return (
     <div>
@@ -144,24 +138,23 @@ export default function Method() {
                 </span>
               </h1>
               <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-ink-500">
-                Nine steps, in the order they actually happen, taken from the reasoning behind a
-                task that passed. Read the principle, then follow it straight into the Golden Task
-                and see exactly where it landed.
+                Nine steps, in the order they actually happen. Read the principle, then follow it
+                straight into a Golden Task and see exactly where it landed.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link to={{ hash: "#method" }} className="btn-primary">
                   <Compass size={16} /> Start with the method
                 </Link>
-                <Link to={`/golden-tasks/${task.meta.id}`} className="btn-ghost">
-                  <BookOpenCheck size={16} /> Open the Golden Task
+                <Link to="/golden-tasks" className="btn-ghost">
+                  <BookOpenCheck size={16} /> See it in a Golden Task
                 </Link>
               </div>
 
               <dl className="mt-10 grid max-w-lg grid-cols-3 gap-3">
                 {[
-                  { k: "9", v: "method steps" },
-                  { k: "1", v: "worked task" },
+                  { k: `${methodSteps.length}`, v: "method steps" },
+                  { k: `${tasks.length}`, v: tasks.length === 1 ? "worked task" : "worked tasks" },
                   { k: "28", v: "gate checks" },
                 ].map((x) => (
                   <div key={x.v} className="rounded-xl border border-ink-200/70 bg-surface px-4 py-3">
@@ -227,7 +220,7 @@ export default function Method() {
             <SectionHeading
               eyebrow="The method"
               title="Nine steps, from an empty universe to a graded task"
-              sub="Each card carries the principle and the minimal version of what it means. Open one to see the moves it takes, the rule attached to it, and the place in the Golden Task where you can watch it work."
+              sub="Each card carries the step and the principle behind it in one line. Open one to see what it means, the moves it takes, the rule attached to it, and the place in a Golden Task where you can watch it work."
             />
           </Reveal>
 
@@ -253,7 +246,7 @@ export default function Method() {
               <div className={cx("bg-gradient-to-br p-6 text-white sm:p-8", tone.bar)}>
                 <div className="flex flex-wrap items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-white/80">
                   <span>
-                    Step {step.n} of {methodSteps.length}
+                    Step {step.n} of {methodSteps.length} · {step.title}
                   </span>
                   <span className="rounded-full bg-white/20 px-2 py-0.5">{step.phase}</span>
                   <span className="rounded-full bg-white/20 px-2 py-0.5">→ {step.produces}</span>
@@ -352,105 +345,6 @@ export default function Method() {
         </div>
       </section>
 
-      {/* Golden task spotlight */}
-      <section className="border-b border-ink-200/70 bg-ink-50">
-        <div className="wrap py-16">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Principle, decision, implementation"
-              title="Watch the method land in a real task"
-              sub="The vendor closeout task was built with exactly the nine steps above. Every section of it names the step it came from, so you can move between the rule and the thing the rule produced."
-            />
-          </Reveal>
-
-          <Reveal delay={0.05}>
-            <div className="card mt-8 overflow-hidden lg:grid lg:grid-cols-[1.15fr_1fr]">
-              <div className="p-6 sm:p-8">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="chip bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300">
-                    Golden
-                  </span>
-                  <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
-                    {task.meta.category}
-                  </span>
-                  <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
-                    {task.meta.turns} turns
-                  </span>
-                </div>
-                <h3 className="mt-4 font-display text-2xl font-bold tracking-tight text-ink-900">
-                  {task.meta.title}
-                </h3>
-                <p className="mt-3 text-[14.5px] leading-relaxed text-ink-600">
-                  {task.meta.oneLiner}
-                </p>
-
-                <dl className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                  {[
-                    { k: task.answer.total, v: "owed, resolved" },
-                    { k: `${task.ledger.length}`, v: "vendors ruled on" },
-                    { k: `${task.rubrics.length}`, v: "objective criteria" },
-                    { k: `${task.traps.length}`, v: "friction points" },
-                  ].map((x) => (
-                    <div key={x.v} className="rounded-xl border border-ink-200/70 bg-raised px-3 py-2.5">
-                      <dt className="font-display text-[19px] font-bold text-ink-900">{x.k}</dt>
-                      <dd className="mono-label mt-0.5 text-ink-400">{x.v}</dd>
-                    </div>
-                  ))}
-                </dl>
-
-                <ul className="mt-6 space-y-2.5">
-                  {task.whyGolden.slice(0, 3).map((w) => (
-                    <li key={w} className="flex gap-2.5 text-[13px] leading-relaxed text-ink-600">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" />
-                      <span>{w.replace(/\*\*/g, "")}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link to={`/golden-tasks/${task.meta.id}`} className="btn-primary mt-7">
-                  Open the full breakdown <ArrowRight size={15} />
-                </Link>
-              </div>
-
-              <div className="border-t border-ink-200/70 bg-raised p-6 sm:p-8 lg:border-l lg:border-t-0">
-                <div className="mono-label mb-4 text-ink-400">Method, step by step, in the task</div>
-                <ol className="space-y-2.5">
-                  {methodSteps.map((s) => (
-                    <li key={s.id}>
-                      <Link
-                        to={s.inTask.link.to}
-                        className="group flex items-start gap-3 rounded-lg px-2 py-1.5 transition hover:bg-ink-100"
-                      >
-                        <span
-                          className={cx(
-                            "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded font-mono text-[10px] font-bold text-white",
-                            phaseTone[s.phase].badge
-                          )}
-                        >
-                          {s.n}
-                        </span>
-                        <span className="min-w-0 flex-1">
-                          <span className="block text-[13px] font-semibold text-ink-800">
-                            {s.title}
-                          </span>
-                          <span className="block truncate text-[12px] text-ink-500">
-                            {s.inTask.link.label}
-                          </span>
-                        </span>
-                        <ChevronRight
-                          size={14}
-                          className="mt-1 shrink-0 text-ink-300 transition-transform group-hover:translate-x-0.5"
-                        />
-                      </Link>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* Hard requirements */}
       <section className="border-b border-ink-200/70 bg-surface">
         <div className="wrap py-16">
@@ -458,7 +352,7 @@ export default function Method() {
             <SectionHeading
               eyebrow="The floor"
               title="Eight things every task has to contain"
-              sub="These are the client's hard requirements. A task that misses one of them does not get graded on how good the rest of it was."
+              sub="A task that misses one of them does not get graded on how good the rest of it was."
             />
           </Reveal>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -492,7 +386,7 @@ export default function Method() {
                 to: `/golden-tasks`,
                 icon: <BookOpenCheck size={18} />,
                 title: "Golden Tasks",
-                body: "A finished task opened up: the prompts, the evidence, the rubrics, and where the model broke.",
+                body: "Finished tasks opened up: the prompts, the evidence, the rubrics, and where the model broke.",
                 tone: "bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300",
               },
               {
@@ -540,27 +434,6 @@ export default function Method() {
             ))}
           </div>
 
-          <Reveal delay={0.1}>
-            <a
-              href={SPEC_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="card card-hover mt-4 flex items-center gap-4 p-5"
-            >
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-ink-900 text-ink-50">
-                <Gauge size={18} />
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block text-[14px] font-bold text-ink-900">
-                  The live QC spec viewer
-                </span>
-                <span className="block truncate text-[12.5px] text-ink-500">
-                  Every option and score exactly as the reviewer sees it, at {SPEC_URL}
-                </span>
-              </span>
-              <span className="btn-ghost shrink-0">Open</span>
-            </a>
-          </Reveal>
         </div>
       </section>
     </div>

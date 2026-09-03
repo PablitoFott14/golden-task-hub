@@ -225,6 +225,14 @@ export interface SpecDimension {
 
 /* --------------------------------------------------------------------- faq */
 
+/** A pointer into the guidelines, by section number and heading. */
+export interface GuidelineRef {
+  /** The section number as the guidelines write it, "1.2.3" or "5.1". */
+  section: string;
+  /** The heading that section carries. */
+  title: string;
+}
+
 export interface FaqItem {
   n: number;
   id: string;
@@ -233,6 +241,8 @@ export interface FaqItem {
   a: string[];
   /** Grouping shown as a filter. */
   topic: string;
+  /** Where the guidelines answer this. Every item carries at least one. */
+  refs: GuidelineRef[];
   links?: XLink[];
 }
 

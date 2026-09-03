@@ -17,6 +17,10 @@ export const faq: FaqItem[] = [
       "No. MEMORY.md is optional, and there is no requirement to use it.",
       "The only rule is that when you do use it, it has to arrive naturally, the way an actual user would ask for it. Someone planning to come back to the conversation later has a real reason to keep decisions somewhere. Someone who does not, does not.",
     ],
+    refs: [
+      { section: "1.2.3", title: "Create the Initial Prompt and the Follow-ups" },
+      { section: "1.2.5", title: "Common Scenario Issues Getting Tasks Rejected" },
+    ],
     links: [
       { to: "/#draft-history", tag: "M4", label: "Say why the agent is there, not what to type" },
       { to: `${GT}#turns`, tag: "GT", label: "MEMORY.md asked for in turn 1, with a reason" },
@@ -30,6 +34,10 @@ export const faq: FaqItem[] = [
     a: [
       "Atomic. Each intent in each prompt gets its own milestone.",
       "A follow up carrying three requirements produces three milestones, not one. A single milestone holding four asks that do not collapse into each other is a paraphrase of the prompt rather than an intent spec.",
+    ],
+    refs: [
+      { section: "6.1", title: "What a Milestone is Made of" },
+      { section: "6.2", title: "Writing the Milestones" },
     ],
     links: [
       { to: "/#milestones", tag: "M7", label: "One intent, one milestone" },
@@ -45,6 +53,10 @@ export const faq: FaqItem[] = [
       "inputs.zip is uploaded in the Draft History section and the model never interacts with it. It holds every multimodal input planned for the whole conversation, deferred assets included.",
       "The inputs folder is what you send when setting up the run, and the model is expected to interact with it from the first turn. It holds only the initial inputs the opening prompt needs.",
     ],
+    refs: [
+      { section: "1.2.2", title: "Select the Multimodal Inputs" },
+      { section: "2.2", title: "Upload Folders" },
+    ],
     links: [{ to: "/#inputs", tag: "M2", label: "Attach what the person would actually have" }],
   },
   {
@@ -55,6 +67,10 @@ export const faq: FaqItem[] = [
     a: [
       "One at a time. In Model B you are the user simulator: your job is to reach the milestones and to hint when the model does not.",
       "The same three intents will all show up in Model B, but as the conversation flows rather than in a fixed order. You send what the conversation needs next in order to reach the golden solution.",
+    ],
+    refs: [
+      { section: "7.1", title: "What Changes from Leg A" },
+      { section: "7.2", title: "Steering the Run and Hinting" },
     ],
     links: [
       { to: "/#golden", tag: "M8", label: "Point at the intent, never at the answer" },
@@ -70,6 +86,10 @@ export const faq: FaqItem[] = [
       "You do not need it in every prompt. What matters is that a meaningful interaction happens at some point, ideally in turn 1.",
       "A single server check or a single server write is not enough. Multiple servers are expected to be involved, and the universe dependence and the multimodal inputs are expected to relate to each other rather than run in parallel.",
     ],
+    refs: [
+      { section: "1.2.1", title: "Start With the Universe" },
+      { section: "1.2.2", title: "Select the Multimodal Inputs" },
+    ],
     links: [
       { to: "/#universe", tag: "M1", label: "Go find the story, do not invent one" },
       { to: `${GT}#universe`, tag: "GT", label: "Two channels, and neither modality decorative" },
@@ -84,6 +104,10 @@ export const faq: FaqItem[] = [
       "Not necessary. If the conversation is planned to end, it is natural to signal it inside the final prompt the way anyone does with an agent: “Finally…”, “one last thing…”.",
       "What we do not want is a last turn that announces the conversation is over, or that forces the agent to know it was the end.",
     ],
+    refs: [
+      { section: "1.2.3", title: "Create the Initial Prompt and the Follow-ups" },
+      { section: "6.3", title: "Modifiers" },
+    ],
     links: [{ to: `${GT}#turns`, tag: "GT", label: "Turn 4 closes the arc without announcing it" }],
   },
   {
@@ -95,11 +119,18 @@ export const faq: FaqItem[] = [
       "Better to avoid it. Require the model to touch at least two servers meaningfully.",
       "If only one server ends up in play, it should at least be used at different granularities rather than repeating the same kind of lookup.",
     ],
+    refs: [
+      { section: "1.2.1", title: "Start With the Universe" },
+      { section: "1.2.2", title: "Select the Multimodal Inputs" },
+    ],
     links: [
       { to: "/checklist#s2", tag: "B1", label: "One fact that lives only in a connected service" },
       { to: "/spec#trajectory", tag: "QC", label: "Architectural Depth and Friction Exposure" },
     ],
   },
 ];
+
+export const guidelinesTitle =
+  "[External] OpenClaw MM Rubrics MULTI TURN, Guidelines v2";
 
 export const faqTopics = ["All", "Universe", "Inputs", "Milestones", "Conversation"] as const;

@@ -132,6 +132,6 @@ export const searchIndex: SearchEntry[] = [
     title: f.q,
     hint: f.a[0],
     to: `/faq#${f.id}`,
-    terms: `${f.a.join(" ")} ${f.topic}`,
+    terms: `${f.a.join(" ")} ${f.topic} ${f.refs.map((r) => `${r.section} ${r.title}`).join(" ")}`,
   })),
 ];
