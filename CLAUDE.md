@@ -11,7 +11,7 @@ Rubrics multi-turn project. Six routes:
 | --- | --- | --- |
 | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. Nine method cards, the mindset, the FAQ CTA, the hard requirements. |
 | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
-| `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, twelve sections, numbered rail on the left. |
+| `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, eleven sections, numbered rail on the left. |
 | `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks in dense rows, progress sidebar with persisted ticks. |
 | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
 | `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions, answers always open, each with its guidelines references. |

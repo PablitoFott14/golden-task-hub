@@ -37,7 +37,6 @@ const SECTIONS: { id: string; label: string; step?: number }[] = [
   { id: "golden", label: "Golden deliverables", step: 8 },
   { id: "subjective", label: "Subjective block", step: 9 },
   { id: "traps", label: "Designed friction" },
-  { id: "takeaways", label: "What to copy" },
 ];
 
 const IDS = SECTIONS.map((s) => s.id);
@@ -616,34 +615,6 @@ export default function TaskDetail() {
               </div>
             </section>
 
-            {/* Takeaways */}
-            <section id="takeaways" className="scroll-mt-24">
-              <SectionHead
-                id="takeaways"
-                title="What to copy into your own task"
-                sub="Five habits this task is built on. None of them depend on the scenario being about vendors."
-              />
-              <div className="space-y-3">
-                {t.takeaways.map((tk, i) => (
-                  <Reveal key={tk.title}>
-                    <div className="card p-5">
-                      <div className="flex items-start gap-3">
-                        <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-gold-500/15 font-mono text-[11px] font-bold text-gold-700 dark:text-gold-300">
-                          {i + 1}
-                        </span>
-                        <div className="min-w-0">
-                          <h3 className="font-display text-[15.5px] font-bold text-ink-900">
-                            {tk.title}
-                          </h3>
-                          <p className="mt-2 text-[13px] leading-relaxed text-ink-600">{tk.body}</p>
-                          <Crosslinks links={tk.links} className="mt-3" />
-                        </div>
-                      </div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </section>
           </div>
         </div>
       </div>

@@ -1195,32 +1195,4 @@ Final amount due:    <amount, or "None outstanding">`,
       tests: "Whether the agent read the thread or the first hit.",
     },
   ],
-
-  takeaways: [
-    {
-      title: "Write the rule once, in the user’s voice, and let it do all the work",
-      body: "One sentence in turn 1. Slack confirmation and attachment evidence, decides all twenty vendors. It never gets restated, never gets a checklist, and it is the difference between four receipts and seven.",
-      links: [{ to: "/checklist#s3", tag: "C2", label: "Policies live in the inputs" }],
-    },
-    {
-      title: "Put the friction in the evidence, not in the number of asks",
-      body: "The task is hard because two sources disagree, one figure is handwritten, one date needs converting and one benchmark is hidden in another channel. It is not hard because it asks for more things.",
-      links: [{ to: "/checklist#s1", tag: "A3", label: "Three stages, two systems, one friction point" }],
-    },
-    {
-      title: "Every criterion pins its value in its own text",
-      body: "Read any of the twenty-one with the prompt closed and you can still rate it, the amount, the filename, the date and the person are all in the criterion. Rubric 18 is the counter-example worth studying: it carries no category and no evaluation target.",
-      links: [{ to: "/checklist#s5", tag: "E2", label: "Rate it with the prompt closed" }],
-    },
-    {
-      title: "The golden has to pass its own rubric set",
-      body: "Everything in the ledger traces to a message id or a filename, so the set is checkable against the golden before it ever reaches a grader. Anything the golden fails is a broken criterion, not a broken golden.",
-      links: [{ to: "/checklist#s7", tag: "G2", label: "The golden passes the complete set" }],
-    },
-    {
-      title: "Leave the genuinely ambiguous ones ambiguous, and say so",
-      body: "AWS, google and Slack are each argued two ways in the channel, and SVB and Chase sit outside the scope sentence. The task records them as loose rather than pretending to a precision the evidence does not support.",
-      links: [{ to: "/spec#rubric-criteria", tag: "QC", label: "Block bleed, and where a judgment belongs" }],
-    },
-  ],
 };

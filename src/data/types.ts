@@ -255,7 +255,6 @@ export interface GoldenTask {
   subjectiveNote: string;
   run: { summary: string; score: string; observations: RunObservation[]; artifacts: Deliverable[] };
   traps: Trap[];
-  takeaways: { title: string; body: string; links?: XLink[] }[];
 }
 
 /* ---------------------------------------------------------------- checklist */
