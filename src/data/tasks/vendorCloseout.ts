@@ -673,9 +673,12 @@ Final amount due:    <amount, or "None outstanding">`,
   ],
 
   /**
-   * Every subjective criterion came out of one move: run the same artifact from
-   * the OT and the GT side by side, and write down the difference. Leg A is the
-   * observed run, Leg B the golden. The excerpts are quoted from the two files.
+   * Every subjective criterion came out of one move: put the same artifact from
+   * the OT and the GT side by side, look at the two renders, and write down the
+   * difference. Leg A is the observed run, Leg B the golden. The boxes below are
+   * in each artifact's own coordinates, and they point at the thing being rated.
+   *
+   * These criteria are judged on the render. Nothing here quotes source.
    */
   subjective: [
     {
@@ -684,30 +687,32 @@ Final amount due:    <amount, or "None outstanding">`,
       artifact: "vendor_cancellation.svg",
       asks: "Can a reader pair a cancelled vendor with its balance without leaving the group block?",
       status: "not-present",
-      files: { ot: `${A}/ot/vendor_cancellation.svg`, gt: `${A}/gt/vendor_cancellation.svg` },
       legA: {
-        form: "code",
         verdict:
-          "One column. Every cancelled vendor sits at the same x, and the money is somewhere else on the canvas.",
-        excerpt: `<text class="vendor" x="90" y="460">• Datadog, Inc.</text>
-<text class="vendor" x="90" y="500">• Singular</text>
-<text class="vendor" x="90" y="540">• Soundly</text>
-
-<!-- the amounts, 200px away in the KPI card -->
-<text class="note" x="90" y="265">Datadog ($310.00) + Singular ($2,340.00) + Soundly ($0.00)</text>`,
+          "The names are a bulleted list with nothing beside them. The money is up in the headline card, a third of the canvas away.",
+        view: {
+          kind: "render",
+          src: `${A}/ot/vendor_cancellation.svg`,
+          canvas: { w: 1200, h: 780 },
+          focus: { x: 40, y: 125, w: 575, h: 475 },
+          marks: [
+            { box: { x: 78, y: 440, w: 200, h: 115 }, label: "names only, one column" },
+            { box: { x: 80, y: 250, w: 476, h: 26 }, label: "the amounts, up here instead", place: "below" },
+          ],
+        },
       },
       legB: {
-        form: "code",
-        verdict:
-          "Two columns. The name starts at x=82, the amount ends at x=318, so every row shares one axis.",
-        excerpt: `<text x="82"  y="316" font-weight="600">Helpshift</text>
-<text x="318" y="316" text-anchor="end" fill="#b91c1c" font-weight="600">$1,500.00</text>
-
-<text x="82"  y="356" font-weight="600">Layer</text>
-<text x="318" y="356" text-anchor="end" fill="#b91c1c" font-weight="600">$2,340.00</text>`,
+        verdict: "Name on the left, amount on the right, every row on the same pair of edges.",
+        view: {
+          kind: "render",
+          src: `${A}/gt/vendor_cancellation.svg`,
+          canvas: { w: 1000, h: 760 },
+          focus: { x: 46, y: 208, w: 312, h: 300 },
+          marks: [{ box: { x: 74, y: 296, w: 250, h: 154 }, label: "name left, amount right" }],
+        },
       },
       derived:
-        "The whole difference is one x coordinate per row. Leg B gives a vendor and its balance a shared axis, Leg A gives a bulleted list and moves the figures into a note. That is visible in the render without opening the file, which is what makes it ratable.",
+        "Put the two blocks next to each other and the criterion writes itself. One of them answers what does Soundly owe in the place you are already looking, the other sends you back to the headline. That is a property of the render, so it can be rated by someone who never saw the file.",
     },
     {
       n: 2,
@@ -715,26 +720,39 @@ Final amount due:    <amount, or "None outstanding">`,
       artifact: "vendor_cancellation.svg",
       asks: "Can the headline total be checked against the entries that compose it, in the same block?",
       status: "not-present",
-      files: { ot: `${A}/ot/vendor_cancellation.svg`, gt: `${A}/gt/vendor_cancellation.svg` },
       legA: {
-        form: "code",
         verdict:
-          "The group stops at its last vendor. No rule, no subtotal, and 160px of empty card underneath.",
-        excerpt: `<rect class="card" x="60" y="340" width="350" height="360" rx="16" />
-<text class="vendor" x="90" y="460">• Datadog, Inc.</text>
-<text class="vendor" x="90" y="500">• Singular</text>
-<text class="vendor" x="90" y="540">• Soundly</text>
-<!-- card runs to y=700. Nothing follows. -->`,
+          "The list stops at its last vendor and the card just ends. The arithmetic is a small note under the headline instead.",
+        view: {
+          kind: "render",
+          src: `${A}/ot/vendor_cancellation.svg`,
+          canvas: { w: 1200, h: 780 },
+          focus: { x: 40, y: 125, w: 575, h: 590 },
+          marks: [
+            { box: { x: 78, y: 552, w: 320, h: 140 }, label: "group ends, no subtotal" },
+            { box: { x: 80, y: 250, w: 476, h: 26 }, label: "the sum, in a note", place: "below" },
+          ],
+        },
       },
       legB: {
-        form: "code",
-        verdict: "A rule closes the group, then a subtotal that matches the $4,032.00 headline exactly.",
-        excerpt: `<line x1="82" y1="464" x2="318" y2="464" stroke="#d1d5db" stroke-width="1.5"/>
-<text x="82"  y="492" font-size="14" fill="#6b7280">4 vendors</text>
-<text x="318" y="492" text-anchor="end" font-size="16" font-weight="700">$4,032.00</text>`,
+        verdict: "A rule closes the group and a subtotal sits under it, carrying the same figure as the headline.",
+        view: {
+          kind: "render",
+          src: `${A}/gt/vendor_cancellation.svg`,
+          canvas: { w: 1000, h: 760 },
+          focus: { x: 24, y: 82, w: 424, h: 452 },
+          marks: [
+            { box: { x: 150, y: 138, w: 240, h: 52 }, label: "headline", place: "below" },
+            {
+              box: { x: 74, y: 452, w: 250, h: 56 },
+              label: "subtotal under a rule, same figure",
+              place: "below",
+            },
+          ],
+        },
       },
       derived:
-        "Both runs state a total. Only Leg B lets you verify it without leaving the block, because the rule and the subtotal sit at the foot of the four rows that add up to it. Leg A puts the arithmetic in a note under the headline instead, so the reader has to carry a number across the canvas.",
+        "Both graphics state a total. Only one lets you check it where you are standing. The criterion names the closing row and the rule, not the number, because the number is already the objective set's job.",
     },
     {
       n: 3,
@@ -742,33 +760,34 @@ Final amount due:    <amount, or "None outstanding">`,
       artifact: "vendor_cancellation.svg",
       asks: "Does each heading read as the title of its container, or as the first line of its list?",
       status: "not-present",
-      files: { ot: `${A}/ot/vendor_cancellation.svg`, gt: `${A}/gt/vendor_cancellation.svg` },
       legA: {
-        form: "code",
-        verdict: "Every heading carries the same 30px left inset as the list below it, and no text anchor.",
-        excerpt: `<rect class="card" x="60"  y="340" width="350" ... />
-<text class="pillText" x="105" y="386">CONFIRMED</text>
-
-<rect class="card" x="425" y="340" width="350" ... />
-<text class="pillText" x="470" y="386">UNCONFIRMED</text>
-
-<rect class="card" x="790" y="340" width="350" ... />
-<text class="pillText" x="835" y="386">NOT CANCELLED</text>`,
+        verdict: "All three headings sit on the same left inset as the list beneath them.",
+        view: {
+          kind: "render",
+          src: `${A}/ot/vendor_cancellation.svg`,
+          canvas: { w: 1200, h: 780 },
+          focus: { x: 40, y: 318, w: 1120, h: 190 },
+          marks: [
+            { box: { x: 86, y: 360, w: 198, h: 40 }, label: "flush left, like the list", place: "below" },
+            { box: { x: 816, y: 360, w: 238, h: 40 }, label: "" },
+          ],
+        },
       },
       legB: {
-        form: "code",
-        verdict: "Every heading is anchored to the middle of its own card: 200, 500, 800.",
-        excerpt: `<rect x="60"  y="220" width="280" ... />
-<text x="200" y="248" text-anchor="middle">CANCELLED</text>
-
-<rect x="360" y="220" width="280" ... />
-<text x="500" y="248" text-anchor="middle">UNCONFIRMED</text>
-
-<rect x="660" y="220" width="280" ... />
-<text x="800" y="248" text-anchor="middle">NOT CANCELLED</text>`,
+        verdict: "Each heading is centred on its own card, so the card reads as a container.",
+        view: {
+          kind: "render",
+          src: `${A}/gt/vendor_cancellation.svg`,
+          canvas: { w: 1000, h: 760 },
+          focus: { x: 40, y: 206, w: 920, h: 156 },
+          marks: [
+            { box: { x: 128, y: 226, w: 144, h: 32 }, label: "centred on the card", place: "below" },
+            { box: { x: 726, y: 226, w: 148, h: 32 }, label: "" },
+          ],
+        },
       },
       derived:
-        "One attribute separates the two runs. Centring makes the three cards read as peer categories a reader can scan across. A left inset makes each heading look like the start of its own list, which is the weaker hierarchy and is what Leg A shipped.",
+        "Nothing here is about correctness. Scan the two side by side and one set of cards reads as three peer categories while the other reads as three lists that happen to start with a word in a pill. That is the whole criterion.",
     },
     {
       n: 4,
@@ -776,23 +795,34 @@ Final amount due:    <amount, or "None outstanding">`,
       artifact: "vendor_cancellation.svg",
       asks: "Do the two headline figures dominate the vendor rows?",
       status: "present",
-      files: { ot: `${A}/ot/vendor_cancellation.svg`, gt: `${A}/gt/vendor_cancellation.svg` },
       legA: {
-        form: "code",
-        verdict: "Clears it. The KPI class is 44px against 18px vendor rows.",
-        excerpt: `.kpi    { fill: #ffffff; font: 800 44px ... }
-.vendor { fill: #e9edff; font: 600 18px ... }`,
+        verdict: "Clears it. The headline figure towers over the vendor list.",
+        view: {
+          kind: "render",
+          src: `${A}/ot/vendor_cancellation.svg`,
+          canvas: { w: 1200, h: 780 },
+          focus: { x: 40, y: 125, w: 575, h: 475 },
+          marks: [
+            { box: { x: 82, y: 198, w: 250, h: 52 }, label: "headline", place: "below" },
+            { box: { x: 78, y: 440, w: 200, h: 115 }, label: "entries, much smaller" },
+          ],
+        },
       },
       legB: {
-        form: "code",
-        verdict: "Clears it too. 42px headline figures against 15px rows.",
-        excerpt: `<text x="270" y="176" font-size="42" font-weight="800">$4,032.00</text>
-<text x="730" y="176" font-size="42" font-weight="800">8.06%</text>
-
-<g font-size="15" fill="#111827">   <!-- the vendor rows -->`,
+        verdict: "Clears it too, by a similar margin.",
+        view: {
+          kind: "render",
+          src: `${A}/gt/vendor_cancellation.svg`,
+          canvas: { w: 1000, h: 760 },
+          focus: { x: 24, y: 82, w: 424, h: 400 },
+          marks: [
+            { box: { x: 160, y: 138, w: 220, h: 52 }, label: "headline", place: "below" },
+            { box: { x: 74, y: 296, w: 250, h: 154 }, label: "entries, much smaller" },
+          ],
+        },
       },
       derived:
-        "Both legs pass, and the criterion is kept anyway. It is a quality floor: it separates a competent render from a broken one, not these two runs from each other. A block made only of criteria the OT failed would score a bad render and a merely different one the same way.",
+        "Both legs pass, and the criterion stays. It is a quality floor: it separates a competent render from a broken one, not these two runs from each other. A block built only from what the OT got wrong would score a broken graphic and a merely different one the same way.",
     },
     {
       n: 5,
@@ -800,101 +830,117 @@ Final amount due:    <amount, or "None outstanding">`,
       artifact: "MEMORY.md",
       asks: "Do the two categories the prompt asked for lead the document?",
       status: "present",
-      files: { ot: `${A}/ot/MEMORY.md`, gt: `${A}/gt/MEMORY.md` },
       legA: {
-        form: "text",
         verdict:
-          "The two requested headings lead, in order, each with its rule restated. A third section follows them.",
-        excerpt: `## UNCONFIRMED
-> Rule: we/they decided to cancel, but we don't have both (a) Slack
-> shutdown-channel confirmation and (b) an attachment/evidence item.
-
-## NOT CANCELLED
-> Rule: anything showing the vendor was kept or transferred instead.
-
-## CONFIRMED (receipts generated)`,
+          "The two requested headings lead, in order, each restating its rule. A third heading follows them.",
+        view: {
+          kind: "doc",
+          src: `${A}/ot/MEMORY.md`,
+          lines: [
+            "## UNCONFIRMED",
+            "> Rule: we/they decided to cancel, but we **don't have both** (a) Slack shutdown-channel confirmation and (b) an attachment/evidence item.",
+            "- Helpshift",
+            "## NOT CANCELLED",
+            "> Rule: anything showing the vendor was kept or transferred instead.",
+            "- Carta",
+            "## CONFIRMED (receipts generated)",
+          ],
+          mark: [0, 3, 6],
+        },
       },
       legB: {
-        form: "text",
-        verdict: "Same two headings, same order, then the skipped names the prompt's export clause asks for.",
-        excerpt: `## UNCONFIRMED
-*(Decided to cancel, but we do NOT have BOTH a Slack cancellation
-confirmation AND an attachment backing it up.)*
-
-## NOT CANCELLED
-*(Evidence shows the vendor was kept or transferred instead.)*
-
-## SKIPPED, vendor name did not come through in the export`,
+        verdict: "The same two headings, in the same order, then the skipped names the prompt asked for.",
+        view: {
+          kind: "doc",
+          src: `${A}/gt/MEMORY.md`,
+          lines: [
+            "## UNCONFIRMED",
+            "*(Decided to cancel, but we do NOT have BOTH a Slack cancellation confirmation AND an attachment backing it up.)*",
+            "- **Singular** — Termination email prepared/sent 2026-02-12. No Slack message confirms the account was actually cancelled.",
+            "- **Unity** — Termination email drafted for Arthur to send 2026-02-12. Evidence points to still active, not cancelled.",
+            "## NOT CANCELLED",
+            "*(Evidence shows the vendor was kept or transferred instead.)*",
+            "- **Deel** — Explicitly kept during shutdown (\"keep Deel, gusto, Intuit\").",
+            "## SKIPPED — vendor name did not come through in the export",
+          ],
+          mark: [0, 4, 7],
+        },
       },
       derived:
-        "The structural property holds in both legs, so this one is rated present. The real damage in Leg A is that those sections hold two rows instead of sixteen, and that is a content failure, graded by the objective criteria. Keeping the line between the two blocks clean is the point: presentation here, correctness there.",
+        "The structural property holds on both sides, so this one is rated present. What actually went wrong in Leg A is that those sections hold two rows instead of sixteen, and a missing row is a content failure the objective criteria already grade. Keeping that line clean is the point: presentation here, correctness there.",
     },
     {
       n: 6,
       text: "Within the cancellation receipts, the title `VENDOR CLOSEOUT RECEIPT` is visually differentiated from the field labels, larger type, capitalisation, or uppercase lettering.",
-      artifact: "VENDORS CANCELLED/*.pdf",
+      artifact: "VENDORS CANCELLED/soundly_cancellation_receipt.pdf",
       asks: "Is the receipt title set apart from the field labels by any of the three named means?",
       status: "present",
-      files: {
-        ot: `${A}/ot/soundly_cancellation_receipt.pdf`,
-        gt: `${A}/gt/soundly_cancellation_receipt.pdf`,
-      },
       legA: {
-        form: "text",
         verdict:
-          "Uppercase, but at the same size and weight as everything under it. Passes on the uppercase clause alone.",
-        excerpt: `VENDOR CLOSEOUT RECEIPT
-
-Harmony Games, Inc.
-
-Vendor:      Soundly
-Service:     Sound effects library subscription (Soundly Pro).`,
+          "Uppercase, but the same size and weight as every label under it. It clears the criterion on the uppercase clause alone.",
+        view: {
+          kind: "render",
+          src: `${A}/ot/soundly_receipt_render.png`,
+          canvas: { w: 1322, h: 708 },
+          focus: { x: 8, y: 8, w: 1306, h: 400 },
+          marks: [
+            { box: { x: 22, y: 22, w: 256, h: 30 }, label: "the title", place: "below" },
+            { box: { x: 22, y: 333, w: 94, h: 32 }, label: "no bigger than the labels" },
+          ],
+        },
       },
       legB: {
-        form: "text",
-        verdict: "Uppercase and 16pt bold over 11pt labels, so it is differentiated twice.",
-        excerpt: `16.0pt  Helvetica-Bold  VENDOR CLOSEOUT RECEIPT
-12.0pt  Helvetica-Bold  Harmony Games, Inc.
-11.0pt  Helvetica-Bold  Vendor:
-11.0pt  Helvetica       Soundly`,
+        verdict: "Uppercase, and set noticeably larger and bolder than the labels. Differentiated twice over.",
+        view: {
+          kind: "render",
+          src: `${A}/gt/soundly_receipt_render.png`,
+          canvas: { w: 1322, h: 708 },
+          focus: { x: 8, y: 8, w: 1306, h: 400 },
+          marks: [
+            { box: { x: 30, y: 22, w: 570, h: 44 }, label: "the title, set larger", place: "below" },
+            { box: { x: 30, y: 208, w: 112, h: 40 }, label: "labels, visibly smaller", place: "below" },
+          ],
+        },
       },
       derived:
-        "Worth reading as a lesson in wording. The criterion offers three alternative means, so a run that only uppercases still clears it. If the intent had been the size relationship, the or list had to go. Write the alternatives you actually accept, then rate against them.",
+        "Worth reading as a lesson in wording. The criterion offers three alternative means, so a run that only uppercases still clears it. If the size relationship was the intent, the or list had to go. Write the alternatives you actually accept, then rate against them.",
     },
     {
       n: 7,
       text: "The receipts visually separate the header block from the receipt fields using a clear separator, such as a horizontal rule.",
-      artifact: "VENDORS CANCELLED/*.pdf",
+      artifact: "VENDORS CANCELLED/soundly_cancellation_receipt.pdf",
       asks: "Is there a visible boundary between the document identity and the transaction fields?",
       status: "not-present",
-      files: {
-        ot: `${A}/ot/soundly_cancellation_receipt.pdf`,
-        gt: `${A}/gt/soundly_cancellation_receipt.pdf`,
-      },
       legA: {
-        form: "text",
-        verdict: "Whitespace only. The page carries a single flat image and no drawn geometry at all.",
-        excerpt: `page 1:  1 image, 0 drawings
-
-VENDOR CLOSEOUT RECEIPT
-                             <- blank space, nothing drawn
-Harmony Games, Inc.
-                             <- blank space, nothing drawn
-Vendor:      Soundly`,
+        verdict: "Whitespace and nothing else. The header and the fields run into one another.",
+        view: {
+          kind: "render",
+          src: `${A}/ot/soundly_receipt_render.png`,
+          canvas: { w: 1322, h: 708 },
+          focus: { x: 8, y: 8, w: 1306, h: 380 },
+          marks: [
+            {
+              box: { x: 22, y: 162, w: 340, h: 168 },
+              label: "no separator, just a gap",
+              place: "inside",
+            },
+          ],
+        },
       },
       legB: {
-        form: "text",
-        verdict: "One stroked rule under the header, running the full width of the text column.",
-        excerpt: `page 1:  0 images, 1 drawing
-         stroke   x 56.69 to 538.58   at y 90.71
-
-VENDOR CLOSEOUT RECEIPT
-Harmony Games, Inc.
-______________________________________________
-Vendor:      Soundly`,
+        verdict: "A rule runs the full width of the text column, directly under the header block.",
+        view: {
+          kind: "render",
+          src: `${A}/gt/soundly_receipt_render.png`,
+          canvas: { w: 1322, h: 708 },
+          focus: { x: 8, y: 8, w: 1306, h: 380 },
+          marks: [
+            { box: { x: 24, y: 148, w: 1150, h: 24 }, label: "the separator", align: "right" },
+          ],
+        },
       },
       derived:
-        "The cleanest criterion in the block, because the difference is countable. One rule present or absent, in a file anyone can open. All three of Leg A's receipts use the same undivided layout, so the criterion holds across the folder rather than resting on one file.",
+        "The cleanest criterion in the block, because you can see the answer from across the room. One rule, present or absent. All three of Leg A's receipts share the same undivided layout, so it holds across the folder rather than resting on one file.",
     },
     {
       n: 8,
@@ -902,58 +948,77 @@ Vendor:      Soundly`,
       artifact: "emails_draft.md",
       asks: "Can Arthur and Robert read the figures without opening the attachments?",
       status: "not-present",
-      files: { ot: `${A}/ot/emails_draft.md`, gt: `${A}/gt/emails_draft.md` },
       legA: {
-        form: "text",
-        verdict: "Two bullets and a file list. Neither figure is sourced and nothing says what is left out.",
-        excerpt: `- Total outstanding (confirmed receipts): **$2,650.00**
-- % of shutdown cost estimate: **(needs shutdown estimate amount to compute)**
-
-Details (receipts / logs) are in:
-- VENDORS CANCELLED/ (PDF closeout receipts)
-- MEMORY.md (UNCONFIRMED vs NOT CANCELLED)`,
+        verdict: "Two bare bullets. Neither figure is sourced and nothing says what has been left out.",
+        view: {
+          kind: "doc",
+          src: `${A}/ot/emails_draft.md`,
+          lines: [
+            "Quick snapshot of where we stand on vendor closeouts based on the cancellation evidence we currently have on hand.",
+            "- Total outstanding (confirmed receipts): **$2,650.00**",
+            "- % of shutdown cost estimate: **(needs shutdown estimate amount to compute)**",
+            "Ill attach an infographic for quick review:",
+            "- vendor_cancellation.svg",
+          ],
+          mark: [1, 2],
+        },
       },
       legB: {
-        form: "text",
         verdict:
-          "Prose that names the basis of the total, the source of the estimate and the vendors excluded from it.",
-        excerpt: `That's about **8.06%** of the ~$50K all-in shutdown cost estimate I posted
-in the #executives channel back on 2025-12-03 (the ChatGPT planning
-number, range $20K–$80K) — so these confirmed vendor closeouts are roughly
-8% of the projected wind-down budget.
-
-(Soundly is paid through the current period — nothing outstanding there.)`,
+          "Prose that names where the estimate came from, what the total is a sum of, and which vendor contributes nothing.",
+        view: {
+          kind: "doc",
+          src: `${A}/gt/emails_draft.md`,
+          lines: [
+            "### **Total still owed across the issued receipts: $4,032.00**",
+            "That's about **8.06%** of the ~$50K all-in shutdown cost estimate I posted in the `#executives` channel back on 2025-12-03 (the ChatGPT planning number, range $20K–$80K) — so these confirmed vendor closeouts are roughly 8% of the projected wind-down budget.",
+            "(Soundly is paid through the current period — nothing outstanding there.)",
+          ],
+          mark: [1, 2],
+        },
       },
       derived:
-        "Same two numbers, two different jobs. Leg B's reader can act on the email alone. Leg A's reader has to open three files to learn what the total covers. The criterion names the property, a self contained explanation, rather than a word count or a shape.",
+        "Same two numbers, two different jobs. One reader can act on the email alone. The other has to open three files to learn what the total covers. The criterion names the property, a self contained explanation, rather than a length or a shape.",
     },
     {
       n: 9,
       text: "The shutdown cost estimate and the percentage are presented together with enough context for their relationship to be immediately clear.",
       artifact: "vendor_cancellation.svg",
-      asks: "Is the percentage a finished figure the reader can use, and is its denominator on screen?",
+      asks: "Is the percentage a finished figure, and is the number it is a percentage of on the graphic?",
       status: "not-present",
-      files: { ot: `${A}/ot/vendor_cancellation.svg`, gt: `${A}/gt/vendor_cancellation.svg` },
       legA: {
-        form: "code",
-        verdict: "The estimate is absent and the percentage is a placeholder set at headline weight.",
-        excerpt: `<text class="kpiLabel" x="650" y="180">% OF SHUTDOWN COST ESTIMATE</text>
-<text class="kpi"      x="650" y="235">(needs estimate)</text>
-<text class="note"     x="650" y="265">Please insert shutdown estimate value to compute %</text>`,
+        verdict:
+          "The percentage slot holds a placeholder at full headline weight, with a line underneath asking the reader to supply the estimate.",
+        view: {
+          kind: "render",
+          src: `${A}/ot/vendor_cancellation.svg`,
+          canvas: { w: 1200, h: 780 },
+          focus: { x: 596, y: 92, w: 568, h: 204 },
+          marks: [
+            {
+              box: { x: 626, y: 146, w: 508, h: 128 },
+              label: "a placeholder, and a line telling the reader to finish it",
+            },
+          ],
+        },
       },
       legB: {
-        form: "code",
-        verdict: "The denominator is in the label and the resolved percentage sits beside the total it divides.",
-        excerpt: `<text x="270" y="134" text-anchor="middle">TOTAL STILL OWED (issued receipts)</text>
-<text x="270" y="176" font-size="42" font-weight="800">$4,032.00</text>
-
-<line x1="500" y1="112" x2="500" y2="176" stroke="#374151"/>
-
-<text x="730" y="134" text-anchor="middle">OF ~$50K SHUTDOWN ESTIMATE</text>
-<text x="730" y="176" font-size="42" font-weight="800" fill="#34d399">8.06%</text>`,
+        verdict: "The estimate is named in the label and the finished percentage sits beside the total it divides.",
+        view: {
+          kind: "render",
+          src: `${A}/gt/vendor_cancellation.svg`,
+          canvas: { w: 1000, h: 760 },
+          focus: { x: 486, y: 48, w: 476, h: 171 },
+          marks: [
+            {
+              box: { x: 560, y: 108, w: 350, h: 86 },
+              label: "the estimate named, the percentage resolved",
+            },
+          ],
+        },
       },
       derived:
-        "This is where a presentation criterion touches a retrieval failure without becoming one. The objective set already grades whether the $50,000 was found. This criterion grades what the graphic does with it, and Leg A hands the arithmetic back to its reader at 44px.",
+        "This is where a presentation criterion brushes against a retrieval failure without becoming one. Whether the $50,000 was ever found is graded objectively. This grades what the graphic does with it, and Leg A hands the arithmetic back to its reader at headline size.",
     },
     {
       n: 10,
@@ -961,38 +1026,48 @@ number, range $20K–$80K) — so these confirmed vendor closeouts are roughly
       artifact: "emails_draft.md",
       asks: "Can a recipient tell finished work from work that still needs a decision?",
       status: "not-present",
-      files: { ot: `${A}/ot/emails_draft.md`, gt: `${A}/gt/emails_draft.md` },
       legA: {
-        form: "text",
-        verdict: "One flat list. No open items are named, so nothing in the body asks anyone for anything.",
-        excerpt: `Quick snapshot of where we stand on vendor closeouts based on the
-cancellation evidence we currently have on hand.
-
-- Total outstanding (confirmed receipts): **$2,650.00**
-- % of shutdown cost estimate: **(needs shutdown estimate amount to compute)**
-
-Ill attach an infographic for quick review:
-- vendor_cancellation.svg`,
+        verdict: "One undivided list. No open item is named, so nothing in the body asks anyone for anything.",
+        view: {
+          kind: "doc",
+          src: `${A}/ot/emails_draft.md`,
+          lines: [
+            "Quick snapshot of where we stand on vendor closeouts based on the cancellation evidence we currently have on hand.",
+            "- Total outstanding (confirmed receipts): **$2,650.00**",
+            "- % of shutdown cost estimate: **(needs shutdown estimate amount to compute)**",
+            "Details (receipts / logs) are in:",
+            "- VENDORS CANCELLED/ (PDF closeout receipts)",
+            "- MEMORY.md (UNCONFIRMED vs NOT CANCELLED)",
+          ],
+          mark: [0, 1, 2, 3, 4, 5],
+        },
       },
       legB: {
-        form: "text",
-        verdict: "Two headed sections, and every open item carries the reason it is open and who has to move.",
-        excerpt: `## Still open — needs a decision / follow-up
-
-- **Singular** — termination email sent, but no confirmation back yet; their
-  statement still shows **$7,200.00** outstanding.
-- **Unity** — the account still shows **Active** (renews 2026-04-01). Arthur,
-  can you confirm this actually went out and chase a written cancellation?
-- **coderabbit** — Arthur noted it as cancelled in Slack, but we have no file
-  to back it up.`,
+        verdict:
+          "Two headed sections. Every open item carries why it is open and, where it matters, who has to move on it.",
+        view: {
+          kind: "doc",
+          src: `${A}/gt/emails_draft.md`,
+          lines: [
+            "## Cancelled vendors (receipts issued)",
+            "| Vendor | Cancellation date | Confirmed by | Final amount due |",
+            "|---|---|---|---|",
+            "| Helpshift | 2026-02-10 | Leonard Hayes | $1,500.00 |",
+            "| Soundly | 2026-02-11 | Robert | None outstanding |",
+            "## Still open — needs a decision / follow-up",
+            "- **Singular** — termination email sent, but no confirmation back yet; their statement still shows **$7,200.00** outstanding.",
+            "- **Unity** — the account still shows **Active** (renews 2026-04-01). Arthur, can you confirm this actually went out and chase a written cancellation?",
+          ],
+          mark: [0, 5],
+        },
       },
       derived:
-        "The criterion is about actionability, and it stays presentational: it grades the separation and the per item context, not which vendors belong in each group. Which vendors belong where is objective criterion territory, and it is graded there.",
+        "The criterion is about actionability and it stays presentational: it grades the separation and the context on each open item, not which vendors belong in which group. Where a vendor belongs is objective criterion territory, and it is graded there.",
     },
   ],
 
   subjectiveNote:
-    "Presentation only, judged on the render, never on anything the prompt asked for. Every criterion below was written by putting the same artifact from both runs side by side, Leg A the observed run and Leg B the golden, then naming the difference. Open a criterion to read that comparison and the two files it came from. Palette, canvas dimensions, responsiveness and SVG code structure were excluded as unbriefed. Criterion 2 rests on the phrase “with the insights” in turn 4; if that wording changes, revisit it.",
+    "Presentation only, judged on the render. Every criterion below came from putting the same artifact from both runs side by side, Leg A the observed run and Leg B the golden, and naming the visible difference. Open a criterion to see the two outcomes with the rated part boxed on each. Palette, canvas dimensions, responsiveness and SVG code structure were excluded as unbriefed. Criterion 2 rests on the phrase “with the insights” in turn 4; if that wording changes, revisit it.",
 
   run: {
     summary:

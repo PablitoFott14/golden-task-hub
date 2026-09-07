@@ -70,7 +70,7 @@ export const searchIndex: SearchEntry[] = [
     {
       kind: "Golden task",
       title: "Subjective rubrics",
-      hint: `${t.subjective.length} presentation criteria, each with its OT vs GT comparison`,
+      hint: `${t.subjective.length} presentation criteria, each with the OT and GT renders it came from`,
       to: `/golden-tasks/${t.meta.id}#subjective`,
       terms: t.subjective
         .map((r) => `${r.text} ${r.artifact} ${r.asks} ${r.derived} ${r.legA.verdict} ${r.legB.verdict}`)

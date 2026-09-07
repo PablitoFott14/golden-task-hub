@@ -120,25 +120,71 @@ export interface Rubric {
   observed?: string;
 }
 
+/** A rectangle in an artifact's own coordinates. */
+export interface Box {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
+/** A labelled box drawn over a render, pointing at what the criterion is about. */
+export interface Mark {
+  box: Box;
+  label: string;
+  /**
+   * Where the label sits relative to its box. The job is to land on empty
+   * pixels: `inside` when the box frames blank space, `above` by default, and
+   * `below` when the box is near the top of the frame.
+   */
+  place?: "above" | "below" | "inside";
+  /** Which edge of the box the label hangs from. */
+  align?: "left" | "right";
+}
+
+/**
+ * What to show for one side of the comparison.
+ *
+ * `render` is the artifact as a reader sees it, an SVG or a page image, framed
+ * on the part the criterion is about. `doc` is a markdown deliverable, shown
+ * formatted rather than as source, with the lines the criterion is about marked.
+ * Subjective criteria are judged on the render, so neither form shows markup.
+ */
+export type RubricView =
+  | {
+      kind: "render";
+      /** Path under public/. */
+      src: string;
+      /** The artifact's natural size, the units every box below is written in. */
+      canvas: { w: number; h: number };
+      /** The region to frame. Omitted shows the whole artifact. */
+      focus?: Box;
+      marks?: Mark[];
+    }
+  | {
+      kind: "doc";
+      /** Path under public/, so the whole document can be opened. */
+      src: string;
+      /** The excerpt, verbatim markdown lines, rendered as formatted text. */
+      lines: string[];
+      /** Indices into `lines` that the criterion is about. */
+      mark: number[];
+    };
+
 /**
  * One side of the comparison a subjective criterion was written from. Leg A is
- * the observed task run, Leg B the golden. The excerpt is quoted from the
- * artifact itself, never paraphrased, because the criterion has to survive
- * being checked against the file.
+ * the observed task run, Leg B the golden.
  */
 export interface RubricLeg {
-  /** What the artifact does, in one line. */
+  /** What the render does, in one line. */
   verdict: string;
-  /** The part of the artifact that settles it, quoted. */
-  excerpt: string;
-  /** How to read the excerpt: `code` sets it in mono, `text` as prose. */
-  form: "code" | "text";
+  view: RubricView;
 }
 
 /**
  * A presentation criterion, plus the OT and GT outcomes it was derived from.
- * Every subjective rubric carries its own comparison, so a reader can open the
- * two artifacts side by side and see the difference the criterion names.
+ * Every subjective rubric carries its own comparison, so a reader can put the
+ * two renders side by side and see the difference the criterion names.
  */
 export interface SubjectiveRubric {
   n: number;
@@ -153,10 +199,8 @@ export interface SubjectiveRubric {
   legA: RubricLeg;
   /** Leg B, the golden. */
   legB: RubricLeg;
-  /** The difference between the two legs, and why it is writable as a criterion. */
+  /** The difference between the two renders, and why it is writable as a criterion. */
   derived: string;
-  /** The two files, so the comparison can be opened rather than taken on trust. */
-  files?: { ot?: string; gt?: string };
 }
 
 /** A designed difficulty, the part worth copying. */

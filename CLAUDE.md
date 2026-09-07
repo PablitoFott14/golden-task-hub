@@ -190,30 +190,44 @@ They render as the References panel beside each answer, and they are folded into
 The field is required, so a new question needs at least one ref. Answers are never collapsed:
 question and answer are always on screen together.
 
-### Every subjective rubric carries the comparison it came from
+### Every subjective rubric carries the two renders it came from
 
-The subjective block is not a list of criteria, it is a list of **decisions**, and each one shows
-its work. `SubjectiveRubric` in [types.ts](src/data/types.ts) carries `legA` and `legB`: Leg A is
-the observed task run, Leg B the golden, and each leg holds a one line `verdict` plus an `excerpt`
-quoted from the artifact. `asks` says what the criterion checks, `derived` says why the difference
-between the two legs is writable as a criterion, and `files` points at both artifacts so a reader
-can open them.
+**Subjective criteria are judged on the render, never on source.** That is the rule the whole
+section is built to hold. Each criterion shows the same artifact from both runs side by side, with
+the rated part boxed on each: Leg A is the observed run, Leg B the golden.
+
+`SubjectiveRubric` in [types.ts](src/data/types.ts) gives each leg a `verdict` and a `view`:
+
+- `kind: "render"` is the artifact as a reader sees it, an SVG or a page image. `canvas` is its
+  natural size and every `Box` below is written in those units, so the framing maths is identical
+  for a 1200px SVG and a 1322px page render. `focus` frames the region the criterion is about and
+  `marks` are the labelled boxes that point at it.
+- `kind: "doc"` is a markdown deliverable, rendered as formatted text rather than as source, with
+  `mark` naming the lines the criterion is about. `DocFrame` renders headings, bold, italics,
+  blockquotes, bullets and tables. **No `##` or `**` may ever reach the screen**, because a reader
+  rating a document does not see its markup.
+
+Two rules for authoring one:
+
+- **A mark label must land on empty pixels.** `place` (`above` / `below` / `inside`) and `align`
+  exist only for that. A label covering the thing it points at is the single easiest way to ruin
+  one of these, so screenshot every mark you add.
+- **Both legs need the same framing.** Where the two artifacts have different page geometry, fix it
+  at the source: the two receipts are re-rendered into one identical window at one scale
+  (`WIN_W`/`WIN_H` in the generation snippet below), so the side by side is a fair comparison
+  rather than two differently zoomed pictures.
 
 [SubjectiveRubrics.tsx](src/components/SubjectiveRubrics.tsx) renders each criterion as one row
 with the comparison behind a disclosure. **Collapsed is the default and has to stay that way.** Ten
-open comparisons take the section from 1,400px to 5,800px, which is the reason the accordion exists.
-
-Two rules for adding one:
-
-- The excerpts are **quoted, never paraphrased**. They are transcriptions of the two artifacts, so
-  they keep their own punctuation the way `specDoc.ts` does, and a criterion has to survive being
-  checked against the file it names.
-- Both legs need a real artifact under `public/tasks/<id>/ot/` and `public/tasks/<id>/gt/`. The
-  markdown deliverables ship there alongside the receipts and the SVG for exactly this reason.
+open comparisons take the section from 1,400px to 6,800px, which is the reason the accordion exists.
 
 `status` is the result against the observed run, and it comes from the task's own
 `subjective_rubrics_justifications.md`. Criteria the run passed stay in the block: they are quality
 floors, and the data says so rather than hiding them.
+
+Page images are generated from the PDFs with PyMuPDF and Pillow, cropped to a shared window anchored
+on each document's own ink origin, then written to `public/tasks/<id>/{ot,gt}/`. Re-run that when a
+receipt changes, and re-measure the marks against the new pixels.
 
 ### The ⌘K index is hand-derived
 
