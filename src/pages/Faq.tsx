@@ -5,6 +5,7 @@ import { faq, faqTopics, guidelinesTitle } from "../data/faq";
 import type { FaqItem } from "../data/types";
 import { Crosslinks, Reveal } from "../components/ui";
 import { useScrollSpy } from "../lib/useScrollSpy";
+import { useRailFollow, useStickyFit } from "../lib/useStickyFit";
 import { cx } from "../lib/util";
 
 /** Wraps every match in <mark>, so a search shows where it hit. */
@@ -119,6 +120,10 @@ export default function Faq() {
 
   const ids = useMemo(() => shown.map((f) => f.id), [shown]);
   const active = useScrollSpy(ids);
+  // The rail carries search, topics and every question, so it outgrows a short
+  // window. Bound it to the room it has, the way the walkthrough rail is bound.
+  const { ref: rail, maxHeight } = useStickyFit<HTMLElement>(28);
+  useRailFollow(rail, active);
 
   return (
     <div>
@@ -140,7 +145,11 @@ export default function Faq() {
       <div className="wrap py-10">
         <div className="lg:grid lg:grid-cols-[280px_1fr] lg:gap-10">
           {/* Rail: search, topics, and the question list */}
-          <aside className="mb-8 lg:mb-0 lg:sticky lg:top-20 lg:self-start">
+          <aside
+            ref={rail}
+            style={{ maxHeight }}
+            className="mb-8 lg:mb-0 lg:sticky lg:top-20 lg:self-start lg:overflow-y-auto lg:overscroll-contain lg:pr-1"
+          >
             <div className="relative">
               <Search
                 size={15}
@@ -202,6 +211,7 @@ export default function Faq() {
                   <li key={f.id}>
                     <Link
                       to={{ hash: `#${f.id}` }}
+                      data-rail={f.id}
                       className={cx(
                         "group flex gap-2.5 rounded-xl px-2.5 py-2 text-[12.5px] leading-snug transition",
                         active === f.id

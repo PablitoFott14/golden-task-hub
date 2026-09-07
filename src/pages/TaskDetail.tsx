@@ -20,7 +20,8 @@ import { methodSteps } from "../data/method";
 import type { InputAsset, Trap, XLink } from "../data/types";
 import { Callout, Crosslinks, Reveal, SectionRail, Stat } from "../components/ui";
 import Ledger from "../components/Ledger";
-import Rubrics, { Ticks } from "../components/Rubrics";
+import Rubrics from "../components/Rubrics";
+import SubjectiveRubrics from "../components/SubjectiveRubrics";
 import { useScrollSpy } from "../lib/useScrollSpy";
 import { asset, cx } from "../lib/util";
 
@@ -593,40 +594,10 @@ export default function TaskDetail() {
             <section id="subjective" className="scroll-mt-24">
               <SectionHead
                 id="subjective"
-                title="Ten criteria from one side by side comparison"
+                title="Ten criteria, each one from a side by side comparison"
                 sub={t.subjectiveNote}
               />
-              <ol className="space-y-2">
-                {t.subjective.map((s) => (
-                  <li key={s.n} className="card flex items-start gap-3 p-4">
-                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-lg bg-brand-500/10 font-mono text-[11px] font-bold text-brand-700 dark:text-brand-300">
-                      {s.n}
-                    </span>
-                    <p className="text-[13px] leading-relaxed text-ink-700">
-                      <Ticks text={s.text} />
-                    </p>
-                  </li>
-                ))}
-              </ol>
-
-              <div className="mt-6">
-                <div className="mono-label mb-3 text-ink-400">
-                  What the comparison actually caught
-                </div>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {t.subjectiveFailures.map((f) => (
-                    <div
-                      key={f.n}
-                      className="rounded-xl border border-rose-300/50 bg-rose-50/40 p-4 dark:border-rose-500/25 dark:bg-rose-500/10"
-                    >
-                      <div className="mono-label mb-1.5 text-rose-700 dark:text-rose-300">
-                        Criterion {f.n}
-                      </div>
-                      <p className="text-[12.5px] leading-relaxed text-ink-700">{f.body}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <SubjectiveRubrics rubrics={t.subjective} />
             </section>
 
             {/* Traps */}

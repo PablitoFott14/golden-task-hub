@@ -190,6 +190,31 @@ They render as the References panel beside each answer, and they are folded into
 The field is required, so a new question needs at least one ref. Answers are never collapsed:
 question and answer are always on screen together.
 
+### Every subjective rubric carries the comparison it came from
+
+The subjective block is not a list of criteria, it is a list of **decisions**, and each one shows
+its work. `SubjectiveRubric` in [types.ts](src/data/types.ts) carries `legA` and `legB`: Leg A is
+the observed task run, Leg B the golden, and each leg holds a one line `verdict` plus an `excerpt`
+quoted from the artifact. `asks` says what the criterion checks, `derived` says why the difference
+between the two legs is writable as a criterion, and `files` points at both artifacts so a reader
+can open them.
+
+[SubjectiveRubrics.tsx](src/components/SubjectiveRubrics.tsx) renders each criterion as one row
+with the comparison behind a disclosure. **Collapsed is the default and has to stay that way.** Ten
+open comparisons take the section from 1,400px to 5,800px, which is the reason the accordion exists.
+
+Two rules for adding one:
+
+- The excerpts are **quoted, never paraphrased**. They are transcriptions of the two artifacts, so
+  they keep their own punctuation the way `specDoc.ts` does, and a criterion has to survive being
+  checked against the file it names.
+- Both legs need a real artifact under `public/tasks/<id>/ot/` and `public/tasks/<id>/gt/`. The
+  markdown deliverables ship there alongside the receipts and the SVG for exactly this reason.
+
+`status` is the result against the observed run, and it comes from the task's own
+`subjective_rubrics_justifications.md`. Criteria the run passed stay in the block: they are quality
+floors, and the data says so rather than hiding them.
+
 ### The ⌘K index is hand-derived
 
 `searchIndex` in [src/data/index.ts](src/data/index.ts) flattens every content type into
@@ -217,7 +242,10 @@ for many tasks**: keep it a grid of equal cards, and keep the reference-only dis
 - **Hash routing.** `main.tsx` uses `HashRouter` so deep links survive a static host with no SPA
   rewrite. A raw `<a href="#section">` therefore **replaces the whole hash and destroys the route**.
   Always use `<Link to={{ hash: "#section" }} />`, which resolves against the current pathname.
-  `Layout.tsx` owns the scroll-to-hash effect.
+  `Layout.tsx` owns the scroll-to-hash effect, and that effect watches `location.key` as well as
+  `pathname` and `hash`. **Without the key it is a dead click**: navigating to the section you are
+  already on leaves both strings unchanged, so the effect never re-runs and nothing scrolls. Clicking
+  a rail item, scrolling away, then clicking it again is exactly that case.
 - **`asset()` in [src/lib/util.ts](src/lib/util.ts)** resolves `public/` paths against
   `import.meta.env.BASE_URL` and percent-encodes each segment. Input filenames contain spaces
   (`Screenshot 2026-02-10 143217.png`), so never build those URLs by hand.
@@ -227,6 +255,14 @@ for many tasks**: keep it a grid of equal cards, and keep the reference-only dis
   grid child so it sits on the left. Its `title` defaults to `Walkthrough`.
 - **A sticky element that is a direct grid child needs `self-start`**, otherwise it stretches to
   the full row height and sticky does nothing. `SectionRail` carries it.
+- **A sticky rail also has to be bounded**, with `useStickyFit` in
+  [src/lib/useStickyFit.ts](src/lib/useStickyFit.ts). `sticky top-24` only lifts the rail once the
+  page has scrolled far enough to push it there; until then it sits below the hero, and a rail with
+  a dozen items runs off the bottom of the window where **its last items cannot be clicked at all**.
+  CSS cannot express "whichever of the two positions applies right now", so the hook measures the
+  top and caps the height, and the rail scrolls inside itself when it does not fit. It returns no
+  cap below `lg`, where the rail is in the flow and a cap would crop it. Pair it with `useRailFollow`
+  and a `data-rail={id}` on each row to keep the active one visible, and add both to any new rail.
 - **`Reveal` needs `className="h-full"`** when it wraps a card in a stretch grid, or the card stops
   filling its row.
 

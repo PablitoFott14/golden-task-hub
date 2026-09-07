@@ -54,9 +54,14 @@ function ThemeToggle() {
  *
  * `behavior: "instant"` rather than `"auto"`, because `html` carries
  * `scroll-behavior: smooth` and `"auto"` defers to it.
+ *
+ * `key` is in the dependency list, not just `pathname` and `hash`. Clicking a
+ * link that targets the section you are already on leaves both strings
+ * unchanged, so without it the effect never re-runs and the click does nothing.
+ * A rail item you have scrolled away from is exactly that case.
  */
 function useHashScroll() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
   const previous = useRef<string | null>(null);
 
   useEffect(() => {
@@ -105,7 +110,7 @@ function useHashScroll() {
       cancelled = true;
       timers.forEach(clearTimeout);
     };
-  }, [pathname, hash]);
+  }, [pathname, hash, key]);
 }
 
 export default function Layout({ children }: { children: ReactNode }) {

@@ -69,6 +69,15 @@ export const searchIndex: SearchEntry[] = [
     },
     {
       kind: "Golden task",
+      title: "Subjective rubrics",
+      hint: `${t.subjective.length} presentation criteria, each with its OT vs GT comparison`,
+      to: `/golden-tasks/${t.meta.id}#subjective`,
+      terms: t.subjective
+        .map((r) => `${r.text} ${r.artifact} ${r.asks} ${r.derived} ${r.legA.verdict} ${r.legB.verdict}`)
+        .join(" "),
+    },
+    {
+      kind: "Golden task",
       title: "Designed friction",
       hint: `${t.traps.length} traps, and what each one tests`,
       to: `/golden-tasks/${t.meta.id}#traps`,

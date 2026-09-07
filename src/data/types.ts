@@ -120,11 +120,43 @@ export interface Rubric {
   observed?: string;
 }
 
+/**
+ * One side of the comparison a subjective criterion was written from. Leg A is
+ * the observed task run, Leg B the golden. The excerpt is quoted from the
+ * artifact itself, never paraphrased, because the criterion has to survive
+ * being checked against the file.
+ */
+export interface RubricLeg {
+  /** What the artifact does, in one line. */
+  verdict: string;
+  /** The part of the artifact that settles it, quoted. */
+  excerpt: string;
+  /** How to read the excerpt: `code` sets it in mono, `text` as prose. */
+  form: "code" | "text";
+}
+
+/**
+ * A presentation criterion, plus the OT and GT outcomes it was derived from.
+ * Every subjective rubric carries its own comparison, so a reader can open the
+ * two artifacts side by side and see the difference the criterion names.
+ */
 export interface SubjectiveRubric {
   n: number;
   text: string;
-  modelA?: "present" | "not-present";
-  note?: string;
+  /** The artifact the criterion is judged on. */
+  artifact: string;
+  /** What the criterion is actually checking, in one line. */
+  asks: string;
+  /** Result against the Model A run. */
+  status: "present" | "not-present";
+  /** Leg A, the observed task run. */
+  legA: RubricLeg;
+  /** Leg B, the golden. */
+  legB: RubricLeg;
+  /** The difference between the two legs, and why it is writable as a criterion. */
+  derived: string;
+  /** The two files, so the comparison can be opened rather than taken on trust. */
+  files?: { ot?: string; gt?: string };
 }
 
 /** A designed difficulty, the part worth copying. */
@@ -177,8 +209,6 @@ export interface GoldenTask {
   rubrics: Rubric[];
   subjective: SubjectiveRubric[];
   subjectiveNote: string;
-  /** Model A's presentation failures, quoted from subjective_rubrics.md. */
-  subjectiveFailures: { n: number; body: string }[];
   run: { summary: string; score: string; observations: RunObservation[]; artifacts: Deliverable[] };
   traps: Trap[];
   takeaways: { title: string; body: string; links?: XLink[] }[];

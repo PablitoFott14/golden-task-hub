@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, CornerDownRight } from "lucide-react";
 import type { XLink } from "../data/types";
 import { cx } from "../lib/util";
+import { useRailFollow, useStickyFit } from "../lib/useStickyFit";
 
 /** Fade and rise on first view. Safe on filtered content, unlike an observer. */
 export function Reveal({
@@ -168,6 +169,12 @@ export function Callout({
  * The sticky walkthrough rail. Steps are numbered in reading order, and the
  * active one is marked by the number, the bar and the weight together, never
  * by colour alone.
+ *
+ * The rail is measured rather than sized in CSS: until the page has scrolled
+ * far enough for `sticky` to take hold, the rail starts below the hero, and a
+ * long one would then run off the bottom of the window with its last items out
+ * of reach. `useStickyFit` bounds it to the room it actually has, and the list
+ * scrolls inside itself when there is not enough.
  */
 export function SectionRail({
   sections,
@@ -178,8 +185,16 @@ export function SectionRail({
   active: string;
   title?: string;
 }) {
+  const { ref, maxHeight } = useStickyFit<HTMLElement>(28);
+  useRailFollow(ref, active);
+
   return (
-    <nav aria-label={title} className="sticky top-24 hidden self-start lg:block">
+    <nav
+      ref={ref}
+      aria-label={title}
+      style={{ maxHeight }}
+      className="sticky top-24 hidden self-start overflow-y-auto overscroll-contain pr-1 lg:block"
+    >
       <div className="mono-label mb-3 text-ink-400">{title}</div>
       <ol className="space-y-0.5">
         {sections.map((s, i) => {
@@ -188,6 +203,7 @@ export function SectionRail({
             <li key={s.id}>
               <Link
                 to={{ hash: `#${s.id}` }}
+                data-rail={s.id}
                 aria-current={on ? "true" : undefined}
                 className={cx(
                   "group flex items-center gap-2.5 rounded-xl py-2 pl-2 pr-2.5 text-[13px] leading-snug transition duration-200",
