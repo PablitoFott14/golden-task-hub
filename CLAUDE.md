@@ -11,7 +11,7 @@ Rubrics multi-turn project. Six routes:
 | --- | --- | --- |
 | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. Nine method cards, the mindset, the FAQ CTA, the hard requirements. |
 | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
-| `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, eleven sections, numbered rail on the left. |
+| `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, eleven sections nested under the nine method steps, rail on the left. |
 | `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks in dense rows, progress sidebar with persisted ticks. |
 | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
 | `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions, answers always open, each with its guidelines references. |
@@ -143,12 +143,20 @@ points at the Golden Task section where the principle landed. That relationship,
 **principle → decision → implementation**, is rendered in two places and must stay consistent:
 
 1. The method cards and detail panel on `/`. The card shows `title` then `slogan` only, and the
-   panel below it carries `means`, `moves`, `rule` and `inTask`.
-2. The `SECTIONS` array in [TaskDetail.tsx](src/pages/TaskDetail.tsx), where each section carries a
-   `step` number and renders a badge linking back to `/#<step-id>`.
+   panel below it carries `means`, `moves`, `rule` and `inTask`. A step id in the hash selects the
+   step and scrolls its panel into view, which is what every `/#<step-id>` link in the hub relies
+   on. The steps carry no anchors of their own, so that effect in
+   [Method.tsx](src/pages/Method.tsx) is the only thing making those links land.
+2. The `WALKTHROUGH` array in [TaskDetail.tsx](src/pages/TaskDetail.tsx). It is the method, not a
+   second flow: one entry per method step, in method order, with the page sections nested under the
+   step that produced them. The rail renders it with the method's own numbering and titles, each
+   section heading shows the step badge, and a step this task has no section for keeps its place
+   and links to the method page rather than being dropped.
 
 Adding a method step means adding it to `methodSteps` and deciding which task section it points at.
-Adding a task section means adding it to `SECTIONS` with its `step`.
+Adding a task section means nesting it in `WALKTHROUGH` under the step it belongs to. **A section
+that does not belong under a step does not belong on the page**, because a rail entry with no step
+behind it is exactly the second flow this structure exists to prevent.
 
 ### The spec and the checklist follow the Golden Task Viewer's layout
 
@@ -176,9 +184,10 @@ are authored **in both directions**: a pre-submit check points at the golden-tas
 demonstrates it, and that section points back at the check.
 
 An `XLink.to` targets `/<route>#<section-id>`, or an absolute URL (rendered with an external
-arrow). Section ids are hardcoded in a `SECTIONS` array at the top of
-[TaskDetail.tsx](src/pages/TaskDetail.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx) and
-[SpecDoc.tsx](src/pages/SpecDoc.tsx), and drive both the sticky rail and the scroll spy. **Adding or
+arrow). Section ids are hardcoded in `WALKTHROUGH` at the top of
+[TaskDetail.tsx](src/pages/TaskDetail.tsx) and in a `SECTIONS` array at the top of
+[PreSubmit.tsx](src/pages/PreSubmit.tsx) and [SpecDoc.tsx](src/pages/SpecDoc.tsx), and drive both
+the sticky rail and the scroll spy. **Adding or
 renaming a section means updating that array and every `XLink` aimed at it.** Nothing validates
 this, so grep the old anchor before renaming.
 
@@ -243,8 +252,9 @@ is how a search for a vendor name finds the evidence ledger.
 3. Add it to the `tasks` array in `src/data/index.ts`.
 
 It appears on `/golden-tasks`, gets a walkthrough page, joins the ⌘K index, and resolves any
-`XLink` pointing at it. `TaskDetail`'s `SECTIONS` array assumes the full `GoldenTask` shape; a task
-missing a field renders an empty section rather than failing, so fill every field or trim the array.
+`XLink` pointing at it. `TaskDetail`'s `WALKTHROUGH` array assumes the full `GoldenTask` shape; a
+task missing a field renders an empty section rather than failing, so fill every field or trim the
+array.
 
 The card on `/golden-tasks` builds its image strip from the first four `inputs` that are not a
 `pdf` or a `doc`, so ship at least one real image or the card falls back to a placeholder. The card
@@ -265,8 +275,10 @@ for many tasks**: keep it a grid of equal cards, and keep the reference-only dis
   (`Screenshot 2026-02-10 143217.png`), so never build those URLs by hand.
 - **Checklist ticks are a per-device convenience only**, stored under `rsh.presubmit.checks.v1`,
   wrapped in try/catch for private windows, and never a record of anything.
-- **`SectionRail` is the walkthrough rail**, numbered in reading order and rendered as the first
-  grid child so it sits on the left. Its `title` defaults to `Walkthrough`.
+- **`SectionRail` is the walkthrough rail**, and it takes method steps rather than a flat list:
+  `RailGroup` is `{ n, id, title, sections }`, the number and title come from `methodSteps`, and the
+  sections nest under it. A group with no sections renders muted and links to `/#<step-id>`. It is
+  the first grid child so it sits on the left, and its `title` defaults to `Walkthrough`.
 - **A sticky element that is a direct grid child needs `self-start`**, otherwise it stretches to
   the full row height and sticky does nothing. `SectionRail` carries it.
 - **A sticky rail also has to be bounded**, with `useStickyFit` in

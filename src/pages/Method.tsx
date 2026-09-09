@@ -1,5 +1,5 @@
-import { useCallback, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
@@ -98,6 +98,24 @@ export default function Method() {
   const [active, setActive] = useState(1);
   const panelRef = useRef<HTMLDivElement>(null);
   const step = methodSteps.find((s) => s.n === active)!;
+  const { hash, key } = useLocation();
+
+  /** A step id in the hash selects that step and opens its panel. The
+   *  walkthrough rail, every section badge and every M1 to M9 crosslink in the
+   *  hub arrive here, so the step the reader asked for has to be the one on
+   *  screen. The steps have no anchors of their own, which is why the scroll is
+   *  done here rather than left to the layout. `key` is in the deps because
+   *  clicking the same step twice leaves the hash unchanged.
+   */
+  useEffect(() => {
+    const target = methodSteps.find((s) => s.id === decodeURIComponent(hash.slice(1)));
+    if (!target) return;
+    setActive(target.n);
+    const frame = requestAnimationFrame(() => {
+      panelRef.current?.scrollIntoView({ block: "start" });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [hash, key]);
 
   /** Selecting a card should bring its detail panel into view, not leave it
    *  somewhere below the fold. Mount does not scroll, only a click does. */

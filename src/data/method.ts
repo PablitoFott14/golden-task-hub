@@ -103,7 +103,7 @@ export const methodSteps: MethodStep[] = [
     },
     inTask: {
       body: "Every output the rubrics check is named in a prompt: the folder, the receipt filenames, MEMORY.md, emails_draft.md, the subject line, the SVG. Nothing is graded that the agent was not asked for.",
-      link: { to: `${GT}#turns`, tag: "GT", label: "The four prompts, and what each one adds" },
+      link: { to: `${GT}#turns`, tag: "GT", label: "Every graded output is named in a prompt" },
     },
   },
   {

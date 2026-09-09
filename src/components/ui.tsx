@@ -165,10 +165,25 @@ export function Callout({
   );
 }
 
+/** One method step in the rail, with the walkthrough sections that sit under it. */
+export interface RailGroup {
+  /** The method step number. Kept even when the walkthrough has no section for it. */
+  n: number;
+  /** The method step id, so the header can link back to the principle. */
+  id: string;
+  title: string;
+  sections: { id: string; label: string }[];
+}
+
 /**
- * The sticky walkthrough rail. Steps are numbered in reading order, and the
- * active one is marked by the number, the bar and the weight together, never
- * by colour alone.
+ * The sticky walkthrough rail. It is the method, not a second flow: one row per
+ * method step, numbered as the method numbers it, with the sections of the page
+ * nested underneath the step they belong to. A step the walkthrough has no
+ * section for still holds its place and links to where the method explains it,
+ * so the numbering never skips and the rail never implies a step is optional.
+ *
+ * The active section is marked by the number, the ground and the weight
+ * together, never by colour alone.
  *
  * The rail is measured rather than sized in CSS: until the page has scrolled
  * far enough for `sticky` to take hold, the rail starts below the hero, and a
@@ -177,11 +192,11 @@ export function Callout({
  * scrolls inside itself when there is not enough.
  */
 export function SectionRail({
-  sections,
+  groups,
   active,
   title = "Walkthrough",
 }: {
-  sections: { id: string; label: string }[];
+  groups: RailGroup[];
   active: string;
   title?: string;
 }) {
@@ -196,20 +211,22 @@ export function SectionRail({
       className="sticky top-24 hidden self-start overflow-y-auto overscroll-contain pr-1 lg:block"
     >
       <div className="mono-label mb-3 text-ink-400">{title}</div>
-      <ol className="space-y-0.5">
-        {sections.map((s, i) => {
-          const on = active === s.id;
+      <ol className="space-y-1.5">
+        {groups.map((g) => {
+          const on = g.sections.some((s) => s.id === active);
+          const elsewhere = g.sections.length === 0;
           return (
-            <li key={s.id}>
+            <li key={g.id}>
               <Link
-                to={{ hash: `#${s.id}` }}
-                data-rail={s.id}
-                aria-current={on ? "true" : undefined}
+                to={elsewhere ? `/#${g.id}` : { hash: `#${g.sections[0].id}` }}
+                title={elsewhere ? "This step is covered on the method page" : undefined}
                 className={cx(
-                  "group flex items-center gap-2.5 rounded-xl py-2 pl-2 pr-2.5 text-[13px] leading-snug transition duration-200",
-                  on
-                    ? "bg-brand-500/10 font-semibold text-brand-700 ring-1 ring-inset ring-brand-500/20 dark:text-brand-300"
-                    : "text-ink-500 hover:bg-ink-100 hover:text-ink-900"
+                  "group flex items-center gap-2.5 rounded-xl py-1.5 pl-2 pr-2.5 text-[12.5px] font-semibold leading-snug transition duration-200",
+                  elsewhere
+                    ? "text-ink-400 hover:text-ink-700"
+                    : on
+                      ? "text-ink-900"
+                      : "text-ink-600 hover:text-ink-900"
                 )}
               >
                 <span
@@ -217,13 +234,41 @@ export function SectionRail({
                     "grid h-6 w-6 shrink-0 place-items-center rounded-lg font-mono text-[11px] font-bold transition duration-200",
                     on
                       ? "bg-brand-600 text-white shadow-glow"
-                      : "bg-ink-100 text-ink-500 group-hover:bg-ink-200 group-hover:text-ink-800"
+                      : elsewhere
+                        ? "bg-ink-100/60 text-ink-400"
+                        : "bg-ink-100 text-ink-500 group-hover:bg-ink-200 group-hover:text-ink-800"
                   )}
                 >
-                  {i + 1}
+                  {g.n}
                 </span>
-                <span className="min-w-0 flex-1">{s.label}</span>
+                <span className="min-w-0 flex-1">{g.title}</span>
+                {elsewhere && <ArrowUpRight size={12} className="shrink-0 text-ink-300" />}
               </Link>
+
+              {!elsewhere && (
+                <ul className="ml-[22px] mt-0.5 space-y-0.5 border-l border-ink-200/80 pl-2.5">
+                  {g.sections.map((s) => {
+                    const cur = active === s.id;
+                    return (
+                      <li key={s.id}>
+                        <Link
+                          to={{ hash: `#${s.id}` }}
+                          data-rail={s.id}
+                          aria-current={cur ? "true" : undefined}
+                          className={cx(
+                            "block rounded-lg px-2 py-1.5 text-[12.5px] leading-snug transition duration-200",
+                            cur
+                              ? "bg-brand-500/10 font-semibold text-brand-700 ring-1 ring-inset ring-brand-500/20 dark:text-brand-300"
+                              : "text-ink-500 hover:bg-ink-100 hover:text-ink-900"
+                          )}
+                        >
+                          {s.label}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
             </li>
           );
         })}

@@ -18,6 +18,7 @@ import {
 import { taskById } from "../data";
 import { methodSteps } from "../data/method";
 import type { InputAsset, Trap, XLink } from "../data/types";
+import type { RailGroup } from "../components/ui";
 import { Callout, Crosslinks, Reveal, SectionRail, Stat } from "../components/ui";
 import Ledger from "../components/Ledger";
 import Rubrics from "../components/Rubrics";
@@ -25,21 +26,55 @@ import SubjectiveRubrics from "../components/SubjectiveRubrics";
 import { useScrollSpy } from "../lib/useScrollSpy";
 import { asset, cx } from "../lib/util";
 
-const SECTIONS: { id: string; label: string; step?: number }[] = [
-  { id: "universe", label: "The universe", step: 1 },
-  { id: "inputs", label: "Multimodal inputs", step: 2 },
-  { id: "format", label: "The format spec", step: 2 },
-  { id: "turns", label: "The four prompts", step: 3 },
-  { id: "answer", label: "The resolved answer", step: 3 },
-  { id: "ledger", label: "Evidence ledger", step: 3 },
-  { id: "model-a", label: "Where Model A broke", step: 5 },
-  { id: "rubrics", label: "Objective rubrics", step: 6 },
-  { id: "golden", label: "Golden deliverables", step: 8 },
-  { id: "subjective", label: "Subjective block", step: 9 },
-  { id: "traps", label: "Designed friction" },
+/**
+ * The walkthrough, nested under the method step each part of the task belongs
+ * to. The rail renders this as the method itself, so the numbering is the
+ * method's own and every section sits under the step that produced it. Steps 4
+ * and 7 stay in the list with nothing under them: this task has no section for
+ * the Draft History or for the milestone set, and dropping them would make the
+ * rail read as a seven step method.
+ *
+ * Order here is page order, and both have to stay in method order or the
+ * scroll spy walks the rail backwards.
+ */
+const WALKTHROUGH: { step: number; sections: { id: string; label: string }[] }[] = [
+  { step: 1, sections: [{ id: "universe", label: "The two channels" }] },
+  {
+    step: 2,
+    sections: [
+      { id: "inputs", label: "Eleven files" },
+      { id: "format", label: "The receipt template" },
+    ],
+  },
+  {
+    step: 3,
+    sections: [
+      { id: "turns", label: "The four prompts" },
+      { id: "answer", label: "The resolved answer" },
+      { id: "ledger", label: "Evidence ledger" },
+      { id: "traps", label: "Designed friction" },
+    ],
+  },
+  { step: 4, sections: [] },
+  { step: 5, sections: [{ id: "model-a", label: "Where Model A broke" }] },
+  { step: 6, sections: [{ id: "rubrics", label: "The criteria block" }] },
+  { step: 7, sections: [] },
+  { step: 8, sections: [{ id: "golden", label: "The deliverables" }] },
+  { step: 9, sections: [{ id: "subjective", label: "The comparisons" }] },
 ];
 
-const IDS = SECTIONS.map((s) => s.id);
+/** The rail takes its numbers and its titles from the method, never from here. */
+const RAIL: RailGroup[] = WALKTHROUGH.map((g) => {
+  const step = methodSteps.find((m) => m.n === g.step)!;
+  return { n: step.n, id: step.id, title: step.title, sections: g.sections };
+});
+
+/** Which method step a section implements, for the badge on its heading. */
+const SECTION_STEP = new Map<string, number>(
+  WALKTHROUGH.flatMap((g) => g.sections.map((s) => [s.id, g.step] as [string, number]))
+);
+
+const IDS = WALKTHROUGH.flatMap((g) => g.sections.map((s) => s.id));
 
 const roleTone: Record<InputAsset["role"], { label: string; chip: string }> = {
   evidence: {
@@ -78,8 +113,8 @@ function SectionHead({
   title: string;
   sub?: string;
 }) {
-  const meta = SECTIONS.find((s) => s.id === id);
-  const step = meta?.step ? methodSteps.find((m) => m.n === meta.step) : undefined;
+  const n = SECTION_STEP.get(id);
+  const step = n ? methodSteps.find((m) => m.n === n) : undefined;
   return (
     <div className="mb-6">
       {step && (
@@ -222,7 +257,7 @@ export default function TaskDetail() {
 
       <div className="wrap py-12">
         <div className="gap-12 lg:grid lg:grid-cols-[240px_1fr]">
-          <SectionRail sections={SECTIONS} active={active} />
+          <SectionRail groups={RAIL} active={active} />
 
           <div className="min-w-0 space-y-20">
             {/* Universe */}
@@ -466,6 +501,22 @@ export default function TaskDetail() {
               <Ledger rows={t.ledger} />
             </section>
 
+            {/* Traps */}
+            <section id="traps" className="scroll-mt-24">
+              <SectionHead
+                id="traps"
+                title="Seven pieces of designed friction"
+                sub="None of these is a gotcha. Each one is a place where two real sources have to be reconciled, which is where genuine difficulty comes from."
+              />
+              <div className="grid gap-4 sm:grid-cols-2">
+                {t.traps.map((trap) => (
+                  <Reveal key={trap.id} className="h-full">
+                    <TrapCard t={trap} />
+                  </Reveal>
+                ))}
+              </div>
+            </section>
+
             {/* Model A */}
             <section id="model-a" className="scroll-mt-24">
               <SectionHead
@@ -598,23 +649,6 @@ export default function TaskDetail() {
               />
               <SubjectiveRubrics rubrics={t.subjective} />
             </section>
-
-            {/* Traps */}
-            <section id="traps" className="scroll-mt-24">
-              <SectionHead
-                id="traps"
-                title="Seven pieces of designed friction"
-                sub="None of these is a gotcha. Each one is a place where two real sources have to be reconciled, which is where genuine difficulty comes from."
-              />
-              <div className="grid gap-4 sm:grid-cols-2">
-                {t.traps.map((trap) => (
-                  <Reveal key={trap.id} className="h-full">
-                    <TrapCard t={trap} />
-                  </Reveal>
-                ))}
-              </div>
-            </section>
-
           </div>
         </div>
       </div>
