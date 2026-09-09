@@ -216,6 +216,67 @@ export interface Trap {
   links?: XLink[];
 }
 
+/**
+ * One milestone: the requirement of its turn written as intent, with anything
+ * specific to the response stripped out. The simulator replays these against a
+ * run that went a different way, so a milestone that named a value, a filename
+ * or a format would only ever match the run it was written from.
+ */
+export interface Milestone {
+  /** The turn whose requirement this is. */
+  turn: number;
+  /** The milestone, as the milestone set writes it. */
+  text: string;
+}
+
+/** One message of the golden conversation, verbatim, as markdown lines. */
+export interface GoldenMessage {
+  role: "user" | "agent";
+  /** The turn this message belongs to. A hint carries the turn it reopens. */
+  turn: number;
+  /** Set on a steering prompt, which is not one of the task's own turns. */
+  hint?: boolean;
+  lines: string[];
+}
+
+/** What the milestone check found at one point in the golden conversation. */
+export interface MilestoneCheck {
+  /** Where in the run the check happens. */
+  title: string;
+  /** The turn being checked. */
+  turn: number;
+  /** Whether every milestone for that turn was reached. */
+  met: boolean;
+  /** What the run actually produced against them. */
+  body: string;
+  /** What that decides for the next prompt. */
+  next: string;
+}
+
+/**
+ * The golden run. Same opening prompt, new conversation, steered with intent
+ * level prompts. The milestones are checked after every turn, and that check is
+ * the only thing that decides whether the next prompt is the next turn or a
+ * hint, which is why the checks and the conversation are stored together.
+ */
+export interface GoldenRun {
+  checks: MilestoneCheck[];
+  /** The steer the run needed, and the anatomy of why it is allowed. */
+  hint: {
+    /** The milestone it is aimed at. */
+    missed: string;
+    /** The prompt, verbatim. */
+    prompt: string;
+    /** What it points at. */
+    does: string[];
+    /** What it never says. */
+    avoids: string[];
+    /** What the model did with it. */
+    recovered: string;
+  };
+  conversation: GoldenMessage[];
+}
+
 export interface Deliverable {
   file: string;
   what: string;
@@ -255,6 +316,10 @@ export interface GoldenTask {
   subjectiveNote: string;
   run: { summary: string; score: string; observations: RunObservation[]; artifacts: Deliverable[] };
   traps: Trap[];
+  /** The milestone set, grouped by turn in the UI. */
+  milestones: Milestone[];
+  /** The golden conversation, and the milestone check that steered it. */
+  goldenRun: GoldenRun;
 }
 
 /* ---------------------------------------------------------------- checklist */

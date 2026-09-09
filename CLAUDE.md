@@ -11,7 +11,7 @@ Rubrics multi-turn project. Six routes:
 | --- | --- | --- |
 | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. Nine method cards, the mindset, the FAQ CTA, the hard requirements. |
 | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
-| `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, eleven sections nested under the nine method steps, rail on the left. |
+| `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, thirteen sections nested under the nine method steps, rail on the left. |
 | `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks in dense rows, progress sidebar with persisted ticks. |
 | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
 | `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions, answers always open, each with its guidelines references. |
@@ -107,6 +107,8 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | <https://qc-spec-mt-rubrics.vercel.app/> (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
 | `F&Q.md` in this repo | [src/data/faq.ts](src/data/faq.ts) |
 | `Tasks/6a7965b63b7d368e70c7de4a` | [src/data/tasks/vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) + `public/tasks/vendor-closeout/` |
+| `task 1 (…)/6a7965b63b7d368e70c7de4a/milestones.md` | `milestones` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per line |
+| `task 1 (…)/6a7965b63b7d368e70c7de4a/golden_conversation.md` | `goldenRun.conversation` in the same file, one entry per message |
 
 `[External] OpenClaw MM Rubrics MULTI TURN – Guidelines - v2.md` sits beside this file on Drive
 and is the source of truth for everything. The hub is a companion to it and must never become a
@@ -151,7 +153,8 @@ points at the Golden Task section where the principle landed. That relationship,
    second flow: one entry per method step, in method order, with the page sections nested under the
    step that produced them. The rail renders it with the method's own numbering and titles, each
    section heading shows the step badge, and a step this task has no section for keeps its place
-   and links to the method page rather than being dropped.
+   and links to the method page rather than being dropped. Only step 4 is in that state, because
+   Draft History is never shown to the agent and so leaves nothing behind in the task.
 
 Adding a method step means adding it to `methodSteps` and deciding which task section it points at.
 Adding a task section means nesting it in `WALKTHROUGH` under the step it belongs to. **A section
@@ -238,6 +241,28 @@ Page images are generated from the PDFs with PyMuPDF and Pillow, cropped to a sh
 on each document's own ink origin, then written to `public/tasks/<id>/{ot,gt}/`. Re-run that when a
 receipt changes, and re-measure the marks against the new pixels.
 
+### The milestone set and the golden run are one section, deliberately
+
+`milestones` and `goldenRun` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) are the two
+halves of the same idea and are rendered as such: the set under step 7, the run under step 8.
+
+- `milestones` is one entry per requirement, `{ turn, text }`, grouped by turn in the UI. Stored as
+  the milestone set writes them, so nothing in the hub rewords a milestone.
+- `goldenRun.checks` is the milestone check that runs after each turn. It is the whole point of the
+  section: a check decides whether the next prompt is the next turn or a hint, so the checks carry
+  `met` and `next` and are rendered as a sequence, including the re-check after the steer.
+- `goldenRun.hint` is that steer, broken into `missed`, the verbatim `prompt`, `does`, `avoids` and
+  `recovered`. It sits **outside** the transcript, because a reader has to be able to see what a
+  legitimate hint points at without reading ten messages first.
+- `goldenRun.conversation` is the transcript, `{ role, turn, hint?, lines }`, rendered inside a
+  collapsed disclosure. **Collapsed is the default**: the argument is above it and the transcript is
+  the evidence. The message flagged `hint: true` is the one message that is not a turn of the task,
+  and it is marked as such on screen.
+
+A turn whose milestones were reached and a turn whose milestones were missed both have to be visible
+here, or the section explains hinting without demonstrating it. This task supplies both: turns 1, 2
+and 4 landed, turn 3 did not.
+
 ### The ⌘K index is hand-derived
 
 `searchIndex` in [src/data/index.ts](src/data/index.ts) flattens every content type into
@@ -289,6 +314,11 @@ for many tasks**: keep it a grid of equal cards, and keep the reference-only dis
   top and caps the height, and the rail scrolls inside itself when it does not fit. It returns no
   cap below `lg`, where the rail is in the flow and a cap would crop it. Pair it with `useRailFollow`
   and a `data-rail={id}` on each row to keep the active one visible, and add both to any new rail.
+- **`MdLines` in [Markdown.tsx](src/components/Markdown.tsx) is the only markdown renderer.** It
+  handles `**bold**`, `*italic*`, `` `mono` ``, `##` headings, blockquotes, bullets and tables, and
+  both the subjective excerpts and the golden conversation go through it. **No `##` and no `**` may
+  ever reach the screen**, so route any new markdown content through it rather than printing the
+  source.
 - **`Reveal` needs `className="h-full"`** when it wraps a card in a stretch grid, or the card stops
   filling its row.
 
@@ -317,8 +347,10 @@ reintroduce `tokens.css` / `app.css`.
 ## Copy rules
 
 - **No em dashes, and no hyphen used as a dash.** Use commas, periods or "and". Hyphens survive
-  only inside established compounds (`multi-turn`, `cross-modal`, `pre-submit`). The one exception
-  is generated `specDoc.ts`, which is verbatim source text.
+  only inside established compounds (`multi-turn`, `cross-modal`, `pre-submit`). The exceptions are
+  the blocks that are transcripts rather than hub copy: generated `specDoc.ts`, the turn prompts,
+  the milestone set and the golden conversation. Those are stored exactly as written, typos and em
+  dashes included, because the wording is the thing being studied.
 - Short sentences. The hub is a practical reference, not a second copy of the guidelines. If a
   section is growing into documentation, cut it and link to the guidelines instead.
 - **Keep the internals out of the copy.** No page says which document a rationale came from, which

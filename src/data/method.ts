@@ -175,7 +175,7 @@ export const methodSteps: MethodStep[] = [
     },
     inTask: {
       body: "The vendor rule is a constraint the user stated, so a milestone may require it. The four receipts, the total and the percentage are answers, so no milestone names them.",
-      link: { to: "/spec#milestones", tag: "QC", label: "The three milestone dimensions QC scores" },
+      link: { to: `${GT}#milestones`, tag: "GT", label: "All eleven milestones, grouped by turn" },
     },
   },
   {
@@ -199,7 +199,7 @@ export const methodSteps: MethodStep[] = [
     },
     inTask: {
       body: "The model first confused the roughly $15,000 Sunset fee with the $50,000 all in estimate. The correction stayed in Leonard's voice and pointed back at an early December conversation, so the model found the figure itself.",
-      link: { to: `${GT}#golden`, tag: "GT", label: "The golden deliverables" },
+      link: { to: `${GT}#hinting`, tag: "GT", label: "The milestone check, and the hint it produced" },
     },
   },
   {

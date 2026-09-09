@@ -5,10 +5,14 @@ import {
   AlertTriangle,
   ArrowLeft,
   ArrowUpRight,
+  Check,
+  ChevronDown,
   ExternalLink,
   FileText,
+  Flag,
   Image as ImageIcon,
   Lightbulb,
+  MessagesSquare,
   PenLine,
   Quote,
   Sparkles,
@@ -17,9 +21,10 @@ import {
 } from "lucide-react";
 import { taskById } from "../data";
 import { methodSteps } from "../data/method";
-import type { InputAsset, Trap, XLink } from "../data/types";
+import type { GoldenMessage, GoldenRun, InputAsset, Milestone, Trap, XLink } from "../data/types";
 import type { RailGroup } from "../components/ui";
 import { Callout, Crosslinks, Reveal, SectionRail, Stat } from "../components/ui";
+import { MdLines } from "../components/Markdown";
 import Ledger from "../components/Ledger";
 import Rubrics from "../components/Rubrics";
 import SubjectiveRubrics from "../components/SubjectiveRubrics";
@@ -29,10 +34,10 @@ import { asset, cx } from "../lib/util";
 /**
  * The walkthrough, nested under the method step each part of the task belongs
  * to. The rail renders this as the method itself, so the numbering is the
- * method's own and every section sits under the step that produced it. Steps 4
- * and 7 stay in the list with nothing under them: this task has no section for
- * the Draft History or for the milestone set, and dropping them would make the
- * rail read as a seven step method.
+ * method's own and every section sits under the step that produced it. Step 4
+ * stays in the list with nothing under it: Draft History is never shown to the
+ * agent, so the task has no section for it, and dropping the step would make
+ * the rail read as an eight step method.
  *
  * Order here is page order, and both have to stay in method order or the
  * scroll spy walks the rail backwards.
@@ -58,8 +63,14 @@ const WALKTHROUGH: { step: number; sections: { id: string; label: string }[] }[]
   { step: 4, sections: [] },
   { step: 5, sections: [{ id: "model-a", label: "Where Model A broke" }] },
   { step: 6, sections: [{ id: "rubrics", label: "The criteria block" }] },
-  { step: 7, sections: [] },
-  { step: 8, sections: [{ id: "golden", label: "The deliverables" }] },
+  { step: 7, sections: [{ id: "milestones", label: "The milestone set" }] },
+  {
+    step: 8,
+    sections: [
+      { id: "golden", label: "The deliverables" },
+      { id: "hinting", label: "Hinting in practice" },
+    ],
+  },
   { step: 9, sections: [{ id: "subjective", label: "The comparisons" }] },
 ];
 
@@ -190,6 +201,102 @@ function TrapCard({ t }: { t: Trap }) {
         <p className="text-[12.5px] leading-relaxed text-ink-700">{t.tests}</p>
       </div>
       <Crosslinks links={links} className="mt-3.5" />
+    </div>
+  );
+}
+
+/** The milestone set, grouped by the turn each requirement came from. */
+function byTurn(ms: Milestone[]) {
+  const groups: { turn: number; items: Milestone[] }[] = [];
+  for (const m of ms) {
+    const last = groups[groups.length - 1];
+    if (last && last.turn === m.turn) last.items.push(m);
+    else groups.push({ turn: m.turn, items: [m] });
+  }
+  return groups;
+}
+
+/** One message of the golden conversation. The steer is marked, because it is
+ *  the one message that is not a turn of the task. */
+function Message({ m }: { m: GoldenMessage }) {
+  const user = m.role === "user";
+  return (
+    <div
+      className={cx(
+        "rounded-xl border p-4",
+        m.hint
+          ? "border-gold-400/70 bg-gold-50/70 dark:border-gold-500/35 dark:bg-gold-500/10"
+          : user
+            ? "border-ink-200/70 bg-raised"
+            : "border-ink-200/70 bg-surface"
+      )}
+    >
+      <div className="mb-2 flex flex-wrap items-center gap-2">
+        <span className="mono-label text-ink-400">{user ? "User" : "Agent"}</span>
+        <span className="rounded border border-ink-200 bg-surface px-1.5 py-0.5 font-mono text-[10.5px] text-ink-600">
+          Turn {m.turn}
+        </span>
+        {m.hint && (
+          <span className="rounded border border-gold-400/60 bg-gold-100/70 px-1.5 py-0.5 font-mono text-[10.5px] font-semibold text-gold-700 dark:bg-gold-500/15 dark:text-gold-300">
+            Hint, not a turn
+          </span>
+        )}
+      </div>
+      <div className="space-y-1.5 text-[12.5px] leading-relaxed text-ink-700">
+        <MdLines lines={m.lines} />
+      </div>
+    </div>
+  );
+}
+
+/**
+ * The golden conversation, collapsed. Ten messages is a long read and the point
+ * of the section sits above it, so the transcript is the evidence rather than
+ * the argument.
+ */
+function Transcript({ run }: { run: GoldenRun }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="card overflow-hidden">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center gap-3 px-5 py-4 text-left transition-colors hover:bg-raised"
+      >
+        <MessagesSquare size={15} className="shrink-0 text-ink-400" />
+        <span className="min-w-0 flex-1">
+          <span className="block text-[13.5px] font-bold text-ink-900">
+            The golden conversation
+          </span>
+          <span className="mt-0.5 block text-[12.5px] leading-relaxed text-ink-500">
+            All {run.conversation.length} messages, the four turns and the steer that sits between
+            turn 3 and turn 4.
+          </span>
+        </span>
+        <ChevronDown
+          size={16}
+          className={cx("shrink-0 text-ink-400 transition-transform", open && "rotate-180")}
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="transcript"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="space-y-3 border-t border-ink-200/70 p-5">
+              {run.conversation.map((m, i) => (
+                <Message key={i} m={m} />
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -596,6 +703,50 @@ export default function TaskDetail() {
               <Rubrics rubrics={t.rubrics} />
             </section>
 
+            {/* Milestones */}
+            <section id="milestones" className="scroll-mt-24">
+              <SectionHead
+                id="milestones"
+                title={`${t.milestones.length} milestones, one per requirement`}
+                sub="Grouped by turn, and written as intent. Read any one of them on its own: it says what the turn asked for, and nothing about the answer that satisfies it."
+              />
+              <div className="space-y-4">
+                {byTurn(t.milestones).map((g) => (
+                  <Reveal key={g.turn}>
+                    <div className="card overflow-hidden">
+                      <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
+                        <span className="grid h-6 w-6 place-items-center rounded-lg bg-brand-600 font-mono text-[11px] font-bold text-white">
+                          {g.turn}
+                        </span>
+                        <span className="text-[13px] font-bold text-ink-900">Turn {g.turn}</span>
+                        <span className="ml-auto font-mono text-[11px] text-ink-500">
+                          {g.items.length} milestone{g.items.length === 1 ? "" : "s"}
+                        </span>
+                      </div>
+                      <ul className="divide-y divide-ink-200/60">
+                        {g.items.map((m, i) => (
+                          <li key={i} className="flex items-start gap-3 px-5 py-3">
+                            <Flag size={13} className="mt-0.5 shrink-0 text-ink-300" />
+                            <p className="text-[13px] leading-relaxed text-ink-700">{m.text}</p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <Callout title="What a milestone may require" tone="ok" icon={<Check size={12} />}>
+                  A constraint the user stated. The pool is the shutdown channel, and a name that did
+                  not survive the export is out of it, so a milestone may say so.
+                </Callout>
+                <Callout title="What it may never carry" tone="no" icon={<X size={12} />}>
+                  The answer, or the route to it. The four receipts, the total and the percentage are
+                  results, so no milestone names a vendor, an amount, a filename or a format.
+                </Callout>
+              </div>
+            </section>
+
             {/* Golden */}
             <section id="golden" className="scroll-mt-24">
               <SectionHead
@@ -637,6 +788,161 @@ export default function TaskDetail() {
                     </div>
                   );
                 })}
+              </div>
+            </section>
+
+            {/* Hinting */}
+            <section id="hinting" className="scroll-mt-24">
+              <SectionHead
+                id="hinting"
+                title="The decision point after every turn"
+                sub="Milestones are not a report written at the end. They are checked on each reply, and that check is the only thing that decides what the next prompt is."
+              />
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Callout title="Milestones reached" tone="ok" icon={<Check size={12} />}>
+                  Continue to the next turn as written. Say nothing about the milestones, and add
+                  nothing the user would not have said.
+                </Callout>
+                <Callout title="Milestones missed" tone="warn" icon={<Lightbulb size={12} />}>
+                  Stay on the turn. Point back at the intent that is still open, in the voice of the
+                  same user, and check the same milestone again on the next reply.
+                </Callout>
+              </div>
+
+              <div className="mt-5 space-y-3">
+                {t.goldenRun.checks.map((c) => (
+                  <Reveal key={c.title}>
+                    <div className="card p-5">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span
+                          className={cx(
+                            "grid h-6 w-6 place-items-center rounded-lg",
+                            c.met
+                              ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
+                              : "bg-rose-500/15 text-rose-700 dark:text-rose-300"
+                          )}
+                        >
+                          {c.met ? <Check size={13} /> : <X size={13} />}
+                        </span>
+                        <span className="text-[13px] font-bold text-ink-900">{c.title}</span>
+                        <span
+                          className={cx(
+                            "ml-auto rounded-md px-2 py-0.5 font-mono text-[10.5px] font-semibold",
+                            c.met
+                              ? "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300"
+                              : "bg-rose-500/12 text-rose-700 ring-1 ring-rose-500/25 dark:text-rose-300"
+                          )}
+                        >
+                          Turn {c.turn} {c.met ? "reached" : "missed"}
+                        </span>
+                      </div>
+                      <p className="mt-3 text-[13px] leading-relaxed text-ink-600">{c.body}</p>
+                      <div className="mt-3 rounded-lg bg-raised px-3.5 py-2.5">
+                        <div className="mono-label mb-1 text-ink-400">What happens next</div>
+                        <p className="text-[12.5px] leading-relaxed text-ink-700">{c.next}</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+
+              <Reveal>
+                <div className="card mt-5 overflow-hidden">
+                  <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-gold-50/70 px-5 py-3 dark:bg-gold-500/10">
+                    <Lightbulb size={14} className="text-gold-600 dark:text-gold-300" />
+                    <span className="text-[13px] font-bold text-ink-900">
+                      The one hint this run needed
+                    </span>
+                    <span className="ml-auto font-mono text-[11px] text-ink-500">
+                      between turn 3 and turn 4
+                    </span>
+                  </div>
+                  <div className="p-5">
+                    <div className="rounded-lg border border-ink-200/70 bg-raised px-3.5 py-2.5">
+                      <div className="mono-label mb-1 text-ink-400">
+                        The milestone it was aimed at
+                      </div>
+                      <p className="text-[12.5px] leading-relaxed text-ink-700">
+                        {t.goldenRun.hint.missed}
+                      </p>
+                    </div>
+
+                    <blockquote className="relative mt-4 rounded-xl border border-gold-400/60 bg-gold-50/70 p-4 pl-9 dark:border-gold-500/35 dark:bg-gold-500/10">
+                      <Quote
+                        size={14}
+                        className="absolute left-3.5 top-4 text-gold-500"
+                        aria-hidden
+                      />
+                      <p className="text-[13.5px] leading-relaxed text-ink-800">
+                        {t.goldenRun.hint.prompt}
+                      </p>
+                    </blockquote>
+
+                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                      <div className="rounded-lg border border-emerald-300/50 bg-emerald-50/50 p-3.5 dark:border-emerald-500/25 dark:bg-emerald-500/10">
+                        <div className="mono-label mb-1.5 text-emerald-700 dark:text-emerald-300">
+                          What it points at
+                        </div>
+                        <ul className="space-y-1.5">
+                          {t.goldenRun.hint.does.map((d) => (
+                            <li
+                              key={d}
+                              className="flex gap-2 text-[12.5px] leading-relaxed text-ink-700"
+                            >
+                              <span aria-hidden className="select-none text-ink-400">
+                                &bull;
+                              </span>
+                              <span className="min-w-0 flex-1">{d}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="rounded-lg border border-rose-300/50 bg-rose-50/50 p-3.5 dark:border-rose-500/25 dark:bg-rose-500/10">
+                        <div className="mono-label mb-1.5 text-rose-700 dark:text-rose-300">
+                          What it never says
+                        </div>
+                        <ul className="space-y-1.5">
+                          {t.goldenRun.hint.avoids.map((d) => (
+                            <li
+                              key={d}
+                              className="flex gap-2 text-[12.5px] leading-relaxed text-ink-700"
+                            >
+                              <span aria-hidden className="select-none text-ink-400">
+                                &bull;
+                              </span>
+                              <span className="min-w-0 flex-1">{d}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 rounded-lg bg-raised px-3.5 py-2.5">
+                      <div className="mono-label mb-1 text-ink-400">What came back</div>
+                      <p className="text-[12.5px] leading-relaxed text-ink-700">
+                        {t.goldenRun.hint.recovered}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              <div className="mt-5">
+                <Callout
+                  title="The steer ended up inside turn 4"
+                  tone="gold"
+                  icon={<Sparkles size={12} />}
+                >
+                  Read the first line of turn 4 in the prompt set above. The context this hint carried
+                  is written into the prompt the graded run receives, so the run being scored is asked
+                  the same question the golden was steered to. The turns in the transcript below are
+                  the wording of this run, before that tightening.
+                </Callout>
+              </div>
+
+              <div className="mt-5">
+                <Transcript run={t.goldenRun} />
               </div>
             </section>
 

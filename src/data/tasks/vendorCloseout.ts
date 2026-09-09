@@ -1195,4 +1195,227 @@ Final amount due:    <amount, or "None outstanding">`,
       tests: "Whether the agent read the thread or the first hit.",
     },
   ],
+
+  /**
+   * The milestone set, one entry per requirement, grouped by turn. Written as
+   * intent: no filename, no amount, no format anywhere in it, which is what
+   * lets the simulator replay them against a run that went a different way.
+   * Stored as the set is written, so the wording here is the wording graded.
+   */
+  milestones: [
+    { turn: 1, text: "Every vendor discussed in the company's shutdown channel forms the vendor pool, and any vendor whose name did not come through the export intact is left out of it." },
+    { turn: 1, text: "Each vendor in that pool is sorted into those whose cancellation is supported by both the channel and the attached evidence and those whose cancellation is not." },
+    { turn: 1, text: "The supported cancelled vendors each receive their own formal cancellation record as a separate, appropriately named and filed document." },
+    { turn: 1, text: "The non cacnelled vendors are recorded in the running notes file under the two categories the user named : those meant to be cancelled but unsupported and those kept or transferred instead." },
+    { turn: 2, text: "The money still outstanding across the issued receipts is added up into a single figure." },
+    { turn: 2, text: "The total money owed is placed in a draft message addressed to the other two board members." },
+    { turn: 3, text: "The outstanding total is expressed as a proportion of the shutdown cost estimate the user posted in a different channel, and the draft references that proportion." },
+    { turn: 3, text: "The draft carries the subject line the user specified." },
+    { turn: 4, text: "The classification is rendered as a standalone svg for the two recipients, showing the three groups the vendors were sorted into and who sits in each." },
+    { turn: 4, text: "The money figures appear at the top of that visual." },
+    { turn: 4, text: "The draft is updated to say the svg will travel with the email." },
+  ],
+
+  /**
+   * The golden run. The milestone check after each turn is the only thing that
+   * decides what the next prompt is, so the checks and the conversation are
+   * stored together: four turns, one steer, and the run reaching the answer the
+   * GTFA had already resolved.
+   *
+   * The conversation is a transcript. It is stored as it was said, typos and
+   * all, because the register of the steering prompts is half of what makes
+   * them usable.
+   */
+  goldenRun: {
+    checks: [
+      {
+        title: "After turn 1",
+        turn: 1,
+        met: true,
+        body: "All four turn 1 milestones on the first reply. The pool is the shutdown channel, the names that did not survive the export are left out, four vendors clear both sources and each gets its own record, and every other vendor is filed under one of the two categories the user named.",
+        next: "Nothing to steer, so nothing is said. The next prompt is turn 2.",
+      },
+      {
+        title: "After turn 2",
+        turn: 2,
+        met: true,
+        body: "Both turn 2 milestones. One figure, summed across the issued receipts only, sitting in a draft addressed to the other two board members.",
+        next: "Continue to turn 3.",
+      },
+      {
+        title: "After turn 3",
+        turn: 3,
+        met: false,
+        body: "The subject line milestone was reached. The proportion milestone was not. The model benchmarked against a service fee posted in the executives channel during the shutdown week. That fits the words of the milestone and is not the estimate the user meant.",
+        next: "Do not advance. Hint at the intent that is still open, then check the same milestone again.",
+      },
+      {
+        title: "After the hint",
+        turn: 3,
+        met: true,
+        body: "The model went back to the executives channel, found the early December post, and re-based the percentage on the all in estimate. The draft carries the corrected proportion and the quote it rests on.",
+        next: "Turn 3 is closed. Continue to turn 4.",
+      },
+      {
+        title: "After turn 4",
+        turn: 4,
+        met: true,
+        body: "All three turn 4 milestones. The graphic is a standalone file, it carries the three groups and who sits in each, the money is at the top where the two readers will look first, and the draft says the file travels with the email.",
+        next: "The run is complete, and what it produced is the golden.",
+      },
+    ],
+
+    hint: {
+      missed:
+        "T3: The outstanding total is expressed as a proportion of the shutdown cost estimate the user posted in a different channel, and the draft references that proportion.",
+      prompt:
+        "I remember that amount was way higher than the 15k you got. Just can't find it myself, but ti should be an early December message. I remember asking ChatGPT about this.",
+      does: [
+        "Names the intent that is still open, a benchmark the user posted, and nothing beyond it.",
+        "Stays in Leonard's register. A board member half remembering their own message is exactly what the first three turns sound like.",
+        "Points at where to look, early December and a question put to ChatGPT, which is context the user would plausibly remember.",
+      ],
+      avoids: [
+        "The value. $50,000 never appears, and neither does the corrected percentage.",
+        "The diagnosis. It never says the $15,000 is the Sunset fee, or that the wrong message was read.",
+        "The method. It does not say to search the channel by date, or to read the message after the one it found.",
+      ],
+      recovered:
+        "The model found the 2025-12-03 post itself, re-based the percentage on the roughly $50,000 all in estimate, and recorded the quote and the range in the draft. The milestone was reached on the model's own work, which is the only way it counts.",
+    },
+
+    conversation: [
+      {
+        role: "user",
+        turn: 1,
+        lines: [
+          "Leonard here. Sunset needs our creditor file before they can file, and Fondo is waiting on the same stuff for the final fillings. Every vendor we terminated needs to have created a proper closeout record, and we, as board members, are on charge of this. When we cancelled everything back on Feb 2nd week, we were moving fast and we kept track of everything as we went, so I'll be attaching here all I was able to get from that period. Based on what we agreed in the last meeting and given this mess we had during the cancellation process, we are going to start considering cancelled anythinng that can be confirmed through the slack shutdown channel and the existing files evidence.",
+          "I'm expecting you to create a \"VENDORS CANCELLED\" folder with a .pdf cancellation receipt for every vendor whose cancellation can be confirmed. Each file should be named as vendor_name_cancellation_receipt.pdf. For everything else, add the vendor to MEMORY.md under the categories \"UNCONFIRMED\" (we/they decided to cancel, but we don't have both the Slack confirmation and something in the attachments to back it up) or \"NOT CANCELLED\" (anything showing the vendor was kept or transferred instead). The vendor pool should be limited to those appearing in the relevant slack channel. Skip anything where the vendor name din't come through properly in the export.",
+        ],
+      },
+      {
+        role: "agent",
+        turn: 1,
+        lines: [
+          "Done. Here's what I produced and the reasoning behind it.",
+          "## Method",
+          "- **Vendor pool** = only vendors named in the `#winddown` Slack channel (the shutdown channel). I read its full history and resolved the participants (Leonard Hayes, Arthur Blake, Robert).",
+          "- **Cancelled** = confirmed by **both** the Slack channel **and** an attachment. Those get a PDF. Everything else goes to `MEMORY.md`.",
+          "- I cross-referenced every attachment against the channel.",
+          "## `VENDORS CANCELLED/` — 4 receipts (Slack + file evidence both present)",
+          "| Vendor | Date | Confirmed by | Final due | File evidence |",
+          "|---|---|---|---|---|",
+          "| **Helpshift** | 2026-02-10 | Leonard Hayes | $1,500.00 | Termination screenshot (Status: Closed) + invoice |",
+          "| **Soundly** | 2026-02-11 | Robert | None outstanding | \"Soundly Pro — Canceled\" screenshot |",
+          "| **Layer** | 2026-02-11 | Leonard Hayes | $2,340.00 | Nadia Feld (layer.ai) email confirming workspace cancelled |",
+          "| **Cursor** | 2026-02-12 | Arthur Blake | $192.00 | Handwritten note \"Cursor → 192 due, Cancelled 12th Feb\" |",
+          "## `MEMORY.md`",
+          "- **UNCONFIRMED:** Singular (email sent, but attachment only shows $7,200 owed), Unity (attachment shows \"Active\"), Zapier (no confirmation), **coderabbit** (Slack says cancelled but *no* file evidence → fails the both-sources rule).",
+          "- **NOT CANCELLED (kept/transferred):** Deel, gusto, Intuit, Figma, linear, Metabase, dbt, GitHub (→ KubLLC card, per receipt), Slack, Google, Carta (renewal notice \"Active\"), AWS.",
+          "## Deliberate exclusions",
+          "- **Skipped redacted names** (as instructed): `[PERSON_NAME_20852]`, `[ORG_NAME_0304]`, `[USERNAME_30019]`.",
+          "- **Datadog** — an invoice exists in the attachments, but Datadog never appears in `#winddown`, so it's outside the pool (the \"DD\" mentions are the *Domino Delights* game/AWS account, not Datadog). Flagged in MEMORY.md.",
+          "- Banks (SVB/Chase) and wind-down providers (Sunset/Fondo/data buyer) treated as out-of-scope, not cancellable service vendors.",
+          "One judgment call worth flagging for you: **coderabbit** has a clear Slack \"cancelled\" from Arthur but no supporting file, so under your strict both-sources rule I put it in UNCONFIRMED rather than issuing a receipt. If you'd rather treat a clean Slack confirmation as sufficient on its own, I can promote it to a receipt.",
+        ],
+      },
+      {
+        role: "user",
+        turn: 2,
+        lines: [
+          "Nice! Let's now create an emails_draft.md file including the total still owed across the issued receipts. I want Arthur and Robert to know where we stand.",
+        ],
+      },
+      {
+        role: "agent",
+        turn: 2,
+        lines: [
+          "Created `/app/outputs/emails_draft.md` — a draft email from Leonard to Arthur and Robert.",
+          "**The headline number: $4,032.00 still owed across the four issued receipts.**",
+          "That's the sum of the *Final amount due* on the confirmed-cancelled vendors only:",
+          "- Helpshift: $1,500.00",
+          "- Layer: $2,340.00",
+          "- Cursor: $192.00",
+          "- Soundly: $0.00 (paid through current period → \"None outstanding\")",
+          "The draft also gives them a quick status on the still-open items (Singular's $7,200 outstanding, Unity, Zapier, coderabbit), which I deliberately kept **out** of the $4,032 total since those aren't confirmed cancellations. I noted the exact math at the bottom under \"for our records\" so the number is auditable before it goes to Sunset/Fondo.",
+          "It's marked **DRAFT (not sent)** — say the word if you want me to adjust the tone, trim the open-items section, or fold the Singular balance into a separate \"projected total liability\" line.",
+        ],
+      },
+      {
+        role: "user",
+        turn: 3,
+        lines: [
+          "What's the % this total owed amount represents against the shutdown cost estimation I posted in our executives channel? Include this % in the email draft and record as well the email subject \"vendor closeout - where we stand\" I'll be using.",
+        ],
+      },
+      {
+        role: "agent",
+        turn: 3,
+        lines: [
+          "Done. Updates to `/app/outputs/emails_draft.md`:",
+          "**The percentage: 26.88%**",
+          "- Total still owed across issued receipts: **$4,032.00**",
+          "- Shutdown cost estimate (your `#executives` post, 2026-02-11): **~$15,000** — *\"the cost of Sunset is about ~$15K\"*",
+          "- $4,032.00 ÷ $15,000 = **26.88%** (roughly a quarter of the wind-down budget)",
+          "**Subject line** set to exactly: `vendor closeout - where we stand`",
+          "Both the headline figure and the math (with the source quote) are now in the draft — the percentage appears right under the total in the email body, and the full basis is recorded in the \"for our records\" notes so it's auditable before you send.",
+          "One flag: the $15K was posted as an approximate Sunset fee (*\"about ~$15K\"*), and Sunset was also described as charging *\"a percent of the wind down,\"* so the final number could shift. If a firmer estimate lands, the percentage would move with it — easy to update.",
+        ],
+      },
+      {
+        role: "user",
+        turn: 3,
+        hint: true,
+        lines: [
+          "I remember that amount was way higher than the 15k you got. Just can't find it myself, but ti should be an early December message. I remember asking ChatGPT about this.",
+        ],
+      },
+      {
+        role: "agent",
+        turn: 3,
+        lines: [
+          "You were right — the $15K was the wrong benchmark. I found the one you meant.",
+          "**The estimate:** In `#executives` on **2025-12-03**, you posted a ChatGPT-derived shutdown budget: *\"assume somewhere in the 20k–80k USD range... I would assume 50k all-in as a defensible budget.\"* So the single planning number is **~$50K** (range $20K–$80K).",
+          "**The corrected percentage:**",
+          "- $4,032.00 ÷ **$50,000** = **8.06%**",
+          "- (Range check: ÷$20K = 20.16%, ÷$80K = 5.04%)",
+          "I've updated `emails_draft.md`:",
+          "- The body now reads **8.06%** of the ~$50K all-in estimate (Dec 3, with the $20K–$80K range noted).",
+          "- The \"for our records\" note carries the full math, the source quote, and the range endpoints — plus a line flagging that the ~$15K (Sunset service fee) was *not* the all-in estimate, so it's no longer used.",
+          "The subject line (`vendor closeout - where we stand`) and the $4,032.00 total are unchanged. Want me to lead with the $50K single number as I've done, or present it as the 20k–80k range with 8% as the midpoint-basis figure?",
+        ],
+      },
+      {
+        role: "user",
+        turn: 4,
+        lines: [
+          "That sounds better! Finally, I believe this info may be easier for Robert and Arthur to understand if I just send an infographic with the insights. Create a vendor_cancellation.svg with the three groups we ended up and the vendors sitting in each one of them. I want the total owed and the % you just calculated at the top, as that's what they will care about the most. Mention this file will be attached in the email draft as well.",
+        ],
+      },
+      {
+        role: "agent",
+        turn: 4,
+        lines: [
+          "Done. Created `/app/outputs/vendor_cancellation.svg` — a one-page infographic built for a quick read by Arthur and Robert.",
+          "**Layout:**",
+          "- **KPI banner at the top** (what they care about most): **$4,032.00 total owed** and **8.06% of the ~$50K shutdown estimate**.",
+          "- **Three color-coded columns** matching the buckets we landed on:",
+          "  - 🟢 **CANCELLED** (receipts issued) — Helpshift $1,500, Layer $2,340, Cursor $192, Soundly None → subtotal $4,032.00",
+          "  - 🟠 **UNCONFIRMED** — Singular, Unity, Zapier, coderabbit (each tagged with why)",
+          "  - ⚫ **NOT CANCELLED** — the 12 kept/transferred vendors (GitHub flagged →KubLLC)",
+          "- Footnote records the vendor-pool rule and the $50K basis (with source and range), pointing to MEMORY.md.",
+          "I verified it renders correctly and fixed two layout issues (a label/amount collision and a clipped footnote).",
+          "**Email draft updated** (`emails_draft.md`):",
+          "- Added an **Attachment** line in the header noting `vendor_cancellation.svg`.",
+          "- Added an opening line telling Arthur and Robert the infographic is attached and is the fastest way to see where things stand.",
+          "Final deliverables in `/app/outputs/`:",
+          "- `VENDORS CANCELLED/` — 4 receipt PDFs",
+          "- `MEMORY.md` — UNCONFIRMED / NOT CANCELLED (+ skipped/out-of-scope notes)",
+          "- `emails_draft.md` — draft to Arthur & Robert, subject `vendor closeout - where we stand`",
+          "- `vendor_cancellation.svg` — the infographic",
+          "One note: SVG is a vector format — it'll open in any browser, but if their email client won't preview it inline, a PNG/PDF export would embed more reliably. Happy to add one of those if you'd like.",
+        ],
+      },
+    ],
+  },
 };

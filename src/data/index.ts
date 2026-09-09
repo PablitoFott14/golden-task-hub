@@ -78,6 +78,26 @@ export const searchIndex: SearchEntry[] = [
     },
     {
       kind: "Golden task",
+      title: "Milestones",
+      hint: `${t.milestones.length} milestones, grouped by turn`,
+      to: `/golden-tasks/${t.meta.id}#milestones`,
+      terms: t.milestones.map((m) => `turn ${m.turn} ${m.text}`).join(" "),
+    },
+    {
+      kind: "Golden task",
+      title: "Hinting in practice",
+      hint: "The milestone check after each turn, and the steer the run needed",
+      to: `/golden-tasks/${t.meta.id}#hinting`,
+      terms: [
+        t.goldenRun.hint.prompt,
+        t.goldenRun.hint.missed,
+        t.goldenRun.hint.recovered,
+        t.goldenRun.checks.map((c) => `${c.title} ${c.body} ${c.next}`).join(" "),
+        "golden conversation transcript hint milestone check",
+      ].join(" "),
+    },
+    {
+      kind: "Golden task",
       title: "Designed friction",
       hint: `${t.traps.length} traps, and what each one tests`,
       to: `/golden-tasks/${t.meta.id}#traps`,
