@@ -26,8 +26,8 @@ A: Better to avoid this, and requrie the model to at least nmeanninglfully touch
 
 
 
-8 . Subjective rubrics only are postivie - thats a huge mistake. Subjective can be equlally negative always something negatively imaptcing iont he UX is spotted. 
+8. **Q: Can a subjective rubric be negative, and does Model A have to fail every one of them?**
+A: Negatives are expected, and no present / not present requirement exists on either model. Subjective rubrics are created by comparing the Model A and Model B outputs, so positives naturally end up more tied to Model B and negatives to Model A, as those are the runs performing better and worse respectively. That is a tendency, not a rule: a positive can be present in Model A, and a negative can be not present in both. What is not intended is a negative being present in the golden solution, as that is the best possible solution and nothing negatively impacting the user can exist in it.
 
-9. SUbjective rubrics have to be all not present in model a - thats a big lie. Rubrics are cerated by comparting both Model A and Model B outputs and naturally, positive rubsubjective rubrics will be more tied to model b, while negative to model a as they are the ones performing worse and better respectively. This does not mean any presnet not present requriement exists for any of thos. A postive can be present in model A, and a negative not present in both of them. What is not intended is that a negative exist in godle a (as that's the best possible solution, and nothing negatively impactin he user can exits in a golden solution)
-
-10. Noise cannot be included as art of the multimodal inputs- htat''s a huge mistake as well. Noise is encouraged as long as it feels naturally messy in the enviroment we are creating. Stick to the relevant part of the guidelines to propelry anser this
+9. **Q: Can noise be included as part of the multimodal inputs?**
+A: Yes, noise and distractor files are encouraged, as long as they feel naturally messy in the environment we are creating. Section 1.2.2 governs it: every file has to be intentional, either contributing required signal or serving a meaningful distractor or noise role. No junk files, no filename, manifest or helper document revealing the answer, and every input still has to be gradable by a human reviewer.
