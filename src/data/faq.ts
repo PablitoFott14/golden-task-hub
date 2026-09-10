@@ -130,26 +130,44 @@ export const faq: FaqItem[] = [
   },
   {
     n: 8,
-    id: "subjective-shape",
+    id: "subjective-negative",
     topic: "Rubrics",
-    q: "Can a subjective rubric be negative, and does Model A have to fail every one of them?",
+    q: "Can a subjective rubric be negative, or does the block have to be positive criteria?",
     a: [
-      "Negatives are expected, and there is no Present or Not Present requirement on either model. The subjective block uses the same weight set as the objective one, so −1, −3 and −5 are all available, and you write a negative whenever the comparison surfaces something that genuinely hurts the reader's experience of the artifact.",
-      "The distribution falls out of the comparison rather than being imposed on it. You put the two final artifacts side by side and name the visible differences, so positives tend to attach to the golden and negatives to the weaker run, simply because that is the run that earned them. A positive can be Present in Model A, and a negative can be Not Present in both. Neither of those is a fault in the set.",
-      "One rule is absolute: a negative can never be Present in the golden. The golden is the best available solution, so nothing that damages the reader's experience is allowed to survive in it. If a negative does come out Present for Model B, the artifact is what needs fixing, not the criterion.",
+      "Negatives are expected. You write one whenever the side by side surfaces something that genuinely hurts the reader's experience of the artifact, and a block that only ever praises is a block that stopped looking.",
+      "The weight set is the objective block's, −5, −3, −1, +1, +3, +5, and any value outside it fails Rubric Structure on its own. What changes is the meaning. A positive weight is the benefit when the property is there, a negative weight is the damage when the flaw is there, and neither is scaled by how hard the property was to achieve.",
+      "Write the flaw the way you write a property: one named element, one thing a reader can see. Text overflowing the slide frame, two body sizes across one document, a placeholder caption left under a photograph.",
     ],
     refs: [
       { section: "8.1", title: "Writing Subjective Rubrics" },
       { section: "8.2", title: "Subjective Rubric Weights" },
-      { section: "8.5", title: "Rating Against both Models and Justifications" },
     ],
     links: [
       { to: "/#subjective", tag: "M9", label: "Judge the render, nothing the prompt asked for" },
-      { to: `${GT}#subjective`, tag: "GT", label: "Ten criteria, each on the two renders" },
+      { to: "/checklist#s6", tag: "F2", label: "Weights measure impact, not difficulty" },
     ],
   },
   {
     n: 9,
+    id: "subjective-presence",
+    topic: "Rubrics",
+    q: "Does every subjective criterion have to be Not Present for Model A?",
+    a: [
+      "No. There is no Present or Not Present requirement on either model. The criteria come out of comparing the two final artifacts, so positives naturally end up tied to the golden and negatives to the weaker run, because those are the runs that earned them. That is a tendency, not a rule.",
+      "A positive can be Present in Model A, and a negative can be Not Present in both. Neither is a fault in the set. A criterion the observed run already satisfies stays in the block, because it is still a property the artifact needs.",
+      "One outcome is not intended: a negative Present in the golden. The golden is the best available solution, so nothing that damages the reader's experience can survive in it. If a negative does come out Present for Model B, the artifact is what needs fixing, not the criterion.",
+    ],
+    refs: [
+      { section: "8.1", title: "Writing Subjective Rubrics" },
+      { section: "8.5", title: "Rating Against both Models and Justifications" },
+    ],
+    links: [
+      { to: "/checklist#s6", tag: "F3", label: "Rate every criterion against both models yourself" },
+      { to: `${GT}#subjective`, tag: "GT", label: "Ten criteria, each on the two renders" },
+    ],
+  },
+  {
+    n: 10,
     id: "input-noise",
     topic: "Inputs",
     q: "Can I add noise and distractor files to the multimodal inputs?",

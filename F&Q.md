@@ -26,8 +26,11 @@ A: Better to avoid this, and requrie the model to at least nmeanninglfully touch
 
 
 
-8. **Q: Can a subjective rubric be negative, and does Model A have to fail every one of them?**
-A: Negatives are expected, and no present / not present requirement exists on either model. Subjective rubrics are created by comparing the Model A and Model B outputs, so positives naturally end up more tied to Model B and negatives to Model A, as those are the runs performing better and worse respectively. That is a tendency, not a rule: a positive can be present in Model A, and a negative can be not present in both. What is not intended is a negative being present in the golden solution, as that is the best possible solution and nothing negatively impacting the user can exist in it.
+8. **Q: Can a subjective rubric be negative, or does the block have to be positive criteria?**
+A: Negatives are expected. One gets written whenever something negatively impacting the UX is spotted in the comparison. The weight set is the same as the objective block, −5, −3, −1, +1, +3, +5, and the meaning is the impact on the user experience: a positive weight is the benefit when the property is there, a negative weight is the damage when the flaw is there, never how hard it was to achieve.
 
-9. **Q: Can noise be included as part of the multimodal inputs?**
+9. **Q: Does every subjective criterion have to be not present in Model A?**
+A: No, no present / not present requirement exists on either model. Subjective rubrics are created by comparing the Model A and Model B outputs, so positives naturally end up more tied to Model B and negatives to Model A, as those are the runs performing better and worse respectively. That is a tendency, not a rule: a positive can be present in Model A, and a negative can be not present in both. What is not intended is a negative being present in the golden solution, as that is the best possible solution and nothing negatively impacting the user can exist in it.
+
+10. **Q: Can noise be included as part of the multimodal inputs?**
 A: Yes, noise and distractor files are encouraged, as long as they feel naturally messy in the environment we are creating. Section 1.2.2 governs it: every file has to be intentional, either contributing required signal or serving a meaningful distractor or noise role. No junk files, no filename, manifest or helper document revealing the answer, and every input still has to be gradable by a human reviewer.
