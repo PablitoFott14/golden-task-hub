@@ -19,6 +19,7 @@ import {
 import { methodSteps, mindset, hardRequirements } from "../data/method";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
+import QuickAnswers from "../components/QuickAnswers";
 import { cx } from "../lib/util";
 
 const phaseTone: Record<string, { chip: string; badge: string; bar: string }> = {
@@ -166,6 +167,9 @@ export default function Method() {
                 </Link>
                 <Link to="/golden-tasks" className="btn-ghost">
                   <BookOpenCheck size={16} /> See it in a Golden Task
+                </Link>
+                <Link to={{ hash: "#answers" }} className="btn-ghost">
+                  <MessageCircleQuestion size={16} /> Common questions
                 </Link>
               </div>
 
@@ -333,32 +337,11 @@ export default function Method() {
         </div>
       </section>
 
-      {/* FAQ CTA */}
-      <section className="border-b border-ink-200/70 bg-surface">
-        <div className="wrap py-12">
+      {/* The FAQ, surfaced on the way in rather than parked on its own tab */}
+      <section id="answers" className="scroll-mt-20 border-b border-ink-200/70 bg-surface">
+        <div className="wrap py-16">
           <Reveal>
-            <Link
-              to="/faq"
-              className="group flex flex-col gap-5 rounded-2xl border border-brand-300/60 bg-gradient-to-r from-brand-50 via-surface to-gold-50/50 p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-lift dark:border-brand-500/30 dark:from-brand-500/10 dark:via-surface dark:to-gold-500/5 sm:flex-row sm:items-center sm:p-8"
-            >
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-600 text-white shadow-glow">
-                <MessageCircleQuestion size={22} />
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block font-display text-xl font-bold tracking-tight text-ink-900">
-                  New here, and something above raised a question?
-                </span>
-                <span className="mt-1.5 block text-[14.5px] leading-relaxed text-ink-500">
-                  MEMORY.md, inputs.zip against the inputs folder, how milestones split, how Model B
-                  actually runs. The answers everyone asks for in their first week are collected in
-                  one place.
-                </span>
-              </span>
-              <span className="btn-primary shrink-0">
-                Read the FAQ
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </span>
-            </Link>
+            <QuickAnswers />
           </Reveal>
         </div>
       </section>

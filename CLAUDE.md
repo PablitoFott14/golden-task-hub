@@ -9,7 +9,7 @@ Rubrics multi-turn project. Six routes:
 
 | Route | Page | What it holds |
 | --- | --- | --- |
-| `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. Nine method cards, the mindset, the FAQ CTA, the hard requirements. |
+| `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. Nine method cards, the mindset, the quick answers block, the hard requirements. |
 | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, thirteen sections nested under the nine method steps, rail on the left. |
 | `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks in dense rows, progress sidebar with persisted ticks. |
@@ -201,6 +201,15 @@ section of `[External] OpenClaw MM Rubrics MULTI TURN – Guidelines - v2.md` th
 They render as the References panel beside each answer, and they are folded into the ⌘K terms.
 The field is required, so a new question needs at least one ref. Answers are never collapsed:
 question and answer are always on screen together.
+
+The FAQ is rendered twice from one array. `/faq` is the full page, and
+[QuickAnswers.tsx](src/components/QuickAnswers.tsx) is the same `faq` data on the landing page
+under `#answers`, one collapsed row per question with the answer, its crosslinks and its ref
+numbers inside. **It is a second render, never a second copy**: a question added to `faq.ts` shows
+up in both, and the row is labelled with `topic`, so a new topic also goes into `faqTopics`. The
+list is capped at `PEEK` rows with the rest behind a toggle, and that cap is the only thing keeping
+this block from growing into the page it links to. The hero links straight to it, because a
+contributor who never opens the last tab is the reader the block exists for.
 
 ### Every subjective rubric carries the two renders it came from
 

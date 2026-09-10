@@ -22,3 +22,12 @@ A: Not necessary. If we plan the converastion to end is always going to be natur
 
 7. **Q: Can my task be based entirely on one app from the universe, such as FinTrack, as long as I use different parts or tables within it? Or do I need to use multiple apps?**
 A: Better to avoid this, and requrie the model to at least nmeanninglfully touch two server. At its very last, if only one server is used, it shoould be used from different granuralities
+
+
+
+
+8 . Subjective rubrics only are postivie - thats a huge mistake. Subjective can be equlally negative always something negatively imaptcing iont he UX is spotted. 
+
+9. SUbjective rubrics have to be all not present in model a - thats a big lie. Rubrics are cerated by comparting both Model A and Model B outputs and naturally, positive rubsubjective rubrics will be more tied to model b, while negative to model a as they are the ones performing worse and better respectively. This does not mean any presnet not present requriement exists for any of thos. A postive can be present in model A, and a negative not present in both of them. What is not intended is that a negative exist in godle a (as that's the best possible solution, and nothing negatively impactin he user can exits in a golden solution)
+
+10. Noise cannot be included as art of the multimodal inputs- htat''s a huge mistake as well. Noise is encouraged as long as it feels naturally messy in the enviroment we are creating. Stick to the relevant part of the guidelines to propelry anser this

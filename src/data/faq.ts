@@ -128,9 +128,56 @@ export const faq: FaqItem[] = [
       { to: "/spec#trajectory", tag: "QC", label: "Architectural Depth and Friction Exposure" },
     ],
   },
+  {
+    n: 8,
+    id: "subjective-shape",
+    topic: "Rubrics",
+    q: "Can a subjective rubric be negative, and does Model A have to fail every one of them?",
+    a: [
+      "Negatives are expected, and there is no Present or Not Present requirement on either model. The subjective block uses the same weight set as the objective one, so −1, −3 and −5 are all available, and you write a negative whenever the comparison surfaces something that genuinely hurts the reader's experience of the artifact.",
+      "The distribution falls out of the comparison rather than being imposed on it. You put the two final artifacts side by side and name the visible differences, so positives tend to attach to the golden and negatives to the weaker run, simply because that is the run that earned them. A positive can be Present in Model A, and a negative can be Not Present in both. Neither of those is a fault in the set.",
+      "One rule is absolute: a negative can never be Present in the golden. The golden is the best available solution, so nothing that damages the reader's experience is allowed to survive in it. If a negative does come out Present for Model B, the artifact is what needs fixing, not the criterion.",
+    ],
+    refs: [
+      { section: "8.1", title: "Writing Subjective Rubrics" },
+      { section: "8.2", title: "Subjective Rubric Weights" },
+      { section: "8.5", title: "Rating Against both Models and Justifications" },
+    ],
+    links: [
+      { to: "/#subjective", tag: "M9", label: "Judge the render, nothing the prompt asked for" },
+      { to: `${GT}#subjective`, tag: "GT", label: "Ten criteria, each on the two renders" },
+    ],
+  },
+  {
+    n: 9,
+    id: "input-noise",
+    topic: "Inputs",
+    q: "Can I add noise and distractor files to the multimodal inputs?",
+    a: [
+      "Yes, and they are encouraged. Real user data is never curated, so a folder with nothing surplus in it reads as staged. What matters is that the mess is the kind this environment would actually produce, rather than files dropped in to make the set look busy.",
+      "The test is purpose, not necessity. Every file is there for a reason: it either carries something the task needs, or it makes the agent separate what is relevant from what is not. What the rules do cut out is junk, so no .env or leftover system files, and no filename, manifest or helper document that gives the answer away.",
+      "Realism also lives in the state of the files. Duplicates, an awkward angle, a missing timestamp, a skewed scan, a filename like IMG_0427.jpg. Keep every one of them gradable though: a reviewer has to be able to read the handwriting and hear the audio, or the failure belongs to the task rather than to the model.",
+    ],
+    refs: [
+      { section: "1.2.2", title: "Select the Multimodal Inputs" },
+      { section: "2.2", title: "Upload Folders" },
+    ],
+    links: [
+      { to: "/#inputs", tag: "M2", label: "Attach what the person would actually have" },
+      { to: "/checklist#s2", tag: "B2", label: "Take the attachments away" },
+      { to: `${GT}#inputs`, tag: "GT", label: "Eleven files, and the fact each one carries" },
+    ],
+  },
 ];
 
 export const guidelinesTitle =
   "[External] OpenClaw MM Rubrics MULTI TURN, Guidelines v2";
 
-export const faqTopics = ["All", "Universe", "Inputs", "Milestones", "Conversation"] as const;
+export const faqTopics = [
+  "All",
+  "Universe",
+  "Inputs",
+  "Rubrics",
+  "Milestones",
+  "Conversation",
+] as const;
