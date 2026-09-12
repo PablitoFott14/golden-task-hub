@@ -7,6 +7,7 @@ import {
   ArrowUpRight,
   Check,
   ChevronDown,
+  ClipboardList,
   ExternalLink,
   FileText,
   Flag,
@@ -34,9 +35,9 @@ import { asset, cx } from "../lib/util";
 /**
  * The walkthrough, nested under the method step each part of the task belongs
  * to. The rail renders this as the method itself, so the numbering is the
- * method's own and every section sits under the step that produced it. Step 4
- * stays in the list with nothing under it: Draft History is never shown to the
- * agent, so the task has no section for it, and dropping the step would make
+ * method's own and every section sits under the step that produced it. Every
+ * step carries at least one section; a step with none would still keep its
+ * place in the rail and link to the method page, because dropping it would make
  * the rail read as an eight step method.
  *
  * Order here is page order, and both have to stay in method order or the
@@ -60,7 +61,7 @@ const WALKTHROUGH: { step: number; sections: { id: string; label: string }[] }[]
       { id: "traps", label: "Designed friction" },
     ],
   },
-  { step: 4, sections: [] },
+  { step: 4, sections: [{ id: "draft-history", label: "Objective and outcome" }] },
   { step: 5, sections: [{ id: "model-a", label: "Where Model A broke" }] },
   { step: 6, sections: [{ id: "rubrics", label: "The criteria block" }] },
   { step: 7, sections: [{ id: "milestones", label: "The milestone set" }] },
@@ -214,6 +215,12 @@ function byTurn(ms: Milestone[]) {
     else groups.push({ turn: m.turn, items: [m] });
   }
   return groups;
+}
+
+/** "Turn 1", or "Turns 2 and 3" for an outcome item that spans two of them. */
+function turnLabel(ns: number[]) {
+  if (ns.length === 1) return `Turn ${ns[0]}`;
+  return `Turns ${ns.slice(0, -1).join(", ")} and ${ns[ns.length - 1]}`;
 }
 
 /** One message of the golden conversation. The steer is marked, because it is
@@ -622,6 +629,141 @@ export default function TaskDetail() {
                   </Reveal>
                 ))}
               </div>
+            </section>
+
+            {/* Draft History */}
+            <section id="draft-history" className="scroll-mt-24">
+              <SectionHead
+                id="draft-history"
+                title="How the task was filed"
+                sub="The Agent Objective and the Desired Outcome, as they were written. The agent is handed neither of them, so every item below carries the prompt that asks for the same thing out loud."
+              />
+
+              <div className="card overflow-hidden">
+                <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
+                  <Target size={14} className="text-ink-400" />
+                  <span className="text-[13px] font-bold text-ink-900">Agent Objective</span>
+                  <span className="ml-auto font-mono text-[11px] text-ink-500">
+                    why the person is asking
+                  </span>
+                </div>
+                <div className="space-y-3 p-5">
+                  {t.draftHistory.objective.map((p, i) => (
+                    <p key={i} className="text-[13.5px] leading-relaxed text-ink-700">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-3 grid gap-3 sm:grid-cols-3">
+                {t.draftHistory.objectiveReads.map((r) => (
+                  <div
+                    key={r.title}
+                    className="rounded-xl border border-ink-200/70 bg-raised px-4 py-3"
+                  >
+                    <div className="text-[12.5px] font-bold leading-snug text-ink-900">
+                      {r.title}
+                    </div>
+                    <p className="mt-1 text-[12.5px] leading-relaxed text-ink-600">{r.body}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mb-4 mt-8 flex flex-wrap items-center gap-2">
+                <ClipboardList size={14} className="text-ink-400" />
+                <span className="text-[13px] font-bold text-ink-900">Desired Outcome</span>
+                <span className="font-mono text-[11px] text-ink-500">
+                  the end state, in terms someone else can check
+                </span>
+              </div>
+
+              <div className="space-y-4">
+                {t.draftHistory.outcome.map((o) => (
+                  <Reveal key={o.n}>
+                    <div className="card overflow-hidden">
+                      <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
+                        <span className="grid h-6 w-6 place-items-center rounded-lg bg-gold-500 font-mono text-[11px] font-bold text-white">
+                          {o.n}
+                        </span>
+                        <span className="rounded-md border border-ink-200 bg-surface px-2 py-0.5 font-mono text-[10.5px] text-ink-600">
+                          {turnLabel(o.turns)}
+                        </span>
+                        <span className="text-[13px] font-semibold text-ink-900">{o.summary}</span>
+                        <div className="ml-auto flex flex-wrap gap-1.5">
+                          {o.produces.map((p) => (
+                            <span
+                              key={p}
+                              className="rounded-md border border-ink-200 bg-surface px-2 py-0.5 font-mono text-[10.5px] text-ink-600"
+                            >
+                              {p}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="p-5">
+                        <div className="space-y-1.5 text-[13px] leading-relaxed text-ink-700">
+                          <MdLines lines={o.lines} />
+                        </div>
+
+                        <div className="mt-4 rounded-xl border border-ink-200/70 bg-raised p-4">
+                          <div className="mono-label mb-2 flex items-center gap-1.5 text-ink-400">
+                            <MessagesSquare size={12} />
+                            Asked for in the conversation
+                          </div>
+                          <div className="space-y-2.5">
+                            {o.askedFor.map((a) => (
+                              <div key={a.turn} className="flex gap-2.5">
+                                <span className="mt-px grid h-5 shrink-0 place-items-center rounded-md bg-brand-600 px-1.5 font-mono text-[10px] font-bold text-white">
+                                  T{a.turn}
+                                </span>
+                                <p className="text-[12.5px] leading-relaxed text-ink-600">
+                                  {a.quote}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <Callout title="What it may spell out" tone="ok" icon={<Check size={12} />}>
+                  The end state, down to the values. Filenames, dates, confirmers, amounts, the
+                  total and the percentage are all here, because this is the answer you already
+                  resolved, written so a reviewer can check it without redoing the work.
+                </Callout>
+                <Callout title="What it can never stand in for" tone="no" icon={<X size={12} />}>
+                  A prompt. Every item above is requested out loud in the conversation, and that is
+                  the only reason any of it can be graded. A requirement that lives only here was
+                  never asked for.
+                </Callout>
+              </div>
+
+              <Crosslinks
+                className="mt-4"
+                links={[
+                  {
+                    to: "/checklist#s4",
+                    tag: "D1",
+                    label: "Is every graded requirement stated in a prompt?",
+                  },
+                  {
+                    to: `/golden-tasks/${t.meta.id}#turns`,
+                    tag: "GT",
+                    label: "The four prompts it has to match",
+                  },
+                  {
+                    to: `/golden-tasks/${t.meta.id}#answer`,
+                    tag: "GT",
+                    label: "The answer it was resolved from",
+                  },
+                ]}
+              />
             </section>
 
             {/* Model A */}

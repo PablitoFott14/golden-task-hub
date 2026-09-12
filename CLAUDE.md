@@ -107,6 +107,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | <https://qc-spec-mt-rubrics.vercel.app/> (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
 | `F&Q.md` in this repo | [src/data/faq.ts](src/data/faq.ts) |
 | `Tasks/6a7965b63b7d368e70c7de4a` | [src/data/tasks/vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) + `public/tasks/vendor-closeout/` |
+| `task 1 (…)/6a7965b63b7d368e70c7de4a/draft_history.md` | `draftHistory` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per numbered item |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/milestones.md` | `milestones` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per line |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/golden_conversation.md` | `goldenRun.conversation` in the same file, one entry per message |
 
@@ -153,8 +154,9 @@ points at the Golden Task section where the principle landed. That relationship,
    second flow: one entry per method step, in method order, with the page sections nested under the
    step that produced them. The rail renders it with the method's own numbering and titles, each
    section heading shows the step badge, and a step this task has no section for keeps its place
-   and links to the method page rather than being dropped. Only step 4 is in that state, because
-   Draft History is never shown to the agent and so leaves nothing behind in the task.
+   and links to the method page rather than being dropped. Every step currently carries one, step 4
+   included: the agent never sees the Draft History, but the task is still filed with one, and the
+   `draft-history` section is where it is read.
 
 Adding a method step means adding it to `methodSteps` and deciding which task section it points at.
 Adding a task section means nesting it in `WALKTHROUGH` under the step it belongs to. **A section
@@ -358,8 +360,8 @@ reintroduce `tokens.css` / `app.css`.
 - **No em dashes, and no hyphen used as a dash.** Use commas, periods or "and". Hyphens survive
   only inside established compounds (`multi-turn`, `cross-modal`, `pre-submit`). The exceptions are
   the blocks that are transcripts rather than hub copy: generated `specDoc.ts`, the turn prompts,
-  the milestone set and the golden conversation. Those are stored exactly as written, typos and em
-  dashes included, because the wording is the thing being studied.
+  the Draft History, the milestone set and the golden conversation. Those are stored exactly as
+  written, typos and em dashes included, because the wording is the thing being studied.
 - Short sentences. The hub is a practical reference, not a second copy of the guidelines. If a
   section is growing into documentation, cut it and link to the guidelines instead.
 - **Keep the internals out of the copy.** No page says which document a rationale came from, which

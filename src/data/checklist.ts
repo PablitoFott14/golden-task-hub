@@ -166,7 +166,10 @@ export const checklist: ChecklistSection[] = [
         q: "Is every requirement you intend to grade actually stated in a prompt the agent received?",
         f: "The Draft History is not embedded in the agent. A requirement living only there was never asked for, so it cannot be graded.",
         ref: "§1.3 · 4",
-        links: [{ to: "/#draft-history", tag: "M4", label: "The agent never sees this" }],
+        links: [
+          { to: "/#draft-history", tag: "M4", label: "The agent never sees this" },
+          { to: `${GT}#draft-history`, tag: "GT", label: "Each outcome item, next to the prompt that asks for it" },
+        ],
       },
       {
         id: "D2",
@@ -175,6 +178,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§1.2.4 · 1.3",
         links: [
           { to: "/#scenario", tag: "M3", label: "Solve it yourself first" },
+          { to: `${GT}#draft-history`, tag: "GT", label: "The Desired Outcome as filed" },
           { to: `${GT}#answer`, tag: "GT", label: "The resolved answer" },
         ],
       },

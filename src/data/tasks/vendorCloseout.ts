@@ -1197,6 +1197,128 @@ Final amount due:    <amount, or "None outstanding">`,
   ],
 
   /**
+   * The Draft History, transcribed from the task as filed. The Agent Objective
+   * and the Desired Outcome are stored the way they were written, em dash and
+   * all, like the turn prompts and the milestone set. `askedFor` is the hub's
+   * own addition: the prompt that requests the same thing out loud, because a
+   * requirement that lives only here was never asked for.
+   */
+  draftHistory: {
+    objective: [
+      "Leonard Hayes is a co-founder and board member of Harmony Games, Inc., a mobile game studio that wound down in early 2026. Before Sunset can file, it needs the company’s final creditor information, and Fondo is waiting on the same details to complete the remaining filings.",
+      "During the 2nd week of February 2026, Leonard and the other founders were cancelling vendors while coordinating everything through the shutdown-dedicated Slack channel. Leonard has attached everything he was able to recover from that week, including screenshots of cancellation emails and billing pages, phone photos of a monitor and his handwritten notes, and a couple of exported invoices, and needs a formal closeout record for every terminated vendor (being this evidenced by the Slack confirmation AND the multimodal evidence).",
+      "Across the following turns Leonard builds on that work: he asks for the outstanding balance to be totalled into an email draft he will send himself, then for the total to be expressed as a percentage of the shutdown budget he posted months earlier in the executives channel — which he does not link, so the agent has to go and find it. Finally he decides the numbers will land better as a picture and asks for an SVG infographic to attach.",
+    ],
+
+    objectiveReads: [
+      {
+        title: "It opens on who is blocked, not on the work",
+        body: "Two named parties are waiting on the same file. That is the reason the request exists, and it is the first thing the objective says.",
+      },
+      {
+        title: "It describes the evidence in the state the person has it",
+        body: "Recovered in a rush, from one week. That is what makes screenshots, phone photos and handwriting the natural formats here rather than decoration, and the AND is carried as the user's own rule.",
+      },
+      {
+        title: "It gives the arc, and never the method",
+        body: "Each follow up is named by what it is for: a total, a percentage, a picture. None of them says how to get there, and the percentage says outright that the source is not linked.",
+      },
+    ],
+
+    outcome: [
+      {
+        n: 1,
+        turns: [1],
+        summary: "The four receipts, each resolved down to its date, its confirmer and its amount.",
+        produces: ["VENDORS CANCELLED/", "4 receipt PDFs"],
+        lines: [
+          "A 'VENDORS CANCELLED/' folder containing four PDF receipts, each following the template in `receipt_format.md`:",
+          "- 'Helpshift_cancellation_receipt.pdf' > cancelled 2026-02-10, confirmed by Leonard Hayes, final amount due $1,500.00",
+          "- 'layer_cancellation_receipt.pdf' > cancelled 2026-02-11, confirmed by Leonard Hayes, final amount due $2,340.00",
+          "- 'Soundly_cancellation_receipt.pdf' > cancelled 2026-02-11, confirmed by Robert, final amount due 'None outstanding'",
+          "- 'cursor_cancellation_receipt.pdf' > cancelled 2026-02-12, confirmed by Arthur Blake, final amount due $192.00",
+          "All the receipt .pdf documents should follow the format defined at 'receipt_format.md', including a <30 word description about the vendor services.",
+        ],
+        askedFor: [
+          {
+            turn: 1,
+            quote:
+              `I'm expecting you to create a "VENDORS CANCELLED" folder with a .pdf cancellation receipt for every vendor whose cancellation can be confirmed. Each file should be named as vendor_name_cancellation_receipt.pdf.`,
+          },
+        ],
+      },
+      {
+        n: 2,
+        turns: [1],
+        summary: "The other sixteen vendors, sorted under the two headings the user named.",
+        produces: ["MEMORY.md"],
+        lines: [
+          "'MEMORY.md' updated with the remaining sixteen vendors from the '#winddown' channel, under two headings:",
+          "UNCONFIRMED",
+          "- coderabbit > reported cancelled 12 Feb, no supporting MM evidence",
+          "- Singular > termination notice drafted 12 Feb, statement still shows three open invoices",
+          "- Unity > termination notice drafted 12 Feb, subscription page still reads Active",
+          "- Zapier > agreed to cancel 11 Feb, never mentioned again, no document",
+          "NOT CANCELLED",
+          "- Deel > kept running through the shutdown",
+          "- gusto > kept running through the shutdown",
+          "- Intuit > kept running through the shutdown",
+          "- Linear > kept during the transition",
+          "- Slack > kept until the data is extracted",
+          "- google > kept until the data is extracted",
+          "- GitHub > transferred to Arthur Blake's KubLLC card",
+          "- Metabase > transferred to Arthur Blake's KubLLC card",
+          "- dbt > kept another month or two",
+          "- Carta > left in place, renewal not due until November",
+          "- Figma > paid through September, expires on its own",
+          "- AWS > cost reduced, not cancelled",
+        ],
+        askedFor: [
+          {
+            turn: 1,
+            quote:
+              `For everything else, add the vendor to MEMORY.md under the categories "UNCONFIRMED" (we/they decided to cancel, but we don't have both the Slack confirmation and something in the attachments to back it up) or "NOT CANCELLED" (anything showing the vendor was kept or transferred instead).`,
+          },
+        ],
+      },
+      {
+        n: 3,
+        turns: [2, 3],
+        summary: "The draft, with both derived figures and the subject line the user dictated.",
+        produces: ["emails_draft.md"],
+        lines: [
+          "An 'emails_draft.md' addressed to Robert and Arthur, which Leonard will send himself, with the subject 'vendor closeout - where we stand'. It reports the total still owed across the four receipts as $4,032.00, and the percentage this represents against the $50,000 shutdown estimate: 8.1%.",
+        ],
+        askedFor: [
+          {
+            turn: 2,
+            quote: `Now, add up the total amount we still owe across those receipts and create an emails_draft.md. I'll email Robert and Arthur with this, so we all know where we stand.`,
+          },
+          {
+            turn: 3,
+            quote: `Include the % this amount represents against the shutdown cost estimation I posted in our executives channel. Can't find it myself, but want it to be referenced in the email as well. Use the subject "vendor closeout - where we stand".`,
+          },
+        ],
+      },
+      {
+        n: 4,
+        turns: [4],
+        summary: "The graphic, specified by what it has to agree with rather than by how it looks.",
+        produces: ["vendor_cancellation.svg", "emails_draft.md (attachment line)"],
+        lines: [
+          "A 'vendor_cancellation.svg' infographic, referenced in the draft as an attachment. It presents the same figures visually: the total and the percentage at the top, then the three groups with their members and counts (4 cancelled, 4 unconfirmed, 12 not cancelled). Layout and styling are open; what matters is that every number and name agrees with the receipts, 'MEMORY.md' and the draft. 'GTFA/vendor_cancellation.svg' is a reference build showing one acceptable result",
+        ],
+        askedFor: [
+          {
+            turn: 4,
+            quote: `Create a vendor_cancellation.svg with the three groups we ended up with and the vendors sitting in each one. Keep the total we owe and the % against the estimate at the top, that's the part they care about. Then mention in the draft that the file will be attached to the email.`,
+          },
+        ],
+      },
+    ],
+  },
+
+  /**
    * The milestone set, one entry per requirement, grouped by turn. Written as
    * intent: no filename, no amount, no format anywhere in it, which is what
    * lets the simulator replay them against a run that went a different way.

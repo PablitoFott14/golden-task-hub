@@ -62,6 +62,20 @@ export const searchIndex: SearchEntry[] = [
     },
     {
       kind: "Golden task",
+      title: "Draft History",
+      hint: "The Agent Objective and the Desired Outcome, as the task was filed",
+      to: `/golden-tasks/${t.meta.id}#draft-history`,
+      terms: [
+        t.draftHistory.objective.join(" "),
+        t.draftHistory.objectiveReads.map((r) => `${r.title} ${r.body}`).join(" "),
+        t.draftHistory.outcome
+          .map((o) => `${o.summary} ${o.produces.join(" ")} ${o.lines.join(" ")}`)
+          .join(" "),
+        "agent objective desired outcome",
+      ].join(" "),
+    },
+    {
+      kind: "Golden task",
       title: "Objective rubrics",
       hint: `${t.rubrics.length} criteria, rated against Model A`,
       to: `/golden-tasks/${t.meta.id}#rubrics`,

@@ -217,6 +217,43 @@ export interface Trap {
 }
 
 /**
+ * One numbered item of the Desired Outcome: an artifact, everything that has to
+ * be inside it, and the turn it belongs to. `askedFor` is the line in the
+ * conversation that requests it, which is the check the whole field lives or
+ * dies on.
+ */
+export interface OutcomeItem {
+  n: number;
+  /** The turn or turns the item is filed under. */
+  turns: number[];
+  /** What the item settles, in one line. */
+  summary: string;
+  /** The named outputs it resolves. */
+  produces: string[];
+  /** The item as the Draft History writes it, rendered as formatted text. */
+  lines: string[];
+  /** The prompts that ask the agent for it. Nothing here is graded without one. */
+  askedFor: { turn: number; quote: string }[];
+}
+
+/**
+ * The Draft History: the Agent Objective and the Desired Outcome the task is
+ * filed with. Stored the way it was written, like the turn prompts and the
+ * milestone set, because the wording is the thing being studied.
+ *
+ * The agent never receives any of it, which is why every item carries the
+ * prompt that asks for the same thing out loud.
+ */
+export interface DraftHistory {
+  /** The Agent Objective, one entry per paragraph. */
+  objective: string[];
+  /** What each paragraph of the objective is doing, in the hub's words. */
+  objectiveReads: { title: string; body: string }[];
+  /** The Desired Outcome, one entry per numbered item. */
+  outcome: OutcomeItem[];
+}
+
+/**
  * One milestone: the requirement of its turn written as intent, with anything
  * specific to the response stripped out. The simulator replays these against a
  * run that went a different way, so a milestone that named a value, a filename
@@ -316,6 +353,8 @@ export interface GoldenTask {
   subjectiveNote: string;
   run: { summary: string; score: string; observations: RunObservation[]; artifacts: Deliverable[] };
   traps: Trap[];
+  /** The Agent Objective and the Desired Outcome, as the task was filed. */
+  draftHistory: DraftHistory;
   /** The milestone set, grouped by turn in the UI. */
   milestones: Milestone[];
   /** The golden conversation, and the milestone check that steered it. */
