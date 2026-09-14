@@ -223,8 +223,13 @@ thing keeping three videos down to one row: three inline players would take the 
 370px to well over two thousand. Keep any addition inside a card.
 
 Each entry carries `seen` and `fix`, the mistake the recording answers and the move that replaces
-it. Those are read beside the player, never on the landing page, so the band stays two lines of
-copy plus the row.
+it. Those are read beside the player, never on the landing page, so the band stays a slogan, a
+line of copy and the row.
+
+`universeVideoPitch` in the same file is that copy. The slogan is split the way the hero splits its
+own, `slogan` in ink and `sloganAccent` in the accent, and `stakes` is the cost of skipping the set
+stated once. **The consequence is stated plainly and only once**: it is the reason the band sits
+where it does, and repeating it in the cards would turn a strip into a lecture.
 
 The recordings are 1920 by 1140 rather than 16 by 9, so `FRAME` in the component is written from
 their real size and the poster frames are cut at that ratio. Re-cut a poster with `ffmpeg -ss <t>

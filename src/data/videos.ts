@@ -46,6 +46,21 @@ export const universeVideos: VideoGuide[] = [
   },
 ];
 
+/**
+ * The pitch on the landing page. The slogan is split the way the hero splits
+ * its own, lead in ink and the half that lands in the accent, and `stakes` is
+ * the consequence stated once and plainly. Universe interaction is point 1 of
+ * the guidelines, so the cost of skipping it is the reason the band is there.
+ */
+export const universeVideoPitch = {
+  eyebrow: "Universe interaction",
+  slogan: "Four minutes now,",
+  sloganAccent: "or a rejected task later.",
+  sub: "Point 1 of the guidelines, in three recordings. Each one carries the mistake it answers.",
+  stakes:
+    "A task without universe interaction is rejected automatically. It is the most common reason tasks fail right now, and a run of rejections is what puts your place on the project at risk.",
+};
+
 /** Where the set points once it has been watched. */
 export const universeVideoLinks: XLink[] = [
   { to: "/#universe", tag: "M1", label: "Go find the story, do not invent one" },

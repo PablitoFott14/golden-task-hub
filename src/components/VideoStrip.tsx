@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Play, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Play, ShieldAlert, X } from "lucide-react";
 import type { VideoGuide, XLink } from "../data/types";
 import { Crosslinks } from "./ui";
 import { asset } from "../lib/util";
@@ -71,11 +71,14 @@ function VideoCard({
 function Lightbox({
   v,
   videos,
+  label,
   onSelect,
   onClose,
 }: {
   v: VideoGuide;
   videos: VideoGuide[];
+  /** What the set is called, used in the header and the dialog label. */
+  label: string;
   onSelect: (v: VideoGuide) => void;
   onClose: () => void;
 }) {
@@ -106,7 +109,7 @@ function Lightbox({
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-label={`${v.title}, Universe Interaction video ${v.n} of ${videos.length}`}
+      aria-label={`${v.title}, ${label} video ${v.n} of ${videos.length}`}
       className="fixed inset-0 z-[60] flex justify-center overflow-y-auto bg-black/75 p-4 backdrop-blur-sm"
     >
       <motion.div
@@ -126,7 +129,7 @@ function Lightbox({
               {v.title}
             </h3>
             <p className="mono-label mt-0.5 text-ink-400">
-              Universe interaction · {v.n} of {videos.length} · {v.duration}
+              {label} · {v.n} of {videos.length} · {v.duration}
             </p>
           </div>
           <button
@@ -190,15 +193,22 @@ function Lightbox({
  */
 export default function VideoStrip({
   eyebrow,
-  title,
+  slogan,
+  sloganAccent,
   sub,
+  stakes,
   videos,
   runtime,
   links,
 }: {
   eyebrow: string;
-  title: string;
+  /** The lead half of the slogan, set in ink. */
+  slogan: string;
+  /** The half that lands, set in the accent. */
+  sloganAccent: string;
   sub: string;
+  /** What skipping the set costs, stated once. */
+  stakes: string;
   videos: VideoGuide[];
   runtime: string;
   links?: XLink[];
@@ -220,20 +230,33 @@ export default function VideoStrip({
 
   return (
     <>
-      <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
-        <div>
-          <span className="chip bg-amber-500/15 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-300">
-            <Play size={11} className="fill-current" aria-hidden /> {eyebrow}
-          </span>
-          <h2 className="mt-3 font-display text-[22px] font-bold leading-tight tracking-tight text-ink-900 sm:text-[26px]">
-            {title}
-          </h2>
-          <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-ink-500">{sub}</p>
-        </div>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+        <span className="chip bg-amber-500/15 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-300">
+          <Play size={11} className="fill-current" aria-hidden /> {eyebrow}
+        </span>
         <span className="mono-label whitespace-nowrap text-ink-400">
-          {videos.length} videos · {runtime} total
+          Watch first · {videos.length} videos · {runtime} total
         </span>
       </div>
+
+      {/* The slogan is split the way the hero splits its own: the half that
+          carries the consequence is the half in the accent. */}
+      <h2 className="mt-3 max-w-3xl font-display text-[24px] font-bold leading-[1.15] tracking-tight text-ink-900 sm:text-[30px]">
+        {slogan}{" "}
+        <span className="bg-gradient-to-r from-amber-600 to-gold-500 bg-clip-text text-transparent">
+          {sloganAccent}
+        </span>
+      </h2>
+      <p className="mt-2.5 max-w-3xl text-[14px] leading-relaxed text-ink-500">{sub}</p>
+
+      <p className="mt-4 flex items-start gap-2.5 rounded-xl border border-amber-300/70 bg-amber-50/70 px-3.5 py-2.5 text-[13px] leading-relaxed text-ink-700 dark:border-amber-500/30 dark:bg-amber-500/10">
+        <ShieldAlert
+          size={15}
+          className="mt-0.5 shrink-0 text-amber-600 dark:text-amber-300"
+          aria-hidden
+        />
+        <span>{stakes}</span>
+      </p>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {videos.map((v) => (
@@ -249,6 +272,7 @@ export default function VideoStrip({
             key="player"
             v={open}
             videos={videos}
+            label={eyebrow}
             onSelect={setOpen}
             onClose={close}
           />

@@ -18,7 +18,12 @@ import {
   Target,
 } from "lucide-react";
 import { methodSteps, mindset, hardRequirements } from "../data/method";
-import { universeVideoLinks, universeVideoRuntime, universeVideos } from "../data/videos";
+import {
+  universeVideoLinks,
+  universeVideoPitch,
+  universeVideoRuntime,
+  universeVideos,
+} from "../data/videos";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
 import QuickAnswers from "../components/QuickAnswers";
@@ -254,9 +259,7 @@ export default function Method() {
         <div className="wrap py-10">
           <Reveal>
             <VideoStrip
-              eyebrow="Watch this first"
-              title="Universe interaction, in three short recordings"
-              sub="Point 1 of the guidelines, and right now the most common reason a task is rejected. Each one is the step on screen, with the mistake it answers."
+              {...universeVideoPitch}
               videos={universeVideos}
               runtime={universeVideoRuntime}
               links={universeVideoLinks}
