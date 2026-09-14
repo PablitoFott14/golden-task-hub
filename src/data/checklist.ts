@@ -53,7 +53,10 @@ export const checklist: ChecklistSection[] = [
         q: "Did you confirm the loadout in the Universe Explorer, add the Service Universe Artifact ID, and anchor every date to a window you actually saw in the data?",
         f: "Without the Artifact ID the artifacts come back empty. Designing against a server that is not loaded is an environment defect, not a model failure.",
         ref: "§1.1 · 1.2.1",
-        links: [{ to: "/spec#trajectory", tag: "QC", label: "Feasibility with tools" }],
+        links: [
+          { to: "/spec#trajectory", tag: "QC", label: "Feasibility with tools" },
+          { to: "/#universe-videos", tag: "VIDEO", label: "Loading the universe, on screen" },
+        ],
       },
       {
         id: "A3",
@@ -85,7 +88,10 @@ export const checklist: ChecklistSection[] = [
         q: "Is there at least one fact the task cannot be completed without that lives only in a connected service, and does the agent require meaningful interaction with the universe rather than superficial?",
         f: "",
         ref: "§1.2.2",
-        links: [{ to: `${GT}#universe`, tag: "GT", label: "Sixteen of twenty rows exist only in Slack" }],
+        links: [
+          { to: `${GT}#universe`, tag: "GT", label: "Sixteen of twenty rows exist only in Slack" },
+          { to: "/#universe-videos", tag: "VIDEO", label: "Exploring it through the Agent" },
+        ],
       },
       {
         id: "B2",

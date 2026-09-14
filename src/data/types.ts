@@ -423,10 +423,38 @@ export interface FaqItem {
   links?: XLink[];
 }
 
+/* ------------------------------------------------------------------- videos */
+
+/**
+ * One screen recording in a video set. The card on the landing page is a strip
+ * and carries only `title` and `covers`, so `seen` and `fix` are read beside
+ * the player rather than on the homepage. Both come from the recording itself:
+ * the mistake it is a reply to, and the move that replaces it.
+ */
+export interface VideoGuide {
+  n: number;
+  id: string;
+  title: string;
+  /** One line for the card. */
+  covers: string;
+  /** The mistake the recording answers. */
+  seen: string;
+  /** What to do instead. */
+  fix: string;
+  /** Running time, as m:ss. */
+  duration: string;
+  /** Running time in seconds, so the set can total itself. */
+  seconds: number;
+  /** Path under public/. */
+  src: string;
+  /** Poster frame, path under public/. */
+  poster: string;
+}
+
 /* ------------------------------------------------------------------- search */
 
 export interface SearchEntry {
-  kind: "Method" | "Golden task" | "Pre-submit check" | "QC spec" | "FAQ";
+  kind: "Method" | "Golden task" | "Pre-submit check" | "QC spec" | "FAQ" | "Video";
   title: string;
   hint: string;
   to: string;

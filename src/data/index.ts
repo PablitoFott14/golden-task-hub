@@ -4,6 +4,7 @@ import { methodSteps } from "./method";
 import { checklist } from "./checklist";
 import { authoringStandards, rubricQualityIssues, specGroups, weightBuckets } from "./specDoc";
 import { faq } from "./faq";
+import { universeVideos } from "./videos";
 
 /** Matches the nav ids the Spec Doc page derives from its group names. */
 const slug = (s: string) => s.replace(/[^a-z0-9]/gi, "-").toLowerCase();
@@ -27,6 +28,19 @@ export const searchIndex: SearchEntry[] = [
     hint: s.slogan,
     to: `/#${s.id}`,
     terms: [s.means, s.produces, s.moves.join(" "), s.rule?.body ?? "", s.inTask.body].join(" "),
+  })),
+
+  ...universeVideos.map<SearchEntry>((v) => ({
+    kind: "Video" as const,
+    title: v.title,
+    hint: `Universe interaction · ${v.duration}`,
+    to: "/#universe-videos",
+    terms: [
+      v.covers,
+      v.seen,
+      v.fix,
+      "universe interaction recording screencast artifact id snapshot load explore agent database redeploy",
+    ].join(" "),
   })),
 
   ...tasks.map<SearchEntry>((t) => ({

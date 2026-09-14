@@ -106,6 +106,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
 | <https://qc-spec-mt-rubrics.vercel.app/> (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
 | `F&Q.md` in this repo | [src/data/faq.ts](src/data/faq.ts) |
+| `Videos/Universe Dealing/finals/` on Drive, `universe_post.md` beside the recordings | [src/data/videos.ts](src/data/videos.ts) + `public/videos/universe/` |
 | `Tasks/6a7965b63b7d368e70c7de4a` | [src/data/tasks/vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) + `public/tasks/vendor-closeout/` |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/draft_history.md` | `draftHistory` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per numbered item |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/milestones.md` | `milestones` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per line |
@@ -212,6 +213,28 @@ up in both, and the row is labelled with `topic`, so a new topic also goes into 
 list is capped at `PEEK` rows with the rest behind a toggle, and that cap is the only thing keeping
 this block from growing into the page it links to. The hero links straight to it, because a
 contributor who never opens the last tab is the reader the block exists for.
+
+### The Universe Interaction videos are a strip, not three players
+
+`universeVideos` in [src/data/videos.ts](src/data/videos.ts) is the three recordings, and
+[VideoStrip.tsx](src/components/VideoStrip.tsx) renders them as one row of cards directly under the
+hero on `/`. **The player opens over the page and never sits in the strip**, which is the only
+thing keeping three videos down to one row: three inline players would take the band from roughly
+370px to well over two thousand. Keep any addition inside a card.
+
+Each entry carries `seen` and `fix`, the mistake the recording answers and the move that replaces
+it. Those are read beside the player, never on the landing page, so the band stays two lines of
+copy plus the row.
+
+The recordings are 1920 by 1140 rather than 16 by 9, so `FRAME` in the component is written from
+their real size and the poster frames are cut at that ratio. Re-cut a poster with `ffmpeg -ss <t>
+-i <file> -frames:v 1 -vf scale=960:-2` into `public/videos/universe/` when a recording is
+replaced, and keep the `duration` and `seconds` fields in step with it: `seconds` is what totals
+the set in the header.
+
+Video chrome is black in **both** themes. The `ink` ramp inverts under `html.dark`, so
+`bg-ink-950/75` is a light scrim in dark mode; the lightbox backdrop and the play overlay are
+written as `bg-black/…` for that reason.
 
 ### Every subjective rubric carries the two renders it came from
 

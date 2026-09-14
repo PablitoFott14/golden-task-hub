@@ -12,14 +12,17 @@ import {
   HelpCircle,
   Layers,
   MessageCircleQuestion,
+  PlayCircle,
   ShieldAlert,
   Sparkles,
   Target,
 } from "lucide-react";
 import { methodSteps, mindset, hardRequirements } from "../data/method";
+import { universeVideoLinks, universeVideoRuntime, universeVideos } from "../data/videos";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
 import QuickAnswers from "../components/QuickAnswers";
+import VideoStrip from "../components/VideoStrip";
 import { cx } from "../lib/util";
 
 const phaseTone: Record<string, { chip: string; badge: string; bar: string }> = {
@@ -165,6 +168,10 @@ export default function Method() {
                 <Link to={{ hash: "#method" }} className="btn-primary">
                   <Compass size={16} /> Start with the method
                 </Link>
+                <Link to={{ hash: "#universe-videos" }} className="btn-ghost">
+                  <PlayCircle size={16} className="text-amber-600 dark:text-amber-300" /> Universe
+                  videos
+                </Link>
                 <Link to="/golden-tasks" className="btn-ghost">
                   <BookOpenCheck size={16} /> See it in a Golden Task
                 </Link>
@@ -232,6 +239,29 @@ export default function Method() {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Universe interaction, the recordings. First thing under the hero
+          because it is point 1 of the guidelines and the most common reason a
+          task is rejected, so it has to be found without going looking. The
+          player opens over the page, which is what keeps three videos down to
+          one row of height. */}
+      <section
+        id="universe-videos"
+        className="scroll-mt-20 border-b border-ink-200/70 bg-surface"
+      >
+        <div className="wrap py-10">
+          <Reveal>
+            <VideoStrip
+              eyebrow="Watch this first"
+              title="Universe interaction, in three short recordings"
+              sub="Point 1 of the guidelines, and right now the most common reason a task is rejected. Each one is the step on screen, with the mistake it answers."
+              videos={universeVideos}
+              runtime={universeVideoRuntime}
+              links={universeVideoLinks}
+            />
+          </Reveal>
         </div>
       </section>
 
