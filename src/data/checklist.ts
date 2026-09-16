@@ -12,6 +12,14 @@ import type { ChecklistSection } from "./types";
 
 const GT = "/golden-tasks/vendor-closeout";
 
+/**
+ * The masthead count in the PDF is derived from `checklist.md`, so it is
+ * derived here too. Everything on screen that states the number reads this,
+ * because a hardcoded total is the one thing that silently drifts when a check
+ * is added.
+ */
+export const checkCount = () => checklist.reduce((n, s) => n + s.checks.length, 0);
+
 export const checklistMeta = {
   title: "Pre-Submit Gate",
   subtitle: "Run it once when the task is finished and you are deciding whether to submit.",
@@ -50,12 +58,13 @@ export const checklist: ChecklistSection[] = [
       },
       {
         id: "A2",
-        q: "Did you confirm the loadout in the Universe Explorer, add the Service Universe Artifact ID, and anchor every date to a window you actually saw in the data?",
-        f: "Without the Artifact ID the artifacts come back empty. Designing against a server that is not loaded is an environment defect, not a model failure.",
+        q: "Did you ground the scenario by interacting with the AI agent in the Database tab, confirm the loadout in the Universe Explorer, add the Service Universe Artifact ID, and anchor every date to a window you actually saw in the data?",
+        f: "Inspecting by hand is what leads people to conclude the scenario has no anchor in the universe. Without the Artifact ID the artifacts come back empty, and an unloaded server is an environment defect, not a model failure.",
         ref: "§1.1 · 1.2.1",
         links: [
           { to: "/spec#trajectory", tag: "QC", label: "Feasibility with tools" },
           { to: "/#universe-videos", tag: "VIDEO", label: "Loading the universe, on screen" },
+          { to: "/#latest-changes", tag: "NEW", label: "Ground it through the agent, not the tables" },
         ],
       },
       {
@@ -105,10 +114,14 @@ export const checklist: ChecklistSection[] = [
       },
       {
         id: "B3",
-        q: "Do the inputs clear the hard rules: downsampled, no .heic, no LLM-generated .pdf/.docx/.xlsx, under the 20% LLM cap, no junk or system files, CC0 or CC BY, synthetic personas only?",
-        f: "Then check the names: no filename, manifest or helper document may reveal the expected answer.",
+        q: "Do the inputs clear the hard rules: downsampled, no .heic, no LLM-generated .pdf/.docx/.xlsx, under the 20% LLM cap, no junk or system files, CC0 or CC BY, synthetic personas only, and at least three of them in the conversation?",
+        f: "Three input files is the floor; distractors and noise count toward it. Then check the names: no filename, manifest or helper document may reveal the expected answer.",
         ref: "§1.2.2",
-        links: [{ to: "/spec#input-artifacts", tag: "QC", label: "Realism, safety, deferred assets" }],
+        links: [
+          { to: "/spec#input-artifacts", tag: "QC", label: "Realism, safety, deferred assets" },
+          { to: "/#latest-changes", tag: "NEW", label: "Three input files is the floor" },
+          { to: `${GT}#inputs`, tag: "GT", label: "Eleven files, and the fact each one carries" },
+        ],
       },
     ],
   },
@@ -200,7 +213,7 @@ export const checklist: ChecklistSection[] = [
       {
         id: "E1",
         q: "Walking the prompt once per turn, is every ask covered by a criterion, including intents introduced in the middle turns, not just the final state?",
-        f: "Missing Criteria and Turn Scoped are both Major issues.",
+        f: "Missing Criteria and Turn Scoped are both Major issues. No target count: thorough coverage usually lands around 15 to 30.",
         ref: "§5.1 · 5.6 · 5.7",
         links: [{ to: "/spec#rubric-criteria", tag: "QC", label: "The rubric error catalogue" }],
       },
@@ -242,7 +255,7 @@ export const checklist: ChecklistSection[] = [
       {
         id: "E7",
         q: "Is every criterion in the category and evaluation target it would actually be graded under?",
-        f: "Agent Behavior is always Trajectory. If you wrote it against an artifact, a state change or the final message, you are grading the deliverable and the category is wrong.",
+        f: "Agent Behavior is always Trajectory. If you wrote it against an artifact, a state change or the final message, you are grading the deliverable and the category is wrong. Factuality and Hallucination has left the table: a criterion checking whether a value or claim is correct is Task Completion.",
         ref: "§5.4",
         links: [
           { to: `${GT}#rubrics`, tag: "GT", label: "Criterion 17 carries neither" },
@@ -256,7 +269,16 @@ export const checklist: ChecklistSection[] = [
         ref: "§5.1.1 · 5.3",
         links: [
           { to: `${GT}#rubrics`, tag: "GT", label: "One completeness criterion, four spot checks" },
+        ],
+      },
+      {
+        id: "E9",
+        q: "Does the block carry five or fewer criteria whose evaluation target is Trajectory?",
+        f: "Five is the ceiling and zero is allowed; they are not mandatory, and they focus on the last response. Over five, move the weakest onto the artifacts rather than dropping the coverage.",
+        ref: "§5.1",
+        links: [
           { to: "/#latest-changes", tag: "NEW", label: "Trajectory criteria are capped at five" },
+          { to: `${GT}#rubrics`, tag: "GT", label: "Five Trajectory criteria, which is the ceiling" },
         ],
       },
     ],

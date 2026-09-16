@@ -40,7 +40,7 @@ export const guidelineChanges: GuidelineChange[] = [
     impact: "hard",
     links: [
       { to: `${GT}#rubrics`, tag: "GT", label: "Five Trajectory criteria, four of them spot checks" },
-      { to: "/checklist#s5", tag: "E8", label: "Completeness plus at most five spot checks" },
+      { to: "/checklist#s5", tag: "E9", label: "Five or fewer Trajectory targets" },
     ],
   },
   {
@@ -54,7 +54,7 @@ export const guidelineChanges: GuidelineChange[] = [
     impact: "hard",
     links: [
       { to: `${GT}#inputs`, tag: "GT", label: "Eleven files, and the fact each one carries" },
-      { to: "/checklist#s2", tag: "B2", label: "Take the attachments away" },
+      { to: "/checklist#s2", tag: "B3", label: "The hard rules for the input set" },
     ],
   },
   {

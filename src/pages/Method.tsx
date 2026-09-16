@@ -26,6 +26,7 @@ import {
   universeVideos,
 } from "../data/videos";
 import { guidelineChanges } from "../data/changes";
+import { checkCount, checklist } from "../data/checklist";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
 import LatestChanges from "../components/LatestChanges";
@@ -198,7 +199,7 @@ export default function Method() {
                 {[
                   { k: `${methodSteps.length}`, v: "method steps" },
                   { k: `${tasks.length}`, v: tasks.length === 1 ? "worked task" : "worked tasks" },
-                  { k: "28", v: "gate checks" },
+                  { k: `${checkCount()}`, v: "gate checks" },
                 ].map((x) => (
                   <div key={x.v} className="rounded-xl border border-ink-200/70 bg-surface px-4 py-3">
                     <dt className="font-display text-2xl font-bold text-ink-900">{x.k}</dt>
@@ -451,7 +452,7 @@ export default function Method() {
                 to: "/checklist",
                 icon: <ClipboardCheck size={18} />,
                 title: "Pre-Submit Gate",
-                body: "Twenty eight checks in seven sections. Roughly five minutes, run once before you submit.",
+                body: `${checkCount()} checks in ${checklist.length} sections. Roughly five minutes, run once before you submit.`,
                 tone: "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300",
               },
               {

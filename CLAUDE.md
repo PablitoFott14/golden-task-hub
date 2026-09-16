@@ -12,7 +12,7 @@ Rubrics multi-turn project. Six routes:
 | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, nine method cards, the mindset, the quick answers block, the hard requirements. |
 | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, thirteen sections nested under the nine method steps, rail on the left. |
-| `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks in dense rows, progress sidebar with persisted ticks. |
+| `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 29 checks in dense rows, progress sidebar with persisted ticks. |
 | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
 | `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions, answers always open, each with its guidelines references. |
 
@@ -118,7 +118,19 @@ and is the source of truth for everything. The hub is a companion to it and must
 copy of it.
 
 The pre-submit PDF is generated from `checklist.md`; read that rather than the PDF when
-re-transcribing checks, and re-copy the regenerated PDF into `public/docs/`.
+re-transcribing checks, and re-copy the regenerated PDF into `public/docs/`:
+
+```bash
+cd "g:/My Drive/Red Shell/Coruses & Screenings/Guidelines/_changes"
+python build_presubmit_gate.py          # writes ../presubmit-gate.pdf
+cp ../presubmit-gate.pdf "g:/My Drive/Red Shell/Golden Task Hub/public/docs/"
+```
+
+The gate is **one Letter page**, and the generator holds it there by stepping the type scale down
+until the content fits, refusing to write below 80%. A check costs roughly two points of scale: 28
+checks fitted at 90%, 29 at 86%, 30 at 84%. So a new rule goes into an existing check's wording
+unless it genuinely needs its own tick box, and `checklist.ts` is transcribed from `checklist.md`
+afterwards with the em dashes flattened to the hub's copy rules.
 
 ### `specDoc.ts` is generated, not hand-written
 
@@ -181,8 +193,11 @@ already reads well:
   counter and bar, `Submit & reset`, a `Show guidance` density toggle, and a jump nav driven by the
   scroll spy. Section cards carry a `Check all` toggle, and a ticked item strikes through. Rows are
   deliberately dense, one line each: the footnote and the cross-links appear only when guidance is
-  on, stored under `rsh.presubmit.detail.v1`. Twenty eight checks have to be runnable without
-  scrolling through oversized cards, so keep any addition to this page inside a row.
+  on, stored under `rsh.presubmit.detail.v1`. Twenty nine checks have to be runnable without
+  scrolling through oversized cards, so keep any addition to this page inside a row. Nothing on
+  screen states the total as a literal: `checkCount()` in [checklist.ts](src/data/checklist.ts) is
+  what the landing page reads, because a hardcoded number is the thing that drifts when a check is
+  added.
 
 ### Cross-linking is the product
 
