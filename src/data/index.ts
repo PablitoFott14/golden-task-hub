@@ -4,6 +4,7 @@ import { methodSteps } from "./method";
 import { checklist } from "./checklist";
 import { authoringStandards, rubricQualityIssues, specGroups, weightBuckets } from "./specDoc";
 import { faq } from "./faq";
+import { guidelineChanges } from "./changes";
 import { universeVideos } from "./videos";
 
 /** Matches the nav ids the Spec Doc page derives from its group names. */
@@ -28,6 +29,19 @@ export const searchIndex: SearchEntry[] = [
     hint: s.slogan,
     to: `/#${s.id}`,
     terms: [s.means, s.produces, s.moves.join(" "), s.rule?.body ?? "", s.inTask.body].join(" "),
+  })),
+
+  ...guidelineChanges.map<SearchEntry>((c) => ({
+    kind: "Change" as const,
+    title: c.title,
+    hint: `${c.date} · ${c.version}`,
+    to: "/#latest-changes",
+    terms: [
+      c.body,
+      c.does,
+      `${c.ref.section} ${c.ref.title}`,
+      "guideline change update version history new latest",
+    ].join(" "),
   })),
 
   ...universeVideos.map<SearchEntry>((v) => ({

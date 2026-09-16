@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Check, Minus, Plus, X } from "lucide-react";
+import { Check, Layers, Minus, Plus, Target, X } from "lucide-react";
 import type { Rubric } from "../data/types";
 import { cx } from "../lib/util";
 
@@ -24,14 +24,25 @@ export function Ticks({ text }: { text: string }) {
   );
 }
 
-type Filter = "all" | "failed" | "passed" | "negative";
+type Filter = "all" | "failed" | "passed" | "negative" | "trajectory";
 
 const filters: { k: Filter; label: string }[] = [
   { k: "all", label: "All criteria" },
   { k: "failed", label: "Model A failed" },
   { k: "passed", label: "Model A passed" },
   { k: "negative", label: "Negatives" },
+  { k: "trajectory", label: "Trajectory" },
 ];
+
+/**
+ * The spot check pattern, shown rather than described. A group of more than
+ * eight similar outcomes gets one completeness criterion and at most five spot
+ * checks, so the two have to be legible in the block itself.
+ */
+const roleChip: Record<NonNullable<Rubric["role"]>, { label: string; icon: JSX.Element }> = {
+  completeness: { label: "Completeness", icon: <Layers size={11} /> },
+  "spot-check": { label: "Spot check", icon: <Target size={11} /> },
+};
 
 /** A positive rated Not Present, or a negative rated Present, is a failure. */
 function failed(r: Rubric) {
@@ -47,6 +58,7 @@ export default function Rubrics({ rubrics }: { rubrics: Rubric[] }) {
       failed: rubrics.filter(failed).length,
       passed: rubrics.filter((r) => !failed(r)).length,
       negative: rubrics.filter((r) => r.polarity === "negative").length,
+      trajectory: rubrics.filter((r) => r.target === "Trajectory").length,
     }),
     [rubrics]
   );
@@ -55,6 +67,7 @@ export default function Rubrics({ rubrics }: { rubrics: Rubric[] }) {
     if (filter === "failed") return failed(r);
     if (filter === "passed") return !failed(r);
     if (filter === "negative") return r.polarity === "negative";
+    if (filter === "trajectory") return r.target === "Trajectory";
     return true;
   });
 
@@ -120,6 +133,12 @@ export default function Rubrics({ rubrics }: { rubrics: Rubric[] }) {
                     <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
                       {r.target}
                     </span>
+                    {r.role && (
+                      <span className="chip bg-violet-500/12 text-violet-700 ring-1 ring-violet-500/25 dark:text-violet-300">
+                        {roleChip[r.role].icon}
+                        {roleChip[r.role].label}
+                      </span>
+                    )}
                     <span
                       className={cx(
                         "chip",

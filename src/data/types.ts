@@ -111,6 +111,13 @@ export interface LedgerRow {
 export interface Rubric {
   n: number;
   text: string;
+  /**
+   * The part this criterion plays where one requirement expands into more than
+   * eight outcomes with the same shape. The group gets one `completeness`
+   * criterion and at most five `spot-check` criteria, spent on the cases with
+   * the strongest reasoning signal. A criterion that is neither carries nothing.
+   */
+  role?: "completeness" | "spot-check";
   category: string;
   target: string;
   polarity: "positive" | "negative";
@@ -451,10 +458,36 @@ export interface VideoGuide {
   poster: string;
 }
 
+/* ------------------------------------------------------------------ changes */
+
+/**
+ * One guideline change worth surfacing on the way in. The set is not the full
+ * version history: it is only the changes that alter how a task is built or
+ * reviewed, which is why every entry carries `does`, the move it forces.
+ */
+export interface GuidelineChange {
+  id: string;
+  /** The date the guidelines carry, "Sep 10, 2026". */
+  date: string;
+  /** The version that date shipped as. */
+  version: string;
+  /** The change, in one line. */
+  title: string;
+  /** What it now says. Two or three sentences. */
+  body: string;
+  /** What a contributor has to do differently because of it. */
+  does: string;
+  /** Where the guidelines carry it. */
+  ref: GuidelineRef;
+  /** How much of the hub it moves. `hard` is a rule a task fails without. */
+  impact: "hard" | "shape";
+  links?: XLink[];
+}
+
 /* ------------------------------------------------------------------- search */
 
 export interface SearchEntry {
-  kind: "Method" | "Golden task" | "Pre-submit check" | "QC spec" | "FAQ" | "Video";
+  kind: "Method" | "Golden task" | "Pre-submit check" | "QC spec" | "FAQ" | "Video" | "Change";
   title: string;
   hint: string;
   to: string;

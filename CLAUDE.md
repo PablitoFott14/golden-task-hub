@@ -9,7 +9,7 @@ Rubrics multi-turn project. Six routes:
 
 | Route | Page | What it holds |
 | --- | --- | --- |
-| `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. Nine method cards, the mindset, the quick answers block, the hard requirements. |
+| `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, nine method cards, the mindset, the quick answers block, the hard requirements. |
 | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, thirteen sections nested under the nine method steps, rail on the left. |
 | `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 28 checks in dense rows, progress sidebar with persisted ticks. |
@@ -102,6 +102,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 
 | Source document | Data file here |
 | --- | --- |
+| Version History table and the `[NEW]` callouts in the guidelines | [src/data/changes.ts](src/data/changes.ts) |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/rationale.md` | [src/data/method.ts](src/data/method.ts) |
 | `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
 | <https://qc-spec-mt-rubrics.vercel.app/> (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
@@ -112,7 +113,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/milestones.md` | `milestones` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per line |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/golden_conversation.md` | `goldenRun.conversation` in the same file, one entry per message |
 
-`[External] OpenClaw MM Rubrics MULTI TURN – Guidelines - v2.md` sits beside this file on Drive
+`[External] OpenClaw MM Rubrics MULTI TURN – Guidelines .md` sits beside this file on Drive
 and is the source of truth for everything. The hub is a companion to it and must never become a
 copy of it.
 
@@ -214,6 +215,31 @@ list is capped at `PEEK` rows with the rest behind a toggle, and that cap is the
 this block from growing into the page it links to. The hero links straight to it, because a
 contributor who never opens the last tab is the reader the block exists for.
 
+### The changes band is a filter, not a changelog
+
+`guidelineChanges` in [src/data/changes.ts](src/data/changes.ts) is transcribed from the Version
+History table and the `[NEW]` callouts of the guidelines, and
+[LatestChanges.tsx](src/components/LatestChanges.tsx) renders it as the first band under the hero
+on `/`, at `#latest-changes`. It sits above the video strip because the reader it exists for is the
+one who already knows the method and is back to find out what moved.
+
+**It is not the version history.** An entry earns its place only by changing what a contributor
+does, which is why `does` is a required field: if you cannot write the move it forces, the entry
+does not belong. `impact` is `hard` for a rule a task fails without and `shape` for everything
+else, and it always ships beside a text label rather than as colour alone.
+
+Everything renders open, and that is the cap on the block. Six cards in two rows of three is
+roughly 1,240px; a seventh date or a longer body pushes it into a third row and the band stops
+being something you read on the way past. Keep any addition inside a card, and cut an entry that
+has aged out rather than letting the grid grow. Each card carries its own date rather than sitting
+under a date heading, because grouping cost a row per date and left half a row empty wherever a
+date shipped one change.
+
+When a change lands, the band is only half of it. The rule it names has to be applied to the
+Golden Task as well, or the worked example teaches the superseded standard. `guidelinesVersion` in
+the same file is what the guidelines header currently says, and it is rendered, so move it when the
+document moves.
+
 ### The Universe Interaction videos are a strip, not three players
 
 `universeVideos` in [src/data/videos.ts](src/data/videos.ts) is the three recordings, and
@@ -240,6 +266,29 @@ the set in the header.
 Video chrome is black in **both** themes. The `ink` ramp inverts under `html.dark`, so
 `bg-ink-950/75` is a light scrim in dark mode; the lightbox backdrop and the play overlay are
 written as `bg-black/…` for that reason.
+
+### The objective block is shaped by two caps
+
+`rubrics` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) is twenty criteria, and the shape
+is part of what the page teaches, so [Rubrics.tsx](src/components/Rubrics.tsx) makes both caps
+countable: a `Trajectory` filter and a `role` chip on every criterion that plays a part in a spot
+check group.
+
+- **At most five criteria may target the Trajectory**, and none is a valid number. Here that is the
+  four reconciliation spot checks and the one negative that lands on the final turn. When a
+  Trajectory criterion has to go, its coverage moves onto an artifact rather than leaving with it:
+  the vendor pool identification became criterion 6 against `MEMORY.md`, and the Slack retrieval of
+  the shutdown estimate is carried by the two criteria that pin the figure and the percentage.
+- **A group of more than eight outcomes with the same shape gets one completeness criterion and at
+  most five spot checks**, never one criterion per element. `role` is `"completeness"` or
+  `"spot-check"`, and it is what makes that pattern visible instead of described.
+
+Both are guideline rules rather than hub preferences, so they belong to
+[changes.ts](src/data/changes.ts) as well, and the two `Callout`s above the block on
+[TaskDetail.tsx](src/pages/TaskDetail.tsx) link back to it. **Changing the criteria means
+re-counting**: `whyGolden`, `run.score`, the `rubrics` arrays in `run.observations` and the GT link
+labels in [checklist.ts](src/data/checklist.ts) and [method.ts](src/data/method.ts) all state the
+totals in words, and nothing validates them.
 
 ### Every subjective rubric carries the two renders it came from
 

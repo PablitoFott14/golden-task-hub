@@ -27,7 +27,7 @@ export const vendorCloseout: GoldenTask = {
     "The rule is stated once, in the user’s own words, and every one of the twenty vendors has to be run through it: Slack confirmation **and** attachment evidence, or it does not get a receipt.",
     "Twelve of the twenty pool vendors have no attachment at all. The media alone gets you four receipts; only the universe gets you the other sixteen rows. Neither modality is decorative.",
     "Every later turn consumes the state the one before it produced, a total across the receipts, a percentage against a figure that is not linked anywhere, then a graphic that has to agree with both.",
-    "Model A failed 19 of the 21 objective criteria without the task ever telling it what it missed.",
+    "Model A failed 18 of the 20 objective criteria without the task ever telling it what it missed.",
   ],
 
   turns: [
@@ -480,6 +480,26 @@ Final amount due:    <amount, or "None outstanding">`,
     },
   ],
 
+  /**
+   * Twenty objective criteria, shaped to the rule the guidelines added on
+   * 10 September: at most five criteria may target the Trajectory.
+   *
+   * Twenty vendors have to be classified, which is a group of more than eight
+   * outcomes with the same structure, so the block uses the spot check pattern
+   * rather than one criterion per vendor. Criterion 6 is the completeness
+   * criterion covering the whole pool, and criteria 2 to 5 are the four spot
+   * checks, spent on the reconciliations carrying the strongest signal: the
+   * screenshot the run misread, the amount buried mid sentence, the exception
+   * with nothing owed, and the handwritten line. Criterion 19 is the fifth and
+   * last Trajectory criterion, and it is the one that lands on the final turn.
+   *
+   * Two earlier criteria were cut to reach the cap, and neither took its
+   * coverage with it. The pool identification moved onto MEMORY.md as
+   * criterion 6, where the same twenty names are graded on the artifact. The
+   * Slack retrieval of the $50,000 estimate is graded by criteria 14 and 15,
+   * which pin the figure and the percentage in the two deliverables that carry
+   * them, and by the negative at 19.
+   */
   rubrics: [
     {
       n: 1,
@@ -492,6 +512,7 @@ Final amount due:    <amount, or "None outstanding">`,
     },
     {
       n: 2,
+      role: "spot-check",
       text: "The model identifies `Helpshift` as a cancelled vendor by reconciling Leonard Hayes's `#winddown` message at timestamp `1770789534.434749` with `Screenshot 2026-02-10 143217.png`, which confirms the cancellation with a final due amount of `$1,500.00`.",
       category: "Agent Behavior",
       target: "Trajectory",
@@ -501,6 +522,7 @@ Final amount due:    <amount, or "None outstanding">`,
     },
     {
       n: 3,
+      role: "spot-check",
       text: "The model identifies `layer` as a cancelled vendor by reconciling Leonard Hayes's `#winddown` message at timestamp `1770837793.168589` with `Screenshot 2026-02-11 112340.png`, which confirms the cancellation with a final invoice of `$2,340.00`.",
       category: "Agent Behavior",
       target: "Trajectory",
@@ -510,6 +532,7 @@ Final amount due:    <amount, or "None outstanding">`,
     },
     {
       n: 4,
+      role: "spot-check",
       text: "The model identifies `Soundly` as a cancelled vendor by reconciling Robert's `#winddown` message at timestamp `1770839322.836779` with `IMG_20260811_133419.jpg`, which confirms the cancellation with no due amount.",
       category: "Agent Behavior",
       target: "Trajectory",
@@ -519,6 +542,7 @@ Final amount due:    <amount, or "None outstanding">`,
     },
     {
       n: 5,
+      role: "spot-check",
       text: "The model identifies `cursor` as a cancelled vendor by reconciling Arthur Blake's `#winddown` message at timestamp `1770937188.477219` with the handwritten evidence in `IMG_20260811_134605.jpg`, which confirms the cancellation with a due amount of `$192.00`.",
       category: "Agent Behavior",
       target: "Trajectory",
@@ -528,24 +552,16 @@ Final amount due:    <amount, or "None outstanding">`,
     },
     {
       n: 6,
-      text: "The model identifies the complete `#winddown` vendor pool as exactly these 20 vendors: Helpshift, layer, Soundly, cursor, coderabbit, Singular, Unity, Zapier, Deel, gusto, Intuit, Linear, Slack, google, GitHub, Metabase, dbt, Carta, Figma and AWS.",
-      category: "Agent Behavior",
-      target: "Trajectory",
+      role: "completeness",
+      text: "`MEMORY.md` and the `VENDORS CANCELLED` folder together account for exactly the twenty vendors named in `#winddown`: Helpshift, layer, Soundly, cursor, coderabbit, Singular, Unity, Zapier, Deel, gusto, Intuit, Linear, Slack, google, GitHub, Metabase, dbt, Carta, Figma and AWS.",
+      category: "Task Completion",
+      target: "Final Answer Artifact",
       polarity: "positive",
       status: "not-present",
-      observed: "Never read the channel; reduced the pool to the names it could pull off the attachments.",
+      observed: "Five vendors appear in place of twenty, and one of the five, Datadog, is not in the channel at all.",
     },
     {
       n: 7,
-      text: "The model uses the Slack MCP server to retrieve Leonard Hayes's message at timestamp `1764793154.009679`, which contains the `$50,000` shutdown cost estimate.",
-      category: "Agent Behavior",
-      target: "Trajectory",
-      polarity: "positive",
-      status: "not-present",
-      observed: "No Slack MCP call in turn 3 or turn 4.",
-    },
-    {
-      n: 8,
       text: "Following `receipt_format.md`, `Helpshift_cancellation_receipt.pdf` contains the headers `VENDOR CLOSEOUT RECEIPT` and `Harmony Games, Inc.`, plus Vendor: Helpshift, Cancellation date: 2026-02-10 (PST), Confirmed by: Leonard Hayes, Final amount due: $1,500.00, and a Service description of no more than 30 words.",
       category: "Task Completion",
       target: "Final Answer Artifact",
@@ -554,7 +570,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "The file was never created.",
     },
     {
-      n: 9,
+      n: 8,
       text: "Following `receipt_format.md`, `layer_cancellation_receipt.pdf` contains the required headers plus Vendor: layer, Cancellation date: 2026-02-11 (PST), Confirmed by: Leonard Hayes, Final amount due: $2,340.00, and a Service description of no more than 30 words.",
       category: "Task Completion",
       target: "Final Answer Artifact",
@@ -563,7 +579,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "The file was never created.",
     },
     {
-      n: 10,
+      n: 9,
       text: "Following `receipt_format.md`, `Soundly_cancellation_receipt.pdf` contains the required headers plus Vendor: Soundly, Cancellation date: 2026-02-11 (PST), Confirmed by: Robert, Final amount due: None outstanding, and a Service description of no more than 30 words.",
       category: "Task Completion",
       target: "Final Answer Artifact",
@@ -572,7 +588,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "A Soundly receipt exists but does not carry Confirmed by: Robert.",
     },
     {
-      n: 11,
+      n: 10,
       text: "Following `receipt_format.md`, `cursor_cancellation_receipt.pdf` contains the required headers plus Vendor: cursor, Cancellation date: 2026-02-12 (PST), Confirmed by: Arthur Blake, Final amount due: $192.00, and a Service description of no more than 30 words.",
       category: "Task Completion",
       target: "Final Answer Artifact",
@@ -581,7 +597,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "The file was never created.",
     },
     {
-      n: 12,
+      n: 11,
       text: "`MEMORY.md` contains an `UNCONFIRMED` section listing coderabbit, Singular, Unity and Zapier.",
       category: "Task Completion",
       target: "Final Answer Artifact",
@@ -590,7 +606,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "UNCONFIRMED holds only Helpshift; all four required vendors are missing.",
     },
     {
-      n: 13,
+      n: 12,
       text: "`MEMORY.md` contains a `NOT CANCELLED` section listing Deel, gusto, Intuit, Linear, Slack, google, GitHub, Metabase, dbt, Carta, Figma and AWS.",
       category: "Task Completion",
       target: "Final Answer Artifact",
@@ -599,7 +615,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "NOT CANCELLED holds only Carta; the other eleven are missing.",
     },
     {
-      n: 14,
+      n: 13,
       text: "`emails_draft.md` states the total amount owed across the four receipts as `$4,032.00`.",
       category: "Task Completion",
       target: "Final Answer Artifact",
@@ -608,8 +624,8 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "Reports $2,650.00, summed from its own wrong receipt set.",
     },
     {
-      n: 15,
-      text: "`emails_draft.md` states that the `$4,032.00` outstanding balance represents `8.1%` (or an approximated rounded value) of the `$50,000` shutdown cost estimate.",
+      n: 14,
+      text: "`emails_draft.md` states that the `$4,032.00` outstanding balance represents `8.1%` (or an approximated rounded value) of the `$50,000` shutdown cost estimate posted in the `#executives` channel.",
       category: "Task Completion",
       target: "Final Answer Artifact",
       polarity: "positive",
@@ -617,7 +633,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "Neither figure. Ships a placeholder asking the user for the estimate.",
     },
     {
-      n: 16,
+      n: 15,
       text: "`vendor_cancellation.svg` displays the `$4,032.00` total owed and the `8.1%` figure at the top of the graphic.",
       category: "Task Completion",
       target: "Final Answer Artifact",
@@ -626,7 +642,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "Shows $2,650.00 and “(needs estimate)” at headline weight.",
     },
     {
-      n: 17,
+      n: 16,
       text: "`vendor_cancellation.svg` presents the three groups with their vendors, four receipted, four UNCONFIRMED, twelve NOT CANCELLED.",
       category: "Task Completion",
       target: "Final Answer Artifact",
@@ -635,7 +651,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "Three confirmed (Datadog, Singular, Soundly), Helpshift unconfirmed, Carta not cancelled.",
     },
     {
-      n: 18,
+      n: 17,
       text: "`emails_draft.md` mentions the subject `vendor closeout - where we stand`.",
       category: ", not labelled in rubrics.md",
       target: ", not labelled in rubrics.md",
@@ -644,7 +660,7 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "The subject line is verbatim. Note that this criterion carries no category and no evaluation target in the source file. E7 in the pre-submit gate catches exactly this.",
     },
     {
-      n: 19,
+      n: 18,
       text: "`emails_draft.md` mentions that `vendor_cancellation.svg` will be attached to the email.",
       category: "Instruction Following",
       target: "Final Answer Artifact",
@@ -653,22 +669,22 @@ Final amount due:    <amount, or "None outstanding">`,
       observed: "The draft names the SVG as an attachment.",
     },
     {
-      n: 20,
-      text: "The model states that Slack access is unavailable, or asks the user to provide the shutdown cost expected from the `#executives` channel, without first invoking any of the available Slack tools.",
+      n: 19,
+      text: "The model asks the user to supply the shutdown cost estimate held in the `#executives` channel, without invoking any of the available Slack tools to search for it.",
       category: "Agent Behavior",
       target: "Trajectory",
       polarity: "negative",
       status: "present",
-      observed: "Repeatedly says it cannot access #executives and asks the user for the estimate, with no Slack call made.",
+      observed: "Asks for the estimate in turn 3, and again in turn 4 after the user says the channel exists. No Slack call in either.",
     },
     {
-      n: 21,
+      n: 20,
       text: "The model links `Screenshot 2026-02-10 143217.png` to `dtdg_invoice.pdf`, recording `Datadog, Inc.` as a confirmed cancellation despite the screenshot identifying Helpshift, the Datadog invoice showing an active subscription, and Datadog never appearing in `#winddown`.",
-      category: "Factuality & Hallucination",
+      category: "Task Completion",
       target: "Final Answer Artifact",
       polarity: "negative",
       status: "present",
-      observed: "MEMORY.md and the Datadog receipt make exactly this unsupported link.",
+      observed: "MEMORY.md and the Datadog receipt make exactly this unsupported link. Filed under Factuality and Hallucination when the task was written, a category the guidelines dropped on 6 September.",
     },
   ],
 
@@ -1072,37 +1088,37 @@ Final amount due:    <amount, or "None outstanding">`,
   run: {
     summary:
       "Model A never called a Slack tool. It worked entirely from the attachments, which is exactly the failure mode the task was built to catch: connected does not mean used.",
-    score: "2 of 21 objective criteria satisfied, and both of those are the two that needed no reasoning.",
+    score: "2 of 20 objective criteria satisfied, and both of those are the two that needed no reasoning.",
     observations: [
       {
         title: "Never opened the universe",
         expected: "Read #winddown, derive the twenty-vendor pool, resolve each confirmation to a person and a date.",
         actual: "Zero Slack MCP calls across all four turns. The pool became “whatever names are legible in the attachments”.",
-        rubrics: [2, 3, 4, 5, 6, 7, 20],
+        rubrics: [2, 3, 4, 5, 6, 19],
       },
       {
         title: "Attached the Helpshift screenshot to the wrong vendor",
         expected: "Screenshot 2026-02-10 143217.png identifies Helpshift and confirms $1,500.00.",
         actual: "Linked it to dtdg_invoice.pdf and filed Datadog, Inc. as a confirmed cancellation, a vendor that appears zero times in the channel and whose invoice says active.",
-        rubrics: [1, 21],
+        rubrics: [1, 20],
       },
       {
         title: "Issued a receipt for an unconfirmed vendor",
         expected: "Singular has a debt and no confirmation, so it belongs in UNCONFIRMED.",
         actual: "singular_cancellation_receipt.pdf was written, and its balance folded into the email total.",
-        rubrics: [1, 12, 14],
+        rubrics: [1, 11, 13],
       },
       {
         title: "MEMORY.md holds two rows instead of sixteen",
         expected: "Four UNCONFIRMED, twelve NOT CANCELLED, and no entry for any receipted vendor.",
         actual: "Helpshift under UNCONFIRMED, Carta under NOT CANCELLED, plus a CONFIRMED section the prompt never asked for.",
-        rubrics: [12, 13],
+        rubrics: [6, 11, 12],
       },
       {
         title: "Handed the percentage back to the user",
         expected: "Retrieve the $50,000 estimate from #executives and report 8.1%.",
         actual: "“% of shutdown cost estimate: (needs shutdown estimate amount to compute)”, shipped in both the draft and the SVG.",
-        rubrics: [7, 15, 16, 20],
+        rubrics: [14, 15, 19],
       },
     ],
     artifacts: [

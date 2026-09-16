@@ -835,13 +835,31 @@ export default function TaskDetail() {
               </div>
             </section>
 
-            {/* Rubrics */}
+            {/* Rubrics. The shape of the block is part of what is being
+                shown, so the two counts that the guidelines now cap sit above
+                it rather than being left for the reader to tally. */}
             <section id="rubrics" className="scroll-mt-24">
               <SectionHead
                 id="rubrics"
                 title={`${t.rubrics.length} objective criteria`}
                 sub="Read any one of them with the prompt closed. The amount, the filename, the date and the person are all inside the criterion, which is what makes it ratable by someone who was never in the room."
               />
+              <div className="mb-5 grid gap-3 sm:grid-cols-2">
+                <Callout title="Five Trajectory criteria, which is the ceiling" tone="accent" icon={<Target size={12} />}>
+                  Since 10 September the block may carry at most five criteria whose evaluation
+                  target is Trajectory, and it does not have to carry any. Everything else is graded
+                  on the artifacts, where it stays gradable.{" "}
+                  <Link to="/#latest-changes" className="font-semibold text-brand-700 underline decoration-brand-300 underline-offset-2 dark:text-brand-300">
+                    What changed
+                  </Link>
+                </Callout>
+                <Callout title="Twenty vendors, six criteria" tone="ok" icon={<ClipboardList size={12} />}>
+                  A group of more than eight outcomes with the same shape is graded with one
+                  completeness criterion and at most five spot checks, never one criterion per
+                  element. Here that is criterion 6 plus the four reconciliations carrying the
+                  strongest signal.
+                </Callout>
+              </div>
               <Rubrics rubrics={t.rubrics} />
             </section>
 

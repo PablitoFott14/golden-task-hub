@@ -72,7 +72,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§Hard Client Requirements",
         links: [
           { to: "/#failure", tag: "M5", label: "If the model sails through, the task is not ready" },
-          { to: `${GT}#model-a`, tag: "GT", label: "19 of 21 criteria failed" },
+          { to: `${GT}#model-a`, tag: "GT", label: "18 of 20 criteria failed" },
         ],
       },
     ],
@@ -211,7 +211,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§5.1",
         links: [
           { to: "/#rubrics", tag: "M6", label: "A grader with the prompt closed can still rate it" },
-          { to: `${GT}#rubrics`, tag: "GT", label: "21 criteria that each pin their own value" },
+          { to: `${GT}#rubrics`, tag: "GT", label: "20 criteria that each pin their own value" },
         ],
       },
       {
@@ -244,13 +244,20 @@ export const checklist: ChecklistSection[] = [
         q: "Is every criterion in the category and evaluation target it would actually be graded under?",
         f: "Agent Behavior is always Trajectory. If you wrote it against an artifact, a state change or the final message, you are grading the deliverable and the category is wrong.",
         ref: "§5.4",
-        links: [{ to: `${GT}#rubrics`, tag: "GT", label: "Criterion 18 carries neither" }],
+        links: [
+          { to: `${GT}#rubrics`, tag: "GT", label: "Criterion 17 carries neither" },
+          { to: "/#latest-changes", tag: "NEW", label: "Factuality is out of the category table" },
+        ],
       },
       {
         id: "E8",
         q: "Are negatives around a quarter of the block and under 30%, and does any group of more than eight similar outcomes use one completeness criterion plus at most five spot checks?",
         f: "Each negative must name a failure the setup genuinely invites, not mirror every “don’t” in the prompt.",
         ref: "§5.1.1 · 5.3",
+        links: [
+          { to: `${GT}#rubrics`, tag: "GT", label: "One completeness criterion, four spot checks" },
+          { to: "/#latest-changes", tag: "NEW", label: "Trajectory criteria are capped at five" },
+        ],
       },
     ],
   },

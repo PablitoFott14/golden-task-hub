@@ -13,6 +13,7 @@ const kindTone: Record<SearchEntry["kind"], string> = {
   "QC spec": "bg-sky-500/12 text-sky-700 dark:text-sky-300",
   FAQ: "bg-violet-500/12 text-violet-700 dark:text-violet-300",
   Video: "bg-amber-500/12 text-amber-700 dark:text-amber-300",
+  Change: "bg-rose-500/12 text-rose-700 dark:text-rose-300",
 };
 
 function score(entry: SearchEntry, q: string): number {

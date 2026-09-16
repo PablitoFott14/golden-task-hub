@@ -9,6 +9,7 @@ import {
   ClipboardCheck,
   Compass,
   Gauge,
+  History,
   HelpCircle,
   Layers,
   MessageCircleQuestion,
@@ -24,8 +25,10 @@ import {
   universeVideoRuntime,
   universeVideos,
 } from "../data/videos";
+import { guidelineChanges } from "../data/changes";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
+import LatestChanges from "../components/LatestChanges";
 import QuickAnswers from "../components/QuickAnswers";
 import VideoStrip from "../components/VideoStrip";
 import { cx } from "../lib/util";
@@ -173,6 +176,12 @@ export default function Method() {
                 <Link to={{ hash: "#method" }} className="btn-primary">
                   <Compass size={16} /> Start with the method
                 </Link>
+                <Link to={{ hash: "#latest-changes" }} className="btn-ghost">
+                  <History size={16} className="text-rose-600 dark:text-rose-300" /> Latest changes
+                  <span className="rounded-full bg-rose-500/15 px-1.5 font-mono text-[11px] font-bold text-rose-700 dark:text-rose-300">
+                    {guidelineChanges.length}
+                  </span>
+                </Link>
                 <Link to={{ hash: "#universe-videos" }} className="btn-ghost">
                   <PlayCircle size={16} className="text-amber-600 dark:text-amber-300" /> Universe
                   videos
@@ -244,6 +253,21 @@ export default function Method() {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* What changed in the guidelines. Directly under the hero because the
+          reader this band exists for is the one who already knows the method
+          and has to find out what moved since they last built a task. It stays
+          a filtered set rather than a changelog: see changes.ts. */}
+      <section
+        id="latest-changes"
+        className="scroll-mt-20 border-b border-ink-200/70 bg-ink-50"
+      >
+        <div className="wrap py-14">
+          <Reveal>
+            <LatestChanges />
+          </Reveal>
         </div>
       </section>
 

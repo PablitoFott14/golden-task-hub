@@ -130,7 +130,7 @@ export const methodSteps: MethodStep[] = [
       body: "If yes, the turn is a standalone request wearing a follow up costume. Revise it or drop it.",
     },
     inTask: {
-      body: "Model A never called a Slack tool at all. It worked from the attachments alone and failed 19 of 21 objective criteria, and the two it passed were the two that needed no reasoning.",
+      body: "Model A never called a Slack tool at all. It worked from the attachments alone and failed 18 of 20 objective criteria, and the two it passed were the two that needed no reasoning.",
       link: { to: `${GT}#model-a`, tag: "GT", label: "Where the run actually broke" },
     },
   },
@@ -145,7 +145,7 @@ export const methodSteps: MethodStep[] = [
     moves: [
       "Walk the prompt once per turn and cover every ask, including the ones introduced mid conversation.",
       "Embed the exact value, filename, date or classification inside the criterion text.",
-      "Cover the trajectory too. Agent Behavior is always Trajectory, never an artifact.",
+      "Cover the trajectory too, to a maximum of five criteria. Agent Behavior is always Trajectory, never an artifact.",
       "Keep negatives near a quarter of the block, each naming a failure the setup genuinely invites.",
     ],
     produces: "A block that can be rated without you in the room.",
@@ -154,8 +154,8 @@ export const methodSteps: MethodStep[] = [
       body: "Only −5, −3, −1, +1, +3, +5. Anything outside it fails Rubric Structure on its own, and weight measures difficulty rather than importance.",
     },
     inTask: {
-      body: "Twenty one criteria, each pinning its own amount, filename, date and person. Criterion 18 is the counter example worth studying: it ships with no category and no evaluation target.",
-      link: { to: `${GT}#rubrics`, tag: "GT", label: "All 21 criteria and how Model A rated" },
+      body: "Twenty criteria, each pinning its own amount, filename, date and person. Five of them target the Trajectory, which is the ceiling. Criterion 17 is the counter example worth studying: it ships with no category and no evaluation target.",
+      link: { to: `${GT}#rubrics`, tag: "GT", label: "All 20 criteria and how Model A rated" },
     },
   },
   {
