@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
+  ArrowUpRight,
   BookOpenCheck,
   CheckCircle2,
   ChevronRight,
@@ -13,6 +14,7 @@ import {
   HelpCircle,
   Layers,
   MessageCircleQuestion,
+  MessageSquareQuote,
   PlayCircle,
   ShieldAlert,
   Sparkles,
@@ -26,6 +28,7 @@ import {
   universeVideos,
 } from "../data/videos";
 import { guidelineChanges } from "../data/changes";
+import { feedbackThread } from "../data/community";
 import { checkCount, checklist } from "../data/checklist";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
@@ -177,6 +180,19 @@ export default function Method() {
                 <Link to={{ hash: "#method" }} className="btn-primary">
                   <Compass size={16} /> Start with the method
                 </Link>
+                {/* Feedback on a task is asked for in the community thread,
+                    not here. It is the one button in this row that leaves the
+                    hub, so it is tinted rather than ghosted and carries the
+                    external arrow. */}
+                <a
+                  href={feedbackThread.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn bg-gold-500/15 text-gold-800 ring-1 ring-gold-500/30 hover:bg-gold-500/25 dark:text-gold-300"
+                >
+                  <MessageSquareQuote size={16} /> {feedbackThread.cta}
+                  <ArrowUpRight size={14} className="text-gold-600 dark:text-gold-400" />
+                </a>
                 <Link to={{ hash: "#latest-changes" }} className="btn-ghost">
                   <History size={16} className="text-rose-600 dark:text-rose-300" /> Latest changes
                   <span className="rounded-full bg-rose-500/15 px-1.5 font-mono text-[11px] font-bold text-rose-700 dark:text-rose-300">
