@@ -30,7 +30,9 @@ export interface SpecRevision {
   id: string;
   /** The date the export carries. */
   date: string;
-  /** The revision as a whole, in one line. */
+  /** The revision named in one line, the way the banner heads it. */
+  title: string;
+  /** The revision as a whole, in a sentence. */
   note: string;
   changes: SpecChange[];
 }
@@ -44,7 +46,8 @@ export const specRevisions: SpecRevision[] = [
   {
     id: "2026-09-20",
     date: "Sep 20, 2026",
-    note: "One dimension added and six rewritten. The spec now scores 22 dimensions rather than 21.",
+    title: "A new scoring dimension, split failures, and narrowed guidance",
+    note: "Seven changes landed together in this revision: one new scoring dimension (Golden/Preferred Run Selection), a restructured Subjective Block Scope rubric that splits its two failures apart, Trajectory Exclusion narrowed to leave conversation logs alone, and guidance added or clarified on four more requirements. The spec now scores 22 dimensions rather than 21.",
     changes: [
       {
         group: "Trajectory",

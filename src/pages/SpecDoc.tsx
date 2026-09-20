@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
+  ArrowRight,
   ChevronDown,
   CircleCheck,
   CircleSlash,
@@ -182,7 +183,7 @@ export default function SpecDoc() {
         <SectionHeading
           eyebrow="QC Spec"
           title="Spec Doc"
-          sub={`The exact standard a task is graded against, across ${dimensionCount} dimensions in ${specGroups.length} groups. Search the doc, or jump to a section.`}
+          sub={`The exact standard a task is graded against, across ${dimensionCount} dimensions in ${specGroups.length} groups. Search the doc, review the dated log, or jump to a section.`}
         />
       </Reveal>
 
@@ -217,12 +218,18 @@ export default function SpecDoc() {
 
       {!searching && (
         <Reveal>
-          <div className="mt-4 flex items-center gap-3 rounded-2xl border border-brand-200/80 bg-brand-50/70 p-4 dark:border-brand-500/30 dark:bg-brand-500/10">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-600 text-white shadow-glow">
+          <UpdateLogBanner onOpenLog={() => goTo("log")} />
+        </Reveal>
+      )}
+
+      {!searching && (
+        <Reveal>
+          <div className="mt-4 flex items-center gap-3 rounded-2xl border border-ink-200/70 bg-surface p-4">
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-ink-100 text-ink-500">
               <ClipboardCheck size={17} />
             </span>
             <span className="min-w-0 flex-1">
-              <span className="block text-[10px] font-bold uppercase tracking-[0.18em] text-brand-700 dark:text-brand-200">
+              <span className="block text-[10px] font-bold uppercase tracking-[0.18em] text-ink-400">
                 What a reviewer scores you on
               </span>
               <span className="mt-0.5 block text-[12.5px] leading-relaxed text-ink-600">
@@ -711,6 +718,73 @@ function ChangeLogSection() {
         ))}
       </div>
     </section>
+  );
+}
+
+/**
+ * The update log banner, directly under the search box and above the rail.
+ *
+ * The Change Log pane is only found by someone who goes looking for it, and a
+ * reader arriving at the spec has no way of knowing the standard moved under
+ * them. This is the same content, headed by the newest revision, sitting where
+ * it cannot be missed. Collapsed it is a headline and a sentence; opened it is
+ * the revision in full, with a way through to the pane.
+ */
+function UpdateLogBanner({ onOpenLog }: { onOpenLog: () => void }) {
+  const [open, setOpen] = useState(false);
+  const rev = specRevisions[0];
+  const requirements = new Set(rev.changes.map((c) => c.dimension)).size;
+
+  return (
+    <div className="mt-4 overflow-hidden rounded-2xl border border-brand-200/80 bg-brand-50/70 dark:border-brand-500/30 dark:bg-brand-500/10">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="flex w-full items-start gap-3 p-4 text-left transition hover:bg-brand-100/40 dark:hover:bg-brand-500/15"
+      >
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-600 text-white shadow-glow">
+          <History size={17} />
+        </span>
+
+        <span className="min-w-0 flex-1">
+          <span className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+            <span className="mono-label text-brand-700 dark:text-brand-200">Update log</span>
+            <span className="font-mono text-[11px] text-ink-500">
+              {specChangeCount} logged change{specChangeCount === 1 ? "" : "s"}
+            </span>
+            <span className="rounded-md bg-brand-600 px-2 py-0.5 font-mono text-[11px] font-bold text-white">
+              {rev.date}
+            </span>
+            <span className="font-mono text-[11px] text-ink-500">
+              {requirements} requirement{requirements === 1 ? "" : "s"} updated
+            </span>
+          </span>
+          <span className="mt-1.5 block text-[14px] font-bold leading-snug text-ink-900">
+            {rev.title}
+          </span>
+          <span className="mt-1 block text-[12.5px] leading-relaxed text-ink-600">{rev.note}</span>
+        </span>
+
+        <ChevronDown
+          size={18}
+          aria-hidden
+          className={cx("mt-1 shrink-0 text-ink-400 transition-transform duration-300", open && "rotate-180")}
+        />
+      </button>
+
+      {open && (
+        <div className="border-t border-brand-200/70 p-4 dark:border-brand-500/25">
+          <div className="space-y-3">
+            {rev.changes.map((ch) => (
+              <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} />
+            ))}
+          </div>
+          <button onClick={onOpenLog} className="btn-ghost mt-4">
+            Open the full log <ArrowRight size={14} />
+          </button>
+        </div>
+      )}
+    </div>
   );
 }
 
