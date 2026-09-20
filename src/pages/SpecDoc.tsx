@@ -239,25 +239,6 @@ export default function SpecDoc() {
         </Reveal>
       )}
 
-      {!searching && (
-        <Reveal>
-          <div className="mt-4 flex items-center gap-3 rounded-2xl border border-ink-200/70 bg-surface p-4">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-ink-100 text-ink-500">
-              <ClipboardCheck size={17} />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block text-[10px] font-bold uppercase tracking-[0.18em] text-ink-400">
-                What a reviewer scores you on
-              </span>
-              <span className="mt-0.5 block text-[12.5px] leading-relaxed text-ink-600">
-                Every dimension, every scored option and the full appendix, in the reviewer's own
-                wording. Nothing is summarised.
-              </span>
-            </span>
-          </div>
-        </Reveal>
-      )}
-
       {searching ? (
         <SearchResults query={query.trim()} />
       ) : (
