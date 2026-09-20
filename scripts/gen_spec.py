@@ -1,10 +1,11 @@
 """
 Regenerate src/data/specDoc.ts from the deployed QC spec viewer.
 
-The deployed page at https://qc-spec-mt-rubrics.vercel.app/ is the source of
-truth. It is currently ahead of the CSV exports sitting on Drive, which are
-missing "Milestones - Milestone Annotations", so parse the page rather than
-the CSVs.
+The deployed page at https://qc-spec-mt-rubrics.vercel.app/ used to be ahead of
+the CSV exports on Drive. As of the Sep 20, 2026 export that is the other way
+round: the CSV now carries every dimension, "Milestones - Milestone
+Annotations" included, and the viewer is a revision behind. Redeploy the viewer
+from the CSVs before running this, or it will put the spec back a revision.
 
     curl -s https://qc-spec-mt-rubrics.vercel.app/ -o qcspec.html
     python scripts/gen_spec.py qcspec.html
@@ -158,19 +159,31 @@ out = io.StringIO()
 out.write('''import type { XLink } from "./types";
 
 /**
- * The Quality Control spec, transcribed from the deployed viewer at
- * https://qc-spec-mt-rubrics.vercel.app/, which is the source of truth and is
- * currently ahead of the CSV exports on Drive.
+ * The Quality Control spec.
  *
- * Generated. Re-run when the spec sheet is re-exported and redeployed:
+ * `specGroups` below is the "QC spec MT Rubrics - original.csv" export dated
+ * Sep 20, 2026. That export is the newest revision and the first one to carry
+ * every dimension, "Milestones - Milestone Annotations" included, so it is now
+ * the source rather than the deployed viewer. The appendix blocks further down
+ * still come from the viewer at https://qc-spec-mt-rubrics.vercel.app/, which
+ * the export does not cover.
+ *
+ * Careful: the viewer is still serving the PREVIOUS revision, so
  *
  *   curl -s https://qc-spec-mt-rubrics.vercel.app/ -o qcspec.html
  *   python gen_spec.py qcspec.html
  *
+ * would put the dimensions back a revision. Redeploy the viewer from the CSVs
+ * before regenerating from it.
+ *
  * Question text, guidance, option wording and definitions are verbatim, em
  * dashes and curly quotes included, because this is a transcription of the
- * standard rather than hub copy. Only `dimensionLinks` at the foot of the file
- * is hand-authored.
+ * standard rather than hub copy. `dimensionLinks` at the foot of the file is
+ * the one hand-authored block, and it is written by gen_spec.py, so that is
+ * where an edit to it has to go.
+ *
+ * What moved between revisions is recorded in ./specLog.ts and rendered as the
+ * Change Log pane on /spec.
  */
 export const SPEC_URL = "https://qc-spec-mt-rubrics.vercel.app/";
 

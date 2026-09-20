@@ -23,7 +23,7 @@ section, pre-submit check, QC dimension and FAQ answer at once.
 | **The Method** | Nine steps derived from the rationale behind a task that passed. Each card carries the principle in one line, the minimal explanation, the moves it takes, the rule attached to it, and a link into the place in the Golden Task where it landed. |
 | **Golden Tasks** | A card per worked task, and a walkthrough behind each one: the conversation as the agent received it, the input pack, the evidence ledger behind every decision, the objective and subjective rubric sets, the designed friction, and what the failing run actually did. They are reference material for calibrating complexity, never something to copy. |
 | **Pre-Submit** | The 28-check gate in seven sections, one line per check, with progress, a jump nav, `Show guidance` and `Submit & reset` in a sticky sidebar. Ticks are kept in the browser, and the printable PDF is one click away. |
-| **QC Spec** | The full spec doc: a sidebar of the 8 dimension groups and the 3 appendix sections, one pane at a time, every scored question with its guidance and its Fail / Non-Fail / Pass options. Search the whole thing with `/`. |
+| **QC Spec** | The full spec doc: a sidebar of the 8 dimension groups, the 3 appendix sections and the change log, one pane at a time, every scored question with its guidance and its Fail / Non-Fail / Pass options. Search the whole thing with `/`. |
 | **FAQ** | The seven questions new contributors actually ask, searchable, each answer open beside its question and carrying the guidelines sections it comes from. |
 
 Resources are cross-linked in both directions. A pre-submit check points at the part of the Golden

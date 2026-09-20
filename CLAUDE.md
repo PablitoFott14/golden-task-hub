@@ -146,11 +146,25 @@ python scripts/gen_spec.py qcspec.html
 The UI never links out to that URL. The spec lives inside the hub, so `SPEC_URL` stays in the data
 as provenance for the generator and is not rendered anywhere.
 
-Parse the deployed page, not the CSVs sitting on Drive. Those exports are currently a revision
-behind and are missing `Milestones - Milestone Annotations`. Question text, guidance, option
-wording and appendix definitions are stored **verbatim**, em dashes and curly quotes included,
-because that block is a transcription of the standard rather than hub copy. Only `dimensionLinks`
-at the foot of the file is hand-authored, so update it there when a dimension is added or renamed.
+**That order flipped on Sep 20, 2026.** The CSV export is now the newest revision and the first
+one to carry `Milestones - Milestone Annotations`, so `specGroups` was taken from
+`Evals/Project Resources/QC spec MT Rubrics - original.csv` and **the deployed viewer is a
+revision behind**. Running `gen_spec.py` against the live page right now would put the dimensions
+back. Redeploy the viewer from the CSVs first, which is what the `qc-spec-sync` skill does. The
+appendix blocks are untouched by that export and still come from the viewer.
+
+Question text, guidance, option wording and appendix definitions are stored **verbatim**, em
+dashes and curly quotes included, because that block is a transcription of the standard rather
+than hub copy. `dimensionLinks` at the foot of the file is the one hand-authored block, and
+**gen_spec.py is what writes it**, so an edit made in `specDoc.ts` alone is lost on the next
+regeneration.
+
+What moved between revisions lives in [src/data/specLog.ts](src/data/specLog.ts), hand-authored by
+diffing the new export against the one the hub was carrying, and renders as the **Change Log** pane
+on `/spec`. It is a third rail group under Dimensions and Appendix, built the same way as the rest
+of the page: one rail entry with a count, one pane at a time, cards grouped under the revision
+date, and its entries fold into the page search with everything else. An entry earns its place only
+where the standard actually changed, so a revision that moves nothing adds nothing.
 
 ### The method is the spine
 

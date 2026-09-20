@@ -475,7 +475,7 @@ export default function Method() {
                 to: "/spec",
                 icon: <Gauge size={18} />,
                 title: "QC Spec",
-                body: "The twenty one questions your task is scored against, and the rubric error catalogue behind them.",
+                body: "The twenty two questions your task is scored against, and the rubric error catalogue behind them.",
                 tone: "bg-sky-500/12 text-sky-700 ring-1 ring-sky-500/25 dark:text-sky-300",
               },
               {

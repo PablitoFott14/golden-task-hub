@@ -6,6 +6,7 @@ import { authoringStandards, rubricQualityIssues, specGroups, weightBuckets } fr
 import { faq } from "./faq";
 import { guidelineChanges } from "./changes";
 import { universeVideos } from "./videos";
+import { specRevisions } from "./specLog";
 
 /** Matches the nav ids the Spec Doc page derives from its group names. */
 const slug = (s: string) => s.replace(/[^a-z0-9]/gi, "-").toLowerCase();
@@ -189,6 +190,16 @@ export const searchIndex: SearchEntry[] = [
     to: "/spec#weights",
     terms: `${b.definition} ${b.examples.join(" ")}`,
   })),
+
+  ...specRevisions.flatMap<SearchEntry>((rev) =>
+    rev.changes.map((ch) => ({
+      kind: "QC spec" as const,
+      title: `Spec change · ${ch.dimension}`,
+      hint: `${rev.date} · ${ch.summary}`,
+      to: "/spec#log",
+      terms: `${ch.group} ${ch.detail} spec change log revision updated`,
+    }))
+  ),
 
   ...authoringStandards.map<SearchEntry>((st) => ({
     kind: "QC spec",

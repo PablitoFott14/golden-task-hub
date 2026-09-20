@@ -8,6 +8,7 @@ import {
   ClipboardCheck,
   FileText,
   Flag,
+  History,
   Image as ImageIcon,
   ListChecks,
   MessagesSquare,
@@ -38,6 +39,13 @@ import {
   type SpecOption,
   type WeightBucket,
 } from "../data/specDoc";
+import {
+  specChangeCount,
+  specLogNote,
+  specRevisions,
+  type SpecChange,
+  type SpecChangeKind,
+} from "../data/specLog";
 import { Crosslinks, Reveal, SectionHeading } from "../components/ui";
 import { cx } from "../lib/util";
 
@@ -76,7 +84,11 @@ const appendixNav: NavItem[] = [
   { id: "standards", label: "Authoring Standards", icon: PenLine, count: authoringStandards.length },
 ];
 
-const NAV_IDS = new Set([...dimensionNav, ...appendixNav].map((n) => n.id));
+const logNav: NavItem[] = [
+  { id: "log", label: "Change Log", icon: History, count: specChangeCount },
+];
+
+const NAV_IDS = new Set([...dimensionNav, ...appendixNav, ...logNav].map((n) => n.id));
 const dimensionCount = specGroups.reduce((n, g) => n + g.dimensions.length, 0);
 
 /* ---- text highlighting for search ---- */
@@ -237,6 +249,10 @@ export default function SpecDoc() {
               {appendixNav.map((item) => (
                 <SideButton key={item.id} item={item} active={active === item.id} onClick={() => goTo(item.id)} />
               ))}
+              <SideLabel className="mt-3">History</SideLabel>
+              {logNav.map((item) => (
+                <SideButton key={item.id} item={item} active={active === item.id} onClick={() => goTo(item.id)} />
+              ))}
             </div>
           </nav>
 
@@ -253,6 +269,7 @@ export default function SpecDoc() {
             {active === "rubric-quality" && <RubricQualitySection />}
             {active === "weights" && <WeightSection />}
             {active === "standards" && <StandardsSection />}
+            {active === "log" && <ChangeLogSection />}
           </motion.div>
         </div>
       )}
@@ -620,6 +637,83 @@ function StandardsSection() {
   );
 }
 
+const changeKindLabel: Record<SpecChangeKind, string> = {
+  added: "New dimension",
+  options: "Scored options",
+  guidance: "Guidance",
+  wording: "Wording",
+};
+
+const changeKindTone: Record<SpecChangeKind, string> = {
+  added: "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-200",
+  options: "bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-200",
+  guidance: "bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-200",
+  wording: "bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-200",
+};
+
+const changeKindBorder: Record<SpecChangeKind, string> = {
+  added: "border-l-emerald-400 dark:border-l-emerald-500/60",
+  options: "border-l-rose-400 dark:border-l-rose-500/60",
+  guidance: "border-l-sky-400 dark:border-l-sky-500/60",
+  wording: "border-l-amber-400 dark:border-l-amber-500/60",
+};
+
+function ChangeCard({ ch, query }: { ch: SpecChange; query?: string }) {
+  return (
+    <div className={cx("card border-l-4 p-4", changeKindBorder[ch.kind])}>
+      <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
+        <span className={cx("chip", changeKindTone[ch.kind])}>{changeKindLabel[ch.kind]}</span>
+        <h3 className="text-[15px] font-bold text-ink-900">
+          <Highlight text={ch.dimension} query={query} />
+        </h3>
+        <span className="text-[11px] font-bold uppercase tracking-wide text-ink-400">
+          <Highlight text={ch.group} query={query} />
+        </span>
+      </div>
+      <p className="mt-1 text-[13px] font-semibold leading-relaxed text-ink-800">
+        <Highlight text={ch.summary} query={query} />
+      </p>
+      <p className="mt-1.5 text-[13px] leading-relaxed text-ink-600">
+        <Highlight text={ch.detail} query={query} />
+      </p>
+    </div>
+  );
+}
+
+/* One pane per revision, grouped the way Rubric Quality groups by severity. */
+function ChangeLogSection() {
+  return (
+    <section>
+      <SectionHeader
+        icon={History}
+        title="Change Log"
+        note={`${specChangeCount} change${specChangeCount === 1 ? "" : "s"} across ${
+          specRevisions.length
+        } revision${specRevisions.length === 1 ? "" : "s"}`}
+      />
+      <p className="mb-5 text-[13px] leading-relaxed text-ink-500">{specLogNote}</p>
+      <div className="space-y-6">
+        {specRevisions.map((rev) => (
+          <div key={rev.id}>
+            <div className="mb-2 flex items-center gap-2">
+              <span className="chip bg-brand-100 text-brand-700 dark:bg-brand-500/20 dark:text-brand-200">
+                {rev.date}
+              </span>
+              <span className="text-xs font-semibold text-ink-400">{rev.changes.length}</span>
+            </div>
+            <p className="mb-3 text-[13px] leading-relaxed text-ink-600">{rev.note}</p>
+            <div className="space-y-3">
+              {rev.changes.map((ch) => (
+                <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 /* ---- search across the whole spec ---- */
 
 function ResultLabel({ children }: { children: ReactNode }) {
@@ -658,11 +752,19 @@ function SearchResults({ query }: { query: string }) {
 
   const standardResults = authoringStandards.filter((st) => has(st.name) || has(st.body));
 
+  const changeResults = specRevisions.flatMap((rev) =>
+    rev.changes.filter(
+      (ch) =>
+        has(ch.dimension) || has(ch.group) || has(ch.summary) || has(ch.detail) || has(rev.date)
+    )
+  );
+
   const total =
     groupResults.reduce((n, r) => n + r.dims.length, 0) +
     weightResults.length +
     issueResults.length +
-    standardResults.length;
+    standardResults.length +
+    changeResults.length;
 
   return (
     <div className="mt-6">
@@ -720,6 +822,17 @@ function SearchResults({ query }: { query: string }) {
               <div className="space-y-3">
                 {standardResults.map((st) => (
                   <StandardCard key={st.name} st={st} query={query} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {changeResults.length > 0 && (
+            <div>
+              <ResultLabel>Change Log</ResultLabel>
+              <div className="space-y-3">
+                {changeResults.map((ch) => (
+                  <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} query={query} />
                 ))}
               </div>
             </div>

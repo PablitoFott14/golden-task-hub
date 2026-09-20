@@ -1,19 +1,31 @@
 import type { XLink } from "./types";
 
 /**
- * The Quality Control spec, transcribed from the deployed viewer at
- * https://qc-spec-mt-rubrics.vercel.app/, which is the source of truth and is
- * currently ahead of the CSV exports on Drive.
+ * The Quality Control spec.
  *
- * Generated. Re-run when the spec sheet is re-exported and redeployed:
+ * `specGroups` below is the "QC spec MT Rubrics - original.csv" export dated
+ * Sep 20, 2026. That export is the newest revision and the first one to carry
+ * every dimension, "Milestones - Milestone Annotations" included, so it is now
+ * the source rather than the deployed viewer. The appendix blocks further down
+ * still come from the viewer at https://qc-spec-mt-rubrics.vercel.app/, which
+ * the export does not cover.
+ *
+ * Careful: the viewer is still serving the PREVIOUS revision, so
  *
  *   curl -s https://qc-spec-mt-rubrics.vercel.app/ -o qcspec.html
  *   python gen_spec.py qcspec.html
  *
+ * would put the dimensions back a revision. Redeploy the viewer from the CSVs
+ * before regenerating from it.
+ *
  * Question text, guidance, option wording and definitions are verbatim, em
  * dashes and curly quotes included, because this is a transcription of the
- * standard rather than hub copy. Only `dimensionLinks` at the foot of the file
- * is hand-authored.
+ * standard rather than hub copy. `dimensionLinks` at the foot of the file is
+ * the one hand-authored block, and it is written by gen_spec.py, so that is
+ * where an edit to it has to go.
+ *
+ * What moved between revisions is recorded in ./specLog.ts and rendered as the
+ * Change Log pane on /spec.
  */
 export const SPEC_URL = "https://qc-spec-mt-rubrics.vercel.app/";
 
@@ -165,7 +177,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Completeness",
         "question": "Rate the Completeness of the Trajectory dimension.",
-        "description": "",
+        "description": "This error dimension revolves around whether an agent trajectory is either missing or truncated (incomplete).",
         "errorTags": [
           {
             "label": "Fail - Missing Trajectory",
@@ -180,6 +192,29 @@ export const specGroups: SpecGroup[] = [
           },
           {
             "text": "All trajectories are present and complete.",
+            "score": 5,
+            "justify": false
+          }
+        ]
+      },
+      {
+        "name": "Golden/Preferred Run Selection",
+        "question": "Evaluate the Golden/Preferred Run Selection",
+        "description": "This dimension is binary: tasks are only penalized (non-fail) when no preferred run is selected.",
+        "errorTags": [
+          {
+            "label": "Non-Fail - No Run Selected",
+            "type": "non-fail"
+          }
+        ],
+        "options": [
+          {
+            "text": "[Non-Fail - No Run Selected] No preferred run is selected for the golden trajectory",
+            "score": 3,
+            "justify": true
+          },
+          {
+            "text": "A run is selected for the golden trajectory.",
             "score": 5,
             "justify": false
           }
@@ -221,7 +256,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Turn Structure & Dependency",
         "question": "Rate the Turn Structure & Dependency of the Multi-Turn dimension.",
-        "description": "Multi-turn tasks carry 2–4 follow-up turns after the opening prompt. Later turns must depend on state established earlier — if the turns could be reordered or issued in parallel without changing the outcome, the task is a batch of single-turn requests. Each follow-up must do real work: deliver a withheld asset, extend a requirement, correct an error, tighten a constraint, or answer a clarification the agent asked for.  For all options except the last, apply the error category.",
+        "description": "Multi-turn tasks carry at least 2–4 follow-up turns after the opening prompt. Later turns must depend on state established earlier — if the turns could be reordered or issued in parallel without changing the outcome, the task is a batch of single-turn requests. Each follow-up must do real work: deliver a withheld asset, extend a requirement, correct an error, tighten a constraint, or answer a clarification the agent asked for.  For all options except the last, apply the error category.",
         "errorTags": [
           {
             "label": "Fail - No Turn Dependency",
@@ -244,7 +279,7 @@ export const specGroups: SpecGroup[] = [
             "justify": true
           },
           {
-            "text": "Between 2 and 4 follow-up turns, each delivering, extending, correcting, constraining, or answering.\nLater turns depend on state established earlier in the conversation.",
+            "text": "There are at least 2-4 meaningful follow-up turns, each delivering, extending, correcting, constraining, or answering. Later turns depend on state established earlier in the conversation.",
             "score": 5,
             "justify": false
           }
@@ -354,7 +389,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Continuation Criteria & Assets",
         "question": "Rate the Continuation Criteria & Assets of the Milestones dimension.",
-        "description": "Each milestone carries continuation criteria (what must be true before the simulator advances) and the assets delivered at that step. Criteria must be checkable without a judgment call; assets_delivered must list every deferred file, and those files must exist in input_files/.  For all options except the last, apply an error category.\n\nNote: You may encounter tasks with an older taxonomy which includes only the milestone text itself (and the turn) without a continuation criteria field: Rate this dimension a 5 for those cases.",
+        "description": "Each milestone carries continuation criteria (what must be true before the simulator advances) and the assets delivered at that step. Criteria must be checkable without a judgment call; assets_delivered must list every deferred file, and those files must exist in input_files/.  For all options except the last, apply an error category.\n\nNote: You may encounter tasks with an older taxonomy which includes only the milestone text itself (and the turn) without a continuation criteria field: Rate this dimension a 5 for those cases.\nNote: A continuation criterion that is malformed such that it evaluates nothing (e.g. it refers to a rubric item that does not exist) is a failing issue under this dimension only where it leaves the requirement its milestone states unchecked. Where that requirement is still checked, whether by another criterion on the same milestone, or by a criterion on another milestone belonging to the same turn, record it under Milestones - Milestone Annotations as an inaccurate continuation criterion instead.",
         "errorTags": [
           {
             "label": "Non-Fail - Loose Continuation Criteria",
@@ -446,7 +481,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Trajectory Exclusion",
         "question": "Rate the Trajectory Exclusion of the Golden Solution dimension.",
-        "description": "golden/ ships finished artifacts only. The external judge receives the golden ARTIFACTS and never the golden trajectory — anything left in the folder describing how the answer was reached leaks the solution path into grading.  For all options except the last, apply the error category.",
+        "description": "golden/ ships finished artifacts only. The external judge receives the golden ARTIFACTS and never the golden trajectory — anything left in the folder describing how the answer was reached leaks the solution path into grading.\n\nDo NOT assess conversation logs in this dimension (those are covered in “Simulator Answer Leak”)\n\nCaveats in the content also do not count toward leakage.\n\nDefinitions:\n**Narration**: Text that describes the making of the artifact: which tools were run, what was tried, what got fixed, in what order, etc.\n\n**Caveat**: Text about the state of the deliverable: a source was unreadable, coverage is partial, a value is estimated, some rows are unverified. It tells the reader what they need to know to use the file correctly, and reveals nothing about how the work was done.\n\nExamples:\nFail: \"I first tried pdftotext on the receipts but it returned empty, so I re-ran them through OCR at 3x upscaling; two still failed and I came back to them after you asked about the March totals.\"\nNot fail: \"Receipts 4 and 7 were illegible; those rows are marked unverified.\"\n\nFail: \"Only 3 of the 5 rooms are covered because the walkthrough video was the last file I opened and I ran out of turns.\"\nNot fail: \"3 of 5 rooms are covered; no photos were provided for the utility room or the garage.\"",
         "errorTags": [
           {
             "label": "Fail - Golden Contains Trajectory or Narration",
@@ -455,12 +490,12 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - Golden Contains Trajectory or Narration]\ngolden/ contains a trajectory, trace, conversation log, status file, or any narration describing how the artifacts were produced.",
+            "text": "[Fail - Golden Contains Trajectory or Narration]\ngolden/ contains content or narration (excluding conversation logs) that describes how the answer was reached.",
             "score": 2,
             "justify": true
           },
           {
-            "text": "golden/ contains finished artifacts only, with filenames matching the prompt verbatim.",
+            "text": "golden/ contains finished artifacts that don’t have any solution leakage",
             "score": 5,
             "justify": false
           }
@@ -502,7 +537,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Realism",
         "question": "Rate the Realism of the Input Artifacts dimension.",
-        "description": "Tasks should match real-world use-cases and not look contrived or made up. Real user data is messy — IMG_0427.HEIC, duplicates, missing timestamps, blurry phone shots, scanned-skewed PDFs, mixed orientations. Tasks where input_files/ is a curated set of perfectly-cropped JPGs are contrived.  For all options except the last, apply an error category.",
+        "description": "Tasks should match real-world use-cases and not look contrived or made up. Real user data is messy — IMG_0427.HEIC, duplicates, missing timestamps, blurry phone shots, scanned-skewed PDFs, mixed orientations. Tasks where input_files/ is a curated set of perfectly-cropped JPGs are contrived.\n\nThe intent behind this category is to catch cases of super-clean images that look completely machine-made/printed. In other words, inputs that look \"realistic\" (i.e., look handwritten, have some sort of \"messy\" qualities, or aren't just very clean screenshots) should be fine",
         "errorTags": [
           {
             "label": "Non-Fail - Partially Contrived Inputs",
@@ -685,12 +720,17 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - Subjective Block Scope Violation]\nThe subjective block contains 2+ deterministic value checks, file-existence checks, or process checks belonging to the objective block that are non-visual/unrelated to formatting, presentation, layout, etc.; or a criterion names no observable property of the render (e.g. \"looks professional\") such that two reviewers could reasonably disagree on PASS/FAIL.",
+            "text": "[Fail - Subjective Block Scope Violation]\nThe subjective block contains 2+ deterministic value checks, file-existence checks, or process checks belonging to the objective block that are non-visual/unrelated to formatting, presentation, layout, etc.",
             "score": 2,
             "justify": true
           },
           {
-            "text": "[Non-Fail - Minor Scope Bleed]\nThe block is mostly presentation-scoped, but one criterion restates a check already covered by the objective block.",
+            "text": "[Fail - Subjective Block Scope Violation] 2+ criteria name no observable property of the render (e.g. \"looks professional\") such that two reviewers could reasonably disagree on PASS/FAIL.",
+            "score": 2,
+            "justify": true
+          },
+          {
+            "text": "[Non-Fail - Minor Scope Bleed]\nThe block is mostly presentation-scoped, but exactly 1 criterion either belongs to the objective block (deterministic value / file-existence / process check) or names no observable property of the render.",
             "score": 3,
             "justify": true
           },
