@@ -149,7 +149,7 @@ function scoreStyle(score: number) {
 }
 
 export default function SpecDoc() {
-  const { hash } = useLocation();
+  const { hash, key } = useLocation();
   const [active, setActive] = useState<string>(dimensionNav[0].id);
   const [query, setQuery] = useState("");
   const searchRef = useRef<HTMLInputElement>(null);
@@ -159,7 +159,15 @@ export default function SpecDoc() {
   /* Inbound cross-links target /spec#<group-slug>, so the hash picks the tab.
      A /spec#dim-<name> link picks the tab that holds that dimension instead,
      and the layout's own scroll effect then finds the card once the pane has
-     rendered. That is what every entry in the change log points at. */
+     rendered. That is what every entry in the change log points at.
+
+     `key` is in the dependency list, not just `hash`. The rail moves the pane
+     without touching the URL, so after a click or two the hash names a section
+     that is no longer on screen. Clicking a link that targets it then leaves
+     the hash string unchanged, and on `[hash]` alone the effect never re-runs:
+     the pane never switches, the anchor never exists, and the click is dead.
+     Every navigation gets a fresh key, so this re-runs whether or not the
+     string moved. The same reason Layout's scroll effect watches it. */
   useEffect(() => {
     const id = decodeURIComponent(hash.replace(/^#/, ""));
     if (!id) return;
@@ -170,7 +178,7 @@ export default function SpecDoc() {
       setActive(dimensionHome[id]);
       setQuery("");
     }
-  }, [hash]);
+  }, [hash, key]);
 
   // "/" focuses search, Escape clears it, a Ctrl+F feel scoped to this page.
   useEffect(() => {
