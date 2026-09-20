@@ -160,11 +160,22 @@ than hub copy. `dimensionLinks` at the foot of the file is the one hand-authored
 regeneration.
 
 What moved between revisions lives in [src/data/specLog.ts](src/data/specLog.ts), hand-authored by
-diffing the new export against the one the hub was carrying, and renders as the **Change Log** pane
-on `/spec`. It is a third rail group under Dimensions and Appendix, built the same way as the rest
-of the page: one rail entry with a count, one pane at a time, cards grouped under the revision
-date, and its entries fold into the page search with everything else. An entry earns its place only
-where the standard actually changed, so a revision that moves nothing adds nothing.
+diffing the new export against the one the hub was carrying, and renders in two places. The
+**Change Log** pane is a third rail group under Dimensions and Appendix, built the same way as the
+rest of the page: one rail entry with a count, one pane at a time, cards grouped under the revision
+date, and its entries fold into the page search with everything else. The **update log banner**
+sits above the rail, directly under the search box, because the pane is only found by a reader who
+goes looking and someone arriving at the spec has no way of knowing the standard moved under them.
+It heads the newest revision, opens to the same cards, and links through to the pane. An entry
+earns its place only where the standard actually changed, so a revision that moves nothing adds
+nothing.
+
+**Every entry links to the dimension it changed.** Each dimension card carries a `dim-<name>`
+anchor, `dimensionHome` in [SpecDoc.tsx](src/pages/SpecDoc.tsx) maps that anchor back to the pane
+holding it, and the hash effect opens that pane so `/spec#dim-realism` works cold as well as from
+inside the page. The anchor is derived from `SpecChange.dimension`, which has to match the name in
+`specDoc.ts` character for character: **a renamed dimension silently turns every log link at it
+into a dead one**, and nothing validates that, so rename in both files together.
 
 ### The method is the spine
 

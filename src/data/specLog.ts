@@ -17,7 +17,11 @@ export type SpecChangeKind = "added" | "options" | "guidance" | "wording";
 export interface SpecChange {
   /** The group the dimension sits under, matching the rail. */
   group: string;
-  /** The dimension, named as the spec names it. */
+  /**
+   * The dimension, named exactly as specDoc.ts names it. The entry's link is
+   * derived from this string, so a typo here is a link that goes nowhere and a
+   * dimension renamed in the spec has to be renamed here too.
+   */
   dimension: string;
   kind: SpecChangeKind;
   /** What moved, in one line. */
@@ -39,7 +43,7 @@ export interface SpecRevision {
 
 /** Sits above the entries, the way every appendix section carries a note. */
 export const specLogNote =
-  "Only changes that alter what a reviewer scores or an author writes. Each entry names the dimension it lands on, so the rail above takes you to the current wording.";
+  "Only changes that alter what a reviewer scores or an author writes. Every entry links to the dimension it changed, so the current wording is one click away.";
 
 /** Newest first. */
 export const specRevisions: SpecRevision[] = [

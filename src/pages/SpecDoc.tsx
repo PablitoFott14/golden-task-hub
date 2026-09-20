@@ -65,6 +65,16 @@ const groupIcons: Record<string, typeof ClipboardCheck> = {
 
 const slug = (s: string) => s.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 
+/** The anchor on a single dimension card. Prefixed so it can never collide
+ *  with a group or appendix id, and collapsed so the shared URL stays legible. */
+const dimSlug = (name: string) =>
+  "dim-" + slug(name).replace(/-+/g, "-").replace(/^-|-$/g, "");
+
+/** Which pane holds a given dimension anchor, so an inbound link can open it. */
+const dimensionHome: Record<string, string> = Object.fromEntries(
+  specGroups.flatMap((g) => g.dimensions.map((d) => [dimSlug(d.name), slug(g.group)]))
+);
+
 interface NavItem {
   id: string;
   label: string;
@@ -146,11 +156,18 @@ export default function SpecDoc() {
   const activeGroup = specGroups.find((g) => slug(g.group) === active);
   const searching = query.trim().length > 0;
 
-  // Inbound cross-links target /spec#<group-slug>, so the hash picks the tab.
+  /* Inbound cross-links target /spec#<group-slug>, so the hash picks the tab.
+     A /spec#dim-<name> link picks the tab that holds that dimension instead,
+     and the layout's own scroll effect then finds the card once the pane has
+     rendered. That is what every entry in the change log points at. */
   useEffect(() => {
     const id = decodeURIComponent(hash.replace(/^#/, ""));
-    if (id && NAV_IDS.has(id)) {
+    if (!id) return;
+    if (NAV_IDS.has(id)) {
       setActive(id);
+      setQuery("");
+    } else if (dimensionHome[id]) {
+      setActive(dimensionHome[id]);
       setQuery("");
     }
   }, [hash]);
@@ -393,7 +410,7 @@ function DimensionCard({
 }) {
   const links = dimensionLinks[dim.name];
   return (
-    <div className="card overflow-hidden">
+    <div id={dimSlug(dim.name)} className="card scroll-mt-24 overflow-hidden">
       <div className="border-b border-ink-200/70 p-5">
         <h3 className="text-base font-bold text-ink-900">
           <Highlight text={dim.name} query={query} />
@@ -683,6 +700,16 @@ function ChangeCard({ ch, query }: { ch: SpecChange; query?: string }) {
       <p className="mt-1.5 text-[13px] leading-relaxed text-ink-600">
         <Highlight text={ch.detail} query={query} />
       </p>
+      <Crosslinks
+        links={[
+          {
+            to: `/spec#${dimSlug(ch.dimension)}`,
+            tag: ch.group,
+            label: `Read ${ch.dimension} as it stands now`,
+          },
+        ]}
+        className="mt-3"
+      />
     </div>
   );
 }
