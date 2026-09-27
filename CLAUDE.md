@@ -263,6 +263,10 @@ History table and the `[NEW]` callouts of the guidelines, and
 on `/`, at `#latest-changes`. It sits above the video strip because the reader it exists for is the
 one who already knows the method and is back to find out what moved.
 
+**The band now tracks `[External] Major Shin – Guidelines .md`**, the single turn guidelines that
+replaced the multi-turn document on Sep 27, 2026 and restarted the version count at v1. The rest of
+the hub is still multi-turn era, so its entries carry no `links` until each page is brought over.
+
 **It is not the version history.** An entry earns its place only by changing what a contributor
 does, which is why `does` is a required field: if you cannot write the move it forces, the entry
 does not belong. `impact` is `hard` for a rule a task fails without and `shape` for everything

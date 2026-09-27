@@ -76,8 +76,11 @@ export default function LatestChanges() {
           </h2>
           <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-500">
             Not the full version history. These are the {guidelineChanges.length} entries that
-            change how a task is built or reviewed, {hard} of them a rule a task fails without.
-            Newest first.
+            change how a task is built or reviewed,{" "}
+            {hard === guidelineChanges.length ? "every one" : `${hard} of them`} a rule a task
+            fails without. Newest first. Search{" "}
+            <span className="font-mono text-[13.5px] font-semibold text-ink-700">[NEW]</span> in the
+            guidelines to find every section in the change set.
           </p>
         </div>
         <span className="chip shrink-0 bg-ink-100 text-ink-600 ring-1 ring-ink-200">
