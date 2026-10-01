@@ -35,6 +35,16 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm run build
+        env:
+          # Where the Increase Complexity Proposals function is deployed. Unset
+          # is a supported state: the tool's button stays disabled and the page
+          # says so, so a missing secret never breaks a deploy.
+          VITE_COMPLEXITY_API: ${{ secrets.COMPLEXITY_API_URL }}
+          # Optional, and only a speed bump. A build time value is compiled into
+          # the bundle and is readable by anyone, so this is config rather than a
+          # secret: it exists so the function's ACCESS_CODE can be switched on.
+          # The spend cap on the API account is the real backstop.
+          VITE_COMPLEXITY_CODE: ${{ secrets.COMPLEXITY_ACCESS_CODE }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
