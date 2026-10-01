@@ -44,35 +44,35 @@ import { asset, cx } from "../lib/util";
  * scroll spy walks the rail backwards.
  */
 const WALKTHROUGH: { step: number; sections: { id: string; label: string }[] }[] = [
-  { step: 1, sections: [{ id: "universe", label: "The two channels" }] },
-  {
-    step: 2,
-    sections: [
-      { id: "inputs", label: "Eleven files" },
-      { id: "format", label: "The receipt template" },
-    ],
-  },
+  { step: 2, sections: [{ id: "universe", label: "The two channels" }] },
   {
     step: 3,
     sections: [
-      { id: "turns", label: "The four prompts" },
       { id: "answer", label: "The resolved answer" },
       { id: "ledger", label: "Evidence ledger" },
       { id: "traps", label: "Designed friction" },
     ],
   },
-  { step: 4, sections: [{ id: "draft-history", label: "Objective and outcome" }] },
-  { step: 5, sections: [{ id: "model-a", label: "Where Model A broke" }] },
-  { step: 6, sections: [{ id: "rubrics", label: "The criteria block" }] },
-  { step: 7, sections: [{ id: "milestones", label: "The milestone set" }] },
   {
-    step: 8,
+    step: 4,
     sections: [
+      { id: "inputs", label: "Eleven files" },
+      { id: "format", label: "The receipt template" },
+    ],
+  },
+  { step: 5, sections: [{ id: "turns", label: "The four prompts" }] },
+  { step: 6, sections: [{ id: "draft-history", label: "Objective and outcome" }] },
+  { step: 7, sections: [{ id: "model-a", label: "Where Model A broke" }] },
+  { step: 8, sections: [{ id: "rubrics", label: "The criteria block" }] },
+  {
+    step: 9,
+    sections: [
+      { id: "milestones", label: "The milestone set" },
       { id: "golden", label: "The deliverables" },
       { id: "hinting", label: "Hinting in practice" },
     ],
   },
-  { step: 9, sections: [{ id: "subjective", label: "The comparisons" }] },
+  { step: 10, sections: [{ id: "subjective", label: "The comparisons" }] },
 ];
 
 /** The rail takes its numbers and its titles from the method, never from here. */

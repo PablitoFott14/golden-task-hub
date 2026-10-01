@@ -3,60 +3,68 @@ import type { MethodStep } from "./types";
 const GT = "/golden-tasks/vendor-closeout";
 
 /**
- * The method, derived from `rationale.md` for the vendor closeout task and
- * cross-read against [External] OpenClaw MM Rubrics MULTI TURN – Guidelines v2.
+ * The method for Major Shin, ten steps, in the order they actually happen.
  *
- * Nine steps, in the order they actually happen. Each one carries the
- * principle, what it means, the moves that satisfy it, and the place in the
- * Golden Task where you can see it landed.
+ * Rewritten against [External] Major Shin Guidelines v1. The project is single
+ * turn, so the milestone step is gone and the prompt is its own step: there is
+ * one prompt and it has to carry everything.
+ *
+ * The order is the argument. Step 1 is the assigned pair, because every later
+ * decision is checked back against it; step 2 is the universe, because the
+ * loadout decides which scenarios that pair can actually support; steps 3 and 4
+ * are where the two meet and produce the scenario and the evidence it needs.
+ *
+ * `inTask` carries a link only where the published Golden Task still
+ * demonstrates the step correctly. The vendor closeout task is multi-turn and
+ * predates the 80/20 rule, so steps 1 and 5 describe a real single turn task
+ * instead and pick their links up when that task is published.
  */
 export const methodSteps: MethodStep[] = [
   {
     n: 1,
+    id: "parameters",
+    phase: "Design",
+    title: "Task parameters",
+    slogan: "Seven are assigned. None of them is a suggestion.",
+    means:
+      "A task arrives with its parameters already decided: category, subcategory, universe, scenario, output artifact, primary capabilities and secondary capabilities. They are binding client requirements. Only the scenario has any give, and only as far as reaching the complexity bar while its core nature and intent stay as assigned.",
+    moves: [
+      "Read your subcategory definition and its scope check before anything else, and assign by the user's intent rather than by what the input files are about.",
+      "Check the neighbouring subcategory inside the same use case. Fitting one of those better is a category relevance failure even though the use case is right.",
+      "Confirm the assigned tools. Where the scenario names them, the correct final state has to depend on them.",
+      "Keep the pair in front of you. The universe, the scenario, the inputs and the prompt are each checked back against it.",
+    ],
+    produces: "An assigned pair you can defend, and the scope check that proves the fit.",
+    rule: {
+      label: "Drift from any assigned parameter is an automatic rejection",
+      body: "Omitting or substituting one makes the task invalid, however good the rest of it is. The 6 categories and 16 subcategories are retired: the taxonomy is now 11 use cases and 68 subcategories.",
+    },
+    inTask: {
+      body: "A receipts and disputes task sits in Personal finance, under detecting and disputing erroneous charges. What fixes the pair is the user's intent, contesting charges she believes are wrong. The receipts and the bank records are only how that intent is evidenced, and they would have pointed at a different subcategory on their own.",
+    },
+  },
+  {
+    n: 2,
     id: "universe",
     phase: "Design",
     title: "Universe interaction",
     slogan: "Go find the story. Do not invent one.",
     means:
-      "Open the universe before you have an idea, holding your assigned category and subcategory in view. Read the services, the people and the workflows until a situation shows up that is already there in the data. The scenario you pick should be one the universe can prove.",
+      "Open the universe holding the assigned pair in view. The loadout decides what the task can be, so read the services, the people and the workflows until a situation shows up that the data already supports. The scenario you pick has to be one the universe can prove.",
     moves: [
-      "Ask the agent to map the universe first: services, people, lifecycle stages, recurring workflows, and the periods with the richest data.",
-      "Narrow to one phase of that lifecycle, then look for the channels, tables and records that carry it.",
-      "Pull the underlying records so the scenario stands on evidence rather than on memory.",
-      "Confirm the loadout in the Universe Explorer and add the Service Universe Artifact ID before you deploy.",
+      "Confirm what is actually loaded in the Universe Explorer before designing anything around a service.",
+      "Interact with the AI agent in the Database tab. Inspecting by hand is what leads people to conclude there is no connection when there is one.",
+      "Use SQL for the tables, relationships and edge cases the visualizers never surface.",
+      "Anchor to dates you have actually seen. Universe calendars are fixed, so next Tuesday can land on a week that holds nothing.",
     ],
     produces: "A grounded situation, with the records that prove it.",
     rule: {
-      label: "Four parameters are assigned and cannot change",
-      body: "Task type, category, subcategory, universe. A task that drifts from any one of them is rejected at QC no matter how good it is.",
+      label: "A thin loadout is an environment defect, not a model failure",
+      body: "If only a few servers are loaded the universe loaded wrong, and it has to be reloaded before you continue. Add the Service Universe Artifact ID before you deploy, whatever the Universe Creator calls it.",
     },
     inTask: {
-      body: "Harmony Games is a studio with a full lifecycle in its data, so the task took the shutdown phase. Two channels carried it, #winddown and #executives, and both were pulled through SQL before a single prompt was written.",
+      body: "Harmony Games is a studio with a full lifecycle in its data, so the task took the shutdown phase. Two channels carried it, and both were pulled through SQL before a single prompt was written.",
       link: { to: `${GT}#universe`, tag: "GT", label: "The two channels the task is built on" },
-    },
-  },
-  {
-    n: 2,
-    id: "inputs",
-    phase: "Design",
-    title: "Multimodal inputs",
-    slogan: "Attach what the person would actually have.",
-    means:
-      "Pick evidence that belongs to the moment the scenario describes, in the formats that moment would produce. A handwritten total belongs on paper, a confirmation belongs in a screenshot, a rule with thresholds belongs in a document. Realistic noise stays in.",
-    moves: [
-      "Give every file a job: it carries required signal, or it is a deliberate distractor.",
-      "Spread the answer across modalities so no single file settles the task.",
-      "Leave room for two to four follow ups. The input set is what the rest of the conversation feeds on.",
-      "Ship deferred assets in the zip from the start, under neutral filenames.",
-    ],
-    produces: "An input pack that is messy on purpose and load bearing in fact.",
-    rule: {
-      label: "Take the attachments away",
-      body: "If the task is still solvable, the media was decorative. That is the ablation the whole project is built on.",
-    },
-    inTask: {
-      body: "Eleven files recovered in a rush: confirmation emails, billing pages, a photo of a monitor, a photographed page of handwriting, exported invoices, and one invoice for a vendor that is not even in scope.",
-      link: { to: `${GT}#inputs`, tag: "GT", label: "Every input and the fact it carries" },
     },
   },
   {
@@ -66,25 +74,72 @@ export const methodSteps: MethodStep[] = [
     title: "The scenario and the GTFA",
     slogan: "Solve it yourself before you ask anyone else to.",
     means:
-      "Write the opening prompt and plan the arc of the follow ups while the scenario is still in front of you. Then resolve the answer completely. The Ground Truth Final Answer is the end state you grade everything against, so it exists before the first run, not after it.",
+      "The scenario is where the assigned pair and the universe meet. Build it so the pair is its natural home, then resolve the answer completely. The Ground Truth Final Answer is the end state you grade everything against, so it exists before the first run, not after it.",
     moves: [
-      "Name every expected output file in the prompt itself, spelled exactly as it must appear.",
+      "Settle the deliverable first. It clears the complexity bar for its type or the scenario is not finished.",
       "Keep the thresholds and rules in the inputs, so finding them is part of the work.",
-      "Decide what each follow up is for: a deferred asset, a revision, a cross-check, a held back clarification.",
+      "Build friction that the situation would really produce, never constraints bolted on to look hard.",
       "Resolve the GTFA down to the values: the totals, the dates, the classifications, the edge cases.",
     ],
-    produces: "The prompt set, and the one answer it has to reach.",
+    produces: "A scenario the pair explains, and the one answer it has to reach.",
     rule: {
-      label: "Three to five turns",
-      body: "Fewer than three is rejected automatically, and every turn has to consume the state the turn before it produced.",
+      label: "Complexity is planned, never patched in",
+      body: "Do not improvise and do not wait for the model to fail before adding difficulty. Expect to spend at least two hours understanding the scenario and grounding it before the task is ready.",
     },
     inTask: {
-      body: "One rule stated once in turn 1 decides all twenty vendors, and the GTFA resolved every one of them before the run started: four receipts, four unconfirmed, twelve not cancelled, one out of pool.",
+      body: "One rule stated once decides all twenty vendors, and the GTFA resolved every one of them before the run started: four receipts, four unconfirmed, twelve not cancelled, one out of pool.",
       link: { to: `${GT}#answer`, tag: "GT", label: "The resolved answer, vendor by vendor" },
     },
   },
   {
     n: 4,
+    id: "inputs",
+    phase: "Design",
+    title: "Multimodal inputs",
+    slogan: "Three is the floor. It is not the target.",
+    means:
+      "Pick evidence that belongs to the moment the scenario describes, in the formats that moment would produce. A handwritten total belongs on paper, a confirmation belongs in a screenshot, a rule with thresholds belongs in a document. Realistic noise stays in.",
+    moves: [
+      "Use as many inputs as the scenario naturally needs. Most tasks need substantially more than three to clear the complexity bar.",
+      "Give every file a purpose. Required signal or a deliberate distractor, never decoration.",
+      "Spread the evidence across modalities, so no single source carries the whole answer.",
+      "Keep health inputs mocked or synthetic, and keep the answer out of every filename.",
+    ],
+    produces: "An input set where each file earns its place.",
+    rule: {
+      label: "At least three multimodal inputs in the Model A conversation",
+      body: "Three is the minimum requirement rather than the goal, and trimming a task down to three or slightly more is the mistake the rule exists to stop.",
+    },
+    inTask: {
+      body: "Eleven files, and not one of them is decoration. The screenshots confirm cancellations, the phone photos carry amounts no record holds, and the invoices that belong to vendors outside the pool are there to be left alone.",
+      link: { to: `${GT}#inputs`, tag: "GT", label: "Eleven files, and the fact each one carries" },
+    },
+  },
+  {
+    n: 5,
+    id: "prompt",
+    phase: "Design",
+    title: "The initial prompt",
+    slogan: "One prompt. Everything the task needs is in it.",
+    means:
+      "The task is single turn. One prompt is sent automatically when you submit, and the agent answers it once. Anything you expect the agent to produce has to be requested here, in the user's own voice, or it cannot be graded at all.",
+    moves: [
+      "Name every expected output file, spelled exactly as it has to appear.",
+      "Open with a realistic goal and close with a clear call to action, in language a real person would use.",
+      "Require action inside the assigned universe, subcategory and tools, without naming the tools as calls.",
+      "Leave room for subjectivity. State the visual requirements you want graded objectively, and no more.",
+    ],
+    produces: "The one prompt the whole task is built on.",
+    rule: {
+      label: "The Draft History is not embedded in the agent",
+      body: "The prompt and the multimodal context are the only context the agent has. A requirement that lives only in the Desired Outcome was never asked for, so no criterion may grade it.",
+    },
+    inTask: {
+      body: "In the disputes task the one prompt names the page to produce, says the drafts are not to be sent, and fixes the window to the charges between May and July. The rules that decide which charges hold up are left in the attachments, where the agent has to go and find them.",
+    },
+  },
+  {
+    n: 6,
     id: "draft-history",
     phase: "Design",
     title: "Draft History",
@@ -94,15 +149,16 @@ export const methodSteps: MethodStep[] = [
     moves: [
       "Write the objective at a level a colleague could act on without being told the method.",
       "Write the outcome as observable results, never as statements of intent.",
-      "Check that every requirement you plan to grade also appears in a prompt the agent receives.",
+      "Confirm the category and subcategory fields against the universe you actually built on.",
+      "Check that every requirement you plan to grade also appears in the prompt the agent receives.",
     ],
     produces: "The formal record the rubrics and the golden are both measured against.",
     rule: {
-      label: "The agent never sees this",
-      body: "Draft History is not embedded in the agent. A requirement that lives only here was never asked for, so it cannot be graded.",
+      label: "A format rule that lives only here cannot be graded",
+      body: "The Desired Outcome is internal to you. If a rule has to hold in the deliverable, it has to appear in the prompt as well.",
     },
     inTask: {
-      body: "Every output the rubrics check is named in a prompt: the folder, the receipt filenames, MEMORY.md, emails_draft.md, the subject line, the SVG. Nothing is graded that the agent was not asked for.",
+      body: "Every output the rubrics check is named in the prompt: the folder, the receipt filenames, MEMORY.md, emails_draft.md, the subject line, the SVG. Nothing is graded that the agent was not asked for.",
       link: {
         to: `${GT}#draft-history`,
         tag: "GT",
@@ -111,23 +167,23 @@ export const methodSteps: MethodStep[] = [
     },
   },
   {
-    n: 5,
+    n: 7,
     id: "failure",
     phase: "Leg A",
-    title: "Model failure and follow ups",
+    title: "Model failure",
     slogan: "If the model sails through, the task is not ready.",
     means:
-      "Run the opening prompt and measure the first turn against the GTFA. You are looking for genuine failure across at least half the rubric weight. Failures are found, never manufactured, and you never tell the model what it missed.",
+      "The prompt goes out and the agent answers it once. Measure that answer against the GTFA. You are looking for genuine failure across at least half the rubric weight, on failures that materially affect what the user asked for. Failures are found, never manufactured.",
     moves: [
-      "Score turn 1 against the GTFA before writing anything else.",
-      "Restructure if the first turn already captures the whole intent, or if the failures are cosmetic.",
-      "Adjust the planned follow ups to what the run actually produced, keeping the intent identical.",
-      "Run the dependency check on every follow up before you keep it.",
+      "Score the run against the GTFA before writing a single criterion.",
+      "Restructure the task if the run captures the whole intent, or if what it missed is cosmetic.",
+      "Separate a real failure from a broken run. A session abort or a forbidden input format is your defect, not a weakness you found.",
+      "Keep the trajectory and the artifacts. They are what the objective block is written against.",
     ],
-    produces: "A trajectory that fails honestly, and a conversation that still holds together.",
+    produces: "A trajectory that fails honestly, on things that matter.",
     rule: {
-      label: "Could this turn be answered without the previous turns?",
-      body: "If yes, the turn is a standalone request wearing a follow up costume. Revise it or drop it.",
+      label: "Not every failure is yours to keep",
+      body: "A requirement the model never saw, an undecided source conflict, or media no person could read either are task defects. A legible value misread, or an accessible tool left unused, is a real finding.",
     },
     inTask: {
       body: "Model A never called a Slack tool at all. It worked from the attachments alone and failed 18 of 20 objective criteria, and the two it passed were the two that needed no reasoning.",
@@ -135,79 +191,55 @@ export const methodSteps: MethodStep[] = [
     },
   },
   {
-    n: 6,
+    n: 8,
     id: "rubrics",
     phase: "Grade",
     title: "Objective rubrics",
-    slogan: "A grader with the prompt closed can still rate it.",
+    slogan: "Grade what was delivered, not how it got there.",
     means:
-      "Write the criteria against the downloaded trajectory and artifacts. Each one embeds the value it checks, sits in the category and evaluation target it would really be graded under, and carries a weight that answers how hard it was to satisfy.",
+      "Write the criteria against the downloaded trajectory and artifacts. At least 80% of them grade completion, which is the artifact, the state change or the final message. At most 20% grade process, and zero is the preferred number.",
     moves: [
-      "Walk the prompt once per turn and cover every ask, including the ones introduced mid conversation.",
-      "Embed the exact value, filename, date or classification inside the criterion text.",
-      "Cover the trajectory too, to a maximum of five criteria. Agent Behavior is always Trajectory, never an artifact.",
-      "Keep negatives near a quarter of the block, each naming a failure the setup genuinely invites.",
+      "Write the completion version of every criterion first. A reasoning decision is graded where it lands in the deliverable.",
+      "Embed the exact value, filename, date or classification, copied from the source rather than typed from memory.",
+      "Keep a process criterion only where no deliverable can show the failure.",
+      "Give a group of more than eight similar outcomes one completeness criterion and at most five spot checks.",
     ],
     produces: "A block that can be rated without you in the room.",
     rule: {
-      label: "Weights are a fixed set",
-      body: "Only −5, −3, −1, +1, +3, +5. Anything outside it fails Rubric Structure on its own, and weight measures difficulty rather than importance.",
+      label: "Two issues fail the task on their own",
+      body: "Process over the 20% cap, and any criterion that only checks a file, section, column or record exists. Both are automatic fails whatever the severity percentages say.",
     },
     inTask: {
-      body: "Twenty criteria, each pinning its own amount, filename, date and person. Five of them target the Trajectory, which is the ceiling. Criterion 17 is the counter example worth studying: it ships with no category and no evaluation target.",
+      body: "Twenty criteria, each pinning its own amount, filename, date and person. It is also a counter example now: five of them target the Trajectory, which is 25% process against a cap of 20%, and the first one only checks that a folder and four files exist.",
       link: { to: `${GT}#rubrics`, tag: "GT", label: "All 20 criteria and how Model A rated" },
     },
   },
   {
-    n: 7,
-    id: "milestones",
-    phase: "Leg B",
-    title: "Milestones",
-    slogan: "One intent, one milestone. Nothing about the answer.",
-    means:
-      "Milestones are the script the simulator replays against a run that went a different way. Each one is the requirement of its turn written as intent, stripped of anything specific to the response you happened to see.",
-    moves: [
-      "Split by requirement, grouped by turn. Three asks in a turn produce three milestones.",
-      "Refer to artifacts by what they are for, not by filename, value or format.",
-      "Attach the modifier that says what the turn does to existing work: opening, deferred asset, clarification gated, revision.",
-      "Write continuation criteria that are true or false on inspection.",
-    ],
-    produces: "A milestone set that still lands on a run you have never seen.",
-    rule: {
-      label: "Behavior you never asked for is a leak",
-      body: "A milestone that encodes how the agent should work, when the user never requested it, gets the task rejected.",
-    },
-    inTask: {
-      body: "The vendor rule is a constraint the user stated, so a milestone may require it. The four receipts, the total and the percentage are answers, so no milestone names them.",
-      link: { to: `${GT}#milestones`, tag: "GT", label: "All eleven milestones, grouped by turn" },
-    },
-  },
-  {
-    n: 8,
+    n: 9,
     id: "golden",
     phase: "Leg B",
     title: "Golden solution",
     slogan: "Point at the intent. Never at the answer.",
     means:
-      "Same opening prompt, new conversation, and you steer with intent level prompts until the model reaches the best possible version of the deliverable. After each turn, check the milestones. If one is unmet, hint at the unresolved intent without saying what was wrong.",
+      "A new conversation on the same prompt, word for word, against a different model. You act as the user simulator and steer until the model produces the ideal response to that prompt. Hinting is the method for getting there, not an optional extra.",
     moves: [
-      "Keep the persona and the register of the original user on every steering prompt.",
-      "Advance only when every milestone for that turn is reached.",
-      "Hint by pointing back at context the user would plausibly remember, not at the value.",
+      "Keep the original intent, context and persona consistent from the first message to the last.",
+      "Hint by pointing back at context the user would plausibly remember, never at the value.",
+      "Keep the no leak rule on every turn you type, however late in the conversation it is.",
       "Ship finished artifacts only. Nothing in the golden folder may describe how the answer was reached.",
     ],
     produces: "The golden artifacts, and a run that proves the rubric set is passable.",
     rule: {
       label: "The golden passes its own block",
-      body: "Anything the golden fails is a broken criterion, not a broken golden.",
+      body: "Anything the golden fails is a broken criterion, not a broken golden. Reaching it once by accident proves nothing: you have to be able to steer the model there deliberately.",
     },
     inTask: {
-      body: "The model first confused the roughly $15,000 Sunset fee with the $50,000 all in estimate. The correction stayed in Leonard's voice and pointed back at an early December conversation, so the model found the figure itself.",
-      link: { to: `${GT}#hinting`, tag: "GT", label: "The milestone check, and the hint it produced" },
+      body: "The model first confused the roughly $15,000 Sunset fee with the $50,000 all in estimate. The correction stayed in the user's voice and pointed back at an early December conversation, so the model found the figure itself.",
+      link: { to: `${GT}#hinting`, tag: "GT", label: "The steer, and what it pointed at" },
     },
   },
   {
-    n: 9,
+    n: 10,
     id: "subjective",
     phase: "Grade",
     title: "Subjective rubrics",
@@ -218,7 +250,7 @@ export const methodSteps: MethodStep[] = [
       "Name one identifiable element and one visible property per criterion.",
       "Weight by impact on the reader's experience, not by difficulty.",
       "Grade only what the format can actually show. A PDF cannot respond to hover.",
-      "Rate every criterion against both models yourself. Pre-filled selections are not to be trusted.",
+      "Check every literal here too. Literal matching applies to this block just as rigorously.",
     ],
     produces: "A presentation block a reviewer can locate and score on the render alone.",
     rule: {
@@ -247,15 +279,14 @@ export const mindset = [
   {
     id: "plan",
     title: "Plan before you run",
-    body: "The prompt, the arc and the answer are settled while the scenario is still in front of you. Everything after that inherits whatever you decided here.",
+    body: "The pair, the scenario, the prompt and the answer are settled while the scenario is still in front of you. Everything after that inherits whatever you decided here.",
   },
 ];
 
 /** The client's hard requirements, restated in the register CBs read them in. */
 export const hardRequirements = [
   { label: "Complex", body: "Planning, recovery, and work across several artifacts, tools or sources." },
-  { label: "Long horizon", body: "State that survives three to five turns, deferred assets included." },
-  { label: "Revision handling", body: "At least one turn changes the brief after something was delivered." },
+  { label: "Parameters followed", body: "All seven assigned parameters implemented, with no drift." },
   { label: "Multimodal", body: "Media required for a core requirement, enforced by the ablation." },
   { label: "Cross-modal", body: "One step's output becomes the next step's necessary input." },
   { label: "Objective", body: "Every output grounded in a rule or source stated in the prompt." },

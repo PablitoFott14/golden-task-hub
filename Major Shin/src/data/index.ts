@@ -5,6 +5,7 @@ import { checklist } from "./checklist";
 import { authoringStandards, rubricQualityIssues, specGroups, weightBuckets } from "./specDoc";
 import { faq } from "./faq";
 import { guidelineChanges } from "./changes";
+import { taxonomy } from "./taxonomy";
 import { universeVideos } from "./videos";
 import { specRevisions } from "./specLog";
 
@@ -31,6 +32,26 @@ export const searchIndex: SearchEntry[] = [
     to: `/#${s.id}`,
     terms: [s.means, s.produces, s.moves.join(" "), s.rule?.body ?? "", s.inTask.body].join(" "),
   })),
+
+  /* One row per subcategory, not per use case: the subcategory is what a
+     contributor is assigned and what they search for. The use case, the scope
+     check and the scenarios ride along in `terms`, so searching a scenario
+     word finds the pair it belongs to. */
+  ...taxonomy.flatMap<SearchEntry>((g) =>
+    g.subs.map((s) => ({
+      kind: "Use case" as const,
+      title: s.name,
+      hint: `${g.l1} · L2`,
+      to: "/#taxonomy",
+      terms: [
+        g.l1,
+        g.scope,
+        s.covers,
+        s.scenarios.join(" "),
+        "category subcategory taxonomy use case L1 L2 assigned parameter",
+      ].join(" "),
+    }))
+  ),
 
   ...guidelineChanges.map<SearchEntry>((c) => ({
     kind: "Change" as const,

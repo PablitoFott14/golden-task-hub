@@ -30,11 +30,13 @@ import {
 import { guidelineChanges } from "../data/changes";
 import { feedbackThread } from "../data/community";
 import { checkCount, checklist } from "../data/checklist";
+import { subcategoryCount } from "../data/taxonomy";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
 import LatestChanges from "../components/LatestChanges";
 import QuickAnswers from "../components/QuickAnswers";
 import VideoStrip from "../components/VideoStrip";
+import Taxonomy from "../components/Taxonomy";
 import { cx } from "../lib/util";
 
 const phaseTone: Record<string, { chip: string; badge: string; bar: string }> = {
@@ -203,6 +205,12 @@ export default function Method() {
                   <PlayCircle size={16} className="text-amber-600 dark:text-amber-300" /> Universe
                   videos
                 </Link>
+                <Link to={{ hash: "#taxonomy" }} className="btn-ghost">
+                  <Layers size={16} className="text-violet-600 dark:text-violet-300" /> Use cases
+                  <span className="rounded-full bg-violet-500/15 px-1.5 font-mono text-[11px] font-bold text-violet-700 dark:text-violet-300">
+                    {subcategoryCount()}
+                  </span>
+                </Link>
                 <Link to="/golden-tasks" className="btn-ghost">
                   <BookOpenCheck size={16} /> See it in a Golden Task
                 </Link>
@@ -284,6 +292,18 @@ export default function Method() {
         <div className="wrap py-14">
           <Reveal>
             <LatestChanges />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* The use case taxonomy. It sits above the method because step 1 is the
+          assigned pair, and a contributor who has not read their L2 definition
+          is already designing the wrong task. Collapsed by default: 68
+          subcategories opened flat would be longer than the rest of the page. */}
+      <section id="taxonomy" className="scroll-mt-20 border-b border-ink-200/70 bg-ink-50">
+        <div className="wrap py-14">
+          <Reveal>
+            <Taxonomy />
           </Reveal>
         </div>
       </section>
@@ -381,12 +401,22 @@ export default function Method() {
                   )}
                 </div>
 
+                {/* A step the published Golden Task cannot demonstrate under the
+                    current standard carries the narrative without a link, and
+                    says so, rather than pointing at a worked example that
+                    teaches the superseded rule. */}
                 <div className="self-start rounded-2xl border border-gold-300/70 bg-gold-50/60 p-5 dark:border-gold-500/30 dark:bg-gold-500/10">
                   <div className="mono-label mb-2 flex items-center gap-1.5 text-gold-700 dark:text-gold-300">
-                    <Sparkles size={13} /> In the Golden Task
+                    <Sparkles size={13} /> {step.inTask.link ? "In the Golden Task" : "In a real task"}
                   </div>
                   <p className="text-[13.5px] leading-relaxed text-ink-700">{step.inTask.body}</p>
-                  <Crosslinks links={[step.inTask.link]} className="mt-4" />
+                  {step.inTask.link ? (
+                    <Crosslinks links={[step.inTask.link]} className="mt-4" />
+                  ) : (
+                    <p className="mono-label mt-4 text-ink-400">
+                      Worked example coming with the next Golden Task
+                    </p>
+                  )}
                 </div>
 
                 <div className="flex flex-wrap gap-2 lg:col-span-2">

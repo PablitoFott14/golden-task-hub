@@ -21,6 +21,29 @@ export interface XLink {
  * the project guidelines. The slogan is the memorable half, `means` the
  * minimal explanation, and `inTask` the line that ties it to the Golden Task.
  */
+/* ----------------------------------------------------------------- taxonomy */
+
+/**
+ * One subcategory (L2) of the use case taxonomy. `name` and `covers` are the
+ * guidelines' own wording, stored verbatim. `scenarios` is hub copy: three
+ * examples of what the pair looks like as a task here.
+ */
+export interface TaxonomySub {
+  id: string;
+  name: string;
+  covers: string;
+  scenarios: string[];
+}
+
+/** One use case (L1), with its scope check and its subcategories. */
+export interface TaxonomyGroup {
+  id: string;
+  l1: string;
+  /** The scope check the guidelines print beside the use case, verbatim. */
+  scope: string;
+  subs: TaxonomySub[];
+}
+
 export interface MethodStep {
   n: number;
   id: string;
@@ -34,8 +57,12 @@ export interface MethodStep {
   moves: string[];
   /** What this step hands to the next one. */
   produces: string;
-  /** How the principle shows up in the worked task. */
-  inTask: { body: string; link: XLink };
+  /**
+   * How the principle shows up in a real task. `link` points at the Golden
+   * Task section where it landed, and is omitted while the published task
+   * cannot demonstrate the step correctly.
+   */
+  inTask: { body: string; link?: XLink };
   /** Optional hard rule worth pinning, taken from the guidelines. */
   rule?: { label: string; body: string };
   /** Which phase of the workflow the step belongs to. */
@@ -487,7 +514,15 @@ export interface GuidelineChange {
 /* ------------------------------------------------------------------- search */
 
 export interface SearchEntry {
-  kind: "Method" | "Golden task" | "Pre-submit check" | "QC spec" | "FAQ" | "Video" | "Change";
+  kind:
+    | "Method"
+    | "Use case"
+    | "Golden task"
+    | "Pre-submit check"
+    | "QC spec"
+    | "FAQ"
+    | "Video"
+    | "Change";
   title: string;
   hint: string;
   to: string;
