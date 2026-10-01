@@ -1,21 +1,31 @@
 import type { ComplexityField, ComplexityProposal } from "./types";
+import { artifactOptions, primaryOptions, secondaryOptions, toolOptions } from "./claimSheet";
 
 /**
  * The Increase Complexity Proposals tool.
  *
- * The form collects the seven assigned parameters, the scenario, and whatever
- * the contributor learned from the universe, then asks the model for a small
- * set of concrete additions. **It never rewrites the scenario.** Every proposal
- * is something the contributor reads, judges and applies by hand, which is why
- * each one states what it adds, why that is real difficulty, and what it leaves
- * exactly as assigned.
+ * The form collects the assigned parameters and the scenario, then asks the
+ * model for a small set of concrete additions. **It never rewrites the
+ * scenario.** Every proposal is something the contributor reads, judges and
+ * applies by hand, which is why each one states what it adds, why that is real
+ * difficulty, and what it leaves exactly as assigned.
  *
- * The universe context field is the answer to "how does the model know what is
- * in this universe". Giving the model standing access to every universe is not
- * maintainable, and the contributor has already done this lookup: step 2 of the
- * method has them interrogate the agent in the Database tab. They paste that
- * answer here, so the context is current, scoped to the task, and costs nothing
- * to maintain.
+ * **Every parameter is a closed list.** Nothing is typed: the use case and
+ * subcategory come from `taxonomy.ts` (guidelines 1.1.1), the universe from
+ * `universes.ts` (generated from the exports on Drive), and the artifact,
+ * capability and tool vocabularies from `claimSheet.ts` (the single turn claim
+ * sheet and the complexity bar). A contributor can only submit values the
+ * project actually defines, so a typo or an invented capability cannot reach the
+ * model and come back as a proposal built on it.
+ *
+ * The scenario is the one exception, and it has to be: it is prose unique to the
+ * task, so there is no option set to pick from, and reading *this* scenario is
+ * the whole job. For the ten tasks on the claim sheet even that is a selection —
+ * the picker fills the scenario along with every other field.
+ *
+ * The universe context is no longer asked for either. It used to be a paste of
+ * what the Database tab agent said; it is now derived from the selected
+ * universe's own export, so it is always accurate and never retyped.
  *
  * The endpoint lives at `VITE_COMPLEXITY_API`. The key never reaches the
  * browser: the page posts this form to a small function, and the function is
@@ -30,6 +40,7 @@ export const complexityFields: ComplexityField[] = [
     kind: "use-case",
     required: true,
     assigned: true,
+    empty: "Select the assigned use case",
   },
   {
     id: "subcategory",
@@ -38,50 +49,55 @@ export const complexityFields: ComplexityField[] = [
     kind: "subcategory",
     required: true,
     assigned: true,
+    empty: "Select the assigned subcategory",
   },
   {
     id: "universe",
     label: "Universe",
     hint: "The assigned universe",
-    kind: "text",
+    kind: "universe",
     required: true,
     assigned: true,
-    placeholder: "openclaw_mm_marisela_ybarra_commerce_product",
+    empty: "Select the assigned universe",
   },
   {
     id: "artifact",
     label: "Output artifact",
     hint: "What the task has to produce",
-    kind: "text",
+    kind: "select",
     required: true,
     assigned: true,
-    placeholder: "Interactive HTML page",
+    options: artifactOptions,
+    empty: "Select the assigned artifact",
   },
   {
     id: "primary",
-    label: "Primary capabilities",
+    label: "Primary capability",
     hint: "Assigned",
-    kind: "text",
+    kind: "select",
     required: true,
     assigned: true,
-    placeholder: "reconcile_amounts",
+    options: primaryOptions,
+    empty: "Select the assigned primary capability",
   },
   {
     id: "secondary",
     label: "Secondary capabilities",
-    hint: "Assigned",
-    kind: "text",
+    hint: "Assigned. Pick every one",
+    kind: "multi",
     required: true,
     assigned: true,
-    placeholder: "ocr, manage_contradictions, compute_answer",
+    options: secondaryOptions,
+    empty: "Tap each secondary capability you were assigned",
   },
   {
     id: "tools",
     label: "Assigned tools",
     hint: "Where the scenario names them",
-    kind: "text",
+    kind: "multi",
     required: false,
-    placeholder: "Leave blank if none were assigned",
+    options: toolOptions,
+    empty: "Tap any connector the task was assigned. Leave empty if none were",
   },
   {
     id: "scenario",
@@ -91,36 +107,16 @@ export const complexityFields: ComplexityField[] = [
     required: true,
     assigned: true,
     placeholder:
-      "The scenario as it was assigned to you, in the user's voice. Paste it exactly rather than summarising it.",
-  },
-  {
-    id: "universeContext",
-    label: "Universe context",
-    hint: "What the Database tab agent told you",
-    kind: "textarea",
-    required: true,
-    placeholder:
-      "Paste what you learned exploring the universe: the services actually loaded, the records and date ranges you found, the people and workflows the scenario can anchor to. The proposals are only as good as this.",
+      "The scenario as it was assigned to you, in the user's voice. Paste it exactly rather than summarising it. Picking a task from the claim sheet above fills this in for you.",
   },
 ];
 
 /**
- * A worked example, so the page shows what it produces before an endpoint is
- * wired up. Taken from a real single turn task in Personal finance.
+ * The example output, shown with claim sheet task ST-007 so the page is
+ * reviewable before an endpoint is configured. These are real proposals for that
+ * task.
  */
-export const exampleInput = {
-  useCase: "Personal finance",
-  subcategory: "Detecting & disputing erroneous charges",
-  universe: "openclaw_mm_marisela_ybarra_commerce_product",
-  artifact: "Interactive HTML page",
-  primary: "reconcile_amounts",
-  secondary: "ocr, manage_contradictions, compute_answer",
-  tools: "",
-  scenario:
-    "I think the garden centre charged me twice. Two paper receipts attached, one is faded. Go through my accounts for the last sixty days, find the charges these belong to, and tell me whether it is a real duplicate or a hold and a settlement.",
-  universeContext:
-    "FinTrack holds the transactions with IDs and the last four digits of two accounts. Gmail carries order confirmations and a promotions thread. The calendar has fixed dates in May to July 2026. There is an employer account with a monthly spend allowance.",
-};
+export const exampleRef = "ST-007";
 
 export const exampleProposals: ComplexityProposal[] = [
   {
@@ -170,8 +166,8 @@ You never rewrite the scenario. You propose additions and adjustments the contri
 
 Hard constraints on every proposal:
 - The assigned use case (L1) and subcategory (L2) stay exactly as given. The pair has to remain the natural home of the scenario, judged by the user's intent and not by what the files are about.
-- All assigned parameters stay as given: universe, output artifact, primary capabilities, secondary capabilities, and any assigned tools. Only the scenario may be adjusted, and only so far as its core nature, intent and type stay intact.
-- Everything you propose must be supported by the universe context provided. Never invent services, records or data that were not described.
+- All assigned parameters stay as given: universe, output artifact, primary capability, secondary capabilities, and any assigned tools. Only the scenario may be adjusted, and only so far as its core nature, intent and type stay intact.
+- Everything you propose must be supported by the universe context provided. It lists the services loaded in this universe, how many records each holds and the window they fall in. Never invent a service, a record type or a date range that is not in it.
 - Complexity must be genuine: evidence that has to be reconciled across sources and modalities. Never artificial friction, extra unrelated asks, contrived constraints, or more things to do for their own sake.
 - The task is single turn. Everything lands in one prompt, so never propose follow up turns, revision turns or milestones.
 - Respect the multimodal requirement: at least three inputs, and more where the scenario naturally carries them. Health inputs must be mocked or synthetic.

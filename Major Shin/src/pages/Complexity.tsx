@@ -2,7 +2,9 @@ import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   AlertTriangle,
+  Boxes,
   CircleAlert,
+  ClipboardList,
   FileStack,
   Gauge,
   Layers,
@@ -12,12 +14,10 @@ import {
   Sparkles,
   Wand2,
 } from "lucide-react";
-import type { ComplexityProposal } from "../data/types";
-import {
-  complexityFields,
-  exampleInput,
-  exampleProposals,
-} from "../data/complexity";
+import type { ComplexityField, ComplexityOption, ComplexityProposal } from "../data/types";
+import { complexityFields, exampleProposals, exampleRef } from "../data/complexity";
+import { claimSheet, claimSheetByRef } from "../data/claimSheet";
+import { universeById, universes } from "../data/universes";
 import { taxonomy } from "../data/taxonomy";
 import { Eyebrow, Reveal } from "../components/ui";
 import { cx } from "../lib/util";
@@ -25,24 +25,128 @@ import { cx } from "../lib/util";
 /**
  * Increase Complexity Proposals.
  *
- * The contributor fills in the assigned parameters, the scenario and what they
- * learned from the universe, and gets back a few concrete additions to judge.
- * **Nothing is applied automatically**, which is the whole design: the model
- * proposes, the contributor decides, and the scenario only ever changes by
- * hand.
+ * The contributor picks the assigned parameters, pastes the scenario, and gets
+ * back a few concrete additions to judge. **Nothing is applied automatically**,
+ * which is the whole design: the model proposes, the contributor decides, and
+ * the scenario only ever changes by hand.
  *
- * The API key never reaches the browser. The page posts to the function named
- * by `VITE_COMPLEXITY_API`, and that function is what holds the credential.
- * With no endpoint configured the page still works as a reference: the example
- * below is a real task, so the shape of the output is visible before anyone
- * wires anything up.
+ * **Every parameter is a closed list**, so nothing can be mistyped into the
+ * request: see `data/complexity.ts` for where each list comes from. The universe
+ * selection carries its own context too, read off the export rather than typed.
+ *
+ * The API key never reaches the browser. The page posts to the function named by
+ * `VITE_COMPLEXITY_API`, and that function is what holds the credential. With no
+ * endpoint configured the page still works as a reference: the example is a real
+ * claim sheet task, so the shape of the output is visible before anyone wires
+ * anything up.
  */
 
 const ENDPOINT = import.meta.env.VITE_COMPLEXITY_API as string | undefined;
 
+/**
+ * Optional, and only a speed bump: a build time value ends up in the bundle, so
+ * anyone can read it. It exists so the function's `ACCESS_CODE` can be turned on
+ * to keep the endpoint off the open internet without breaking the page. The
+ * spend cap on the API account is the real backstop.
+ */
+const ACCESS_CODE = import.meta.env.VITE_COMPLEXITY_CODE as string | undefined;
+
 type Values = Record<string, string>;
 
 const EMPTY: Values = Object.fromEntries(complexityFields.map((f) => [f.id, ""]));
+
+const SELECT =
+  "w-full rounded-xl border border-ink-200 bg-surface px-3 py-2 text-[13px] text-ink-800 outline-none transition focus:border-brand-500/60 focus:ring-2 focus:ring-brand-500/20 disabled:opacity-50";
+
+/** Options in source order, split into the groups the source puts them in. */
+function grouped(options: ComplexityOption[]) {
+  const out: { group: string; options: ComplexityOption[] }[] = [];
+  for (const o of options) {
+    const key = o.group ?? "";
+    const last = out[out.length - 1];
+    if (last && last.group === key) last.options.push(o);
+    else out.push({ group: key, options: [o] });
+  }
+  return out;
+}
+
+const optionLabel = (o: ComplexityOption) => (o.note ? `${o.value} — ${o.note}` : o.value);
+
+/** A closed list where more than one answer is right. Chips, not a multi select. */
+function MultiPicker({
+  field,
+  value,
+  onChange,
+}: {
+  field: ComplexityField;
+  value: string;
+  onChange: (next: string) => void;
+}) {
+  const options = field.options ?? [];
+  const picked = value ? value.split(", ").filter(Boolean) : [];
+  const toggle = (val: string) => {
+    const next = picked.includes(val) ? picked.filter((x) => x !== val) : [...picked, val];
+    // Option order, so the same set always submits the same string.
+    onChange(
+      options
+        .filter((o) => next.includes(o.value))
+        .map((o) => o.value)
+        .join(", ")
+    );
+  };
+  return (
+    <div>
+      <div className="flex flex-wrap gap-1.5">
+        {options.map((o) => {
+          const on = picked.includes(o.value);
+          return (
+            <button
+              key={o.value}
+              type="button"
+              aria-pressed={on}
+              onClick={() => toggle(o.value)}
+              className={cx(
+                "rounded-lg px-2 py-1 font-mono text-[11.5px] transition",
+                on
+                  ? "bg-brand-600 text-white ring-1 ring-brand-600"
+                  : "bg-raised text-ink-600 ring-1 ring-ink-200 hover:ring-brand-500/40"
+              )}
+            >
+              {o.value}
+            </button>
+          );
+        })}
+      </div>
+      {picked.length === 0 && <p className="mt-1.5 text-[11.5px] text-ink-400">{field.empty}</p>}
+    </div>
+  );
+}
+
+/** What the request will carry about the universe, shown rather than asked for. */
+function UniversePanel({ id }: { id: string }) {
+  const u = universeById(id);
+  if (!u) return null;
+  return (
+    <div className="mt-2 rounded-xl border border-ink-200/70 bg-raised p-3">
+      <div className="mono-label mb-2 flex flex-wrap items-center gap-1.5 text-ink-400">
+        <Boxes size={12} /> Universe context sent with the request
+        {u.span && <span className="text-ink-500">· records {u.span}</span>}
+      </div>
+      <ul className="grid gap-1 sm:grid-cols-2">
+        {u.services.map((s) => (
+          <li key={s.name} className="text-[11.5px] leading-snug text-ink-600">
+            <span className="font-mono font-bold text-ink-700">{s.name}</span>{" "}
+            <span className="text-ink-500">{s.records}</span>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-2 text-[11.5px] leading-relaxed text-ink-400">
+        Read from the universe export, so it is what is actually loaded. Check it against the
+        Database tab if your task depends on a record you do not see here.
+      </p>
+    </div>
+  );
+}
 
 function ProposalCard({ p, n }: { p: ComplexityProposal; n: number }) {
   return (
@@ -100,15 +204,13 @@ function ProposalCard({ p, n }: { p: ComplexityProposal; n: number }) {
 
 export default function Complexity() {
   const [v, setV] = useState<Values>(EMPTY);
+  const [sheetRef, setSheetRef] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [error, setError] = useState<string>("");
   const [proposals, setProposals] = useState<ComplexityProposal[]>([]);
   const [showingExample, setShowingExample] = useState(false);
 
-  const subs = useMemo(
-    () => taxonomy.find((g) => g.l1 === v.useCase)?.subs ?? [],
-    [v.useCase]
-  );
+  const subs = useMemo(() => taxonomy.find((g) => g.l1 === v.useCase)?.subs ?? [], [v.useCase]);
 
   const missing = complexityFields.filter((f) => f.required && !v[f.id]?.trim());
   const ready = missing.length === 0;
@@ -120,8 +222,29 @@ export default function Complexity() {
       ...(id === "useCase" ? { subcategory: "" } : null),
     }));
 
+  /** A claim sheet row fills the whole form, scenario included. */
+  const loadRef = (r: string) => {
+    setSheetRef(r);
+    const t = claimSheetByRef(r);
+    if (!t) {
+      setV(EMPTY);
+      return;
+    }
+    setV({
+      ...EMPTY,
+      useCase: t.useCase,
+      subcategory: t.subcategory,
+      universe: t.universe,
+      artifact: t.artifact,
+      primary: t.primary,
+      secondary: t.secondary,
+      tools: t.tools,
+      scenario: t.scenario,
+    });
+  };
+
   const loadExample = () => {
-    setV({ ...EMPTY, ...exampleInput });
+    loadRef(exampleRef);
     setProposals(exampleProposals);
     setShowingExample(true);
     setStatus("done");
@@ -135,7 +258,13 @@ export default function Complexity() {
     try {
       const res = await fetch(ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          ...(ACCESS_CODE ? { "x-access-code": ACCESS_CODE } : null),
+        },
+        // Only the selections. The universe context is not sent: the function
+        // builds it from the universe id off its own copy of the summaries, so
+        // the request cannot carry text of its own choosing.
         body: JSON.stringify(v),
       });
       if (!res.ok) throw new Error(`The service answered ${res.status}.`);
@@ -158,9 +287,10 @@ export default function Complexity() {
             Increase complexity proposals
           </h1>
           <p className="mt-4 text-[16px] leading-relaxed text-ink-500">
-            Give it the assigned parameters, your scenario and what you found in the universe, and
-            it proposes a few concrete ways to make the task genuinely harder. It reads your
-            scenario rather than replacing it, and nothing is applied for you.
+            Pick the assigned parameters, paste your scenario, and it proposes a few concrete ways
+            to make the task genuinely harder. Every parameter is a list of what the project
+            actually assigns, so nothing is typed and nothing drifts. It reads your scenario rather
+            than replacing it, and nothing is applied for you.
           </p>
         </div>
       </Reveal>
@@ -207,11 +337,36 @@ export default function Complexity() {
               </button>
             </div>
 
+            {/* The whole form in one selection, for a task on the sheet. */}
+            <div className="mt-5 rounded-xl border border-violet-500/25 bg-violet-500/[0.06] p-3.5">
+              <label
+                htmlFor="claim-ref"
+                className="mb-1.5 flex flex-wrap items-center gap-1.5 text-[12.5px] font-bold text-ink-800"
+              >
+                <ClipboardList size={13} className="text-violet-600 dark:text-violet-300" />
+                Load from the claim sheet
+                <span className="mono-label text-ink-400">fills every field below</span>
+              </label>
+              <select
+                id="claim-ref"
+                value={sheetRef}
+                onChange={(e) => loadRef(e.target.value)}
+                className={SELECT}
+              >
+                <option value="">Not a claim sheet task — I will select the parameters</option>
+                {claimSheet.map((t) => (
+                  <option key={t.ref} value={t.ref}>
+                    {t.ref} · {t.useCase} / {t.subcategory}
+                  </option>
+                ))}
+              </select>
+            </div>
+
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               {complexityFields.map((f) => {
-                const span = f.kind === "textarea" ? "sm:col-span-2" : "";
+                const wide = f.kind === "textarea" || f.kind === "multi" || f.kind === "universe";
                 return (
-                  <div key={f.id} className={span}>
+                  <div key={f.id} className={wide ? "sm:col-span-2" : ""}>
                     <label
                       htmlFor={f.id}
                       className="mb-1.5 flex flex-wrap items-center gap-1.5 text-[12.5px] font-bold text-ink-800"
@@ -230,9 +385,9 @@ export default function Complexity() {
                         id={f.id}
                         value={v[f.id]}
                         onChange={(e) => set(f.id, e.target.value)}
-                        className="w-full rounded-xl border border-ink-200 bg-surface px-3 py-2 text-[13px] text-ink-800 outline-none transition focus:border-brand-500/60 focus:ring-2 focus:ring-brand-500/20"
+                        className={SELECT}
                       >
-                        <option value="">Select the assigned use case</option>
+                        <option value="">{f.empty}</option>
                         {taxonomy.map((g) => (
                           <option key={g.id} value={g.l1}>
                             {g.l1}
@@ -247,11 +402,9 @@ export default function Complexity() {
                         value={v[f.id]}
                         onChange={(e) => set(f.id, e.target.value)}
                         disabled={!v.useCase}
-                        className="w-full rounded-xl border border-ink-200 bg-surface px-3 py-2 text-[13px] text-ink-800 outline-none transition focus:border-brand-500/60 focus:ring-2 focus:ring-brand-500/20 disabled:opacity-50"
+                        className={SELECT}
                       >
-                        <option value="">
-                          {v.useCase ? "Select the assigned subcategory" : "Pick a use case first"}
-                        </option>
+                        <option value="">{v.useCase ? f.empty : "Pick a use case first"}</option>
                         {subs.map((s) => (
                           <option key={s.id} value={s.name}>
                             {s.name}
@@ -260,14 +413,55 @@ export default function Complexity() {
                       </select>
                     )}
 
-                    {f.kind === "text" && (
-                      <input
+                    {f.kind === "universe" && (
+                      <>
+                        <select
+                          id={f.id}
+                          value={v[f.id]}
+                          onChange={(e) => set(f.id, e.target.value)}
+                          className={SELECT}
+                        >
+                          <option value="">{f.empty}</option>
+                          {universes.map((u) => (
+                            <option key={u.id} value={u.id}>
+                              {u.label === u.id ? u.id : `${u.label} · ${u.id}`}
+                            </option>
+                          ))}
+                        </select>
+                        <UniversePanel id={v[f.id]} />
+                      </>
+                    )}
+
+                    {f.kind === "select" && (
+                      <select
                         id={f.id}
                         value={v[f.id]}
                         onChange={(e) => set(f.id, e.target.value)}
-                        placeholder={f.placeholder}
-                        className="w-full rounded-xl border border-ink-200 bg-surface px-3 py-2 text-[13px] text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-500/60 focus:ring-2 focus:ring-brand-500/20"
-                      />
+                        className={SELECT}
+                      >
+                        <option value="">{f.empty}</option>
+                        {grouped(f.options ?? []).map((g, i) =>
+                          g.group ? (
+                            <optgroup key={g.group} label={g.group}>
+                              {g.options.map((o) => (
+                                <option key={o.value} value={o.value}>
+                                  {optionLabel(o)}
+                                </option>
+                              ))}
+                            </optgroup>
+                          ) : (
+                            g.options.map((o) => (
+                              <option key={`${i}-${o.value}`} value={o.value}>
+                                {optionLabel(o)}
+                              </option>
+                            ))
+                          )
+                        )}
+                      </select>
+                    )}
+
+                    {f.kind === "multi" && (
+                      <MultiPicker field={f} value={v[f.id]} onChange={(next) => set(f.id, next)} />
                     )}
 
                     {f.kind === "textarea" && (
@@ -276,7 +470,7 @@ export default function Complexity() {
                         value={v[f.id]}
                         onChange={(e) => set(f.id, e.target.value)}
                         placeholder={f.placeholder}
-                        rows={f.id === "scenario" ? 4 : 5}
+                        rows={6}
                         className="w-full resize-y rounded-xl border border-ink-200 bg-surface px-3 py-2 text-[13px] leading-relaxed text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-500/60 focus:ring-2 focus:ring-brand-500/20"
                       />
                     )}
@@ -333,7 +527,7 @@ export default function Complexity() {
               </h2>
               {showingExample && (
                 <span className="chip bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300">
-                  <Sparkles size={11} /> Example
+                  <Sparkles size={11} /> Example · {exampleRef}
                 </span>
               )}
             </div>
@@ -349,8 +543,8 @@ export default function Complexity() {
                 >
                   <Layers size={22} className="text-ink-300" />
                   <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-ink-400">
-                    Fill in the form and the proposals land here. Each one is yours to accept,
-                    adapt or ignore.
+                    Fill in the form and the proposals land here. Each one is yours to accept, adapt
+                    or ignore.
                   </p>
                 </motion.div>
               )}

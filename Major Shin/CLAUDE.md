@@ -117,6 +117,8 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/draft_history.md` | `draftHistory` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per numbered item |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/milestones.md` | `milestones` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per line |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/golden_conversation.md` | `goldenRun.conversation` in the same file, one entry per message |
+| `Evals/Universes/*.zip` on Drive (generated, see below) | [src/data/universes.ts](src/data/universes.ts) + `complexity-api/universes.ts` |
+| `single_turn_quick_hits - Tasks.csv`, the claim sheet | [src/data/claimSheet.ts](src/data/claimSheet.ts) |
 
 `[External] OpenClaw MM Rubrics MULTI TURN – Guidelines .md` sits beside this file on Drive
 and is the source of truth for everything. The hub is a companion to it and must never become a
@@ -136,6 +138,21 @@ until the content fits, refusing to write below 80%. A check costs roughly two p
 checks fitted at 90%, 29 at 86%, 30 at 84%. So a new rule goes into an existing check's wording
 unless it genuinely needs its own tick box, and `checklist.ts` is transcribed from `checklist.md`
 afterwards with the em dashes flattened to the hub's copy rules.
+
+### `universes.ts` is generated, in two places
+
+[src/data/universes.ts](src/data/universes.ts) and `complexity-api/universes.ts` both come out of
+[scripts/gen_universes.py](scripts/gen_universes.py), which opens every export under
+`G:\My Drive\Red Shell\Evals\Universes` and summarises it: the services that hold data, the
+collections and their record counts, and the window the records fall in with the tails trimmed.
+Neither file is hand-authored. Re-run it whenever a universe is added, removed or reloaded:
+
+```bash
+python scripts/gen_universes.py
+```
+
+It never copies records, only counts. An export is about 2.5 MB and there are two dozen, so the full
+data could neither ship in the bundle nor fit in a request.
 
 ### `specDoc.ts` is generated, not hand-written
 
@@ -292,19 +309,28 @@ im.resize((880, 495), Image.LANCZOS).save("public/onboarding/<id>-cover.png", op
 
 ### The complexity tool keeps its credential off the client
 
-[Complexity.tsx](src/pages/Complexity.tsx) collects the seven assigned parameters, the scenario and
-the universe context, and posts them to the function in [complexity-api/](complexity-api/). **The
-hub is a static site and cannot hold a secret**, so the key lives only in that function's
-environment, the function restricts itself to one origin, and the browser never sees the key, the
-system prompt or the model name.
+[Complexity.tsx](src/pages/Complexity.tsx) collects the assigned parameters and the scenario and
+posts them to the function in [complexity-api/](complexity-api/). **The hub is a static site and
+cannot hold a secret**, so the key lives only in that function's environment, the function restricts
+itself to one origin, and the browser never sees the key, the system prompt or the model name.
 
 - The endpoint is `VITE_COMPLEXITY_API`. **With it unset the page still works**: the button is
   disabled, a notice says so, and `exampleProposals` in
   [src/data/complexity.ts](src/data/complexity.ts) renders the real output shape. Keep that
   example working, because it is what makes the page reviewable without a deployment.
-- **Universe context is pasted, not fetched.** Giving the model standing access to every universe
-  is not maintainable, and the contributor has already done the lookup in step 2 of the method.
-  Pasting it keeps the context current, scoped and free to maintain.
+- **Every parameter is a closed list, and the function enforces the same lists.** That is not
+  politeness towards the contributor: free text fields would make this endpoint a general purpose
+  model proxy for anyone who found the URL. The only free text a request can carry is the scenario,
+  which is capped, and the system prompt tells the model to treat it as the subject rather than as
+  instructions. Where each list comes from is documented in
+  [src/data/claimSheet.ts](src/data/claimSheet.ts); the vocabularies are duplicated in the function
+  because it deploys on its own, so **edit both together**.
+- **Universe context is derived server side, never posted.** `gen_universes.py` writes the
+  summaries twice, once for the dropdown and once for the function, and the function builds the
+  context from the universe id it was given. The browser therefore cannot choose what context the
+  model sees. The summary is services, record counts and the date window — the same thing step 2 of
+  the method has a contributor read off the Database tab — because a full export is 2.5 MB and there
+  are two dozen of them.
 - **Nothing is applied automatically.** The model proposes, the contributor decides. Every proposal
   states what it adds, why that is real difficulty, and what it leaves exactly as assigned.
 - The system prompt exists twice: the authoritative copy in the function, and `complexitySystemPrompt`

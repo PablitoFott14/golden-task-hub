@@ -50,16 +50,73 @@ export interface OnboardingCourse {
 /* --------------------------------------------------------------- complexity */
 
 /** One field of the complexity proposal form. */
+/**
+ * One option in a Complexity field's list. Every value is taken from a project
+ * source — the taxonomy, the guidelines' complexity bar, the universe exports or
+ * the claim sheet — and never written here by hand, so a contributor can only
+ * ever pick something the project actually defines.
+ */
+export interface ComplexityOption {
+  value: string;
+  /** Shown beside the value where the source states something about it. */
+  note?: string;
+  /** Options sharing a group are listed under it. */
+  group?: string;
+}
+
+/**
+ * One field of the Complexity form.
+ *
+ * `select`, `multi`, `use-case`, `subcategory` and `universe` are all closed
+ * lists: there is no typing in any of them. `textarea` is the scenario alone,
+ * which is prose unique to the task and has no option set to pick from.
+ */
 export interface ComplexityField {
   id: string;
   label: string;
   /** What the guidelines call it, shown under the label. */
   hint: string;
-  kind: "text" | "textarea" | "use-case" | "subcategory";
+  kind: "select" | "multi" | "textarea" | "use-case" | "subcategory" | "universe";
   required: boolean;
   placeholder?: string;
   /** Which assigned parameter this is, for the chip on the field. */
   assigned?: boolean;
+  /** The closed list, for `select` and `multi`. */
+  options?: ComplexityOption[];
+  /** Shown in the empty state of a `select`, or as the prompt on a `multi`. */
+  empty?: string;
+}
+
+/**
+ * One row of the single turn claim sheet, as the picker offers it. Selecting a
+ * row fills every field of the form, so a contributor working a sheet task
+ * never types anything at all.
+ */
+export interface ClaimSheetTask {
+  ref: string;
+  taskId: string;
+  useCase: string;
+  subcategory: string;
+  universe: string;
+  artifact: string;
+  primary: string;
+  secondary: string;
+  tools: string;
+  scenario: string;
+}
+
+/**
+ * What one universe export holds, summarised. The Complexity tool's universe
+ * dropdown is a list of these, and the context it sends the model is built from
+ * the one selected. GENERATED into `universes.ts`; see that file.
+ */
+export interface UniverseSummary {
+  id: string;
+  /** The account holder, derived from the export's name. */
+  label: string;
+  /** Where the bulk of the records fall, tails trimmed. */
+  span?: string;
+  services: { name: string; records: string }[];
 }
 
 /**
