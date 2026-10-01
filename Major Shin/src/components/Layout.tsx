@@ -12,6 +12,7 @@ const links = [
   { to: "/checklist", label: "Pre-Submit" },
   { to: "/spec", label: "QC Spec" },
   { to: "/faq", label: "FAQ" },
+  { to: "/whats-new", label: "What's New" },
 ];
 
 function Mark() {

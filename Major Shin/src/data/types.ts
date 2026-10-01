@@ -51,6 +51,12 @@ export interface MethodStep {
   title: string;
   /** The principle, in one memorable line. */
   slogan: string;
+  /**
+   * What arrives from the step before and what this step does with it. The
+   * method is one decision carried forward, not ten independent checks, so
+   * every step except the first states its own inheritance.
+   */
+  inherits?: string;
   /** Two or three sentences. Never more. */
   means: string;
   /** Concrete moves, three or four bullets. */
@@ -494,20 +500,37 @@ export interface VideoGuide {
  */
 export interface GuidelineChange {
   id: string;
-  /** The date the guidelines carry, "Sep 10, 2026". */
+  /** The date the guidelines carry, "Sep 27, 2026". */
   date: string;
   /** The version that date shipped as. */
   version: string;
   /** The change, in one line. */
   title: string;
+  /**
+   * What Red Shell did. Present on every entry that replaces something rather
+   * than adding it, because the page is a comparison and a reader arriving
+   * from the old project needs the thing being replaced named.
+   */
+  before?: string;
   /** What it now says. Two or three sentences. */
   body: string;
   /** What a contributor has to do differently because of it. */
   does: string;
-  /** Where the guidelines carry it. */
-  ref: GuidelineRef;
+  /**
+   * Where the guidelines carry it, every section it touches, so a reader can
+   * trace the rule back to the source rather than taking the hub's word.
+   */
+  refs: GuidelineRef[];
   /** How much of the hub it moves. `hard` is a rule a task fails without. */
   impact: "hard" | "shape";
+  /**
+   * Practical supporting context: worked implications, the shape of a correct
+   * fit, what the rule rules out. Only where it genuinely explains the change,
+   * never for the sake of having one.
+   */
+  detail?: { label: string; items: string[] };
+  /** Renders a larger reference block under the entry. */
+  embed?: "taxonomy";
   links?: XLink[];
 }
 

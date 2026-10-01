@@ -49,6 +49,8 @@ export const methodSteps: MethodStep[] = [
     phase: "Design",
     title: "Universe interaction",
     slogan: "Go find the story. Do not invent one.",
+    inherits:
+      "Step 1 handed you a fixed pair and the scope check that proves it. You are no longer looking for a good situation, only for the one this universe can evidence inside that pair.",
     means:
       "Open the universe holding the assigned pair in view. The loadout decides what the task can be, so read the services, the people and the workflows until a situation shows up that the data already supports. The scenario you pick has to be one the universe can prove.",
     moves: [
@@ -73,6 +75,8 @@ export const methodSteps: MethodStep[] = [
     phase: "Design",
     title: "The scenario and the GTFA",
     slogan: "Solve it yourself before you ask anyone else to.",
+    inherits:
+      "The pair says what the task has to be about. The universe says what can actually be proved. The scenario is the one situation where both are true at once, which is why it comes third and not first.",
     means:
       "The scenario is where the assigned pair and the universe meet. Build it so the pair is its natural home, then resolve the answer completely. The Ground Truth Final Answer is the end state you grade everything against, so it exists before the first run, not after it.",
     moves: [
@@ -97,6 +101,8 @@ export const methodSteps: MethodStep[] = [
     phase: "Design",
     title: "Multimodal inputs",
     slogan: "Three is the floor. It is not the target.",
+    inherits:
+      "The scenario fixes the moment and the deliverable. That decides the evidence: what this person would really be holding, and how much of it the deliverable forces the agent to reconcile.",
     means:
       "Pick evidence that belongs to the moment the scenario describes, in the formats that moment would produce. A handwritten total belongs on paper, a confirmation belongs in a screenshot, a rule with thresholds belongs in a document. Realistic noise stays in.",
     moves: [
@@ -121,6 +127,8 @@ export const methodSteps: MethodStep[] = [
     phase: "Design",
     title: "The initial prompt",
     slogan: "One prompt. Everything the task needs is in it.",
+    inherits:
+      "Pair, universe, scenario, GTFA and inputs are all settled. The prompt is where every one of them becomes the only thing the agent will ever see.",
     means:
       "The task is single turn. One prompt is sent automatically when you submit, and the agent answers it once. Anything you expect the agent to produce has to be requested here, in the user's own voice, or it cannot be graded at all.",
     moves: [
@@ -144,6 +152,8 @@ export const methodSteps: MethodStep[] = [
     phase: "Design",
     title: "Draft History",
     slogan: "Say why the agent is there, not what to type.",
+    inherits:
+      "The prompt is written. Draft History records the same scenario formally, and each field has to agree with it: the category and subcategory from step 1, the outcome from step 3, the files from step 4.",
     means:
       "The Agent Objective explains why this person needs help and what success looks like, without revealing the steps. The Desired Outcome states the end state in inspectable terms: each artifact named, what has to be inside it, and the logic that produces it.",
     moves: [
@@ -172,6 +182,8 @@ export const methodSteps: MethodStep[] = [
     phase: "Leg A",
     title: "Model failure",
     slogan: "If the model sails through, the task is not ready.",
+    inherits:
+      "Design is finished and the prompt goes out once. What comes back is measured against the GTFA you resolved in step 3, not against what looks reasonable.",
     means:
       "The prompt goes out and the agent answers it once. Measure that answer against the GTFA. You are looking for genuine failure across at least half the rubric weight, on failures that materially affect what the user asked for. Failures are found, never manufactured.",
     moves: [
@@ -196,6 +208,8 @@ export const methodSteps: MethodStep[] = [
     phase: "Grade",
     title: "Objective rubrics",
     slogan: "Grade what was delivered, not how it got there.",
+    inherits:
+      "The run handed you a trajectory and a set of artifacts. The criteria are written against those, and against the GTFA that already said what should have been in them.",
     means:
       "Write the criteria against the downloaded trajectory and artifacts. At least 80% of them grade completion, which is the artifact, the state change or the final message. At most 20% grade process, and zero is the preferred number.",
     moves: [
@@ -220,6 +234,8 @@ export const methodSteps: MethodStep[] = [
     phase: "Leg B",
     title: "Golden solution",
     slogan: "Point at the intent. Never at the answer.",
+    inherits:
+      "The criteria define what passing means. Leg B has to prove the set is actually passable, on the same prompt, word for word.",
     means:
       "A new conversation on the same prompt, word for word, against a different model. You act as the user simulator and steer until the model produces the ideal response to that prompt. Hinting is the method for getting there, not an optional extra.",
     moves: [
@@ -244,6 +260,8 @@ export const methodSteps: MethodStep[] = [
     phase: "Grade",
     title: "Subjective rubrics",
     slogan: "Judge the render. Nothing the prompt asked for.",
+    inherits:
+      "Leg A produced one render and Leg B produced the better one. Everything the prompt demanded is already graded above, so what is left between the two renders is this block.",
     means:
       "Put the golden artifact and the Model A artifact side by side and let the real differences write the criteria. A presentation choice that helps the reader becomes a positive, one that hurts becomes a negative. Anything the prompt explicitly required belongs in the objective block instead.",
     moves: [

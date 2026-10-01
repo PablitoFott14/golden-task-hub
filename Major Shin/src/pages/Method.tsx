@@ -9,6 +9,7 @@ import {
   ChevronRight,
   ClipboardCheck,
   Compass,
+  CornerDownRight,
   Gauge,
   History,
   HelpCircle,
@@ -33,10 +34,8 @@ import { checkCount, checklist } from "../data/checklist";
 import { subcategoryCount } from "../data/taxonomy";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
-import LatestChanges from "../components/LatestChanges";
 import QuickAnswers from "../components/QuickAnswers";
 import VideoStrip from "../components/VideoStrip";
-import Taxonomy from "../components/Taxonomy";
 import { cx } from "../lib/util";
 
 const phaseTone: Record<string, { chip: string; badge: string; bar: string }> = {
@@ -195,8 +194,8 @@ export default function Method() {
                   <MessageSquareQuote size={16} /> {feedbackThread.cta}
                   <ArrowUpRight size={14} className="text-gold-600 dark:text-gold-400" />
                 </a>
-                <Link to={{ hash: "#latest-changes" }} className="btn-ghost">
-                  <History size={16} className="text-rose-600 dark:text-rose-300" /> Latest changes
+                <Link to="/whats-new" className="btn-ghost">
+                  <History size={16} className="text-rose-600 dark:text-rose-300" /> What is new
                   <span className="rounded-full bg-rose-500/15 px-1.5 font-mono text-[11px] font-bold text-rose-700 dark:text-rose-300">
                     {guidelineChanges.length}
                   </span>
@@ -205,7 +204,7 @@ export default function Method() {
                   <PlayCircle size={16} className="text-amber-600 dark:text-amber-300" /> Universe
                   videos
                 </Link>
-                <Link to={{ hash: "#taxonomy" }} className="btn-ghost">
+                <Link to="/whats-new#use-case-and-tools" className="btn-ghost">
                   <Layers size={16} className="text-violet-600 dark:text-violet-300" /> Use cases
                   <span className="rounded-full bg-violet-500/15 px-1.5 font-mono text-[11px] font-bold text-violet-700 dark:text-violet-300">
                     {subcategoryCount()}
@@ -281,33 +280,6 @@ export default function Method() {
         </div>
       </section>
 
-      {/* What changed in the guidelines. Directly under the hero because the
-          reader this band exists for is the one who already knows the method
-          and has to find out what moved since they last built a task. It stays
-          a filtered set rather than a changelog: see changes.ts. */}
-      <section
-        id="latest-changes"
-        className="scroll-mt-20 border-b border-ink-200/70 bg-ink-50"
-      >
-        <div className="wrap py-14">
-          <Reveal>
-            <LatestChanges />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* The use case taxonomy. It sits above the method because step 1 is the
-          assigned pair, and a contributor who has not read their L2 definition
-          is already designing the wrong task. Collapsed by default: 68
-          subcategories opened flat would be longer than the rest of the page. */}
-      <section id="taxonomy" className="scroll-mt-20 border-b border-ink-200/70 bg-ink-50">
-        <div className="wrap py-14">
-          <Reveal>
-            <Taxonomy />
-          </Reveal>
-        </div>
-      </section>
-
       {/* Universe interaction, the recordings. First thing under the hero
           because it is point 1 of the guidelines and the most common reason a
           task is rejected, so it has to be found without going looking. The
@@ -373,6 +345,22 @@ export default function Method() {
                 <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-white/90">
                   {step.means}
                 </p>
+
+                {/* The chain. Every step but the first states what arrived from
+                    the one before and what it does with it, because the method
+                    is one decision carried forward rather than ten checks. */}
+                {step.inherits && (
+                  <div className="mt-5 flex max-w-3xl items-start gap-2.5 rounded-xl bg-white/10 p-3.5">
+                    <CornerDownRight size={14} className="mt-0.5 shrink-0 text-white/70" />
+                    <p className="text-[13px] leading-relaxed text-white/85">
+                      <span className="font-bold uppercase tracking-[0.12em] text-white/60">
+                        From step {step.n - 1}
+                      </span>
+                      <span className="mx-1.5 text-white/40">·</span>
+                      {step.inherits}
+                    </p>
+                  </div>
+                )}
               </div>
 
               <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-2">

@@ -21,8 +21,10 @@ import { cx } from "../lib/util";
 export default function Taxonomy() {
   const [open, setOpen] = useState<string | null>(null);
 
+  /* The anchor lives on the component rather than on whatever wraps it, so
+     `#taxonomy` keeps working wherever the block is rendered. */
   return (
-    <div>
+    <div id="taxonomy" className="scroll-mt-24">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <Eyebrow className="text-violet-600 dark:text-violet-300">

@@ -6,6 +6,7 @@ import TaskDetail from "./pages/TaskDetail";
 import PreSubmit from "./pages/PreSubmit";
 import SpecDoc from "./pages/SpecDoc";
 import Faq from "./pages/Faq";
+import WhatsNew from "./pages/WhatsNew";
 
 function NotFound() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/checklist" element={<PreSubmit />} />
         <Route path="/spec" element={<SpecDoc />} />
         <Route path="/faq" element={<Faq />} />
+        <Route path="/whats-new" element={<WhatsNew />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

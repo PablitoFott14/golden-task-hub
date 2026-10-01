@@ -15,6 +15,7 @@ Rubrics single turn project. Six routes:
 | `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 29 checks in dense rows, progress sidebar with persisted ticks. |
 | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
 | `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions, answers always open, each with its guidelines references. |
+| `/whats-new` | [WhatsNew.tsx](src/pages/WhatsNew.tsx) | Red Shell to Major Shin. One entry per change, rail on the left, the use case taxonomy nested under the taxonomy entry. |
 
 **This is the published project.** The repo's Pages site is built from this folder by
 [../.github/workflows/deploy.yml](../.github/workflows/deploy.yml), on every push to `main`.
@@ -181,7 +182,16 @@ into a dead one**, and nothing validates that, so rename in both files together.
 
 ### The method is the spine
 
-`methodSteps` in [src/data/method.ts](src/data/method.ts) is nine steps derived from `rationale.md`.
+`methodSteps` in [src/data/method.ts](src/data/method.ts) is ten steps, rewritten against the
+Major Shin guidelines. **The order is the argument**: step 1 fixes the assigned pair, step 2
+explores the universe inside that pair, step 3 is the one situation where both are true, step 4 is
+the evidence that situation would produce. Every step after the first carries `inherits`, which
+states what arrived from the step before and what this step does with it, and it renders in the
+panel head. **A new step needs one**, or the method goes back to reading as ten independent checks.
+
+`inTask.link` is optional. A step the published Golden Task cannot demonstrate under the current
+standard carries the narrative without a link and says so, rather than pointing at a worked example
+that teaches the superseded rule.
 Each step carries `slogan` / `means` / `moves` / `produces` / `rule` / `inTask`, and `inTask.link`
 points at the Golden Task section where the principle landed. That relationship,
 **principle → decision → implementation**, is rendered in two places and must stay consistent:
@@ -257,34 +267,64 @@ list is capped at `PEEK` rows with the rest behind a toggle, and that cap is the
 this block from growing into the page it links to. The hero links straight to it, because a
 contributor who never opens the last tab is the reader the block exists for.
 
-### The changes band is a filter, not a changelog
+### What is new is a tab, not a band
 
 `guidelineChanges` in [src/data/changes.ts](src/data/changes.ts) is transcribed from the Version
-History table and the `[NEW]` callouts of the guidelines, and
-[LatestChanges.tsx](src/components/LatestChanges.tsx) renders it as the first band under the hero
-on `/`, at `#latest-changes`. It sits above the video strip because the reader it exists for is the
-one who already knows the method and is back to find out what moved.
+History table and the `[NEW]` callouts of `[External] Major Shin – Guidelines .md`, and
+[WhatsNew.tsx](src/pages/WhatsNew.tsx) renders it at `/whats-new`.
 
-**The band now tracks `[External] Major Shin – Guidelines .md`**, the single turn guidelines that
-replaced the multi-turn document on Sep 27, 2026 and restarted the version count at v1. The rest of
-the hub is still multi-turn era, so its entries carry no `links` until each page is brought over.
+**It used to be a six card band under the hero and the cap was its height.** The Major Shin change
+set outgrew that: 80/20 cannot be taught in a card, and the taxonomy needs 68 subcategories beside
+it. So it is a page with a rail, one entry per change, and the cap is gone. `LatestChanges.tsx` was
+deleted with the band.
 
 **It is not the version history.** An entry earns its place only by changing what a contributor
-does, which is why `does` is a required field: if you cannot write the move it forces, the entry
-does not belong. `impact` is `hard` for a rule a task fails without and `shape` for everything
-else, and it always ships beside a text label rather than as colour alone.
+does, which is why `does` is required: if you cannot write the move it forces, the entry does not
+belong. `impact` is `hard` for a rule a task fails without and `shape` for everything else, and it
+always ships beside a text label rather than as colour alone.
 
-Everything renders open, and that is the cap on the block. Six cards in two rows of three is
-roughly 1,240px; a seventh date or a longer body pushes it into a third row and the band stops
-being something you read on the way past. Keep any addition inside a card, and cut an entry that
-has aged out rather than letting the grid grow. Each card carries its own date rather than sitting
-under a date heading, because grouping cost a row per date and left half a row empty wherever a
-date shipped one change.
+Three fields carry the rest:
 
-When a change lands, the band is only half of it. The rule it names has to be applied to the
-Golden Task as well, or the worked example teaches the superseded standard. `guidelinesVersion` in
-the same file is what the guidelines header currently says, and it is rendered, so move it when the
+- **`before`** is the Red Shell rule being replaced. The page is a comparison, and most readers
+  arrive holding the old rule, so an entry that replaces something names it before stating the
+  replacement. Absent where the rule is purely additive.
+- **`refs`** is every guidelines section the rule touches, not one. The section numbers come from
+  the Version History row, which maps each update to the sections it was applied in. They render as
+  chips under each entry so a reader can open the document and check the hub rather than trust it.
+- **`detail`** is supporting context: how to count the 80/20 split, the rewrite an existence check
+  needs, the floor each deliverable has to clear. **Optional on purpose.** It is there where the
+  rule is easy to misread and absent where the rule explains itself, so do not add one for the sake
+  of symmetry.
+
+`embed: "taxonomy"` renders [Taxonomy.tsx](src/components/Taxonomy.tsx) inside an entry. Only the
+use case entry uses it, because the 68 subcategories are that change's supporting context rather
+than a reference block of their own.
+
+When a change lands, the tab is only half of it. The rule it names has to be applied to the Golden
+Task as well, or the worked example teaches the superseded standard. `guidelinesVersion` in the
+same file is what the guidelines header currently says, and it is rendered, so move it when the
 document moves.
+
+### The use case taxonomy is a reference, collapsed
+
+`taxonomy` in [src/data/taxonomy.ts](src/data/taxonomy.ts) is the 11 use cases and 68 subcategories
+of section 1.1.1. `l1`, `scope` and `covers` are the standard's wording and are stored **verbatim**.
+`scenarios` are hub copy, three per subcategory, 204 in total.
+
+**Every scenario is written against the complexity bar, not against the label.** Each names the
+multimodal evidence the agent has to read, the reconciliation it cannot shortcut, and a deliverable
+that clears the bar for its type. They lean on the P0 deliverables, the dashboard, the interactive
+page and the explainer video, because those are what the client prioritises and what leaves room
+for the subjective block. A scenario ending in a plain document is a scenario that will struggle to
+clear the bar.
+
+The block is **collapsed by default and opens one use case at a time**, which is the only thing
+keeping it on a page with other content: opened flat it is several thousand words. The scope check
+shows only when a use case is open, because it is what settles a wrong assignment and reads as
+noise in a closed row. The `#taxonomy` anchor lives on the component rather than on a wrapper, so
+it survives being rendered anywhere.
+
+`useCaseCount()` and `subcategoryCount()` are read off the data. Never hardcode either.
 
 ### The Universe Interaction videos are a strip, not three players
 
