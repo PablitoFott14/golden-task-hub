@@ -81,12 +81,14 @@ Mirror the two projects into **separate** scratch directories. One mirror cannot
 have different `package.json` names and will diverge. Never commit a mirror back wholesale. Edit in
 the Drive tree, re-copy `src/` to the mirror to verify.
 
-## Source material at the repo root
+## Source material lives inside its own project
 
-The guidelines document, the task folders and the CSV exports sit at the repo root and are
-gitignored. They are the sources the projects transcribe into `src/data/`, not site content. Each
-project's own `CLAUDE.md` carries the table mapping a source document to the data file that holds
-it.
+The guidelines document, the task folders and the CSV exports sit **inside the project they belong
+to**, not at the repo root, and are gitignored by the patterns at the foot of
+[.gitignore](.gitignore). Red Shell carries the multi-turn guidelines and the vendor closeout task
+source; Major Shin carries the Major Shin guidelines and its own task sources. They are what the
+projects transcribe into `src/data/`, never site content, and a project reads only its own. Each
+project's `CLAUDE.md` carries the table mapping a source document to the data file that holds it.
 
 ## Other agent configs
 
