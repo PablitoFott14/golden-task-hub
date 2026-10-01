@@ -7,6 +7,8 @@ import PreSubmit from "./pages/PreSubmit";
 import SpecDoc from "./pages/SpecDoc";
 import Faq from "./pages/Faq";
 import WhatsNew from "./pages/WhatsNew";
+import Onboarding from "./pages/Onboarding";
+import Complexity from "./pages/Complexity";
 
 function NotFound() {
   return (
@@ -35,6 +37,8 @@ export default function App() {
         <Route path="/spec" element={<SpecDoc />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/whats-new" element={<WhatsNew />} />
+        <Route path="/onboarding" element={<Onboarding />} />
+        <Route path="/complexity" element={<Complexity />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

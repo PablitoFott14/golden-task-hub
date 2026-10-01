@@ -9,6 +9,8 @@ import { cx } from "../lib/util";
 const kindTone: Record<SearchEntry["kind"], string> = {
   Method: "bg-brand-500/12 text-brand-700 dark:text-brand-300",
   "Use case": "bg-violet-500/12 text-violet-700 dark:text-violet-300",
+  Course: "bg-emerald-500/12 text-emerald-700 dark:text-emerald-300",
+  Tool: "bg-violet-500/12 text-violet-700 dark:text-violet-300",
   "Golden task": "bg-gold-500/15 text-gold-700 dark:text-gold-300",
   "Pre-submit check": "bg-emerald-500/12 text-emerald-700 dark:text-emerald-300",
   "QC spec": "bg-sky-500/12 text-sky-700 dark:text-sky-300",

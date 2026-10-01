@@ -6,6 +6,7 @@ import { authoringStandards, rubricQualityIssues, specGroups, weightBuckets } fr
 import { faq } from "./faq";
 import { guidelineChanges } from "./changes";
 import { taxonomy } from "./taxonomy";
+import { onboardingCourses } from "./onboarding";
 import { universeVideos } from "./videos";
 import { specRevisions } from "./specLog";
 
@@ -37,6 +38,23 @@ export const searchIndex: SearchEntry[] = [
      contributor is assigned and what they search for. The use case, the scope
      check and the scenarios ride along in `terms`, so searching a scenario
      word finds the pair it belongs to. */
+  ...onboardingCourses.map<SearchEntry>((c) => ({
+    kind: "Course" as const,
+    title: c.title,
+    hint: `${c.stats.map((x) => `${x.k} ${x.v}`).join(" · ")}`,
+    to: "/onboarding",
+    terms: [c.tagline, c.blurb, c.covers.join(" "), "onboarding course slides training"].join(" "),
+  })),
+
+  {
+    kind: "Tool" as const,
+    title: "Increase complexity proposals",
+    hint: "Design assistant",
+    to: "/complexity",
+    terms:
+      "complexity bar proposals scenario harder difficulty assistant generate suggestions assigned parameters universe context P0 deliverable",
+  },
+
   ...taxonomy.flatMap<SearchEntry>((g) =>
     g.subs.map((s) => ({
       kind: "Use case" as const,

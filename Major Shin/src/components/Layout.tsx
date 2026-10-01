@@ -6,9 +6,15 @@ import { cx } from "../lib/util";
 import { useTheme } from "../lib/useTheme";
 import CommandPalette from "./CommandPalette";
 
+/* Eight tabs is the ceiling at desktop width before the row crowds the search
+   box. Onboarding and Complexity earn their place because both are entry
+   points: one is where a new CB starts, the other is a tool used while
+   designing. Anything further goes inside an existing tab. */
 const links = [
   { to: "/", label: "The Method", end: true },
+  { to: "/onboarding", label: "Onboarding" },
   { to: "/golden-tasks", label: "Golden Tasks" },
+  { to: "/complexity", label: "Complexity" },
   { to: "/checklist", label: "Pre-Submit" },
   { to: "/spec", label: "QC Spec" },
   { to: "/faq", label: "FAQ" },

@@ -21,6 +21,66 @@ export interface XLink {
  * the project guidelines. The slogan is the memorable half, `means` the
  * minimal explanation, and `inTask` the line that ties it to the Golden Task.
  */
+/* --------------------------------------------------------------- onboarding */
+
+/**
+ * One onboarding course. It is hosted and deployed on its own, so the hub
+ * carries the card and the link rather than the course itself.
+ */
+export interface OnboardingCourse {
+  id: string;
+  n: number;
+  title: string;
+  /** One line, the reason to open it. */
+  tagline: string;
+  /** Two or three sentences on what it is. */
+  blurb: string;
+  /** The deck's own cover slide, under `public/onboarding/`. */
+  cover: string;
+  /** Where the course actually lives. */
+  url: string;
+  /** Countable facts, rendered as a small stat row. */
+  stats: { k: string; v: string }[];
+  /** What is inside, one line per theme. */
+  covers: string[];
+  cta: string;
+  tone: "brand" | "rose";
+}
+
+/* --------------------------------------------------------------- complexity */
+
+/** One field of the complexity proposal form. */
+export interface ComplexityField {
+  id: string;
+  label: string;
+  /** What the guidelines call it, shown under the label. */
+  hint: string;
+  kind: "text" | "textarea" | "use-case" | "subcategory";
+  required: boolean;
+  placeholder?: string;
+  /** Which assigned parameter this is, for the chip on the field. */
+  assigned?: boolean;
+}
+
+/**
+ * One proposal returned by the model. It never rewrites the scenario: it names
+ * an addition, says why that addition is genuine complexity rather than
+ * friction, and states what it leaves untouched.
+ */
+export interface ComplexityProposal {
+  title: string;
+  /** The change itself, concretely. */
+  adds: string;
+  /** Why it raises real difficulty. */
+  why: string;
+  /** The multimodal inputs it implies, if any. */
+  inputs?: string[];
+  /** How it moves the deliverable toward the bar for its type. */
+  bar?: string;
+  /** What it deliberately leaves as assigned. */
+  keeps?: string;
+}
+
 /* ----------------------------------------------------------------- taxonomy */
 
 /**
@@ -540,6 +600,8 @@ export interface SearchEntry {
   kind:
     | "Method"
     | "Use case"
+    | "Course"
+    | "Tool"
     | "Golden task"
     | "Pre-submit check"
     | "QC spec"

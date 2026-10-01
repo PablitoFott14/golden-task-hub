@@ -16,6 +16,8 @@ Rubrics single turn project. Six routes:
 | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
 | `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions, answers always open, each with its guidelines references. |
 | `/whats-new` | [WhatsNew.tsx](src/pages/WhatsNew.tsx) | Red Shell to Major Shin. One entry per change, rail on the left, the use case taxonomy nested under the taxonomy entry. |
+| `/onboarding` | [Onboarding.tsx](src/pages/Onboarding.tsx) | Two cards, one per course. Links out, never embeds. |
+| `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | The Increase Complexity Proposals tool. Form, then proposals from the model. |
 
 **This is the published project.** The repo's Pages site is built from this folder by
 [../.github/workflows/deploy.yml](../.github/workflows/deploy.yml), on every push to `main`.
@@ -266,6 +268,50 @@ up in both, and the row is labelled with `topic`, so a new topic also goes into 
 list is capped at `PEEK` rows with the rest behind a toggle, and that cap is the only thing keeping
 this block from growing into the page it links to. The hero links straight to it, because a
 contributor who never opens the last tab is the reader the block exists for.
+
+### Onboarding links out, it does not embed
+
+`onboardingCourses` in [src/data/onboarding.ts](src/data/onboarding.ts) is the two courses, and
+[Onboarding.tsx](src/pages/Onboarding.tsx) renders them as two large cards at `/onboarding`.
+
+**Both courses are complete applications with their own navigation, deployed from their own
+repositories.** The Common Errors viewer has its own tab bar, deep links and copy actions; the
+intro deck runs 1920 by 1080 slides on keyboard navigation. An iframe nests a tab bar inside a tab
+bar, letterboxes the deck, and swallows the arrow keys. Linking also means neither can go stale
+here: they are redeployed from their own repos and the hub always points at the current build.
+
+What the hub owes them is discovery, so the card carries the deck's **real cover slide**, the real
+counts and what is actually inside. Re-cut the cover from the source deck into
+`public/onboarding/` when a course is rebuilt:
+
+```python
+from PIL import Image
+im = Image.open(<first slide>.png).convert("RGB")
+im.resize((880, 495), Image.LANCZOS).save("public/onboarding/<id>-cover.png", optimize=True)
+```
+
+### The complexity tool keeps its credential off the client
+
+[Complexity.tsx](src/pages/Complexity.tsx) collects the seven assigned parameters, the scenario and
+the universe context, and posts them to the function in [complexity-api/](complexity-api/). **The
+hub is a static site and cannot hold a secret**, so the key lives only in that function's
+environment, the function restricts itself to one origin, and the browser never sees the key, the
+system prompt or the model name.
+
+- The endpoint is `VITE_COMPLEXITY_API`. **With it unset the page still works**: the button is
+  disabled, a notice says so, and `exampleProposals` in
+  [src/data/complexity.ts](src/data/complexity.ts) renders the real output shape. Keep that
+  example working, because it is what makes the page reviewable without a deployment.
+- **Universe context is pasted, not fetched.** Giving the model standing access to every universe
+  is not maintainable, and the contributor has already done the lookup in step 2 of the method.
+  Pasting it keeps the context current, scoped and free to maintain.
+- **Nothing is applied automatically.** The model proposes, the contributor decides. Every proposal
+  states what it adds, why that is real difficulty, and what it leaves exactly as assigned.
+- The system prompt exists twice: the authoritative copy in the function, and `complexitySystemPrompt`
+  in the data file as the reviewable one. **Edit both together.**
+- The system prompt is frozen and sent first so it caches; the per request fields go in the user
+  message. A date or counter in that prompt drops the cache hit rate to zero and roughly doubles
+  the input cost.
 
 ### What is new is a tab, not a band
 

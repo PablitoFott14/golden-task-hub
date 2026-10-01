@@ -1,0 +1,10 @@
+{
+  "name": "complexity-api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend for the Increase Complexity Proposals tool. Holds the Anthropic credential so the static hub never sees it.",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  }
+}

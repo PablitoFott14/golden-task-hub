@@ -10,6 +10,7 @@ import {
   ClipboardCheck,
   Compass,
   CornerDownRight,
+  GraduationCap,
   Gauge,
   History,
   HelpCircle,
@@ -20,6 +21,7 @@ import {
   ShieldAlert,
   Sparkles,
   Target,
+  Wand2,
 } from "lucide-react";
 import { methodSteps, mindset, hardRequirements } from "../data/method";
 import {
@@ -180,6 +182,21 @@ export default function Method() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link to={{ hash: "#method" }} className="btn-primary">
                   <Compass size={16} /> Start with the method
+                </Link>
+                {/* The two entry points that are not reading: the courses a new
+                    CB starts on, and the tool used while designing. Both sit in
+                    the first row because neither is found by scrolling. */}
+                <Link
+                  to="/onboarding"
+                  className="btn bg-brand-500/12 text-brand-800 ring-1 ring-brand-500/25 hover:bg-brand-500/20 dark:text-brand-200"
+                >
+                  <GraduationCap size={16} /> Onboarding courses
+                </Link>
+                <Link
+                  to="/complexity"
+                  className="btn bg-violet-500/12 text-violet-800 ring-1 ring-violet-500/25 hover:bg-violet-500/20 dark:text-violet-200"
+                >
+                  <Wand2 size={16} /> Increase complexity
                 </Link>
                 {/* Feedback on a task is asked for in the community thread,
                     not here. It is the one button in this row that leaves the
