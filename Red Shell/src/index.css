@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Golden Task Hub design foundation.
+
+  One neutral ramp (`ink`) backed by CSS variables, so every text and border
+  utility inverts cleanly when `html.dark` is set. `surface` is a card ground,
+  `raised` a slightly lifted panel inside a card.
+*/
+
+:root {
+  color-scheme: light;
+  --ink-50: 247 248 251;
+  --ink-100: 238 240 246;
+  --ink-200: 215 220 231;
+  --ink-300: 178 187 205;
+  --ink-400: 133 146 172;
+  --ink-500: 98 113 143;
+  --ink-600: 76 90 118;
+  --ink-700: 62 74 97;
+  --ink-800: 52 62 81;
+  --ink-900: 27 33 47;
+  --ink-950: 13 16 24;
+  --surface: 255 255 255;
+  --raised: 249 250 253;
+}
+
+html.dark {
+  color-scheme: dark;
+  --ink-50: 13 16 24;
+  --ink-100: 22 26 37;
+  --ink-200: 40 47 64;
+  --ink-300: 64 75 98;
+  --ink-400: 122 135 161;
+  --ink-500: 152 165 187;
+  --ink-600: 179 189 206;
+  --ink-700: 201 209 222;
+  --ink-800: 224 229 238;
+  --ink-900: 240 243 248;
+  --ink-950: 250 251 253;
+  --surface: 22 26 36;
+  --raised: 28 33 45;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-50 text-ink-900 antialiased;
+}
+
+::selection {
+  @apply bg-brand-500/25;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--ink-300)) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgb(var(--ink-300));
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--ink-400));
+  background-clip: content-box;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-ink-200/70 bg-surface shadow-soft;
+  }
+  .card-hover {
+    @apply transition duration-300 ease-out hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lift;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11.5px] font-semibold;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition duration-200 active:scale-[0.98];
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white shadow-glow hover:bg-brand-700;
+  }
+  .btn-ghost {
+    @apply btn border border-ink-200 bg-surface text-ink-700 hover:border-ink-300 hover:bg-ink-100;
+  }
+  .btn-gold {
+    @apply btn bg-gold-500 text-white hover:bg-gold-600;
+  }
+  .mono-label {
+    @apply font-mono text-[11px] font-semibold uppercase tracking-[0.14em];
+  }
+  .wrap {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .prose-doc {
+    @apply text-[15px] leading-relaxed text-ink-700;
+  }
+  .prose-doc h3 { @apply mt-6 text-base font-bold text-ink-900; }
+  .prose-doc p { @apply my-3; }
+  .prose-doc ul { @apply my-3 list-disc space-y-1.5 pl-5; }
+  .prose-doc strong { @apply font-semibold text-ink-900; }
+  .prose-doc code {
+    @apply rounded border border-brand-200 bg-brand-50 px-1.5 py-0.5 font-mono text-[0.85em] font-semibold text-brand-800;
+  }
+  html.dark .prose-doc code {
+    @apply border-brand-500/40 bg-brand-500/15 text-brand-200;
+  }
+}
+
+/* Faint dotted ground for hero sections. */
+.bg-dots {
+  background-image: radial-gradient(rgb(var(--ink-300) / 0.55) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.bg-aurora {
+  background:
+    radial-gradient(900px 420px at 12% -10%, rgb(106 93 246 / 0.16), transparent 65%),
+    radial-gradient(720px 380px at 88% 0%, rgb(234 180 53 / 0.14), transparent 62%);
+}

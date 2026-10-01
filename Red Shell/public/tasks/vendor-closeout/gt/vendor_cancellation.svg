@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <!-- background -->
+  <rect width="1000" height="760" fill="#f4f6f8"/>
+
+  <!-- title -->
+  <text x="500" y="46" text-anchor="middle" font-size="28" font-weight="700" fill="#1f2937">Harmony Games, Inc. — Vendor Closeout</text>
+  <text x="500" y="72" text-anchor="middle" font-size="15" fill="#6b7280">Where we stand on vendor cancellations (wind-down, Feb 2026)</text>
+
+  <!-- KPI banner -->
+  <rect x="60" y="92" width="880" height="104" rx="12" fill="#111827"/>
+  <!-- KPI 1: total owed -->
+  <text x="270" y="134" text-anchor="middle" font-size="15" fill="#9ca3af">TOTAL STILL OWED (issued receipts)</text>
+  <text x="270" y="176" text-anchor="middle" font-size="42" font-weight="800" fill="#ffffff">$4,032.00</text>
+  <!-- divider -->
+  <line x1="500" y1="112" x2="500" y2="176" stroke="#374151" stroke-width="1.5"/>
+  <!-- KPI 2: percentage -->
+  <text x="730" y="134" text-anchor="middle" font-size="15" fill="#9ca3af">OF ~$50K SHUTDOWN ESTIMATE</text>
+  <text x="730" y="176" text-anchor="middle" font-size="42" font-weight="800" fill="#34d399">8.06%</text>
+
+  <!-- ===================== COLUMN 1: CANCELLED ===================== -->
+  <g>
+    <rect x="60" y="220" width="280" height="500" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+    <rect x="60" y="220" width="280" height="56" rx="12" fill="#059669"/>
+    <rect x="60" y="256" width="280" height="20" fill="#059669"/>
+    <text x="200" y="248" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">CANCELLED</text>
+    <text x="200" y="268" text-anchor="middle" font-size="12" fill="#d1fae5">Slack + file evidence — receipt issued</text>
+
+    <!-- rows -->
+    <g font-size="15" fill="#111827">
+      <text x="82" y="316" font-weight="600">Helpshift</text>
+      <text x="318" y="316" text-anchor="end" fill="#b91c1c" font-weight="600">$1,500.00</text>
+
+      <text x="82" y="356" font-weight="600">Layer</text>
+      <text x="318" y="356" text-anchor="end" fill="#b91c1c" font-weight="600">$2,340.00</text>
+
+      <text x="82" y="396" font-weight="600">Cursor</text>
+      <text x="318" y="396" text-anchor="end" fill="#b91c1c" font-weight="600">$192.00</text>
+
+      <text x="82" y="436" font-weight="600">Soundly</text>
+      <text x="318" y="436" text-anchor="end" fill="#059669" font-weight="600">None</text>
+    </g>
+    <line x1="82" y1="332" x2="318" y2="332" stroke="#f3f4f6" stroke-width="1"/>
+    <line x1="82" y1="372" x2="318" y2="372" stroke="#f3f4f6" stroke-width="1"/>
+    <line x1="82" y1="412" x2="318" y2="412" stroke="#f3f4f6" stroke-width="1"/>
+
+    <!-- subtotal -->
+    <line x1="82" y1="464" x2="318" y2="464" stroke="#d1d5db" stroke-width="1.5"/>
+    <text x="82" y="492" font-size="14" fill="#6b7280">4 vendors</text>
+    <text x="318" y="492" text-anchor="end" font-size="16" font-weight="700" fill="#111827">$4,032.00</text>
+  </g>
+
+  <!-- ===================== COLUMN 2: UNCONFIRMED ===================== -->
+  <g>
+    <rect x="360" y="220" width="280" height="500" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+    <rect x="360" y="220" width="280" height="56" rx="12" fill="#d97706"/>
+    <rect x="360" y="256" width="280" height="20" fill="#d97706"/>
+    <text x="500" y="248" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">UNCONFIRMED</text>
+    <text x="500" y="268" text-anchor="middle" font-size="12" fill="#fef3c7">Meant to cancel — evidence incomplete</text>
+
+    <g font-size="15" fill="#111827">
+      <text x="382" y="316" font-weight="600">Singular</text>
+      <text x="618" y="316" text-anchor="end" font-size="12" fill="#6b7280">no confirm; $7,200 open</text>
+
+      <text x="382" y="356" font-weight="600">Unity</text>
+      <text x="618" y="356" text-anchor="end" font-size="12" fill="#6b7280">shows "Active"</text>
+
+      <text x="382" y="396" font-weight="600">Zapier</text>
+      <text x="618" y="396" text-anchor="end" font-size="12" fill="#6b7280">no confirmation</text>
+
+      <text x="382" y="436" font-weight="600">coderabbit</text>
+      <text x="618" y="436" text-anchor="end" font-size="12" fill="#6b7280">Slack only, no file</text>
+    </g>
+    <line x1="382" y1="332" x2="618" y2="332" stroke="#f3f4f6" stroke-width="1"/>
+    <line x1="382" y1="372" x2="618" y2="372" stroke="#f3f4f6" stroke-width="1"/>
+    <line x1="382" y1="412" x2="618" y2="412" stroke="#f3f4f6" stroke-width="1"/>
+
+    <line x1="382" y1="464" x2="618" y2="464" stroke="#d1d5db" stroke-width="1.5"/>
+    <text x="382" y="492" font-size="14" fill="#6b7280">4 vendors · need follow-up</text>
+  </g>
+
+  <!-- ===================== COLUMN 3: NOT CANCELLED ===================== -->
+  <g>
+    <rect x="660" y="220" width="280" height="500" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+    <rect x="660" y="220" width="280" height="56" rx="12" fill="#4b5563"/>
+    <rect x="660" y="256" width="280" height="20" fill="#4b5563"/>
+    <text x="800" y="248" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">NOT CANCELLED</text>
+    <text x="800" y="268" text-anchor="middle" font-size="12" fill="#e5e7eb">Kept or transferred</text>
+
+    <g font-size="14" fill="#111827">
+      <text x="682" y="312">Deel</text>
+      <text x="682" y="346">gusto</text>
+      <text x="682" y="380">Intuit</text>
+      <text x="682" y="414">Figma</text>
+      <text x="682" y="448">linear</text>
+      <text x="682" y="482">Metabase</text>
+
+      <text x="812" y="312">dbt</text>
+      <text x="812" y="346">GitHub <tspan font-size="11" fill="#6b7280">(→KubLLC)</tspan></text>
+      <text x="812" y="380">Slack</text>
+      <text x="812" y="414">Google</text>
+      <text x="812" y="448">Carta</text>
+      <text x="812" y="482">AWS</text>
+    </g>
+
+    <line x1="682" y1="504" x2="918" y2="504" stroke="#d1d5db" stroke-width="1.5"/>
+    <text x="682" y="530" font-size="14" fill="#6b7280">12 vendors · kept / transferred</text>
+  </g>
+
+  <!-- footnote -->
+  <text x="60" y="742" font-size="11.5" fill="#9ca3af">Vendor pool = vendors named in the #winddown Slack channel. Cancelled = confirmed by Slack + a supporting file.</text>
+  <text x="60" y="756" font-size="11.5" fill="#9ca3af">"% of estimate" uses the ~$50K all-in shutdown budget posted in #executives (2025-12-03; range $20K–$80K). Details in MEMORY.md.</text>
+</svg>
