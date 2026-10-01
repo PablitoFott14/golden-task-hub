@@ -126,7 +126,7 @@ re-transcribing checks, and re-copy the regenerated PDF into `public/docs/`:
 ```bash
 cd "g:/My Drive/Red Shell/Coruses & Screenings/Guidelines/_changes"
 python build_presubmit_gate.py          # writes ../presubmit-gate.pdf
-cp ../presubmit-gate.pdf "g:/My Drive/Red Shell/Golden Task Hub/public/docs/"
+cp ../presubmit-gate.pdf "g:/My Drive/Red Shell/Golden Task Hub/Red Shell/public/docs/"
 ```
 
 The gate is **one Letter page**, and the generator holds it there by stepping the type scale down

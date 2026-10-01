@@ -4,8 +4,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A static React site, the practical reference for contributors (CBs) on the Red Shell / OpenClaw MM
-Rubrics multi-turn project. Six routes:
+A static React site, the practical reference for contributors (CBs) on the Major Shin / OpenClaw MM
+Rubrics single turn project. Six routes:
 
 | Route | Page | What it holds |
 | --- | --- | --- |
@@ -125,7 +125,7 @@ re-transcribing checks, and re-copy the regenerated PDF into `public/docs/`:
 ```bash
 cd "g:/My Drive/Red Shell/Coruses & Screenings/Guidelines/_changes"
 python build_presubmit_gate.py          # writes ../presubmit-gate.pdf
-cp ../presubmit-gate.pdf "g:/My Drive/Red Shell/Golden Task Hub/public/docs/"
+cp ../presubmit-gate.pdf "g:/My Drive/Red Shell/Golden Task Hub/Major Shin/public/docs/"
 ```
 
 The gate is **one Letter page**, and the generator holds it there by stepping the type scale down

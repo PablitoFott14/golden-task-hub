@@ -150,7 +150,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               <span className="block font-display text-[15px] font-bold tracking-tight text-ink-900">
                 Golden Task Hub
               </span>
-              <span className="mono-label block text-[9.5px] text-ink-400">Red Shell</span>
+              <span className="mono-label block text-[9.5px] text-ink-400">Major Shin</span>
             </span>
           </Link>
 
@@ -231,7 +231,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="wrap flex flex-col gap-4 py-9 sm:flex-row sm:items-center sm:justify-between">
           <div className="text-[13px] text-ink-500">
             <span className="font-semibold text-ink-800">Golden Task Hub</span>, the practical
-            reference for Red Shell contributors.
+            reference for Major Shin contributors.
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-2 text-[13px]">
             {links.map((l) => (
@@ -242,7 +242,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           </div>
         </div>
         <div className="wrap pb-8 text-[12px] text-ink-400">
-          [External] OpenClaw MM Rubrics MULTI TURN Guidelines v2 stays the source of truth. This
+          [External] Major Shin Guidelines v1 stays the source of truth. This
           hub is a practical companion to it, never a replacement.
         </div>
       </footer>

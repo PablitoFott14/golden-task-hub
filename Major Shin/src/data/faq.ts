@@ -189,7 +189,7 @@ export const faq: FaqItem[] = [
 ];
 
 export const guidelinesTitle =
-  "[External] OpenClaw MM Rubrics MULTI TURN, Guidelines v2";
+  "[External] Major Shin, Guidelines v1";
 
 export const faqTopics = [
   "All",
