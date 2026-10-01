@@ -44,6 +44,9 @@ import { asset, cx } from "../lib/util";
  * scroll spy walks the rail backwards.
  */
 const WALKTHROUGH: { step: number; sections: { id: string; label: string }[] }[] = [
+  /* Step 1 keeps its place with no sections of its own: this task predates the
+     use case taxonomy, so the rail renders it muted and links to the method. */
+  { step: 1, sections: [] },
   { step: 2, sections: [{ id: "universe", label: "The two channels" }] },
   {
     step: 3,
