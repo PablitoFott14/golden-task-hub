@@ -1,10 +1,10 @@
 name: Deploy to GitHub Pages
 
-# Builds the Major Shin project and publishes it as the site.
+# Builds the Green Shell project and publishes it as the site.
 #
-# The repo carries two independent projects, `Major Shin/` and `Red Shell/`,
+# The repo carries two independent projects, `Green Shell/` and `Red Shell/`,
 # each a complete app with its own package.json, config and public assets.
-# GitHub Pages serves one site per repo, and that site is Major Shin. Red Shell
+# GitHub Pages serves one site per repo, and that site is Green Shell. Red Shell
 # is preserved, buildable and recoverable from git, but is no longer published.
 # To publish Red Shell again, swap the two paths below. Nothing else differs.
 
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: "Major Shin"
+        working-directory: "Green Shell"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -48,7 +48,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: "Major Shin/dist"
+          path: "Green Shell/dist"
 
   deploy:
     needs: build

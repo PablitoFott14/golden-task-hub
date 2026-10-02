@@ -189,7 +189,7 @@ export const faq: FaqItem[] = [
 ];
 
 export const guidelinesTitle =
-  "[External] Major Shin, Guidelines v1";
+  "[External] Green Shell, Guidelines v1";
 
 export const faqTopics = [
   "All",

@@ -1,9 +1,9 @@
 import type { GuidelineChange } from "./types";
 
 /**
- * What Major Shin changed, against the Red Shell multi-turn project it
+ * What Green Shell changed, against the Red Shell multi-turn project it
  * replaced. Transcribed from the Version History table and the [NEW] callouts
- * of `[External] Major Shin – Guidelines .md`, which is the source of truth.
+ * of `[External] Green Shell – Guidelines .md`, which is the source of truth.
  *
  * This is not the version history. An entry earns its place only by changing
  * what a contributor does, which is why every one carries `does`. `before`
@@ -20,13 +20,13 @@ import type { GuidelineChange } from "./types";
  *
  * Newest first.
  */
-export const guidelinesVersion = { version: "Major Shin v1", updated: "Sep 27, 2026" };
+export const guidelinesVersion = { version: "Green Shell v1", updated: "Sep 27, 2026" };
 
 export const guidelineChanges: GuidelineChange[] = [
   {
     id: "single-turn",
     date: "Sep 27, 2026",
-    version: "Major Shin v1",
+    version: "Green Shell v1",
     title: "Tasks are single turn, so milestones are gone",
     before:
       "Red Shell ran 3 to 5 turns, with a milestone set per turn, a revision turn, and a milestone check deciding whether the next prompt was a turn or a hint.",
@@ -51,7 +51,7 @@ export const guidelineChanges: GuidelineChange[] = [
   {
     id: "use-case-and-tools",
     date: "Sep 27, 2026",
-    version: "Major Shin v1",
+    version: "Green Shell v1",
     title: "A new use case taxonomy, 11 use cases and 68 subcategories",
     before:
       "Red Shell assigned one of 6 categories and 16 subcategories. Those labels are retired and are not valid values any more.",
@@ -76,7 +76,7 @@ export const guidelineChanges: GuidelineChange[] = [
   {
     id: "binding-parameters",
     date: "Sep 27, 2026",
-    version: "Major Shin v1",
+    version: "Green Shell v1",
     title: "All seven assigned parameters are binding",
     before:
       "Red Shell assigned four: task type, category, subcategory and universe. The rest of the brief was treated as guidance.",
@@ -99,7 +99,7 @@ export const guidelineChanges: GuidelineChange[] = [
   {
     id: "assigned-tools",
     date: "Sep 27, 2026",
-    version: "Major Shin v1",
+    version: "Green Shell v1",
     title: "Assigned tools are mandatory, and tool drift is rejected",
     body: "Where a scenario comes with specific tools or connectors, the task has to be built on them. The correct final state must depend on those tools, and a task that reaches its outcome through a different service is rejected at QC. The loadout documented in the appendix is background only and never justifies substituting one.",
     does: "Build the scenario on the assigned tools rather than on whichever service is easiest to reach, and make sure the deliverable genuinely cannot be produced without them.",
@@ -114,7 +114,7 @@ export const guidelineChanges: GuidelineChange[] = [
   {
     id: "input-floor",
     date: "Sep 27, 2026",
-    version: "Major Shin v1",
+    version: "Green Shell v1",
     title: "Three multimodal inputs is the floor, not the target",
     before:
       "Red Shell set the same minimum of three, and in practice it was read as the number to hit.",
@@ -126,7 +126,7 @@ export const guidelineChanges: GuidelineChange[] = [
   {
     id: "outcome-over-process",
     date: "Sep 27, 2026",
-    version: "Major Shin v1",
+    version: "Green Shell v1",
     title: "80/20: grade the outcome, not the route",
     before:
       "Red Shell capped Trajectory criteria at five and treated them as ordinary coverage. That cap is gone and the 80/20 rule replaces it.",
@@ -154,7 +154,7 @@ export const guidelineChanges: GuidelineChange[] = [
   {
     id: "literal-matching",
     date: "Sep 27, 2026",
-    version: "Major Shin v1",
+    version: "Green Shell v1",
     title: "Every literal has to match its source exactly",
     body: "Every filename, ID, value, date or string a criterion references must match the source exactly. A literal the source does not actually carry cannot be satisfied by any run, and it counts as an Incorrect Criteria issue, which is Major. This applies just as rigorously to the subjective block.",
     does: "Copy each literal straight from the attachment, the universe record or the GTFA. Open the source and check every one of them before you submit.",
@@ -167,7 +167,7 @@ export const guidelineChanges: GuidelineChange[] = [
   {
     id: "no-existence-checks",
     date: "Sep 27, 2026",
-    version: "Major Shin v1",
+    version: "Green Shell v1",
     title: "A criterion that only checks existence is never valid",
     body: "Do not write a criterion that only verifies a file, section, column or record is there. Existence is already implied by any criterion that grades content. No weight makes one of these acceptable, and it fails the task automatically as an Existence Check.",
     does: "Grade what the file records instead. A criterion on the value inside it already proves the file exists.",
@@ -190,7 +190,7 @@ export const guidelineChanges: GuidelineChange[] = [
   {
     id: "planned-complexity",
     date: "Sep 27, 2026",
-    version: "Major Shin v1",
+    version: "Green Shell v1",
     title: "Complexity is planned, never patched in",
     body: "Complexity has to come from a natural, well planned scenario rather than from artificial friction, extra constraints or contrived inputs. Do not improvise the task as you go, and do not wait for the model to fail before deciding to add difficulty. The guidelines set the expectation at a minimum of two hours on planning before a task is ready.",
     does: "Settle the deliverable, the dependencies, the inputs and the intended workflow before you build anything, and check the deliverable against the complexity bar for its type while the scenario is still on paper.",

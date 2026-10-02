@@ -9,22 +9,22 @@ of Oct 1, 2026, and they diverge from here.
 
 | Folder | Project | Published | Edit it? |
 | --- | --- | --- | --- |
-| [Major Shin/](Major%20Shin/) | Major Shin | **Yes.** It is the Pages site at <https://pablitofott14.github.io/golden-task-hub/> | Yes. This is the active project. |
+| [Green Shell/](Major%20Shin/) | Green Shell | **Yes.** It is the Pages site at <https://pablitofott14.github.io/golden-task-hub/> | Yes. This is the active project. |
 | [Red Shell/](Red%20Shell/) | Red Shell | No. Preserved and buildable, not deployed. | **No.** Frozen reference. |
 
-**All new work targets Major Shin.** Red Shell is kept exactly as it was the day the split
+**All new work targets Green Shell.** Red Shell is kept exactly as it was the day the split
 happened, so it stays independently recoverable. Do not edit anything under `Red Shell/` unless the
-user asks for Red Shell by name. A change meant for "the hub" means Major Shin.
+user asks for Red Shell by name. A change meant for "the hub" means Green Shell.
 
 Each project carries its own `CLAUDE.md` with the full architecture, conventions, design system and
 copy rules for that site. Read the one inside the project you are working in:
-[Major Shin/CLAUDE.md](Major%20Shin/CLAUDE.md), [Red Shell/CLAUDE.md](Red%20Shell/CLAUDE.md). They
+[Green Shell/CLAUDE.md](Major%20Shin/CLAUDE.md), [Red Shell/CLAUDE.md](Red%20Shell/CLAUDE.md). They
 are the detailed guidance; this file is only the layout.
 
 ### Why full duplication rather than a shared core
 
 A shared component layer would be smaller, but it would break the one hard requirement: Red Shell
-has to stay untouched. Any component Major Shin edits would be a component Red Shell silently
+has to stay untouched. Any component Green Shell edits would be a component Red Shell silently
 inherits. The two sites are also expected to diverge structurally rather than only in content, and
 each is about 35 source files, so a workspace setup would cost more than it saves. Each project is
 therefore self contained: its own `src/`, `public/`, `scripts/`, `package.json`, `index.html` and
@@ -35,11 +35,11 @@ config files, with no imports across the folder boundary. **Never import across 
 Both are served from the same origin, so `localStorage` is shared between them. Every key is
 namespaced per project, and the prefixes must stay distinct:
 
-| What | Red Shell | Major Shin |
+| What | Red Shell | Green Shell |
 | --- | --- | --- |
-| Checklist ticks | `rsh.presubmit.checks.v1` | `msh.presubmit.checks.v1` |
-| Checklist guidance toggle | `rsh.presubmit.detail.v1` | `msh.presubmit.detail.v1` |
-| Theme | `gth-theme` | `msh-theme` |
+| Checklist ticks | `rsh.presubmit.checks.v1` | `gsh.presubmit.checks.v1` |
+| Checklist guidance toggle | `rsh.presubmit.detail.v1` | `gsh.presubmit.detail.v1` |
+| Theme | `gth-theme` | `gsh-theme` |
 
 The theme key appears twice in each project, in `src/lib/useTheme.ts` and in the inline no flash
 script in `index.html`. **Change both together or the page flashes the wrong theme on load.** Any
@@ -47,7 +47,7 @@ new persisted key takes the project's prefix.
 
 ## Deployment
 
-[.github/workflows/deploy.yml](.github/workflows/deploy.yml) builds `Major Shin/` on every push to
+[.github/workflows/deploy.yml](.github/workflows/deploy.yml) builds `Green Shell/` on every push to
 `main` and publishes it. GitHub Pages serves one site per repo, which is why only one project is
 live. To publish Red Shell instead, swap the two paths in that workflow, `working-directory` and
 the artifact `path`. Nothing else in either project depends on which one is deployed: `base` is
@@ -71,7 +71,7 @@ space, so quote every path:
 
 ```bash
 SP=/c/Users/PABLO/AppData/Local/Temp/claude/<session>/scratchpad/build
-mkdir -p "$SP" && cd "/g/My Drive/Red Shell/Golden Task Hub/Major Shin"
+mkdir -p "$SP" && cd "/g/My Drive/Red Shell/Golden Task Hub/Green Shell"
 cp -r src public index.html package.json postcss.config.js tailwind.config.js \
       tsconfig.json vite.config.ts "$SP/"
 cd "$SP" && npm install --no-audit --no-fund
@@ -86,7 +86,7 @@ the Drive tree, re-copy `src/` to the mirror to verify.
 The guidelines document, the task folders and the CSV exports sit **inside the project they belong
 to**, not at the repo root, and are gitignored by the patterns at the foot of
 [.gitignore](.gitignore). Red Shell carries the multi-turn guidelines and the vendor closeout task
-source; Major Shin carries the Major Shin guidelines and its own task sources. They are what the
+source; Green Shell carries the Green Shell guidelines and its own task sources. They are what the
 projects transcribe into `src/data/`, never site content, and a project reads only its own. Each
 project's `CLAUDE.md` carries the table mapping a source document to the data file that holds it.
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A static React site, the practical reference for contributors (CBs) on the Major Shin / OpenClaw MM
+A static React site, the practical reference for contributors (CBs) on the Green Shell / OpenClaw MM
 Rubrics single turn project. Six routes:
 
 | Route | Page | What it holds |
@@ -15,7 +15,7 @@ Rubrics single turn project. Six routes:
 | `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 29 checks in dense rows, progress sidebar with persisted ticks. |
 | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
 | `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions, answers always open, each with its guidelines references. |
-| `/whats-new` | [WhatsNew.tsx](src/pages/WhatsNew.tsx) | Red Shell to Major Shin. One entry per change, rail on the left, the use case taxonomy nested under the taxonomy entry. |
+| `/whats-new` | [WhatsNew.tsx](src/pages/WhatsNew.tsx) | Red Shell to Green Shell. One entry per change, rail on the left, the use case taxonomy nested under the taxonomy entry. |
 | `/onboarding` | [Onboarding.tsx](src/pages/Onboarding.tsx) | Two cards, one per course. Links out, never embeds. |
 | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | The Increase Complexity Proposals tool. Form, then proposals from the model. |
 
@@ -24,7 +24,7 @@ Rubrics single turn project. Six routes:
 
 ## The Google Drive constraint, read this first
 
-This project lives at `G:\My Drive\Red Shell\Golden Task Hub\Major Shin`, one of the two projects in
+This project lives at `G:\My Drive\Red Shell\Golden Task Hub\Green Shell`, one of the two projects in
 the repo. Drive's sync layer **cannot host
 `node_modules` or a `.git` directory**:
 
@@ -40,7 +40,7 @@ normally from the Drive folder**, so commit and push there.
 
 ```bash
 SP=/c/Users/PABLO/AppData/Local/Temp/claude/<session>/scratchpad/build
-mkdir -p "$SP" && cd "/g/My Drive/Red Shell/Golden Task Hub/Major Shin"
+mkdir -p "$SP" && cd "/g/My Drive/Red Shell/Golden Task Hub/Green Shell"
 cp -r src public index.html package.json postcss.config.js tailwind.config.js \
       tsconfig.json vite.config.ts "$SP/"
 cd "$SP" && npm install --no-audit --no-fund
@@ -130,7 +130,7 @@ re-transcribing checks, and re-copy the regenerated PDF into `public/docs/`:
 ```bash
 cd "g:/My Drive/Red Shell/Coruses & Screenings/Guidelines/_changes"
 python build_presubmit_gate.py          # writes ../presubmit-gate.pdf
-cp ../presubmit-gate.pdf "g:/My Drive/Red Shell/Golden Task Hub/Major Shin/public/docs/"
+cp ../presubmit-gate.pdf "g:/My Drive/Red Shell/Golden Task Hub/Green Shell/public/docs/"
 ```
 
 The gate is **one Letter page**, and the generator holds it there by stepping the type scale down
@@ -202,7 +202,7 @@ into a dead one**, and nothing validates that, so rename in both files together.
 ### The method is the spine
 
 `methodSteps` in [src/data/method.ts](src/data/method.ts) is ten steps, rewritten against the
-Major Shin guidelines. **The order is the argument**: step 1 fixes the assigned pair, step 2
+Green Shell guidelines. **The order is the argument**: step 1 fixes the assigned pair, step 2
 explores the universe inside that pair, step 3 is the one situation where both are true, step 4 is
 the evidence that situation would produce. Every step after the first carries `inherits`, which
 states what arrived from the step before and what this step does with it, and it renders in the
@@ -342,10 +342,10 @@ itself to one origin, and the browser never sees the key, the system prompt or t
 ### What is new is a tab, not a band
 
 `guidelineChanges` in [src/data/changes.ts](src/data/changes.ts) is transcribed from the Version
-History table and the `[NEW]` callouts of `[External] Major Shin – Guidelines .md`, and
+History table and the `[NEW]` callouts of `[External] Green Shell – Guidelines .md`, and
 [WhatsNew.tsx](src/pages/WhatsNew.tsx) renders it at `/whats-new`.
 
-**It used to be a six card band under the hero and the cap was its height.** The Major Shin change
+**It used to be a six card band under the hero and the cap was its height.** The Green Shell change
 set outgrew that: 80/20 cannot be taught in a card, and the taxonomy needs 68 subcategories beside
 it. So it is a page with a rail, one entry per change, and the cap is gone. `LatestChanges.tsx` was
 deleted with the band.

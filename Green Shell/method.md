@@ -1,9 +1,9 @@
-# The method, Major Shin
+# The method, Green Shell
 
 Review copy of `src/data/method.ts`, `src/data/taxonomy.ts` and `src/data/changes.ts`,
 generated from them so the two cannot drift. Edit here, tell me, and I will carry it back.
 
-Guidelines Major Shin v1, Sep 27, 2026.
+Guidelines Green Shell v1, Sep 27, 2026.
 
 The order is the argument, and every step states what it inherits from the one before. Step 1
 fixes the assigned pair. Step 2 explores the universe inside that pair. Step 3 is the one
@@ -309,13 +309,13 @@ Put the golden artifact and the Model A artifact side by side and let the real d
 
 ---
 
-# What is new in Major Shin
+# What is new in Green Shell
 
 9 changes, on the `/whats-new` tab.
 
 ## Tasks are single turn, so milestones are gone
 
-*Hard rule · Sep 27, 2026 · Major Shin v1*
+*Hard rule · Sep 27, 2026 · Green Shell v1*
 
 **In Red Shell.** Red Shell ran 3 to 5 turns, with a milestone set per turn, a revision turn, and a milestone check deciding whether the next prompt was a turn or a hint.
 
@@ -336,7 +336,7 @@ The task type is always single turn. One initial prompt goes in, it is sent auto
 
 ## A new use case taxonomy, 11 use cases and 68 subcategories
 
-*Hard rule · Sep 27, 2026 · Major Shin v1*
+*Hard rule · Sep 27, 2026 · Green Shell v1*
 
 **In Red Shell.** Red Shell assigned one of 6 categories and 16 subcategories. Those labels are retired and are not valid values any more.
 
@@ -358,7 +358,7 @@ Every task is assigned one use case (L1) and one subcategory (L2) from the Hatch
 
 ## All seven assigned parameters are binding
 
-*Hard rule · Sep 27, 2026 · Major Shin v1*
+*Hard rule · Sep 27, 2026 · Green Shell v1*
 
 **In Red Shell.** Red Shell assigned four: task type, category, subcategory and universe. The rest of the brief was treated as guidance.
 
@@ -378,7 +378,7 @@ Category, subcategory, universe, scenario, output artifact, primary capabilities
 
 ## Assigned tools are mandatory, and tool drift is rejected
 
-*Hard rule · Sep 27, 2026 · Major Shin v1*
+*Hard rule · Sep 27, 2026 · Green Shell v1*
 
 Where a scenario comes with specific tools or connectors, the task has to be built on them. The correct final state must depend on those tools, and a task that reaches its outcome through a different service is rejected at QC. The loadout documented in the appendix is background only and never justifies substituting one.
 
@@ -390,7 +390,7 @@ Where a scenario comes with specific tools or connectors, the task has to be bui
 
 ## Three multimodal inputs is the floor, not the target
 
-*Hard rule · Sep 27, 2026 · Major Shin v1*
+*Hard rule · Sep 27, 2026 · Green Shell v1*
 
 **In Red Shell.** Red Shell set the same minimum of three, and in practice it was read as the number to hit.
 
@@ -404,7 +404,7 @@ The Model A conversation needs a minimum of three multimodal inputs. Three is th
 
 ## 80/20: grade the outcome, not the route
 
-*Hard rule · Sep 27, 2026 · Major Shin v1*
+*Hard rule · Sep 27, 2026 · Green Shell v1*
 
 **In Red Shell.** Red Shell capped Trajectory criteria at five and treated them as ordinary coverage. That cap is gone and the 80/20 rule replaces it.
 
@@ -425,7 +425,7 @@ At least 80% of your objective criteria have to grade completion: the artifact, 
 
 ## Every literal has to match its source exactly
 
-*Hard rule · Sep 27, 2026 · Major Shin v1*
+*Hard rule · Sep 27, 2026 · Green Shell v1*
 
 Every filename, ID, value, date or string a criterion references must match the source exactly. A literal the source does not actually carry cannot be satisfied by any run, and it counts as an Incorrect Criteria issue, which is Major. This applies just as rigorously to the subjective block.
 
@@ -437,7 +437,7 @@ Every filename, ID, value, date or string a criterion references must match the 
 
 ## A criterion that only checks existence is never valid
 
-*Hard rule · Sep 27, 2026 · Major Shin v1*
+*Hard rule · Sep 27, 2026 · Green Shell v1*
 
 Do not write a criterion that only verifies a file, section, column or record is there. Existence is already implied by any criterion that grades content. No weight makes one of these acceptable, and it fails the task automatically as an Existence Check.
 
@@ -455,7 +455,7 @@ Do not write a criterion that only verifies a file, section, column or record is
 
 ## Complexity is planned, never patched in
 
-*Changes the shape · Sep 27, 2026 · Major Shin v1*
+*Changes the shape · Sep 27, 2026 · Green Shell v1*
 
 Complexity has to come from a natural, well planned scenario rather than from artificial friction, extra constraints or contrived inputs. Do not improvise the task as you go, and do not wait for the model to fail before deciding to add difficulty. The guidelines set the expectation at a minimum of two hours on planning before a task is ready.
 

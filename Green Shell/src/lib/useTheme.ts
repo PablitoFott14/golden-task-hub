@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-const KEY = "msh-theme";
+const KEY = "gsh-theme";
 
 /** Light / dark toggle, persisted per device. Safe in private windows. */
 export function useTheme(): ["light" | "dark", () => void] {

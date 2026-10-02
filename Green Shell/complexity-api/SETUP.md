@@ -29,7 +29,7 @@ At 100 proposals a day the bill is roughly **$39–51/month** — see [Cost](#co
 
 ## 2. Deploy the function
 
-From this folder (`Major Shin/complexity-api/`):
+From this folder (`Green Shell/complexity-api/`):
 
 ```bash
 npm install
@@ -122,7 +122,7 @@ analysed rather than as instructions.
 **When a universe is added, removed or reloaded** — re-run the generator and redeploy both sides:
 
 ```bash
-cd "Major Shin"
+cd "Green Shell"
 python scripts/gen_universes.py     # writes src/data/universes.ts and complexity-api/universes.ts
 ```
 

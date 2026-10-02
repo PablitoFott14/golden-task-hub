@@ -165,7 +165,7 @@ export default function Method() {
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             >
               <span className="chip bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300">
-                <Sparkles size={12} /> OpenClaw MM Rubrics · Single-turn · Major Shin
+                <Sparkles size={12} /> OpenClaw MM Rubrics · Single-turn · Green Shell
               </span>
               <h1 className="mt-5 font-display text-[34px] font-bold leading-[1.06] tracking-tight text-ink-900 sm:text-[52px]">
                 A strong task is designed,

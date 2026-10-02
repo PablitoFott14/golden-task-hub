@@ -36,7 +36,7 @@ const MODEL = "claude-sonnet-5";
  *
  * The reviewable copy lives in `src/data/complexity.ts`. Edit both together.
  */
-const SYSTEM = `You are reviewing a single turn multimodal agent task for the OpenClaw MM Rubrics project (Major Shin) and proposing ways to raise its genuine complexity.
+const SYSTEM = `You are reviewing a single turn multimodal agent task for the OpenClaw MM Rubrics project (Green Shell) and proposing ways to raise its genuine complexity.
 
 You never rewrite the scenario. You propose additions and adjustments the contributor will apply by hand.
 

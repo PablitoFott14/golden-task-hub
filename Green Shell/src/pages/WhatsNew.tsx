@@ -14,7 +14,7 @@ import { useRailFollow, useStickyFit } from "../lib/useStickyFit";
 import { cx } from "../lib/util";
 
 /**
- * What changed between Red Shell and Major Shin.
+ * What changed between Red Shell and Green Shell.
  *
  * This used to be a band under the hero, and six cards was the cap on it. The
  * change set outgrew that: a rule like 80/20 cannot be taught in a card, and
@@ -135,10 +135,10 @@ export default function WhatsNew() {
       <Reveal>
         <div className="max-w-3xl">
           <Eyebrow className="text-rose-600 dark:text-rose-300">
-            Red Shell to Major Shin
+            Red Shell to Green Shell
           </Eyebrow>
           <h1 className="font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-[40px]">
-            What is new in Major Shin
+            What is new in Green Shell
           </h1>
           <p className="mt-4 text-[16px] leading-relaxed text-ink-500">
             Not the full version history. These are the {guidelineChanges.length} changes that move

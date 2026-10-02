@@ -1,9 +1,9 @@
 {
-  "name": "major-shin-hub",
+  "name": "green-shell-hub",
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "description": "Major Shin Golden Task Hub, the central practical reference for contributors building single turn multimodal rubric tasks.",
+  "description": "Green Shell Golden Task Hub, the central practical reference for contributors building single turn multimodal rubric tasks.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

@@ -160,7 +160,7 @@ export const exampleProposals: ComplexityProposal[] = [
  * The system prompt the function sends. It lives here as the reviewable copy;
  * the function holds the authoritative one, so edit both together.
  */
-export const complexitySystemPrompt = `You are reviewing a single turn multimodal agent task for the OpenClaw MM Rubrics project (Major Shin) and proposing ways to raise its genuine complexity.
+export const complexitySystemPrompt = `You are reviewing a single turn multimodal agent task for the OpenClaw MM Rubrics project (Green Shell) and proposing ways to raise its genuine complexity.
 
 You never rewrite the scenario. You propose additions and adjustments the contributor will apply by hand.
 

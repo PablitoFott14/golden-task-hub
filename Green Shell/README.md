@@ -1,7 +1,7 @@
 # Golden Task Hub
 
 The practical reference for contributors building **single turn multimodal rubric tasks** on the
-Major Shin / OpenClaw MM Rubrics project.
+Green Shell / OpenClaw MM Rubrics project.
 
 The hub exists to answer five questions quickly, and then get out of the way:
 
@@ -42,7 +42,7 @@ npm run typecheck
 > **Working from Google Drive.** Drive's sync layer cannot host `node_modules` (`npm install` dies
 > with `EBADF` / `EPERM`) and cannot host a `.git` directory either. The Drive copy is therefore set
 > up with `git init --separate-git-dir`: the working tree is
-> `G:\My Drive\Red Shell\Golden Task Hub` with this project in `Major Shin/`, the git store is
+> `G:\My Drive\Red Shell\Golden Task Hub` with this project in `Green Shell/`, the git store is
 > `C:\Users\PABLO\repos\golden-task-hub-drive.git`, and a one-line `.git` *file* points at it. Commit
 > and push from the Drive folder as normal, but run `npm` from an ordinary local clone, or let CI
 > build.

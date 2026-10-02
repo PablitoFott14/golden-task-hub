@@ -3,9 +3,9 @@ import type { MethodStep } from "./types";
 const GT = "/golden-tasks/vendor-closeout";
 
 /**
- * The method for Major Shin, ten steps, in the order they actually happen.
+ * The method for Green Shell, ten steps, in the order they actually happen.
  *
- * Rewritten against [External] Major Shin Guidelines v1. The project is single
+ * Rewritten against [External] Green Shell Guidelines v1. The project is single
  * turn, so the milestone step is gone and the prompt is its own step: there is
  * one prompt and it has to carry everything.
  *

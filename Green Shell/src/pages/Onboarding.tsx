@@ -138,7 +138,7 @@ export default function Onboarding() {
           <Sparkles size={14} className="mt-0.5 shrink-0 text-gold-600 dark:text-gold-400" />
           <span>
             Both courses were written for the multi-turn project and still teach it. The rules that
-            moved under Major Shin are on the What is new tab, and that is the one to read second.
+            moved under Green Shell are on the What is new tab, and that is the one to read second.
           </span>
         </p>
       </Reveal>

@@ -23,8 +23,8 @@ import { Crosslinks } from "../components/ui";
 import { useScrollSpy } from "../lib/useScrollSpy";
 import { asset, cx } from "../lib/util";
 
-const CHECKS_KEY = "msh.presubmit.checks.v1";
-const DETAIL_KEY = "msh.presubmit.detail.v1";
+const CHECKS_KEY = "gsh.presubmit.checks.v1";
+const DETAIL_KEY = "gsh.presubmit.detail.v1";
 
 const sectionIcon: Record<string, typeof FileText> = {
   s1: Layers,
