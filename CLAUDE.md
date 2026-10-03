@@ -9,7 +9,7 @@ of Oct 1, 2026, and they diverge from here.
 
 | Folder | Project | Published | Edit it? |
 | --- | --- | --- | --- |
-| [Green Shell/](Major%20Shin/) | Green Shell | **Yes.** It is the Pages site at <https://pablitofott14.github.io/golden-task-hub/> | Yes. This is the active project. |
+| [Green Shell/](Green%20Shell/) | Green Shell | **Yes.** It is the Pages site at <https://pablitofott14.github.io/golden-task-hub/> | Yes. This is the active project. |
 | [Red Shell/](Red%20Shell/) | Red Shell | No. Preserved and buildable, not deployed. | **No.** Frozen reference. |
 
 **All new work targets Green Shell.** Red Shell is kept exactly as it was the day the split
@@ -18,7 +18,7 @@ user asks for Red Shell by name. A change meant for "the hub" means Green Shell.
 
 Each project carries its own `CLAUDE.md` with the full architecture, conventions, design system and
 copy rules for that site. Read the one inside the project you are working in:
-[Green Shell/CLAUDE.md](Major%20Shin/CLAUDE.md), [Red Shell/CLAUDE.md](Red%20Shell/CLAUDE.md). They
+[Green Shell/CLAUDE.md](Green%20Shell/CLAUDE.md), [Red Shell/CLAUDE.md](Red%20Shell/CLAUDE.md). They
 are the detailed guidance; this file is only the layout.
 
 ### Why full duplication rather than a shared core

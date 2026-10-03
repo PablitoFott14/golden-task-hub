@@ -39,10 +39,11 @@ export const faq: FaqItem[] = [
       { section: "6.1", title: "What a Milestone is Made of" },
       { section: "6.2", title: "Writing the Milestones" },
     ],
-    links: [
-      { to: "/#milestones", tag: "M7", label: "One intent, one milestone" },
-      { to: "/spec#milestones", tag: "QC", label: "Milestones, Intent-Level Abstraction" },
-    ],
+    // Both links pointed at things Green Shell no longer has: the method lost
+    // its milestones step in the single turn rewrite, and the spec has no
+    // Milestones group. The answer itself is multi-turn and goes when the FAQ
+    // is brought over.
+    links: [],
   },
   {
     n: 3,

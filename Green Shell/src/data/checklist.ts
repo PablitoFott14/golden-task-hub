@@ -150,10 +150,10 @@ export const checklist: ChecklistSection[] = [
         q: "Does the conversation run 3 to 5 turns, with every follow-up consuming the state the turn before it produced?",
         f: "Fewer than 3 turns is automatically rejected. A follow-up that would work as an independent opening prompt fails Turn Structure.",
         ref: "§1.1 · 1.2.3",
-        links: [
-          { to: "/spec#multi-turn", tag: "QC", label: "Turn structure and dependency" },
-          { to: `${GT}#turns`, tag: "GT", label: "What each turn consumes" },
-        ],
+        // The QC link is gone, not moved: the Green Shell spec has no Multi-Turn
+        // group to point at. This check is still multi-turn and goes when the
+        // checklist is brought over to single turn.
+        links: [{ to: `${GT}#turns`, tag: "GT", label: "What each turn consumes" }],
       },
       {
         id: "C4",
@@ -167,10 +167,10 @@ export const checklist: ChecklistSection[] = [
         q: "Did you avoid flagging the miss anywhere, in the Leg A follow-ups and in your Leg B follow-ups and hints?",
         f: "Pointing at the failure compromises the 50% threshold. If the model could copy your hint straight into the artifact, you gave away the answer.",
         ref: "§1.2.3 · 7.2",
-        links: [
-          { to: "/#golden", tag: "M8", label: "Point at the intent, never at the answer" },
-          { to: "/spec#multi-turn", tag: "QC", label: "Simulator answer leak" },
-        ],
+        // Simulator Answer Leak was a Multi-Turn dimension. Its Green Shell
+        // successor is Golden Solution — Hint Leak (Leg B), but this check is
+        // written about simulator follow-ups, so it waits for the migration.
+        links: [{ to: "/#golden", tag: "M9", label: "Point at the intent, never at the answer" }],
       },
     ],
   },

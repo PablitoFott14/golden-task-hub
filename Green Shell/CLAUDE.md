@@ -110,7 +110,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | Version History table and the `[NEW]` callouts in the guidelines | [src/data/changes.ts](src/data/changes.ts) |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/rationale.md` | [src/data/method.ts](src/data/method.ts) |
 | `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
-| <https://qc-spec-mt-rubrics.vercel.app/> (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
+| `*-rubric.csv` and `appendix.csv`, the spec exports (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
 | `F&Q.md` in this repo | [src/data/faq.ts](src/data/faq.ts) |
 | `Videos/Universe Dealing/finals/` on Drive, `universe_post.md` beside the recordings | [src/data/videos.ts](src/data/videos.ts) + `public/videos/universe/` |
 | `Tasks/6a7965b63b7d368e70c7de4a` | [src/data/tasks/vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) + `public/tasks/vendor-closeout/` |
@@ -157,23 +157,28 @@ data could neither ship in the bundle nor fit in a request.
 ### `specDoc.ts` is generated, not hand-written
 
 Everything above `dimensionLinks` in [src/data/specDoc.ts](src/data/specDoc.ts) comes out of
-[scripts/gen_spec.py](scripts/gen_spec.py), which parses the deployed QC spec viewer. When the spec
-sheet is re-exported and redeployed:
+[scripts/gen_spec.py](scripts/gen_spec.py), which reads the two spec exports sitting beside the
+project. Re-run it whenever either is re-exported:
 
 ```bash
-curl -s https://qc-spec-mt-rubrics.vercel.app/ -o qcspec.html
-python scripts/gen_spec.py qcspec.html
+python scripts/gen_spec.py
 ```
 
-The UI never links out to that URL. The spec lives inside the hub, so `SPEC_URL` stays in the data
-as provenance for the generator and is not rendered anywhere.
+It takes the dimensions from `*-rubric.csv` (matched by glob, so the task id in the filename does
+not matter) and every appendix section from `appendix.csv`. Nothing is fetched and nothing is
+scraped.
 
-**That order flipped on Sep 20, 2026.** The CSV export is now the newest revision and the first
-one to carry `Milestones - Milestone Annotations`, so `specGroups` was taken from
-`Evals/Project Resources/QC spec MT Rubrics - original.csv` and **the deployed viewer is a
-revision behind**. Running `gen_spec.py` against the live page right now would put the dimensions
-back. Redeploy the viewer from the CSVs first, which is what the `qc-spec-sync` skill does. The
-appendix blocks are untouched by that export and still come from the viewer.
+**This is not Red Shell's generator.** Red Shell carries its own copy, which scrapes the deployed
+multi-turn viewer at <https://qc-spec-mt-rubrics.vercel.app/>. That viewer serves the multi-turn
+spec and says nothing about Green Shell. The two projects therefore keep **separate specs,
+separate change logs and separate generators**, and neither can write over the other: Green Shell's
+spec is 33 dimensions in 7 groups built for single turn, Red Shell's is 22 in 8 built for
+multi-turn. A Green Shell re-export never touches `Red Shell/src/data/`.
+
+The appendix carries four sections and all four are transcribed. One of them is a **superseded
+weight scale** the sheet still keeps under its own heading; it lands in `deprecatedWeightBuckets`
+and renders muted, behind the sheet's own `DEPRECATED` label, below the live scale. It is there so
+the appendix is represented in full, not because anything grades against it.
 
 Question text, guidance, option wording and appendix definitions are stored **verbatim**, em
 dashes and curly quotes included, because that block is a transcription of the standard rather
@@ -185,7 +190,15 @@ What moved between revisions lives in [src/data/specLog.ts](src/data/specLog.ts)
 diffing the new export against the one the hub was carrying, and renders in two places. The
 **Change Log** pane is a third rail group under Dimensions and Appendix, built the same way as the
 rest of the page: one rail entry with a count, one pane at a time, cards grouped under the revision
-date, and its entries fold into the page search with everything else. The **update log banner**
+date, and its entries fold into the page search with everything else.
+
+**Green Shell's log starts at one entry with nothing under it.** The hub is carrying the first
+Green Shell export, so there is no earlier Green Shell revision to diff against and `changes` is
+empty. Three guards in [SpecDoc.tsx](src/pages/SpecDoc.tsx) keep that from reading as a broken
+count: the rail badge is dropped, the section note says "1 revision" rather than "0 changes", and
+the banner's drawer explains the state instead of opening on an empty list. They are all
+`length === 0` checks, so the moment a second export lands and the log has entries, the page goes
+back to the counts without any change here. The **update log banner**
 sits above the rail, directly under the search box, because the pane is only found by a reader who
 goes looking and someone arriving at the spec has no way of knowing the standard moved under them.
 It heads the newest revision, opens to the same cards, and links through to the pane. An entry

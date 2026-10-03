@@ -4,7 +4,7 @@ Two independent static React sites, one repo.
 
 | Folder | Project | Status |
 | --- | --- | --- |
-| [Green Shell/](Major%20Shin/) | Green Shell | **Live** at <https://pablitofott14.github.io/golden-task-hub/> |
+| [Green Shell/](Green%20Shell/) | Green Shell | **Live** at <https://pablitofott14.github.io/golden-task-hub/> |
 | [Red Shell/](Red%20Shell/) | Red Shell | Preserved and buildable, not deployed |
 
 Green Shell was created on Oct 1, 2026 as a complete duplicate of Red Shell, and the two diverge

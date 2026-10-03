@@ -27,6 +27,8 @@ import {
   authoringStandards,
   difficultyDimensions,
   dimensionLinks,
+  deprecatedWeightBuckets,
+  deprecatedWeightsLabel,
   rubricQualityIssues,
   rubricQualityNote,
   specGroups,
@@ -96,7 +98,9 @@ const appendixNav: NavItem[] = [
 ];
 
 const logNav: NavItem[] = [
-  { id: "log", label: "Change Log", icon: History, count: specChangeCount },
+  // No badge on an initial version: a "0" beside Change Log reads as a count
+  // that failed to load rather than a log with nothing in it yet.
+  { id: "log", label: "Change Log", icon: History, count: specChangeCount || undefined },
 ];
 
 const NAV_IDS = new Set([...dimensionNav, ...appendixNav, ...logNav].map((n) => n.id));
@@ -554,6 +558,25 @@ function WeightSection() {
           <WeightBucketCard key={b.level} b={b} />
         ))}
       </div>
+
+      {/* The sheet still carries a superseded scale under its own heading. It is
+          here so the appendix is represented in full, muted and labelled with
+          the sheet's own words so nobody grades against it by mistake. */}
+      {deprecatedWeightBuckets.length > 0 && (
+        <div className="mt-8 rounded-2xl border border-dashed border-ink-300/80 p-4 opacity-80">
+          <div className="mb-3 flex flex-wrap items-center gap-2">
+            <span className="chip bg-ink-200/70 text-ink-600">Deprecated</span>
+            <span className="text-[12.5px] font-semibold text-ink-500">
+              {deprecatedWeightsLabel}
+            </span>
+          </div>
+          <div className="space-y-3">
+            {deprecatedWeightBuckets.map((b) => (
+              <WeightBucketCard key={b.level} b={b} />
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -710,9 +733,16 @@ function ChangeLogSection() {
       <SectionHeader
         icon={History}
         title="Change Log"
-        note={`${specChangeCount} change${specChangeCount === 1 ? "" : "s"} across ${
-          specRevisions.length
-        } revision${specRevisions.length === 1 ? "" : "s"}`}
+        note={
+          // The first revision of a spec has nothing to diff against, so it
+          // logs no changes. "0 changes" would read as a fault rather than a
+          // starting point.
+          specChangeCount === 0
+            ? `${specRevisions.length} revision${specRevisions.length === 1 ? "" : "s"}`
+            : `${specChangeCount} change${specChangeCount === 1 ? "" : "s"} across ${
+                specRevisions.length
+              } revision${specRevisions.length === 1 ? "" : "s"}`
+        }
       />
       <p className="mb-5 text-[13px] leading-relaxed text-ink-500">{specLogNote}</p>
       <div className="space-y-6">
@@ -765,15 +795,19 @@ function UpdateLogBanner({ onOpenLog }: { onOpenLog: () => void }) {
         <span className="min-w-0 flex-1">
           <span className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
             <span className="mono-label text-brand-700 dark:text-brand-200">Update log</span>
-            <span className="font-mono text-[11px] text-ink-500">
-              {specChangeCount} logged change{specChangeCount === 1 ? "" : "s"}
-            </span>
+            {specChangeCount > 0 && (
+              <span className="font-mono text-[11px] text-ink-500">
+                {specChangeCount} logged change{specChangeCount === 1 ? "" : "s"}
+              </span>
+            )}
             <span className="rounded-md bg-brand-600 px-2 py-0.5 font-mono text-[11px] font-bold text-white">
               {rev.date}
             </span>
-            <span className="font-mono text-[11px] text-ink-500">
-              {requirements} requirement{requirements === 1 ? "" : "s"} updated
-            </span>
+            {requirements > 0 && (
+              <span className="font-mono text-[11px] text-ink-500">
+                {requirements} requirement{requirements === 1 ? "" : "s"} updated
+              </span>
+            )}
           </span>
           <span className="mt-1.5 block text-[14px] font-bold leading-snug text-ink-900">
             {rev.title}
@@ -790,11 +824,20 @@ function UpdateLogBanner({ onOpenLog }: { onOpenLog: () => void }) {
 
       {open && (
         <div className="border-t border-brand-200/70 p-4 dark:border-brand-500/25">
-          <div className="space-y-3">
-            {rev.changes.map((ch) => (
-              <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} />
-            ))}
-          </div>
+          {rev.changes.length > 0 ? (
+            <div className="space-y-3">
+              {rev.changes.map((ch) => (
+                <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} />
+              ))}
+            </div>
+          ) : (
+            // An empty list under an open drawer reads as a loading failure.
+            <p className="text-[13px] leading-relaxed text-ink-600">
+              Nothing is logged as changed, because this is the first revision the hub has carried.
+              Every dimension below is new to it. The next export will be diffed against this one
+              and the entries will appear here.
+            </p>
+          )}
           <button onClick={onOpenLog} className="btn-ghost mt-4">
             Open the full log <ArrowRight size={14} />
           </button>

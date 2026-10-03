@@ -1,316 +1,409 @@
 """
-Regenerate src/data/specDoc.ts from the deployed QC spec viewer.
+Regenerate src/data/specDoc.ts from the Green Shell spec exports.
 
-The deployed page at https://qc-spec-mt-rubrics.vercel.app/ used to be ahead of
-the CSV exports on Drive. As of the Sep 20, 2026 export that is the other way
-round: the CSV now carries every dimension, "Milestones - Milestone
-Annotations" included, and the viewer is a revision behind. Redeploy the viewer
-from the CSVs before running this, or it will put the spec back a revision.
+    python scripts/gen_spec.py
 
-    curl -s https://qc-spec-mt-rubrics.vercel.app/ -o qcspec.html
-    python scripts/gen_spec.py qcspec.html
+Two CSVs beside this project, both exported from the spec sheet:
 
-Only `dimensionLinks` at the foot of the generated file is hand-authored, so
-keep that block in sync here when a dimension is added or renamed.
+    <task-id>-V2_-_Trivial_task_threshold__target-rubric.csv   the scored dimensions
+    appendix.csv                                               the appendix sections
+
+**This is not the Red Shell generator.** Red Shell carries its own copy, which
+scrapes the deployed multi-turn viewer at <https://qc-spec-mt-rubrics.vercel.app/>.
+That viewer serves the multi-turn spec and has nothing to say about Green Shell,
+so this one reads the exports directly. The two projects therefore keep separate
+specs, separate change logs and separate generators, and neither can overwrite
+the other.
+
+Everything the viewer displays is transcribed verbatim — question text,
+guidance, option wording, definitions and examples, em dashes and curly quotes
+included — because this is a transcription of the standard rather than hub copy.
+The only hand-authored blocks are `SECTION_NOTES` and `DIMENSION_LINKS` below,
+which are the hub's own framing and cross-links; they live here so a
+regeneration cannot lose them.
+
+What moved between revisions is recorded by hand in ../src/data/specLog.ts and
+rendered as the Change Log pane on /spec.
 """
 
-import html
-import io
-import os
+import csv
+import glob
 import json
+import os
 import re
-import sys
 
-SRC = sys.argv[1] if len(sys.argv) > 1 else "qcspec.html"
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src", "data", "specDoc.ts")
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+OUT = os.path.join(ROOT, "src", "data", "specDoc.ts")
 
-page = open(SRC, encoding="utf-8").read()
+RUBRIC_GLOB = os.path.join(ROOT, "*-rubric.csv")
+APPENDIX = os.path.join(ROOT, "appendix.csv")
+
+# Hub copy: the one line that sits above each appendix section, the way the
+# page has always framed them. Not spec content.
+SECTION_NOTES = {
+    "quality": "Referenced by the three Overall Rubric Quality questions: these definitions supply the major / moderate tallies that drive those scores. Severity grouping is reproduced exactly as the source sheet has it.",
+    "weights": "Weight reflects the difficulty of what the criterion tests, not its importance to the prompt. Allowed set: {-5, -3, -1, +1, +3, +5}.",
+    "standards": "What the Subjective Block Scope question above is graded against, carried in the appendix under its own heading.",
+}
 
 
-def text(fragment: str) -> str:
-    """Strip tags, unescape entities, normalise whitespace but keep newlines."""
-    fragment = re.sub(r"<br\s*/?>", "\n", fragment)
-    fragment = re.sub(r"<[^>]+>", "", fragment)
-    fragment = html.unescape(fragment)
-    fragment = re.sub(r"[ \t]+\n", "\n", fragment)
-    fragment = re.sub(r"\n{3,}", "\n\n", fragment)
-    return fragment.strip()
+def norm(s: str) -> str:
+    """Trim and collapse runaway blank lines, keeping the author's own breaks."""
+    s = (s or "").replace("\r\n", "\n").replace("\r", "\n")
+    s = re.sub(r"[ \t]+\n", "\n", s)
+    s = re.sub(r"\n{3,}", "\n\n", s)
+    return s.strip()
 
 
 def ts(value) -> str:
     return json.dumps(value, ensure_ascii=False, indent=2)
 
 
-sections = re.findall(
-    r'<section class="[^"]*" id="(sec-[^"]+)"><h2>(.*?)</h2>(.*?)</section>',
-    page,
-    re.S,
-)
-by_id = {sid: (text(title), body) for sid, title, body in sections}
+def rows_of(path):
+    with open(path, encoding="utf-8-sig", newline="") as fh:
+        return [[norm(c) for c in r] + [""] * (4 - len(r)) for r in csv.reader(fh)]
 
-# ------------------------------------------------------------------ questions
 
-groups = []
-for sid, (title, body) in by_id.items():
-    if sid in ("sec-quality", "sec-weights", "sec-standards"):
-        continue
-    dimensions = []
-    for art in re.findall(r'<article class="q"[^>]*data-kind="question">(.*?)</article>', body, re.S):
-        full_name = text(re.search(r"<h3>(.*?)</h3>", art, re.S).group(1))
-        name = full_name.split(" - ", 1)[1] if " - " in full_name else full_name
-        question = text(re.search(r'<p class="qtext">(.*?)</p>', art, re.S).group(1))
+# ------------------------------------------------------------------ dimensions
 
-        tags = []
-        for raw in re.findall(r'<span class="tag">(.*?)</span>', art, re.S):
-            brackets = re.findall(r"\[([^\]]+)\]", text(raw))
-            if not brackets:
-                continue
-            label = brackets[-1].strip()
-            tags.append({"label": label, "type": "fail" if label.lower().startswith("fail") else "non-fail"})
+def read_dimensions():
+    path = sorted(glob.glob(RUBRIC_GLOB))
+    if not path:
+        raise SystemExit("no *-rubric.csv beside the project: %s" % RUBRIC_GLOB)
+    with open(path[0], encoding="utf-8-sig", newline="") as fh:
+        rows = list(csv.DictReader(fh))
 
-        desc_match = re.search(r'<div class="desc-body">(.*?)</div>', art, re.S)
-        description = text(desc_match.group(1)) if desc_match else ""
-        # the export leaves a bare leading full stop on a few questions
-        description = re.sub(r"^\.\s*", "", description)
+    groups, order, current = {}, [], None
+    for r in rows:
+        title = norm(r.get("title"))
+        if title:
+            # "Rubric Criteria - Rubric Spot Checks" -> group, then dimension.
+            group, name = title.split(" - ", 1) if " - " in title else ("Ungrouped", title)
 
-        options = []
-        opts_block = art.split('<div class="opts">', 1)
-        if len(opts_block) == 2:
-            for piece in re.split(r'(?=<div class="opt )', opts_block[1]):
-                score_m = re.search(r'data-score="(-?\d+)"', piece)
-                body_m = re.search(r'<div class="opt-body">(.*?)</div>', piece, re.S)
-                if score_m and body_m:
-                    options.append({
-                        "text": text(body_m.group(1)),
-                        "score": int(score_m.group(1)),
-                        "justify": 'class="just"' in piece,
-                    })
+            tags = []
+            for piece in norm(r.get("errorCategories")).split(";"):
+                brackets = re.findall(r"\[([^\]]+)\]", piece)
+                if not brackets:
+                    continue
+                label = brackets[-1].strip()
+                tags.append({
+                    "label": label,
+                    "type": "fail" if label.lower().startswith("fail") else "non-fail",
+                })
 
-        dimensions.append({
-            "name": name,
-            "question": question,
-            "description": description,
-            "errorTags": tags,
-            "options": options,
-        })
-    if dimensions:
-        groups.append({"group": title, "dimensions": dimensions})
+            current = {
+                "name": name,
+                "question": norm(r.get("questionText")),
+                # The export leaves a bare leading full stop on a few questions.
+                "description": re.sub(r"^\.\s*", "", norm(r.get("questionDescription"))),
+                "errorTags": tags,
+                "options": [],
+            }
+            if group not in groups:
+                groups[group] = []
+                order.append(group)
+            groups[group].append(current)
 
-# ------------------------------------------------------ appendix: rubric quality
+        text = norm(r.get("answerOptionText"))
+        if text and current is not None:
+            score = norm(r.get("answerOptionScore"))
+            current["options"].append({
+                "text": text,
+                "score": int(score) if re.fullmatch(r"-?\d+", score or "") else 0,
+                "justify": norm(r.get("answerOptionRequiresJustification")).lower() == "true",
+            })
 
-quality_title, quality_body = by_id["sec-quality"]
-quality_note = text(re.search(r'<p class="sec-note">(.*?)</p>', quality_body, re.S).group(1))
-issues = []
-for chunk in re.split(r'<h4 class="subhead[^"]*"[^>]*>', quality_body)[1:]:
-    severity = text(chunk.split("</h4>")[0]).replace(" Issues", "").strip()
-    for art in re.findall(r'<article class="q card"[^>]*>(.*?)</article>', chunk, re.S):
-        heading = re.search(r"<h3>(.*?)</h3>", art, re.S).group(1)
-        name = text(re.sub(r'<span class="badge[^>]*>.*?</span>', "", heading, flags=re.S))
-        definition = text(re.search(r'<div class="blk-b">(.*?)</div>', art, re.S).group(1))
-        issues.append({"name": name, "severity": severity, "definition": definition})
+    return [{"group": g, "dimensions": groups[g]} for g in order]
 
-# ------------------------------------------------------------ appendix: weights
 
-weights_title, weights_body = by_id["sec-weights"]
-weights_note = text(re.search(r'<p class="sec-note">(.*?)</p>', weights_body, re.S).group(1))
-difficulty, buckets = [], []
-for art in re.findall(r'<article class="q card"[^>]*>(.*?)</article>', weights_body, re.S):
-    heading = re.search(r"<h3>(.*?)</h3>", art, re.S).group(1)
-    badge = re.search(r'<span class="badge wt[^"]*">(-?\d+)</span>', heading)
-    level = text(re.sub(r'<span class="badge[^>]*>.*?</span>', "", heading, flags=re.S))
-    blocks = re.findall(r'<div class="blk">(.*?)</div></div>', art + "</div>", re.S)
-    parts = {}
-    for blk in re.findall(r'<div class="blk">(.*?)(?=<div class="blk">|$)', art, re.S):
-        head = re.search(r'<div class="blk-h">(.*?)</div>', blk, re.S)
-        body_m = re.search(r'<div class="blk-b">(.*?)</div>', blk, re.S)
-        if body_m:
-            parts[text(head.group(1)) if head else ""] = text(body_m.group(1))
-    if level == "4 Difficulty Dimensions":
-        difficulty = [re.sub(r"^-\s*", "", x).strip() for x in parts.get("", "").split("\n") if x.strip()]
-        continue
-    if badge:
-        buckets.append({
-            "level": level,
-            "score": int(badge.group(1)),
-            "definition": parts.get("Definition (Agent-Building Context)", ""),
-            "examples": [x.strip() for x in parts.get("Typical Examples", "").split("\n") if x.strip()],
-        })
+# -------------------------------------------------------------------- appendix
 
-# ---------------------------------------------------------- appendix: standards
+def split_sections(rows):
+    """The appendix is one sheet of stacked sections, each headed in column A."""
+    heads = [i for i, r in enumerate(rows) if r[0] and not r[1] and not r[2]]
+    out = []
+    for n, i in enumerate(heads):
+        end = heads[n + 1] if n + 1 < len(heads) else len(rows)
+        out.append((rows[i][0], [r for r in rows[i + 1:end] if any(r)]))
+    return out
 
-standards_title, standards_body = by_id["sec-standards"]
-standards_note = text(re.search(r'<p class="sec-note">(.*?)</p>', standards_body, re.S).group(1))
-standards = []
-for art in re.findall(r'<article class="q card"[^>]*>(.*?)</article>', standards_body, re.S):
-    name = text(re.search(r"<h3>(.*?)</h3>", art, re.S).group(1))
-    body_m = re.search(r'<div class="blk-b">(.*?)</div>', art, re.S)
-    standards.append({"name": name, "body": text(body_m.group(1)) if body_m else ""})
 
-n_dims = sum(len(g["dimensions"]) for g in groups)
-n_opts = sum(len(d["options"]) for g in groups for d in g["dimensions"])
-sys.stderr.write(
-    f"groups={len(groups)} dimensions={n_dims} options={n_opts} issues={len(issues)} "
-    f"weights={len(buckets)} standards={len(standards)} difficulty={len(difficulty)}\n"
-)
-for g in groups:
-    sys.stderr.write(f"  {g['group']}: {len(g['dimensions'])}\n")
+def read_appendix():
+    sections = split_sections(rows_of(APPENDIX))
+    issues, difficulty, buckets, deprecated, standards = [], [], [], [], []
+    dep_label = ""
 
-out = io.StringIO()
-out.write('''import type { XLink } from "./types";
+    for title, body in sections:
+        head = title.split("\n", 1)[0].strip()
+
+        if head == "Rubric Quality Definitions":
+            severity = ""
+            for r in body:
+                if r[0]:
+                    # "Major Issues" -> "Major", the severity the page groups by.
+                    severity = r[0].replace(" Issues", "").strip()
+                if r[1] and r[2]:
+                    issues.append({"name": r[1], "severity": severity, "definition": r[2]})
+
+        elif head == "Criteria Weight Definitions":
+            target = buckets
+            if len(title.split("\n", 1)) > 1:
+                # The sheet keeps a superseded scale, labelled in its own heading.
+                target, dep_label = deprecated, title.split("\n", 1)[1].strip()
+            for r in body:
+                if r[1] == "4 Difficulty Dimensions" or r[0] == "4 Difficulty Dimensions":
+                    difficulty.extend(
+                        re.sub(r"^-\s*", "", x).strip() for x in r[2].split("\n") if x.strip()
+                    )
+                    continue
+                if r[0] in ("", "Level") or not re.fullmatch(r"-?\d+", r[1] or ""):
+                    continue  # the column header row
+                target.append({
+                    "level": r[0],
+                    "score": int(r[1]),
+                    "definition": r[2],
+                    # Examples are one per paragraph in a single cell.
+                    "examples": [x.strip() for x in re.split(r"\n\s*\n", r[3]) if x.strip()],
+                })
+
+        elif head.endswith("Authoring Standards"):
+            for r in body:
+                if r[1] and r[2]:
+                    standards.append({"name": r[1], "body": r[2]})
+
+        else:
+            print("  ! unrecognised appendix section, not transcribed: %r" % head)
+
+    return issues, difficulty, buckets, deprecated, dep_label, standards
+
+
+# ----------------------------------------------------------------------- links
+# Hand-authored. Every `to` has to be a real anchor: method step ids in
+# method.ts, section ids in checklist.ts, change ids in changes.ts, and the
+# golden task's own sections.
+DIMENSION_LINKS = """export const dimensionLinks: Record<string, XLink[]> = {
+  "Scenario Adherence": [
+    { to: "/#parameters", tag: "M1", label: "The pair is the brief, not a label" },
+    { to: "/whats-new#binding-parameters", tag: "WN", label: "Every assigned parameter is binding" },
+  ],
+  "Assigned Universe": [
+    { to: "/#universe", tag: "M2", label: "Interrogate the universe before you design" },
+  ],
+  "MM Inputs": [
+    { to: "/#inputs", tag: "M4", label: "Three is the floor, not the target" },
+  ],
+  "Output Artifact": [
+    { to: "/whats-new#planned-complexity", tag: "WN", label: "The bar each deliverable has to clear" },
+    { to: "/complexity", tag: "TOOL", label: "Propose ways to raise the complexity" },
+  ],
+  "Minimum Multimodal Inputs": [
+    { to: "/#inputs", tag: "M4", label: "An input set where each file earns its place" },
+    { to: "/whats-new#input-floor", tag: "WN", label: "Three inputs is a floor, and it is enforced" },
+  ],
+  Realism: [
+    { to: "/#inputs", tag: "M4", label: "What this person would really be holding" },
+  ],
+  Safety: [
+    { to: "/checklist#s2", tag: "B4", label: "Health inputs mocked or synthetic" },
+  ],
+  "Single-Turn Structure": [
+    { to: "/whats-new#single-turn", tag: "WN", label: "One turn, and what that removes" },
+    { to: "/#prompt", tag: "M5", label: "Everything lands in one prompt" },
+  ],
+  "Valid Model Failure": [
+    { to: "/#failure", tag: "M7", label: "If the model sails through, the task is not ready" },
+  ],
+  "MM Dependence": [
+    { to: "/#inputs", tag: "M4", label: "Take the attachments away and the prompt dies" },
+  ],
+  "Category Relevance": [
+    { to: "/#parameters", tag: "M1", label: "Judged on the user's intent, not the files" },
+    { to: "/whats-new#use-case-and-tools", tag: "WN", label: "Eleven use cases, sixty-eight subcategories" },
+  ],
+  "Domain Relevance": [
+    { to: "/#universe", tag: "M2", label: "Grounded in what the universe actually holds" },
+  ],
+  "Overall Rubric Quality - 10%": [
+    { to: "/#rubrics", tag: "M8", label: "A grader with the prompt closed can still rate it" },
+  ],
+  "Overall Rubric Quality - 15%": [
+    { to: "/#rubrics", tag: "M8", label: "A grader with the prompt closed can still rate it" },
+  ],
+  "Overall Rubric Quality - 20%": [
+    { to: "/#rubrics", tag: "M8", label: "A grader with the prompt closed can still rate it" },
+  ],
+  "80/20 Outcome Split (Process Over Cap)": [
+    { to: "/whats-new#outcome-over-process", tag: "WN", label: "Eighty per cent outcome, and the cap that bites" },
+    { to: "/#rubrics", tag: "M8", label: "Where the split is decided" },
+  ],
+  "Existence Check": [
+    { to: "/whats-new#no-existence-checks", tag: "WN", label: "An existence check is an automatic fail" },
+  ],
+  "All Criteria Scoring": [
+    { to: "/whats-new#literal-matching", tag: "WN", label: "Literal matching, and what it costs" },
+  ],
+  "Rubric Structure": [
+    { to: "/#rubrics", tag: "M8", label: "One criterion, one observable outcome" },
+  ],
+  "Rubric Spot Checks": [
+    { to: "/#rubrics", tag: "M8", label: "Spot checks, and the volume check beside them" },
+  ],
+  "Subjective Block Scope": [
+    { to: "/#subjective", tag: "M10", label: "Presentation only, graded on the render" },
+  ],
+  "Artifact Verification": [
+    { to: "/#rubrics", tag: "M8", label: "What a verifier can settle on its own" },
+  ],
+  "Artifact Completeness": [
+    { to: "/#golden", tag: "M9", label: "Every artifact the prompt asked for" },
+  ],
+  "Hint Leak (Leg B)": [
+    { to: "/#golden", tag: "M9", label: "Point at the intent, never at the answer" },
+  ],
+  "Feasibility With Tools": [
+    { to: "/checklist#s1", tag: "A2", label: "Confirm the loadout before you design" },
+    { to: "/whats-new#assigned-tools", tag: "WN", label: "Assigned tools have to be named in the scenario" },
+  ],
+  "Architectural Depth & Friction Exposure": [
+    { to: "/#failure", tag: "M7", label: "Designed friction, not artificial friction" },
+    { to: "/complexity", tag: "TOOL", label: "Propose ways to raise the complexity" },
+  ],
+  "Genuine Media Inspection": [
+    { to: "/#inputs", tag: "M4", label: "Evidence the model has to actually read" },
+  ],
+  Completeness: [
+    { to: "/checklist#s7", tag: "G3", label: "Download the trajectories, star the preferred run" },
+  ],
+  "Golden/Preferred Run Selection": [
+    { to: "/#golden", tag: "M9", label: "The run you file is part of the task" },
+  ],
+};
+"""
+
+# ----------------------------------------------------------------------- write
+
+def main():
+    groups = read_dimensions()
+    issues, difficulty, buckets, deprecated, dep_label, standards = read_appendix()
+
+    n_dims = sum(len(g["dimensions"]) for g in groups)
+    print("dimensions : %d in %d groups" % (n_dims, len(groups)))
+    for g in groups:
+        print("   %-18s %d" % (g["group"], len(g["dimensions"])))
+    print("appendix   : %d rubric quality issues, %d weight buckets (%d deprecated),"
+          " %d difficulty dimensions, %d authoring standards"
+          % (len(issues), len(buckets), len(deprecated), len(difficulty), len(standards)))
+
+    named = set(re.findall(r'^ {2}"?([^"\n:]+?)"?: \[', DIMENSION_LINKS, re.M))
+    actual = {d["name"] for g in groups for d in g["dimensions"]}
+    for miss in sorted(named - actual):
+        print("   ! dimensionLinks names a dimension the spec no longer has: %r" % miss)
+    print("   %d of %d dimensions carry cross-links" % (len(named & actual), len(actual)))
+
+    out = f'''import type {{ XLink }} from "./types";
 
 /**
- * The Quality Control spec.
+ * The Green Shell Quality Control spec.
  *
- * `specGroups` below is the "QC spec MT Rubrics - original.csv" export dated
- * Sep 20, 2026. That export is the newest revision and the first one to carry
- * every dimension, "Milestones - Milestone Annotations" included, so it is now
- * the source rather than the deployed viewer. The appendix blocks further down
- * still come from the viewer at https://qc-spec-mt-rubrics.vercel.app/, which
- * the export does not cover.
+ * GENERATED by scripts/gen_spec.py from the two exports beside this project:
+ * the `*-rubric.csv` scored dimensions and `appendix.csv`. Do not edit by hand
+ * below this header — re-run the generator when either export is re-exported.
  *
- * Careful: the viewer is still serving the PREVIOUS revision, so
+ * Question text, guidance, option wording, definitions and examples are
+ * verbatim, em dashes and curly quotes included, because this is a
+ * transcription of the standard rather than hub copy. `dimensionLinks` at the
+ * foot is the one hand-authored block and it is written by the generator, so
+ * that is where an edit to it has to go.
  *
- *   curl -s https://qc-spec-mt-rubrics.vercel.app/ -o qcspec.html
- *   python gen_spec.py qcspec.html
- *
- * would put the dimensions back a revision. Redeploy the viewer from the CSVs
- * before regenerating from it.
- *
- * Question text, guidance, option wording and definitions are verbatim, em
- * dashes and curly quotes included, because this is a transcription of the
- * standard rather than hub copy. `dimensionLinks` at the foot of the file is
- * the one hand-authored block, and it is written by gen_spec.py, so that is
- * where an edit to it has to go.
+ * Red Shell keeps its own `specDoc.ts`, its own generator and its own
+ * `specLog.ts`, all built from the multi-turn viewer. The two never meet.
  *
  * What moved between revisions is recorded in ./specLog.ts and rendered as the
  * Change Log pane on /spec.
  */
-export const SPEC_URL = "https://qc-spec-mt-rubrics.vercel.app/";
 
-export interface SpecErrorTag {
+export interface SpecErrorTag {{
   label: string;
   type: "fail" | "non-fail";
-}
+}}
 
-export interface SpecOption {
+export interface SpecOption {{
   text: string;
   score: number;
   /** Every Fail and Non-Fail selection carries a written justification. */
   justify: boolean;
-}
+}}
 
-export interface SpecDimension {
+export interface SpecDimension {{
   name: string;
   question: string;
   description: string;
   errorTags: SpecErrorTag[];
   options: SpecOption[];
-}
+}}
 
-export interface SpecGroup {
+export interface SpecGroup {{
   group: string;
   dimensions: SpecDimension[];
-}
+}}
 
 export type IssueSeverity = "Major" | "Moderate" | "Minor";
 
-export interface RubricQualityIssue {
+export interface RubricQualityIssue {{
   name: string;
   severity: IssueSeverity;
   definition: string;
-}
+}}
 
-export interface WeightBucket {
+export interface WeightBucket {{
   level: string;
   score: number;
   definition: string;
   examples: string[];
-}
+}}
 
-export interface AuthoringStandard {
+export interface AuthoringStandard {{
   name: string;
   body: string;
-}
+}}
 
-''')
-out.write("export const specGroups: SpecGroup[] = " + ts(groups) + ";\n\n")
-out.write("export const rubricQualityNote = " + ts(quality_note) + ";\n\n")
-out.write("export const rubricQualityIssues: RubricQualityIssue[] = " + ts(issues) + ";\n\n")
-out.write("export const weightsNote = " + ts(weights_note) + ";\n\n")
-out.write("export const difficultyDimensions: string[] = " + ts(difficulty) + ";\n\n")
-out.write("export const weightBuckets: WeightBucket[] = " + ts(buckets) + ";\n\n")
-out.write("export const standardsNote = " + ts(standards_note) + ";\n\n")
-out.write("export const authoringStandards: AuthoringStandard[] = " + ts(standards) + ";\n\n")
-out.write('''/**
- * Cross-links from a dimension into the rest of the hub, keyed by dimension
- * name. Hand-authored, and mirrored by links pointing back at
- * `/spec#<group-slug>` from the method, the checklist and the golden task.
+export const specGroups: SpecGroup[] = {ts(groups)};
+
+export const rubricQualityNote = {json.dumps(SECTION_NOTES["quality"], ensure_ascii=False)};
+
+export const rubricQualityIssues: RubricQualityIssue[] = {ts(issues)};
+
+export const weightsNote = {json.dumps(SECTION_NOTES["weights"], ensure_ascii=False)};
+
+export const difficultyDimensions: string[] = {ts(difficulty)};
+
+export const weightBuckets: WeightBucket[] = {ts(buckets)};
+
+/**
+ * A superseded scale the sheet still carries, under its own heading. Kept so
+ * the appendix is represented in full, and labelled with the sheet's own words
+ * so nobody grades against it by mistake.
  */
-export const dimensionLinks: Record<string, XLink[]> = {
-  "Architectural Depth & Friction Exposure": [
-    { to: "/#failure", tag: "M5", label: "If the model sails through, the task is not ready" },
-    { to: "/golden-tasks/vendor-closeout#traps", tag: "GT", label: "Seven designed friction points" },
-  ],
-  "Feasibility With Tools": [
-    { to: "/checklist#s1", tag: "A2", label: "Confirm the loadout before you design" },
-  ],
-  "Genuine Media Inspection": [
-    { to: "/#inputs", tag: "M2", label: "Take the attachments away" },
-    { to: "/golden-tasks/vendor-closeout#inputs", tag: "GT", label: "Every input and the fact it carries" },
-  ],
-  Completeness: [
-    { to: "/checklist#s7", tag: "G3", label: "Download the trajectories, star the preferred run" },
-  ],
-  "Artifact Verification": [
-    { to: "/#rubrics", tag: "M6", label: "A grader with the prompt closed can still rate it" },
-  ],
-  "Turn Structure & Dependency": [
-    { to: "/checklist#s3", tag: "C3", label: "Every follow up consumes the turn before it" },
-    { to: "/golden-tasks/vendor-closeout#turns", tag: "GT", label: "What each of the four turns consumes" },
-  ],
-  "Simulator Answer Leak": [
-    { to: "/#golden", tag: "M8", label: "Point at the intent, never at the answer" },
-    { to: "/checklist#s3", tag: "C5", label: "Never flag the miss" },
-  ],
-  "Revision Turn Handling": [
-    { to: "/checklist#s3", tag: "C4", label: "One turn changes the brief after delivery" },
-    { to: "/golden-tasks/vendor-closeout#turns", tag: "GT", label: "Turn 4 is the revision turn" },
-  ],
-  "Intent-Level Abstraction": [
-    { to: "/#milestones", tag: "M7", label: "One intent, one milestone" },
-  ],
-  "Artifact Completeness": [
-    { to: "/checklist#s7", tag: "G2", label: "The golden passes the complete objective set" },
-    { to: "/golden-tasks/vendor-closeout#golden", tag: "GT", label: "The golden deliverables" },
-  ],
-  "MM dependence": [
-    { to: "/checklist#s2", tag: "B2", label: "Take the attachments away" },
-    { to: "/#inputs", tag: "M2", label: "Attach what the person would actually have" },
-  ],
-  Realism: [
-    { to: "/golden-tasks/vendor-closeout#inputs", tag: "GT", label: "Eleven files recovered in a rush" },
-  ],
-  Safety: [
-    { to: "/checklist#s2", tag: "B3", label: "The hard rules for inputs" },
-  ],
-  "Deferred Asset Handling": [
-    { to: "/checklist#s3", tag: "C4", label: "Name the deferred asset on the turn it enters scope" },
-  ],
-  "Overall Rubric Quality": [
-    { to: "/checklist#s5", tag: "E1", label: "Walk the prompt once per turn" },
-    { to: "/golden-tasks/vendor-closeout#rubrics", tag: "GT", label: "21 criteria that each pin their own value" },
-  ],
-  "Rubric Structure": [
-    { to: "/checklist#s5", tag: "E6", label: "Every weight in the allowed set" },
-  ],
-  "Rubric Spot Checks": [
-    { to: "/checklist#s5", tag: "E8", label: "One completeness criterion plus five spot checks" },
-  ],
-  "Subjective Block Scope": [
-    { to: "/#subjective", tag: "M9", label: "Judge the render, nothing the prompt asked for" },
-    { to: "/golden-tasks/vendor-closeout#subjective", tag: "GT", label: "Ten criteria from one comparison" },
-  ],
-};
-''')
-open(OUT, "w", encoding="utf-8", newline="").write(out.getvalue())
-print("written", OUT)
+export const deprecatedWeightsLabel = {json.dumps(dep_label, ensure_ascii=False)};
+
+export const deprecatedWeightBuckets: WeightBucket[] = {ts(deprecated)};
+
+export const standardsNote = {json.dumps(SECTION_NOTES["standards"], ensure_ascii=False)};
+
+export const authoringStandards: AuthoringStandard[] = {ts(standards)};
+
+/**
+ * Cross-links from a dimension into the rest of the hub, keyed by dimension
+ * name. Hand-authored in scripts/gen_spec.py, and mirrored by links pointing
+ * back at `/spec#<group-slug>` from the method, the checklist and what is new.
+ */
+{DIMENSION_LINKS}'''
+
+    with open(OUT, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(out)
+    print("\nwrote %s — %.1f KB" % (OUT, os.path.getsize(OUT) / 1024))
+
+
+if __name__ == "__main__":
+    main()
