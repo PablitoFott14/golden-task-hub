@@ -9,16 +9,17 @@ import CommandPalette from "./CommandPalette";
 /**
  * Five tabs, and the number is the point.
  *
- * It was eight, and three of those were orientation a contributor reads once —
- * onboarding, what moved from Red Shell, the FAQ — sitting at the same level as
- * the pages they work from. Two more, the pre-submit gate and the QC spec, were
- * the same subject split in half: the gate is what an author checks, the spec is
- * what a reviewer scores, and every check already cited a dimension.
+ * It was eight. Four of those were things a contributor looks something up in
+ * rather than works from — onboarding, what moved from Red Shell, the FAQ, and
+ * the pre-submit gate — sitting at the same level as the pages they are
+ * actually in. They became `Reference`. What is left is one tab per thing a
+ * contributor does: learn the method, study a worked example, raise the
+ * complexity, read the standard they are scored against, look something up.
  *
- * So the three read-once tabs became `Reference`, the two grading tabs became
- * `Grading`, and what is left is one tab per thing a contributor is actually
- * doing: learn the method, study a worked example, raise the complexity, check
- * it, look something up.
+ * **The spec doc holds a tab of its own**, because it is the one piece of
+ * content nothing else here can stand in for: the exact rubric a reviewer
+ * scores against. The gate, the FAQ and the onboarding are all written from it,
+ * so it is the destination, not an appendix to one.
  *
  * **Anything new goes inside one of these five.** A sixth tab needs an argument
  * for why it is not a pane of an existing one.
@@ -27,7 +28,7 @@ const links = [
   { to: "/", label: "The Method", end: true },
   { to: "/golden-tasks", label: "Golden Tasks" },
   { to: "/complexity", label: "Complexity" },
-  { to: "/grading", label: "Grading" },
+  { to: "/spec", label: "Spec Doc" },
   { to: "/reference", label: "Reference" },
 ];
 

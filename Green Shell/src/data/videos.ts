@@ -64,7 +64,7 @@ export const universeVideoPitch = {
 /** Where the set points once it has been watched. */
 export const universeVideoLinks: XLink[] = [
   { to: "/#universe", tag: "M1", label: "Go find the story, do not invent one" },
-  { to: "/grading#s2", tag: "B1", label: "Is the universe doing real work?" },
+  { to: "/reference#s2", tag: "B1", label: "Is the universe doing real work?" },
   { to: "/reference#universe-every-prompt", tag: "FAQ", label: "Does every prompt have to use it?" },
 ];
 

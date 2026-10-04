@@ -62,7 +62,7 @@ export const checklist: ChecklistSection[] = [
         f: "Inspecting by hand is what leads people to conclude the scenario has no anchor in the universe. Without the Artifact ID the artifacts come back empty, and an unloaded server is an environment defect, not a model failure.",
         ref: "§1.1 · 1.2.1",
         links: [
-          { to: "/grading#trajectory", tag: "QC", label: "Feasibility with tools" },
+          { to: "/spec#trajectory", tag: "QC", label: "Feasibility with tools" },
           { to: "/#universe-videos", tag: "VIDEO", label: "Loading the universe, on screen" },
           { to: "/#latest-changes", tag: "NEW", label: "Ground it through the agent, not the tables" },
         ],
@@ -118,7 +118,7 @@ export const checklist: ChecklistSection[] = [
         f: "Three input files is the floor; distractors and noise count toward it. Then check the names: no filename, manifest or helper document may reveal the expected answer.",
         ref: "§1.2.2",
         links: [
-          { to: "/grading#input-artifacts", tag: "QC", label: "Realism, safety, deferred assets" },
+          { to: "/spec#input-artifacts", tag: "QC", label: "Realism, safety, deferred assets" },
           { to: "/#latest-changes", tag: "NEW", label: "Three input files is the floor" },
           { to: `${GT}#inputs`, tag: "GT", label: "Eleven files, and the fact each one carries" },
         ],
@@ -215,7 +215,7 @@ export const checklist: ChecklistSection[] = [
         q: "Walking the prompt once per turn, is every ask covered by a criterion, including intents introduced in the middle turns, not just the final state?",
         f: "Missing Criteria and Turn Scoped are both Major issues. No target count: thorough coverage usually lands around 15 to 30.",
         ref: "§5.1 · 5.6 · 5.7",
-        links: [{ to: "/grading#rubric-criteria", tag: "QC", label: "The rubric error catalogue" }],
+        links: [{ to: "/spec#rubric-criteria", tag: "QC", label: "The rubric error catalogue" }],
       },
       {
         id: "E2",
@@ -250,7 +250,7 @@ export const checklist: ChecklistSection[] = [
         q: "Is every weight in {−5, −3, −1, +1, +3, +5}, and does each answer how hard the criterion was to satisfy rather than how much it matters?",
         f: "Any value outside the set fails Rubric Structure on its own. A requirement can be critical to the task and still be +1.",
         ref: "§5.2 · 5.7",
-        links: [{ to: "/grading#rubric-criteria", tag: "QC", label: "Rubric structure" }],
+        links: [{ to: "/spec#rubric-criteria", tag: "QC", label: "Rubric structure" }],
       },
       {
         id: "E7",
@@ -310,7 +310,7 @@ export const checklist: ChecklistSection[] = [
         q: "Did you rate every subjective criterion Present or Not Present against both models yourself, and are the justifications written at the user-experience level?",
         f: "Pre-filled selections are not to be trusted, and the Model B set is entirely yours to determine.",
         ref: "§8.5",
-        links: [{ to: "/grading#rubric-criteria", tag: "QC", label: "Subjective block scope" }],
+        links: [{ to: "/spec#rubric-criteria", tag: "QC", label: "Subjective block scope" }],
       },
     ],
   },
@@ -341,7 +341,7 @@ export const checklist: ChecklistSection[] = [
         q: "Are the trajectories and final artifacts downloaded, the preferred run starred, and does every failed criterion carry all three justification parts?",
         f: "A failure is a positive rated Not Present or a negative rated Present. Every one carries a justification; the golden needs none.",
         ref: "§5.5 · 7.1",
-        links: [{ to: "/grading#trajectory", tag: "QC", label: "Trajectory completeness" }],
+        links: [{ to: "/spec#trajectory", tag: "QC", label: "Trajectory completeness" }],
       },
     ],
   },

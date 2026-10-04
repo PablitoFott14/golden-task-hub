@@ -112,12 +112,12 @@ export default function PreSubmit({ embedded = false }: { embedded?: boolean }) 
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // Rendered on its own route and as the first pane of Grading. Embedded, the
-  // page it sits in owns the container and the only h1.
+  // Rendered as a pane of Reference, which owns the only h1 on the page.
+  // The standalone branch is kept so the gate can have its own route again.
   const Heading = embedded ? "h2" : "h1";
 
   return (
-    <div className={embedded ? "" : "mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8"}>
+    <div className={cx("mx-auto max-w-6xl px-4 sm:px-6 lg:px-8", embedded ? "pb-12 pt-2" : "py-8")}>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="min-w-0">
           <div className="mono-label mb-1 text-brand-600 dark:text-brand-300">Pre-Submit Gate</div>

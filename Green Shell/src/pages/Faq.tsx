@@ -279,7 +279,7 @@ export default function Faq({ embedded = false }: { embedded?: boolean }) {
                 <Link to="/golden-tasks" className="btn-primary">
                   Open the Golden Tasks <ArrowRight size={15} />
                 </Link>
-                <Link to="/grading#pre-submit" className="btn-ghost">
+                <Link to="/reference#pre-submit" className="btn-ghost">
                   Run the pre-submit gate
                 </Link>
               </div>

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -50,8 +50,7 @@ import {
   type SpecChangeKind,
 } from "../data/specLog";
 import { Crosslinks, Reveal, SectionHeading } from "../components/ui";
-import PreSubmit from "./PreSubmit";
-import { checkCount, checklist } from "../data/checklist";
+import { checkCount } from "../data/checklist";
 import { cx } from "../lib/util";
 
 /* ---- section registry: one entry per nav target ---- */
@@ -93,16 +92,6 @@ const dimensionNav: NavItem[] = specGroups.map((g) => ({
   count: g.dimensions.length,
 }));
 
-/**
- * The pre-submit gate is the first thing on this page, not an appendix to the
- * spec. It is the same subject read the other way round: the spec is what a
- * reviewer scores, the gate is what an author checks before handing it over,
- * and every check on it already cites a dimension here.
- */
-const gateNav: NavItem[] = [
-  { id: "pre-submit", label: "Pre-Submit", icon: ClipboardCheck, count: checkCount() },
-];
-
 const appendixNav: NavItem[] = [
   { id: "rubric-quality", label: "Rubric Quality", icon: ListChecks, count: rubricQualityIssues.length },
   { id: "weights", label: "Weight Definitions", icon: Scale, count: weightBuckets.length },
@@ -115,14 +104,8 @@ const logNav: NavItem[] = [
   { id: "log", label: "Change Log", icon: History, count: specChangeCount || undefined },
 ];
 
-const NAV_IDS = new Set(
-  [...gateNav, ...dimensionNav, ...appendixNav, ...logNav].map((n) => n.id)
-);
+const NAV_IDS = new Set([...dimensionNav, ...appendixNav, ...logNav].map((n) => n.id));
 
-/** Which pane holds a checklist section anchor, so /grading#s3 opens the gate. */
-const sectionHome: Record<string, string> = Object.fromEntries(
-  checklist.map((s) => [s.id, "pre-submit"])
-);
 const dimensionCount = specGroups.reduce((n, g) => n + g.dimensions.length, 0);
 
 /* ---- text highlighting for search ---- */
@@ -173,16 +156,17 @@ function scoreStyle(score: number) {
 
 export default function SpecDoc() {
   const { hash, key } = useLocation();
-  const [active, setActive] = useState<string>(gateNav[0].id);
+  /* The spec is what this tab is for, so it opens on the first group of
+     dimensions rather than on anything that annotates or precedes them. */
+  const [active, setActive] = useState<string>(dimensionNav[0].id);
   const [query, setQuery] = useState("");
   const searchRef = useRef<HTMLInputElement>(null);
   const activeGroup = specGroups.find((g) => slug(g.group) === active);
   const searching = query.trim().length > 0;
 
-  /* Inbound cross-links target /grading#<group-slug>, so the hash picks the
-     pane. A /grading#dim-<name> link picks the pane holding that dimension,
-     and /grading#s3 picks the gate,
-     and the layout's own scroll effect then finds the card once the pane has
+  /* Inbound cross-links target /spec#<group-slug>, so the hash picks the
+     pane. A /spec#dim-<name> link picks the pane holding that dimension, and
+     the layout's own scroll effect then finds the card once the pane has
      rendered. That is what every entry in the change log points at.
 
      `key` is in the dependency list, not just `hash`. The rail moves the pane
@@ -200,9 +184,6 @@ export default function SpecDoc() {
       setQuery("");
     } else if (dimensionHome[id]) {
       setActive(dimensionHome[id]);
-      setQuery("");
-    } else if (sectionHome[id]) {
-      setActive(sectionHome[id]);
       setQuery("");
     }
   }, [hash, key]);
@@ -234,10 +215,20 @@ export default function SpecDoc() {
       <Reveal>
         <SectionHeading
           as="h1"
-          eyebrow="Grading"
+          eyebrow="Spec Doc"
           title="How your task is graded"
-          sub={`The gate you run before submitting, and the exact standard a reviewer scores against: ${checkCount()} checks, then ${dimensionCount} dimensions in ${specGroups.length} groups. One search covers all of it.`}
+          sub={`The exact standard a reviewer scores against: ${dimensionCount} dimensions in ${specGroups.length} groups, the rubric error catalogue behind them, and the weight definitions. One search covers all of it.`}
         />
+      </Reveal>
+
+      {/* The gate used to be the first pane of this tab. It is a tool an author
+          runs once per task rather than a standard to read against, so it sits
+          with the other working references now, and this is the way to it. */}
+      <Reveal>
+        <Link to="/reference#pre-submit" className="btn-ghost mt-5">
+          <ClipboardCheck size={14} /> Before you submit, run the {checkCount()}-check gate
+          <ArrowRight size={13} />
+        </Link>
       </Reveal>
 
       {/* Search */}
@@ -248,7 +239,7 @@ export default function SpecDoc() {
             ref={searchRef}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search the checks, dimensions, weights, rubric quality..."
+            placeholder="Search the dimensions, weights, rubric quality, change log..."
             className="w-full rounded-xl border border-ink-200 bg-surface py-3 pl-10 pr-24 text-sm text-ink-800 shadow-soft outline-none transition placeholder:text-ink-400 focus:border-brand-300 focus:ring-2 focus:ring-brand-200 dark:focus:ring-brand-500/30"
           />
           {searching ? (
@@ -282,11 +273,7 @@ export default function SpecDoc() {
           {/* Sidebar nav */}
           <nav className="mb-6 lg:mb-0 lg:sticky lg:top-20 lg:self-start">
             <div className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:gap-1 lg:overflow-visible lg:pb-0">
-              <SideLabel>Before you submit</SideLabel>
-              {gateNav.map((item) => (
-                <SideButton key={item.id} item={item} active={active === item.id} onClick={() => goTo(item.id)} />
-              ))}
-              <SideLabel className="mt-3">Dimensions</SideLabel>
+              <SideLabel>Dimensions</SideLabel>
               {dimensionNav.map((item) => (
                 <SideButton key={item.id} item={item} active={active === item.id} onClick={() => goTo(item.id)} />
               ))}
@@ -310,7 +297,6 @@ export default function SpecDoc() {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="min-w-0 scroll-mt-24"
           >
-            {active === "pre-submit" && <PreSubmit embedded />}
             {activeGroup && <GroupSection group={activeGroup} />}
             {active === "rubric-quality" && <RubricQualitySection />}
             {active === "weights" && <WeightSection />}
@@ -744,7 +730,7 @@ function ChangeCard({ ch, query }: { ch: SpecChange; query?: string }) {
       <Crosslinks
         links={[
           {
-            to: `/grading#${dimSlug(ch.dimension)}`,
+            to: `/spec#${dimSlug(ch.dimension)}`,
             tag: ch.group,
             label: `Read ${ch.dimension} as it stands now`,
           },
@@ -914,12 +900,6 @@ function SearchResults({ query }: { query: string }) {
 
   const standardResults = authoringStandards.filter((st) => has(st.name) || has(st.body));
 
-  const checkResults = checklist.flatMap((s) =>
-    s.checks
-      .filter((c) => has(c.id) || has(c.q) || has(c.f) || has(c.ref) || has(s.title))
-      .map((c) => ({ check: c, section: s }))
-  );
-
   const changeResults = specRevisions.flatMap((rev) =>
     rev.changes.filter(
       (ch) =>
@@ -928,7 +908,6 @@ function SearchResults({ query }: { query: string }) {
   );
 
   const total =
-    checkResults.length +
     groupResults.reduce((n, r) => n + r.dims.length, 0) +
     weightResults.length +
     issueResults.length +
@@ -947,39 +926,11 @@ function SearchResults({ query }: { query: string }) {
           <Search size={28} className="text-ink-300" />
           <p className="text-sm font-semibold text-ink-700">No matches on this page</p>
           <p className="text-[13px] text-ink-500">
-            Try a different term, like a check id, a dimension name, a weight, or an error
-            category.
+            Try a different term, like a dimension name, a weight, or an error category.
           </p>
         </div>
       ) : (
         <>
-          {checkResults.length > 0 && (
-            <div>
-              <ResultLabel>Pre-Submit</ResultLabel>
-              <div className="space-y-2">
-                {checkResults.map(({ check, section }) => (
-                  <div key={check.id} className="card p-4">
-                    <div className="mb-1 flex flex-wrap items-center gap-2">
-                      <span className="chip bg-brand-500/12 font-mono text-brand-700 dark:text-brand-300">
-                        {check.id}
-                      </span>
-                      <span className="mono-label text-ink-400">{section.title}</span>
-                      <span className="font-mono text-[10.5px] text-ink-400">{check.ref}</span>
-                    </div>
-                    <p className="text-[13.5px] font-semibold leading-snug text-ink-800">
-                      <Highlight text={check.q} query={query} />
-                    </p>
-                    {check.f && (
-                      <p className="mt-1.5 border-l-2 border-ink-200 pl-2.5 text-[12.5px] leading-relaxed text-ink-500">
-                        <Highlight text={check.f} query={query} />
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           {groupResults.map((r) => (
             <div key={r.group}>
               <ResultLabel>{r.group}</ResultLabel>

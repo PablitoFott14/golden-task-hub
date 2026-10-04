@@ -3,9 +3,10 @@ import Layout from "./components/Layout";
 import Method from "./pages/Method";
 import GoldenTasks from "./pages/GoldenTasks";
 import TaskDetail from "./pages/TaskDetail";
-import Grading from "./pages/Grading";
+import SpecDoc from "./pages/SpecDoc";
 import Reference from "./pages/Reference";
 import Complexity from "./pages/Complexity";
+import { checklist } from "./data/checklist";
 
 function NotFound() {
   return (
@@ -24,21 +25,39 @@ function NotFound() {
 }
 
 /**
- * The five tabs replaced eight, so five routes moved. Every one of them is kept
- * as a redirect **carrying the hash across**, because the hash is what makes the
- * old link still useful: `/spec#weights` has to land on the weights pane, not
- * just on the page. Both new pages resolve an inbound anchor to the pane that
- * holds it, so nothing has to know the new shape.
+ * Every route the restructures retired is kept as a redirect **carrying the
+ * hash across**, because the hash is what makes the old link still useful:
+ * `/spec#weights` has to land on the weights pane, not just on the page. Both
+ * destination pages resolve an inbound anchor to the pane that holds it, so
+ * nothing has to know the new shape.
  *
  * These exist for links that left the hub — a bookmark, a Slack message, a
- * Speed Audit comment. Every link *inside* the hub already points at the new
+ * Speed Audit comment. Every link *inside* the hub already points at the live
  * route, so a redirect is a safety net rather than the normal path.
  */
 function Moved({ to, pane }: { to: string; pane?: string }) {
   const { hash } = useLocation();
   // A bare old URL has no hash to carry, so it needs the pane naming itself:
-  // /spec has to open the dimensions, not the gate that is now the default.
+  // /checklist has to open the gate, not the onboarding that is the default.
   return <Navigate to={`${to}${hash || (pane ? `#${pane}` : "")}`} replace />;
+}
+
+/** Anchors that belonged to the gate and therefore followed it to Reference. */
+const gateAnchors = new Set(["pre-submit", ...checklist.map((s) => s.id)]);
+
+/**
+ * `/grading` is the one old route whose contents went to two different tabs:
+ * the spec stayed put and became `/spec`, the gate moved into Reference. So
+ * this redirect reads the hash to know which one a link wanted.
+ */
+function MovedFromGrading() {
+  const { hash } = useLocation();
+  const id = decodeURIComponent(hash.replace(/^#/, ""));
+  return gateAnchors.has(id) ? (
+    <Navigate to={`/reference${hash}`} replace />
+  ) : (
+    <Navigate to={`/spec${hash}`} replace />
+  );
 }
 
 export default function App() {
@@ -49,12 +68,12 @@ export default function App() {
         <Route path="/golden-tasks" element={<GoldenTasks />} />
         <Route path="/golden-tasks/:id" element={<TaskDetail />} />
         <Route path="/complexity" element={<Complexity />} />
-        <Route path="/grading" element={<Grading />} />
+        <Route path="/spec" element={<SpecDoc />} />
         <Route path="/reference" element={<Reference />} />
 
-        {/* Where the eight tabs went. */}
-        <Route path="/checklist" element={<Moved to="/grading" pane="pre-submit" />} />
-        <Route path="/spec" element={<Moved to="/grading" pane="task-parameters" />} />
+        {/* Where the retired tabs went. */}
+        <Route path="/grading" element={<MovedFromGrading />} />
+        <Route path="/checklist" element={<Moved to="/reference" pane="pre-submit" />} />
         <Route path="/onboarding" element={<Moved to="/reference" pane="onboarding" />} />
         <Route path="/whats-new" element={<Moved to="/reference" pane="whats-new" />} />
         <Route path="/faq" element={<Moved to="/reference" pane="faq" />} />

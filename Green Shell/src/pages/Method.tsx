@@ -276,7 +276,7 @@ export default function Method() {
               </div>
 
               <Link
-                to="/grading#pre-submit"
+                to="/reference#pre-submit"
                 className="card card-hover group flex items-center gap-3 p-4"
               >
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-emerald-500/12 text-emerald-600 dark:text-emerald-300">
@@ -504,18 +504,18 @@ export default function Method() {
                 tone: "bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300",
               },
               {
-                to: "/grading#pre-submit",
+                to: "/reference#pre-submit",
                 icon: <ClipboardCheck size={18} />,
                 title: "Pre-Submit Gate",
-                tab: "in Grading",
+                tab: "in Reference",
                 body: `${checkCount()} checks in ${checklist.length} sections. Roughly five minutes, run once before you submit.`,
                 tone: "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300",
               },
               {
-                to: "/grading#task-parameters",
+                to: "/spec#task-parameters",
                 icon: <Gauge size={18} />,
-                title: "QC Spec",
-                tab: "in Grading",
+                title: "Spec Doc",
+                tab: "Spec Doc",
                 body: `The ${specDimensionCount} dimensions your task is scored against, and the rubric error catalogue behind them.`,
                 tone: "bg-sky-500/12 text-sky-700 ring-1 ring-sky-500/25 dark:text-sky-300",
               },

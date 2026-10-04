@@ -1331,7 +1331,7 @@ export const authoringStandards: AuthoringStandard[] = [
 /**
  * Cross-links from a dimension into the rest of the hub, keyed by dimension
  * name. Hand-authored in scripts/gen_spec.py, and mirrored by links pointing
- * back at `/grading#<group-slug>` from the method, the gate and what is new.
+ * back at `/spec#<group-slug>` from the method, the gate and what is new.
  */
 export const dimensionLinks: Record<string, XLink[]> = {
   "Scenario Adherence": [
@@ -1356,7 +1356,7 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#inputs", tag: "M4", label: "What this person would really be holding" },
   ],
   Safety: [
-    { to: "/grading#s2", tag: "B4", label: "Health inputs mocked or synthetic" },
+    { to: "/reference#s2", tag: "B4", label: "Health inputs mocked or synthetic" },
   ],
   "Single-Turn Structure": [
     { to: "/reference#single-turn", tag: "WN", label: "One turn, and what that removes" },
@@ -1413,7 +1413,7 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#golden", tag: "M9", label: "Point at the intent, never at the answer" },
   ],
   "Feasibility With Tools": [
-    { to: "/grading#s1", tag: "A2", label: "Confirm the loadout before you design" },
+    { to: "/reference#s1", tag: "A2", label: "Confirm the loadout before you design" },
     { to: "/reference#assigned-tools", tag: "WN", label: "Assigned tools have to be named in the scenario" },
   ],
   "Architectural Depth & Friction Exposure": [
@@ -1424,7 +1424,7 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#inputs", tag: "M4", label: "Evidence the model has to actually read" },
   ],
   Completeness: [
-    { to: "/grading#s7", tag: "G3", label: "Download the trajectories, star the preferred run" },
+    { to: "/reference#s7", tag: "G3", label: "Download the trajectories, star the preferred run" },
   ],
   "Golden/Preferred Run Selection": [
     { to: "/#golden", tag: "M9", label: "The run you file is part of the task" },

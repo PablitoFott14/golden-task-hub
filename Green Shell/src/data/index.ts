@@ -201,7 +201,7 @@ export const searchIndex: SearchEntry[] = [
       kind: "Pre-submit check" as const,
       title: `${c.id} · ${s.title}`,
       hint: c.q,
-      to: `/grading#${s.id}`,
+      to: `/reference#${s.id}`,
       terms: `${c.f} ${c.ref} ${s.prompt}`,
     }))
   ),
@@ -211,7 +211,7 @@ export const searchIndex: SearchEntry[] = [
       kind: "QC spec" as const,
       title: `${g.group} · ${d.name}`,
       hint: d.question,
-      to: `/grading#${slug(g.group)}`,
+      to: `/spec#${slug(g.group)}`,
       terms: [d.description, d.errorTags.map((t) => t.label).join(" "), d.options.map((o) => o.text).join(" ")].join(" "),
     }))
   ),
@@ -220,7 +220,7 @@ export const searchIndex: SearchEntry[] = [
     kind: "QC spec",
     title: `${i.severity} issue · ${i.name}`,
     hint: i.definition.split("\n")[0],
-    to: "/grading#rubric-quality",
+    to: "/spec#rubric-quality",
     terms: i.definition,
   })),
 
@@ -228,7 +228,7 @@ export const searchIndex: SearchEntry[] = [
     kind: "QC spec",
     title: `Weight ${b.score > 0 ? `+${b.score}` : b.score} · ${b.level}`,
     hint: b.definition.split("\n")[0],
-    to: "/grading#weights",
+    to: "/spec#weights",
     terms: `${b.definition} ${b.examples.join(" ")}`,
   })),
 
@@ -237,7 +237,7 @@ export const searchIndex: SearchEntry[] = [
       kind: "QC spec" as const,
       title: `Spec change · ${ch.dimension}`,
       hint: `${rev.date} · ${ch.summary}`,
-      to: "/grading#log",
+      to: "/spec#log",
       terms: `${ch.group} ${ch.detail} spec change log revision updated`,
     }))
   ),
@@ -246,7 +246,7 @@ export const searchIndex: SearchEntry[] = [
     kind: "QC spec",
     title: st.name,
     hint: st.body.split("\n")[0],
-    to: "/grading#standards",
+    to: "/spec#standards",
     terms: st.body,
   })),
 

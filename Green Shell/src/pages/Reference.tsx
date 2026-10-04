@@ -1,30 +1,36 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { GraduationCap, HelpCircle, Sparkles } from "lucide-react";
+import { ClipboardCheck, GraduationCap, HelpCircle, Sparkles } from "lucide-react";
 import Onboarding from "./Onboarding";
+import PreSubmit from "./PreSubmit";
 import WhatsNew from "./WhatsNew";
 import Faq from "./Faq";
 import { onboardingItems } from "../data/onboarding";
+import { checkCount, checklist } from "../data/checklist";
 import { guidelineChanges } from "../data/changes";
 import { faq } from "../data/faq";
 import { cx } from "../lib/util";
 
 /**
- * Reference: the three things you read once rather than work from.
+ * Reference: the four things a contributor looks something up in, rather than
+ * works from.
  *
- * Onboarding, what moved from Red Shell, and the questions everyone asks were
- * three top-level tabs competing with the method and the gate, which are the
- * pages a contributor is actually in while building. They are all orientation,
- * so they share one tab.
+ * Onboarding, what moved from Red Shell and the questions everyone asks were
+ * three top-level tabs competing with the method and the spec, which are the
+ * pages someone is actually in while building. The pre-submit gate joined them:
+ * it is a tool you run once per task and a list you consult, not a standard to
+ * read against, and giving it a tab of its own pushed the spec doc out of the
+ * one place people look for the spec.
  *
  * **One pane at a time, picked by a bar across the top rather than a side
- * rail.** The spec's rail is vertical because it has twelve entries; this has
- * three, and two of the panes carry a side rail of their own. A second vertical
- * rail beside those would be the layering this restructure exists to remove.
+ * rail.** The spec's rail is vertical because it has eleven entries; this has
+ * four, and three of these panes carry a rail of their own. A second vertical
+ * rail beside those would be the layering this structure exists to remove.
  *
  * The panes are the original pages, rendered with `embedded` so they drop their
- * own hero and the page keeps one h1. Nothing inside them changed: the FAQ
+ * own hero and the page keeps one h1. Nothing inside them changed: the gate
+ * keeps its progress bar, its persisted ticks and its section rail; the FAQ
  * keeps its search, its topic filter and its question rail; what is new keeps
  * its change rail and the taxonomy accordion.
  */
@@ -36,6 +42,13 @@ const PANES = [
     icon: GraduationCap,
     count: onboardingItems.length,
     blurb: "Start here on your first day.",
+  },
+  {
+    id: "pre-submit",
+    label: "Pre-Submit",
+    icon: ClipboardCheck,
+    count: checkCount(),
+    blurb: "The gate to run once, before you hand a task in.",
   },
   {
     id: "whats-new",
@@ -57,12 +70,14 @@ const PANE_IDS: Set<string> = new Set(PANES.map((p) => p.id));
 
 /**
  * Which pane holds a given anchor, so every inbound link that used to target
- * the old `/onboarding`, `/whats-new#<change>` and `/faq#<question>` routes
- * still lands on the right content. Built from the data, so a new change or
- * question is covered without touching this file.
+ * the old `/onboarding`, `/checklist#s3`, `/whats-new#<change>` and
+ * `/faq#<question>` routes still lands on the right content. Built from the
+ * data, so a new check, change or question is covered without touching this
+ * file.
  */
 const paneHome: Record<string, string> = {
   ...Object.fromEntries(onboardingItems.map((o) => [o.id, "onboarding"])),
+  ...Object.fromEntries(checklist.map((s) => [s.id, "pre-submit"])),
   ...Object.fromEntries(guidelineChanges.map((c) => [c.id, "whats-new"])),
   // The taxonomy accordion is rendered inside one of the change entries.
   taxonomy: "whats-new",
@@ -76,7 +91,7 @@ export default function Reference() {
   /* `key` is in the deps, not just `hash`: the bar moves the pane without
      touching the URL, so after a click the hash can name something off screen
      and a link targeting it would not re-run the effect on `[hash]` alone.
-     Same reason the Grading page watches it. */
+     Same reason the spec doc watches it. */
   useEffect(() => {
     const id = decodeURIComponent(hash.replace(/^#/, ""));
     if (!id) return;
@@ -93,7 +108,7 @@ export default function Reference() {
         <div className="wrap relative pb-5 pt-10">
           <div className="mono-label text-brand-600 dark:text-brand-300">Reference</div>
           <h1 className="mt-2 font-display text-[30px] font-bold leading-tight tracking-tight text-ink-900 sm:text-[34px]">
-            Read once, then get on with the task
+            Look it up, then get back to the task
           </h1>
           <p className="mt-2 max-w-2xl text-[14.5px] leading-relaxed text-ink-600">
             {current.blurb}
@@ -143,6 +158,7 @@ export default function Reference() {
         transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
       >
         {active === "onboarding" && <Onboarding embedded />}
+        {active === "pre-submit" && <PreSubmit embedded />}
         {active === "whats-new" && <WhatsNew embedded />}
         {active === "faq" && <Faq embedded />}
       </motion.div>
