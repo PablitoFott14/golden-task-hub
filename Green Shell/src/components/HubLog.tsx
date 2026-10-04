@@ -1,112 +1,145 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, History } from "lucide-react";
-import { hubUpdatedOn, hubUpdates, type HubUpdateKind } from "../data/hubLog";
-import { Reveal } from "./ui";
+import { ArrowRight, ChevronDown, Megaphone } from "lucide-react";
+import { hubUpdates, type HubUpdateKind } from "../data/hubLog";
 import { cx } from "../lib/util";
 
 /**
- * The hub's own update log, directly under the hero on the landing page.
+ * The project update notice, directly under the nav on the landing page.
  *
- * It answers one question — what moved since I was last here — and it has to
- * answer it without being opened, so it is a flat list rather than a drawer or
- * a tab. Five entries is deliberate: a log you scroll is a log nobody reads.
+ * It sits above the hero rather than below it because the hero is around 800px
+ * tall: anything under it is below the fold on a laptop and two screens down on
+ * a phone, which is no use for something a contributor has to see on the way
+ * in. Here it is the first thing on the page and costs one row of height.
  *
- * **Every row is a link to the thing it describes.** That is the whole point of
- * it. A changelog that tells you something moved without taking you there just
- * sends you looking.
+ * **Collapsed it shows only the newest entry.** That is what keeps it a notice
+ * rather than a section. The chevron opens the rest; the headline itself is a
+ * link to the thing it announces, which is why the row is a Link and a button
+ * side by side rather than one nested in the other.
  *
- * It does not duplicate the other two logs. The rubric's revision history lives
- * in the Spec Doc and the guidelines changes live in Must Read; this links to
- * both and restates neither.
+ * **Rose, like every other must-read signal in the hub** — the Must Read pane,
+ * the hero button, the palette chip. Amber marks an onboarding entry inside it,
+ * which is the one kind here that is not urgent.
+ *
+ * It is deliberately not dismissible and not persisted. A contributor who hid
+ * it once would stop seeing guidelines changes for good, and that is the one
+ * thing this exists to prevent.
  */
 
 const kindTone: Record<HubUpdateKind, { chip: string; label: string }> = {
-  // Rose, like every other must-read signal in the hub.
   guidelines: {
-    chip: "bg-rose-500/15 text-rose-700 ring-1 ring-rose-500/25 dark:text-rose-300",
+    chip: "bg-rose-500/15 text-rose-700 ring-1 ring-rose-500/25 dark:text-rose-200",
     label: "Guidelines",
   },
-  added: {
-    chip: "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300",
-    label: "New",
-  },
-  moved: {
-    chip: "bg-sky-500/12 text-sky-700 ring-1 ring-sky-500/25 dark:text-sky-300",
-    label: "Moved",
+  onboarding: {
+    chip: "bg-amber-500/15 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-200",
+    label: "Onboarding",
   },
 };
 
 export default function HubLog() {
+  const [open, setOpen] = useState(false);
+  const latest = hubUpdates[0];
+  const tone = kindTone[latest.kind];
+
   return (
-    <Reveal>
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-600 text-white shadow-glow">
-          <History size={17} />
-        </span>
-        <h2 className="font-display text-[19px] font-bold tracking-tight text-ink-900">
-          Hub update log
-        </h2>
-        <span className="rounded-md bg-brand-600 px-2 py-0.5 font-mono text-[11px] font-bold text-white">
-          {hubUpdatedOn}
-        </span>
-        <span className="mono-label text-ink-400">Newest first</span>
-      </div>
+    <section
+      id="updates"
+      className="scroll-mt-16 border-b border-rose-200/80 bg-rose-50/90 dark:border-rose-500/25 dark:bg-rose-500/[0.09]"
+    >
+      <div className="wrap">
+        <div className="flex items-center gap-2 py-2">
+          <Link
+            to={latest.to}
+            className="group flex min-w-0 flex-1 items-center gap-2 rounded-lg px-1 py-1 transition hover:bg-rose-500/10 sm:gap-3"
+          >
+            <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-rose-600 text-white shadow-soft">
+              <Megaphone size={14} />
+            </span>
+            <span className={cx("chip hidden shrink-0 sm:inline-flex", tone.chip)}>
+              {tone.label}
+            </span>
+            <span className="shrink-0 font-mono text-[11.5px] font-bold text-rose-700 dark:text-rose-300">
+              {latest.date}
+            </span>
+            <span className="truncate text-[13px] font-bold text-ink-900">{latest.what}</span>
+            <ArrowRight
+              size={13}
+              aria-hidden
+              className="hidden shrink-0 text-rose-600 transition-transform group-hover:translate-x-0.5 dark:text-rose-300 sm:block"
+            />
+          </Link>
 
-      <ol className="mt-4 space-y-2">
-        {hubUpdates.map((u) => {
-          const tone = kindTone[u.kind];
-          return (
-            <li key={u.id}>
-              <Link
-                to={u.to}
-                className="card card-hover group flex flex-col gap-2 p-4 sm:flex-row sm:items-start sm:gap-4"
-              >
-                {/* Date and kind sit in a fixed column on a wide screen so five
-                    rows of dates line up and the list scans vertically. */}
-                <span className="flex shrink-0 flex-wrap items-center gap-2 sm:w-[136px] sm:flex-col sm:items-start sm:gap-1.5">
-                  <span className="font-mono text-[11.5px] font-semibold text-ink-500">
-                    {u.date}
-                  </span>
-                  <span className={cx("chip", tone.chip)}>{tone.label}</span>
-                </span>
+          <button
+            onClick={() => setOpen((o) => !o)}
+            aria-expanded={open}
+            aria-controls="update-list"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1.5 text-[12px] font-semibold text-rose-700 transition hover:bg-rose-500/15 dark:text-rose-300"
+          >
+            {/* The label stays visible at every width. Hiding it on a phone
+                left the button with no accessible name, because `hidden` is
+                display:none and drops it out of the a11y tree. */}
+            <span>
+              {open ? (
+                "Hide"
+              ) : (
+                <>
+                  All {hubUpdates.length}
+                  <span className="hidden sm:inline">&nbsp;updates</span>
+                </>
+              )}
+            </span>
+            <ChevronDown
+              size={15}
+              aria-hidden
+              className={cx("transition-transform duration-200", open && "rotate-180")}
+            />
+          </button>
+        </div>
 
-                <span className="min-w-0 flex-1">
-                  <span className="block text-[14px] font-bold leading-snug text-ink-900">
-                    {u.what}
-                  </span>
-                  <span className="mono-label mt-1 block text-brand-600 dark:text-brand-300">
-                    {u.where}
-                  </span>
-                  {u.why && (
-                    <span className="mt-1.5 block text-[12.5px] leading-relaxed text-ink-500">
-                      {u.why}
+        {open && (
+          <ol id="update-list" className="space-y-2 pb-3">
+            {hubUpdates.map((u) => {
+              const t = kindTone[u.kind];
+              return (
+                <li key={u.id}>
+                  <Link
+                    to={u.to}
+                    className="card card-hover group flex flex-col gap-1.5 p-3.5 sm:flex-row sm:items-start sm:gap-4"
+                  >
+                    <span className="flex shrink-0 flex-wrap items-center gap-2 sm:w-[132px] sm:flex-col sm:items-start sm:gap-1.5">
+                      <span className="font-mono text-[11.5px] font-bold text-ink-600">
+                        {u.date}
+                      </span>
+                      <span className={cx("chip", t.chip)}>{t.label}</span>
                     </span>
-                  )}
-                </span>
 
-                <ArrowRight
-                  size={15}
-                  aria-hidden
-                  className="hidden shrink-0 self-center text-ink-400 transition-transform group-hover:translate-x-0.5 sm:block"
-                />
-              </Link>
-            </li>
-          );
-        })}
-      </ol>
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-[13.5px] font-bold leading-snug text-ink-900">
+                        {u.what}
+                      </span>
+                      <span className="mono-label mt-1 block text-rose-600 dark:text-rose-300">
+                        {u.where}
+                      </span>
+                      {u.why && (
+                        <span className="mt-1.5 block text-[12.5px] leading-relaxed text-ink-500">
+                          {u.why}
+                        </span>
+                      )}
+                    </span>
 
-      {/* The two logs this one is not. Both are a click away rather than
-          restated here, which is what keeps this list to five rows. */}
-      <p className="mt-4 text-[12.5px] leading-relaxed text-ink-500">
-        Looking for the rubric&rsquo;s own revision history?{" "}
-        <Link
-          to="/spec#log"
-          className="font-semibold text-brand-600 underline decoration-brand-300 underline-offset-2 hover:text-brand-700 dark:text-brand-300"
-        >
-          The Spec Doc change log
-        </Link>{" "}
-        records which dimension moved between exports.
-      </p>
-    </Reveal>
+                    <ArrowRight
+                      size={15}
+                      aria-hidden
+                      className="hidden shrink-0 self-center text-ink-400 transition-transform group-hover:translate-x-0.5 sm:block"
+                    />
+                  </Link>
+                </li>
+              );
+            })}
+          </ol>
+        )}
+      </div>
+    </section>
   );
 }

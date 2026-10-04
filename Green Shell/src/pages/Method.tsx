@@ -12,7 +12,6 @@ import {
   CornerDownRight,
   GraduationCap,
   Gauge,
-  History,
   HelpCircle,
   Layers,
   MessageCircleQuestion,
@@ -31,7 +30,6 @@ import {
   universeVideos,
 } from "../data/videos";
 import { guidelineChanges } from "../data/changes";
-import { hubUpdatedOn } from "../data/hubLog";
 import { feedbackThread } from "../data/community";
 import { checkCount, checklist } from "../data/checklist";
 import { specGroups } from "../data/specDoc";
@@ -158,6 +156,12 @@ export default function Method() {
 
   return (
     <div>
+      {/* The project update notice, directly under the nav. Above the hero
+          rather than below it because the hero is around 800px tall, and a
+          guidelines change nobody scrolls to is a guidelines change nobody
+          reads. Collapsed it is one row. */}
+      <HubLog />
+
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-ink-200/70 bg-surface">
         <div className="pointer-events-none absolute inset-0 bg-aurora" />
@@ -169,21 +173,9 @@ export default function Method() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="chip bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300">
-                  <Sparkles size={12} /> OpenClaw MM Rubrics · Single-turn · Green Shell
-                </span>
-                {/* The update log is a full hero below this, which is under the
-                    fold on a laptop and two screens down on a phone. So the
-                    first line of the page is a dated way into it. */}
-                <Link
-                  to={{ hash: "#updates" }}
-                  className="chip bg-brand-500/12 text-brand-800 ring-1 ring-brand-500/25 transition hover:bg-brand-500/20 dark:text-brand-200"
-                >
-                  <History size={12} /> Hub updated {hubUpdatedOn}
-                  <ArrowRight size={11} />
-                </Link>
-              </div>
+              <span className="chip bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300">
+                <Sparkles size={12} /> OpenClaw MM Rubrics · Single-turn · Green Shell
+              </span>
               <h1 className="mt-5 font-display text-[34px] font-bold leading-[1.06] tracking-tight text-ink-900 sm:text-[52px]">
                 A strong task is designed,
                 <br className="hidden sm:block" />{" "}
@@ -317,17 +309,7 @@ export default function Method() {
         </div>
       </section>
 
-      {/* The hub's own update log. First thing under the hero because the
-          question it answers — what moved since I was last here — is one a
-          returning contributor has no other way to answer, and one they will
-          not go looking for. Five linked rows, no drawer to open. */}
-      <section id="updates" className="scroll-mt-20 border-b border-ink-200/70 bg-ink-50">
-        <div className="wrap py-10">
-          <HubLog />
-        </div>
-      </section>
-
-      {/* Universe interaction, the recordings. Directly under the update log
+      {/* Universe interaction, the recordings. First section under the hero
           because it is point 1 of the guidelines and the most common reason a
           task is rejected, so it has to be found without going looking. The
           player opens over the page, which is what keeps three videos down to

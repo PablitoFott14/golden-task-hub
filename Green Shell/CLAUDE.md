@@ -165,7 +165,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | Source document | Data file here |
 | --- | --- |
 | Version History table and the `[NEW]` callouts in the guidelines | [src/data/changes.ts](src/data/changes.ts) |
-| Nothing — hand-authored from this repo's commit history | [src/data/hubLog.ts](src/data/hubLog.ts) |
+| Nothing — hand-authored, one entry per guidelines or onboarding change | [src/data/hubLog.ts](src/data/hubLog.ts) |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/rationale.md` | [src/data/method.ts](src/data/method.ts) |
 | `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
 | `*-rubric.csv` and `appendix.csv`, the spec exports (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
@@ -417,19 +417,31 @@ answers a different question, and each links to the other two rather than restat
 
 | Log | Data | Where it renders | Answers |
 | --- | --- | --- | --- |
-| **Hub update log** | [src/data/hubLog.ts](src/data/hubLog.ts) | [HubLog.tsx](src/components/HubLog.tsx), the `#updates` band under the hero on `/` | What moved *in this site* since I was last here |
+| **The update notice** | [src/data/hubLog.ts](src/data/hubLog.ts) | [HubLog.tsx](src/components/HubLog.tsx), the `#updates` bar under the nav on `/` | What has changed that I have to act on before my next task |
 | **Must Read: Project Updates** | [src/data/changes.ts](src/data/changes.ts) | [WhatsNew.tsx](src/pages/WhatsNew.tsx), the `whats-new` pane of `/reference` | What the *guidelines* changed going from Red Shell to Green Shell |
 | **Spec Doc change log** | [src/data/specLog.ts](src/data/specLog.ts) | the `log` pane of `/spec` | Which *rubric dimension* moved between exports |
 
-**The hub update log is the only one about the website.** An entry earns its place by changing where
-a contributor goes or what they have to read; a wording fix does not. **Every entry carries a `to`
-that opens the thing it describes** — a changelog that says something moved without taking you there
-just sends you looking. Entries are historical and are not rewritten when the hub moves on, so a
-hardcoded count inside one describes what shipped that day and is correct to leave alone.
+**The update notice is not a changelog of the site.** It carries two kinds and nothing else:
+`guidelines` and `onboarding`. A tab moving or a tool shipping does not go in it — nobody has to act
+on that, and a bar that fills with site housekeeping stops being read, which costs us the one place
+a real guidelines change can be announced. The test for an entry: **would a contributor do something
+differently because of it, before their next task?**
 
-It is five rows, flat, no drawer. The hero above it is around 800px tall, so the band is under the
-fold on a laptop; the first line of the page carries a dated chip into it, read off `hubUpdatedOn`.
-**Adding a sixth entry means dropping the oldest** — a log you have to scroll is a log nobody reads.
+**Every entry carries a `to` that opens the thing it describes**, because an entry you cannot act on
+is an announcement rather than a notice. Entries are historical and are not rewritten when the hub
+moves on, so a count written into one describes what shipped that day and is correct to leave alone.
+
+**It sits above the hero, not below it.** The hero is around 800px tall, so a band under it is below
+the fold on a laptop and two screens down on a phone — useless for something read on the way in.
+Collapsed the bar is one row showing `hubUpdates[0]` only; the chevron opens the rest. The headline
+is a `Link` and the toggle is a `button` **side by side**, not nested, because an anchor inside a
+button is invalid. The toggle's label stays visible at every width: `hidden sm:inline` on it left
+the button with no accessible name on a phone, since `display: none` drops it out of the a11y tree.
+
+It is rose, which is the hub's must-read signal everywhere else too — the Must Read pane, the hero
+button on `/`, the palette chip. Amber marks an `onboarding` entry, the one kind here that is not
+urgent. **It is deliberately not dismissible and not persisted:** a contributor who hid it once
+would stop seeing guidelines changes for good, which is the thing it exists to prevent.
 
 ### Must Read is a tab, not a band
 
