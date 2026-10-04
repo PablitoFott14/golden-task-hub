@@ -6,19 +6,29 @@ import { cx } from "../lib/util";
 import { useTheme } from "../lib/useTheme";
 import CommandPalette from "./CommandPalette";
 
-/* Eight tabs is the ceiling at desktop width before the row crowds the search
-   box. Onboarding and Complexity earn their place because both are entry
-   points: one is where a new CB starts, the other is a tool used while
-   designing. Anything further goes inside an existing tab. */
+/**
+ * Five tabs, and the number is the point.
+ *
+ * It was eight, and three of those were orientation a contributor reads once —
+ * onboarding, what moved from Red Shell, the FAQ — sitting at the same level as
+ * the pages they work from. Two more, the pre-submit gate and the QC spec, were
+ * the same subject split in half: the gate is what an author checks, the spec is
+ * what a reviewer scores, and every check already cited a dimension.
+ *
+ * So the three read-once tabs became `Reference`, the two grading tabs became
+ * `Grading`, and what is left is one tab per thing a contributor is actually
+ * doing: learn the method, study a worked example, raise the complexity, check
+ * it, look something up.
+ *
+ * **Anything new goes inside one of these five.** A sixth tab needs an argument
+ * for why it is not a pane of an existing one.
+ */
 const links = [
   { to: "/", label: "The Method", end: true },
-  { to: "/onboarding", label: "Onboarding" },
   { to: "/golden-tasks", label: "Golden Tasks" },
   { to: "/complexity", label: "Complexity" },
-  { to: "/checklist", label: "Pre-Submit" },
-  { to: "/spec", label: "QC Spec" },
-  { to: "/faq", label: "FAQ" },
-  { to: "/whats-new", label: "What's New" },
+  { to: "/grading", label: "Grading" },
+  { to: "/reference", label: "Reference" },
 ];
 
 function Mark() {

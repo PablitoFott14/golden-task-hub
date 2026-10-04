@@ -64,8 +64,8 @@ export const universeVideoPitch = {
 /** Where the set points once it has been watched. */
 export const universeVideoLinks: XLink[] = [
   { to: "/#universe", tag: "M1", label: "Go find the story, do not invent one" },
-  { to: "/checklist#s2", tag: "B1", label: "Is the universe doing real work?" },
-  { to: "/faq#universe-every-prompt", tag: "FAQ", label: "Does every prompt have to use it?" },
+  { to: "/grading#s2", tag: "B1", label: "Is the universe doing real work?" },
+  { to: "/reference#universe-every-prompt", tag: "FAQ", label: "Does every prompt have to use it?" },
 ];
 
 /** Total running time of the set, as m:ss. */

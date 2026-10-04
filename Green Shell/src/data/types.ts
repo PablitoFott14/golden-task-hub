@@ -24,10 +24,10 @@ export interface XLink {
 /* --------------------------------------------------------------- onboarding */
 
 /**
- * One onboarding course. It is hosted and deployed on its own, so the hub
- * carries the card and the link rather than the course itself.
+ * One onboarding. It is hosted and deployed on its own, so the hub carries
+ * the card and the link rather than the material itself.
  */
-export interface OnboardingCourse {
+export interface OnboardingItem {
   id: string;
   n: number;
   title: string;
@@ -37,7 +37,7 @@ export interface OnboardingCourse {
   blurb: string;
   /** The deck's own cover slide, under `public/onboarding/`. */
   cover: string;
-  /** Where the course actually lives. */
+  /** Where the onboarding actually lives. */
   url: string;
   /** Countable facts, rendered as a small stat row. */
   stats: { k: string; v: string }[];
@@ -657,7 +657,7 @@ export interface SearchEntry {
   kind:
     | "Method"
     | "Use case"
-    | "Course"
+    | "Onboarding"
     | "Tool"
     | "Golden task"
     | "Pre-submit check"

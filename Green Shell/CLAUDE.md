@@ -5,19 +5,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 A static React site, the practical reference for contributors (CBs) on the Green Shell / OpenClaw MM
-Rubrics single turn project. Six routes:
+Rubrics single turn project. **Five tabs**, and the detail of why is in
+[Five tabs, and where everything lives](#five-tabs-and-where-everything-lives).
 
-| Route | Page | What it holds |
-| --- | --- | --- |
-| `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, nine method cards, the mindset, the quick answers block, the hard requirements. |
-| `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
-| `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, thirteen sections nested under the nine method steps, rail on the left. |
-| `/checklist` | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | The pre-submit gate, 29 checks in dense rows, progress sidebar with persisted ticks. |
-| `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec in full: sidebar of dimensions and appendix, search, scored options. |
-| `/faq` | [Faq.tsx](src/pages/Faq.tsx) | The seven questions, answers always open, each with its guidelines references. |
-| `/whats-new` | [WhatsNew.tsx](src/pages/WhatsNew.tsx) | Red Shell to Green Shell. One entry per change, rail on the left, the use case taxonomy nested under the taxonomy entry. |
-| `/onboarding` | [Onboarding.tsx](src/pages/Onboarding.tsx) | Two cards, one per course. Links out, never embeds. |
-| `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | The Increase Complexity Proposals tool. Form, then proposals from the model. |
+| Tab | Route | Page | What it holds |
+| --- | --- | --- | --- |
+| The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
+| Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
+| | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
+| Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
+| Grading | `/grading` | [Grading.tsx](src/pages/Grading.tsx) | The pre-submit gate and the QC spec, one pane at a time off a shared rail, under one search. Embeds [PreSubmit.tsx](src/pages/PreSubmit.tsx). |
+| Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, what is new, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
+
+`/checklist`, `/spec`, `/onboarding`, `/whats-new` and `/faq` are kept as redirects that carry the
+hash across.
 
 **This is the published project.** The repo's Pages site is built from this folder by
 [../.github/workflows/deploy.yml](../.github/workflows/deploy.yml), on every push to `main`.
@@ -71,7 +72,7 @@ cat > src/ssr-smoke.tsx <<'EOF'
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import App from "./App";
-const routes = ["/", "/golden-tasks", "/golden-tasks/vendor-closeout", "/checklist", "/spec", "/faq", "/nope"];
+const routes = ["/", "/golden-tasks", "/golden-tasks/vendor-closeout", "/complexity", "/grading", "/reference", "/nope"];
 let fail = 0;
 for (const r of routes) {
   try { console.log(`OK   ${r} ${renderToString(<StaticRouter location={r}><App /></StaticRouter>).length}`); }
@@ -96,6 +97,50 @@ For interaction and visual checks, Playwright browsers are installed on this mac
 checklist persistence and every cross-link were verified that way.
 
 ## Architecture
+
+### Five tabs, and where everything lives
+
+The hub was eight tabs and it had stopped being navigable: three of them were orientation a
+contributor reads once, and two more were the same subject cut in half. It is now five, one per
+thing someone is actually doing.
+
+| Tab | Route | Panes inside it | Was |
+| --- | --- | --- | --- |
+| The Method | `/` | one scrolling page: hero, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
+| Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
+| Complexity | `/complexity` | the proposals tool | unchanged |
+| Grading | `/grading` | **Pre-Submit** (default) · 7 dimension groups · 3 appendix sections · Change log | `/checklist` + `/spec` |
+| Reference | `/reference` | **Onboarding** (default) · What is new · FAQ | `/onboarding` + `/whats-new` + `/faq` |
+
+**The five old routes still work.** `Moved` in [src/App.tsx](src/App.tsx) redirects each one and
+**carries the hash across**, because the hash is what makes an old link worth keeping:
+`/spec#weights` has to land on the weights pane. A bare old URL with no hash names its pane
+explicitly, so `/spec` opens the dimensions rather than the gate that is now the default. These are
+for links that left the hub — a bookmark, a Slack message, a Speed Audit comment. Every link inside
+the hub already points at the new route.
+
+**Each merged tab resolves an inbound anchor to the pane that holds it**, and both resolvers are
+built from the data rather than listed by hand: `sectionHome` and `dimensionHome` in
+[Grading.tsx](src/pages/Grading.tsx), `paneHome` in [Reference.tsx](src/pages/Reference.tsx). Add a
+check, a dimension, a change or a question and its anchor works without touching either file.
+
+**Two pane mechanisms, both already in the hub, chosen by size.** Grading keeps the spec's vertical
+rail because it has twelve entries. Reference uses a bar across the top because it has three, and
+two of its panes carry a side rail of their own — a second vertical rail beside those is exactly
+the layering this restructure removed. The absorbed pages take an `embedded` prop that drops their
+own hero so the page keeps one `h1`; **nothing inside them changed**, so the FAQ keeps its search,
+its topic filter and its question rail, and what is new keeps its change rail and the taxonomy
+accordion.
+
+**A sixth tab needs an argument for why it is not a pane of an existing one.** The note above
+`links` in [Layout.tsx](src/components/Layout.tsx) is the record of that reasoning.
+
+### They are onboardings, not courses
+
+The word "course" appears nowhere in `src/`. The two are `onboardingItems` of type
+`OnboardingItem`, the search kind is `Onboarding`, and the copy says onboarding. The only
+survivor is `tutoring-coursework`, a subcategory id in [taxonomy.ts](src/data/taxonomy.ts) that
+comes from the guidelines and is not ours to rename.
 
 ### Content is typed data, not parsed documents
 
@@ -194,7 +239,7 @@ date, and its entries fold into the page search with everything else.
 
 **Green Shell's log starts at one entry with nothing under it.** The hub is carrying the first
 Green Shell export, so there is no earlier Green Shell revision to diff against and `changes` is
-empty. Three guards in [SpecDoc.tsx](src/pages/SpecDoc.tsx) keep that from reading as a broken
+empty. Three guards in [Grading.tsx](src/pages/Grading.tsx) keep that from reading as a broken
 count: the rail badge is dropped, the section note says "1 revision" rather than "0 changes", and
 the banner's drawer explains the state instead of opening on an empty list. They are all
 `length === 0` checks, so the moment a second export lands and the log has entries, the page goes
@@ -206,7 +251,7 @@ earns its place only where the standard actually changed, so a revision that mov
 nothing.
 
 **Every entry links to the dimension it changed.** Each dimension card carries a `dim-<name>`
-anchor, `dimensionHome` in [SpecDoc.tsx](src/pages/SpecDoc.tsx) maps that anchor back to the pane
+anchor, `dimensionHome` in [Grading.tsx](src/pages/Grading.tsx) maps that anchor back to the pane
 holding it, and the hash effect opens that pane so `/spec#dim-realism` works cold as well as from
 inside the page. The anchor is derived from `SpecChange.dimension`, which has to match the name in
 `specDoc.ts` character for character: **a renamed dimension silently turns every log link at it
@@ -258,7 +303,7 @@ already reads well:
   matches across dimensions, rubric quality issues, weights and authoring standards, with hits
   wrapped in `<mark>`. Inbound `/spec#<group-slug>` links select the tab through the `hash` effect
   at the top of the component, which is why the slugs must keep matching the group names.
-- **`/checklist`** keeps every section on the page and puts progress in a sticky sidebar: the
+- **The Pre-Submit pane** keeps every section on the page and puts progress in a sticky sidebar: the
   counter and bar, `Submit & reset`, a `Show guidance` density toggle, and a jump nav driven by the
   scroll spy. Section cards carry a `Check all` toggle, and a ticked item strikes through. Rows are
   deliberately dense, one line each: the footnote and the cross-links appear only when guidance is
@@ -277,7 +322,7 @@ demonstrates it, and that section points back at the check.
 An `XLink.to` targets `/<route>#<section-id>`, or an absolute URL (rendered with an external
 arrow). Section ids are hardcoded in `WALKTHROUGH` at the top of
 [TaskDetail.tsx](src/pages/TaskDetail.tsx) and in a `SECTIONS` array at the top of
-[PreSubmit.tsx](src/pages/PreSubmit.tsx) and [SpecDoc.tsx](src/pages/SpecDoc.tsx), and drive both
+[PreSubmit.tsx](src/pages/PreSubmit.tsx) and [Grading.tsx](src/pages/Grading.tsx), and drive both
 the sticky rail and the scroll spy. **Adding or
 renaming a section means updating that array and every `XLink` aimed at it.** Nothing validates
 this, so grep the old anchor before renaming.
@@ -290,7 +335,7 @@ They render as the References panel beside each answer, and they are folded into
 The field is required, so a new question needs at least one ref. Answers are never collapsed:
 question and answer are always on screen together.
 
-The FAQ is rendered twice from one array. `/faq` is the full page, and
+The FAQ is rendered twice from one array. The FAQ pane of `/reference` is the full list, and
 [QuickAnswers.tsx](src/components/QuickAnswers.tsx) is the same `faq` data on the landing page
 under `#answers`, one collapsed row per question with the answer, its crosslinks and its ref
 numbers inside. **It is a second render, never a second copy**: a question added to `faq.ts` shows
@@ -356,7 +401,7 @@ itself to one origin, and the browser never sees the key, the system prompt or t
 
 `guidelineChanges` in [src/data/changes.ts](src/data/changes.ts) is transcribed from the Version
 History table and the `[NEW]` callouts of `[External] Green Shell – Guidelines .md`, and
-[WhatsNew.tsx](src/pages/WhatsNew.tsx) renders it at `/whats-new`.
+[WhatsNew.tsx](src/pages/WhatsNew.tsx) renders it in the What is new pane of `/reference`.
 
 **It used to be a six card band under the hero and the cap was its height.** The Green Shell change
 set outgrew that: 80/20 cannot be taught in a card, and the taxonomy needs 68 subcategories beside

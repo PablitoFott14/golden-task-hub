@@ -87,7 +87,7 @@ function Answer({ f, q }: { f: FaqItem; q: string }) {
   );
 }
 
-export default function Faq() {
+export default function Faq({ embedded = false }: { embedded?: boolean }) {
   const [topic, setTopic] = useState<string>("All");
   const [query, setQuery] = useState("");
   const box = useRef<HTMLInputElement>(null);
@@ -127,22 +127,33 @@ export default function Faq() {
 
   return (
     <div>
-      <section className="relative overflow-hidden border-b border-ink-200/70 bg-surface">
-        <div className="pointer-events-none absolute inset-0 bg-aurora opacity-70" />
-        <div className="wrap relative py-12">
-          <span className="chip bg-violet-500/12 text-violet-700 ring-1 ring-violet-500/25 dark:text-violet-300">
-            <HelpCircle size={11} /> Common questions
-          </span>
-          <h1 className="mt-4 max-w-3xl font-display text-[32px] font-bold leading-tight tracking-tight text-ink-900 sm:text-[40px]">
+      {embedded ? (
+        <div className="wrap pt-2">
+          <h2 className="max-w-3xl font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-[40px]">
             The questions everyone asks in their first week
-          </h1>
+          </h2>
           <p className="mt-3 max-w-2xl text-[15.5px] leading-relaxed text-ink-600">
             Every answer sits next to its question, and names the guidelines section it comes from.
           </p>
         </div>
-      </section>
+      ) : (
+        <section className="relative overflow-hidden border-b border-ink-200/70 bg-surface">
+          <div className="pointer-events-none absolute inset-0 bg-aurora opacity-70" />
+          <div className="wrap relative py-12">
+            <span className="chip bg-violet-500/12 text-violet-700 ring-1 ring-violet-500/25 dark:text-violet-300">
+              <HelpCircle size={11} /> Common questions
+            </span>
+            <h1 className="mt-4 max-w-3xl font-display text-[32px] font-bold leading-tight tracking-tight text-ink-900 sm:text-[40px]">
+              The questions everyone asks in their first week
+            </h1>
+            <p className="mt-3 max-w-2xl text-[15.5px] leading-relaxed text-ink-600">
+              Every answer sits next to its question, and names the guidelines section it comes from.
+            </p>
+          </div>
+        </section>
+      )}
 
-      <div className="wrap py-10">
+      <div className={embedded ? "wrap pb-10 pt-6" : "wrap py-10"}>
         <div className="lg:grid lg:grid-cols-[280px_1fr] lg:gap-10">
           {/* Rail: search, topics, and the question list */}
           <aside
@@ -268,7 +279,7 @@ export default function Faq() {
                 <Link to="/golden-tasks" className="btn-primary">
                   Open the Golden Tasks <ArrowRight size={15} />
                 </Link>
-                <Link to="/checklist" className="btn-ghost">
+                <Link to="/grading#pre-submit" className="btn-ghost">
                   Run the pre-submit gate
                 </Link>
               </div>

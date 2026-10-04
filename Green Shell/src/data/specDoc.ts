@@ -1331,12 +1331,12 @@ export const authoringStandards: AuthoringStandard[] = [
 /**
  * Cross-links from a dimension into the rest of the hub, keyed by dimension
  * name. Hand-authored in scripts/gen_spec.py, and mirrored by links pointing
- * back at `/spec#<group-slug>` from the method, the checklist and what is new.
+ * back at `/grading#<group-slug>` from the method, the gate and what is new.
  */
 export const dimensionLinks: Record<string, XLink[]> = {
   "Scenario Adherence": [
     { to: "/#parameters", tag: "M1", label: "The pair is the brief, not a label" },
-    { to: "/whats-new#binding-parameters", tag: "WN", label: "Every assigned parameter is binding" },
+    { to: "/reference#binding-parameters", tag: "WN", label: "Every assigned parameter is binding" },
   ],
   "Assigned Universe": [
     { to: "/#universe", tag: "M2", label: "Interrogate the universe before you design" },
@@ -1345,21 +1345,21 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#inputs", tag: "M4", label: "Three is the floor, not the target" },
   ],
   "Output Artifact": [
-    { to: "/whats-new#planned-complexity", tag: "WN", label: "The bar each deliverable has to clear" },
+    { to: "/reference#planned-complexity", tag: "WN", label: "The bar each deliverable has to clear" },
     { to: "/complexity", tag: "TOOL", label: "Propose ways to raise the complexity" },
   ],
   "Minimum Multimodal Inputs": [
     { to: "/#inputs", tag: "M4", label: "An input set where each file earns its place" },
-    { to: "/whats-new#input-floor", tag: "WN", label: "Three inputs is a floor, and it is enforced" },
+    { to: "/reference#input-floor", tag: "WN", label: "Three inputs is a floor, and it is enforced" },
   ],
   Realism: [
     { to: "/#inputs", tag: "M4", label: "What this person would really be holding" },
   ],
   Safety: [
-    { to: "/checklist#s2", tag: "B4", label: "Health inputs mocked or synthetic" },
+    { to: "/grading#s2", tag: "B4", label: "Health inputs mocked or synthetic" },
   ],
   "Single-Turn Structure": [
-    { to: "/whats-new#single-turn", tag: "WN", label: "One turn, and what that removes" },
+    { to: "/reference#single-turn", tag: "WN", label: "One turn, and what that removes" },
     { to: "/#prompt", tag: "M5", label: "Everything lands in one prompt" },
   ],
   "Valid Model Failure": [
@@ -1370,7 +1370,7 @@ export const dimensionLinks: Record<string, XLink[]> = {
   ],
   "Category Relevance": [
     { to: "/#parameters", tag: "M1", label: "Judged on the user's intent, not the files" },
-    { to: "/whats-new#use-case-and-tools", tag: "WN", label: "Eleven use cases, sixty-eight subcategories" },
+    { to: "/reference#use-case-and-tools", tag: "WN", label: "Eleven use cases, sixty-eight subcategories" },
   ],
   "Domain Relevance": [
     { to: "/#universe", tag: "M2", label: "Grounded in what the universe actually holds" },
@@ -1385,14 +1385,14 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#rubrics", tag: "M8", label: "A grader with the prompt closed can still rate it" },
   ],
   "80/20 Outcome Split (Process Over Cap)": [
-    { to: "/whats-new#outcome-over-process", tag: "WN", label: "Eighty per cent outcome, and the cap that bites" },
+    { to: "/reference#outcome-over-process", tag: "WN", label: "Eighty per cent outcome, and the cap that bites" },
     { to: "/#rubrics", tag: "M8", label: "Where the split is decided" },
   ],
   "Existence Check": [
-    { to: "/whats-new#no-existence-checks", tag: "WN", label: "An existence check is an automatic fail" },
+    { to: "/reference#no-existence-checks", tag: "WN", label: "An existence check is an automatic fail" },
   ],
   "All Criteria Scoring": [
-    { to: "/whats-new#literal-matching", tag: "WN", label: "Literal matching, and what it costs" },
+    { to: "/reference#literal-matching", tag: "WN", label: "Literal matching, and what it costs" },
   ],
   "Rubric Structure": [
     { to: "/#rubrics", tag: "M8", label: "One criterion, one observable outcome" },
@@ -1413,8 +1413,8 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#golden", tag: "M9", label: "Point at the intent, never at the answer" },
   ],
   "Feasibility With Tools": [
-    { to: "/checklist#s1", tag: "A2", label: "Confirm the loadout before you design" },
-    { to: "/whats-new#assigned-tools", tag: "WN", label: "Assigned tools have to be named in the scenario" },
+    { to: "/grading#s1", tag: "A2", label: "Confirm the loadout before you design" },
+    { to: "/reference#assigned-tools", tag: "WN", label: "Assigned tools have to be named in the scenario" },
   ],
   "Architectural Depth & Friction Exposure": [
     { to: "/#failure", tag: "M7", label: "Designed friction, not artificial friction" },
@@ -1424,7 +1424,7 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#inputs", tag: "M4", label: "Evidence the model has to actually read" },
   ],
   Completeness: [
-    { to: "/checklist#s7", tag: "G3", label: "Download the trajectories, star the preferred run" },
+    { to: "/grading#s7", tag: "G3", label: "Download the trajectories, star the preferred run" },
   ],
   "Golden/Preferred Run Selection": [
     { to: "/#golden", tag: "M9", label: "The run you file is part of the task" },

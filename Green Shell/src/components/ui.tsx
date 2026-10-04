@@ -42,18 +42,23 @@ export function SectionHeading({
   title,
   sub,
   align = "left",
+  as: Tag = "h2",
 }: {
   eyebrow?: string;
   title: ReactNode;
   sub?: ReactNode;
   align?: "left" | "center";
+  /** `h1` where this heading *is* the page's heading, which it is on the pages
+   *  whose whole body is one of these. A page with no h1 reads as a fragment to
+   *  a screen reader and to search. */
+  as?: "h1" | "h2";
 }) {
   return (
     <div className={cx(align === "center" && "mx-auto max-w-2xl text-center")}>
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <h2 className="font-display text-2xl font-bold tracking-tight text-ink-900 sm:text-[28px]">
+      <Tag className="font-display text-2xl font-bold tracking-tight text-ink-900 sm:text-[28px]">
         {title}
-      </h2>
+      </Tag>
       {sub && <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-500">{sub}</p>}
     </div>
   );

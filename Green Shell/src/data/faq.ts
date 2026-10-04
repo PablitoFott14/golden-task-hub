@@ -125,8 +125,8 @@ export const faq: FaqItem[] = [
       { section: "1.2.2", title: "Select the Multimodal Inputs" },
     ],
     links: [
-      { to: "/checklist#s2", tag: "B1", label: "One fact that lives only in a connected service" },
-      { to: "/spec#trajectory", tag: "QC", label: "Architectural Depth and Friction Exposure" },
+      { to: "/grading#s2", tag: "B1", label: "One fact that lives only in a connected service" },
+      { to: "/grading#trajectory", tag: "QC", label: "Architectural Depth and Friction Exposure" },
     ],
   },
   {
@@ -145,7 +145,7 @@ export const faq: FaqItem[] = [
     ],
     links: [
       { to: "/#subjective", tag: "M9", label: "Judge the render, nothing the prompt asked for" },
-      { to: "/checklist#s6", tag: "F2", label: "Weights measure impact, not difficulty" },
+      { to: "/grading#s6", tag: "F2", label: "Weights measure impact, not difficulty" },
     ],
   },
   {
@@ -163,7 +163,7 @@ export const faq: FaqItem[] = [
       { section: "8.5", title: "Rating Against both Models and Justifications" },
     ],
     links: [
-      { to: "/checklist#s6", tag: "F3", label: "Rate every criterion against both models yourself" },
+      { to: "/grading#s6", tag: "F3", label: "Rate every criterion against both models yourself" },
       { to: `${GT}#subjective`, tag: "GT", label: "Ten criteria, each on the two renders" },
     ],
   },
@@ -183,7 +183,7 @@ export const faq: FaqItem[] = [
     ],
     links: [
       { to: "/#inputs", tag: "M2", label: "Attach what the person would actually have" },
-      { to: "/checklist#s2", tag: "B2", label: "Take the attachments away" },
+      { to: "/grading#s2", tag: "B2", label: "Take the attachments away" },
       { to: `${GT}#inputs`, tag: "GT", label: "Eleven files, and the fact each one carries" },
     ],
   },

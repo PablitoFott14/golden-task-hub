@@ -1,21 +1,21 @@
 import { ArrowUpRight, BookOpen, GraduationCap, Sparkles } from "lucide-react";
-import type { OnboardingCourse } from "../data/types";
-import { onboardingCourses } from "../data/onboarding";
+import type { OnboardingItem } from "../data/types";
+import { onboardingItems } from "../data/onboarding";
 import { Eyebrow, Reveal } from "../components/ui";
 import { asset, cx } from "../lib/util";
 
 /**
  * Onboarding materials.
  *
- * Two cards, deliberately large. Both courses are complete applications with
+ * Two cards, deliberately large. Both onboardings are complete applications with
  * their own navigation, deployed from their own repositories, so the hub links
  * to them rather than embedding them: see the note in `data/onboarding.ts` for
  * why an iframe is the wrong answer for each of them.
  *
  * What the hub owes them is discovery. The card carries the deck's real cover
  * slide, the real counts and what is actually inside, because a contributor
- * decides whether to spend twenty minutes on a course from the card, not from
- * the link.
+ * decides whether to spend twenty minutes on one from the card, not from the
+ * link.
  */
 
 const tones = {
@@ -33,7 +33,7 @@ const tones = {
   },
 } as const;
 
-function CourseCard({ c }: { c: OnboardingCourse }) {
+function OnboardingCard({ c }: { c: OnboardingItem }) {
   const t = tones[c.tone];
   return (
     <article
@@ -43,7 +43,7 @@ function CourseCard({ c }: { c: OnboardingCourse }) {
       )}
     >
       {/* The deck's own first slide. It is the single thing that makes the card
-          read as a real course rather than a link with a label. */}
+          read as real material rather than a link with a label. */}
       <a
         href={c.url}
         target="_blank"
@@ -66,7 +66,7 @@ function CourseCard({ c }: { c: OnboardingCourse }) {
       <div className="flex flex-1 flex-col p-6">
         <div className="flex flex-wrap items-center gap-2">
           <span className={cx("chip", t.chip)}>
-            <GraduationCap size={11} /> Course {c.n}
+            <GraduationCap size={11} /> Onboarding {c.n}
           </span>
           {c.stats.map((s) => (
             <span key={s.v} className="mono-label text-ink-400">
@@ -108,17 +108,21 @@ function CourseCard({ c }: { c: OnboardingCourse }) {
   );
 }
 
-export default function Onboarding() {
+export default function Onboarding({ embedded = false }: { embedded?: boolean }) {
+  const Heading = embedded ? "h2" : "h1";
+
   return (
-    <div className="wrap py-12">
+    <div className={embedded ? "wrap pb-12 pt-2" : "wrap py-12"}>
       <Reveal>
         <div className="max-w-3xl">
-          <Eyebrow className="text-brand-600 dark:text-brand-300">Onboarding materials</Eyebrow>
-          <h1 className="font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-[40px]">
-            Two courses, before your first task
-          </h1>
+          {!embedded && (
+            <Eyebrow className="text-brand-600 dark:text-brand-300">Onboarding materials</Eyebrow>
+          )}
+          <Heading className="font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-[40px]">
+            Two onboardings, before your first task
+          </Heading>
           <p className="mt-4 text-[16px] leading-relaxed text-ink-500">
-            The intro course is the project end to end. Common Errors is what actually goes wrong,
+            The intro is the project end to end. Common Errors is what actually goes wrong,
             taken from real audited tasks. Each one opens in its own tab and keeps its own
             navigation, so nothing here gets in the way of them.
           </p>
@@ -126,9 +130,9 @@ export default function Onboarding() {
       </Reveal>
 
       <div className="mt-10 grid gap-6 lg:grid-cols-2">
-        {onboardingCourses.map((c, i) => (
+        {onboardingItems.map((c, i) => (
           <Reveal key={c.id} delay={i * 0.06} className="h-full">
-            <CourseCard c={c} />
+            <OnboardingCard c={c} />
           </Reveal>
         ))}
       </div>
@@ -137,7 +141,7 @@ export default function Onboarding() {
         <p className="mt-8 flex items-start gap-2.5 rounded-2xl border border-ink-200/70 bg-raised p-4 text-[13px] leading-relaxed text-ink-500">
           <Sparkles size={14} className="mt-0.5 shrink-0 text-gold-600 dark:text-gold-400" />
           <span>
-            Both courses were written for the multi-turn project and still teach it. The rules that
+            Both were written for the multi-turn project and still teach it. The rules that
             moved under Green Shell are on the What is new tab, and that is the one to read second.
           </span>
         </p>

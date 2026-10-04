@@ -36,7 +36,7 @@ const sectionIcon: Record<string, typeof FileText> = {
   s7: Gauge,
 };
 
-export default function PreSubmit() {
+export default function PreSubmit({ embedded = false }: { embedded?: boolean }) {
   const [checked, setChecked] = useState<Set<string>>(() => {
     try {
       const raw = localStorage.getItem(CHECKS_KEY);
@@ -112,14 +112,18 @@ export default function PreSubmit() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  // Rendered on its own route and as the first pane of Grading. Embedded, the
+  // page it sits in owns the container and the only h1.
+  const Heading = embedded ? "h2" : "h1";
+
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className={embedded ? "" : "mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8"}>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="min-w-0">
           <div className="mono-label mb-1 text-brand-600 dark:text-brand-300">Pre-Submit Gate</div>
-          <h1 className="font-display text-[26px] font-bold tracking-tight text-ink-900">
+          <Heading className="font-display text-[26px] font-bold tracking-tight text-ink-900">
             One last pass before you submit
-          </h1>
+          </Heading>
           <p className="mt-1 text-[13.5px] text-ink-500">
             {checklistMeta.subtitle} <span className="text-ink-400">{checklistMeta.estimate}</span>
           </p>

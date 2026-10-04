@@ -95,6 +95,7 @@ export default function GoldenTasks() {
         <div className="pointer-events-none absolute inset-0 bg-aurora opacity-70" />
         <div className="wrap relative py-12">
           <SectionHeading
+            as="h1"
             eyebrow="Golden Tasks"
             title="Finished tasks, opened up"
             sub="Each one is a full walkthrough: the prompts, the inputs, the evidence behind every decision, the rubrics, and where the model broke. Read them to calibrate the level of complexity your own task has to reach."

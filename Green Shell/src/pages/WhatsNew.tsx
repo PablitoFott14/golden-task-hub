@@ -122,7 +122,7 @@ function ChangeEntry({ c }: { c: GuidelineChange }) {
   );
 }
 
-export default function WhatsNew() {
+export default function WhatsNew({ embedded = false }: { embedded?: boolean }) {
   const ids = guidelineChanges.map((c) => c.id);
   const active = useScrollSpy(ids);
   const { ref: railRef, maxHeight } = useStickyFit<HTMLElement>(28);
@@ -130,16 +130,20 @@ export default function WhatsNew() {
 
   const hard = guidelineChanges.filter((c) => c.impact === "hard").length;
 
+  const Heading = embedded ? "h2" : "h1";
+
   return (
-    <div className="wrap py-12">
+    <div className={embedded ? "wrap pb-12 pt-2" : "wrap py-12"}>
       <Reveal>
         <div className="max-w-3xl">
-          <Eyebrow className="text-rose-600 dark:text-rose-300">
-            Red Shell to Green Shell
-          </Eyebrow>
-          <h1 className="font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-[40px]">
+          {!embedded && (
+            <Eyebrow className="text-rose-600 dark:text-rose-300">
+              Red Shell to Green Shell
+            </Eyebrow>
+          )}
+          <Heading className="font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-[40px]">
             What is new in Green Shell
-          </h1>
+          </Heading>
           <p className="mt-4 text-[16px] leading-relaxed text-ink-500">
             Not the full version history. These are the {guidelineChanges.length} changes that move
             what a contributor actually does, {hard} of them a rule a task fails without. Each one

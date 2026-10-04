@@ -751,7 +751,7 @@ export default function TaskDetail() {
                 className="mt-4"
                 links={[
                   {
-                    to: "/checklist#s4",
+                    to: "/grading#s4",
                     tag: "D1",
                     label: "Is every graded requirement stated in a prompt?",
                   },

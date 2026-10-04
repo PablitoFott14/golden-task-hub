@@ -1,7 +1,7 @@
-import type { OnboardingCourse } from "./types";
+import type { OnboardingItem } from "./types";
 
 /**
- * The two onboarding courses.
+ * The two onboardings.
  *
  * **They are linked, not embedded, and that is deliberate.** Both are complete
  * applications with their own navigation, deployed from their own repositories
@@ -14,19 +14,19 @@ import type { OnboardingCourse } from "./types";
  *   at hub width it letterboxes, and the arrow keys are swallowed by whichever
  *   frame has focus.
  *
- * Linking also means neither course can go stale here: they are rebuilt and
+ * Linking also means neither can go stale here: they are rebuilt and
  * redeployed from their own repos, and the hub always points at the current
  * one. What the hub owes them is discovery, so the cards carry the real cover
  * slide, the real counts and what is actually inside, rather than a bare link.
  *
  * `cover` is the deck's own first slide, downscaled into `public/onboarding/`.
- * Re-cut it from the source deck when a course is rebuilt.
+ * Re-cut it from the source deck when one is rebuilt.
  */
-export const onboardingCourses: OnboardingCourse[] = [
+export const onboardingItems: OnboardingItem[] = [
   {
-    id: "intro-course",
+    id: "intro",
     n: 1,
-    title: "Intro Course",
+    title: "Intro Onboarding",
     tagline: "Start here on your first day.",
     blurb:
       "The whole project in one pass: what you produce, the vocabulary everything else assumes, the workflow end to end, and the standard each deliverable is held to. Reference material, no quizzes.",
@@ -43,7 +43,7 @@ export const onboardingCourses: OnboardingCourse[] = [
       "The prompt, the two legs and the 50% failure gate",
       "Objective rubrics, the golden solution and the subjective block",
     ],
-    cta: "Open the course",
+    cta: "Open the onboarding",
     tone: "brand",
   },
   {
@@ -65,7 +65,7 @@ export const onboardingCourses: OnboardingCourse[] = [
       "Real examples pulled apart, with the task they came from",
       "How to catch the same thing in your own task",
     ],
-    cta: "Open the course",
+    cta: "Open the onboarding",
     tone: "rose",
   },
 ];

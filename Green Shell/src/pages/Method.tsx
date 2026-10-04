@@ -33,6 +33,7 @@ import {
 import { guidelineChanges } from "../data/changes";
 import { feedbackThread } from "../data/community";
 import { checkCount, checklist } from "../data/checklist";
+import { specGroups } from "../data/specDoc";
 import { subcategoryCount } from "../data/taxonomy";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
@@ -113,6 +114,8 @@ function StepCard({
   );
 }
 
+const specDimensionCount = specGroups.reduce((n, g) => n + g.dimensions.length, 0);
+
 export default function Method() {
   const [active, setActive] = useState(1);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -183,14 +186,14 @@ export default function Method() {
                 <Link to={{ hash: "#method" }} className="btn-primary">
                   <Compass size={16} /> Start with the method
                 </Link>
-                {/* The two entry points that are not reading: the courses a new
+                {/* The two entry points that are not reading: the onboardings a new
                     CB starts on, and the tool used while designing. Both sit in
                     the first row because neither is found by scrolling. */}
                 <Link
-                  to="/onboarding"
+                  to="/reference#onboarding"
                   className="btn bg-brand-500/12 text-brand-800 ring-1 ring-brand-500/25 hover:bg-brand-500/20 dark:text-brand-200"
                 >
-                  <GraduationCap size={16} /> Onboarding courses
+                  <GraduationCap size={16} /> Onboarding
                 </Link>
                 <Link
                   to="/complexity"
@@ -211,7 +214,7 @@ export default function Method() {
                   <MessageSquareQuote size={16} /> {feedbackThread.cta}
                   <ArrowUpRight size={14} className="text-gold-600 dark:text-gold-400" />
                 </a>
-                <Link to="/whats-new" className="btn-ghost">
+                <Link to="/reference#whats-new" className="btn-ghost">
                   <History size={16} className="text-rose-600 dark:text-rose-300" /> What is new
                   <span className="rounded-full bg-rose-500/15 px-1.5 font-mono text-[11px] font-bold text-rose-700 dark:text-rose-300">
                     {guidelineChanges.length}
@@ -221,7 +224,7 @@ export default function Method() {
                   <PlayCircle size={16} className="text-amber-600 dark:text-amber-300" /> Universe
                   videos
                 </Link>
-                <Link to="/whats-new#use-case-and-tools" className="btn-ghost">
+                <Link to="/reference#use-case-and-tools" className="btn-ghost">
                   <Layers size={16} className="text-violet-600 dark:text-violet-300" /> Use cases
                   <span className="rounded-full bg-violet-500/15 px-1.5 font-mono text-[11px] font-bold text-violet-700 dark:text-violet-300">
                     {subcategoryCount()}
@@ -273,7 +276,7 @@ export default function Method() {
               </div>
 
               <Link
-                to="/checklist"
+                to="/grading#pre-submit"
                 className="card card-hover group flex items-center gap-3 p-4"
               >
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-emerald-500/12 text-emerald-600 dark:text-emerald-300">
@@ -496,27 +499,31 @@ export default function Method() {
                 to: `/golden-tasks`,
                 icon: <BookOpenCheck size={18} />,
                 title: "Golden Tasks",
+                tab: "Golden Tasks",
                 body: "Finished tasks opened up: the prompts, the evidence, the rubrics, and where the model broke.",
                 tone: "bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300",
               },
               {
-                to: "/checklist",
+                to: "/grading#pre-submit",
                 icon: <ClipboardCheck size={18} />,
                 title: "Pre-Submit Gate",
+                tab: "in Grading",
                 body: `${checkCount()} checks in ${checklist.length} sections. Roughly five minutes, run once before you submit.`,
                 tone: "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300",
               },
               {
-                to: "/spec",
+                to: "/grading#task-parameters",
                 icon: <Gauge size={18} />,
                 title: "QC Spec",
-                body: "The twenty two questions your task is scored against, and the rubric error catalogue behind them.",
+                tab: "in Grading",
+                body: `The ${specDimensionCount} dimensions your task is scored against, and the rubric error catalogue behind them.`,
                 tone: "bg-sky-500/12 text-sky-700 ring-1 ring-sky-500/25 dark:text-sky-300",
               },
               {
-                to: "/faq",
+                to: "/reference#faq",
                 icon: <HelpCircle size={18} />,
                 title: "FAQ",
+                tab: "in Reference",
                 body: "The questions that come up in everyone's first week, answered once and linked into everything else.",
                 tone: "bg-violet-500/12 text-violet-700 ring-1 ring-violet-500/25 dark:text-violet-300",
               },
@@ -531,6 +538,7 @@ export default function Method() {
                   <h3 className="mt-4 font-display text-[16px] font-bold tracking-tight text-ink-900">
                     {c.title}
                   </h3>
+                  <span className="mono-label mt-1 block text-ink-400">{c.tab}</span>
                   <p className="mt-2 flex-1 text-[13px] leading-relaxed text-ink-500">{c.body}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 dark:text-brand-300">
                     Open

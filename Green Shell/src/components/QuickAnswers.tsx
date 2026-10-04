@@ -65,7 +65,7 @@ function Row({ f, open, onToggle }: { f: FaqItem; open: boolean; onToggle: () =>
                   Guidelines {f.refs.map((r) => r.section).join(" · ")}
                 </span>
                 <Link
-                  to={`/faq#${f.id}`}
+                  to={`/reference#${f.id}`}
                   className="group ml-auto inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 dark:text-brand-300"
                 >
                   Open it in the FAQ
@@ -82,7 +82,7 @@ function Row({ f, open, onToggle }: { f: FaqItem; open: boolean; onToggle: () =>
 
 /**
  * The FAQ, surfaced on the landing page. It reads the same `faq` data the
- * `/faq` page renders, so a new question appears here the moment it is added
+ * `/reference#faq` page renders, so a new question appears here the moment it is added
  * and nothing has to be written twice. One row is open at a time and the list
  * is capped at PEEK, which is what keeps the section from growing into the
  * page it links to.
@@ -106,7 +106,7 @@ export default function QuickAnswers() {
           MEMORY.md, inputs.zip against the inputs folder, how milestones split, what Model B
           actually does. Open one and read it without leaving the page.
         </p>
-        <Link to="/faq" className="btn-primary mt-6">
+        <Link to="/reference#faq" className="btn-primary mt-6">
           All {faq.length} questions <ArrowRight size={15} />
         </Link>
         <p className="mt-4 text-[12px] leading-relaxed text-ink-400">

@@ -6,7 +6,7 @@ import { authoringStandards, rubricQualityIssues, specGroups, weightBuckets } fr
 import { faq } from "./faq";
 import { guidelineChanges } from "./changes";
 import { taxonomy } from "./taxonomy";
-import { onboardingCourses } from "./onboarding";
+import { onboardingItems } from "./onboarding";
 import { universeVideos } from "./videos";
 import { specRevisions } from "./specLog";
 
@@ -38,12 +38,12 @@ export const searchIndex: SearchEntry[] = [
      contributor is assigned and what they search for. The use case, the scope
      check and the scenarios ride along in `terms`, so searching a scenario
      word finds the pair it belongs to. */
-  ...onboardingCourses.map<SearchEntry>((c) => ({
-    kind: "Course" as const,
+  ...onboardingItems.map<SearchEntry>((c) => ({
+    kind: "Onboarding" as const,
     title: c.title,
     hint: `${c.stats.map((x) => `${x.k} ${x.v}`).join(" · ")}`,
-    to: "/onboarding",
-    terms: [c.tagline, c.blurb, c.covers.join(" "), "onboarding course slides training"].join(" "),
+    to: "/reference#onboarding",
+    terms: [c.tagline, c.blurb, c.covers.join(" "), "onboarding slides training intro"].join(" "),
   })),
 
   {
@@ -60,7 +60,7 @@ export const searchIndex: SearchEntry[] = [
       kind: "Use case" as const,
       title: s.name,
       hint: `${g.l1} · L2`,
-      to: "/whats-new#use-case-and-tools",
+      to: "/reference#use-case-and-tools",
       terms: [
         g.l1,
         g.scope,
@@ -75,7 +75,7 @@ export const searchIndex: SearchEntry[] = [
     kind: "Change" as const,
     title: c.title,
     hint: `${c.date} · ${c.version}`,
-    to: `/whats-new#${c.id}`,
+    to: `/reference#${c.id}`,
     terms: [
       c.body,
       c.does,
@@ -201,7 +201,7 @@ export const searchIndex: SearchEntry[] = [
       kind: "Pre-submit check" as const,
       title: `${c.id} · ${s.title}`,
       hint: c.q,
-      to: `/checklist#${s.id}`,
+      to: `/grading#${s.id}`,
       terms: `${c.f} ${c.ref} ${s.prompt}`,
     }))
   ),
@@ -211,7 +211,7 @@ export const searchIndex: SearchEntry[] = [
       kind: "QC spec" as const,
       title: `${g.group} · ${d.name}`,
       hint: d.question,
-      to: `/spec#${slug(g.group)}`,
+      to: `/grading#${slug(g.group)}`,
       terms: [d.description, d.errorTags.map((t) => t.label).join(" "), d.options.map((o) => o.text).join(" ")].join(" "),
     }))
   ),
@@ -220,7 +220,7 @@ export const searchIndex: SearchEntry[] = [
     kind: "QC spec",
     title: `${i.severity} issue · ${i.name}`,
     hint: i.definition.split("\n")[0],
-    to: "/spec#rubric-quality",
+    to: "/grading#rubric-quality",
     terms: i.definition,
   })),
 
@@ -228,7 +228,7 @@ export const searchIndex: SearchEntry[] = [
     kind: "QC spec",
     title: `Weight ${b.score > 0 ? `+${b.score}` : b.score} · ${b.level}`,
     hint: b.definition.split("\n")[0],
-    to: "/spec#weights",
+    to: "/grading#weights",
     terms: `${b.definition} ${b.examples.join(" ")}`,
   })),
 
@@ -237,7 +237,7 @@ export const searchIndex: SearchEntry[] = [
       kind: "QC spec" as const,
       title: `Spec change · ${ch.dimension}`,
       hint: `${rev.date} · ${ch.summary}`,
-      to: "/spec#log",
+      to: "/grading#log",
       terms: `${ch.group} ${ch.detail} spec change log revision updated`,
     }))
   ),
@@ -246,7 +246,7 @@ export const searchIndex: SearchEntry[] = [
     kind: "QC spec",
     title: st.name,
     hint: st.body.split("\n")[0],
-    to: "/spec#standards",
+    to: "/grading#standards",
     terms: st.body,
   })),
 
@@ -254,7 +254,7 @@ export const searchIndex: SearchEntry[] = [
     kind: "FAQ",
     title: f.q,
     hint: f.a[0],
-    to: `/faq#${f.id}`,
+    to: `/reference#${f.id}`,
     terms: `${f.a.join(" ")} ${f.topic} ${f.refs.map((r) => `${r.section} ${r.title}`).join(" ")}`,
   })),
 ];
