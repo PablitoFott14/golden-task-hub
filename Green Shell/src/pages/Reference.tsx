@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ClipboardCheck, GraduationCap, HelpCircle, Sparkles } from "lucide-react";
+import { ClipboardCheck, GraduationCap, HelpCircle, ShieldAlert } from "lucide-react";
 import Onboarding from "./Onboarding";
 import PreSubmit from "./PreSubmit";
 import WhatsNew from "./WhatsNew";
@@ -31,8 +31,12 @@ import { cx } from "../lib/util";
  * The panes are the original pages, rendered with `embedded` so they drop their
  * own hero and the page keeps one h1. Nothing inside them changed: the gate
  * keeps its progress bar, its persisted ticks and its section rail; the FAQ
- * keeps its search, its topic filter and its question rail; what is new keeps
+ * keeps its search, its topic filter and its question rail; Must Read keeps
  * its change rail and the taxonomy accordion.
+ *
+ * The guidelines pane is labelled `Must Read: Project Updates` rather than
+ * `What is new`, because a contributor who skips it fails a task. Its anchor is
+ * still `whats-new`, so nothing that links to it had to move.
  */
 
 const PANES = [
@@ -51,11 +55,13 @@ const PANES = [
     blurb: "The gate to run once, before you hand a task in.",
   },
   {
+    // The id stays `whats-new`: it is the anchor every existing link and the
+    // `/whats-new` redirect target, and renaming the label is a copy change.
     id: "whats-new",
-    label: "What is new",
-    icon: Sparkles,
+    label: "Must Read: Project Updates",
+    icon: ShieldAlert,
     count: guidelineChanges.length,
-    blurb: "What moved coming from Red Shell.",
+    blurb: "Every guidelines rule that changed. Read these before your next task.",
   },
   {
     id: "faq",

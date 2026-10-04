@@ -31,12 +31,14 @@ import {
   universeVideos,
 } from "../data/videos";
 import { guidelineChanges } from "../data/changes";
+import { hubUpdatedOn } from "../data/hubLog";
 import { feedbackThread } from "../data/community";
 import { checkCount, checklist } from "../data/checklist";
 import { specGroups } from "../data/specDoc";
 import { subcategoryCount } from "../data/taxonomy";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
+import HubLog from "../components/HubLog";
 import QuickAnswers from "../components/QuickAnswers";
 import VideoStrip from "../components/VideoStrip";
 import { cx } from "../lib/util";
@@ -167,9 +169,21 @@ export default function Method() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="chip bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300">
-                <Sparkles size={12} /> OpenClaw MM Rubrics · Single-turn · Green Shell
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="chip bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 dark:text-gold-300">
+                  <Sparkles size={12} /> OpenClaw MM Rubrics · Single-turn · Green Shell
+                </span>
+                {/* The update log is a full hero below this, which is under the
+                    fold on a laptop and two screens down on a phone. So the
+                    first line of the page is a dated way into it. */}
+                <Link
+                  to={{ hash: "#updates" }}
+                  className="chip bg-brand-500/12 text-brand-800 ring-1 ring-brand-500/25 transition hover:bg-brand-500/20 dark:text-brand-200"
+                >
+                  <History size={12} /> Hub updated {hubUpdatedOn}
+                  <ArrowRight size={11} />
+                </Link>
+              </div>
               <h1 className="mt-5 font-display text-[34px] font-bold leading-[1.06] tracking-tight text-ink-900 sm:text-[52px]">
                 A strong task is designed,
                 <br className="hidden sm:block" />{" "}
@@ -214,9 +228,12 @@ export default function Method() {
                   <MessageSquareQuote size={16} /> {feedbackThread.cta}
                   <ArrowUpRight size={14} className="text-gold-600 dark:text-gold-400" />
                 </a>
-                <Link to="/reference#whats-new" className="btn-ghost">
-                  <History size={16} className="text-rose-600 dark:text-rose-300" /> What is new
-                  <span className="rounded-full bg-rose-500/15 px-1.5 font-mono text-[11px] font-bold text-rose-700 dark:text-rose-300">
+                <Link
+                  to="/reference#whats-new"
+                  className="btn bg-rose-500/12 text-rose-800 ring-1 ring-rose-500/25 hover:bg-rose-500/20 dark:text-rose-200"
+                >
+                  <ShieldAlert size={16} /> Must read: project updates
+                  <span className="rounded-full bg-rose-500/20 px-1.5 font-mono text-[11px] font-bold text-rose-800 dark:text-rose-200">
                     {guidelineChanges.length}
                   </span>
                 </Link>
@@ -300,7 +317,17 @@ export default function Method() {
         </div>
       </section>
 
-      {/* Universe interaction, the recordings. First thing under the hero
+      {/* The hub's own update log. First thing under the hero because the
+          question it answers — what moved since I was last here — is one a
+          returning contributor has no other way to answer, and one they will
+          not go looking for. Five linked rows, no drawer to open. */}
+      <section id="updates" className="scroll-mt-20 border-b border-ink-200/70 bg-ink-50">
+        <div className="wrap py-10">
+          <HubLog />
+        </div>
+      </section>
+
+      {/* Universe interaction, the recordings. Directly under the update log
           because it is point 1 of the guidelines and the most common reason a
           task is rejected, so it has to be found without going looking. The
           player opens over the page, which is what keeps three videos down to

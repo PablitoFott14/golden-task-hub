@@ -142,7 +142,7 @@ export default function WhatsNew({ embedded = false }: { embedded?: boolean }) {
             </Eyebrow>
           )}
           <Heading className="font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-[40px]">
-            What is new in Green Shell
+            Latest &amp; urgent project updates
           </Heading>
           <p className="mt-4 text-[16px] leading-relaxed text-ink-500">
             Not the full version history. These are the {guidelineChanges.length} changes that move

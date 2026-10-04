@@ -1331,7 +1331,7 @@ export const authoringStandards: AuthoringStandard[] = [
 /**
  * Cross-links from a dimension into the rest of the hub, keyed by dimension
  * name. Hand-authored in scripts/gen_spec.py, and mirrored by links pointing
- * back at `/spec#<group-slug>` from the method, the gate and what is new.
+ * back at `/spec#<group-slug>` from the method, the gate and Must Read.
  */
 export const dimensionLinks: Record<string, XLink[]> = {
   "Scenario Adherence": [

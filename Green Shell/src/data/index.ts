@@ -72,7 +72,7 @@ export const searchIndex: SearchEntry[] = [
   ),
 
   ...guidelineChanges.map<SearchEntry>((c) => ({
-    kind: "Change" as const,
+    kind: "Must read" as const,
     title: c.title,
     hint: `${c.date} · ${c.version}`,
     to: `/reference#${c.id}`,

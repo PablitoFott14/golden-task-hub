@@ -15,7 +15,7 @@ Rubrics single turn project. **Five tabs**, and the detail of why is in
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
 | Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
 | Spec Doc | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec: the dimensions, the appendix and the change log, one pane at a time off a vertical rail, under one search. |
-| Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, what is new, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
+| Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, the must-read project updates, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
 
 `/grading`, `/checklist`, `/onboarding`, `/whats-new` and `/faq` are kept as redirects that carry
 the hash across.
@@ -109,7 +109,7 @@ actually doing.
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
 | Complexity | `/complexity` | the proposals tool | unchanged |
 | Spec Doc | `/spec` | **7 dimension groups** (default: Task Parameters) · 3 appendix sections · Change log | `/spec` |
-| Reference | `/reference` | **Onboarding** (default) · Pre-Submit · What is new · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
+| Reference | `/reference` | **Onboarding** (default) · Pre-Submit · Must Read: Project Updates · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
 
 **The spec doc is the destination, not a pane of something else.** It is the one piece of content
 nothing else in the hub can stand in for: the exact rubric a reviewer scores against. The gate, the
@@ -142,7 +142,7 @@ its panes carry a side rail of their own — a second vertical rail beside those
 layering this restructure removed. The absorbed pages take an `embedded` prop that drops their own
 hero so the page keeps one `h1`; **nothing inside them changed**, so the gate keeps its progress bar,
 its persisted ticks and its section rail, the FAQ keeps its search, its topic filter and its question
-rail, and what is new keeps its change rail and the taxonomy accordion.
+rail, and Must Read keeps its change rail and the taxonomy accordion.
 
 **A sixth tab needs an argument for why it is not a pane of an existing one.** The note above
 `links` in [Layout.tsx](src/components/Layout.tsx) is the record of that reasoning.
@@ -165,6 +165,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | Source document | Data file here |
 | --- | --- |
 | Version History table and the `[NEW]` callouts in the guidelines | [src/data/changes.ts](src/data/changes.ts) |
+| Nothing — hand-authored from this repo's commit history | [src/data/hubLog.ts](src/data/hubLog.ts) |
 | `task 1 (…)/6a7965b63b7d368e70c7de4a/rationale.md` | [src/data/method.ts](src/data/method.ts) |
 | `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
 | `*-rubric.csv` and `appendix.csv`, the spec exports (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
@@ -409,11 +410,38 @@ itself to one origin, and the browser never sees the key, the system prompt or t
   message. A date or counter in that prompt drops the cache hit rate to zero and roughly doubles
   the input cost.
 
-### What is new is a tab, not a band
+### Three logs, and which is which
+
+The hub carries three separate histories. They are easy to confuse and must not be merged: each
+answers a different question, and each links to the other two rather than restating them.
+
+| Log | Data | Where it renders | Answers |
+| --- | --- | --- | --- |
+| **Hub update log** | [src/data/hubLog.ts](src/data/hubLog.ts) | [HubLog.tsx](src/components/HubLog.tsx), the `#updates` band under the hero on `/` | What moved *in this site* since I was last here |
+| **Must Read: Project Updates** | [src/data/changes.ts](src/data/changes.ts) | [WhatsNew.tsx](src/pages/WhatsNew.tsx), the `whats-new` pane of `/reference` | What the *guidelines* changed going from Red Shell to Green Shell |
+| **Spec Doc change log** | [src/data/specLog.ts](src/data/specLog.ts) | the `log` pane of `/spec` | Which *rubric dimension* moved between exports |
+
+**The hub update log is the only one about the website.** An entry earns its place by changing where
+a contributor goes or what they have to read; a wording fix does not. **Every entry carries a `to`
+that opens the thing it describes** — a changelog that says something moved without taking you there
+just sends you looking. Entries are historical and are not rewritten when the hub moves on, so a
+hardcoded count inside one describes what shipped that day and is correct to leave alone.
+
+It is five rows, flat, no drawer. The hero above it is around 800px tall, so the band is under the
+fold on a laptop; the first line of the page carries a dated chip into it, read off `hubUpdatedOn`.
+**Adding a sixth entry means dropping the oldest** — a log you have to scroll is a log nobody reads.
+
+### Must Read is a tab, not a band
 
 `guidelineChanges` in [src/data/changes.ts](src/data/changes.ts) is transcribed from the Version
 History table and the `[NEW]` callouts of `[External] Green Shell – Guidelines .md`, and
-[WhatsNew.tsx](src/pages/WhatsNew.tsx) renders it in the What is new pane of `/reference`.
+[WhatsNew.tsx](src/pages/WhatsNew.tsx) renders it in the `whats-new` pane of `/reference`.
+
+**It is labelled `Must Read: Project Updates`, not `What is new`.** A contributor who skips it fails
+a task, and the old label did not say so. The pane id, the anchor and the `/whats-new` redirect all
+still use `whats-new`, because they are URLs and the rename was copy — do not rename the id to match
+the label. The search kind is `"Must read"` and is tinted rose, which is the hub's must-read signal
+everywhere: the hero button on `/`, the `guidelines` row in the hub update log, the palette chip.
 
 **It used to be a six card band under the hero and the cap was its height.** The Green Shell change
 set outgrew that: 80/20 cannot be taught in a card, and the taxonomy needs 68 subcategories beside
