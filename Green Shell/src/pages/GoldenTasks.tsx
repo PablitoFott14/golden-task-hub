@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Image as ImageIcon, Layers, ShieldAlert, Sparkles } from "lucide-react";
 import { tasks } from "../data";
 import type { GoldenTask } from "../data/types";
-import { Reveal, SectionHeading } from "../components/ui";
+import { Reveal, SectionHeading, WipNotice } from "../components/ui";
 import { asset, cx } from "../lib/util";
 
 /** The strip across the top of a card. Real inputs from the task, up to four. */
@@ -104,6 +104,19 @@ export default function GoldenTasks() {
       </section>
 
       <div className="wrap py-10">
+        <Reveal>
+          <WipNotice className="mb-6">
+            This section is still being built. Treat what is here as a draft rather than final
+            guidance, because it is expected to change.{" "}
+            <strong className="font-bold text-ink-900">
+              A new Green Shell task is being prepared and will be added soon as the main reference
+              example.
+            </strong>{" "}
+            The walkthrough published below is a multi-turn task carried over from Red Shell, so
+            read it for the method rather than for the single-turn spec.
+          </WipNotice>
+        </Reveal>
+
         <Reveal>
           <div className="mb-8 flex flex-col gap-3 rounded-2xl border-2 border-rose-400/70 bg-rose-50/70 p-5 dark:border-rose-500/40 dark:bg-rose-500/10 sm:flex-row sm:items-start sm:gap-4 sm:p-6">
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-rose-500/15 text-rose-600 dark:text-rose-300">

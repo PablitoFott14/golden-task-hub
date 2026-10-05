@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { checklist, checklistMeta } from "../data/checklist";
 import type { Check as CheckItem, ChecklistSection } from "../data/types";
-import { Crosslinks } from "../components/ui";
+import { Crosslinks, WipNotice } from "../components/ui";
 import { useScrollSpy } from "../lib/useScrollSpy";
 import { asset, cx } from "../lib/util";
 
@@ -118,6 +118,8 @@ export default function PreSubmit({ embedded = false }: { embedded?: boolean }) 
 
   return (
     <div className={cx("mx-auto max-w-6xl px-4 sm:px-6 lg:px-8", embedded ? "pb-12 pt-2" : "py-8")}>
+      <WipNotice className="mb-6" />
+
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="min-w-0">
           <div className="mono-label mb-1 text-brand-600 dark:text-brand-300">Pre-Submit Gate</div>

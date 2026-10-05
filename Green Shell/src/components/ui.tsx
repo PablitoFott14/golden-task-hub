@@ -1,10 +1,57 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, CornerDownRight } from "lucide-react";
+import { ArrowUpRight, Construction, CornerDownRight } from "lucide-react";
 import type { XLink } from "../data/types";
 import { cx } from "../lib/util";
 import { useRailFollow, useStickyFit } from "../lib/useStickyFit";
+
+/**
+ * The work-in-progress notice.
+ *
+ * Several sections are still being filled in, and a half-finished page that
+ * looks finished is worse than no page: someone reads it as settled guidance
+ * and builds a task against it. So every unfinished section opens with this.
+ *
+ * **One component, one sentence, used everywhere**, so the status reads the
+ * same wherever a contributor meets it. A section with something extra to say
+ * passes children and keeps the label and the framing.
+ *
+ * **It goes first in the section's content**, above the title where the title
+ * is in the content. That is what makes it unmissable, and on the pre-submit
+ * gate it is also what keeps it clear of the amber warning already sitting
+ * under that heading.
+ *
+ * Amber, not the rose used by the update notice and Must Read. Rose means read
+ * this before your next task; amber means this is not finished yet. Those are
+ * different claims and must not look alike.
+ */
+export function WipNotice({ className, children }: { className?: string; children?: ReactNode }) {
+  return (
+    <div
+      role="note"
+      className={cx(
+        "flex gap-3 rounded-xl border border-dashed border-amber-400/80 bg-amber-50/70 p-4 dark:border-amber-500/40 dark:bg-amber-500/[0.08]",
+        className
+      )}
+    >
+      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-amber-500/15 text-amber-700 dark:text-amber-300">
+        <Construction size={17} />
+      </span>
+      <div className="min-w-0">
+        <div className="mono-label text-amber-700 dark:text-amber-300">Work in progress</div>
+        <p className="mt-1 text-[13px] leading-relaxed text-ink-700">
+          {children ?? (
+            <>
+              This section is still being built. Treat what is here as a draft rather than final
+              guidance, because it is expected to change.
+            </>
+          )}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 /** Fade and rise on first view. Safe on filtered content, unlike an observer. */
 export function Reveal({

@@ -1,7 +1,7 @@
-import { ArrowUpRight, BookOpen, GraduationCap, Sparkles } from "lucide-react";
+import { ArrowUpRight, BookOpen, Construction, GraduationCap, Sparkles } from "lucide-react";
 import type { OnboardingItem } from "../data/types";
 import { onboardingItems } from "../data/onboarding";
-import { Eyebrow, Reveal } from "../components/ui";
+import { Eyebrow, Reveal, WipNotice } from "../components/ui";
 import { asset, cx } from "../lib/util";
 
 /**
@@ -68,6 +68,9 @@ function OnboardingCard({ c }: { c: OnboardingItem }) {
           <span className={cx("chip", t.chip)}>
             <GraduationCap size={11} /> Onboarding {c.n}
           </span>
+          <span className="chip bg-amber-500/15 text-amber-700 ring-1 ring-amber-500/30 dark:text-amber-200">
+            <Construction size={11} /> WIP
+          </span>
           {c.stats.map((s) => (
             <span key={s.v} className="mono-label text-ink-400">
               <span className="font-bold text-ink-700">{s.k}</span> {s.v}
@@ -113,6 +116,10 @@ export default function Onboarding({ embedded = false }: { embedded?: boolean })
 
   return (
     <div className={embedded ? "wrap pb-12 pt-2" : "wrap py-12"}>
+      <Reveal>
+        <WipNotice className="mb-7" />
+      </Reveal>
+
       <Reveal>
         <div className="max-w-3xl">
           {!embedded && (

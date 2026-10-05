@@ -19,7 +19,7 @@ import { complexityFields, exampleProposals, exampleRef } from "../data/complexi
 import { claimSheet, claimSheetByRef } from "../data/claimSheet";
 import { universeById, universes } from "../data/universes";
 import { taxonomy } from "../data/taxonomy";
-import { Eyebrow, Reveal } from "../components/ui";
+import { Eyebrow, Reveal, WipNotice } from "../components/ui";
 import { cx } from "../lib/util";
 
 /**
@@ -280,6 +280,10 @@ export default function Complexity() {
 
   return (
     <div className="wrap py-12">
+      <Reveal>
+        <WipNotice className="mb-7" />
+      </Reveal>
+
       <Reveal>
         <div className="max-w-3xl">
           <Eyebrow className="text-violet-600 dark:text-violet-300">Design assistant</Eyebrow>

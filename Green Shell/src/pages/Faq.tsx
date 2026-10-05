@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, BookMarked, HelpCircle, Search, X } from "lucide-react";
 import { faq, faqTopics, guidelinesTitle } from "../data/faq";
 import type { FaqItem } from "../data/types";
-import { Crosslinks, Reveal } from "../components/ui";
+import { Crosslinks, Reveal, WipNotice } from "../components/ui";
 import { useScrollSpy } from "../lib/useScrollSpy";
 import { useRailFollow, useStickyFit } from "../lib/useStickyFit";
 import { cx } from "../lib/util";
@@ -154,6 +154,8 @@ export default function Faq({ embedded = false }: { embedded?: boolean }) {
       )}
 
       <div className={embedded ? "wrap pb-10 pt-6" : "wrap py-10"}>
+        <WipNotice className="mb-7" />
+
         <div className="lg:grid lg:grid-cols-[280px_1fr] lg:gap-10">
           {/* Rail: search, topics, and the question list */}
           <aside
