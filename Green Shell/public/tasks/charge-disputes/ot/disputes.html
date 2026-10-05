@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charge review &mdash; May to July 2026</title>
+<style>
+  :root{
+    --bg:#f6f5f2; --card:#fff; --ink:#1f2320; --muted:#6b7269;
+    --line:#e2e0d9; --accent:#2f5d50; --flag:#a4462f; --ok:#2f5d50;
+    --flagbg:#fdf2ee; --okbg:#eef4f1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 80px}
+  header h1{margin:0 0 6px;font-size:28px;letter-spacing:-.3px}
+  header p.sub{margin:0;color:var(--muted);font-size:14px}
+
+  .summary{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 26px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:12px 16px;min-width:150px}
+  .stat b{display:block;font-size:22px;line-height:1.2}
+  .stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+  .tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin-bottom:22px}
+  .tabs button{background:none;border:0;padding:11px 18px;font-size:15px;font-weight:600;
+    color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+  .tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+  .panel[hidden]{display:none}
+
+  .filter{background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;margin-bottom:20px;display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
+  .filter label{font-size:12px;color:var(--muted);text-transform:uppercase;
+    letter-spacing:.06em;display:block;margin-bottom:4px}
+  .filter input{font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:#fff}
+  .filter button{font:inherit;padding:8px 14px;border:1px solid var(--line);background:#fff;
+    border-radius:6px;cursor:pointer}
+  .filter button:hover{background:#f0efeb}
+  .filter .count{font-size:13px;color:var(--muted);margin-left:auto}
+
+  table{width:100%;border-collapse:collapse;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.07em;
+    color:var(--muted);padding:11px 14px;background:#fbfaf7;border-bottom:1px solid var(--line)}
+  td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14px}
+  tr:last-child td{border-bottom:0}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:var(--muted)}
+  .amt{font-weight:600;white-space:nowrap}
+  .amt small{display:block;font-weight:400;color:var(--flag);font-size:12px}
+  .merch{font-weight:600}
+  .why{color:var(--muted);font-size:13px;margin-top:3px;max-width:34em}
+  .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;
+    background:var(--flagbg);color:var(--flag);border:1px solid #f0d9d0;font-weight:600;
+    text-transform:uppercase;letter-spacing:.05em}
+  .pill.co{background:#fdf7e8;color:#8a6410;border-color:#f0e2bd}
+  .pill.ok{background:var(--okbg);color:var(--ok);border-color:#cfe0d8}
+
+  .draftbtn{font:inherit;font-size:13px;font-weight:600;padding:7px 12px;cursor:pointer;
+    background:var(--accent);color:#fff;border:0;border-radius:6px;white-space:nowrap}
+  .draftbtn:hover{background:#26493f}
+  .draftrow td{background:#fbfaf7;padding:0}
+  .draftrow[hidden]{display:none}
+  .draftbox{padding:16px 18px}
+  .draftmeta{font-size:12.5px;color:var(--muted);margin-bottom:10px;line-height:1.7}
+  .draftmeta b{color:var(--ink)}
+  .draftbody{white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;line-height:1.6;background:#fff;border:1px solid var(--line);
+    border-radius:8px;padding:14px;max-height:400px;overflow:auto}
+  .draftnote{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic}
+
+  .ev{background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:18px;margin-bottom:16px;display:grid;grid-template-columns:230px 1fr;gap:20px}
+  .ev.norec{grid-template-columns:1fr}
+  .ev figure{margin:0}
+  .ev img{width:100%;border:1px solid var(--line);border-radius:6px;background:#fff;display:block}
+  .ev figcaption{font-size:11.5px;color:var(--muted);margin-top:6px}
+  .ev h3{margin:0 0 3px;font-size:16px}
+  .ev .line{font-size:13px;color:var(--muted);margin-bottom:10px}
+  .ev dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13.5px}
+  .ev dt{color:var(--muted)}
+  .ev dd{margin:0}
+  .ev .note{margin-top:10px;font-size:13px;background:#fbfaf7;border-left:3px solid var(--line);
+    padding:8px 12px;border-radius:0 4px 4px 0}
+  .ev .note.warn{background:var(--flagbg);border-left-color:var(--flag)}
+  h2.sec{font-size:15px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
+    margin:34px 0 14px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  .intro{font-size:14px;color:var(--muted);margin:0 0 20px;max-width:64em}
+  @media(max-width:760px){.ev{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Charge review, May &ndash; July 2026</h1>
+  <p class="sub">One-time and non-recurring charges checked against receipts, order confirmations, invoices and calendar records. Prepared 28 September 2026 for Marisela Ybarra.</p>
+</header>
+
+<div class="summary">
+  <div class="stat"><b>23</b><span>Charges checked</span></div>
+  <div class="stat"><b>4</b><span>Flagged</span></div>
+  <div class="stat"><b>$123.40</b><span>At issue</span></div>
+  <div class="stat"><b>19</b><span>Cleared</span></div>
+</div>
+
+<div class="tabs" role="tablist">
+  <button role="tab" id="t1" aria-controls="p1" aria-selected="true">Disputed charges</button>
+  <button role="tab" id="t2" aria-controls="p2" aria-selected="false">Checked &amp; correct</button>
+</div>
+
+<!-- ============ TAB 1 ============ -->
+<section class="panel" id="p1" role="tabpanel" aria-labelledby="t1">
+
+  <p class="intro">Four charges where the paperwork does not support what was taken. Two are merchant errors on the personal Visa; two are company store purchases that fall inside the $50/month allowance but carry no offsetting credit. Each has a drafted email sitting in Drafts &mdash; nothing has been sent.</p>
+
+  <div class="filter">
+    <div>
+      <label for="from">Date from</label>
+      <input type="date" id="from" value="2026-05-01">
+    </div>
+    <div>
+      <label for="to">Date to</label>
+      <input type="date" id="to" value="2026-07-31">
+    </div>
+    <button type="button" id="clear">Clear filter</button>
+    <span class="count" id="count"></span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th><th>Merchant &amp; reason</th><th>Transaction ID</th>
+        <th>Amount</th><th>Account</th><th></th>
+      </tr>
+    </thead>
+    <tbody id="rows">
+
+      <!-- Tillie's -->
+      <tr class="charge" data-date="2026-05-09">
+        <td>9 May 2026</td>
+        <td>
+          <span class="pill">Duplicate</span>
+          <div class="merch" style="margin-top:5px">Tillie's Flower Shop, E Central Ave</div>
+          <div class="why">Order <b>26 3391</b> was charged twice. The merchant's own confirmation email of 8 May bills the order at $58.50 and that amount posted on 8 May. A second receipt for the <em>same order number</em> posted $58.00 on 9 May. One order, one delivery, two charges.</div>
+        </td>
+        <td class="mono">1829403a7526c738f90a1b2c</td>
+        <td class="amt">$58.00<small>full amount</small></td>
+        <td class="mono">&bull;&bull;&bull;&bull; 7742</td>
+        <td><button class="draftbtn" data-target="d1">Dispute draft</button></td>
+      </tr>
+      <tr class="draftrow" id="d1" hidden><td colspan="6"><div class="draftbox">
+        <div class="draftmeta">
+          <b>To:</b> orders@tilliesflowers.com<br>
+          <b>From:</b> marisela.ybarra@gmail.com<br>
+          <b>Subject:</b> Duplicate charge on order 26 3391 - request for refund of $58.00
+        </div>
+        <div class="draftbody">Hello,
+
+I am writing about a duplicate charge on a single order and would like one of the two charges refunded.
+
+Order reference: 26 3391
+Item: Spring mixed arrangement, large ($48.00) plus delivery
+Delivery: Saturday, May 9, 2026, before 2:00 PM, recipient address on file
+Card: Visa ending 7742
+
+Two separate charges have posted to my card for this one order:
+
+1. $58.50 on May 8, 2026 - this matches your order confirmation email of May 8, which lists the arrangement at $48.00 and delivery at $10.50 for a total of $58.50.
+2. $58.00 on May 9, 2026 - this matches a second receipt for the same order number, 26 3391, which lists the arrangement at $48.00 and delivery at $10.00 for a total of $58.00.
+
+I placed one order and received one delivery. Both charges carry the same order number, 26 3391, so the second charge appears to be a re-entry of the same sale rather than a separate purchase. The two receipts also differ in the delivery fee and in the store shown, which supports that the order was keyed a second time.
+
+I am disputing the $58.00 charge dated May 9, 2026 and asking that it be refunded to the Visa ending 7742. I am not disputing the original $58.50.
+
+Please confirm in writing when the refund has been issued and let me know if you need copies of either receipt. I have both.
+
+Thank you,
+
+Marisela Ybarra
+5410 E Bayley St, Wichita, KS 67218
+(316) 555-0134
+marisela.ybarra@gmail.com</div>
+        <div class="draftnote">Saved in Drafts. Not sent.</div>
+      </div></td></tr>
+
+      <!-- Kohl's -->
+      <tr class="charge" data-date="2026-07-11">
+        <td>11 Jul 2026</td>
+        <td>
+          <span class="pill">Overcharged</span>
+          <div class="merch" style="margin-top:5px">Kohl's, E Kellogg Dr</div>
+          <div class="why">Receipt total was $40.00, settled with <b>two</b> tenders: a $10.00 Kohl's gift card (ending 6093, taken to a $0.00 balance) and <b>$30.00 to the Visa</b>. The full $40.00 posted to the card instead, so the $10.00 paid by gift card was collected twice.</div>
+        </td>
+        <td class="mono">a1b82c930ebf50c18293a4b5</td>
+        <td class="amt">$40.00<small>$10.00 disputed</small></td>
+        <td class="mono">&bull;&bull;&bull;&bull; 7742</td>
+        <td><button class="draftbtn" data-target="d2">Dispute draft</button></td>
+      </tr>
+      <tr class="draftrow" id="d2" hidden><td colspan="6"><div class="draftbox">
+        <div class="draftmeta">
+          <b>To:</b> alerts@intrustbank.com (card issuer &mdash; see note)<br>
+          <b>From:</b> marisela.ybarra@gmail.com<br>
+          <b>Subject:</b> Dispute - Kohl's charge of $40.00 on July 11, 2026, Visa ending 7742 (overcharged by $10.00)
+        </div>
+        <div class="draftbody">To the disputes department,
+
+I am disputing part of a merchant charge on my INTRUST Bank Visa ending 7742. The merchant charged my card for the full purchase total after a gift card had already been applied to it.
+
+Cardholder: Marisela Ybarra
+Card: Visa ending 7742
+Merchant: Kohl's, Store 1174, 8341 E Kellogg Dr, Wichita, KS 67207, (316) 685-3790
+Transaction date: July 11, 2026, 12:41 PM
+Register reference: STR 1174, REG 015, TRAN 6703, ASSOC 082614
+Authorization code: 663052
+Amount posted: $40.00
+Amount I am disputing: $10.00
+
+Items on the receipt:
+- Big One plush throw, $19.99 (reg. $39.99, on sale, less 15% off coupon $3.00)
+- LC gold hoop earring, $8.80 (reg. $22.00, 60% off, less 15% off coupon $1.32)
+- Sonoma Goods for Life jar candle, 11 oz, $14.99 (less 15% off coupon $2.25)
+Subtotal $37.21, sales tax 7.500% $2.79, total $40.00
+
+Reason for the dispute:
+My itemized receipt shows the $40.00 total was settled with two tenders, not one. A Kohl's gift card ending 6093 was applied for $10.00, bringing the remaining balance to $0.00 on that card, and only the remaining $30.00 was tendered to the Visa ending 7742. The receipt states the Visa amount as $30.00.
+
+The charge that posted to my account is $40.00, which is the full purchase total. The $10.00 that was paid by gift card has therefore been collected twice, once from the gift card and once from my card.
+
+I am asking for a $10.00 credit to the Visa ending 7742. The remaining $30.00 is a valid charge and I am not disputing it.
+
+I have the itemized register receipt showing both tenders and can provide a copy on request.
+
+Thank you,
+
+Marisela Ybarra
+5410 E Bayley St, Wichita, KS 67218
+(316) 555-0134
+marisela.ybarra@gmail.com</div>
+        <div class="draftnote">Saved in Drafts. Not sent. alerts@intrustbank.com is the only INTRUST address on file and is an unmonitored alerts box &mdash; this one is better filed through online banking or the number on the back of the card, using the text above verbatim.</div>
+      </div></td></tr>
+
+      <!-- Hollenbeck June -->
+      <tr class="charge" data-date="2026-06-06">
+        <td>6 Jun 2026</td>
+        <td>
+          <span class="pill co">Not reimbursed</span>
+          <div class="merch" style="margin-top:5px">Hollenbeck Garden &amp; Hardware, Wichita East</div>
+          <div class="why">June's only company store purchase, $46.00, sits entirely inside the $50/month allowance &mdash; and there is no credit against it anywhere on account 0117. Receipt in hand (will call #5127).</div>
+        </td>
+        <td class="mono">18c5d7a9204ef3b61c9d0e75</td>
+        <td class="amt">$46.00<small>full amount</small></td>
+        <td class="mono">&bull;&bull;&bull;&bull; 0117</td>
+        <td><button class="draftbtn" data-target="d3">Dispute draft</button></td>
+      </tr>
+
+      <!-- Hollenbeck July -->
+      <tr class="charge" data-date="2026-07-05">
+        <td>5 Jul 2026</td>
+        <td>
+          <span class="pill co">Not reimbursed</span>
+          <div class="merch" style="margin-top:5px">Hollenbeck Garden &amp; Hardware</div>
+          <div class="why">July's only company store purchase, $9.40, also entirely inside the allowance, also with no offsetting credit. Same underlying problem as June &mdash; covered by the one email.</div>
+        </td>
+        <td class="mono">f21b89d46a03c7e51580b3d9</td>
+        <td class="amt">$9.40<small>full amount</small></td>
+        <td class="mono">&bull;&bull;&bull;&bull; 0117</td>
+        <td><button class="draftbtn" data-target="d3">Dispute draft</button></td>
+      </tr>
+      <tr class="draftrow" id="d3" hidden><td colspan="6"><div class="draftbox">
+        <div class="draftmeta">
+          <b>To:</b> krutledge@hollenbeckgh.com (Kenny Rutledge, manager)<br>
+          <b>From:</b> mybarra@hollenbeckgh.com<br>
+          <b>Subject:</b> Employee account 0117 - company store purchases May to July not credited
+        </div>
+        <div class="draftbody">Kenny,
+
+I went back through my employee store account for May, June and July and I do not think the monthly purchase allowance was applied. Can you raise this as an erroneous charge and have it corrected?
+
+Account: Hollenbeck Garden & Hardware employee charge account ending 0117
+Current outstanding balance: $186.40
+Allowance I understand I have: up to $50.00 per month in company store purchases
+
+The four purchases in that window:
+
+1. May 2, 2026, Derby, $61.00
+2. May 31, 2026, $27.42
+3. June 6, 2026, Wichita East, $46.00 - will call #5127, items were a 54 in tomato cage x4 at $5.98, garden twine 200 ft, plant labels 50 pk, and a mechanical water timer. Subtotal $42.79, tax $3.21, total $46.00. I have the register receipt for this one.
+4. July 5, 2026, $9.40
+
+Monthly totals: May $88.42, June $46.00, July $9.40.
+
+What I am asking you to look at:
+
+June at $46.00 and July at $9.40 are both inside the $50.00 monthly allowance in full. Neither month should have left anything on my account, and there is no credit or reimbursement entry against either one. The same is true of the first $50.00 of May. That is $105.40 across the three months that should have been covered by the allowance and shows no offsetting credit anywhere on the account.
+
+I am not asking about the rest of May. May came to $88.42, which is $38.42 over the allowance, and if that portion is mine then it is mine and I will pay it.
+
+There are no credits of any kind posted to account 0117 for May, June or July, which is why I think the allowance simply was not applied for those months rather than it being a question of one purchase.
+
+I would rather have it checked than keep carrying it. If it turns out the allowance works differently than I have understood it, tell me that too and I will stop asking.
+
+Thanks,
+Marisela</div>
+        <div class="draftnote">Saved in Drafts. Not sent. One email covers both company store rows.</div>
+      </div></td></tr>
+
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ TAB 2 ============ -->
+<section class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+
+  <p class="intro">Everything below checked out. Each entry is tied to the receipt, invoice, order confirmation or diary record that supports it. Amounts are what actually posted.</p>
+
+  <h2 class="sec">Backed by a receipt you supplied</h2>
+
+  <div class="ev">
+    <figure>
+      <img src="evidence/receipt.jpg" alt="Hobby Lobby register receipt, 13 June 2026">
+      <figcaption>Hobby Lobby register receipt, TRN 6624</figcaption>
+    </figure>
+    <div>
+      <h3>Hobby Lobby &mdash; $71.00</h3>
+      <div class="line">13 June 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Matches</span></div>
+      <dl>
+        <dt>Receipt total</dt><dd>$71.00 (subtotal $66.05 + tax $4.95)</dd>
+        <dt>Posted</dt><dd>$71.00</dd>
+        <dt>Items</dt><dd>Print quilt 44in 3 yd, solid quilt 44in 1.5 yd, fat quarter bundle 10pc, quilt panel &mdash; all at 40% off, $17.39 saved</dd>
+        <dt>Auth</dt><dd>207419, chip, card &bull;&bull;&bull;&bull;7742</dd>
+      </dl>
+      <div class="note">Corroborated twice over: Iva Jean Slusher's email of 26 May told you to buy nothing until the 40%-off cotton sale, and your calendar has quilting at the library the morning of 13 June.</div>
+    </div>
+  </div>
+
+  <div class="ev">
+    <figure>
+      <img src="evidence/receipt_2.jpg" alt="Woodlawn Animal Hospital invoice 41823">
+      <figcaption>Woodlawn Animal Hospital, invoice 41823</figcaption>
+    </figure>
+    <div>
+      <h3>Woodlawn Animal Hospital &mdash; $284.50</h3>
+      <div class="line">26 June 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Matches</span></div>
+      <dl>
+        <dt>Invoice total</dt><dd>$284.50, balance due $0.00</dd>
+        <dt>Posted</dt><dd>$284.50</dd>
+        <dt>Patient</dt><dd>Frijol, beagle, 13 yrs, 27.10 lb</dd>
+        <dt>Lines</dt><dd>Senior exam $62.00, senior wellness blood panel $118.50, fine needle aspirate with cytology $86.00, nail trim $18.00</dd>
+      </dl>
+      <div class="note">Also matches the clinic's written estimate of 24 June ($266&ndash;$300 range) and their paid-in-full email the same morning.</div>
+    </div>
+  </div>
+
+  <div class="ev">
+    <figure>
+      <img src="evidence/cropped_receipt.png" alt="Hollenbeck Garden and Hardware receipt, 6 June 2026">
+      <figcaption>Hollenbeck, Wichita East &mdash; will call #5127</figcaption>
+    </figure>
+    <div>
+      <h3>Hollenbeck Garden &amp; Hardware &mdash; $46.00</h3>
+      <div class="line">6 June 2026 &middot; Company account &bull;&bull;&bull;&bull;0117 &middot; <span class="pill ok">Amount matches</span></div>
+      <dl>
+        <dt>Receipt total</dt><dd>$46.00 (subtotal $42.79 + tax $3.21)</dd>
+        <dt>Posted</dt><dd>$46.00</dd>
+        <dt>Items</dt><dd>Tomato cage 54in &times;4 @ $5.98, garden twine 200ft $3.69, plant labels 50pk $2.69, mechanical water timer $12.99</dd>
+        <dt>Auth</dt><dd>048213, Hollenbeck credit &bull;&bull;&bull;&bull;0117</dd>
+      </dl>
+      <div class="note warn">The <em>amount</em> is right, so the merchant did nothing wrong &mdash; but this purchase also appears in the Disputed tab, because it sits inside the $50 monthly allowance and no credit was ever applied against it.</div>
+    </div>
+  </div>
+
+  <div class="ev">
+    <figure>
+      <img src="evidence/northrock.jpg" alt="Northrock Lanes receipt, 7 May 2026">
+      <figcaption>Northrock Lanes, 7 May 2026</figcaption>
+    </figure>
+    <div>
+      <h3>Northrock Lanes &mdash; $46.00</h3>
+      <div class="line">7 May 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Matches</span></div>
+      <dl>
+        <dt>Receipt total</dt><dd>$46.00 (1 @ $46.00, no tax)</dd>
+        <dt>Posted</dt><dd>$46.00</dd>
+        <dt>Item</dt><dd>Thursday winter league banquet</dd>
+        <dt>Auth</dt><dd>590362, chip, card &bull;&bull;&bull;&bull;7742</dd>
+      </dl>
+      <div class="note">This is the one-off banquet, distinct from the $19.00 weekly league charges. Footer on the same slip advertises summer league sign-ups from 15 May, which accounts for the $28.00 on 4 June and the weekly $19.00 charges from 11 June on.</div>
+    </div>
+  </div>
+
+  <div class="ev">
+    <figure>
+      <img src="evidence/kohls_tender.jpg" alt="Kohl's receipt tender lines">
+      <figcaption>Kohl's tender lines &mdash; gift card $10.00, Visa $30.00</figcaption>
+    </figure>
+    <div>
+      <h3>Kohl's &mdash; $30.00 of the $40.00 is valid</h3>
+      <div class="line">11 July 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill">$10.00 disputed</span></div>
+      <dl>
+        <dt>Receipt total</dt><dd>$40.00 (subtotal $37.21 + tax $2.79)</dd>
+        <dt>Tendered</dt><dd>Gift card &bull;&bull;&bull;&bull;6093 $10.00 + Visa $30.00</dd>
+        <dt>Posted</dt><dd>$40.00 &mdash; $10.00 too much</dd>
+      </dl>
+      <div class="note warn">Listed here because the goods and the $40.00 total are legitimate and $30.00 of the charge stands. Only the $10.00 already covered by the gift card is disputed. Full receipt: <a href="evidence/kohls.jpg">kohls.jpg</a></div>
+    </div>
+  </div>
+
+  <div class="ev">
+    <figure>
+      <img src="evidence/carlos_eldorado.jpg" alt="Carlos O'Kelly's card slip and El Dorado State Park camping receipt">
+      <figcaption>Carlos O'Kelly's slip &amp; El Dorado State Park receipt</figcaption>
+    </figure>
+    <div>
+      <h3>El Dorado State Park &mdash; $186.00</h3>
+      <div class="line">27 June 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Matches</span></div>
+      <dl>
+        <dt>Receipt total</dt><dd>$186.00 (3 nights @ $62.00)</dd>
+        <dt>Posted</dt><dd>$186.00</dd>
+        <dt>Detail</dt><dd>Receipt 26-04173, campsite 41 loop C, arrive 25 June, depart 28 June, auth 418302</dd>
+      </dl>
+      <h3 style="margin-top:16px">Carlos O'Kelly's &mdash; $18.74</h3>
+      <div class="line">23 June 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Nothing owed</span></div>
+      <dl>
+        <dt>Slip</dt><dd>Amount $18.74 + tip $5.25, total written $23.99</dd>
+        <dt>Posted</dt><dd>$18.74 &mdash; $5.25 <em>less</em> than authorised</dd>
+        <dt>Detail</dt><dd>Check 2187, table 12, server Kayla, auth 084519</dd>
+      </dl>
+      <div class="note">The restaurant never captured the tip, so you were charged less than you signed for. In your favour &mdash; nothing to dispute, but worth knowing Kayla did not get the $5.25.</div>
+    </div>
+  </div>
+
+  <div class="ev">
+    <figure>
+      <img src="evidence/screenshot_2.png" alt="Tillie's Flower Shop receipt, order 26 3391">
+      <figcaption>Tillie's receipt &mdash; the second copy of order 26 3391</figcaption>
+    </figure>
+    <div>
+      <h3>Tillie's Flower Shop &mdash; $58.50 is the valid charge</h3>
+      <div class="line">8 May 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Original stands</span></div>
+      <dl>
+        <dt>Order</dt><dd>26 3391, spring mixed arrangement large $48.00 + delivery $10.50</dd>
+        <dt>Posted 8 May</dt><dd>$58.50 &mdash; matches the merchant's confirmation email</dd>
+        <dt>Posted 9 May</dt><dd>$58.00 &mdash; the duplicate, disputed</dd>
+      </dl>
+      <div class="note warn">Shown here so the pair is easy to see side by side. The 8 May charge of $58.50 is the real one and should be left alone; only the 9 May re-key of the same order number is disputed.</div>
+    </div>
+  </div>
+
+  <h2 class="sec">Backed by an emailed invoice or order confirmation</h2>
+
+  <div class="ev norec">
+    <div>
+      <h3>Wichita Foot &amp; Ankle &mdash; $385.00</h3>
+      <div class="line">8 May 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Matches</span></div>
+      <dl>
+        <dt>Document</dt><dd>Patient receipt (your .docx) <em>and</em> clinic email of 8 May &mdash; both say $385.00 paid, balance $0.00</dd>
+        <dt>Detail</dt><dd>Account 20417, Dr. Kavitha Ramaswamy, custom functional orthotics one pair $385.00, dispensing and fitting visit $0.00</dd>
+      </dl>
+      <div class="note">Not covered by your plan &mdash; patient responsibility per the written estimate of 24 April. The receipt notes it can be submitted for HSA or FSA reimbursement, which is worth doing if you have either.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>Scholfield Ford &mdash; $894.00</h3>
+      <div class="line">10 July 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Matches</span></div>
+      <dl>
+        <dt>Document</dt><dd>Repair order 5518824 &mdash; telephone estimate at 8:05 a.m. and closing invoice both at $894.00</dd>
+        <dt>Lines</dt><dd>Compressor assembly $512.00, receiver drier and orifice tube $74.00, refrigerant and evacuation $96.00, labour 3.4 hrs $212.00</dd>
+        <dt>Detail</dt><dd>2018 Ford Escape, odometer 141,932, released 2:04 p.m., 24 mo / 24,000 mi parts warranty</dd>
+      </dl>
+      <div class="note">Estimate and final invoice agree to the cent, and you approved it by phone before work started.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>Christian Brothers Automotive &mdash; $380.00 and $81.90</h3>
+      <div class="line">23 May &amp; 6 June 2026 &middot; <span class="pill ok">Amounts match</span></div>
+      <dl>
+        <dt>23 May</dt><dd>Invoice 42604, $380.00 &mdash; front ceramic pads $118.00, front rotors $142.00, labour 1.8 hrs $108.00, shop supplies $12.00</dd>
+        <dt>6 June</dt><dd>Invoice 43110, $81.90 &mdash; full synthetic oil and filter $69.90, shop supplies $12.00. Declined cabin air filter at $46.00</dd>
+      </dl>
+      <div class="note warn">Both amounts are correct, but note the posting: invoice 42604 says it was charged to the Visa ending 7742, while the $380.00 actually came out of your <b>savings account &bull;&bull;&bull;&bull;3114</b>. Not a merchant problem and nothing to dispute with the shop &mdash; but worth one call to INTRUST to ask why a card charge landed on savings.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>Woodlawn Animal Hospital &mdash; $46.80</h3>
+      <div class="line">2 July 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Matches</span></div>
+      <dl>
+        <dt>Document</dt><dd>Clinic emails of 30 June and 1 July, both quoting $46.80</dd>
+        <dt>Breakdown</dt><dd>Gabapentin 100 mg $32.00 + Dasuquin Advanced joint chew $14.80</dd>
+      </dl>
+      <div class="note">Frijol's monthly arthritis medication, a recurring $46.80. The 31 July recheck was free &mdash; covered by the June visit.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>Kesler Roofing &amp; Sheet Metal &mdash; $185.00</h3>
+      <div class="line">18 June 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Matches</span></div>
+      <dl>
+        <dt>Document</dt><dd>Kesler email of 18 June: &ldquo;The $185.00 inspection bills today and comes off the job if you hire us.&rdquo;</dd>
+        <dt>Scope</dt><dd>Decking report &mdash; shingle lifted at four spots, sheathing probed; deck sound, no decking needed. Separate proposal at $16,225.00 not accepted</dd>
+      </dl>
+      <div class="note">Follows the 30 May wind and hail loss (State Farm claim 16-9K84-703). The $185.00 is recoverable off the job if you use them &mdash; worth remembering if you book in March.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>Amazon &mdash; $37.62</h3>
+      <div class="line">8 July 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Matches</span></div>
+      <dl>
+        <dt>Order</dt><dd>114 2290745 8813302, placed 8 July</dd>
+        <dt>Lines</dt><dd>2 &times; clip-on 12 volt fan @ $14.99, 2 &times; cooling towel @ $3.82 &mdash; total $37.62</dd>
+      </dl>
+      <div class="note">Bought two days before the air conditioning failed on 10 July. Order total and posted amount agree exactly.</div>
+    </div>
+  </div>
+
+  <h2 class="sec">No receipt, but the diary accounts for it</h2>
+
+  <div class="ev norec">
+    <div>
+      <h3>Dillons Marketplace, 3707 N Woodlawn St &mdash; $310.00</h3>
+      <div class="line">16 May 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Explained</span></div>
+      <div class="note">This was the charge most worth a second look &mdash; roughly three times your usual grocery run, at a store that appears nowhere else in three months of records. Your calendar explains it: <b>&ldquo;Mom's 71st, here&rdquo;</b>, 16 May at 5410 E Bayley St, six family guests. A large one-off shop at a bigger Marketplace store on the day you hosted the party is consistent. No receipt exists, so if you do not remember the shop it is still worth pulling the itemised copy from the Dillons app before you let it go.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>GameStop, Towne East Square &mdash; $32.00</h3>
+      <div class="line">13 June 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Explained</span></div>
+      <div class="note">Same day as <b>&ldquo;Diego's birthday, 2:00 PM&rdquo;</b> &mdash; nine years old, Sedgwick County Park shelter 3. A $32.00 game as a present fits, and it is the only GameStop charge in the period.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>Hobby Lobby &mdash; $53.00</h3>
+      <div class="line">25 July 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Explained</span></div>
+      <div class="note">Your calendar for quilting that same morning reads <b>&ldquo;Rows one through four joined. Backing still to buy.&rdquo;</b> A $53.00 fabric purchase the day you noted you needed backing lines up.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>INTRUST Bank Arena &mdash; $15.00</h3>
+      <div class="line">20 June 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">Explained</span></div>
+      <div class="note">Los Tigres del Norte played the arena that night, doors 7:00 PM. The four tickets ($370.00, confirmation TM7K42QN8815) were bought back on 17 April and fall outside this window; the $15.00 on the night is parking or concessions.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>Northrock Lanes &mdash; $28.00, and Sam's Club &mdash; $50.00</h3>
+      <div class="line">4 June and 1 June 2026 &middot; Visa &bull;&bull;&bull;&bull;7742 &middot; <span class="pill ok">No concern</span></div>
+      <div class="note">Two small charges with no document behind them. Northrock $28.00 lands a week before <b>&ldquo;Bowling &mdash; summer league starts, eleven weeks&rdquo;</b> on 11 June and reads as league fees; the slip from 7 May advertises sign-ups from 15 May. Sam's Club $50.00 is a round number at a store you use routinely. Neither is out of pattern and neither is worth disputing, but both are listed so nothing is quietly dropped.</div>
+    </div>
+  </div>
+
+  <h2 class="sec">Also checked, no action needed</h2>
+
+  <div class="ev norec">
+    <div>
+      <h3>Two things that did <em>not</em> hit your card</h3>
+      <div class="note">Frontier Heating &amp; Air quoted <b>$215.00</b> for the capacitor plus <b>$95.00</b> to rinse the coil on 11 July and you approved both, but no Frontier charge has posted at all. Northrock also holds a <b>$145.00</b> party package with &ldquo;fifty down&rdquo;, and no deposit has posted. Both are in your favour, but expect them to appear later &mdash; they are not missing money, just money not yet taken.</div>
+    </div>
+  </div>
+
+  <div class="ev norec">
+    <div>
+      <h3>Recurring items, left out on purpose</h3>
+      <div class="note">Subscriptions, utilities, insurance, fuel, pharmacy copays, counselling copays, the weekly $19.00 bowling, payroll, transfers and the biweekly Amazon Fresh shops were all reviewed and all run true to pattern. The State Farm jump from $132.44 to $214.86 in June is explained by Tomas being added to the auto policy on 22 May. You said you know your regular spending, so none of it is itemised here.</div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+(function(){
+  // Tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){
+        var sel = (t === tab);
+        t.setAttribute('aria-selected', sel ? 'true' : 'false');
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !sel;
+      });
+    });
+  });
+
+  // Dispute draft toggles
+  document.querySelectorAll('.draftbtn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var row = document.getElementById(btn.dataset.target);
+      var show = row.hidden;
+      row.hidden = !show;
+      btn.textContent = show ? 'Hide draft' : 'Dispute draft';
+      // keep sibling buttons pointing at the same draft in sync
+      document.querySelectorAll('.draftbtn[data-target="'+btn.dataset.target+'"]').forEach(function(b){
+        if (b !== btn) b.textContent = btn.textContent;
+      });
+    });
+  });
+
+  // Date filter
+  var from = document.getElementById('from'),
+      to = document.getElementById('to'),
+      count = document.getElementById('count');
+
+  function apply(){
+    var f = from.value, t = to.value, shown = 0, total = 0;
+    document.querySelectorAll('#rows tr.charge').forEach(function(tr){
+      var d = tr.dataset.date;
+      total++;
+      var ok = (!f || d >= f) && (!t || d <= t);
+      tr.hidden = !ok;
+      if (ok) shown++; else {
+        // collapse any open draft belonging to a hidden row
+        var btn = tr.querySelector('.draftbtn');
+        if (btn) {
+          var dr = document.getElementById(btn.dataset.target);
+          // only hide if no other visible row uses this draft
+          var others = Array.prototype.slice.call(
+            document.querySelectorAll('.draftbtn[data-target="'+btn.dataset.target+'"]'));
+          var anyVisible = others.some(function(b){ return !b.closest('tr.charge').hidden; });
+          if (!anyVisible && dr) {
+            dr.hidden = true;
+            others.forEach(function(b){ b.textContent = 'Dispute draft'; });
+          }
+        }
+      }
+    });
+    count.textContent = 'Showing ' + shown + ' of ' + total + ' flagged charges';
+  }
+
+  from.addEventListener('change', apply);
+  to.addEventListener('change', apply);
+  document.getElementById('clear').addEventListener('click', function(){
+    from.value = ''; to.value = ''; apply();
+  });
+  apply();
+})();
+</script>
+
+</div>
+</body>
+</html>

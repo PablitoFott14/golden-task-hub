@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charge Review — May to July 2026</title>
+<style>
+  :root{
+    --bg:#f4f3ef; --ink:#22201c; --muted:#6d685f; --line:#ddd9d0;
+    --accent:#7a4a52; --ok:#2f6b46; --okbg:#eef5f0;
+    --warn:#9a3d33; --warnbg:#fbeeec; --co:#8a6a1f; --cobg:#fdf7e8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  header{background:#fff;border-bottom:1px solid var(--line);padding:22px 28px}
+  header h1{margin:0;font-size:21px;letter-spacing:.2px}
+  header p{margin:5px 0 0;color:var(--muted);font-size:13.5px}
+  .wrap{max-width:1180px;margin:0 auto;padding:22px 28px 80px}
+
+  .tabs{display:flex;gap:6px;margin:18px 0 0;border-bottom:1px solid var(--line)}
+  .tab{appearance:none;border:1px solid var(--line);border-bottom:none;background:#ebe8e1;
+    color:var(--muted);padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;
+    border-radius:7px 7px 0 0;position:relative;top:1px}
+  .tab[aria-selected="true"]{background:#fff;color:var(--ink)}
+  .panel{display:none;background:#fff;border:1px solid var(--line);border-top:none;
+    padding:24px;border-radius:0 0 8px 8px}
+  .panel.active{display:block}
+
+  .filter{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;
+    background:#faf9f6;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:12px}
+  .filter label{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.7px;
+    color:var(--muted);font-weight:700;margin-bottom:4px}
+  .filter input{border:1px solid var(--line);border-radius:5px;padding:7px 9px;font:inherit;background:#fff}
+  .filter button{border:1px solid var(--line);background:#fff;border-radius:5px;padding:8px 14px;
+    font:inherit;cursor:pointer}
+  .filter button:hover{background:#f0eee8}
+  .count{margin-left:auto;font-size:13px;color:var(--muted)}
+  .totals{background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px 16px;
+    margin-bottom:24px;font-size:14px}
+  .totals b{color:var(--warn)}
+
+  .grouphead{font-size:11.5px;text-transform:uppercase;letter-spacing:.9px;color:var(--muted);
+    font-weight:700;margin:28px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+
+  .row{border:1px solid var(--line);border-radius:8px;margin-bottom:18px;overflow:hidden;background:#fff}
+  .row.dispute{border-left:4px solid var(--warn)}
+  .row.company{border-left:4px solid var(--co)}
+  .row.ok{border-left:4px solid var(--ok)}
+  .row > .head{padding:16px 18px}
+  .row .title{font-size:16.5px;font-weight:700;margin:0 0 3px}
+  .row .sub{color:var(--muted);font-size:13px;margin:0}
+
+  table.meta{width:100%;border-collapse:collapse;margin:13px 0 0;font-size:13.5px}
+  table.meta th{text-align:left;font-weight:600;color:var(--muted);font-size:11.5px;
+    text-transform:uppercase;letter-spacing:.6px;padding:4px 14px 4px 0;white-space:nowrap;vertical-align:top;width:1%}
+  table.meta td{padding:4px 0;vertical-align:top}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px}
+  .amt{font-weight:700}
+  .amt .bad{color:var(--warn)}
+
+  .why{background:var(--warnbg);border-top:1px solid var(--line);padding:15px 18px;font-size:14px}
+  .row.company .why{background:var(--cobg)}
+  .row.ok .why{background:var(--okbg)}
+
+  .ledger{width:100%;border-collapse:collapse;margin:11px 0 4px;font-size:13px;background:#fff;
+    border:1px solid var(--line)}
+  .ledger th,.ledger td{padding:5px 9px;border-bottom:1px solid var(--line);text-align:left}
+  .ledger th{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);background:#faf9f6}
+  .ledger td.n{text-align:right;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .ledger tr.flag td{background:#fbeeec;font-weight:600}
+  .ledger tr.tot td{font-weight:700;border-bottom:none;border-top:2px solid var(--line)}
+
+  .actions{padding:12px 18px;border-top:1px solid var(--line);background:#faf9f6;
+    display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .btn{border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:5px;
+    padding:8px 15px;font:inherit;font-weight:600;cursor:pointer}
+  .btn.alt{background:#fff;color:var(--ink);border-color:var(--line)}
+  .btn:hover{filter:brightness(1.08)}
+  .sendto{font-size:12.5px;color:var(--muted)}
+
+  .fold{display:none}
+  .fold.open{display:block}
+  .draft{margin:12px 18px 18px;border:1px solid var(--line);border-radius:7px;background:#fdfcfa}
+  .draft .dh{padding:10px 14px;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .draft pre{margin:0;padding:16px;white-space:pre-wrap;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.6}
+
+  /* receipts, readable at full size */
+  .rcpt{padding:4px 18px 20px}
+  .rcpt .cap{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;
+    font-weight:700;margin:10px 0 8px}
+  .rcpt .sheet{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:4px;
+    padding:10px;box-shadow:0 1px 4px rgba(0,0,0,.09)}
+  .rcpt img{display:block;max-width:100%;cursor:zoom-in}
+  .rcpt img.paper{width:420px}
+  .rcpt img.wide{width:640px}
+  .rcpt img.slip{width:480px}
+  .hint{font-size:12px;color:var(--muted);margin:8px 0 0}
+
+  /* transcribed document receipt */
+  .doc{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px 26px;
+    max-width:640px;box-shadow:0 1px 4px rgba(0,0,0,.09);font-size:13.5px}
+  .doc h4{margin:0;font-size:16px;letter-spacing:.3px}
+  .doc .org{color:var(--muted);font-size:12px;margin:2px 0 14px}
+  .doc table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+  .doc table th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;
+    color:var(--muted);border-bottom:1px solid var(--line);padding:4px 6px 4px 0}
+  .doc table td{padding:5px 6px 5px 0;border-bottom:1px solid #f0ede7;vertical-align:top}
+  .doc table td.n{text-align:right;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .doc .kv{display:flex;gap:10px;font-size:12.5px;color:var(--muted);margin:2px 0}
+  .doc .kv b{color:var(--ink);font-weight:600}
+  .doc .fine{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.5}
+
+  /* lightbox */
+  #lb{display:none;position:fixed;inset:0;background:rgba(20,18,16,.92);z-index:99;
+    overflow:auto;padding:24px;text-align:center;cursor:zoom-out}
+  #lb.open{display:block}
+  #lb img{max-width:none;background:#fff;border-radius:4px}
+  #lb .x{position:fixed;top:14px;right:22px;color:#fff;font-size:30px;line-height:1;cursor:pointer}
+
+  .empty{color:var(--muted);font-style:italic;padding:14px 0}
+  ul.tight{margin:7px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
+</style>
+</head>
+<body>
+<header>
+  <h1>Charge review — May 1 to July 31, 2026</h1>
+  <p>Marisela Ybarra · the eight receipts, read against INTRUST Visa ending 7742 and Hollenbeck employee account ending 0117</p>
+</header>
+
+<div class="wrap">
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-panel="p-disputes">Disputed charges</button>
+    <button class="tab" role="tab" aria-selected="false" data-panel="p-verified">Checked &amp; correct</button>
+  </div>
+
+  <!-- ============ TAB 1 ============ -->
+  <section class="panel active" id="p-disputes" role="tabpanel">
+
+    <div class="filter">
+      <div><label for="from">From date</label><input type="date" id="from" value="2026-05-01"></div>
+      <div><label for="to">To date</label><input type="date" id="to" value="2026-07-31"></div>
+      <div><button id="apply">Apply filter</button></div>
+      <div><button id="reset">Show all</button></div>
+      <div class="count" id="count"></div>
+    </div>
+    <div class="totals" id="totals"></div>
+
+    <div class="grouphead" data-g="card">Card charges — refund to request from the merchant</div>
+
+    <!-- Tillie's -->
+    <article class="row dispute" data-date="2026-05-09" data-group="card" data-claim="58.00">
+      <div class="head">
+        <p class="title">Tillie's Flower Shop, E Central Ave</p>
+        <p class="sub">Order 26 3391 charged twice</p>
+        <table class="meta">
+          <tr><th>Date</th><td>May 9, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">1829403a7526c738f90a1b2c</td></tr>
+          <tr><th>Amount</th><td class="amt">$58.00 charged · <span class="bad">$58.00 owed back</span></td></tr>
+          <tr><th>Account</th><td>INTRUST Visa ending <b>7742</b></td></tr>
+          <tr><th>Order ref</th><td>26 3391</td></tr>
+          <tr><th>Item</th><td>Spring mixed arrangement, large — $48.00, delivery $10.00</td></tr>
+        </table>
+      </div>
+      <div class="why">
+        One arrangement, one delivery, two charges against the same order number.
+        <table class="ledger">
+          <tr><th>Posted</th><th>Document</th><th class="n">Arrangement</th><th class="n">Delivery</th><th class="n">Charged</th></tr>
+          <tr><td>May 8</td><td>Shop's order confirmation, order 26 3391</td><td class="n">48.00</td><td class="n">10.50</td><td class="n">58.50</td></tr>
+          <tr class="flag"><td>May 9</td><td>Receipt below, order 26 3391</td><td class="n">48.00</td><td class="n">10.00</td><td class="n">58.00</td></tr>
+        </table>
+        The delivery line differs by 50¢ between the two, which marks the May 9 charge as a re-key of the same
+        order rather than a second purchase. The May 8 charge of $58.50 stands; the $58.00 is owed back.
+      </div>
+      <div class="actions">
+        <button class="btn" data-fold="f-tillies">Dispute draft</button>
+        <button class="btn alt" data-fold="r-tillies">View receipt</button>
+        <span class="sendto">Goes to orders@tilliesflowers.com</span>
+      </div>
+      <div class="fold" id="r-tillies"><div class="rcpt">
+        <div class="cap">Receipt as supplied</div>
+        <div class="sheet"><img class="wide" src="receipts/tillies.png" alt="Tillie's Flower Shop receipt, order 26 3391"></div>
+        <p class="hint">Click the receipt to enlarge.</p>
+      </div></div>
+      <div class="fold" id="f-tillies"><div class="draft">
+        <div class="dh">In Drafts · To orders@tilliesflowers.com · Subject: Duplicate charge on order 26 3391 - $58.00 on May 9, 2026</div>
+<pre>Hello,
+
+I am writing about order 26 3391, the large spring mixed arrangement delivered Saturday, May 9, 2026. I believe I was charged twice for this single order and I would like the second charge refunded.
+
+Order reference: 26 3391
+Item: Spring mixed arrangement, large ($48.00) plus delivery
+Card: Visa ending 7742
+
+What my card statement shows:
+  - May 8, 2026 - $58.50 - this matches your order confirmation email of May 8, which lists the arrangement at $48.00, delivery at $10.50, and an order total of $58.50.
+  - May 9, 2026 - $58.00 - this matches the store receipt I have for the same order number, 26 3391, from the E Central Ave location, which lists the arrangement at $48.00, delivery at $10.00, and a total of $58.00.
+
+Both charges reference the same order and the same single delivery. Only one arrangement was ordered and only one was delivered.
+
+Charge I am disputing: $58.00, dated May 9, 2026, Visa ending 7742.
+Reason: duplicate billing of a single order. The $58.50 charge of May 8 is the correct one and I am not disputing it.
+
+Please confirm the $58.00 refund and let me know if you need copies of the confirmation email or the receipt.
+
+Thank you,
+Marisela Ybarra
+5410 E Bayley St, Wichita, KS 67218
+(316) 555-0134
+marisela.ybarra@gmail.com</pre>
+      </div></div>
+    </article>
+
+    <!-- Hobby Lobby -->
+    <article class="row dispute" data-date="2026-06-13" data-group="card" data-claim="17.20">
+      <div class="head">
+        <p class="title">Hobby Lobby, 7700 E Kellogg Dr</p>
+        <p class="sub">40% discount rang up as $0.00 on two of four cotton items</p>
+        <table class="meta">
+          <tr><th>Date</th><td>June 13, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">39d5a70c164ef82b9507c3d1</td></tr>
+          <tr><th>Amount</th><td class="amt">$71.00 charged · <span class="bad">$17.20 owed back</span></td></tr>
+          <tr><th>Account</th><td>INTRUST Visa ending <b>7742</b></td></tr>
+          <tr><th>Order ref</th><td>ST 417, REG 03, TRN 6624, CSH 1182 · AUTH 207419</td></tr>
+          <tr><th>Items</th><td>Print quilt cotton 3yd, solid quilt cotton 1.5yd, fat quarter bundle 10pc, quilt panel 44in</td></tr>
+        </table>
+      </div>
+      <div class="why">
+        All four items are cotton and all four printed a 40% OFF line. Two of them took nothing off.
+        <table class="ledger">
+          <tr><th>SKU</th><th>Item</th><th class="n">Price</th><th class="n">40% off taken</th><th class="n">Should be</th></tr>
+          <tr><td>1438277</td><td>CTN PRINT QUILT 44IN, 3.000 yd @ 8.99</td><td class="n">26.97</td><td class="n">−10.79</td><td class="n">−10.79</td></tr>
+          <tr><td>2206151</td><td>CTN SOLID QUILT 44IN, 1.500 yd @ 10.99</td><td class="n">16.49</td><td class="n">−6.60</td><td class="n">−6.60</td></tr>
+          <tr class="flag"><td>0925610</td><td>CTN FAT QTR BUNDLE 10PC</td><td class="n">27.99</td><td class="n">0.00</td><td class="n">−11.20</td></tr>
+          <tr class="flag"><td>0418803</td><td>CTN QUILT PANEL 44IN</td><td class="n">11.99</td><td class="n">0.00</td><td class="n">−4.80</td></tr>
+          <tr><td colspan="2">Subtotal</td><td class="n"></td><td class="n">66.05</td><td class="n">50.05</td></tr>
+          <tr><td colspan="2">Sales tax 7.500%</td><td class="n"></td><td class="n">4.95</td><td class="n">3.75</td></tr>
+          <tr class="tot"><td colspan="2">Total</td><td class="n"></td><td class="n">71.00</td><td class="n">53.80</td></tr>
+        </table>
+        The receipt's own TOTAL SAVINGS line reads $17.39, which is the first two items' discounts only.
+        Difference owed: <b>$17.20</b> — $16.00 of missed discount plus $1.20 of tax charged on it.
+      </div>
+      <div class="actions">
+        <button class="btn" data-fold="f-hobby">Dispute draft</button>
+        <button class="btn alt" data-fold="r-hobby">View receipt</button>
+        <span class="sendto">No address on file — add Hobby Lobby customer service, or take it to the E Kellogg service desk</span>
+      </div>
+      <div class="fold" id="r-hobby"><div class="rcpt">
+        <div class="cap">Receipt as supplied</div>
+        <div class="sheet"><img class="paper" src="receipts/hobbylobby.png" alt="Hobby Lobby receipt 06/13/26"></div>
+        <p class="hint">Click to enlarge. The two "40% OFF … 0.00-T" lines sit under the fat quarter bundle and the quilt panel.</p>
+      </div></div>
+      <div class="fold" id="f-hobby"><div class="draft">
+        <div class="dh">In Drafts · Recipient blank · Subject: Hobby Lobby receipt 06/13/26 - 40% discount not applied to two cotton items</div>
+<pre>Hello,
+
+I am requesting a refund of $17.20 on a purchase at the Hobby Lobby at 7700 E Kellogg Dr, Wichita, KS 67207. The 40% cotton discount was applied to two items on the receipt and rang up as $0.00 on the other two.
+
+Transaction: ST 417, REG 03, TRN 6624, CSH 1182, 06/13/26 09:14 AM
+Card: Visa ending 7742, AUTH 207419
+Amount charged: $71.00
+
+The receipt reads:
+
+  1438277  CTN PRINT QUILT 44IN, 3.000 YD @ 8.99      26.97
+           40% OFF                                   -10.79
+  2206151  CTN SOLID QUILT 44IN, 1.500 YD @ 10.99     16.49
+           40% OFF                                    -6.60
+  0925610  CTN FAT QTR BUNDLE 10PC                    27.99
+           40% OFF                                     0.00
+  0418803  CTN QUILT PANEL 44IN                       11.99
+           40% OFF                                     0.00
+
+  SUBTOTAL 66.05, TAX 1 7.500% 4.95, TOTAL 71.00, TOTAL SAVINGS 17.39
+
+All four items are cotton quilting goods and all four printed a 40% OFF line. On the fat quarter bundle and the quilt panel that line came through at $0.00 and I was charged full shelf price. The receipt's own savings total of $17.39 accounts for only the first two items.
+
+The discount due on the two remaining items:
+
+  Fat quarter bundle, 40% of 27.99   = 11.20
+  Quilt panel, 40% of 11.99          =  4.80
+  Discount not applied               = 16.00
+  Sales tax on that at 7.500%        =  1.20
+  Refund due                         = 17.20
+
+The correct total was $50.05 plus $3.75 tax, or $53.80, against the $71.00 charged.
+
+Please refund $17.20 to the Visa ending 7742. I have the original receipt and can send a copy or bring it to the store.
+
+Thank you,
+Marisela Ybarra
+5410 E Bayley St, Wichita, KS 67218
+(316) 555-0134
+marisela.ybarra@gmail.com</pre>
+      </div></div>
+    </article>
+
+    <!-- Carlos O'Kelly's -->
+    <article class="row dispute" data-date="2026-06-23" data-group="card" data-claim="4.75">
+      <div class="head">
+        <p class="title">Carlos O'Kelly's Mexican Cafe, Wichita</p>
+        <p class="sub">Tip settled at $10.00 against a slip signed for $5.25</p>
+        <table class="meta">
+          <tr><th>Date</th><td>June 23, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">9c559ea2d094608295fbb0da</td></tr>
+          <tr><th>Amount</th><td class="amt">$18.74 charged · <span class="bad">$4.75 owed back</span></td></tr>
+          <tr><th>Account</th><td>INTRUST Visa ending <b>7742</b></td></tr>
+          <tr><th>Order ref</th><td>Check 2187, Table 12, server Kayla · AUTH 084519</td></tr>
+          <tr><th>Item</th><td>Meal, 12:47 PM — base $8.74</td></tr>
+        </table>
+      </div>
+      <div class="why">
+        The printed base on the signed customer copy is <b>$8.74</b>, not $18.74. With the $5.25 tip written in
+        by hand, the total signed for is <b>$13.99</b> — and the handwritten total on the slip reads exactly that.
+        <table class="ledger">
+          <tr><th>Line on the slip</th><th class="n">Amount</th></tr>
+          <tr><td>AMOUNT (printed)</td><td class="n">8.74</td></tr>
+          <tr><td>TIP (handwritten)</td><td class="n">5.25</td></tr>
+          <tr><td>TOTAL (handwritten)</td><td class="n">13.99</td></tr>
+          <tr class="flag"><td>Settled to the card</td><td class="n">18.74</td></tr>
+          <tr class="tot"><td>Owed back</td><td class="n">4.75</td></tr>
+        </table>
+        $18.74 is the $8.74 base with a <b>$10.00</b> tip applied — a round figure keyed in place of the $5.25
+        that was written and initialled.
+      </div>
+      <div class="actions">
+        <button class="btn" data-fold="f-carlos">Dispute draft</button>
+        <button class="btn alt" data-fold="r-carlos">View receipt</button>
+        <span class="sendto">No address on file — add Carlos O'Kelly's Wichita location</span>
+      </div>
+      <div class="fold" id="r-carlos"><div class="rcpt">
+        <div class="cap">Receipt as supplied — customer copy, straightened</div>
+        <div class="sheet"><img class="slip" src="receipts/carlos.png" alt="Carlos O'Kelly's signed customer copy"></div>
+        <p class="hint">Click to enlarge. The printed amount at the right reads $8.74; the handwritten total reads 13.99.</p>
+      </div></div>
+      <div class="fold" id="f-carlos"><div class="draft">
+        <div class="dh">In Drafts · Recipient blank · Subject: Refund request - check 2187, June 23 2026, tip charged above the amount authorized</div>
+<pre>Hello,
+
+I am requesting a refund of $4.75 on a card charge from your Wichita location on June 23, 2026. The tip settled was higher than the one I wrote and signed for.
+
+Check: 2187, Table 12
+Date and time: 06/23/2026, 12:47 PM
+Server: Kayla
+Card: Visa ending 7742, CHIP, AUTH 084519
+
+The customer copy I signed reads:
+
+  AMOUNT   $8.74
+  TIP      $5.25
+  TOTAL   $13.99
+
+$18.74 posted to the card. That is the $8.74 base with a $10.00 tip against it, not the $5.25 I authorized.
+
+  Charged:    $18.74
+  Authorized: $13.99
+  Refund due:  $4.75
+
+Please refund $4.75 to the Visa ending 7742. I have the signed customer copy and can send a photograph of it.
+
+Thank you,
+Marisela Ybarra
+5410 E Bayley St, Wichita, KS 67218
+(316) 555-0134
+marisela.ybarra@gmail.com</pre>
+      </div></div>
+    </article>
+
+    <!-- El Dorado -->
+    <article class="row dispute" data-date="2026-06-27" data-group="card" data-claim="62.00">
+      <div class="head">
+        <p class="title">El Dorado State Park</p>
+        <p class="sub">Three nights billed, two nights occupied</p>
+        <table class="meta">
+          <tr><th>Date</th><td>June 27, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">b60e35c1d78f2a940b6e15c3</td></tr>
+          <tr><th>Amount</th><td class="amt">$186.00 charged · <span class="bad">$62.00 owed back</span></td></tr>
+          <tr><th>Account</th><td>INTRUST Visa ending <b>7742</b></td></tr>
+          <tr><th>Order ref</th><td>Receipt 26-04173, operator 02 · AUTH 418302</td></tr>
+          <tr><th>Item</th><td>Campsite 41, Loop C — 3 nights @ $62.00</td></tr>
+        </table>
+      </div>
+      <div class="why">
+        The receipt records the stay as <b>arrive 06/25/2026, depart 06/28/2026 — 3 nights</b>. The site was not
+        occupied on the night of the 25th.
+        <ul class="tight">
+          <li><b>Thu 06/25</b> — an office day at Wichita East, 3455 N Rock Rd, in Wichita all day and that evening.</li>
+          <li><b>Fri 06/26</b> — a 9:00 a.m. appointment in Wichita, the car loaded that afternoon, and out to the
+          park at 17:30. The trip itself is recorded as "two nights, Friday evening 2026-06-26 to Sunday
+          afternoon 2026-06-28".</li>
+          <li>The receipt was printed at 10:37 a.m. on the 27th — the morning after arrival.</li>
+        </ul>
+        <table class="ledger">
+          <tr><th></th><th class="n">Nights</th><th class="n">Rate</th><th class="n">Amount</th></tr>
+          <tr class="flag"><td>Billed</td><td class="n">3</td><td class="n">62.00</td><td class="n">186.00</td></tr>
+          <tr><td>Occupied</td><td class="n">2</td><td class="n">62.00</td><td class="n">124.00</td></tr>
+          <tr class="tot"><td>Owed back</td><td class="n"></td><td class="n"></td><td class="n">62.00</td></tr>
+        </table>
+      </div>
+      <div class="actions">
+        <button class="btn" data-fold="f-eldo">Dispute draft</button>
+        <button class="btn alt" data-fold="r-eldo">View receipt</button>
+        <span class="sendto">No address on file — park office, 618 NE Bluestem Rd, El Dorado, KS 67042</span>
+      </div>
+      <div class="fold" id="r-eldo"><div class="rcpt">
+        <div class="cap">Receipt as supplied — straightened</div>
+        <div class="sheet"><img class="slip" src="receipts/eldorado.png" alt="El Dorado State Park camping receipt 26-04173"></div>
+        <p class="hint">Click to enlarge. Arrive and depart dates sit on the line above the campsite.</p>
+      </div></div>
+      <div class="fold" id="f-eldo"><div class="draft">
+        <div class="dh">In Drafts · Recipient blank · Subject: Camping receipt 26-04173, site 41 Loop C - billed 3 nights, stayed 2</div>
+<pre>Hello,
+
+I am requesting a refund of $62.00 on camping receipt 26-04173. I was billed for three nights at campsite 41 and occupied the site for two.
+
+Receipt: 26-04173, printed 06/27/2026 10:37 AM, operator 02
+Registered to: Ybarra, Marisela
+Site: Campsite 41, Loop C
+Card: Visa ending 7742, AUTH 418302
+Amount charged: $186.00
+
+The receipt records the stay as arriving 06/25/2026 and departing 06/28/2026, 3 nights at $62.00.
+
+I arrived on the evening of Friday, June 26. On Thursday the 25th I was in Wichita the whole day and evening, at my office at 3455 N Rock Rd, and the site was not occupied that night. On the Friday I had a 9:00 AM appointment in Wichita, loaded the car that afternoon and reached the park in the evening. I departed Sunday the 28th as recorded. That is two nights, Friday the 26th to Sunday the 28th.
+
+  Billed:   3 nights @ $62.00 = $186.00
+  Occupied: 2 nights @ $62.00 = $124.00
+  Refund due                  =  $62.00
+
+Please refund $62.00 to the Visa ending 7742.
+
+Thank you,
+Marisela Ybarra
+5410 E Bayley St, Wichita, KS 67218
+(316) 555-0134
+marisela.ybarra@gmail.com</pre>
+      </div></div>
+    </article>
+
+    <!-- Kohl's -->
+    <article class="row dispute" data-date="2026-07-11" data-group="card" data-claim="10.00">
+      <div class="head">
+        <p class="title">Kohl's, 6341 E Kellogg Dr</p>
+        <p class="sub">Gift card amount billed to the Visa as well</p>
+        <table class="meta">
+          <tr><th>Date</th><td>July 11, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">a1b82c930ebf50c18293a4b5</td></tr>
+          <tr><th>Amount</th><td class="amt">$40.00 charged · <span class="bad">$10.00 owed back</span></td></tr>
+          <tr><th>Account</th><td>INTRUST Visa ending <b>7742</b></td></tr>
+          <tr><th>Order ref</th><td>Store 1374, REG 015, TRAN 6703 · AUTH 663052</td></tr>
+          <tr><th>Items</th><td>Big One plush throw $19.99, LC gold hoop earrings $8.80, soy jar candle 11oz $14.99</td></tr>
+        </table>
+      </div>
+      <div class="why">
+        The pricing on the receipt is correct throughout — throw reg $39.99 on sale at $19.99, earrings reg
+        $22.00 at 60% off, three 15% coupons of $3.00, $1.32 and $2.25, subtotal $37.21, tax $2.79, total $40.00,
+        savings $39.77. The tender split is where it goes wrong.
+        <table class="ledger">
+          <tr><th>Tender</th><th class="n">Amount</th></tr>
+          <tr><td>Kohl's gift card ending 6093 — remaining balance after: 0.00</td><td class="n">10.00</td></tr>
+          <tr><td>Visa ending 7742, CHIP, AUTH 663052</td><td class="n">30.00</td></tr>
+          <tr class="flag"><td>Posted to the Visa</td><td class="n">40.00</td></tr>
+          <tr class="tot"><td>Owed back</td><td class="n">10.00</td></tr>
+        </table>
+        The gift card was drawn to zero and the full $40.00 went on the card, so that $10.00 was paid twice.
+      </div>
+      <div class="actions">
+        <button class="btn" data-fold="f-kohls">Dispute draft</button>
+        <button class="btn alt" data-fold="r-kohls">View receipt</button>
+        <span class="sendto">No address on file — add Kohl's customer service, or INTRUST's card disputes desk</span>
+      </div>
+      <div class="fold" id="r-kohls"><div class="rcpt">
+        <div class="cap">Receipt as supplied — straightened</div>
+        <div class="sheet"><img class="paper" src="receipts/kohls.png" alt="Kohl's receipt 07/11/26"></div>
+        <p class="hint">Click to enlarge. The two tender lines are below the total.</p>
+      </div></div>
+      <div class="fold" id="f-kohls"><div class="draft">
+        <div class="dh">In Drafts · Recipient blank · Subject: Incorrect card charge - Kohl's E Kellogg Dr, July 11 2026, $10.00 overcharge</div>
+<pre>Hello,
+
+I am requesting a refund of $10.00 on a purchase made at Kohl's, 6341 E Kellogg Dr, Wichita, KS 67207, on July 11, 2026. The full purchase total was billed to my card although part of it was settled with a Kohl's gift card.
+
+Transaction: Store 1374, REG 015, TRAN 6703, 07/11/26 12:41 PM
+Card: Visa ending 7742, AUTH 663052
+Items: 3 - Big One plush throw, LC gold hoop earrings, 11oz soy jar candle
+Purchase total: $40.00
+
+The tender lines on the receipt read:
+
+  KOHL'S GIFT CARD ending 6093        10.00   (remaining balance 0.00)
+  VISA ending 7742, CHIP              30.00
+
+$40.00 posted to the Visa on July 11, 2026.
+
+The gift card was drawn down to a zero balance and the same $10.00 was also charged to the card, so it has been paid twice. The remaining $30.00 is correct.
+
+Please refund $10.00 to the Visa ending 7742. I have the itemized receipt showing both tender lines and can send a copy.
+
+Thank you,
+Marisela Ybarra
+5410 E Bayley St, Wichita, KS 67218
+(316) 555-0134
+marisela.ybarra@gmail.com</pre>
+      </div></div>
+    </article>
+
+    <div class="grouphead" data-g="co">Company purchases, employee account 0117 — uncredited against the $50 monthly allowance</div>
+
+    <article class="row company" data-date="2026-05-02" data-group="co" data-claim="50.00">
+      <div class="head">
+        <p class="title">Hollenbeck Garden &amp; Hardware, Derby</p>
+        <p class="sub">May — $88.42 across the month, above the cap</p>
+        <table class="meta">
+          <tr><th>Date</th><td>May 2, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">af238e10c96b47d5e802b163</td></tr>
+          <tr><th>Amount</th><td class="amt">$61.00 charged · <span class="bad">$50.00 owed for the month</span></td></tr>
+          <tr><th>Account</th><td>Hollenbeck employee account ending <b>0117</b></td></tr>
+        </table>
+      </div>
+      <div class="why">With the May 31 charge, May comes to $88.42. The allowance covers $50.00 of it; the
+      remaining $38.42 sits above the cap and is not claimable. No credit posted for any part of it.</div>
+      <div class="actions">
+        <button class="btn" data-fold="f-k1">Dispute draft</button>
+        <span class="sendto">Goes to krutledge@hollenbeckgh.com</span>
+      </div>
+      <div class="fold" id="f-k1"></div>
+    </article>
+
+    <article class="row company" data-date="2026-05-31" data-group="co" data-claim="0">
+      <div class="head">
+        <p class="title">Hollenbeck Garden &amp; Hardware</p>
+        <p class="sub">May — second charge of the month</p>
+        <table class="meta">
+          <tr><th>Date</th><td>May 31, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">f61d9b0a3c7e254801fb6d93</td></tr>
+          <tr><th>Amount</th><td class="amt">$27.42 charged · nothing further claimable</td></tr>
+          <tr><th>Account</th><td>Hollenbeck employee account ending <b>0117</b></td></tr>
+        </table>
+      </div>
+      <div class="why">May's $50.00 allowance is already fully claimed against the May 2 charge, so this one adds
+      nothing to the amount owed. Listed because it is part of the $88.42 month.</div>
+      <div class="actions">
+        <button class="btn" data-fold="f-k2">Dispute draft</button>
+        <span class="sendto">Goes to krutledge@hollenbeckgh.com</span>
+      </div>
+      <div class="fold" id="f-k2"></div>
+    </article>
+
+    <article class="row company" data-date="2026-06-06" data-group="co" data-claim="46.00">
+      <div class="head">
+        <p class="title">Hollenbeck Garden &amp; Hardware, Wichita East</p>
+        <p class="sub">June — $46.00, entirely within the allowance</p>
+        <table class="meta">
+          <tr><th>Date</th><td>June 6, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">18c5d7a9204ef3b61c9d0e75</td></tr>
+          <tr><th>Amount</th><td class="amt">$46.00 charged · <span class="bad">$46.00 owed</span></td></tr>
+          <tr><th>Account</th><td>Hollenbeck employee account ending <b>0117</b></td></tr>
+          <tr><th>Order ref</th><td>REG 02, TRN 1187, CSH 14 · will call #5127 · AUTH 048213</td></tr>
+          <tr><th>Items</th><td>4 × tomato cage 54in $23.92, garden twine 200ft $3.69, plant labels 50pk $2.69, mechanical water timer $12.49</td></tr>
+        </table>
+      </div>
+      <div class="why">$42.79 plus $3.21 tax, 7 items sold, tendered to Hollenbeck credit ending 0117. The whole
+      month sits inside the $50 allowance and no credit was posted against it.</div>
+      <div class="actions">
+        <button class="btn" data-fold="f-k3">Dispute draft</button>
+        <button class="btn alt" data-fold="r-holl">View receipt</button>
+        <span class="sendto">Goes to krutledge@hollenbeckgh.com</span>
+      </div>
+      <div class="fold" id="r-holl"><div class="rcpt">
+        <div class="cap">Receipt as supplied</div>
+        <div class="sheet"><img class="paper" style="width:340px" src="receipts/hollenbeck.png" alt="Hollenbeck Wichita East receipt 06/06/2026"></div>
+        <p class="hint">Click to enlarge.</p>
+      </div></div>
+      <div class="fold" id="f-k3"></div>
+    </article>
+
+    <article class="row company" data-date="2026-07-05" data-group="co" data-claim="9.40">
+      <div class="head">
+        <p class="title">Hollenbeck Garden &amp; Hardware</p>
+        <p class="sub">July — $9.40, entirely within the allowance</p>
+        <table class="meta">
+          <tr><th>Date</th><td>July 5, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">f21b89d46a03c7e51580b3d9</td></tr>
+          <tr><th>Amount</th><td class="amt">$9.40 charged · <span class="bad">$9.40 owed</span></td></tr>
+          <tr><th>Account</th><td>Hollenbeck employee account ending <b>0117</b></td></tr>
+        </table>
+      </div>
+      <div class="why">The only employee purchase in July, well inside the allowance, with no credit posted
+      against it on the account or on the July pay statement.</div>
+      <div class="actions">
+        <button class="btn" data-fold="f-k4">Dispute draft</button>
+        <span class="sendto">Goes to krutledge@hollenbeckgh.com</span>
+      </div>
+      <div class="fold" id="f-k4"></div>
+    </article>
+
+    <p class="empty" id="noneMatch" style="display:none">Nothing in that date range.</p>
+  </section>
+
+  <!-- ============ TAB 2 ============ -->
+  <section class="panel" id="p-verified" role="tabpanel">
+
+    <article class="row ok">
+      <div class="head">
+        <p class="title">Northrock Lanes — $46.00</p>
+        <p class="sub">Winter league banquet</p>
+        <table class="meta">
+          <tr><th>Date</th><td>May 7, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">3d6081ca27f5be490713d2a6</td></tr>
+          <tr><th>Amount</th><td class="amt">$46.00</td></tr>
+          <tr><th>Account</th><td>INTRUST Visa ending <b>7742</b></td></tr>
+          <tr><th>Order ref</th><td>CHK 2291, DESK 1, STA 02 · AUTH 590362</td></tr>
+        </table>
+      </div>
+      <div class="why">The receipt reads one head at $46.00, subtotal $46.00, tax $0.00, total $46.00, settled on
+      the Visa ending 7742. The lanes had circulated the banquet at "$46.00 a head, paid at the desk", and the
+      banquet sat at 18:30 that evening against a 6:46 PM timestamp on the slip. Charged once, at the quoted
+      price, for one person.</div>
+      <div class="rcpt">
+        <div class="cap">Receipt as supplied — straightened</div>
+        <div class="sheet"><img class="slip" src="receipts/northrock.png" alt="Northrock Lanes receipt 05/07/26"></div>
+        <p class="hint">Click the receipt to enlarge.</p>
+      </div>
+    </article>
+
+    <article class="row ok">
+      <div class="head">
+        <p class="title">Wichita Foot &amp; Ankle — $385.00</p>
+        <p class="sub">Custom functional orthotics, one pair</p>
+        <table class="meta">
+          <tr><th>Date</th><td>May 8, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">72d9b0e438a15c6f9d024b7a</td></tr>
+          <tr><th>Amount</th><td class="amt">$385.00</td></tr>
+          <tr><th>Account</th><td>INTRUST Visa ending <b>7742</b></td></tr>
+          <tr><th>Order ref</th><td>Patient account #20417, Dr. Kavitha Ramaswamy</td></tr>
+        </table>
+      </div>
+      <div class="why">The receipt totals $385.00 charged and $385.00 paid, balance $0.00, with the dispensing and
+      fitting visit correctly at no charge. The written estimate of April 24 quoted the same $385.00 as the full
+      out-of-pocket amount, the office confirmed it again on May 6 ahead of the fitting, and the 4:45 p.m.
+      appointment on May 8 was booked with $385.00 due on the Visa. Quote, receipt and charge are the same figure.</div>
+      <div class="rcpt">
+        <div class="cap">Receipt as supplied — wichita_receipt.docx</div>
+        <div class="sheet"><img class="wide" src="receipts/wichitafoot.png" alt="Wichita Foot &amp; Ankle patient receipt, account 20417"></div>
+        <p class="hint">Click the receipt to enlarge.</p>
+      </div>
+    </article>
+
+    <article class="row ok">
+      <div class="head">
+        <p class="title">Woodlawn Animal Hospital — $284.50</p>
+        <p class="sub">Frijol, senior exam and workup</p>
+        <table class="meta">
+          <tr><th>Date</th><td>June 26, 2026</td></tr>
+          <tr><th>Transaction ID</th><td class="mono">5c8b0a37e19f46d2b8c510ae</td></tr>
+          <tr><th>Amount</th><td class="amt">$284.50</td></tr>
+          <tr><th>Account</th><td>INTRUST Visa ending <b>7742</b></td></tr>
+          <tr><th>Order ref</th><td>Invoice 41823, client ID 10582</td></tr>
+        </table>
+      </div>
+      <div class="why">Four lines — senior exam $62.00, wellness blood panel $118.50, fine needle aspirate with
+      cytology $86.00, nail trim $18.00 — totalling $284.50, with payment of $284.50 recorded the same day on the
+      Visa ending 7742 and a balance due of $0.00. Every line falls inside the written estimate issued two days
+      earlier ($58–62, $112–124, $78–96, $18, total $266–300), so nothing was added at the desk. The five-week
+      recheck on July 31 was billed at nothing, as the clinic said it would be.</div>
+      <div class="rcpt">
+        <div class="cap">Receipt as supplied — invoice 41823</div>
+        <div class="sheet"><img class="wide" src="receipts/woodlawn.png" alt="Woodlawn Animal Hospital invoice 41823"></div>
+        <p class="hint">Click the invoice to enlarge.</p>
+      </div>
+    </article>
+
+  </section>
+</div>
+
+<div id="lb"><span class="x">&times;</span><img id="lbimg" src="" alt=""></div>
+
+<script>
+  var KENNY_HEAD = 'In Drafts · From mybarra@hollenbeckgh.com · To krutledge@hollenbeckgh.com · ' +
+    'Subject: Employee account ending 0117 - purchases May through July never credited';
+  var KENNY_BODY = [
+"Kenny,","",
+"My employee purchases for May, June and July were never credited against the $50 a month we are allowed, and I would like the $105.40 raised as an erroneous charge.","",
+"Every charge on my employee account ending 0117 for those three months:","",
+"  05/02/2026  Hollenbeck Garden & Hardware, Derby          $61.00",
+"  05/31/2026  Hollenbeck Garden & Hardware                 $27.42",
+"  06/06/2026  Hollenbeck Garden & Hardware, Wichita East   $46.00",
+"  07/05/2026  Hollenbeck Garden & Hardware                  $9.40","",
+"That is $88.42 in May, $46.00 in June and $9.40 in July, $143.82 in total.","",
+"Against the $50 monthly allowance:","",
+"  May      $50.00   (the remaining $38.42 is over the cap and is mine)",
+"  June     $46.00",
+"  July      $9.40",
+"  Total   $105.40","",
+"There is no offsetting credit on the 0117 account in any of those three months, and no employee purchase credit appears on my May, June or July pay statements.","",
+"I have the register receipt for the June charge: Wichita East, June 6, 11:52 AM, Reg 02 Trn 1187, will call #5127. Four 54in tomato cages at $5.98, garden twine 200ft at $3.69, plant labels 50pk at $2.69 and a mechanical water timer at $12.49. Subtotal $42.79, tax $3.21, total $46.00, tendered to Hollenbeck credit ending 0117, auth 048213. I can send copies of the others.","",
+"Please raise the $105.40 with payroll. Margo has run into the same thing on her account, so it is likely worth checking more widely than mine.","",
+"Thanks,","Marisela"].join("\n");
+
+  ['f-k1','f-k2','f-k3','f-k4'].forEach(function(id){
+    var el = document.getElementById(id); if(!el) return;
+    var d = document.createElement('div'); d.className='draft';
+    var h = document.createElement('div'); h.className='dh'; h.textContent = KENNY_HEAD;
+    var p = document.createElement('pre'); p.textContent = KENNY_BODY;
+    d.appendChild(h); d.appendChild(p); el.appendChild(d);
+  });
+
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false');});
+      document.querySelectorAll('.panel').forEach(function(x){x.classList.remove('active');});
+      t.setAttribute('aria-selected','true');
+      document.getElementById(t.dataset.panel).classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('[data-fold]').forEach(function(b){
+    var base = b.textContent;
+    b.addEventListener('click', function(){
+      var d = document.getElementById(b.dataset.fold);
+      var open = d.classList.toggle('open');
+      b.textContent = open ? 'Hide ' + base.replace(/^View |^Dispute /,'').toLowerCase() : base;
+    });
+  });
+
+  var lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg');
+  document.querySelectorAll('.rcpt img').forEach(function(im){
+    im.addEventListener('click', function(){ lbimg.src = im.src; lb.classList.add('open'); });
+  });
+  lb.addEventListener('click', function(){ lb.classList.remove('open'); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#p-disputes .row'));
+  var heads = Array.prototype.slice.call(document.querySelectorAll('#p-disputes .grouphead'));
+  function money(n){ return '$' + n.toFixed(2); }
+  function sum(g){
+    return rows.filter(function(r){return r.style.display!=='none' && r.dataset.group===g;})
+               .reduce(function(a,r){return a+parseFloat(r.dataset.claim||0);},0);
+  }
+  function apply(from, to){
+    var shown=0, n={card:0, co:0};
+    rows.forEach(function(r){
+      var vis = (!from || r.dataset.date >= from) && (!to || r.dataset.date <= to);
+      r.style.display = vis ? '' : 'none';
+      if(vis){ shown++; n[r.dataset.group]++; }
+    });
+    heads.forEach(function(h){ h.style.display = n[h.dataset.g] ? '' : 'none'; });
+    document.getElementById('noneMatch').style.display = shown ? 'none' : 'block';
+    document.getElementById('count').textContent = shown + ' of ' + rows.length + ' entries shown';
+    var c = sum('card'), o = sum('co');
+    document.getElementById('totals').innerHTML =
+      '<b>' + money(c + o) + '</b> owed back in range &nbsp;·&nbsp; ' +
+      n.card + ' card charges, <b>' + money(c) + '</b> from merchants &nbsp;·&nbsp; ' +
+      n.co + ' company purchases on account 0117, <b>' + money(o) + '</b> uncredited';
+  }
+  document.getElementById('apply').addEventListener('click', function(){
+    apply(document.getElementById('from').value, document.getElementById('to').value);
+  });
+  document.getElementById('reset').addEventListener('click', function(){
+    document.getElementById('from').value=''; document.getElementById('to').value=''; apply('','');
+  });
+  apply('2026-05-01','2026-07-31');
+</script>
+</body>
+</html>

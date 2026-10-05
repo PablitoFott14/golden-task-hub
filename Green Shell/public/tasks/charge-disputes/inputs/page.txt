@@ -1,0 +1,9 @@
+Okay so I want the page split into two tabs
+
+First tab is for the disputed charges. For each one show the date, the transaction ID, the amount, and the last digits of the account I paid with
+
+I'm planning to keep using this page to track other erroneous charges down the line, so throw in a date filter too
+
+Each disputed charge needs its own "Dispute draft" button, and when I click it, it should show the body of the draft you wrote for that dispute
+
+Second tab is basically a history of the charges I asked you to check that turned out to be correct, each one with its own receipt or visual evidence tied to it

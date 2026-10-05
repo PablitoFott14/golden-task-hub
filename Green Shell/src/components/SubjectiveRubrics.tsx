@@ -1,27 +1,9 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check, ChevronDown, ExternalLink, GitCompare, Maximize2, Minimize2, X } from "lucide-react";
+import { Check, ChevronDown, ExternalLink, GitCompare, Maximize2, Minimize2, Scale, X } from "lucide-react";
 import type { Mark, RubricLeg, RubricView, SubjectiveRubric } from "../data/types";
 import { asset, cx } from "../lib/util";
-import { MdLines } from "./Markdown";
 import { Ticks } from "./Rubrics";
-
-/* ------------------------------------------------------------------ markdown */
-
-/**
- * The excerpt as a reader sees it, not as it is typed. A subjective criterion
- * is rated on the rendered document, so headings are headings and a table is a
- * table. Marked lines are the ones the criterion is about.
- */
-function DocFrame({ view }: { view: Extract<RubricView, { kind: "doc" }> }) {
-  return (
-    <div className="overflow-hidden rounded-lg border border-ink-200/70 bg-surface">
-      <div className="space-y-1.5 p-3.5 text-[12.5px] leading-relaxed text-ink-700">
-        <MdLines lines={view.lines} mark={view.mark} />
-      </div>
-    </div>
-  );
-}
 
 /* -------------------------------------------------------------------- render */
 
@@ -35,7 +17,7 @@ function RenderFrame({
   whole,
   tone,
 }: {
-  view: Extract<RubricView, { kind: "render" }>;
+  view: RubricView;
   whole: boolean;
   tone: "a" | "b";
 }) {
@@ -131,11 +113,7 @@ function Leg({ leg, side, whole }: { leg: RubricLeg; side: "A" | "B"; whole: boo
         </a>
       </div>
 
-      {leg.view.kind === "render" ? (
-        <RenderFrame view={leg.view} whole={whole} tone={isA ? "a" : "b"} />
-      ) : (
-        <DocFrame view={leg.view} />
-      )}
+      <RenderFrame view={leg.view} whole={whole} tone={isA ? "a" : "b"} />
 
       <p className="mt-2.5 text-[12.5px] leading-relaxed text-ink-700">{leg.verdict}</p>
     </div>
@@ -168,7 +146,7 @@ export default function SubjectiveRubrics({ rubrics }: { rubrics: SubjectiveRubr
           {allOpen ? "Collapse every comparison" : "Expand every comparison"}
         </button>
         <span className="text-[12.5px] text-ink-400">
-          Ten criteria. Open one to put the two outcomes side by side.
+          {rubrics.length} criteria. Open one to put the two renders side by side.
         </span>
       </div>
 
@@ -177,7 +155,7 @@ export default function SubjectiveRubrics({ rubrics }: { rubrics: SubjectiveRubr
           const on = open.includes(s.n);
           const full = whole.includes(s.n);
           const failed = s.status === "not-present";
-          const framed = s.legA.view.kind === "render" && !!s.legA.view.focus;
+          const framed = !!s.legA.view.focus;
 
           return (
             <li key={s.n} className="card overflow-hidden">
@@ -197,6 +175,9 @@ export default function SubjectiveRubrics({ rubrics }: { rubrics: SubjectiveRubr
                   <span className="mt-2 flex flex-wrap items-center gap-1.5">
                     <span className="chip bg-ink-100 font-mono text-ink-600 ring-1 ring-ink-200">
                       {s.artifact}
+                    </span>
+                    <span className="chip bg-violet-500/12 text-violet-700 ring-1 ring-violet-500/25 dark:text-violet-300">
+                      <Scale size={11} />+{s.weight}
                     </span>
                     <span
                       className={cx(

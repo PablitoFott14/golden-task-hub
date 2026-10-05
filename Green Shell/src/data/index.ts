@@ -1,5 +1,5 @@
 import type { GoldenTask, SearchEntry } from "./types";
-import { vendorCloseout } from "./tasks/vendorCloseout";
+import { chargeDisputes } from "./tasks/chargeDisputes";
 import { methodSteps } from "./method";
 import { checklist } from "./checklist";
 import { authoringStandards, rubricQualityIssues, specGroups, weightBuckets } from "./specDoc";
@@ -13,7 +13,7 @@ import { specRevisions } from "./specLog";
 /** Matches the nav ids the Spec Doc page derives from its group names. */
 const slug = (s: string) => s.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 
-export const tasks: GoldenTask[] = [vendorCloseout];
+export const tasks: GoldenTask[] = [chargeDisputes];
 
 export function taskById(id: string): GoldenTask | undefined {
   return tasks.find((t) => t.meta.id === id);
@@ -102,33 +102,72 @@ export const searchIndex: SearchEntry[] = [
   ...tasks.map<SearchEntry>((t) => ({
     kind: "Golden task",
     title: t.meta.title,
-    hint: `${t.meta.category} · ${t.meta.turns} turns · ${t.meta.status}`,
+    hint: `${t.meta.useCase} · single turn · ${t.meta.status}`,
     to: `/golden-tasks/${t.meta.id}`,
     terms: [
       t.meta.oneLiner,
       t.meta.universe,
       t.meta.persona,
       t.meta.subcategory,
-      t.meta.deliverables.join(" "),
+      t.meta.deliverable,
       t.meta.modalities.join(" "),
       t.premise,
     ].join(" "),
   })),
 
+  /* One row per stage, so searching a method step lands on the step of the
+     walkthrough that implements it rather than on the task as a whole. */
+  ...tasks.flatMap<SearchEntry>((t) =>
+    t.stages.map((st) => ({
+      kind: "Golden task" as const,
+      title: st.title,
+      hint: `Step ${st.step} in the walkthrough`,
+      to: `/golden-tasks/${t.meta.id}#${st.id}`,
+      terms: [st.did, st.why, st.handoff].join(" "),
+    }))
+  ),
+
   ...tasks.flatMap<SearchEntry>((t) => [
     {
       kind: "Golden task",
-      title: "Evidence ledger",
-      hint: `All ${t.ledger.length} vendors, and why each lands where it does`,
-      to: `/golden-tasks/${t.meta.id}#ledger`,
-      terms: t.ledger.map((r) => `${r.vendor} ${r.verdict} ${r.why}`).join(" "),
+      title: "The resolved answer",
+      hint: `All ${t.ledger.length} charges, and why each lands where it does`,
+      to: `/golden-tasks/${t.meta.id}#gtfa`,
+      terms: t.ledger
+        .map((r) => `${r.merchant} ${r.date} ${r.charged} ${r.verdict} ${r.evidence} ${r.why}`)
+        .join(" "),
     },
     {
       kind: "Golden task",
-      title: "The four prompts",
-      hint: "What each turn adds, and the state it consumes",
-      to: `/golden-tasks/${t.meta.id}#turns`,
-      terms: t.turns.map((x) => `${x.text} ${x.adds} ${x.consumes}`).join(" "),
+      title: "The one prompt, annotated",
+      hint: "Every span that is doing work, and what the prompt withholds",
+      to: `/golden-tasks/${t.meta.id}#prompt`,
+      terms: [
+        t.prompt.text,
+        t.prompt.marks.map((m) => `${m.label} ${m.body}`).join(" "),
+        t.prompt.withheld.map((w) => `${w.title} ${w.body}`).join(" "),
+      ].join(" "),
+    },
+    {
+      kind: "Golden task",
+      title: "The assigned parameters",
+      hint: "All seven, and what each one binds",
+      to: `/golden-tasks/${t.meta.id}#parameters`,
+      terms: [
+        t.parameters.map((x) => `${x.label} ${x.value} ${x.binds}`).join(" "),
+        t.scopeCheck.body,
+        t.scopeCheck.neighbour,
+      ].join(" "),
+    },
+    {
+      kind: "Golden task",
+      title: "Universe interaction",
+      hint: "Which service decides which finding",
+      to: `/golden-tasks/${t.meta.id}#universe`,
+      terms: [
+        t.universeFacts.map((f) => `${f.k} ${f.v}`).join(" "),
+        t.universeSources.map((x) => `${x.service} ${x.carries} ${x.decides}`).join(" "),
+      ].join(" "),
     },
     {
       kind: "Golden task",
@@ -154,7 +193,7 @@ export const searchIndex: SearchEntry[] = [
     {
       kind: "Golden task",
       title: "Subjective rubrics",
-      hint: `${t.subjective.length} presentation criteria, each with the OT and GT renders it came from`,
+      hint: `${t.subjective.length} presentation criteria, each with the two renders it came from`,
       to: `/golden-tasks/${t.meta.id}#subjective`,
       terms: t.subjective
         .map((r) => `${r.text} ${r.artifact} ${r.asks} ${r.derived} ${r.legA.verdict} ${r.legB.verdict}`)
@@ -162,29 +201,29 @@ export const searchIndex: SearchEntry[] = [
     },
     {
       kind: "Golden task",
-      title: "Milestones",
-      hint: `${t.milestones.length} milestones, grouped by turn`,
-      to: `/golden-tasks/${t.meta.id}#milestones`,
-      terms: t.milestones.map((m) => `turn ${m.turn} ${m.text}`).join(" "),
+      title: "Hinting in practice",
+      hint: `${t.goldenRun.steers.length} steers, and what each one never says`,
+      to: `/golden-tasks/${t.meta.id}#golden`,
+      terms: [
+        t.goldenRun.opening,
+        t.goldenRun.steers
+          .map((x) => `${x.prompt} ${x.missed} ${x.does.join(" ")} ${x.avoids.join(" ")} ${x.recovered}`)
+          .join(" "),
+        "golden solution steer hint user simulator leg b",
+      ].join(" "),
     },
     {
       kind: "Golden task",
-      title: "Hinting in practice",
-      hint: "The milestone check after each turn, and the steer the run needed",
-      to: `/golden-tasks/${t.meta.id}#hinting`,
-      terms: [
-        t.goldenRun.hint.prompt,
-        t.goldenRun.hint.missed,
-        t.goldenRun.hint.recovered,
-        t.goldenRun.checks.map((c) => `${c.title} ${c.body} ${c.next}`).join(" "),
-        "golden conversation transcript hint milestone check",
-      ].join(" "),
+      title: "Where Model A broke",
+      hint: t.run.summary,
+      to: `/golden-tasks/${t.meta.id}#model-a`,
+      terms: t.run.observations.map((o) => `${o.title} ${o.expected} ${o.actual}`).join(" "),
     },
     {
       kind: "Golden task",
       title: "Designed friction",
       hint: `${t.traps.length} traps, and what each one tests`,
-      to: `/golden-tasks/${t.meta.id}#traps`,
+      to: `/golden-tasks/${t.meta.id}#gtfa`,
       terms: t.traps.map((x) => `${x.title} ${x.where} ${x.body} ${x.tests}`).join(" "),
     },
     {
@@ -192,7 +231,7 @@ export const searchIndex: SearchEntry[] = [
       title: "Multimodal inputs",
       hint: `${t.inputs.length} files, and the fact each one carries`,
       to: `/golden-tasks/${t.meta.id}#inputs`,
-      terms: t.inputs.map((i) => `${i.file} ${i.shows} ${i.carries}`).join(" "),
+      terms: t.inputs.map((i) => `${i.file} ${i.shows} ${i.carries} ${i.charges.join(" ")}`).join(" "),
     },
   ]),
 

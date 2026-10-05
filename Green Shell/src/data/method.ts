@@ -1,6 +1,6 @@
 import type { MethodStep } from "./types";
 
-const GT = "/golden-tasks/vendor-closeout";
+const GT = "/golden-tasks/charge-disputes";
 
 /**
  * The method for Green Shell, ten steps, in the order they actually happen.
@@ -14,10 +14,10 @@ const GT = "/golden-tasks/vendor-closeout";
  * loadout decides which scenarios that pair can actually support; steps 3 and 4
  * are where the two meet and produce the scenario and the evidence it needs.
  *
- * `inTask` carries a link only where the published Golden Task still
- * demonstrates the step correctly. The vendor closeout task is multi-turn and
- * predates the 80/20 rule, so steps 1 and 5 describe a real single turn task
- * instead and pick their links up when that task is published.
+ * `inTask` points at the section of the Golden Task walkthrough that implements
+ * the step. The published task is single turn and built against these
+ * guidelines, so every step carries one: the walkthrough is one section per
+ * step, in this order, which is the relationship the whole hub is built on.
  */
 export const methodSteps: MethodStep[] = [
   {
@@ -41,6 +41,7 @@ export const methodSteps: MethodStep[] = [
     },
     inTask: {
       body: "A receipts and disputes task sits in Personal finance, under detecting and disputing erroneous charges. What fixes the pair is the user's intent, contesting charges she believes are wrong. The receipts and the bank records are only how that intent is evidenced, and they would have pointed at a different subcategory on their own.",
+      link: { to: `${GT}#parameters`, tag: "GT", label: "All seven, and what each one binds" },
     },
   },
   {
@@ -65,8 +66,8 @@ export const methodSteps: MethodStep[] = [
       body: "If only a few servers are loaded the universe loaded wrong, and it has to be reloaded before you continue. Add the Service Universe Artifact ID before you deploy, whatever the Universe Creator calls it.",
     },
     inTask: {
-      body: "Harmony Games is a studio with a full lifecycle in its data, so the task took the shutdown phase. Two channels carried it, and both were pulled through SQL before a single prompt was written.",
-      link: { to: `${GT}#universe`, tag: "GT", label: "The two channels the task is built on" },
+      body: "Marisela Ybarra's universe carries four months of charges, the order emails and written estimates that price them, and a calendar. One of the five disputes is settled only by that calendar, which is not one of the task's assigned connectors, and nothing in the two that are assigned contradicts the receipt.",
+      link: { to: `${GT}#universe`, tag: "GT", label: "Which service decides which finding" },
     },
   },
   {
@@ -91,8 +92,8 @@ export const methodSteps: MethodStep[] = [
       body: "Do not improvise and do not wait for the model to fail before adding difficulty. Expect to spend at least two hours understanding the scenario and grounding it before the task is ready.",
     },
     inTask: {
-      body: "One rule stated once decides all twenty vendors, and the GTFA resolved every one of them before the run started: four receipts, four unconfirmed, twelve not cancelled, one out of pool.",
-      link: { to: `${GT}#answer`, tag: "GT", label: "The resolved answer, vendor by vendor" },
+      body: "Twelve charges were resolved to the cent before the prompt was sent: five to dispute, four company purchases against a monthly cap, three correct and shown as correct. The answer also fixes what must not happen, and which different but defensible readings still count as right.",
+      link: { to: `${GT}#gtfa`, tag: "GT", label: "The resolved answer, charge by charge" },
     },
   },
   {
@@ -117,8 +118,8 @@ export const methodSteps: MethodStep[] = [
       body: "Three is the minimum requirement rather than the goal, and trimming a task down to three or slightly more is the mistake the rule exists to stop.",
     },
     inTask: {
-      body: "Eleven files, and not one of them is decoration. The screenshots confirm cancellations, the phone photos carry amounts no record holds, and the invoices that belong to vendors outside the pool are there to be left alone.",
-      link: { to: `${GT}#inputs`, tag: "GT", label: "Eleven files, and the fact each one carries" },
+      body: "Nine files, in the state someone who keeps receipts badly would really have them. One photograph carries two unrelated receipts, two arrive rotated and folded across the line that decides the dispute, and the ninth file is the layout of the page rather than evidence.",
+      link: { to: `${GT}#inputs`, tag: "GT", label: "Nine files, and the fact each one carries" },
     },
   },
   {
@@ -143,7 +144,8 @@ export const methodSteps: MethodStep[] = [
       body: "The prompt and the multimodal context are the only context the agent has. A requirement that lives only in the Desired Outcome was never asked for, so no criterion may grade it.",
     },
     inTask: {
-      body: "In the disputes task the one prompt names the page to produce, says the drafts are not to be sent, and fixes the window to the charges between May and July. The rules that decide which charges hold up are left in the attachments, where the agent has to go and find them.",
+      body: "The one prompt names the page to produce, says the drafts are not to be sent, fixes the window to the charges between May and July, and states the $50 monthly rule once in her own words. The rules that decide which charges hold up are left in the attachments and the universe, where the agent has to go and find them.",
+      link: { to: `${GT}#prompt`, tag: "GT", label: "Every span of the prompt that is doing work" },
     },
   },
   {
@@ -168,11 +170,11 @@ export const methodSteps: MethodStep[] = [
       body: "The Desired Outcome is internal to you. If a rule has to hold in the deliverable, it has to appear in the prompt as well.",
     },
     inTask: {
-      body: "Every output the rubrics check is named in the prompt: the folder, the receipt filenames, MEMORY.md, emails_draft.md, the subject line, the SVG. Nothing is graded that the agent was not asked for.",
+      body: "Every output the rubrics check is asked for out loud in the one prompt: the page, the four fields on each row, the date filter, the buttons and the six drafts. The item easiest to get wrong, leaving a recipient blank rather than inventing one, is written into both.",
       link: {
         to: `${GT}#draft-history`,
         tag: "GT",
-        label: "The objective and the outcome, item by item",
+        label: "Each outcome item, beside the line that asks for it",
       },
     },
   },
@@ -198,7 +200,7 @@ export const methodSteps: MethodStep[] = [
       body: "A requirement the model never saw, an undecided source conflict, or media no person could read either are task defects. A legible value misread, or an accessible tool left unused, is a real finding.",
     },
     inTask: {
-      body: "Model A never called a Slack tool at all. It worked from the attachments alone and failed 18 of 20 objective criteria, and the two it passed were the two that needed no reasoning.",
+      body: "Model A opened the receipt at tool call 3 and found the sale email at call 52, then cleared the charge anyway. It lost 36 of the 69 positive weight in the objective block and all 23 in the subjective one, on four findings that each change what the user does next.",
       link: { to: `${GT}#model-a`, tag: "GT", label: "Where the run actually broke" },
     },
   },
@@ -224,8 +226,8 @@ export const methodSteps: MethodStep[] = [
       body: "Process over the 20% cap, and any criterion that only checks a file, section, column or record exists. Both are automatic fails whatever the severity percentages say.",
     },
     inTask: {
-      body: "Twenty criteria, each pinning its own amount, filename, date and person. It is also a counter example now: five of them target the Trajectory, which is 25% process against a cap of 20%, and the first one only checks that a folder and four files exist.",
-      link: { to: `${GT}#rubrics`, tag: "GT", label: "All 20 criteria and how Model A rated" },
+      body: "Twenty six criteria, each pinning its own transaction id, amount, date and filename. None of them targets the trajectory, which is the preferred number rather than merely inside the cap, and not one checks only that something exists.",
+      link: { to: `${GT}#rubrics`, tag: "GT", label: "All 26 criteria and how Model A rated" },
     },
   },
   {
@@ -250,8 +252,8 @@ export const methodSteps: MethodStep[] = [
       body: "Anything the golden fails is a broken criterion, not a broken golden. Reaching it once by accident proves nothing: you have to be able to steer the model there deliberately.",
     },
     inTask: {
-      body: "The model first confused the roughly $15,000 Sunset fee with the $50,000 all in estimate. The correction stayed in the user's voice and pointed back at an early December conversation, so the model found the figure itself.",
-      link: { to: `${GT}#hinting`, tag: "GT", label: "The steer, and what it pointed at" },
+      body: "Four steers took the same prompt from two disputes to five. The one that found the hardest of them pointed at her own photographs being taken in a rush, and at what she had filled in by hand. It never mentioned the slip, the restaurant or the figure.",
+      link: { to: `${GT}#golden`, tag: "GT", label: "The four steers, and what each one never says" },
     },
   },
   {
@@ -276,8 +278,8 @@ export const methodSteps: MethodStep[] = [
       body: "No looks professional, no well designed, no high quality. Name the property, or cut the criterion.",
     },
     inTask: {
-      body: "Ten criteria came out of one comparison of the two rendered SVGs. Model A's percentage slot reads needs estimate at headline weight, which is an artifact handed over asking its reader to finish it.",
-      link: { to: `${GT}#subjective`, tag: "GT", label: "The ten criteria and what they caught" },
+      body: "Thirty candidates came out of one comparison of the two pages, and eleven survived. The clearest is a page that contradicts itself on screen: filter the list to June and the only total on it still reads the figure for all four charges.",
+      link: { to: `${GT}#subjective`, tag: "GT", label: "The eleven criteria and the renders behind them" },
     },
   },
 ];

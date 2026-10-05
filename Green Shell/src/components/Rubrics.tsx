@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Check, Layers, Minus, Plus, Target, X } from "lucide-react";
+import { Check, Minus, Plus, Scale, X } from "lucide-react";
 import type { Rubric } from "../data/types";
 import { cx } from "../lib/util";
 
@@ -33,16 +33,6 @@ const filters: { k: Filter; label: string }[] = [
   { k: "negative", label: "Negatives" },
   { k: "trajectory", label: "Trajectory" },
 ];
-
-/**
- * The spot check pattern, shown rather than described. A group of more than
- * eight similar outcomes gets one completeness criterion and at most five spot
- * checks, so the two have to be legible in the block itself.
- */
-const roleChip: Record<NonNullable<Rubric["role"]>, { label: string; icon: JSX.Element }> = {
-  completeness: { label: "Completeness", icon: <Layers size={11} /> },
-  "spot-check": { label: "Spot check", icon: <Target size={11} /> },
-};
 
 /** A positive rated Not Present, or a negative rated Present, is a failure. */
 function failed(r: Rubric) {
@@ -133,12 +123,18 @@ export default function Rubrics({ rubrics }: { rubrics: Rubric[] }) {
                     <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
                       {r.target}
                     </span>
-                    {r.role && (
-                      <span className="chip bg-violet-500/12 text-violet-700 ring-1 ring-violet-500/25 dark:text-violet-300">
-                        {roleChip[r.role].icon}
-                        {roleChip[r.role].label}
-                      </span>
-                    )}
+                    <span
+                      className={cx(
+                        "chip",
+                        r.weight < 0
+                          ? "bg-rose-500/12 text-rose-700 ring-1 ring-rose-500/25 dark:text-rose-300"
+                          : "bg-violet-500/12 text-violet-700 ring-1 ring-violet-500/25 dark:text-violet-300"
+                      )}
+                      title="Weight"
+                    >
+                      <Scale size={11} />
+                      {r.weight > 0 ? `+${r.weight}` : r.weight}
+                    </span>
                     <span
                       className={cx(
                         "chip",

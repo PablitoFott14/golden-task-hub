@@ -1,6 +1,6 @@
 import type { FaqItem } from "./types";
 
-const GT = "/golden-tasks/vendor-closeout";
+const GT = "/golden-tasks/charge-disputes";
 
 /**
  * Transcribed from `F&Q.md` in this repo, with grammar and wording cleaned up
@@ -23,7 +23,7 @@ export const faq: FaqItem[] = [
     ],
     links: [
       { to: "/#draft-history", tag: "M4", label: "Say why the agent is there, not what to type" },
-      { to: `${GT}#turns`, tag: "GT", label: "MEMORY.md asked for in turn 1, with a reason" },
+      { to: `${GT}#prompt`, tag: "GT", label: "disputes.html asked for by name, with a reason" },
     ],
   },
   {
@@ -75,7 +75,7 @@ export const faq: FaqItem[] = [
     ],
     links: [
       { to: "/#golden", tag: "M8", label: "Point at the intent, never at the answer" },
-      { to: `${GT}#golden`, tag: "GT", label: "How the $50,000 figure was recovered without leaking it" },
+      { to: `${GT}#golden`, tag: "GT", label: "How a misread $8.74 was recovered without naming it" },
     ],
   },
   {
@@ -93,7 +93,7 @@ export const faq: FaqItem[] = [
     ],
     links: [
       { to: "/#universe", tag: "M1", label: "Go find the story, do not invent one" },
-      { to: `${GT}#universe`, tag: "GT", label: "Two channels, and neither modality decorative" },
+      { to: `${GT}#universe`, tag: "GT", label: "Four services, and neither modality decorative" },
     ],
   },
   {
@@ -109,7 +109,7 @@ export const faq: FaqItem[] = [
       { section: "1.2.3", title: "Create the Initial Prompt and the Follow-ups" },
       { section: "6.3", title: "Modifiers" },
     ],
-    links: [{ to: `${GT}#turns`, tag: "GT", label: "Turn 4 closes the arc without announcing it" }],
+    links: [{ to: `${GT}#golden`, tag: "GT", label: "Four steers that close the gap without announcing it" }],
   },
   {
     n: 7,
@@ -164,7 +164,7 @@ export const faq: FaqItem[] = [
     ],
     links: [
       { to: "/reference#s6", tag: "F3", label: "Rate every criterion against both models yourself" },
-      { to: `${GT}#subjective`, tag: "GT", label: "Ten criteria, each on the two renders" },
+      { to: `${GT}#subjective`, tag: "GT", label: "Eleven criteria, each on the two renders" },
     ],
   },
   {
@@ -184,7 +184,7 @@ export const faq: FaqItem[] = [
     links: [
       { to: "/#inputs", tag: "M2", label: "Attach what the person would actually have" },
       { to: "/reference#s2", tag: "B2", label: "Take the attachments away" },
-      { to: `${GT}#inputs`, tag: "GT", label: "Eleven files, and the fact each one carries" },
+      { to: `${GT}#inputs`, tag: "GT", label: "Nine files, and the fact each one carries" },
     ],
   },
 ];

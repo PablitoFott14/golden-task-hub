@@ -10,7 +10,7 @@ import type { ChecklistSection } from "./types";
  * are added here and exist only in the hub.
  */
 
-const GT = "/golden-tasks/vendor-closeout";
+const GT = "/golden-tasks/charge-disputes";
 
 /**
  * The masthead count in the PDF is derived from `checklist.md`, so it is
@@ -53,7 +53,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§1.1 · 1.2.5",
         links: [
           { to: "/#universe", tag: "M1", label: "Go find the story, do not invent one" },
-          { to: `${GT}#universe`, tag: "GT", label: "Operations & QA inside a wound down studio" },
+          { to: `${GT}#parameters`, tag: "GT", label: "Why the intent fixes the pair, not the inputs" },
         ],
       },
       {
@@ -72,7 +72,7 @@ export const checklist: ChecklistSection[] = [
         q: "Does the task require multi-system coordination across all three stages, data acquisition, processing and reasoning, and output generation?",
         f: "If it can be completed in a short linear exchange it is too simple. Add a cross-system handoff, not more asks.",
         ref: "§Hard Client Requirements · 1.2.5",
-        links: [{ to: `${GT}#traps`, tag: "GT", label: "Seven designed friction points" }],
+        links: [{ to: `${GT}#gtfa`, tag: "GT", label: "Seven designed friction points" }],
       },
       {
         id: "A4",
@@ -81,7 +81,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§Hard Client Requirements",
         links: [
           { to: "/#failure", tag: "M5", label: "If the model sails through, the task is not ready" },
-          { to: `${GT}#model-a`, tag: "GT", label: "18 of 20 criteria failed" },
+          { to: `${GT}#model-a`, tag: "GT", label: "52% of the objective weight lost" },
         ],
       },
     ],
@@ -98,7 +98,7 @@ export const checklist: ChecklistSection[] = [
         f: "",
         ref: "§1.2.2",
         links: [
-          { to: `${GT}#universe`, tag: "GT", label: "Sixteen of twenty rows exist only in Slack" },
+          { to: `${GT}#universe`, tag: "GT", label: "One dispute that only the calendar settles" },
           { to: "/#universe-videos", tag: "VIDEO", label: "Exploring it through the Agent" },
         ],
       },
@@ -109,7 +109,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§1.2.2",
         links: [
           { to: "/#inputs", tag: "M2", label: "Attach what the person would actually have" },
-          { to: `${GT}#inputs`, tag: "GT", label: "A figure that exists only in handwriting" },
+          { to: `${GT}#inputs`, tag: "GT", label: "Three disputes that exist only on paper" },
         ],
       },
       {
@@ -120,7 +120,7 @@ export const checklist: ChecklistSection[] = [
         links: [
           { to: "/spec#input-artifacts", tag: "QC", label: "Realism, safety, deferred assets" },
           { to: "/#latest-changes", tag: "NEW", label: "Three input files is the floor" },
-          { to: `${GT}#inputs`, tag: "GT", label: "Eleven files, and the fact each one carries" },
+          { to: `${GT}#inputs`, tag: "GT", label: "Nine files, and the fact each one carries" },
         ],
       },
     ],
@@ -136,14 +136,14 @@ export const checklist: ChecklistSection[] = [
         q: "Is every expected output file named explicitly in the prompt itself, spelled exactly as it must appear?",
         f: "A filename that appears only in an input file, the Agent Objective or the Desired Outcome was never asked for.",
         ref: "§1.2.3 · 1.3",
-        links: [{ to: `${GT}#turns`, tag: "GT", label: "Every deliverable named in a prompt" }],
+        links: [{ to: `${GT}#prompt`, tag: "GT", label: "The output file, spelled exactly" }],
       },
       {
         id: "C2",
         q: "Do the thresholds, rules and policies the agent must apply live anywhere in the scenario, in the prompt or the multimodal inputs?",
         f: "",
         ref: "§1.2.3",
-        links: [{ to: `${GT}#format`, tag: "GT", label: "The receipt format lives in an attachment" }],
+        links: [{ to: `${GT}#inputs`, tag: "GT", label: "The page format lives in an attachment" }],
       },
       {
         id: "C3",
@@ -151,16 +151,17 @@ export const checklist: ChecklistSection[] = [
         f: "Fewer than 3 turns is automatically rejected. A follow-up that would work as an independent opening prompt fails Turn Structure.",
         ref: "§1.1 · 1.2.3",
         // The QC link is gone, not moved: the Green Shell spec has no Multi-Turn
-        // group to point at. This check is still multi-turn and goes when the
-        // checklist is brought over to single turn.
-        links: [{ to: `${GT}#turns`, tag: "GT", label: "What each turn consumes" }],
+        // group to point at. This check is still multi-turn, and the published
+        // task is single turn, so there is nothing in it to point at either.
+        // Both go when the checklist is brought over to single turn.
+        links: [{ to: "/#prompt", tag: "M5", label: "One prompt, and everything in it" }],
       },
       {
         id: "C4",
         q: "Is there at least one turn that changes the brief after something was already delivered, and is any deferred asset named explicitly on the turn it enters scope?",
         f: "A revision is a targeted edit to what exists. “I found another file” does not name the asset.",
         ref: "§Hard Client Requirements · 1.2.3 · 6.3",
-        links: [{ to: `${GT}#turns`, tag: "GT", label: "Turn 4 is the revision turn" }],
+        links: [{ to: "/#prompt", tag: "M5", label: "One prompt, and everything in it" }],
       },
       {
         id: "C5",
@@ -187,7 +188,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§1.3 · 4",
         links: [
           { to: "/#draft-history", tag: "M4", label: "The agent never sees this" },
-          { to: `${GT}#draft-history`, tag: "GT", label: "Each outcome item, next to the prompt that asks for it" },
+          { to: `${GT}#draft-history`, tag: "GT", label: "Each outcome item, next to the line that asks for it" },
         ],
       },
       {
@@ -198,7 +199,7 @@ export const checklist: ChecklistSection[] = [
         links: [
           { to: "/#scenario", tag: "M3", label: "Solve it yourself first" },
           { to: `${GT}#draft-history`, tag: "GT", label: "The Desired Outcome as filed" },
-          { to: `${GT}#answer`, tag: "GT", label: "The resolved answer" },
+          { to: `${GT}#gtfa`, tag: "GT", label: "The resolved answer, charge by charge" },
         ],
       },
     ],
@@ -224,7 +225,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§5.1",
         links: [
           { to: "/#rubrics", tag: "M6", label: "A grader with the prompt closed can still rate it" },
-          { to: `${GT}#rubrics`, tag: "GT", label: "20 criteria that each pin their own value" },
+          { to: `${GT}#rubrics`, tag: "GT", label: "26 criteria that each pin their own value" },
         ],
       },
       {
@@ -258,7 +259,7 @@ export const checklist: ChecklistSection[] = [
         f: "Agent Behavior is always Trajectory. If you wrote it against an artifact, a state change or the final message, you are grading the deliverable and the category is wrong. Factuality and Hallucination has left the table: a criterion checking whether a value or claim is correct is Task Completion.",
         ref: "§5.4",
         links: [
-          { to: `${GT}#rubrics`, tag: "GT", label: "Criterion 17 carries neither" },
+          { to: `${GT}#rubrics`, tag: "GT", label: "Every criterion carries its own value" },
           { to: "/#latest-changes", tag: "NEW", label: "Factuality is out of the category table" },
         ],
       },
@@ -268,7 +269,7 @@ export const checklist: ChecklistSection[] = [
         f: "Each negative must name a failure the setup genuinely invites, not mirror every “don’t” in the prompt.",
         ref: "§5.1.1 · 5.3",
         links: [
-          { to: `${GT}#rubrics`, tag: "GT", label: "One completeness criterion, four spot checks" },
+          { to: `${GT}#gtfa`, tag: "GT", label: "Nine charges, nine criteria, no group to collapse" },
         ],
       },
       {
@@ -278,7 +279,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§5.1",
         links: [
           { to: "/#latest-changes", tag: "NEW", label: "Trajectory criteria are capped at five" },
-          { to: `${GT}#rubrics`, tag: "GT", label: "Five Trajectory criteria, which is the ceiling" },
+          { to: `${GT}#rubrics`, tag: "GT", label: "Zero Trajectory criteria, which is the target" },
         ],
       },
     ],
@@ -296,7 +297,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§8.1",
         links: [
           { to: "/#subjective", tag: "M9", label: "Judge the render" },
-          { to: `${GT}#subjective`, tag: "GT", label: "Ten criteria from one comparison" },
+          { to: `${GT}#subjective`, tag: "GT", label: "Eleven criteria from one comparison" },
         ],
       },
       {
@@ -333,7 +334,7 @@ export const checklist: ChecklistSection[] = [
         ref: "§5.7 · 7",
         links: [
           { to: "/#golden", tag: "M8", label: "The golden passes its own block" },
-          { to: `${GT}#golden`, tag: "GT", label: "The golden deliverables" },
+          { to: `${GT}#golden`, tag: "GT", label: "The golden run, steer by steer" },
         ],
       },
       {

@@ -234,6 +234,10 @@ export interface RailGroup {
  * section for still holds its place and links to where the method explains it,
  * so the numbering never skips and the rail never implies a step is optional.
  *
+ * `flat` is for a walkthrough with exactly one section per step, which is the
+ * shape a single turn task takes: the step row is the section, so nesting one
+ * child under each parent would print every label twice.
+ *
  * The active section is marked by the number, the ground and the weight
  * together, never by colour alone.
  *
@@ -247,10 +251,13 @@ export function SectionRail({
   groups,
   active,
   title = "Walkthrough",
+  flat = false,
 }: {
   groups: RailGroup[];
   active: string;
   title?: string;
+  /** One row per step, with no nested section list. */
+  flat?: boolean;
 }) {
   const { ref, maxHeight } = useStickyFit<HTMLElement>(28);
   useRailFollow(ref, active);
@@ -267,11 +274,14 @@ export function SectionRail({
         {groups.map((g) => {
           const on = g.sections.some((s) => s.id === active);
           const elsewhere = g.sections.length === 0;
+          const isRow = flat && !elsewhere;
           return (
             <li key={g.id}>
               <Link
                 to={elsewhere ? `/#${g.id}` : { hash: `#${g.sections[0].id}` }}
                 title={elsewhere ? "This step is covered on the method page" : undefined}
+                data-rail={isRow ? g.sections[0].id : undefined}
+                aria-current={isRow && on ? "true" : undefined}
                 className={cx(
                   "group flex items-center gap-2.5 rounded-xl py-1.5 pl-2 pr-2.5 text-[12.5px] font-semibold leading-snug transition duration-200",
                   elsewhere
@@ -297,7 +307,7 @@ export function SectionRail({
                 {elsewhere && <ArrowUpRight size={12} className="shrink-0 text-ink-300" />}
               </Link>
 
-              {!elsewhere && (
+              {!elsewhere && !flat && (
                 <ul className="ml-[22px] mt-0.5 space-y-0.5 border-l border-ink-200/80 pl-2.5">
                   {g.sections.map((s) => {
                     const cur = active === s.id;

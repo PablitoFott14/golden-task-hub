@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Image as ImageIcon, Layers, ShieldAlert, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Footprints,
+  Image as ImageIcon,
+  Layers,
+  ShieldAlert,
+  Sparkles,
+} from "lucide-react";
 import { tasks } from "../data";
 import type { GoldenTask } from "../data/types";
 import { Reveal, SectionHeading, WipNotice } from "../components/ui";
@@ -7,7 +14,9 @@ import { asset, cx } from "../lib/util";
 
 /** The strip across the top of a card. Real inputs from the task, up to four. */
 function Canvas({ t }: { t: GoldenTask }) {
-  const shots = t.inputs.filter((i) => i.kind !== "pdf" && i.kind !== "doc").slice(0, 4);
+  const shots = t.inputs
+    .filter((i) => i.kind === "photo" || i.kind === "screenshot")
+    .slice(0, 4);
   if (shots.length === 0) {
     return (
       <div className="grid h-40 place-items-center border-b border-ink-200/70 bg-raised text-ink-300">
@@ -39,7 +48,7 @@ function Canvas({ t }: { t: GoldenTask }) {
 }
 
 function TaskCard({ t }: { t: GoldenTask }) {
-  const visuals = t.inputs.filter((i) => i.kind !== "doc").length;
+  const visuals = t.inputs.filter((i) => i.kind !== "notes").length;
   return (
     <Link
       to={`/golden-tasks/${t.meta.id}`}
@@ -53,9 +62,9 @@ function TaskCard({ t }: { t: GoldenTask }) {
             <Sparkles size={11} /> {t.meta.status}
           </span>
           <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
-            {t.meta.category}
+            {t.meta.useCase}
           </span>
-          <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
+          <span className="chip bg-ink-100 font-mono text-ink-600 ring-1 ring-ink-200">
             {t.meta.subcategory}
           </span>
         </div>
@@ -75,12 +84,13 @@ function TaskCard({ t }: { t: GoldenTask }) {
             <span className="font-mono">{t.rubrics.length + t.subjective.length}</span> rubrics
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <span className="font-mono">{t.turns.length}</span> turns
+            <Footprints size={13} className="text-brand-500" />
+            <span className="font-mono">{t.stages.length}</span> method steps
           </span>
         </div>
 
         <span className="mt-5 inline-flex items-center gap-1.5 border-t border-ink-200/70 pt-4 text-[13px] font-semibold text-brand-600 dark:text-brand-300">
-          View task walkthrough
+          Walk the method through it
           <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
         </span>
       </div>
@@ -98,7 +108,7 @@ export default function GoldenTasks() {
             as="h1"
             eyebrow="Golden Tasks"
             title="Finished tasks, opened up"
-            sub="Each one is a full walkthrough: the prompts, the inputs, the evidence behind every decision, the rubrics, and where the model broke. Read them to calibrate the level of complexity your own task has to reach."
+            sub="Each one is the method walked end to end on a real task: the assigned pair, the universe, the resolved answer, the inputs, the one prompt, the run that failed, the criteria, and the golden. Read them to calibrate the level of complexity your own task has to reach."
           />
         </div>
       </section>
@@ -109,11 +119,10 @@ export default function GoldenTasks() {
             This section is still being built. Treat what is here as a draft rather than final
             guidance, because it is expected to change.{" "}
             <strong className="font-bold text-ink-900">
-              A new Green Shell task is being prepared and will be added soon as the main reference
-              example.
+              The Green Shell reference task is now published below, and it is the single turn
+              example to calibrate against.
             </strong>{" "}
-            The walkthrough published below is a multi-turn task carried over from Red Shell, so
-            read it for the method rather than for the single-turn spec.
+            Further tasks will be added here as they are finished.
           </WipNotice>
         </Reveal>
 

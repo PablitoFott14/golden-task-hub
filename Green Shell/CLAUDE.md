@@ -72,7 +72,7 @@ cat > src/ssr-smoke.tsx <<'EOF'
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import App from "./App";
-const routes = ["/", "/golden-tasks", "/golden-tasks/vendor-closeout", "/complexity", "/spec", "/reference", "/nope"];
+const routes = ["/", "/golden-tasks", "/golden-tasks/charge-disputes", "/complexity", "/spec", "/reference", "/nope"];
 let fail = 0;
 for (const r of routes) {
   try { console.log(`OK   ${r} ${renderToString(<StaticRouter location={r}><App /></StaticRouter>).length}`); }
@@ -166,15 +166,19 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | --- | --- |
 | Version History table and the `[NEW]` callouts in the guidelines | [src/data/changes.ts](src/data/changes.ts) |
 | Nothing — hand-authored, one entry per guidelines or onboarding change | [src/data/hubLog.ts](src/data/hubLog.ts) |
-| `task 1 (…)/6a7965b63b7d368e70c7de4a/rationale.md` | [src/data/method.ts](src/data/method.ts) |
+| `rationale.md` and `[External] Green Shell Guidelines v1` | [src/data/method.ts](src/data/method.ts) |
 | `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
 | `*-rubric.csv` and `appendix.csv`, the spec exports (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
 | `F&Q.md` in this repo | [src/data/faq.ts](src/data/faq.ts) |
 | `Videos/Universe Dealing/finals/` on Drive, `universe_post.md` beside the recordings | [src/data/videos.ts](src/data/videos.ts) + `public/videos/universe/` |
-| `Tasks/6a7965b63b7d368e70c7de4a` | [src/data/tasks/vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) + `public/tasks/vendor-closeout/` |
-| `task 1 (…)/6a7965b63b7d368e70c7de4a/draft_history.md` | `draftHistory` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per numbered item |
-| `task 1 (…)/6a7965b63b7d368e70c7de4a/milestones.md` | `milestones` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts), one entry per line |
-| `task 1 (…)/6a7965b63b7d368e70c7de4a/golden_conversation.md` | `goldenRun.conversation` in the same file, one entry per message |
+| `task 1 (6ab82ece4b8df21cfe07addd)/` | [src/data/tasks/chargeDisputes.ts](src/data/tasks/chargeDisputes.ts) + `public/tasks/charge-disputes/` |
+| `task 1/GTFA.md`, the answer, the must nots and the accepted variations | `answer`, `ledger`, `mustNot`, `variations` in the same file |
+| `task 1/prompt.md`, the `## PROMPT` section only | `prompt.text`, **verbatim**, with `prompt.marks` matched against it at render time |
+| `task 1/draft_history.md` | `draftHistory`, one entry per numbered item |
+| `task 1/rubrics.md` + `rubric_justifications.md` | `rubrics`, text verbatim, `observed` from the justification |
+| `task 1/subjective_rubrics.md` (the **FINAL** block) + its justifications | `subjective` |
+| `task 1/golden_solution.md` | `goldenRun`, one `Steer` per user message after the first |
+| `task 1/OT/trajectory1.json` and `OT/disputes (4).html` | `run`, and `public/tasks/charge-disputes/ot/` |
 | `Evals/Universes/*.zip` on Drive (generated, see below) | [src/data/universes.ts](src/data/universes.ts) + `complexity-api/universes.ts` |
 | `single_turn_quick_hits - Tasks.csv`, the claim sheet | [src/data/claimSheet.ts](src/data/claimSheet.ts) |
 
@@ -291,18 +295,22 @@ points at the Golden Task section where the principle landed. That relationship,
    step and scrolls its panel into view, which is what every `/#<step-id>` link in the hub relies
    on. The steps carry no anchors of their own, so that effect in
    [Method.tsx](src/pages/Method.tsx) is the only thing making those links land.
-2. The `WALKTHROUGH` array in [TaskDetail.tsx](src/pages/TaskDetail.tsx). It is the method, not a
-   second flow: one entry per method step, in method order, with the page sections nested under the
-   step that produced them. The rail renders it with the method's own numbering and titles, each
-   section heading shows the step badge, and a step this task has no section for keeps its place
-   and links to the method page rather than being dropped. Every step currently carries one, step 4
-   included: the agent never sees the Draft History, but the task is still filed with one, and the
-   `draft-history` section is where it is read.
+2. The `stages` array on the Golden Task. **One stage per method step, in method order, and
+   nothing else on the page.** It lives in the task data rather than in
+   [TaskDetail.tsx](src/pages/TaskDetail.tsx) because which step a piece of a task belongs to is a
+   fact about the task; the page only renders the frame and switches on `stage.id` for the body.
+   The rail still takes its numbers and its titles from `methodSteps`, never from the task, and
+   runs in `flat` mode because one section per step would otherwise print every label twice.
 
-Adding a method step means adding it to `methodSteps` and deciding which task section it points at.
-Adding a task section means nesting it in `WALKTHROUGH` under the step it belongs to. **A section
-that does not belong under a step does not belong on the page**, because a rail entry with no step
-behind it is exactly the second flow this structure exists to prevent.
+**Every stage carries `did`, `why` and `handoff`, and the handoff is the point.** It renders between
+two stages together with the next step's own `inherits` line, so the general rule and the worked
+instance sit side by side and the page reads as one decision carried forward rather than ten
+independent sections. A stage without a handoff turns the walkthrough back into a catalogue.
+
+Adding a method step means adding it to `methodSteps`, adding the matching stage, and giving
+`TaskDetail`'s `body()` a case for it. **A section that is not a stage does not belong on the page**:
+the walkthrough is the method, so a heading with no step behind it is exactly the second flow this
+structure exists to prevent. Sub-headings inside a stage are fine and carry no rail entry.
 
 ### The spec and the checklist follow the Golden Task Viewer's layout
 
@@ -333,8 +341,8 @@ are authored **in both directions**: a pre-submit check points at the golden-tas
 demonstrates it, and that section points back at the check.
 
 An `XLink.to` targets `/<route>#<section-id>`, or an absolute URL (rendered with an external
-arrow). Section ids are hardcoded in `WALKTHROUGH` at the top of
-[TaskDetail.tsx](src/pages/TaskDetail.tsx) and in a `SECTIONS` array at the top of
+arrow). Section ids are the `stages` of the Golden Task in
+[chargeDisputes.ts](src/data/tasks/chargeDisputes.ts), and a `SECTIONS` array at the top of
 [PreSubmit.tsx](src/pages/PreSubmit.tsx) and [SpecDoc.tsx](src/pages/SpecDoc.tsx), and drive both
 the sticky rail and the scroll spy. **Adding or
 renaming a section means updating that array and every `XLink` aimed at it.** Nothing validates
@@ -565,26 +573,28 @@ written as `bg-black/…` for that reason.
 
 ### The objective block is shaped by two caps
 
-`rubrics` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) is twenty criteria, and the shape
-is part of what the page teaches, so [Rubrics.tsx](src/components/Rubrics.tsx) makes both caps
-countable: a `Trajectory` filter and a `role` chip on every criterion that plays a part in a spot
-check group.
+`rubrics` in [chargeDisputes.ts](src/data/tasks/chargeDisputes.ts) is twenty six criteria, and the
+shape is part of what the page teaches, so [Rubrics.tsx](src/components/Rubrics.tsx) makes it
+countable: a `Trajectory` filter that reads **0**, a weight chip on every criterion, and a
+`rubricShape` row stating each count above the block.
 
-- **At most five criteria may target the Trajectory**, and none is a valid number. Here that is the
-  four reconciliation spot checks and the one negative that lands on the final turn. When a
-  Trajectory criterion has to go, its coverage moves onto an artifact rather than leaving with it:
-  the vendor pool identification became criterion 6 against `MEMORY.md`, and the Slack retrieval of
-  the shutdown estimate is carried by the two criteria that pin the figure and the percentage.
-- **A group of more than eight outcomes with the same shape gets one completeness criterion and at
-  most five spot checks**, never one criterion per element. `role` is `"completeness"` or
-  `"spot-check"`, and it is what makes that pattern visible instead of described.
+- **At most 20% of the weight may grade process, and zero is the preferred number.** This block has
+  no Trajectory criterion at all. The filter stays even though it is empty, because a filter reading
+  zero is the clearest way to show the shape.
+- **No criterion may only check that a file, section, column or record exists.** Every one here
+  carries its own transaction id, amount, date, receipt reference or filename.
 
 Both are guideline rules rather than hub preferences, so they belong to
-[changes.ts](src/data/changes.ts) as well, and the two `Callout`s above the block on
-[TaskDetail.tsx](src/pages/TaskDetail.tsx) link back to it. **Changing the criteria means
-re-counting**: `whyGolden`, `run.score`, the `rubrics` arrays in `run.observations` and the GT link
-labels in [checklist.ts](src/data/checklist.ts) and [method.ts](src/data/method.ts) all state the
-totals in words, and nothing validates them.
+[changes.ts](src/data/changes.ts) as well. **Changing the criteria means re-counting**: `whyGolden`,
+`rubricShape`, `run.score`, the `rubrics` arrays in `run.observations`, the closing block on
+[TaskDetail.tsx](src/pages/TaskDetail.tsx) and the GT link labels in
+[checklist.ts](src/data/checklist.ts) and [method.ts](src/data/method.ts) all state the totals in
+words, and nothing validates them.
+
+`run.score` is the 50% bar, computed by hand from `rubrics` and `subjective`: 36 of the 69 positive
+objective weight, 23 of the 23 subjective weight, 59 of 92 together. Criterion 22 carries no weight
+line in `rubrics.md`; the 1 comes from `rubric_justifications.md`, which is the only place the
+source states it.
 
 ### Every subjective rubric carries the two renders it came from
 
@@ -592,26 +602,20 @@ totals in words, and nothing validates them.
 section is built to hold. Each criterion shows the same artifact from both runs side by side, with
 the rated part boxed on each: Leg A is the observed run, Leg B the golden.
 
-`SubjectiveRubric` in [types.ts](src/data/types.ts) gives each leg a `verdict` and a `view`:
-
-- `kind: "render"` is the artifact as a reader sees it, an SVG or a page image. `canvas` is its
-  natural size and every `Box` below is written in those units, so the framing maths is identical
-  for a 1200px SVG and a 1322px page render. `focus` frames the region the criterion is about and
-  `marks` are the labelled boxes that point at it.
-- `kind: "doc"` is a markdown deliverable, rendered as formatted text rather than as source, with
-  `mark` naming the lines the criterion is about. `DocFrame` renders headings, bold, italics,
-  blockquotes, bullets and tables. **No `##` or `**` may ever reach the screen**, because a reader
-  rating a document does not see its markup.
+`SubjectiveRubric` in [types.ts](src/data/types.ts) gives each leg a `verdict` and a `view`. The
+view is the artifact as a reader sees it: `canvas` is the image's natural size and every `Box` is
+written in those units, `focus` frames the region the criterion is about, and `marks` are labelled
+boxes pointing at it. Both are optional, and the clips here use neither because each one was already
+cut to the element the criterion names.
 
 Two rules for authoring one:
 
 - **A mark label must land on empty pixels.** `place` (`above` / `below` / `inside`) and `align`
   exist only for that. A label covering the thing it points at is the single easiest way to ruin
   one of these, so screenshot every mark you add.
-- **Both legs need the same framing.** Where the two artifacts have different page geometry, fix it
-  at the source: the two receipts are re-rendered into one identical window at one scale
-  (`WIN_W`/`WIN_H` in the generation snippet below), so the side by side is a fair comparison
-  rather than two differently zoomed pictures.
+- **Both legs are captured at the same CSS width**, 1100px, so the side by side is a fair comparison
+  rather than two differently zoomed pictures. Several criteria reuse the same clip, which is
+  correct: three of them are about the same row of the same page.
 
 [SubjectiveRubrics.tsx](src/components/SubjectiveRubrics.tsx) renders each criterion as one row
 with the comparison behind a disclosure. **Collapsed is the default and has to stay that way.** Ten
@@ -621,31 +625,53 @@ open comparisons take the section from 1,400px to 6,800px, which is the reason t
 `subjective_rubrics_justifications.md`. Criteria the run passed stay in the block: they are quality
 floors, and the data says so rather than hiding them.
 
-Page images are generated from the PDFs with PyMuPDF and Pillow, cropped to a shared window anchored
-on each document's own ink origin, then written to `public/tasks/<id>/{ot,gt}/`. Re-run that when a
-receipt changes, and re-measure the marks against the new pixels.
+The clips are generated by loading each run's `disputes.html` from `file://` in Playwright at
+1100px wide and `deviceScaleFactor: 2`, clipping from the top of one element to the bottom of
+another, then writing JPEGs into `public/tasks/<id>/compare/`. Two of them are captured **after
+applying the June date filter**, which is the only way to show a total that does not follow its own
+filter. Re-run that when either artifact changes, and re-read the `canvas` sizes it prints: nothing
+validates them, and a wrong one distorts the aspect ratio rather than failing.
 
-### The milestone set and the golden run are one section, deliberately
+### The golden run is steers, not turns
 
-`milestones` and `goldenRun` in [vendorCloseout.ts](src/data/tasks/vendorCloseout.ts) are the two
-halves of the same idea and are rendered as such: the set under step 7, the run under step 8.
+The project is single turn, so there is no milestone set and no turn structure. Leg A is one prompt
+answered once; Leg B is the **same prompt**, word for word, in a new conversation, steered until the
+model reaches the ideal answer. `goldenRun` in
+[chargeDisputes.ts](src/data/tasks/chargeDisputes.ts) is that run:
 
-- `milestones` is one entry per requirement, `{ turn, text }`, grouped by turn in the UI. Stored as
-  the milestone set writes them, so nothing in the hub rewords a milestone.
-- `goldenRun.checks` is the milestone check that runs after each turn. It is the whole point of the
-  section: a check decides whether the next prompt is the next turn or a hint, so the checks carry
-  `met` and `next` and are rendered as a sequence, including the re-check after the steer.
-- `goldenRun.hint` is that steer, broken into `missed`, the verbatim `prompt`, `does`, `avoids` and
-  `recovered`. It sits **outside** the transcript, because a reader has to be able to see what a
-  legitimate hint points at without reading ten messages first.
-- `goldenRun.conversation` is the transcript, `{ role, turn, hint?, lines }`, rendered inside a
-  collapsed disclosure. **Collapsed is the default**: the argument is above it and the transcript is
-  the evidence. The message flagged `hint: true` is the one message that is not a turn of the task,
-  and it is marked as such on screen.
+- `steers` is one entry per user message after the opening prompt, each broken into `missed`, the
+  verbatim `prompt`, `does`, `avoids` and `recovered`. **`does` and `avoids` are the section.** A
+  steer with no `avoids` teaches nothing, because what a legitimate hint refuses to say is the whole
+  rule.
+- `progress` is the state of the answer after each reply, so the climb from two disputes to five is
+  countable rather than asserted.
+- The prompts are stored **verbatim, typos included**, like the task prompt and the Draft History.
+  They are the thing being studied.
 
-A turn whose milestones were reached and a turn whose milestones were missed both have to be visible
-here, or the section explains hinting without demonstrating it. This task supplies both: turns 1, 2
-and 4 landed, turn 3 did not.
+There is no transcript component any more. Ten messages behind a disclosure was evidence for a
+multi-turn task; here the four steers *are* the evidence, and the agent replies are summarised in
+`recovered` rather than reproduced.
+
+### The prompt is stored once and annotated by matching
+
+`prompt.text` is the `## PROMPT` section of `prompt.md`, verbatim, typos and curly apostrophes
+included. **It is never split into segments in the data.** `prompt.marks` carries a `quote` that is
+matched against that string at render time by `segments()` in
+[TaskDetail.tsx](src/pages/TaskDetail.tsx), which is what makes it impossible for an annotation to
+quietly reword the prompt: a quote that no longer matches simply stops being a mark, and the prompt
+still renders in full.
+
+Two consequences when editing either side:
+
+- **A quote must occur exactly once.** `segments()` takes the first occurrence and skips anything
+  that overlaps a mark already placed, so a duplicate substring silently loses its annotation.
+  Check it before shipping; nothing validates it.
+- **The apostrophes matter.** The source mixes `'` and `’` in the same paragraph. Copy the quote out
+  of the stored string rather than retyping it.
+
+The same matching is not used for `draftHistory.outcome[].askedFor`, which is quoted prose rather
+than a span, but those quotes are taken from the same prompt and should stay exact for the same
+reason: the section exists to prove that nothing graded was invented after the prompt was written.
 
 ### The ⌘K index is hand-derived
 
@@ -656,17 +682,19 @@ is how a search for a vendor name finds the evidence ledger.
 
 ### Adding a golden task
 
-1. `src/data/tasks/<id>.ts` exporting a `GoldenTask`.
-2. Real artifacts under `public/tasks/<id>/`, in `inputs/`, `gt/`, `ot/`.
+1. `src/data/tasks/<id>.ts` exporting a `GoldenTask`, **including all ten `stages`**.
+2. Real artifacts under `public/tasks/<id>/`: `inputs/` (plus `inputs/straight/` for the renders the
+   golden had to make before a photograph could be read), `gt/`, `ot/`, and `compare/` for the
+   subjective clips.
 3. Add it to the `tasks` array in `src/data/index.ts`.
 
 It appears on `/golden-tasks`, gets a walkthrough page, joins the ⌘K index, and resolves any
-`XLink` pointing at it. `TaskDetail`'s `WALKTHROUGH` array assumes the full `GoldenTask` shape; a
-task missing a field renders an empty section rather than failing, so fill every field or trim the
-array.
+`XLink` pointing at it. `TaskDetail` switches on `stage.id` and assumes the full `GoldenTask`
+shape; a task missing a field renders an empty section rather than failing, so fill every field or
+trim `stages`.
 
-The card on `/golden-tasks` builds its image strip from the first four `inputs` that are not a
-`pdf` or a `doc`, so ship at least one real image or the card falls back to a placeholder. The card
+The card on `/golden-tasks` builds its image strip from the first four `inputs` whose `kind` is
+`photo` or `screenshot`, so ship at least one real image or the card falls back to a placeholder. The card
 shows title, one-liner, category and subcategory, and never a difficulty. **The index page is built
 for many tasks**: keep it a grid of equal cards, and keep the reference-only disclaimer above it.
 
@@ -687,7 +715,9 @@ for many tasks**: keep it a grid of equal cards, and keep the reference-only dis
 - **`SectionRail` is the walkthrough rail**, and it takes method steps rather than a flat list:
   `RailGroup` is `{ n, id, title, sections }`, the number and title come from `methodSteps`, and the
   sections nest under it. A group with no sections renders muted and links to `/#<step-id>`. It is
-  the first grid child so it sits on the left, and its `title` defaults to `Walkthrough`.
+  the first grid child so it sits on the left, and its `title` defaults to `Walkthrough`. Pass
+  **`flat`** when there is exactly one section per step, as the Golden Task has: the step row
+  becomes the section link, and the nested list is dropped so no label prints twice.
 - **A sticky element that is a direct grid child needs `self-start`**, otherwise it stretches to
   the full row height and sticky does nothing. `SectionRail` carries it.
 - **A sticky rail also has to be bounded**, with `useStickyFit` in
@@ -732,8 +762,8 @@ reintroduce `tokens.css` / `app.css`.
 
 - **No em dashes, and no hyphen used as a dash.** Use commas, periods or "and". Hyphens survive
   only inside established compounds (`multi-turn`, `cross-modal`, `pre-submit`). The exceptions are
-  the blocks that are transcripts rather than hub copy: generated `specDoc.ts`, the turn prompts,
-  the Draft History, the milestone set and the golden conversation. Those are stored exactly as
+  the blocks that are transcripts rather than hub copy: generated `specDoc.ts`, the task prompt,
+  the Draft History, the rubric criteria and the golden run's steers. Those are stored exactly as
   written, typos and em dashes included, because the wording is the thing being studied.
 - Short sentences. The hub is a practical reference, not a second copy of the guidelines. If a
   section is growing into documentation, cut it and link to the guidelines instead.

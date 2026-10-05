@@ -1,31 +1,47 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   AlertTriangle,
+  ArrowDown,
   ArrowLeft,
   ArrowUpRight,
+  Ban,
+  Calendar,
   Check,
   ChevronDown,
   ClipboardList,
+  Database,
   ExternalLink,
+  Eye,
   FileText,
-  Flag,
   Image as ImageIcon,
   Lightbulb,
-  MessagesSquare,
-  PenLine,
+  Mail,
+  MessageSquareQuote,
   Quote,
+  Scale,
   Sparkles,
+  StickyNote,
   Target,
+  Wand2,
   X,
 } from "lucide-react";
 import { taskById } from "../data";
 import { methodSteps } from "../data/method";
-import type { GoldenMessage, GoldenRun, InputAsset, Milestone, Trap, XLink } from "../data/types";
+import type {
+  AssignedParameter,
+  GoldenTask,
+  InputAsset,
+  PromptMark,
+  Steer,
+  TaskStage,
+  Trap,
+  XLink,
+} from "../data/types";
 import type { RailGroup } from "../components/ui";
 import { Callout, Crosslinks, Reveal, SectionRail, Stat } from "../components/ui";
-import { MdLines } from "../components/Markdown";
+import { Inline, MdLines } from "../components/Markdown";
 import Ledger from "../components/Ledger";
 import Rubrics from "../components/Rubrics";
 import SubjectiveRubrics from "../components/SubjectiveRubrics";
@@ -33,122 +49,22 @@ import { useScrollSpy } from "../lib/useScrollSpy";
 import { asset, cx } from "../lib/util";
 
 /**
- * The walkthrough, nested under the method step each part of the task belongs
- * to. The rail renders this as the method itself, so the numbering is the
- * method's own and every section sits under the step that produced it. Every
- * step carries at least one section; a step with none would still keep its
- * place in the rail and link to the method page, because dropping it would make
- * the rail read as an eight step method.
+ * The walkthrough is the method, walked.
  *
- * Order here is page order, and both have to stay in method order or the
- * scroll spy walks the rail backwards.
+ * One section per method step, in method order, each one framed the same way:
+ * what happened here, why the step could not be skipped, the work itself, then
+ * the handoff into the next step. The handoff is the point of the page. A
+ * reader who skips it is reading a finished task; a reader who follows it is
+ * watching one get built.
+ *
+ * `stages` lives in the task data rather than here, because which step a
+ * section belongs to is a fact about the task. The rail still takes its numbers
+ * and its titles from the method, never from the task.
  */
-const WALKTHROUGH: { step: number; sections: { id: string; label: string }[] }[] = [
-  /* Step 1 keeps its place with no sections of its own: this task predates the
-     use case taxonomy, so the rail renders it muted and links to the method. */
-  { step: 1, sections: [] },
-  { step: 2, sections: [{ id: "universe", label: "The two channels" }] },
-  {
-    step: 3,
-    sections: [
-      { id: "answer", label: "The resolved answer" },
-      { id: "ledger", label: "Evidence ledger" },
-      { id: "traps", label: "Designed friction" },
-    ],
-  },
-  {
-    step: 4,
-    sections: [
-      { id: "inputs", label: "Eleven files" },
-      { id: "format", label: "The receipt template" },
-    ],
-  },
-  { step: 5, sections: [{ id: "turns", label: "The four prompts" }] },
-  { step: 6, sections: [{ id: "draft-history", label: "Objective and outcome" }] },
-  { step: 7, sections: [{ id: "model-a", label: "Where Model A broke" }] },
-  { step: 8, sections: [{ id: "rubrics", label: "The criteria block" }] },
-  {
-    step: 9,
-    sections: [
-      { id: "milestones", label: "The milestone set" },
-      { id: "golden", label: "The deliverables" },
-      { id: "hinting", label: "Hinting in practice" },
-    ],
-  },
-  { step: 10, sections: [{ id: "subjective", label: "The comparisons" }] },
-];
 
-/** The rail takes its numbers and its titles from the method, never from here. */
-const RAIL: RailGroup[] = WALKTHROUGH.map((g) => {
-  const step = methodSteps.find((m) => m.n === g.step)!;
-  return { n: step.n, id: step.id, title: step.title, sections: g.sections };
-});
+const step = (n: number) => methodSteps.find((m) => m.n === n)!;
 
-/** Which method step a section implements, for the badge on its heading. */
-const SECTION_STEP = new Map<string, number>(
-  WALKTHROUGH.flatMap((g) => g.sections.map((s) => [s.id, g.step] as [string, number]))
-);
-
-const IDS = WALKTHROUGH.flatMap((g) => g.sections.map((s) => s.id));
-
-const roleTone: Record<InputAsset["role"], { label: string; chip: string }> = {
-  evidence: {
-    label: "Evidence",
-    chip: "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300",
-  },
-  contradicts: {
-    label: "Contradicts",
-    chip: "bg-amber-500/12 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-300",
-  },
-  distractor: {
-    label: "Distractor",
-    chip: "bg-rose-500/12 text-rose-700 ring-1 ring-rose-500/25 dark:text-rose-300",
-  },
-  spec: {
-    label: "Format spec",
-    chip: "bg-brand-500/12 text-brand-700 ring-1 ring-brand-500/25 dark:text-brand-300",
-  },
-};
-
-const kindIcon: Record<InputAsset["kind"], JSX.Element> = {
-  image: <ImageIcon size={13} />,
-  photo: <ImageIcon size={13} />,
-  handwriting: <PenLine size={13} />,
-  pdf: <FileText size={13} />,
-  doc: <FileText size={13} />,
-};
-
-/** A section heading that names the method step it implements. */
-function SectionHead({
-  id,
-  title,
-  sub,
-}: {
-  id: string;
-  title: string;
-  sub?: string;
-}) {
-  const n = SECTION_STEP.get(id);
-  const step = n ? methodSteps.find((m) => m.n === n) : undefined;
-  return (
-    <div className="mb-6">
-      {step && (
-        <Link
-          to={`/#${step.id}`}
-          className="group mb-3 inline-flex items-center gap-2 rounded-lg border border-ink-200 bg-surface px-2.5 py-1.5 text-[11.5px] transition hover:border-brand-300"
-        >
-          <span className="grid h-4 w-4 place-items-center rounded bg-brand-600 font-mono text-[9px] font-bold text-white">
-            {step.n}
-          </span>
-          <span className="font-semibold text-ink-600 group-hover:text-ink-900">{step.slogan}</span>
-          <ArrowUpRight size={12} className="text-ink-400" />
-        </Link>
-      )}
-      <h2 className="font-display text-[26px] font-bold tracking-tight text-ink-900">{title}</h2>
-      {sub && <p className="mt-2 max-w-2xl text-[14.5px] leading-relaxed text-ink-500">{sub}</p>}
-    </div>
-  );
-}
+/* ------------------------------------------------------------------- pieces */
 
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
   return (
@@ -179,11 +95,178 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
   );
 }
 
+/** The frame every stage renders in. */
+function StageHead({ s }: { s: TaskStage }) {
+  const m = step(s.step);
+  return (
+    <div className="mb-7">
+      <Link
+        to={`/#${m.id}`}
+        className="group inline-flex items-center gap-2 rounded-lg border border-ink-200 bg-surface px-2.5 py-1.5 text-[11.5px] transition hover:border-brand-300"
+      >
+        <span className="grid h-4 w-4 place-items-center rounded bg-brand-600 font-mono text-[9px] font-bold text-white">
+          {m.n}
+        </span>
+        <span className="font-semibold text-ink-900">{m.title}</span>
+        <span className="hidden text-ink-500 sm:inline">{m.slogan}</span>
+        <ArrowUpRight size={12} className="text-ink-400" />
+      </Link>
+
+      <h2 className="mt-3 font-display text-[26px] font-bold leading-tight tracking-tight text-ink-900">
+        {s.title}
+      </h2>
+
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+        <div className="rounded-xl border border-ink-200/70 bg-raised px-4 py-3">
+          <div className="mono-label mb-1 text-ink-400">What happened here</div>
+          <p className="text-[13px] leading-relaxed text-ink-700">{s.did}</p>
+        </div>
+        <div className="rounded-xl border border-brand-300/50 bg-brand-50/50 px-4 py-3 dark:border-brand-500/25 dark:bg-brand-500/10">
+          <div className="mono-label mb-1 text-brand-700 dark:text-brand-300">
+            Why the step is there
+          </div>
+          <p className="text-[13px] leading-relaxed text-ink-700">{s.why}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * The join between two stages. It carries this task's handoff and the next
+ * step's own `inherits` line, so the general rule and the worked instance sit
+ * together and the sequence reads as one decision carried forward.
+ */
+function Handoff({ s, next }: { s: TaskStage; next?: TaskStage }) {
+  if (!next) return null;
+  const m = step(next.step);
+  return (
+    <div aria-hidden={false} className="relative mt-10 pl-5">
+      <span className="absolute left-[9px] top-0 h-full w-px bg-gradient-to-b from-brand-400/60 to-ink-200" />
+      <span className="absolute left-0 top-3 grid h-[19px] w-[19px] place-items-center rounded-full bg-brand-600 text-white shadow-glow">
+        <ArrowDown size={11} />
+      </span>
+      <div className="rounded-xl border border-ink-200/70 bg-raised px-4 py-3.5">
+        <div className="mono-label mb-1.5 text-ink-400">
+          Hands to step {m.n}, {m.title}
+        </div>
+        <p className="text-[13px] font-semibold leading-relaxed text-ink-900">{s.handoff}</p>
+        {m.inherits && (
+          <p className="mt-2 border-t border-ink-200/70 pt-2 text-[12.5px] leading-relaxed text-ink-500">
+            {m.inherits}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------- step 1 */
+
+function Parameters({ t }: { t: GoldenTask }) {
+  return (
+    <>
+      <div className="overflow-hidden rounded-2xl border border-ink-200/70 bg-surface">
+        {t.parameters.map((p: AssignedParameter, i) => (
+          <div
+            key={p.label}
+            className={cx(
+              "grid gap-x-6 gap-y-1 px-4 py-3.5 sm:grid-cols-[180px_1fr] sm:px-5",
+              i > 0 && "border-t border-ink-200/70"
+            )}
+          >
+            <div>
+              <div className="mono-label text-ink-400">{p.label}</div>
+              <div
+                className={cx(
+                  "mt-1 break-words text-[13px] font-semibold text-ink-900",
+                  p.literal && "font-mono text-[12px]"
+                )}
+              >
+                {p.value}
+              </div>
+            </div>
+            <p className="text-[12.5px] leading-relaxed text-ink-600 sm:self-center">{p.binds}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-5 grid gap-4 lg:grid-cols-2">
+        <Callout title="The scope check" tone="ok" icon={<Check size={12} />}>
+          {t.scopeCheck.body}
+        </Callout>
+        <Callout title="The neighbour it is not" tone="no" icon={<Ban size={12} />}>
+          {t.scopeCheck.neighbour}
+        </Callout>
+      </div>
+
+      <Crosslinks
+        className="mt-4"
+        links={[
+          { to: "/reference#use-case-and-tools", tag: "T", label: "The 11 use cases and 68 subcategories" },
+          { to: "/reference#s1", tag: "C1", label: "Is the pair implemented without drift?" },
+        ]}
+      />
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------- step 2 */
+
+function Universe({ t }: { t: GoldenTask }) {
+  return (
+    <>
+      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+        {t.universeFacts.map((f) => (
+          <Stat key={f.k} label={f.k} value={f.v} />
+        ))}
+      </div>
+
+      <div className="mt-5 space-y-3">
+        {t.universeSources.map((s) => (
+          <Reveal key={s.service}>
+            <div
+              className={cx(
+                "card p-5",
+                s.offConnector && "border-amber-300/70 dark:border-amber-500/30"
+              )}
+            >
+              <div className="flex flex-wrap items-center gap-2">
+                <Database size={14} className="text-ink-400" />
+                <h3 className="font-display text-[15.5px] font-bold text-ink-900">{s.service}</h3>
+                {s.offConnector && (
+                  <span className="chip bg-amber-500/12 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-300">
+                    <AlertTriangle size={11} /> Outside the assigned connectors
+                  </span>
+                )}
+              </div>
+              <p className="mt-2 text-[13px] leading-relaxed text-ink-600">{s.carries}</p>
+              <div className="mt-3 rounded-lg bg-raised px-3.5 py-2.5">
+                <div className="mono-label mb-1 text-ink-400">What it decides</div>
+                <p className="text-[12.5px] leading-relaxed text-ink-700">{s.decides}</p>
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+
+      <Crosslinks
+        className="mt-4"
+        links={[
+          { to: "/#universe-videos", tag: "V", label: "The universe interaction recordings" },
+          { to: "/reference#s2", tag: "C2", label: "Is the scenario grounded in records you have seen?" },
+        ]}
+      />
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------- step 3 */
+
 function TrapCard({ t }: { t: Trap }) {
-  const step = t.step ? methodSteps.find((m) => m.n === t.step) : undefined;
-  /** The method step first, then whatever else the trap points at. */
+  const m = t.step ? step(t.step) : undefined;
   const links: XLink[] = [
-    ...(step ? [{ to: `/#${step.id}`, tag: `M${step.n}`, label: step.title }] : []),
+    ...(m ? [{ to: `/#${m.id}`, tag: `M${m.n}`, label: m.title }] : []),
     ...(t.links ?? []),
   ];
   return (
@@ -209,100 +292,771 @@ function TrapCard({ t }: { t: Trap }) {
   );
 }
 
-/** The milestone set, grouped by the turn each requirement came from. */
-function byTurn(ms: Milestone[]) {
-  const groups: { turn: number; items: Milestone[] }[] = [];
-  for (const m of ms) {
-    const last = groups[groups.length - 1];
-    if (last && last.turn === m.turn) last.items.push(m);
-    else groups.push({ turn: m.turn, items: [m] });
-  }
-  return groups;
-}
-
-/** "Turn 1", or "Turns 2 and 3" for an outcome item that spans two of them. */
-function turnLabel(ns: number[]) {
-  if (ns.length === 1) return `Turn ${ns[0]}`;
-  return `Turns ${ns.slice(0, -1).join(", ")} and ${ns[ns.length - 1]}`;
-}
-
-/** One message of the golden conversation. The steer is marked, because it is
- *  the one message that is not a turn of the task. */
-function Message({ m }: { m: GoldenMessage }) {
-  const user = m.role === "user";
+function Gtfa({ t }: { t: GoldenTask }) {
   return (
-    <div
-      className={cx(
-        "rounded-xl border p-4",
-        m.hint
-          ? "border-gold-400/70 bg-gold-50/70 dark:border-gold-500/35 dark:bg-gold-500/10"
-          : user
-            ? "border-ink-200/70 bg-raised"
-            : "border-ink-200/70 bg-surface"
-      )}
-    >
-      <div className="mb-2 flex flex-wrap items-center gap-2">
-        <span className="mono-label text-ink-400">{user ? "User" : "Agent"}</span>
-        <span className="rounded border border-ink-200 bg-surface px-1.5 py-0.5 font-mono text-[10.5px] text-ink-600">
-          Turn {m.turn}
-        </span>
-        {m.hint && (
-          <span className="rounded border border-gold-400/60 bg-gold-100/70 px-1.5 py-0.5 font-mono text-[10.5px] font-semibold text-gold-700 dark:bg-gold-500/15 dark:text-gold-300">
-            Hint, not a turn
-          </span>
-        )}
+    <>
+      <div className="card overflow-hidden">
+        <div className="grid gap-5 border-b border-ink-200/70 bg-raised p-6 sm:grid-cols-[auto_1fr] sm:items-center">
+          <div>
+            <div className="mono-label text-ink-400">Owed back, in total</div>
+            <div className="mt-1 font-display text-5xl font-bold text-ink-900">{t.answer.total}</div>
+          </div>
+          <p className="text-[13.5px] leading-relaxed text-ink-600">{t.answer.basis}</p>
+        </div>
+        <div className="grid gap-3 p-6 sm:grid-cols-2 lg:grid-cols-4">
+          {t.answer.counts.map((c) => (
+            <Stat key={c.label} label={c.label} value={c.v} tone={c.tone} />
+          ))}
+        </div>
       </div>
-      <div className="space-y-1.5 text-[12.5px] leading-relaxed text-ink-700">
-        <MdLines lines={m.lines} />
+
+      <h3 className="mb-3 mt-10 font-display text-[18px] font-bold tracking-tight text-ink-900">
+        Twelve charges, and why each one lands where it does
+      </h3>
+      <p className="mb-4 max-w-2xl text-[13.5px] leading-relaxed text-ink-500">
+        Every row was resolved before the prompt was ever sent. Open one to see the records behind
+        it, and what makes it hard to reach.
+      </p>
+      <Ledger rows={t.ledger} />
+
+      <div className="mt-8 grid gap-4 lg:grid-cols-2">
+        <div className="card p-5">
+          <div className="mono-label mb-2.5 flex items-center gap-1.5 text-rose-700 dark:text-rose-300">
+            <Ban size={12} /> What must not happen
+          </div>
+          <ul className="space-y-2">
+            {t.mustNot.map((x) => (
+              <li key={x} className="flex gap-2 text-[12.5px] leading-relaxed text-ink-700">
+                <X size={12} className="mt-1 shrink-0 text-rose-500" />
+                <span className="min-w-0 flex-1">{x}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="card p-5">
+          <div className="mono-label mb-2.5 flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300">
+            <Check size={12} /> What still counts as right
+          </div>
+          <ul className="space-y-2">
+            {t.variations.map((x) => (
+              <li key={x} className="flex gap-2 text-[12.5px] leading-relaxed text-ink-700">
+                <Check size={12} className="mt-1 shrink-0 text-emerald-500" />
+                <span className="min-w-0 flex-1">{x}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <p className="mt-3 text-[12.5px] leading-relaxed text-ink-500">
+        Both lists are part of the answer. Without them a reviewer has to guess whether a different
+        but defensible reading is a failure, and two reviewers guess differently.
+      </p>
+
+      <h3 className="mb-3 mt-10 font-display text-[18px] font-bold tracking-tight text-ink-900">
+        Seven pieces of designed friction
+      </h3>
+      <p className="mb-4 max-w-2xl text-[13.5px] leading-relaxed text-ink-500">
+        None of these is a gotcha. Each one is a place where two real records have to be reconciled,
+        which is where genuine difficulty comes from.
+      </p>
+      <div className="grid gap-4 lg:grid-cols-2">
+        {t.traps.map((trap) => (
+          <Reveal key={trap.id} className="h-full">
+            <TrapCard t={trap} />
+          </Reveal>
+        ))}
+      </div>
+
+      <Crosslinks
+        className="mt-5"
+        links={[
+          { to: "/reference#s3", tag: "C3", label: "Is the answer resolved before the first run?" },
+          { to: "/complexity", tag: "TOOL", label: "Raise a scenario to the complexity bar" },
+        ]}
+      />
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------- step 4 */
+
+const roleTone: Record<InputAsset["role"], { label: string; chip: string }> = {
+  decides: {
+    label: "Decides a dispute",
+    chip: "bg-rose-500/12 text-rose-700 ring-1 ring-rose-500/25 dark:text-rose-300",
+  },
+  clears: {
+    label: "Clears a charge",
+    chip: "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300",
+  },
+  spec: {
+    label: "The page format",
+    chip: "bg-brand-500/12 text-brand-700 ring-1 ring-brand-500/25 dark:text-brand-300",
+  },
+};
+
+const kindIcon: Record<InputAsset["kind"], JSX.Element> = {
+  photo: <ImageIcon size={11} />,
+  screenshot: <ImageIcon size={11} />,
+  doc: <FileText size={11} />,
+  notes: <StickyNote size={11} />,
+};
+
+function InputCard({
+  inp,
+  onZoom,
+}: {
+  inp: InputAsset;
+  onZoom: (v: { src: string; alt: string }) => void;
+}) {
+  const url = asset(inp.src);
+  const viewable = inp.kind === "photo" || inp.kind === "screenshot";
+  return (
+    <div className="card flex h-full flex-col overflow-hidden">
+      {viewable ? (
+        <button
+          onClick={() => onZoom({ src: url, alt: inp.shows })}
+          className="group relative block aspect-[16/10] w-full overflow-hidden bg-ink-100"
+        >
+          <img
+            src={url}
+            alt={inp.shows}
+            loading="lazy"
+            className="h-full w-full object-contain transition duration-500 ease-out group-hover:scale-[1.03]"
+          />
+        </button>
+      ) : (
+        <a
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+          className="group flex aspect-[16/10] w-full items-center justify-center gap-2 bg-raised text-ink-400 transition hover:text-brand-600"
+        >
+          <FileText size={24} />
+          <span className="text-[12.5px] font-semibold">Open the file</span>
+          <ExternalLink size={13} />
+        </a>
+      )}
+
+      <div className="flex flex-1 flex-col p-4">
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className={cx("chip", roleTone[inp.role].chip)}>{roleTone[inp.role].label}</span>
+          <span className="chip bg-ink-100 text-ink-500 ring-1 ring-ink-200">
+            {kindIcon[inp.kind]}
+            {inp.kind}
+          </span>
+        </div>
+        <div className="mt-2.5 break-all font-mono text-[11.5px] font-semibold text-ink-800">
+          {inp.file}
+        </div>
+        <p className="mt-2 text-[12.5px] leading-relaxed text-ink-600">{inp.shows}</p>
+
+        <div className="mt-3 border-t border-ink-200/70 pt-3">
+          <div className="mono-label mb-1 text-ink-400">Carries</div>
+          <p className="text-[12.5px] leading-relaxed text-ink-700">{inp.carries}</p>
+        </div>
+
+        {inp.charges.length > 0 && (
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {inp.charges.map((c) => (
+              <span
+                key={c}
+                className="rounded-md border border-ink-200 bg-raised px-1.5 py-0.5 font-mono text-[10.5px] text-ink-600"
+              >
+                {c}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {inp.straight && (
+          <div className="mt-auto pt-4">
+            <div className="mono-label mb-1.5 flex items-center gap-1.5 text-gold-700 dark:text-gold-300">
+              <Wand2 size={12} /> What the golden had to do with it
+            </div>
+            <button
+              onClick={() => onZoom({ src: asset(inp.straight!.src), alt: inp.straight!.note })}
+              className="block w-full overflow-hidden rounded-lg border border-gold-400/50 bg-white"
+            >
+              <img
+                src={asset(inp.straight.src)}
+                alt={inp.straight.note}
+                loading="lazy"
+                className="max-h-56 w-full object-contain"
+              />
+            </button>
+            <p className="mt-2 text-[12px] leading-relaxed text-ink-600">{inp.straight.note}</p>
+          </div>
+        )}
       </div>
     </div>
   );
 }
 
-/**
- * The golden conversation, collapsed. Ten messages is a long read and the point
- * of the section sits above it, so the transcript is the evidence rather than
- * the argument.
- */
-function Transcript({ run }: { run: GoldenRun }) {
-  const [open, setOpen] = useState(false);
+function Inputs({
+  t,
+  onZoom,
+}: {
+  t: GoldenTask;
+  onZoom: (v: { src: string; alt: string }) => void;
+}) {
+  return (
+    <>
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        {t.inputs.map((inp) => (
+          <Reveal key={inp.file} className="h-full">
+            <InputCard inp={inp} onZoom={onZoom} />
+          </Reveal>
+        ))}
+      </div>
+
+      <h3 className="mb-3 mt-10 font-display text-[18px] font-bold tracking-tight text-ink-900">
+        The format rule lives in an attachment
+      </h3>
+      <p className="mb-4 max-w-2xl text-[13.5px] leading-relaxed text-ink-500">
+        Nothing in the prompt says what the page looks like. The shape of it is in the ninth file,
+        which is what makes finding and following it part of the work.
+      </p>
+      <div className="card overflow-hidden">
+        <div className="flex items-center gap-2 border-b border-ink-200/70 px-5 py-3">
+          <StickyNote size={14} className="text-ink-400" />
+          <span className="font-mono text-[12px] font-semibold text-ink-700">
+            {t.layoutNotes.file}
+          </span>
+          <a
+            href={asset(t.layoutNotes.src)}
+            target="_blank"
+            rel="noreferrer"
+            className="ml-auto inline-flex items-center gap-1 text-[12px] font-semibold text-brand-600 hover:underline dark:text-brand-300"
+          >
+            Open <ExternalLink size={12} />
+          </a>
+        </div>
+        <pre className="overflow-x-auto whitespace-pre-wrap p-5 font-mono text-[12.5px] leading-relaxed text-ink-700">
+          {t.layoutNotes.body}
+        </pre>
+      </div>
+      <Callout title="Why it is an attachment" tone="accent" icon={<Lightbulb size={13} />}>
+        Four of the eleven subjective criteria exist because this file says what it says and stops
+        there. It asks for four fields and a filter, so naming the account, grouping the two kinds of
+        claim and keeping the total in step with the filter are all additions, which is exactly what
+        the presentation block is for.
+      </Callout>
+
+      <Crosslinks
+        className="mt-4"
+        links={[{ to: "/reference#s3", tag: "C3", label: "Does every input earn its place?" }]}
+      />
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------- step 5 */
+
+type Segment = { text: string; mark?: PromptMark; n?: number };
+
+/** Splits the stored prompt on its marked spans. Nothing here rewords it. */
+function segments(text: string, marks: PromptMark[]): Segment[] {
+  const hits = marks
+    .map((m) => ({ m, at: text.indexOf(m.quote) }))
+    .filter((h) => h.at >= 0)
+    .sort((a, b) => a.at - b.at);
+
+  const out: Segment[] = [];
+  let cursor = 0;
+  let n = 0;
+  for (const h of hits) {
+    if (h.at < cursor) continue;
+    if (h.at > cursor) out.push({ text: text.slice(cursor, h.at) });
+    out.push({ text: h.m.quote, mark: h.m, n: ++n });
+    cursor = h.at + h.m.quote.length;
+  }
+  if (cursor < text.length) out.push({ text: text.slice(cursor) });
+  return out;
+}
+
+function AnnotatedPrompt({ t }: { t: GoldenTask }) {
+  const [active, setActive] = useState<string | null>(null);
+  const notes = useRef<Record<string, HTMLLIElement | null>>({});
+  const segs = segments(t.prompt.text, t.prompt.marks);
+  const numbered = segs.filter((s): s is Required<Segment> => !!s.mark);
+
+  const pick = (id: string) => {
+    setActive(id);
+    notes.current[id]?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  };
+
+  return (
+    <>
+      <div className="grid items-start gap-5 lg:grid-cols-[1fr_380px]">
+        <div className="card overflow-hidden lg:sticky lg:top-24 lg:self-start">
+          <div className="flex items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
+            <MessageSquareQuote size={14} className="text-ink-400" />
+            <span className="text-[13px] font-bold text-ink-900">The prompt, in full</span>
+            <span className="ml-auto font-mono text-[11px] text-ink-500">sent once</span>
+          </div>
+          <blockquote className="relative p-5 pl-9">
+            <Quote size={14} className="absolute left-4 top-5 text-ink-300" aria-hidden />
+            <p className="whitespace-pre-wrap text-[13.5px] leading-[1.75] text-ink-700">
+              {segs.map((s, i) =>
+                s.mark ? (
+                  <button
+                    key={i}
+                    onClick={() => pick(s.mark!.id)}
+                    className={cx(
+                      "rounded px-0.5 text-left underline decoration-dotted underline-offset-4 transition",
+                      active === s.mark.id
+                        ? "bg-brand-500/20 font-semibold text-ink-900 decoration-brand-500"
+                        : "bg-brand-500/[0.07] decoration-brand-400/60 hover:bg-brand-500/15"
+                    )}
+                  >
+                    {s.text}
+                    <sup className="ml-0.5 font-mono text-[9.5px] font-bold text-brand-600 dark:text-brand-300">
+                      {s.n}
+                    </sup>
+                  </button>
+                ) : (
+                  <span key={i}>{s.text}</span>
+                )
+              )}
+            </p>
+          </blockquote>
+        </div>
+
+        <div>
+          <div className="mono-label mb-2 text-ink-400">
+            {numbered.length} spans that are doing work
+          </div>
+          <ol className="space-y-2">
+            {numbered.map((s) => {
+              const on = active === s.mark.id;
+              return (
+                <li
+                  key={s.mark.id}
+                  ref={(el) => {
+                    notes.current[s.mark.id] = el;
+                  }}
+                  aria-current={on ? "true" : undefined}
+                >
+                  <button
+                    onClick={() => setActive(on ? null : s.mark.id)}
+                    className={cx(
+                      "w-full rounded-xl border px-3.5 py-3 text-left transition",
+                      on
+                        ? "border-brand-400 bg-brand-500/10"
+                        : "border-ink-200/80 bg-surface hover:border-ink-300"
+                    )}
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="grid h-5 w-5 shrink-0 place-items-center rounded bg-brand-600 font-mono text-[10px] font-bold text-white">
+                        {s.n}
+                      </span>
+                      <span className="text-[12.5px] font-bold text-ink-900">{s.mark.label}</span>
+                    </div>
+                    <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-600">
+                      {s.mark.body}
+                    </p>
+                    {s.mark.cost && (
+                      <p className="mt-1.5 border-l-2 border-rose-400/60 pl-2 text-[12px] leading-relaxed text-ink-500">
+                        {s.mark.cost}
+                      </p>
+                    )}
+                  </button>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </div>
+
+      <h3 className="mb-3 mt-10 font-display text-[18px] font-bold tracking-tight text-ink-900">
+        What the prompt deliberately does not say
+      </h3>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {t.prompt.withheld.map((w) => (
+          <div key={w.title} className="rounded-xl border border-ink-200/70 bg-raised px-4 py-3">
+            <div className="text-[12.5px] font-bold text-ink-900">{w.title}</div>
+            <p className="mt-1 text-[12.5px] leading-relaxed text-ink-600">{w.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <Crosslinks
+        className="mt-5"
+        links={[
+          { to: "/reference#s4", tag: "C4", label: "Is every graded requirement stated in the prompt?" },
+        ]}
+      />
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------- step 6 */
+
+function DraftHistoryBlock({ t }: { t: GoldenTask }) {
+  return (
+    <>
+      <div className="card overflow-hidden">
+        <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
+          <Target size={14} className="text-ink-400" />
+          <span className="text-[13px] font-bold text-ink-900">Agent Objective</span>
+          <span className="ml-auto font-mono text-[11px] text-ink-500">why she is asking</span>
+        </div>
+        <div className="space-y-3 p-5">
+          {t.draftHistory.objective.map((p, i) => (
+            <p key={i} className="text-[13.5px] leading-relaxed text-ink-700">
+              {p}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-3 grid gap-3 sm:grid-cols-3">
+        {t.draftHistory.objectiveReads.map((r) => (
+          <div key={r.title} className="rounded-xl border border-ink-200/70 bg-raised px-4 py-3">
+            <div className="text-[12.5px] font-bold leading-snug text-ink-900">{r.title}</div>
+            <p className="mt-1 text-[12.5px] leading-relaxed text-ink-600">{r.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mb-4 mt-8 flex flex-wrap items-center gap-2">
+        <ClipboardList size={14} className="text-ink-400" />
+        <span className="text-[13px] font-bold text-ink-900">Desired Outcome</span>
+        <span className="font-mono text-[11px] text-ink-500">
+          the end state, in terms someone else can check
+        </span>
+      </div>
+
+      <div className="space-y-4">
+        {t.draftHistory.outcome.map((o) => (
+          <Reveal key={o.n}>
+            <div className="card overflow-hidden">
+              <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
+                <span className="grid h-6 w-6 place-items-center rounded-lg bg-gold-500 font-mono text-[11px] font-bold text-white">
+                  {o.n}
+                </span>
+                <span className="text-[13px] font-semibold text-ink-900">{o.summary}</span>
+                <div className="ml-auto flex flex-wrap gap-1.5">
+                  {o.produces.map((p) => (
+                    <span
+                      key={p}
+                      className="rounded-md border border-ink-200 bg-surface px-2 py-0.5 font-mono text-[10.5px] text-ink-600"
+                    >
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="p-5">
+                <div className="space-y-1.5 text-[13px] leading-relaxed text-ink-700">
+                  <MdLines lines={o.lines} />
+                </div>
+
+                <div className="mt-4 rounded-xl border border-ink-200/70 bg-raised p-4">
+                  <div className="mono-label mb-2 flex items-center gap-1.5 text-ink-400">
+                    <MessageSquareQuote size={12} />
+                    Asked for, out loud, in the prompt
+                  </div>
+                  <div className="space-y-2">
+                    {o.askedFor.map((q) => (
+                      <p
+                        key={q}
+                        className="border-l-2 border-brand-400/60 pl-2.5 text-[12.5px] leading-relaxed text-ink-600"
+                      >
+                        {q}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+
+      <div className="mt-5 grid gap-4 sm:grid-cols-2">
+        <Callout title="What it may spell out" tone="ok" icon={<Check size={12} />}>
+          The end state, down to the values: every amount, every transaction id, the two tabs and the
+          six recipients. This is the answer that was already resolved, written so a reviewer can
+          check it without redoing the work.
+        </Callout>
+        <Callout title="What it can never stand in for" tone="no" icon={<X size={12} />}>
+          A prompt. Every item above is requested out loud in the one message the agent receives, and
+          that is the only reason any of it can be graded. A rule that lives only here was never
+          asked for.
+        </Callout>
+      </div>
+
+      <Crosslinks
+        className="mt-4"
+        links={[
+          { to: "/golden-tasks/charge-disputes#prompt", tag: "GT", label: "The prompt it has to match" },
+          { to: "/golden-tasks/charge-disputes#gtfa", tag: "GT", label: "The answer it was resolved from" },
+        ]}
+      />
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------- step 7 */
+
+function ArtifactLink({
+  file,
+  what,
+  src,
+}: {
+  file: string;
+  what: string;
+  src?: string;
+}) {
+  const inner = (
+    <>
+      <FileText size={15} className="mt-0.5 shrink-0 text-ink-400" />
+      <span className="min-w-0 flex-1">
+        <span className="block break-all font-mono text-[11.5px] font-semibold text-ink-800">
+          {file}
+        </span>
+        <span className="mt-1 block text-[12.5px] leading-relaxed text-ink-500">{what}</span>
+      </span>
+      {src && <ExternalLink size={13} className="mt-0.5 shrink-0 text-ink-300" />}
+    </>
+  );
+  return src ? (
+    <a
+      href={asset(src)}
+      target="_blank"
+      rel="noreferrer"
+      className="card card-hover flex items-start gap-3 p-4"
+    >
+      {inner}
+    </a>
+  ) : (
+    <div className="card flex items-start gap-3 p-4">{inner}</div>
+  );
+}
+
+function ModelA({ t }: { t: GoldenTask }) {
+  return (
+    <>
+      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
+        {t.run.stats.map((s) => (
+          <Stat key={s.k} label={s.k} value={s.v} />
+        ))}
+      </div>
+
+      <div className="mt-5 grid gap-3 sm:grid-cols-3">
+        {t.run.score.map((s) => (
+          <div
+            key={s.label}
+            className="rounded-xl border border-rose-300/60 bg-rose-50/50 px-4 py-3 dark:border-rose-500/25 dark:bg-rose-500/10"
+          >
+            <div className="mono-label text-rose-700 dark:text-rose-300">{s.label}</div>
+            <div className="mt-1 font-display text-2xl font-bold text-ink-900">{s.pct}</div>
+            <div className="mt-0.5 font-mono text-[11.5px] text-ink-500">
+              {s.lost} of {s.of} lost
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="mt-2.5 text-[12.5px] leading-relaxed text-ink-500">
+        The bar is at least 50% of the final rubric score, on failures that materially affect what
+        the user asked for. One negative criterion was also triggered.
+      </p>
+
+      <Callout title="What it did reach" tone="ok" icon={<Check size={12} />}>
+        <ul className="mt-1 space-y-1.5">
+          {t.run.kept.map((k) => (
+            <li key={k} className="flex gap-2">
+              <span aria-hidden className="select-none text-ink-400">
+                &bull;
+              </span>
+              <span className="min-w-0 flex-1">{k}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-2.5 text-ink-500">
+          This is what makes the failure a finding rather than a broken run. The model worked, the
+          tools worked, and it still got three of the five wrong.
+        </p>
+      </Callout>
+
+      <h3 className="mb-4 mt-10 font-display text-[18px] font-bold tracking-tight text-ink-900">
+        Where the run actually broke
+      </h3>
+      <div className="space-y-4">
+        {t.run.observations.map((o) => (
+          <Reveal key={o.title}>
+            <div className="card p-5">
+              <h4 className="font-display text-[16px] font-bold text-ink-900">{o.title}</h4>
+              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-lg border border-emerald-300/50 bg-emerald-50/50 p-3.5 dark:border-emerald-500/25 dark:bg-emerald-500/10">
+                  <div className="mono-label mb-1 text-emerald-700 dark:text-emerald-300">
+                    Expected
+                  </div>
+                  <p className="text-[12.5px] leading-relaxed text-ink-700">{o.expected}</p>
+                </div>
+                <div className="rounded-lg border border-rose-300/50 bg-rose-50/50 p-3.5 dark:border-rose-500/25 dark:bg-rose-500/10">
+                  <div className="mono-label mb-1 text-rose-700 dark:text-rose-300">Actual</div>
+                  <p className="text-[12.5px] leading-relaxed text-ink-700">{o.actual}</p>
+                </div>
+              </div>
+              <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                <span className="mono-label text-ink-400">Costs criteria</span>
+                {o.rubrics.map((n) => (
+                  <span
+                    key={n}
+                    className="rounded border border-ink-200 bg-raised px-1.5 py-0.5 font-mono text-[11px] text-ink-600"
+                  >
+                    {n}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+
+      <div className="mt-6">
+        <div className="mono-label mb-3 text-ink-400">What Model A shipped</div>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {t.run.artifacts.map((a) => (
+            <ArtifactLink key={a.file} file={a.file} what={a.what} src={a.src} />
+          ))}
+        </div>
+      </div>
+
+      <Crosslinks
+        className="mt-4"
+        links={[
+          { to: "/reference#s5", tag: "C5", label: "Did the model fail on things that matter?" },
+          { to: "/golden-tasks/charge-disputes#subjective", tag: "GT", label: "The same page, beside the golden" },
+        ]}
+      />
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------- step 8 */
+
+function RubricBlock({ t }: { t: GoldenTask }) {
+  return (
+    <>
+      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
+        {t.rubricShape.map((r) => (
+          <div key={r.label} className="rounded-xl border border-ink-200/70 bg-raised px-4 py-3">
+            <div className="mono-label text-ink-400">{r.label}</div>
+            <div className="mt-1 font-display text-2xl font-bold text-ink-900">{r.value}</div>
+            <p className="mt-1 text-[12px] leading-relaxed text-ink-500">{r.note}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="my-5 grid gap-4 lg:grid-cols-2">
+        <Callout title="The 80/20 rule, with nothing spent" tone="ok" icon={<Scale size={12} />}>
+          At least 80% of a block grades completion and at most 20% grades process. This block is
+          100% completion. Every reasoning decision is graded where it lands: in a row on the page,
+          in the body of a draft, or in the mailbox.
+        </Callout>
+        <Callout title="No criterion only checks that something exists" tone="accent" icon={<Target size={12} />}>
+          Each one carries its own value. The transaction id, the amount, the date, the account
+          digits, the receipt reference and the filename are inside the criterion, which is what lets
+          someone who was never in the room rate it.
+        </Callout>
+      </div>
+
+      <Rubrics rubrics={t.rubrics} />
+
+      <Crosslinks
+        className="mt-5"
+        links={[
+          { to: "/spec#rubric-quality", tag: "SPEC", label: "The rubric quality issues a reviewer scores" },
+          { to: "/reference#s6", tag: "C6", label: "Is every criterion ratable without you?" },
+        ]}
+      />
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------- step 9 */
+
+function SteerCard({ s }: { s: Steer }) {
+  const [open, setOpen] = useState(s.n === 1);
   return (
     <div className="card overflow-hidden">
       <button
-        type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center gap-3 px-5 py-4 text-left transition-colors hover:bg-raised"
+        className="flex w-full items-start gap-3 p-4 text-left transition hover:bg-raised"
       >
-        <MessagesSquare size={15} className="shrink-0 text-ink-400" />
+        <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-gold-500 font-mono text-[11px] font-bold text-white">
+          {s.n}
+        </span>
         <span className="min-w-0 flex-1">
-          <span className="block text-[13.5px] font-bold text-ink-900">
-            The golden conversation
-          </span>
+          <span className="block text-[13px] font-bold text-ink-900">Steer {s.n}</span>
           <span className="mt-0.5 block text-[12.5px] leading-relaxed text-ink-500">
-            All {run.conversation.length} messages, the four turns and the steer that sits between
-            turn 3 and turn 4.
+            Still missing: {s.missed}
           </span>
         </span>
         <ChevronDown
           size={16}
-          className={cx("shrink-0 text-ink-400 transition-transform", open && "rotate-180")}
+          className={cx("mt-1 shrink-0 text-ink-400 transition-transform", open && "rotate-180")}
         />
       </button>
+
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
-            key="transcript"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <div className="space-y-3 border-t border-ink-200/70 p-5">
-              {run.conversation.map((m, i) => (
-                <Message key={i} m={m} />
-              ))}
+            <div className="border-t border-ink-200/70 p-5">
+              <blockquote className="relative rounded-xl border border-gold-400/60 bg-gold-50/70 p-4 pl-9 dark:border-gold-500/35 dark:bg-gold-500/10">
+                <Quote size={14} className="absolute left-3.5 top-4 text-gold-500" aria-hidden />
+                <p className="text-[13.5px] leading-relaxed text-ink-800">{s.prompt}</p>
+              </blockquote>
+
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-lg border border-emerald-300/50 bg-emerald-50/50 p-3.5 dark:border-emerald-500/25 dark:bg-emerald-500/10">
+                  <div className="mono-label mb-1.5 text-emerald-700 dark:text-emerald-300">
+                    What it points at
+                  </div>
+                  <ul className="space-y-1.5">
+                    {s.does.map((d) => (
+                      <li key={d} className="flex gap-2 text-[12.5px] leading-relaxed text-ink-700">
+                        <span aria-hidden className="select-none text-ink-400">
+                          &bull;
+                        </span>
+                        <span className="min-w-0 flex-1">{d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-rose-300/50 bg-rose-50/50 p-3.5 dark:border-rose-500/25 dark:bg-rose-500/10">
+                  <div className="mono-label mb-1.5 text-rose-700 dark:text-rose-300">
+                    What it never says
+                  </div>
+                  <ul className="space-y-1.5">
+                    {s.avoids.map((d) => (
+                      <li key={d} className="flex gap-2 text-[12.5px] leading-relaxed text-ink-700">
+                        <span aria-hidden className="select-none text-ink-400">
+                          &bull;
+                        </span>
+                        <span className="min-w-0 flex-1">{d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-3 rounded-lg bg-raised px-3.5 py-2.5">
+                <div className="mono-label mb-1 text-ink-400">What came back</div>
+                <p className="text-[12.5px] leading-relaxed text-ink-700">{s.recovered}</p>
+              </div>
             </div>
           </motion.div>
         )}
@@ -311,11 +1065,94 @@ function Transcript({ run }: { run: GoldenRun }) {
   );
 }
 
+function Golden({ t }: { t: GoldenTask }) {
+  return (
+    <>
+      <Callout title="The opening message is the task, unchanged" tone="gold" icon={<Sparkles size={12} />}>
+        {t.goldenRun.opening}
+      </Callout>
+
+      <div className="mt-6 overflow-hidden rounded-2xl border border-ink-200/70 bg-surface">
+        {t.goldenRun.progress.map((p, i) => (
+          <div
+            key={p.label}
+            className={cx(
+              "flex flex-wrap items-center gap-x-4 gap-y-1 px-4 py-3 sm:px-5",
+              i > 0 && "border-t border-ink-200/70"
+            )}
+          >
+            <span className="w-32 shrink-0 text-[12.5px] font-bold text-ink-900">{p.label}</span>
+            <span className="w-20 shrink-0 font-mono text-[12px] font-semibold text-brand-700 dark:text-brand-300">
+              {p.found}
+            </span>
+            <span className="w-32 shrink-0 font-mono text-[12px] text-ink-700">{p.total}</span>
+            <span className="min-w-0 flex-1 text-[12.5px] leading-relaxed text-ink-500">
+              {p.note}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <h3 className="mb-2 mt-10 font-display text-[18px] font-bold tracking-tight text-ink-900">
+        Four steers, and the no leak rule on every one
+      </h3>
+      <p className="mb-4 max-w-2xl text-[13.5px] leading-relaxed text-ink-500">
+        A steer is not a turn of the task. It is the same user, still talking, pointing back at
+        context she would plausibly have. Read what each one points at against what it never says.
+      </p>
+      <div className="space-y-3">
+        {t.goldenRun.steers.map((s) => (
+          <Reveal key={s.n}>
+            <SteerCard s={s} />
+          </Reveal>
+        ))}
+      </div>
+
+      <div className="mt-6">
+        <div className="mono-label mb-3 text-ink-400">What the golden hands over</div>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {t.goldenRun.artifacts.map((a) => (
+            <ArtifactLink key={a.file} file={a.file} what={a.what} src={a.src} />
+          ))}
+        </div>
+      </div>
+
+      <Crosslinks
+        className="mt-4"
+        links={[
+          { to: "/reference#s7", tag: "C7", label: "Does the golden pass its own block?" },
+          { to: "/reference#faq", tag: "FAQ", label: "How much may a hint carry?" },
+        ]}
+      />
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ step 10 */
+
+function Subjective({ t }: { t: GoldenTask }) {
+  return (
+    <>
+      <p className="mb-5 max-w-3xl text-[13.5px] leading-relaxed text-ink-500">{t.subjectiveNote}</p>
+      <SubjectiveRubrics rubrics={t.subjective} />
+      <Crosslinks
+        className="mt-5"
+        links={[
+          { to: "/reference#s6", tag: "C6", label: "Is every subjective criterion judged on the render?" },
+          { to: "/spec#rubric-quality", tag: "SPEC", label: "Filler language, and why it fails" },
+        ]}
+      />
+    </>
+  );
+}
+
+/* -------------------------------------------------------------------- page */
+
 export default function TaskDetail() {
   const { id } = useParams();
   const task = taskById(id ?? "");
-  const active = useScrollSpy(IDS);
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const active = useScrollSpy(task ? task.stages.map((s) => s.id) : []);
 
   if (!task) {
     return (
@@ -329,6 +1166,39 @@ export default function TaskDetail() {
   }
 
   const t = task;
+
+  /** The rail is the method: its numbers and titles come from `methodSteps`. */
+  const rail: RailGroup[] = t.stages.map((s) => {
+    const m = step(s.step);
+    return { n: m.n, id: m.id, title: m.title, sections: [{ id: s.id, label: s.title }] };
+  });
+
+  const body = (s: TaskStage) => {
+    switch (s.id) {
+      case "parameters":
+        return <Parameters t={t} />;
+      case "universe":
+        return <Universe t={t} />;
+      case "gtfa":
+        return <Gtfa t={t} />;
+      case "inputs":
+        return <Inputs t={t} onZoom={setLightbox} />;
+      case "prompt":
+        return <AnnotatedPrompt t={t} />;
+      case "draft-history":
+        return <DraftHistoryBlock t={t} />;
+      case "model-a":
+        return <ModelA t={t} />;
+      case "rubrics":
+        return <RubricBlock t={t} />;
+      case "golden":
+        return <Golden t={t} />;
+      case "subjective":
+        return <Subjective t={t} />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <div>
@@ -348,13 +1218,13 @@ export default function TaskDetail() {
               <Sparkles size={11} /> {t.meta.status}
             </span>
             <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
-              {t.meta.category}
+              {t.meta.useCase}
             </span>
-            <span className="chip bg-ink-100 text-ink-600 ring-1 ring-ink-200">
+            <span className="chip bg-ink-100 font-mono text-ink-600 ring-1 ring-ink-200">
               {t.meta.subcategory}
             </span>
-            <span className="chip bg-ink-100 font-mono text-ink-500 ring-1 ring-ink-200">
-              {t.meta.serviceId}
+            <span className="chip bg-brand-500/12 text-brand-700 ring-1 ring-brand-500/25 dark:text-brand-300">
+              Single turn
             </span>
           </div>
 
@@ -364,771 +1234,85 @@ export default function TaskDetail() {
           <p className="mt-4 max-w-3xl text-[16px] leading-relaxed text-ink-600">{t.premise}</p>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <Stat label="Universe" value={t.meta.universe} />
+            <Stat label="Universe" value={<span className="font-mono text-[12px]">{t.meta.universe}</span>} />
             <Stat label="Persona" value={t.meta.persona} />
-            <Stat label="Turns" value={`${t.meta.turns}, with one revision turn`} />
-            <Stat label="Model A result" value={t.run.score} tone="no" />
+            <Stat label="Deliverable" value={<span className="font-mono">{t.meta.deliverable}</span>} />
+            <Stat label="Model A result" value={`${t.run.score[2].pct} of the weight lost`} tone="no" />
+          </div>
+
+          <div className="mt-8 grid gap-3 lg:grid-cols-2">
+            {t.whyGolden.map((w, i) => (
+              <div
+                key={i}
+                className="flex gap-2.5 rounded-xl border border-gold-300/60 bg-gold-50/50 px-4 py-3 dark:border-gold-500/25 dark:bg-gold-500/10"
+              >
+                <Sparkles size={13} className="mt-1 shrink-0 text-gold-600 dark:text-gold-300" />
+                <p className="text-[12.5px] leading-relaxed text-ink-700">
+                  <Inline text={w} />
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* How to read the page */}
+      <div className="border-b border-ink-200/70 bg-raised">
+        <div className="wrap flex flex-wrap items-center gap-x-3 gap-y-1.5 py-3.5">
+          <Eye size={14} className="shrink-0 text-brand-600 dark:text-brand-300" />
+          <span className="text-[12.5px] font-bold text-ink-900">
+            Ten stages, in the order the work happened.
+          </span>
+          <span className="min-w-0 flex-1 text-[12.5px] leading-relaxed text-ink-500">
+            Each one says what was decided, why the step exists, and what it hands to the next. Read
+            the handoffs and the task builds itself.
+          </span>
+        </div>
+      </div>
+
       <div className="wrap py-12">
         <div className="gap-12 lg:grid lg:grid-cols-[240px_1fr]">
-          <SectionRail groups={RAIL} active={active} />
+          <SectionRail groups={rail} active={active} flat title="The method, walked" />
 
-          <div className="min-w-0 space-y-20">
-            {/* Universe */}
-            <section id="universe" className="scroll-mt-24">
-              <SectionHead
-                id="universe"
-                title="The universe did the choosing"
-                sub="The scenario was not invented and then looked for. Two channels in the Harmony Games universe carried a real shutdown, and the task took its shape from what was already in them."
-              />
-              <div className="grid gap-4 sm:grid-cols-2">
-                {t.universeNotes.map((n) => (
-                  <Reveal key={n.title} className="h-full">
-                    <div className="card h-full p-5">
-                      <h3 className="font-display text-[15px] font-bold text-ink-900">{n.title}</h3>
-                      <p className="mt-2 text-[13px] leading-relaxed text-ink-600">{n.body}</p>
-                    </div>
-                  </Reveal>
-                ))}
+          <div className="min-w-0">
+            {t.stages.map((s, i) => (
+              <section key={s.id} id={s.id} className={cx("scroll-mt-24", i > 0 && "pt-12")}>
+                <StageHead s={s} />
+                {body(s)}
+                <Handoff s={s} next={t.stages[i + 1]} />
+              </section>
+            ))}
+
+            {/* The end of the sequence */}
+            <div className="mt-12 rounded-2xl border border-ink-200/70 bg-raised p-6">
+              <div className="flex flex-wrap items-center gap-2">
+                <Mail size={15} className="text-gold-600 dark:text-gold-300" />
+                <h2 className="font-display text-[17px] font-bold tracking-tight text-ink-900">
+                  Ten steps later, the task is submittable
+                </h2>
               </div>
-            </section>
-
-            {/* Inputs */}
-            <section id="inputs" className="scroll-mt-24">
-              <SectionHead
-                id="inputs"
-                title="Eleven files, every one with a job"
-                sub="Recovered in a rush during the cancellation week, in the formats that week would actually produce. Two of them exist to be resisted rather than used."
-              />
-              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {t.inputs.map((inp) => {
-                  const isImage = ["image", "photo", "handwriting"].includes(inp.kind);
-                  const url = asset(inp.src);
-                  return (
-                    <Reveal key={inp.file} className="h-full">
-                      <div className="card flex h-full flex-col overflow-hidden">
-                        {isImage ? (
-                          <button
-                            onClick={() => setLightbox({ src: url, alt: inp.shows })}
-                            className="group relative block aspect-[16/10] w-full overflow-hidden bg-ink-100"
-                          >
-                            <img
-                              src={url}
-                              alt={inp.shows}
-                              loading="lazy"
-                              className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.03]"
-                            />
-                          </button>
-                        ) : (
-                          <a
-                            href={url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="group flex aspect-[16/10] w-full items-center justify-center gap-2 bg-raised text-ink-400 transition hover:text-brand-600"
-                          >
-                            <FileText size={26} />
-                            <span className="text-[12.5px] font-semibold">Open the file</span>
-                            <ExternalLink size={13} />
-                          </a>
-                        )}
-
-                        <div className="flex flex-1 flex-col p-4">
-                          <div className="flex flex-wrap items-center gap-1.5">
-                            <span className={cx("chip", roleTone[inp.role].chip)}>
-                              {roleTone[inp.role].label}
-                            </span>
-                            <span className="chip bg-ink-100 text-ink-500 ring-1 ring-ink-200">
-                              {kindIcon[inp.kind]}
-                              {inp.kind}
-                            </span>
-                          </div>
-                          <div className="mt-2.5 break-all font-mono text-[11.5px] font-semibold text-ink-800">
-                            {inp.file}
-                          </div>
-                          <p className="mt-2 text-[12.5px] leading-relaxed text-ink-600">
-                            {inp.shows}
-                          </p>
-                          <div className="mt-3 border-t border-ink-200/70 pt-3">
-                            <div className="mono-label mb-1 text-ink-400">Carries</div>
-                            <p className="text-[12.5px] leading-relaxed text-ink-700">
-                              {inp.carries}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </Reveal>
-                  );
-                })}
+              <p className="mt-2 max-w-2xl text-[13.5px] leading-relaxed text-ink-600">
+                One prompt, nine attachments, a resolved answer, a run that failed on things that
+                matter, {t.rubrics.length} objective criteria, {t.subjective.length} subjective ones
+                and a golden that passes its own block. The gate is the last thing between here and
+                handing it in.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Link to="/reference#pre-submit" className="btn">
+                  <ClipboardList size={14} /> Run the pre-submit gate
+                </Link>
+                <Link to="/" className="btn-ghost">
+                  <Calendar size={14} /> Back to the method
+                </Link>
               </div>
-            </section>
-
-            {/* Format */}
-            <section id="format" className="scroll-mt-24">
-              <SectionHead
-                id="format"
-                title="The rule lives in an attachment"
-                sub="Nothing in the prompt says what a receipt looks like. The template is one of the eleven files, which is what makes finding and following it part of the work."
-              />
-              <div className="card overflow-hidden">
-                <div className="flex items-center gap-2 border-b border-ink-200/70 px-5 py-3">
-                  <FileText size={14} className="text-ink-400" />
-                  <span className="font-mono text-[12px] font-semibold text-ink-700">
-                    {t.format.file}
-                  </span>
-                  <a
-                    href={asset(t.format.src)}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="ml-auto inline-flex items-center gap-1 text-[12px] font-semibold text-brand-600 hover:underline dark:text-brand-300"
-                  >
-                    Open <ExternalLink size={12} />
-                  </a>
-                </div>
-                <pre className="overflow-x-auto p-5 font-mono text-[12.5px] leading-relaxed text-ink-700">
-                  {t.format.body}
-                </pre>
-              </div>
-              <Callout title="Why it matters" tone="accent" icon={<Lightbulb size={13} />}>
-                The PST clause in this file is the only thing that settles the Helpshift date. An
-                agent that reads the template block and stops there gets the date wrong on exactly
-                one of the four receipts.
-              </Callout>
-            </section>
-
-            {/* Turns */}
-            <section id="turns" className="scroll-mt-24">
-              <SectionHead
-                id="turns"
-                title="Four turns, each one standing on the last"
-                sub="Read the consumes line on each turn. None of them would work as an opening prompt, which is the whole test in Turn Structure."
-              />
-              <div className="space-y-5">
-                {t.turns.map((turn) => (
-                  <Reveal key={turn.n}>
-                    <div className="card overflow-hidden">
-                      <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
-                        <span className="grid h-6 w-6 place-items-center rounded-lg bg-brand-600 font-mono text-[11px] font-bold text-white">
-                          {turn.n}
-                        </span>
-                        <span className="text-[13px] font-bold text-ink-900">Turn {turn.n}</span>
-                        <div className="ml-auto flex flex-wrap gap-1.5">
-                          {turn.produces.map((p) => (
-                            <span
-                              key={p}
-                              className="rounded-md border border-ink-200 bg-surface px-2 py-0.5 font-mono text-[10.5px] text-ink-600"
-                            >
-                              {p}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="p-5">
-                        <blockquote className="relative rounded-xl border border-ink-200/70 bg-raised p-4 pl-9">
-                          <Quote
-                            size={14}
-                            className="absolute left-3.5 top-4 text-ink-300"
-                            aria-hidden
-                          />
-                          <p className="whitespace-pre-wrap text-[13.5px] leading-relaxed text-ink-700">
-                            {turn.text}
-                          </p>
-                        </blockquote>
-
-                        <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                          <div className="rounded-lg border border-ink-200/70 px-3.5 py-2.5">
-                            <div className="mono-label mb-1 text-ink-400">Adds</div>
-                            <p className="text-[12.5px] leading-relaxed text-ink-700">{turn.adds}</p>
-                          </div>
-                          <div className="rounded-lg border border-ink-200/70 px-3.5 py-2.5">
-                            <div className="mono-label mb-1 text-ink-400">Consumes</div>
-                            <p className="text-[12.5px] leading-relaxed text-ink-700">
-                              {turn.consumes}
-                            </p>
-                          </div>
-                        </div>
-
-                        {turn.notes && turn.notes.length > 0 && (
-                          <div className="mt-4 space-y-2.5">
-                            {turn.notes.map((n) => (
-                              <Callout
-                                key={n.title}
-                                title={n.title}
-                                tone={n.tone === "warn" ? "warn" : n.tone === "no" ? "no" : "accent"}
-                                icon={<Target size={12} />}
-                              >
-                                {n.body}
-                              </Callout>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </section>
-
-            {/* Answer */}
-            <section id="answer" className="scroll-mt-24">
-              <SectionHead
-                id="answer"
-                title="The answer existed before the run did"
-                sub="The GTFA resolved every vendor, every amount and every date up front. Grading became verification instead of reconstruction."
-              />
-              <div className="card overflow-hidden">
-                <div className="grid gap-4 border-b border-ink-200/70 bg-raised p-6 sm:grid-cols-2">
-                  <div>
-                    <div className="mono-label text-ink-400">Total owed</div>
-                    <div className="mt-1 font-display text-4xl font-bold text-ink-900">
-                      {t.answer.total}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="mono-label text-ink-400">Of the shutdown estimate</div>
-                    <div className="mt-1 font-display text-4xl font-bold text-ink-900">
-                      {t.answer.percent}
-                    </div>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <div className="mono-label mb-1 text-ink-400">Basis</div>
-                    <p className="font-mono text-[12.5px] leading-relaxed text-ink-600">
-                      {t.answer.basis}
-                    </p>
-                  </div>
-                </div>
-                <div className="grid gap-3 p-6 sm:grid-cols-3">
-                  {t.answer.counts.map((c) => (
-                    <Stat key={c.label} label={c.label} value={String(c.n)} tone={c.tone} />
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* Ledger */}
-            <section id="ledger" className="scroll-mt-24">
-              <SectionHead
-                id="ledger"
-                title="Every vendor, and why it lands where it does"
-                sub="One rule, stated once in turn 1, run against twenty vendors. Open a row to see the Slack line and the attachment that decide it."
-              />
-              <Ledger rows={t.ledger} />
-            </section>
-
-            {/* Traps */}
-            <section id="traps" className="scroll-mt-24">
-              <SectionHead
-                id="traps"
-                title="Seven pieces of designed friction"
-                sub="None of these is a gotcha. Each one is a place where two real sources have to be reconciled, which is where genuine difficulty comes from."
-              />
-              <div className="grid gap-4 sm:grid-cols-2">
-                {t.traps.map((trap) => (
-                  <Reveal key={trap.id} className="h-full">
-                    <TrapCard t={trap} />
-                  </Reveal>
-                ))}
-              </div>
-            </section>
-
-            {/* Draft History */}
-            <section id="draft-history" className="scroll-mt-24">
-              <SectionHead
-                id="draft-history"
-                title="How the task was filed"
-                sub="The Agent Objective and the Desired Outcome, as they were written. The agent is handed neither of them, so every item below carries the prompt that asks for the same thing out loud."
-              />
-
-              <div className="card overflow-hidden">
-                <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
-                  <Target size={14} className="text-ink-400" />
-                  <span className="text-[13px] font-bold text-ink-900">Agent Objective</span>
-                  <span className="ml-auto font-mono text-[11px] text-ink-500">
-                    why the person is asking
-                  </span>
-                </div>
-                <div className="space-y-3 p-5">
-                  {t.draftHistory.objective.map((p, i) => (
-                    <p key={i} className="text-[13.5px] leading-relaxed text-ink-700">
-                      {p}
-                    </p>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-3 grid gap-3 sm:grid-cols-3">
-                {t.draftHistory.objectiveReads.map((r) => (
-                  <div
-                    key={r.title}
-                    className="rounded-xl border border-ink-200/70 bg-raised px-4 py-3"
-                  >
-                    <div className="text-[12.5px] font-bold leading-snug text-ink-900">
-                      {r.title}
-                    </div>
-                    <p className="mt-1 text-[12.5px] leading-relaxed text-ink-600">{r.body}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mb-4 mt-8 flex flex-wrap items-center gap-2">
-                <ClipboardList size={14} className="text-ink-400" />
-                <span className="text-[13px] font-bold text-ink-900">Desired Outcome</span>
-                <span className="font-mono text-[11px] text-ink-500">
-                  the end state, in terms someone else can check
-                </span>
-              </div>
-
-              <div className="space-y-4">
-                {t.draftHistory.outcome.map((o) => (
-                  <Reveal key={o.n}>
-                    <div className="card overflow-hidden">
-                      <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
-                        <span className="grid h-6 w-6 place-items-center rounded-lg bg-gold-500 font-mono text-[11px] font-bold text-white">
-                          {o.n}
-                        </span>
-                        <span className="rounded-md border border-ink-200 bg-surface px-2 py-0.5 font-mono text-[10.5px] text-ink-600">
-                          {turnLabel(o.turns)}
-                        </span>
-                        <span className="text-[13px] font-semibold text-ink-900">{o.summary}</span>
-                        <div className="ml-auto flex flex-wrap gap-1.5">
-                          {o.produces.map((p) => (
-                            <span
-                              key={p}
-                              className="rounded-md border border-ink-200 bg-surface px-2 py-0.5 font-mono text-[10.5px] text-ink-600"
-                            >
-                              {p}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="p-5">
-                        <div className="space-y-1.5 text-[13px] leading-relaxed text-ink-700">
-                          <MdLines lines={o.lines} />
-                        </div>
-
-                        <div className="mt-4 rounded-xl border border-ink-200/70 bg-raised p-4">
-                          <div className="mono-label mb-2 flex items-center gap-1.5 text-ink-400">
-                            <MessagesSquare size={12} />
-                            Asked for in the conversation
-                          </div>
-                          <div className="space-y-2.5">
-                            {o.askedFor.map((a) => (
-                              <div key={a.turn} className="flex gap-2.5">
-                                <span className="mt-px grid h-5 shrink-0 place-items-center rounded-md bg-brand-600 px-1.5 font-mono text-[10px] font-bold text-white">
-                                  T{a.turn}
-                                </span>
-                                <p className="text-[12.5px] leading-relaxed text-ink-600">
-                                  {a.quote}
-                                </p>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-
-              <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                <Callout title="What it may spell out" tone="ok" icon={<Check size={12} />}>
-                  The end state, down to the values. Filenames, dates, confirmers, amounts, the
-                  total and the percentage are all here, because this is the answer you already
-                  resolved, written so a reviewer can check it without redoing the work.
-                </Callout>
-                <Callout title="What it can never stand in for" tone="no" icon={<X size={12} />}>
-                  A prompt. Every item above is requested out loud in the conversation, and that is
-                  the only reason any of it can be graded. A requirement that lives only here was
-                  never asked for.
-                </Callout>
-              </div>
-
-              <Crosslinks
-                className="mt-4"
-                links={[
-                  {
-                    to: "/reference#s4",
-                    tag: "D1",
-                    label: "Is every graded requirement stated in a prompt?",
-                  },
-                  {
-                    to: `/golden-tasks/${t.meta.id}#turns`,
-                    tag: "GT",
-                    label: "The four prompts it has to match",
-                  },
-                  {
-                    to: `/golden-tasks/${t.meta.id}#answer`,
-                    tag: "GT",
-                    label: "The answer it was resolved from",
-                  },
-                ]}
-              />
-            </section>
-
-            {/* Model A */}
-            <section id="model-a" className="scroll-mt-24">
-              <SectionHead
-                id="model-a"
-                title="Where the run actually broke"
-                sub={t.run.summary}
-              />
-              <div className="space-y-4">
-                {t.run.observations.map((o) => (
-                  <Reveal key={o.title}>
-                    <div className="card p-5">
-                      <h3 className="font-display text-[16px] font-bold text-ink-900">{o.title}</h3>
-                      <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                        <div className="rounded-lg border border-emerald-300/50 bg-emerald-50/50 p-3.5 dark:border-emerald-500/25 dark:bg-emerald-500/10">
-                          <div className="mono-label mb-1 text-emerald-700 dark:text-emerald-300">
-                            Expected
-                          </div>
-                          <p className="text-[12.5px] leading-relaxed text-ink-700">{o.expected}</p>
-                        </div>
-                        <div className="rounded-lg border border-rose-300/50 bg-rose-50/50 p-3.5 dark:border-rose-500/25 dark:bg-rose-500/10">
-                          <div className="mono-label mb-1 text-rose-700 dark:text-rose-300">
-                            Actual
-                          </div>
-                          <p className="text-[12.5px] leading-relaxed text-ink-700">{o.actual}</p>
-                        </div>
-                      </div>
-                      <div className="mt-3 flex flex-wrap items-center gap-1.5">
-                        <span className="mono-label text-ink-400">Criteria</span>
-                        {o.rubrics.map((n) => (
-                          <span
-                            key={n}
-                            className="rounded border border-ink-200 bg-raised px-1.5 py-0.5 font-mono text-[11px] text-ink-600"
-                          >
-                            {n}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-
-              <div className="mt-6">
-                <div className="mono-label mb-3 text-ink-400">What Model A actually shipped</div>
-                <div className="grid gap-2 sm:grid-cols-2">
-                  {t.run.artifacts.map((a) => (
-                    <a
-                      key={a.file}
-                      href={a.src ? asset(a.src) : undefined}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="card card-hover flex items-start gap-3 p-4"
-                    >
-                      <FileText size={15} className="mt-0.5 shrink-0 text-ink-400" />
-                      <span className="min-w-0 flex-1">
-                        <span className="block break-all font-mono text-[11.5px] font-semibold text-ink-800">
-                          {a.file}
-                        </span>
-                        <span className="mt-1 block text-[12.5px] leading-relaxed text-ink-500">
-                          {a.what}
-                        </span>
-                      </span>
-                      <ExternalLink size={13} className="mt-0.5 shrink-0 text-ink-300" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* Rubrics. The shape of the block is part of what is being
-                shown, so the two counts that the guidelines now cap sit above
-                it rather than being left for the reader to tally. */}
-            <section id="rubrics" className="scroll-mt-24">
-              <SectionHead
-                id="rubrics"
-                title={`${t.rubrics.length} objective criteria`}
-                sub="Read any one of them with the prompt closed. The amount, the filename, the date and the person are all inside the criterion, which is what makes it ratable by someone who was never in the room."
-              />
-              <div className="mb-5 grid gap-3 sm:grid-cols-2">
-                <Callout title="Five Trajectory criteria, which is the ceiling" tone="accent" icon={<Target size={12} />}>
-                  Since 10 September the block may carry at most five criteria whose evaluation
-                  target is Trajectory, and it does not have to carry any. Everything else is graded
-                  on the artifacts, where it stays gradable.{" "}
-                  <Link to="/#latest-changes" className="font-semibold text-brand-700 underline decoration-brand-300 underline-offset-2 dark:text-brand-300">
-                    What changed
-                  </Link>
-                </Callout>
-                <Callout title="Twenty vendors, six criteria" tone="ok" icon={<ClipboardList size={12} />}>
-                  A group of more than eight outcomes with the same shape is graded with one
-                  completeness criterion and at most five spot checks, never one criterion per
-                  element. Here that is criterion 6 plus the four reconciliations carrying the
-                  strongest signal.
-                </Callout>
-              </div>
-              <Rubrics rubrics={t.rubrics} />
-            </section>
-
-            {/* Milestones */}
-            <section id="milestones" className="scroll-mt-24">
-              <SectionHead
-                id="milestones"
-                title={`${t.milestones.length} milestones, one per requirement`}
-                sub="Grouped by turn, and written as intent. Read any one of them on its own: it says what the turn asked for, and nothing about the answer that satisfies it."
-              />
-              <div className="space-y-4">
-                {byTurn(t.milestones).map((g) => (
-                  <Reveal key={g.turn}>
-                    <div className="card overflow-hidden">
-                      <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-raised px-5 py-3">
-                        <span className="grid h-6 w-6 place-items-center rounded-lg bg-brand-600 font-mono text-[11px] font-bold text-white">
-                          {g.turn}
-                        </span>
-                        <span className="text-[13px] font-bold text-ink-900">Turn {g.turn}</span>
-                        <span className="ml-auto font-mono text-[11px] text-ink-500">
-                          {g.items.length} milestone{g.items.length === 1 ? "" : "s"}
-                        </span>
-                      </div>
-                      <ul className="divide-y divide-ink-200/60">
-                        {g.items.map((m, i) => (
-                          <li key={i} className="flex items-start gap-3 px-5 py-3">
-                            <Flag size={13} className="mt-0.5 shrink-0 text-ink-300" />
-                            <p className="text-[13px] leading-relaxed text-ink-700">{m.text}</p>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-              <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                <Callout title="What a milestone may require" tone="ok" icon={<Check size={12} />}>
-                  A constraint the user stated. The pool is the shutdown channel, and a name that did
-                  not survive the export is out of it, so a milestone may say so.
-                </Callout>
-                <Callout title="What it may never carry" tone="no" icon={<X size={12} />}>
-                  The answer, or the route to it. The four receipts, the total and the percentage are
-                  results, so no milestone names a vendor, an amount, a filename or a format.
-                </Callout>
-              </div>
-            </section>
-
-            {/* Golden */}
-            <section id="golden" className="scroll-mt-24">
-              <SectionHead
-                id="golden"
-                title="What the golden hands over"
-                sub="Finished artifacts only. The model reached these itself, steered with intent level prompts that never named a value."
-              />
-              <div className="grid gap-2 sm:grid-cols-2">
-                {t.deliverables.map((d) => {
-                  const inner = (
-                    <>
-                      <FileText size={15} className="mt-0.5 shrink-0 text-gold-500" />
-                      <span className="min-w-0 flex-1">
-                        <span className="block break-all font-mono text-[11.5px] font-semibold text-ink-800">
-                          {d.file}
-                        </span>
-                        <span className="mt-1 block text-[12.5px] leading-relaxed text-ink-500">
-                          {d.what}
-                        </span>
-                      </span>
-                      {d.src && (
-                        <ExternalLink size={13} className="mt-0.5 shrink-0 text-ink-300" />
-                      )}
-                    </>
-                  );
-                  return d.src ? (
-                    <a
-                      key={d.file}
-                      href={asset(d.src)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="card card-hover flex items-start gap-3 p-4"
-                    >
-                      {inner}
-                    </a>
-                  ) : (
-                    <div key={d.file} className="card flex items-start gap-3 p-4">
-                      {inner}
-                    </div>
-                  );
-                })}
-              </div>
-            </section>
-
-            {/* Hinting */}
-            <section id="hinting" className="scroll-mt-24">
-              <SectionHead
-                id="hinting"
-                title="The decision point after every turn"
-                sub="Milestones are not a report written at the end. They are checked on each reply, and that check is the only thing that decides what the next prompt is."
-              />
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                <Callout title="Milestones reached" tone="ok" icon={<Check size={12} />}>
-                  Continue to the next turn as written. Say nothing about the milestones, and add
-                  nothing the user would not have said.
-                </Callout>
-                <Callout title="Milestones missed" tone="warn" icon={<Lightbulb size={12} />}>
-                  Stay on the turn. Point back at the intent that is still open, in the voice of the
-                  same user, and check the same milestone again on the next reply.
-                </Callout>
-              </div>
-
-              <div className="mt-5 space-y-3">
-                {t.goldenRun.checks.map((c) => (
-                  <Reveal key={c.title}>
-                    <div className="card p-5">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span
-                          className={cx(
-                            "grid h-6 w-6 place-items-center rounded-lg",
-                            c.met
-                              ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
-                              : "bg-rose-500/15 text-rose-700 dark:text-rose-300"
-                          )}
-                        >
-                          {c.met ? <Check size={13} /> : <X size={13} />}
-                        </span>
-                        <span className="text-[13px] font-bold text-ink-900">{c.title}</span>
-                        <span
-                          className={cx(
-                            "ml-auto rounded-md px-2 py-0.5 font-mono text-[10.5px] font-semibold",
-                            c.met
-                              ? "bg-emerald-500/12 text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300"
-                              : "bg-rose-500/12 text-rose-700 ring-1 ring-rose-500/25 dark:text-rose-300"
-                          )}
-                        >
-                          Turn {c.turn} {c.met ? "reached" : "missed"}
-                        </span>
-                      </div>
-                      <p className="mt-3 text-[13px] leading-relaxed text-ink-600">{c.body}</p>
-                      <div className="mt-3 rounded-lg bg-raised px-3.5 py-2.5">
-                        <div className="mono-label mb-1 text-ink-400">What happens next</div>
-                        <p className="text-[12.5px] leading-relaxed text-ink-700">{c.next}</p>
-                      </div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-
-              <Reveal>
-                <div className="card mt-5 overflow-hidden">
-                  <div className="flex flex-wrap items-center gap-2 border-b border-ink-200/70 bg-gold-50/70 px-5 py-3 dark:bg-gold-500/10">
-                    <Lightbulb size={14} className="text-gold-600 dark:text-gold-300" />
-                    <span className="text-[13px] font-bold text-ink-900">
-                      The one hint this run needed
-                    </span>
-                    <span className="ml-auto font-mono text-[11px] text-ink-500">
-                      between turn 3 and turn 4
-                    </span>
-                  </div>
-                  <div className="p-5">
-                    <div className="rounded-lg border border-ink-200/70 bg-raised px-3.5 py-2.5">
-                      <div className="mono-label mb-1 text-ink-400">
-                        The milestone it was aimed at
-                      </div>
-                      <p className="text-[12.5px] leading-relaxed text-ink-700">
-                        {t.goldenRun.hint.missed}
-                      </p>
-                    </div>
-
-                    <blockquote className="relative mt-4 rounded-xl border border-gold-400/60 bg-gold-50/70 p-4 pl-9 dark:border-gold-500/35 dark:bg-gold-500/10">
-                      <Quote
-                        size={14}
-                        className="absolute left-3.5 top-4 text-gold-500"
-                        aria-hidden
-                      />
-                      <p className="text-[13.5px] leading-relaxed text-ink-800">
-                        {t.goldenRun.hint.prompt}
-                      </p>
-                    </blockquote>
-
-                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                      <div className="rounded-lg border border-emerald-300/50 bg-emerald-50/50 p-3.5 dark:border-emerald-500/25 dark:bg-emerald-500/10">
-                        <div className="mono-label mb-1.5 text-emerald-700 dark:text-emerald-300">
-                          What it points at
-                        </div>
-                        <ul className="space-y-1.5">
-                          {t.goldenRun.hint.does.map((d) => (
-                            <li
-                              key={d}
-                              className="flex gap-2 text-[12.5px] leading-relaxed text-ink-700"
-                            >
-                              <span aria-hidden className="select-none text-ink-400">
-                                &bull;
-                              </span>
-                              <span className="min-w-0 flex-1">{d}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="rounded-lg border border-rose-300/50 bg-rose-50/50 p-3.5 dark:border-rose-500/25 dark:bg-rose-500/10">
-                        <div className="mono-label mb-1.5 text-rose-700 dark:text-rose-300">
-                          What it never says
-                        </div>
-                        <ul className="space-y-1.5">
-                          {t.goldenRun.hint.avoids.map((d) => (
-                            <li
-                              key={d}
-                              className="flex gap-2 text-[12.5px] leading-relaxed text-ink-700"
-                            >
-                              <span aria-hidden className="select-none text-ink-400">
-                                &bull;
-                              </span>
-                              <span className="min-w-0 flex-1">{d}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="mt-4 rounded-lg bg-raised px-3.5 py-2.5">
-                      <div className="mono-label mb-1 text-ink-400">What came back</div>
-                      <p className="text-[12.5px] leading-relaxed text-ink-700">
-                        {t.goldenRun.hint.recovered}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-
-              <div className="mt-5">
-                <Callout
-                  title="The steer ended up inside turn 4"
-                  tone="gold"
-                  icon={<Sparkles size={12} />}
-                >
-                  Read the first line of turn 4 in the prompt set above. The context this hint carried
-                  is written into the prompt the graded run receives, so the run being scored is asked
-                  the same question the golden was steered to. The turns in the transcript below are
-                  the wording of this run, before that tightening.
-                </Callout>
-              </div>
-
-              <div className="mt-5">
-                <Transcript run={t.goldenRun} />
-              </div>
-            </section>
-
-            {/* Subjective */}
-            <section id="subjective" className="scroll-mt-24">
-              <SectionHead
-                id="subjective"
-                title="Ten criteria, each one from a side by side comparison"
-                sub={t.subjectiveNote}
-              />
-              <SubjectiveRubrics rubrics={t.subjective} />
-            </section>
+            </div>
           </div>
         </div>
       </div>
 
       <AnimatePresence>
         {lightbox && (
-          <Lightbox
-            src={lightbox.src}
-            alt={lightbox.alt}
-            onClose={() => setLightbox(null)}
-          />
+          <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />
         )}
       </AnimatePresence>
     </div>

@@ -66,6 +66,13 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Method />} />
         <Route path="/golden-tasks" element={<GoldenTasks />} />
+        {/* The vendor closeout task was replaced wholesale, so an old link
+            lands on the index rather than on a task that is not the one it
+            meant. It is above the `:id` route or it never matches. */}
+        <Route
+          path="/golden-tasks/vendor-closeout"
+          element={<Navigate to="/golden-tasks" replace />}
+        />
         <Route path="/golden-tasks/:id" element={<TaskDetail />} />
         <Route path="/complexity" element={<Complexity />} />
         <Route path="/spec" element={<SpecDoc />} />
