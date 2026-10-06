@@ -72,7 +72,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Scenario Adherence",
         "question": "Rate the Scenario Adherence of the Task Parameters dimension.",
-        "description": "Check against the Scenario assigned to your task in column G of the task parameter sheet.\nThe CB must stay as close as possible to the scenario as written and only fill in what it leaves open.  For all options except the last, apply an error category.",
+        "description": "Check against the Scenario assigned to your task in column G of the task parameter sheet.\nThe CB must stay as close as possible to the scenario as written and only fill in what it leaves open.  For all options except the last, apply an error category.\nNote: When the assigned scenario or its execution target asks for an action the environment's tools cannot perform the scenario may be adjusted to make the task feasible, i.e. the closest workable version of that part counts as following the scenario.",
         "errorTags": [
           {
             "label": "Fail - Scenario Not Followed",
@@ -85,7 +85,7 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - Scenario Not Followed]\nThe task is not built on the assigned scenario: it changes the user, the goal or the deliverable, or reduces the scenario to a passing mention.",
+            "text": "[Fail - Scenario Not Followed]\nThe prompt and its input files are not built on the assigned scenario: they serve a different user, pursue a different goal (a different outcome for the user, not an added constraint, filter, label or section to a goal already defined in the scenario), deliver something other than what the scenario asks for, or reduce the scenario to a passing mention. Errors in the rubric or the golden are graded under their own dimensions, not here.",
             "score": 2,
             "justify": true
           },
@@ -95,7 +95,7 @@ export const specGroups: SpecGroup[] = [
             "justify": true
           },
           {
-            "text": "The task follows the scenario closely: same user, goal and deliverable; only details the scenario leaves open were filled in.",
+            "text": "The task follows the scenario closely: same user, goal and deliverable; only details the scenario leaves open were filled in. Extra input files, more items or added friction that serve the same user, goal and deliverable count as filling in, including inputs added to reach the 3-input minimum.",
             "score": 5,
             "justify": false
           }
@@ -573,7 +573,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Overall Rubric Quality - 10%",
         "question": "Rate the Overall Rubric Quality - 10% of the Rubric Criteria dimension.",
-        "description": "",
+        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; each missing criterion counts as one issue and is added to the numerator only. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
         "errorTags": [
           {
             "label": "Fail - 10%+ Major Rubric Errors",
@@ -586,7 +586,7 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - 10%+ Major Rubric Errors]\nMore than 10% (>10%) of the criteria contain major issues\n\nUse the number of criteria that the CB wrote as the denominator while calculating % values. See the additional notes section for the numerator. Do NOT double count criteria while tallying even if it has multiple issues.",
+            "text": "[Fail - 10%+ Major Rubric Errors]\nMore than 10% (>10%) of the criteria contain major issues",
             "score": 2,
             "justify": true
           },
@@ -596,7 +596,7 @@ export const specGroups: SpecGroup[] = [
             "justify": true
           },
           {
-            "text": "Less than 5% (<5%) of the rubrics have minor issues\nNo major or moderate issues",
+            "text": "No major issues.",
             "score": 5,
             "justify": false
           }
@@ -605,7 +605,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Overall Rubric Quality - 15%",
         "question": "Rate the Overall Rubric Quality - 15% of the Rubric Criteria dimension.",
-        "description": "",
+        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; each missing criterion counts as one issue and is added to the numerator only; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
         "errorTags": [
           {
             "label": "Fail - 15%+ Moderate Rubric Errors",
@@ -618,17 +618,17 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - 15%+ Moderate Rubric Errors]\nMore than 15% (>15%) of the criteria contain moderate or major issues\n\nUse the number of criteria that the CB wrote as the denominator while calculating % values. See the additional notes section for the numerator. Do NOT double count criteria while tallying even if it has multiple issues..",
+            "text": "[Fail - 15%+ Moderate Rubric Errors]\nMore than 15% (>15%) of the criteria contain moderate or major issues",
             "score": 2,
             "justify": true
           },
           {
-            "text": "[Non-Fail - Up to 15% Moderate Errors]\nUp to 15% (<=15%) of criteria contain moderate or major issues (with major issues contributing lower than 5%)",
+            "text": "[Non-Fail - Up to 15% Moderate Errors]\nUp to 15% (<=15%) of criteria contain moderate or major issues.",
             "score": 3,
             "justify": true
           },
           {
-            "text": "Less than 5% (<5%) of the rubrics have minor issues\nNo major or moderate issues",
+            "text": "No major or moderate issues",
             "score": 5,
             "justify": false
           }
@@ -637,7 +637,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Overall Rubric Quality - 20%",
         "question": "Rate the Overall Rubric Quality - 20% of the Rubric Criteria dimension.",
-        "description": "For all options except the last, apply an error category.",
+        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; each missing criterion counts as one issue and is added to the numerator only; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
         "errorTags": [
           {
             "label": "Fail - 20%+ Minor Rubric Errors",
@@ -650,17 +650,17 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - 20%+ Minor Rubric Errors]\nMore than 20% (>20%) of the criteria contain minor or moderate or major issues\n\nUse the number of criteria that the CB wrote as the denominator while calculating % values. See the additional notes section for the numerator. Do NOT double count criteria while tallying even if it has multiple issues..",
+            "text": "[Fail - 20%+ Minor Rubric Errors]\nMore than 20% (>20%) of the criteria contain minor or moderate or major issues",
             "score": 2,
             "justify": true
           },
           {
-            "text": "[Non-Fail - 5-20% Minor Errors]\nBetween 5 and 20% (>=5% and <=20%) of criteria contain minor or moderate or major issues (with major issues contributing lower than 5% and moderate issues contributing lower than 15%)",
+            "text": "[Non-Fail - 5-20% Minor Errors]\nBetween 5 and 20% (>=5% and <=20%) of criteria contain minor or moderate or major issues.",
             "score": 3,
             "justify": true
           },
           {
-            "text": "Less than 5% (<5%) of the rubrics have minor issues\nNo major or moderate issues",
+            "text": "Less than 5% (<5%) of the rubrics have minor, moderate, or major  issues.",
             "score": 5,
             "justify": false
           }
@@ -899,7 +899,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Feasibility With Tools",
         "question": "Rate the Feasibility With Tools of the Trajectory dimension.",
-        "description": "This is based on the evaluations present in-task for Model A & B.  For all options except the last, apply an error category.",
+        "description": "This is based on the evaluations present in-task for Model A & B.  For all options except the last, apply an error category.\nThe primary request is the deliverable the scenario's goal depends on; other asks are secondary.",
         "errorTags": [
           {
             "label": "Fail - Feasibility with Tools",

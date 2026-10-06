@@ -230,6 +230,11 @@ It takes the dimensions from `*-rubric.csv` (matched by glob, so the task id in 
 not matter) and every appendix section from `appendix.csv`. Nothing is fetched and nothing is
 scraped.
 
+**Superseded rubric exports are left beside the new one rather than deleted**, so the glob matches
+several and the generator has to choose. It takes the **most recently written** file, not the first
+name, because revision numbers stop sorting usefully past `V9`. It prints which file it read, so
+check that line when a regeneration produces no diff.
+
 **This is not Red Shell's generator.** Red Shell carries its own copy, which scrapes the deployed
 multi-turn viewer at <https://qc-spec-mt-rubrics.vercel.app/>. That viewer serves the multi-turn
 spec and says nothing about Green Shell. The two projects therefore keep **separate specs,
@@ -254,13 +259,13 @@ diffing the new export against the one the hub was carrying, and renders in two 
 rest of the page: one rail entry with a count, one pane at a time, cards grouped under the revision
 date, and its entries fold into the page search with everything else.
 
-**Green Shell's log starts at one entry with nothing under it.** The hub is carrying the first
-Green Shell export, so there is no earlier Green Shell revision to diff against and `changes` is
-empty. Three guards in [SpecDoc.tsx](src/pages/SpecDoc.tsx) keep that from reading as a broken
-count: the rail badge is dropped, the section note says "1 revision" rather than "0 changes", and
-the banner's drawer explains the state instead of opening on an empty list. They are all
-`length === 0` checks, so the moment a second export lands and the log has entries, the page goes
-back to the counts without any change here. The **update log banner**
+**Green Shell's log starts at one entry with nothing under it**, because the first Green Shell
+export had no earlier Green Shell revision to diff against and its `changes` is empty. Three guards
+in [SpecDoc.tsx](src/pages/SpecDoc.tsx) keep that from reading as a broken count: the rail badge is
+dropped, the section note says "1 revision" rather than "0 changes", and the banner's drawer
+explains the state instead of opening on an empty list. They are all `length === 0` checks on the
+totals, so they switched themselves off the moment the second export landed and the page went back
+to the counts. Leave them in: the initial entry still renders its own `0`. The **update log banner**
 sits above the rail, directly under the search box, because the pane is only found by a reader who
 goes looking and someone arriving at the spec has no way of knowing the standard moved under them.
 It heads the newest revision, opens to the same cards, and links through to the pane. An entry

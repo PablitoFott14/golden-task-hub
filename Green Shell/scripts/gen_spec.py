@@ -5,8 +5,12 @@ Regenerate src/data/specDoc.ts from the Green Shell spec exports.
 
 Two CSVs beside this project, both exported from the spec sheet:
 
-    <task-id>-V2_-_Trivial_task_threshold__target-rubric.csv   the scored dimensions
-    appendix.csv                                               the appendix sections
+    <task-id>-V<n>_-_<revision>-rubric.csv   the scored dimensions
+    appendix.csv                             the appendix sections
+
+Superseded rubric exports are left in place rather than deleted, so the glob
+can match several. The most recently written one wins and the generator prints
+which file it read.
 
 **This is not the Red Shell generator.** Red Shell carries its own copy, which
 scrapes the deployed multi-turn viewer at <https://qc-spec-mt-rubrics.vercel.app/>.
@@ -68,10 +72,14 @@ def rows_of(path):
 # ------------------------------------------------------------------ dimensions
 
 def read_dimensions():
-    path = sorted(glob.glob(RUBRIC_GLOB))
-    if not path:
+    paths = glob.glob(RUBRIC_GLOB)
+    if not paths:
         raise SystemExit("no *-rubric.csv beside the project: %s" % RUBRIC_GLOB)
-    with open(path[0], encoding="utf-8-sig", newline="") as fh:
+    # Old exports are kept beside the new one, and their revision numbers do not
+    # sort usefully past V9, so take the newest file rather than the first name.
+    path = max(paths, key=os.path.getmtime)
+    print("rubric     : %s" % os.path.basename(path))
+    with open(path, encoding="utf-8-sig", newline="") as fh:
         rows = list(csv.DictReader(fh))
 
     groups, order, current = {}, [], None
