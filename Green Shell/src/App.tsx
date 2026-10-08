@@ -5,7 +5,6 @@ import GoldenTasks from "./pages/GoldenTasks";
 import TaskDetail from "./pages/TaskDetail";
 import SpecDoc from "./pages/SpecDoc";
 import Reference from "./pages/Reference";
-import Complexity from "./pages/Complexity";
 import { checklist } from "./data/checklist";
 
 function NotFound() {
@@ -74,7 +73,10 @@ export default function App() {
           element={<Navigate to="/golden-tasks" replace />}
         />
         <Route path="/golden-tasks/:id" element={<TaskDetail />} />
-        <Route path="/complexity" element={<Complexity />} />
+        {/* The proposals tool is parked: off the site, kept in the source, and
+            no longer imported, so it is not in the bundle either. An old link
+            lands on the method rather than on a 404. */}
+        <Route path="/complexity" element={<Navigate to="/" replace />} />
         <Route path="/spec" element={<SpecDoc />} />
         <Route path="/reference" element={<Reference />} />
 

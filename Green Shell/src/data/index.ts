@@ -46,15 +46,6 @@ export const searchIndex: SearchEntry[] = [
     terms: [c.tagline, c.blurb, c.covers.join(" "), "onboarding slides training intro"].join(" "),
   })),
 
-  {
-    kind: "Tool" as const,
-    title: "Increase complexity proposals",
-    hint: "Design assistant",
-    to: "/complexity",
-    terms:
-      "complexity bar proposals scenario harder difficulty assistant generate suggestions assigned parameters universe context P0 deliverable",
-  },
-
   ...taxonomy.flatMap<SearchEntry>((g) =>
     g.subs.map((s) => ({
       kind: "Use case" as const,

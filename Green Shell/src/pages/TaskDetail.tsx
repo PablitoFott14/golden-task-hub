@@ -371,7 +371,6 @@ function Gtfa({ t }: { t: GoldenTask }) {
         className="mt-5"
         links={[
           { to: "/reference#s3", tag: "C3", label: "Is the answer resolved before the first run?" },
-          { to: "/complexity", tag: "TOOL", label: "Raise a scenario to the complexity bar" },
         ]}
       />
     </>

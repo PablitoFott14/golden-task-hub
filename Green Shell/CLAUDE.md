@@ -6,14 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A static React site, the practical reference for contributors (CBs) on the Green Shell / OpenClaw MM
 Rubrics single turn project. **Five tabs**, and the detail of why is in
-[Five tabs, and where everything lives](#five-tabs-and-where-everything-lives).
+[Five tabs, and where everything lives](#five-tabs-and-where-everything-lives). One of them,
+Complexity, is [parked](#the-complexity-tab-is-parked): off the site for now, kept in the source.
 
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
 | The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
-| Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
+| Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | **Parked, not on the site**, and the route redirects to `/`. The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
 | Spec Doc | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec: the dimensions, the appendix and the change log, one pane at a time off a vertical rail, under one search. |
 | Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, the must-read project updates, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
 
@@ -107,7 +108,7 @@ actually doing.
 | --- | --- | --- | --- |
 | The Method | `/` | one scrolling page: hero, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
-| Complexity | `/complexity` | the proposals tool | unchanged |
+| Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
 | Spec Doc | `/spec` | **7 dimension groups** (default: Task Parameters) · 3 appendix sections · Change log | `/spec` |
 | Reference | `/reference` | **Onboarding** (default) · Pre-Submit · Must Read: Project Updates · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
 
@@ -390,6 +391,32 @@ from PIL import Image
 im = Image.open(<first slide>.png).convert("RGB")
 im.resize((880, 495), Image.LANCZOS).save("public/onboarding/<id>-cover.png", optimize=True)
 ```
+
+### The Complexity tab is parked
+
+The Increase Complexity Proposals tool is **off the public site for now and kept in the source**, so
+it can come back here or be lifted out to somewhere else. Only the ways in were removed:
+
+| Way in | Where it was | Now |
+| --- | --- | --- |
+| The tab, in the nav and the footer | `links` in [Layout.tsx](src/components/Layout.tsx) | Gone, so four tabs show |
+| The route | [App.tsx](src/App.tsx) | `/complexity` redirects to `/`, and the page is no longer imported |
+| The "Increase complexity" hero button | [Method.tsx](src/pages/Method.tsx) | Gone, with its `Wand2` import |
+| The `TOOL` crosslink under the designed friction cards | `Gtfa` in [TaskDetail.tsx](src/pages/TaskDetail.tsx) | Gone |
+| The ⌘K entry, kind `Tool` | `searchIndex` in [index.ts](src/data/index.ts) | Gone. The kind and its palette tint stay |
+| The `TOOL` links on Output Artifact and Architectural Depth & Friction Exposure | `DIMENSION_LINKS` in [gen_spec.py](scripts/gen_spec.py), and so `specDoc.ts` | Gone |
+
+Nothing behind those was touched: [Complexity.tsx](src/pages/Complexity.tsx), `complexity.ts`,
+`claimSheet.ts`, `universes.ts`, `gen_universes.py`, [complexity-api/](complexity-api/) and the two
+`VITE_COMPLEXITY_*` values in the deploy workflow are as they were. With nothing importing the page,
+Vite leaves the tool out of the bundle, but `tsc` still checks it because `include` is the whole of
+`src/`, so **it has to keep compiling** while it is parked. The repo has no `COMPLEXITY_API_URL`
+secret, so when it was parked the published tool was showing its example only.
+[complexity-api/SETUP.md](complexity-api/SETUP.md) is how it goes live once it is back.
+
+**To bring it back**, revert the commit "Park the Complexity tab", or put the six ways in back by
+hand. The two `TOOL` links go back into `gen_spec.py` and `specDoc.ts` together, or the next
+regeneration drops them again.
 
 ### The complexity tool keeps its credential off the client
 

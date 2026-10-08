@@ -1346,7 +1346,6 @@ export const dimensionLinks: Record<string, XLink[]> = {
   ],
   "Output Artifact": [
     { to: "/reference#planned-complexity", tag: "WN", label: "The bar each deliverable has to clear" },
-    { to: "/complexity", tag: "TOOL", label: "Propose ways to raise the complexity" },
   ],
   "Minimum Multimodal Inputs": [
     { to: "/#inputs", tag: "M4", label: "An input set where each file earns its place" },
@@ -1418,7 +1417,6 @@ export const dimensionLinks: Record<string, XLink[]> = {
   ],
   "Architectural Depth & Friction Exposure": [
     { to: "/#failure", tag: "M7", label: "Designed friction, not artificial friction" },
-    { to: "/complexity", tag: "TOOL", label: "Propose ways to raise the complexity" },
   ],
   "Genuine Media Inspection": [
     { to: "/#inputs", tag: "M4", label: "Evidence the model has to actually read" },

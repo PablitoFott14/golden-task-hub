@@ -21,13 +21,16 @@ import CommandPalette from "./CommandPalette";
  * scores against. The gate, the FAQ and the onboarding are all written from it,
  * so it is the destination, not an appendix to one.
  *
+ * **Complexity is parked.** The proposals tool is off the site for now, so its
+ * entry is out of this list and four tabs show. The page and everything behind
+ * it are still in the source, and CLAUDE.md has the way back.
+ *
  * **Anything new goes inside one of these five.** A sixth tab needs an argument
  * for why it is not a pane of an existing one.
  */
 const links = [
   { to: "/", label: "The Method", end: true },
   { to: "/golden-tasks", label: "Golden Tasks" },
-  { to: "/complexity", label: "Complexity" },
   { to: "/spec", label: "Spec Doc" },
   { to: "/reference", label: "Reference" },
 ];
