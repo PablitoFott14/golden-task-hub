@@ -146,9 +146,9 @@ export default function WhatsNew({ embedded = false }: { embedded?: boolean }) {
           </Heading>
           <p className="mt-4 text-[16px] leading-relaxed text-ink-500">
             Not the full version history. These are the {guidelineChanges.length} changes that move
-            what a contributor actually does, {hard} of them a rule a task fails without. Each one
-            names the Red Shell rule it replaces and the sections of the guidelines it came from.
-            Search{" "}
+            what a contributor actually does, {hard} of them a rule a task fails without. Where one
+            replaces a Red Shell rule it names it, and every entry carries the sections of the
+            guidelines it applies in. Search{" "}
             <span className="font-mono text-[14px] font-semibold text-ink-700">[NEW]</span> in the
             guidelines to find every tagged section.
           </p>

@@ -61,7 +61,7 @@ const PANES = [
     label: "Must Read: Project Updates",
     icon: ShieldAlert,
     count: guidelineChanges.length,
-    blurb: "Every guidelines rule that changed. Read these before your next task.",
+    blurb: "Every rule that changed, plus what the client has flagged since. Read these before your next task.",
   },
   {
     id: "faq",

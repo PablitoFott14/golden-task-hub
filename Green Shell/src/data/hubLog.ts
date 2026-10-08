@@ -1,4 +1,4 @@
-import { guidelineChanges } from "./changes";
+import { guidelinesOnlyChanges } from "./changes";
 import { onboardingItems } from "./onboarding";
 
 /**
@@ -45,16 +45,40 @@ export interface HubUpdate {
   to: string;
 }
 
-const hardRules = guidelineChanges.filter((c) => c.impact === "hard").length;
+/**
+ * The Oct 4 entry announced the Red Shell to Green Shell rule set, so it counts
+ * that set alone. A client flag added later is a separate entry of its own and
+ * must not inflate this one: reading `guidelineChanges` here made the sentence
+ * drift upward the moment the first flag landed.
+ */
+const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").length;
 
 export const hubUpdates: HubUpdate[] = [
+  {
+    id: "input-diversity",
+    date: "Oct 8, 2026",
+    kind: "guidelines",
+    what: "Images have to be worth looking at, not only worth reading",
+    where: "Reference → Must Read: Project Updates",
+    why: "Roughly 95% of the images shipped so far are text in picture form. Photos of real objects, charts, diagrams and maps, anything the model has to interpret rather than transcribe.",
+    to: "/reference#input-diversity",
+  },
+  {
+    id: "assigned-tool-use",
+    date: "Oct 8, 2026",
+    kind: "guidelines",
+    what: "Assigned tools have to be used, not just assigned",
+    where: "Reference → Must Read: Project Updates",
+    why: "The client asked for genuine tool use driven by the scenario, and named browsing and image generation. Name the step each assigned tool is necessary for, and check the deliverable could not be produced without it.",
+    to: "/reference#assigned-tool-use",
+  },
   {
     id: "guidelines-must-read",
     date: "Oct 4, 2026",
     kind: "guidelines",
     what: "Guidelines updates: read these before your next task",
     where: "Reference → Must Read: Project Updates",
-    why: `All ${guidelineChanges.length} rules that changed coming from Red Shell, ${hardRules} of them a rule a task fails without. Each one names the Red Shell rule it replaces and the guidelines sections it came from.`,
+    why: `All ${guidelinesOnlyChanges.length} rules that changed coming from Red Shell, ${hardRules} of them a rule a task fails without. Each one names the Red Shell rule it replaces and the guidelines sections it came from.`,
     to: "/reference#whats-new",
   },
   {

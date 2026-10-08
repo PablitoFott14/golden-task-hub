@@ -164,7 +164,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 
 | Source document | Data file here |
 | --- | --- |
-| Version History table and the `[NEW]` callouts in the guidelines | [src/data/changes.ts](src/data/changes.ts) |
+| Version History table and the `[NEW]` callouts in the guidelines, plus anything the client flags to the team afterwards | [src/data/changes.ts](src/data/changes.ts) |
 | Nothing — hand-authored, one entry per guidelines or onboarding change | [src/data/hubLog.ts](src/data/hubLog.ts) |
 | `rationale.md` and `[External] Green Shell Guidelines v1` | [src/data/method.ts](src/data/method.ts) |
 | `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
@@ -431,7 +431,7 @@ answers a different question, and each links to the other two rather than restat
 | Log | Data | Where it renders | Answers |
 | --- | --- | --- | --- |
 | **The update notice** | [src/data/hubLog.ts](src/data/hubLog.ts) | [HubLog.tsx](src/components/HubLog.tsx), the `#updates` bar under the nav on `/` | What has changed that I have to act on before my next task |
-| **Must Read: Project Updates** | [src/data/changes.ts](src/data/changes.ts) | [WhatsNew.tsx](src/pages/WhatsNew.tsx), the `whats-new` pane of `/reference` | What the *guidelines* changed going from Red Shell to Green Shell |
+| **Must Read: Project Updates** | [src/data/changes.ts](src/data/changes.ts) | [WhatsNew.tsx](src/pages/WhatsNew.tsx), the `whats-new` pane of `/reference` | What a contributor has to do differently: the *guidelines* change coming from Red Shell, and every client flag since |
 | **Spec Doc change log** | [src/data/specLog.ts](src/data/specLog.ts) | the `log` pane of `/spec` | Which *rubric dimension* moved between exports |
 
 **The update notice is not a changelog of the site.** It carries two kinds and nothing else:
@@ -443,6 +443,13 @@ differently because of it, before their next task?**
 **Every entry carries a `to` that opens the thing it describes**, because an entry you cannot act on
 is an announcement rather than a notice. Entries are historical and are not rewritten when the hub
 moves on, so a count written into one describes what shipped that day and is correct to leave alone.
+
+**A client flag goes in all three places, in one pass.** The rule itself lands in `changes.ts` as a
+Must Read entry with `version: "Client flag"` and no `before`, because the renderer labels `before`
+"In Red Shell" and a flag is about how Green Shell tasks are being built now. Then the notice bar
+gets an entry pointing at it, and the rule is worked into the method step it belongs to rather than
+left as an announcement nobody acts on. `specLog.ts` stays out of it: that log tracks the rubric
+sheet, and a client flag is not a rubric revision.
 
 **It sits above the hero, not below it.** The hero is around 800px tall, so a band under it is below
 the fold on a laptop and two screens down on a phone — useless for something read on the way in.

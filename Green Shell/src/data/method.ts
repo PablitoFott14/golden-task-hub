@@ -31,7 +31,7 @@ export const methodSteps: MethodStep[] = [
     moves: [
       "Read your subcategory definition and its scope check before anything else, and assign by the user's intent rather than by what the input files are about.",
       "Check the neighbouring subcategory inside the same use case. Fitting one of those better is a category relevance failure even though the use case is right.",
-      "Confirm the assigned tools. Where the scenario names them, the correct final state has to depend on them.",
+      "Confirm the assigned tools, then name the step each one is necessary for. Where the scenario names them, the correct final state has to depend on them.",
       "Keep the pair in front of you. The universe, the scenario, the inputs and the prompt are each checked back against it.",
     ],
     produces: "An assigned pair you can defend, and the scope check that proves the fit.",
@@ -109,7 +109,7 @@ export const methodSteps: MethodStep[] = [
     moves: [
       "Use as many inputs as the scenario naturally needs. Most tasks need substantially more than three to clear the complexity bar.",
       "Give every file a purpose. Required signal or a deliberate distractor, never decoration.",
-      "Spread the evidence across modalities, so no single source carries the whole answer.",
+      "Spread the evidence across modalities, so no single source carries the whole answer. An image earns its slot by what has to be seen in it, not by the text it happens to contain.",
       "Keep health inputs mocked or synthetic, and keep the answer out of every filename.",
     ],
     produces: "An input set where each file earns its place.",

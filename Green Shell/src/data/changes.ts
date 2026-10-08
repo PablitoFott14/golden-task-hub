@@ -1,9 +1,18 @@
 import type { GuidelineChange } from "./types";
 
 /**
- * What Green Shell changed, against the Red Shell multi-turn project it
- * replaced. Transcribed from the Version History table and the [NEW] callouts
- * of `[External] Green Shell – Guidelines .md`, which is the source of truth.
+ * What a contributor has to do differently, and why. Two sources feed it:
+ * the Version History table and the [NEW] callouts of
+ * `[External] Green Shell – Guidelines .md`, which is the source of truth for
+ * everything Green Shell changed against the Red Shell project it replaced;
+ * and anything the client flags afterwards, which arrives as a note to the
+ * team rather than as a guidelines revision.
+ *
+ * A client flag carries `version: "Client flag"` in place of a guidelines
+ * version, because the guidelines have not moved, and it leaves `before`
+ * unset: the renderer labels that field "In Red Shell", which is wrong for a
+ * rule about how Green Shell tasks are being built right now. Its `refs` still
+ * name the sections the rule applies in, so the reader can check us.
  *
  * This is not the version history. An entry earns its place only by changing
  * what a contributor does, which is why every one carries `does`. `before`
@@ -22,7 +31,69 @@ import type { GuidelineChange } from "./types";
  */
 export const guidelinesVersion = { version: "Green Shell v1", updated: "Sep 27, 2026" };
 
+/**
+ * The `version` a client flag carries, in place of a guidelines version. Read
+ * rather than typed, because anything counting the guidelines rule set on its
+ * own has to exclude these and a second copy of the string would drift.
+ */
+export const clientFlagVersion = "Client flag";
+
 export const guidelineChanges: GuidelineChange[] = [
+  {
+    id: "input-diversity",
+    date: "Oct 8, 2026",
+    version: clientFlagVersion,
+    title: "Images have to be worth looking at, not only worth reading",
+    body: "The client went through the image inputs across the project and found roughly 95% of them were text in picture form: screenshots of documents, emails and threads. An image now has to carry visual information the model interprets rather than transcribes. This bites hardest where the assigned input_modalities include image, which is where a reviewer looks first.",
+    does: "Before attaching an image, ask what the model has to do with it. If the answer is read the words, it is a document, so make it one and spend the image slot on something that has to be looked at.",
+    refs: [{ section: "1.2.2", title: "Select the Multimodal Inputs" }],
+    impact: "shape",
+    detail: {
+      label: "Images that carry visual information",
+      items: [
+        "Photos of physical objects, products, receipts and real environments, where the state of the thing is the fact.",
+        "Charts, graphs, diagrams, maps and visual layouts, where the reading comes from the shape rather than from a label.",
+        "Images the model has to identify, compare, measure or reason about, instead of lifting a string out of.",
+        "A screenshot is still right where the document itself is the evidence. What the client flagged is an image set made of nothing else.",
+        "Diversity is not a quota. An interpretive image that carries no part of the answer is decoration, and every file still has to earn its place.",
+      ],
+    },
+    links: [
+      { to: "/#inputs", tag: "M4", label: "An input set where each file earns its place" },
+      { to: "/reference#input-floor", tag: "WN", label: "Three inputs is a floor, and it is enforced" },
+      { to: "/spec#input-artifacts", tag: "QC", label: "Realism, safety and the input floor" },
+    ],
+  },
+  {
+    id: "assigned-tool-use",
+    date: "Oct 8, 2026",
+    version: clientFlagVersion,
+    title: "Assigned tools have to be used, not just assigned",
+    body: "Carrying the right connectors is not the same as building on them. The client asked for genuine tool use driven by the scenario, and named browsing and image generation specifically. Tools are assigned under hatch_connectors on the parameter sheet and surface as assigned tools once tasking moves to the dash.",
+    does: "Name the step in your scenario that each assigned tool is necessary for, and check the deliverable could not be produced without it. If you cannot name that step, the task is not using the tool and is not finished. Never bolt on a call just to show one happened.",
+    refs: [
+      { section: "1.1", title: "Task Parameters & Execution Rules" },
+      { section: "1.2.3", title: "Create the Prompt" },
+      { section: "8.3", title: "The Services in the Universe" },
+      { section: "8.3.1", title: "The Built-in Tools" },
+    ],
+    impact: "hard",
+    detail: {
+      label: "What meaningful use looks like",
+      items: [
+        "Browser: external research, cross referencing several sites, verifying a source, or a value that is only correct at run time.",
+        "Image generation (muse-image-1.0): a visual asset the model produces or edits and then places inside the assigned output artifact.",
+        "Web values move between runs, so grade the retrieval and the relationship the model has to establish, not the figure you saw while writing the rubric.",
+        "Google Drive is working again. If it still fails on your task, drop that one connector and hold every other parameter exactly as assigned.",
+        "Social media interactions are wanted too. The universes that support them are still being built, so this lands once those tools exist.",
+      ],
+    },
+    links: [
+      { to: "/reference#assigned-tools", tag: "WN", label: "Assigned tools are mandatory, and drift is rejected" },
+      { to: "/#parameters", tag: "M1", label: "Confirm the loadout before you design" },
+      { to: "/spec#trajectory", tag: "QC", label: "Feasibility with tools" },
+    ],
+  },
   {
     id: "single-turn",
     date: "Sep 27, 2026",
@@ -211,3 +282,12 @@ export const guidelineChanges: GuidelineChange[] = [
     },
   },
 ];
+
+/**
+ * The Red Shell to Green Shell rule set on its own, without the client flags
+ * layered on since. Anything that says how many rules changed coming from Red
+ * Shell counts this, not `guidelineChanges`, which also holds the flags.
+ */
+export const guidelinesOnlyChanges = guidelineChanges.filter(
+  (c) => c.version !== clientFlagVersion
+);
