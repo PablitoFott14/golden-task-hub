@@ -148,8 +148,8 @@ export default function Onboarding({ embedded = false }: { embedded?: boolean })
         <p className="mt-8 flex items-start gap-2.5 rounded-2xl border border-ink-200/70 bg-raised p-4 text-[13px] leading-relaxed text-ink-500">
           <Sparkles size={14} className="mt-0.5 shrink-0 text-gold-600 dark:text-gold-400" />
           <span>
-            Both were written for the multi-turn project and still teach it. The rules that
-            moved under Green Shell are in Must Read: Project Updates, and that is the one to read second.
+            Both teach Green Shell. Common Errors keeps its real Red Shell examples, because the same
+            standards still apply. The full list of rules that changed is in Must Read: Project Updates.
           </span>
         </p>
       </Reveal>

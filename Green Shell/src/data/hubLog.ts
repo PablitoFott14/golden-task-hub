@@ -55,6 +55,15 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "green-shell-onboardings",
+    date: "Oct 9, 2026",
+    kind: "onboarding",
+    what: "Both onboardings are now the Green Shell versions",
+    where: "Reference → Onboarding",
+    why: "The intro teaches the single turn task end to end, and Common Errors keeps the Red Shell mistakes that still apply, restated against the Green Shell rules. Rerun both if you went through the multi-turn versions.",
+    to: "/reference#onboarding",
+  },
+  {
     id: "input-diversity",
     date: "Oct 8, 2026",
     kind: "guidelines",
