@@ -95,6 +95,10 @@ export const methodSteps: MethodStep[] = [
       body: "Twelve charges were resolved to the cent before the prompt was sent: five to dispute, four company purchases against a monthly cap, three correct and shown as correct. The answer also fixes what must not happen, and which different but defensible readings still count as right.",
       link: { to: `${GT}#gtfa`, tag: "GT", label: "The resolved answer, charge by charge" },
     },
+    links: [
+      { to: "/failure-approach#planning", tag: "FA", label: "Plan the failure points into the GTFA" },
+      { to: "/failure-approach#patterns", tag: "FA", label: "The patterns to plan around" },
+    ],
   },
   {
     n: 4,
@@ -203,6 +207,11 @@ export const methodSteps: MethodStep[] = [
       body: "Model A opened the receipt at tool call 3 and found the sale email at call 52, then cleared the charge anyway. It lost 36 of the 69 positive weight in the objective block and all 23 in the subjective one, on four findings that each change what the user does next.",
       link: { to: `${GT}#model-a`, tag: "GT", label: "Where the run actually broke" },
     },
+    links: [
+      { to: "/failure-approach#real-failure", tag: "FA", label: "Real or manufactured: what counts" },
+      { to: "/failure-approach#leg-a", tag: "FA", label: "Where to look in the Leg A run" },
+      { to: "/failure-approach#keeps-passing", tag: "FA", label: "When Model A keeps passing" },
+    ],
   },
   {
     n: 8,
@@ -229,6 +238,9 @@ export const methodSteps: MethodStep[] = [
       body: "Twenty six criteria, each pinning its own transaction id, amount, date and filename. None of them targets the trajectory, which is the preferred number rather than merely inside the cap, and not one checks only that something exists.",
       link: { to: `${GT}#rubrics`, tag: "GT", label: "All 26 criteria and how Model A rated" },
     },
+    links: [
+      { to: "/failure-approach#rating", tag: "FA", label: "Rate the run against the criteria you planned" },
+    ],
   },
   {
     n: 9,
@@ -255,6 +267,7 @@ export const methodSteps: MethodStep[] = [
       body: "Four steers took the same prompt from two disputes to five. The one that found the hardest of them pointed at her own photographs being taken in a rush, and at what she had filled in by hand. It never mentioned the slip, the restaurant or the figure.",
       link: { to: `${GT}#golden`, tag: "GT", label: "The four steers, and what each one never says" },
     },
+    links: [{ to: "/failure-approach#leg-b", tag: "FA", label: "A hint for each failure pattern" }],
   },
   {
     n: 10,

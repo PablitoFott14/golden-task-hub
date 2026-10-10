@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 import Method from "./pages/Method";
 import GoldenTasks from "./pages/GoldenTasks";
 import TaskDetail from "./pages/TaskDetail";
+import FailureApproach from "./pages/FailureApproach";
 import SpecDoc from "./pages/SpecDoc";
 import Reference from "./pages/Reference";
 import { checklist } from "./data/checklist";
@@ -73,6 +74,7 @@ export default function App() {
           element={<Navigate to="/golden-tasks" replace />}
         />
         <Route path="/golden-tasks/:id" element={<TaskDetail />} />
+        <Route path="/failure-approach" element={<FailureApproach />} />
         {/* The proposals tool is parked: off the site, kept in the source, and
             no longer imported, so it is not in the bundle either. An old link
             lands on the method rather than on a 404. */}

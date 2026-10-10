@@ -1,29 +1,38 @@
-import { Fragment } from "react";
+import { Fragment, type ReactNode } from "react";
 import { cx } from "../lib/util";
 
 /**
- * The small markdown renderer the hub shares. Two things are rendered from
- * markdown here: the excerpts a subjective criterion is rated on, and the
- * golden conversation. Both are read the way their reader read them, so no
- * `##` and no `**` may ever reach the screen.
+ * The small markdown renderer the hub shares. Three things are rendered from
+ * markdown here: the excerpts a subjective criterion is rated on, the golden
+ * conversation, and the Failure Approach tab. All of them are read the way
+ * their reader reads them, so no `##` and no `**` may ever reach the screen.
  */
 
-/** `**bold**`, `*italic*` and `` `mono` ``, which is all any of it uses. */
-export function Inline({ text }: { text: string }) {
+/**
+ * `**bold**`, `*italic*` and `` `mono` ``, which is all any of it uses.
+ *
+ * `plain` is applied to the unformatted text, inside bold and italic as well,
+ * and never inside mono. It is how a caller adds its own inline layer, the
+ * Failure Approach's pattern chips and links, without a second markdown
+ * renderer that would have to agree with this one. Without it the text is
+ * printed as it is.
+ */
+export function Inline({ text, plain }: { text: string; plain?: (s: string) => ReactNode }) {
   const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g);
+  const show = (s: string) => (plain ? plain(s) : s);
   return (
     <>
       {parts.map((p, i) => {
         if (p.startsWith("**") && p.endsWith("**"))
           return (
             <strong key={i} className="font-semibold text-ink-900">
-              {p.slice(2, -2)}
+              {show(p.slice(2, -2))}
             </strong>
           );
         if (p.startsWith("*") && p.endsWith("*") && p.length > 2)
           return (
             <em key={i} className="text-ink-500">
-              {p.slice(1, -1)}
+              {show(p.slice(1, -1))}
             </em>
           );
         if (p.startsWith("`") && p.endsWith("`"))
@@ -32,7 +41,7 @@ export function Inline({ text }: { text: string }) {
               {p.slice(1, -1)}
             </code>
           );
-        return <Fragment key={i}>{p}</Fragment>;
+        return <Fragment key={i}>{show(p)}</Fragment>;
       })}
     </>
   );

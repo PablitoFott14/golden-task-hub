@@ -931,6 +931,7 @@ function ModelA({ t }: { t: GoldenTask }) {
         links={[
           { to: "/reference#s5", tag: "C5", label: "Did the model fail on things that matter?" },
           { to: "/golden-tasks/charge-disputes#subjective", tag: "GT", label: "The same page, beside the golden" },
+          { to: "/failure-approach#leg-a", tag: "FA", label: "Where else a Leg A run breaks, pattern by pattern" },
         ]}
       />
     </>
@@ -1121,6 +1122,7 @@ function Golden({ t }: { t: GoldenTask }) {
         links={[
           { to: "/reference#s7", tag: "C7", label: "Does the golden pass its own block?" },
           { to: "/reference#faq", tag: "FAQ", label: "How much may a hint carry?" },
+          { to: "/failure-approach#leg-b", tag: "FA", label: "A hint for each failure pattern" },
         ]}
       />
     </>

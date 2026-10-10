@@ -82,6 +82,7 @@ export const checklist: ChecklistSection[] = [
         links: [
           { to: "/#failure", tag: "M5", label: "If the model sails through, the task is not ready" },
           { to: `${GT}#model-a`, tag: "GT", label: "52% of the objective weight lost" },
+          { to: "/failure-approach#keeps-passing", tag: "FA", label: "When Model A keeps passing" },
         ],
       },
     ],

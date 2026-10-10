@@ -188,6 +188,11 @@ export interface MethodStep {
   inTask: { body: string; link?: XLink };
   /** Optional hard rule worth pinning, taken from the guidelines. */
   rule?: { label: string; body: string };
+  /**
+   * Where the hub goes deeper on this step than the panel can. Optional, and
+   * only on the steps that have somewhere to go.
+   */
+  links?: XLink[];
   /** Which phase of the workflow the step belongs to. */
   phase: "Design" | "Leg A" | "Leg B" | "Grade";
 }
@@ -711,6 +716,87 @@ export interface GuidelineChange {
   links?: XLink[];
 }
 
+/* --------------------------------------------------------- failure approach */
+
+/**
+ * The four groups the failure patterns fall into. Three follow the stages every
+ * task must contain, and reading the media is a group of its own because every
+ * task here depends on it.
+ */
+export type FailureGroupId = "finding" | "media" | "reasoning" | "delivering";
+
+/**
+ * How much the studies' data supports a pattern. It is a strength of evidence,
+ * not a status, so it renders as a meter beside a word and never as a colour.
+ */
+export type EvidenceLevel = "strong" | "moderate" | "limited";
+
+export interface FailureGroup {
+  id: FailureGroupId;
+  /** The letter every pattern code in the group starts with. */
+  letter: "A" | "B" | "C" | "D";
+  title: string;
+  /** The stage of the task the group belongs to. */
+  stage: string;
+  /** One line, for the selector and the index. */
+  blurb: string;
+  /** Paragraphs that open the group, where the source has any. */
+  intro?: string[];
+}
+
+/** One reason a pattern happens, tagged by how firmly the data shows it. */
+export interface FailureWhy {
+  tag: "Documented" | "Likely" | "Likely, from OpenClaw" | "In the guidelines";
+  text: string;
+}
+
+/**
+ * One line of "Grade it where it lands", in the order the source gives them:
+ * prose, or an example criterion. `avoid` is a criterion the card warns
+ * against, with the reason in `note`.
+ */
+export type FailureGradeLine =
+  | { say: string }
+  | { criterion: string; kind: "use" | "avoid"; note?: string };
+
+/**
+ * One way an agent breaks, as a card a contributor can plan a task around.
+ * Every string keeps its source's citation brackets; the page decides which of
+ * them reach the screen. See the header of `failureApproach.ts`.
+ */
+export interface FailurePattern {
+  /** "a1", the anchor every inbound link targets. */
+  id: string;
+  /** "A1", as printed. */
+  code: string;
+  group: FailureGroupId;
+  name: string;
+  /** What the agent does, in a few sentences. */
+  happens: string;
+  why: FailureWhy[];
+  evidence: {
+    level: EvidenceLevel;
+    /** Where one card spans two levels, the wording that says so. */
+    label?: string;
+    /** What follows the level in the source, before the incidents. */
+    lead?: string;
+    points: string[];
+    /** Paragraphs after the list. */
+    after?: string[];
+  };
+  /** The rule or example in the guidelines the pattern maps to, where one exists. */
+  guidelines?: string;
+  ideas: string[];
+  watch: string[];
+  fair: string[];
+  grade: FailureGradeLine[];
+  takeaway: string;
+  /** OpenClaw MM share, as the index states it, and the codes it is shared with. */
+  share: { value: string; with?: string };
+  /** The index table's "Strongest fit". */
+  fit: string;
+}
+
 /* ------------------------------------------------------------------- search */
 
 export interface SearchEntry {
@@ -720,6 +806,7 @@ export interface SearchEntry {
     | "Onboarding"
     | "Tool"
     | "Golden task"
+    | "Failure approach"
     | "Pre-submit check"
     | "QC spec"
     | "FAQ"

@@ -7,30 +7,42 @@ import { useTheme } from "../lib/useTheme";
 import CommandPalette from "./CommandPalette";
 
 /**
- * Five tabs, and the number is the point.
+ * Six tabs, one of them parked, and the number is the point.
  *
  * It was eight. Four of those were things a contributor looks something up in
  * rather than works from — onboarding, what moved from Red Shell, the FAQ, and
  * the pre-submit gate — sitting at the same level as the pages they are
  * actually in. They became `Reference`. What is left is one tab per thing a
- * contributor does: learn the method, study a worked example, raise the
- * complexity, read the standard they are scored against, look something up.
+ * contributor does: learn the method, study a worked example, plan where the
+ * model fails, read the standard they are scored against, look something up.
  *
  * **The spec doc holds a tab of its own**, because it is the one piece of
  * content nothing else here can stand in for: the exact rubric a reviewer
  * scores against. The gate, the FAQ and the onboarding are all written from it,
  * so it is the destination, not an appendix to one.
  *
+ * **Failure Approach is the sixth, and this is the argument for it.** It is
+ * worked from, not looked up in: a contributor reads it while planning, again
+ * while rating the Leg A run and again while steering Leg B, so it is not a
+ * pane of Reference. It is not a pane of the method either: a step there is
+ * three sentences and a panel, and this is seventeen failure patterns with
+ * their evidence, a planning sequence and a worked example, which would turn
+ * step 7 into the whole page. It is not the standard, so it is not the spec
+ * doc. It sits where the parked Complexity tool did, between the worked example
+ * and the standard, because it is that same step of the work: making the task
+ * hard for the right reasons. Steps 3, 7, 8 and 9 of the method link into it.
+ *
  * **Complexity is parked.** The proposals tool is off the site for now, so its
- * entry is out of this list and four tabs show. The page and everything behind
+ * entry is out of this list and five tabs show. The page and everything behind
  * it are still in the source, and CLAUDE.md has the way back.
  *
- * **Anything new goes inside one of these five.** A sixth tab needs an argument
+ * **Anything new goes inside one of these.** A seventh tab needs an argument
  * for why it is not a pane of an existing one.
  */
 const links = [
   { to: "/", label: "The Method", end: true },
   { to: "/golden-tasks", label: "Golden Tasks" },
+  { to: "/failure-approach", label: "Failure Approach" },
   { to: "/spec", label: "Spec Doc" },
   { to: "/reference", label: "Reference" },
 ];

@@ -5,15 +5,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 A static React site, the practical reference for contributors (CBs) on the Green Shell / OpenClaw MM
-Rubrics single turn project. **Five tabs**, and the detail of why is in
-[Five tabs, and where everything lives](#five-tabs-and-where-everything-lives). One of them,
-Complexity, is [parked](#the-complexity-tab-is-parked): off the site for now, kept in the source.
+Rubrics single turn project. **Six tabs**, and the detail of why is in
+[Six tabs, and where everything lives](#six-tabs-and-where-everything-lives). One of them,
+Complexity, is [parked](#the-complexity-tab-is-parked): off the site for now, kept in the source,
+so five show.
 
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
 | The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
+| Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | Where agents break and how to plan a Leg A around it: 17 failure patterns in four groups, planning, reading Leg A, hinting in Leg B, what to do when Model A keeps passing, and the evidence, one pane at a time off a vertical rail. See [The Failure Approach tab](#the-failure-approach-tab). |
 | Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | **Parked, not on the site**, and the route redirects to `/`. The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
 | Spec Doc | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec: the dimensions, the appendix and the change log, one pane at a time off a vertical rail, under one search. |
 | Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, the must-read project updates, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
@@ -73,7 +75,7 @@ cat > src/ssr-smoke.tsx <<'EOF'
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import App from "./App";
-const routes = ["/", "/golden-tasks", "/golden-tasks/charge-disputes", "/complexity", "/spec", "/reference", "/nope"];
+const routes = ["/", "/golden-tasks", "/golden-tasks/charge-disputes", "/failure-approach", "/complexity", "/spec", "/reference", "/nope"];
 let fail = 0;
 for (const r of routes) {
   try { console.log(`OK   ${r} ${renderToString(<StaticRouter location={r}><App /></StaticRouter>).length}`); }
@@ -92,6 +94,11 @@ npx vite build --config vite.ssr.config.ts && node ssr-dist/ssr-smoke.js
 `useEffect` never fires under SSR, so this catches render-time crashes only, not the scroll spy,
 the theme toggle or `localStorage`. Delete both files before copying anything back.
 
+`StaticRouter` takes a hash, and the Failure Approach reads its pane off the hash on the first
+render, so `/failure-approach#<pane-id>` and `/failure-approach#<pattern-id>` (`#a1` to `#d4`)
+server-render every pane and every pattern card. Add those to `routes`, and assert on the stripped
+text while you are there: no `**`, no `{{`, no `[G ` or `[R ` citation bracket, no em dash.
+
 For interaction and visual checks, Playwright browsers are installed on this machine. Install
 `playwright-core` in the mirror, run `npx vite preview`, and drive Chrome with
 `chromium.launch({ channel: "chrome" })`. The scroll spy, the sticky rail, the ⌘K palette,
@@ -99,15 +106,16 @@ checklist persistence and every cross-link were verified that way.
 
 ## Architecture
 
-### Five tabs, and where everything lives
+### Six tabs, and where everything lives
 
-The hub was eight tabs and it had stopped being navigable. It is now five, one per thing someone is
-actually doing.
+The hub was eight tabs and it had stopped being navigable. It is now six, one per thing someone is
+actually doing, and one of those is parked, so five show.
 
 | Tab | Route | Panes inside it | Was |
 | --- | --- | --- | --- |
 | The Method | `/` | one scrolling page: hero, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
+| Failure Approach | `/failure-approach` | **13 panes** (default: Overview): Real or manufactured, the pattern index, the four pattern groups, five on putting it to work, the evidence | new, in the slot Complexity held |
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
 | Spec Doc | `/spec` | **7 dimension groups** (default: Task Parameters) · 3 appendix sections · Change log | `/spec` |
 | Reference | `/reference` | **Onboarding** (default) · Pre-Submit · Must Read: Project Updates · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
@@ -138,15 +146,18 @@ the data rather than listed by hand: `dimensionHome` in [SpecDoc.tsx](src/pages/
 without touching any of them.
 
 **Two pane mechanisms, both already in the hub, chosen by size.** The spec doc keeps a vertical rail
-because it has eleven entries. Reference uses a bar across the top because it has four, and three of
+because it has eleven entries, and the Failure Approach reuses it for its thirteen. Reference uses a bar across the top because it has four, and three of
 its panes carry a side rail of their own — a second vertical rail beside those is exactly the
 layering this restructure removed. The absorbed pages take an `embedded` prop that drops their own
 hero so the page keeps one `h1`; **nothing inside them changed**, so the gate keeps its progress bar,
 its persisted ticks and its section rail, the FAQ keeps its search, its topic filter and its question
 rail, and Must Read keeps its change rail and the taxonomy accordion.
 
-**A sixth tab needs an argument for why it is not a pane of an existing one.** The note above
-`links` in [Layout.tsx](src/components/Layout.tsx) is the record of that reasoning.
+**A new tab needs an argument for why it is not a pane of an existing one.** The note above
+`links` in [Layout.tsx](src/components/Layout.tsx) is the record of that reasoning, and the
+Failure Approach's is there: it is worked from rather than looked up in, so it is not Reference;
+it is seventeen patterns with their evidence and a planning sequence, so it would swallow a method
+step whole; and it is not the standard. A seventh tab makes the same case or goes in a pane.
 
 ### They are onboardings, not courses
 
@@ -171,6 +182,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
 | `*-rubric.csv` and `appendix.csv`, the spec exports (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
 | `F&Q.md` in this repo | [src/data/faq.ts](src/data/faq.ts) |
+| `failure approach/failure_approach.md`, cross-read against the two studies beside it (`opus_failure_report (2).html`, `task_writer_cheat_sheet (3).html`) | [src/data/failureApproach.ts](src/data/failureApproach.ts), citation brackets kept. See [The Failure Approach tab](#the-failure-approach-tab) |
 | `Videos/Universe Dealing/finals/` on Drive, `universe_post.md` beside the recordings | [src/data/videos.ts](src/data/videos.ts) + `public/videos/universe/` |
 | `task 1 (6ab82ece4b8df21cfe07addd)/` | [src/data/tasks/chargeDisputes.ts](src/data/tasks/chargeDisputes.ts) + `public/tasks/charge-disputes/` |
 | `task 1/GTFA.md`, the answer, the must nots and the accepted variations | `answer`, `ledger`, `mustNot`, `variations` in the same file |
@@ -392,6 +404,76 @@ im = Image.open(<first slide>.png).convert("RGB")
 im.resize((880, 495), Image.LANCZOS).save("public/onboarding/<id>-cover.png", optimize=True)
 ```
 
+### The Failure Approach tab
+
+`failurePatterns` and the pane content in [src/data/failureApproach.ts](src/data/failureApproach.ts)
+are `failure approach/failure_approach.md`, transcribed, and
+[FailureApproach.tsx](src/pages/FailureApproach.tsx) lays them out. The md was written from two
+studies of graded Opus failures, the final report and the task writer cheat sheet, which sit beside
+it. **The md is the reference**; the studies were read only for what it left out. The folder is
+source material and gitignored, and the repo is public, so it must stay that way.
+
+**The page is the Spec Doc's shape on purpose.** Thirteen panes off a vertical rail, one at a time,
+under Start here, The patterns, Put it to work and The evidence, with counts read off the data.
+`paneHome` resolves any anchor to the pane holding it, built from the data wherever the data has ids
+(the panes, the patterns, the planning steps, the places to look in Leg A); the remaining section
+anchors are listed beside them. The pane is read off the hash on the **first** render rather than in
+an effect, so a deep link never flashes the overview. Rail and footer clicks move the pane without
+touching the URL, and the hash effect watches `key`, the same as the Spec Doc.
+
+**A pattern group is the Method page's idiom.** One compact card per pattern, and the selected one
+opens in full below it: what happens, the key takeaway, why it happens, Build it (scenario ideas,
+keep it fair), Catch it and grade it (what to watch for, grade it where it lands), the evidence and
+the guidelines. `/failure-approach#c3` opens C and selects C3, and the layout's scroll effect lands
+on the panel, which carries the pattern id. Previous and next walk all seventeen in order and cross
+group edges. The selection is kept per group, so it survives a pane switch.
+
+**The strings keep the md's citation brackets, so the file stays diffable against it.** `FaText`
+is the only way any of them reaches the screen:
+
+- `[G 4]` is a guidelines section and becomes a § badge at the end of the line, the way the gate
+  prints its refs.
+- `[Q Prompt, Valid Model Failure]` is a QA rubric dimension and becomes a link to its Spec Doc
+  card, resolved against `specGroups` by group and name prefix (the md writes "Hint Leak" for "Hint
+  Leak (Leg B)"). `dimSlug` is duplicated from [SpecDoc.tsx](src/pages/SpecDoc.tsx), so **the two
+  have to agree**. A dimension that no longer resolves falls back to plain text rather than a dead
+  link; a server render that contains `<span…>QC ·` has one.
+- `[R …]`, `[C …]` and `[I …]` are the report, the cheat sheet and the intro onboarding's slide text:
+  provenance for whoever maintains the hub, never on screen.
+- A pattern code, A1 to D4, anywhere in a string becomes a chip that opens its card. The regex is
+  built from the codes in the data, so nothing else that looks like a code is linked.
+  `{{target|label}}` is a link: an anchor on this page, or a hub route when it starts with `/`.
+
+`FaText` goes through `Inline` in [Markdown.tsx](src/components/Markdown.tsx), whose `plain` prop is
+applied to unformatted text. That is what keeps `Inline` the only markdown renderer: bold, italic
+and mono stay its job, and the chips and links are laid over its plain text, never inside mono.
+
+**What was edited on the way in is copy, not substance**, and the data file's header lists it:
+"course" reads "onboarding", "section N" became a link to its pane, and a sentence naming the report
+or the cheat sheet says "the studies", because no page names the document behind a rationale. **A
+few insights were added from the studies** where the md left them out and they apply to an assigned
+universe and your own inputs: look-alike objects in B1, the tempting threshold field and the
+two-sided rule in C3, a total whose parts sit apart in C4, a join only two tables make in C5,
+relative dates in C6, the person who acts next in D3, and the root failure counts in the evidence.
+Each carries an `Added from the studies` comment naming its trap. When the md is revised, re-diff it
+against the data and keep those.
+
+**It follows the guidelines where the studies do not**: the 30% failure floor with 50% preferred,
+Leg A as the GPT leg, grading where it lands, no existence checks, hints that never carry a count.
+Note that the method page's step 7 copy, `hardRequirements` and gate check A4 still state the bar as
+50%, which the current guidelines make the preferred rate rather than the minimum.
+
+**Cross-links run both ways.** Method steps 3, 7, 8 and 9 carry `links`, an optional `MethodStep`
+field rendered under the rule in the step panel; gate check A4 and the Golden Task's Model A and
+Leg B sections link in; the tab links back to the method, the Golden Task, Must Read and the Spec
+Doc. The ⌘K index has one row per pane and one per pattern, with the whole card in `terms`, under
+the kind `Failure approach`, amber like the Leg A phase on the method page.
+
+The evidence pane's two charts are single series shares in one hue, brand-500 on light and brand-400
+on dark (both run through the dataviz palette validator against their surface), each bar read
+against 100% on a same-ramp track and every value printed beside it. Hover only lifts a bar and
+repeats it in the readout, so it never gates a value.
+
 ### The Complexity tab is parked
 
 The Increase Complexity Proposals tool is **off the public site for now and kept in the source**, so
@@ -399,7 +481,7 @@ it can come back here or be lifted out to somewhere else. Only the ways in were 
 
 | Way in | Where it was | Now |
 | --- | --- | --- |
-| The tab, in the nav and the footer | `links` in [Layout.tsx](src/components/Layout.tsx) | Gone, so four tabs show |
+| The tab, in the nav and the footer | `links` in [Layout.tsx](src/components/Layout.tsx) | Gone. Failure Approach took its slot, third, so five tabs show |
 | The route | [App.tsx](src/App.tsx) | `/complexity` redirects to `/`, and the page is no longer imported |
 | The "Increase complexity" hero button | [Method.tsx](src/pages/Method.tsx) | Gone, with its `Wand2` import |
 | The `TOOL` crosslink under the designed friction cards | `Gtfa` in [TaskDetail.tsx](src/pages/TaskDetail.tsx) | Gone |
@@ -771,9 +853,16 @@ for many tasks**: keep it a grid of equal cards, and keep the reference-only dis
   handles `**bold**`, `*italic*`, `` `mono` ``, `##` headings, blockquotes, bullets and tables, and
   both the subjective excerpts and the golden conversation go through it. **No `##` and no `**` may
   ever reach the screen**, so route any new markdown content through it rather than printing the
-  source.
+  source. Its `Inline` takes an optional `plain` transform for unformatted text, which is how the
+  Failure Approach lays its pattern chips and links over the same renderer instead of writing a
+  second one.
 - **`Reveal` needs `className="h-full"`** when it wraps a card in a stretch grid, or the card stops
   filling its row.
+- **An opacity modifier has to be on Tailwind's scale**: `/10`, `/15`, `/20` and so on. `/12` is not,
+  and Tailwind silently generates nothing for it, so `bg-brand-500/12` renders with no background at
+  all. A number of older chips still carry `/12` (the ⌘K kind tints, the phase chips on the method
+  page, the Must Read impact chip), which is why they show coloured text with no fill. Use `/10` or
+  `/15` in anything new, and check the built CSS when a tint does not show.
 
 ## Design system
 

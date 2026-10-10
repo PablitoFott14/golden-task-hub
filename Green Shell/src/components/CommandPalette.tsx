@@ -12,6 +12,8 @@ const kindTone: Record<SearchEntry["kind"], string> = {
   Onboarding: "bg-emerald-500/12 text-emerald-700 dark:text-emerald-300",
   Tool: "bg-violet-500/12 text-violet-700 dark:text-violet-300",
   "Golden task": "bg-gold-500/15 text-gold-700 dark:text-gold-300",
+  // Amber is the Leg A phase on the method page, which is the step this tab expands.
+  "Failure approach": "bg-amber-500/12 text-amber-700 dark:text-amber-300",
   "Pre-submit check": "bg-emerald-500/12 text-emerald-700 dark:text-emerald-300",
   "QC spec": "bg-sky-500/12 text-sky-700 dark:text-sky-300",
   FAQ: "bg-violet-500/12 text-violet-700 dark:text-violet-300",

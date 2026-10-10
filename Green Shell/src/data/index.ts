@@ -1,4 +1,4 @@
-import type { GoldenTask, SearchEntry } from "./types";
+import type { FailureGroupId, GoldenTask, SearchEntry } from "./types";
 import { chargeDisputes } from "./tasks/chargeDisputes";
 import { methodSteps } from "./method";
 import { checklist } from "./checklist";
@@ -9,9 +9,63 @@ import { taxonomy } from "./taxonomy";
 import { onboardingItems } from "./onboarding";
 import { universeVideos } from "./videos";
 import { specRevisions } from "./specLog";
+import {
+  faEvidence,
+  faHowToUse,
+  faIndex,
+  faIntro,
+  faKeepsPassing,
+  faLegA,
+  faLegB,
+  faNotToBuild,
+  faPanes,
+  faPlanning,
+  faRealFailure,
+  faShortVersion,
+  faWhichModel,
+  failurePatterns,
+  groupById,
+  type FaPaneId,
+} from "./failureApproach";
 
 /** Matches the nav ids the Spec Doc page derives from its group names. */
 const slug = (s: string) => s.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+
+/** Every string in a value, however deep, as one run of text. */
+const textOf = (v: unknown): string =>
+  typeof v === "string"
+    ? v
+    : Array.isArray(v)
+      ? v.map(textOf).join(" ")
+      : v && typeof v === "object"
+        ? Object.values(v).map(textOf).join(" ")
+        : "";
+
+/**
+ * The Failure Approach's strings carry citation brackets and link markup that
+ * the page renders and the palette never shows, so both come off before they
+ * are matched against.
+ */
+const faPlain = (s: string) =>
+  s
+    .replace(/\s*\[[GRCQI] [^\]]*\]/g, "")
+    .replace(/\{\{[^|}]+\|([^}]+)\}\}/g, "$1")
+    .replace(/[*`]/g, "");
+
+const isFaGroup = (id: FaPaneId): id is FailureGroupId => id in groupById;
+
+/** What each Failure Approach pane holds, for its search terms. */
+const faPaneText: Partial<Record<FaPaneId, unknown>> = {
+  overview: [faIntro, faHowToUse, faWhichModel, faShortVersion],
+  "real-failure": faRealFailure,
+  patterns: faIndex,
+  planning: faPlanning,
+  "leg-a": faLegA,
+  "leg-b": faLegB,
+  "keeps-passing": faKeepsPassing,
+  "not-to-build": faNotToBuild,
+  evidence: faEvidence,
+};
 
 export const tasks: GoldenTask[] = [chargeDisputes];
 
@@ -225,6 +279,34 @@ export const searchIndex: SearchEntry[] = [
       terms: t.inputs.map((i) => `${i.file} ${i.shows} ${i.carries} ${i.charges.join(" ")}`).join(" "),
     },
   ]),
+
+  /* One row per pane and one per pattern. A pattern is what a contributor
+     searches for ("sent folder", "pen correction"), and its whole card rides
+     along in `terms`, so a word from any part of it finds the card. */
+  ...faPanes.map<SearchEntry>((p) => ({
+    kind: "Failure approach",
+    title: isFaGroup(p.id) ? `${groupById[p.id].letter} · ${p.label}` : p.label,
+    hint: p.blurb,
+    to: `/failure-approach#${p.id}`,
+    terms: [
+      faPlain(textOf(isFaGroup(p.id) ? groupById[p.id] : faPaneText[p.id])),
+      "failure approach model a leg a fail failure pattern trap",
+    ].join(" "),
+  })),
+
+  ...failurePatterns.map<SearchEntry>((p) => ({
+    kind: "Failure approach",
+    title: `${p.code} · ${p.name}`,
+    hint: faPlain(p.takeaway),
+    to: `/failure-approach#${p.id}`,
+    terms: [
+      faPlain(
+        textOf([p.happens, p.why, p.evidence, p.guidelines, p.ideas, p.watch, p.fair, p.grade, p.fit])
+      ),
+      groupById[p.group].title,
+      "failure pattern trap model a fails",
+    ].join(" "),
+  })),
 
   ...checklist.flatMap<SearchEntry>((s) =>
     s.checks.map((c) => ({

@@ -409,6 +409,8 @@ export default function Method() {
                       {step.rule.body}
                     </Callout>
                   )}
+                  {/* Where the hub goes deeper on this step than the panel can. */}
+                  {step.links && <Crosslinks links={step.links} className="mt-4" />}
                 </div>
 
                 {/* A step the published Golden Task cannot demonstrate under the
