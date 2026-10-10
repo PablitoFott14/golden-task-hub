@@ -76,13 +76,13 @@ export const checklist: ChecklistSection[] = [
       },
       {
         id: "A4",
-        q: "Did Model A actually fail at least 50% of the final rubric score, with failures that materially affect task completion?",
-        f: "If the run sailed through, raise the reasoning difficulty. Do not close the gap with format micro-specifications the model happens to miss.",
+        q: "Did Model A genuinely fail at least 30% of the final rubric score, ideally 50% or more, with failures that materially affect task completion?",
+        f: "If the run sailed through, raise the reasoning difficulty. Do not close the gap with format micro-specifications the model happens to miss, and never force a failure or inflate a weight to reach the bar.",
         ref: "§Hard Client Requirements",
         links: [
           { to: "/#failure", tag: "M5", label: "If the model sails through, the task is not ready" },
           { to: `${GT}#model-a`, tag: "GT", label: "52% of the objective weight lost" },
-          { to: "/failure-approach#keeps-passing", tag: "FA", label: "When Model A keeps passing" },
+          { to: "/failure-approach#keeps-passing", tag: "FA", label: "Model A passed? Find out why" },
         ],
       },
     ],
@@ -167,7 +167,7 @@ export const checklist: ChecklistSection[] = [
       {
         id: "C5",
         q: "Did you avoid flagging the miss anywhere, in the Leg A follow-ups and in your Leg B follow-ups and hints?",
-        f: "Pointing at the failure compromises the 50% threshold. If the model could copy your hint straight into the artifact, you gave away the answer.",
+        f: "Pointing at the failure compromises the failure threshold. If the model could copy your hint straight into the artifact, you gave away the answer.",
         ref: "§1.2.3 · 7.2",
         // Simulator Answer Leak was a Multi-Turn dimension. Its Green Shell
         // successor is Golden Solution — Hint Leak (Leg B), but this check is

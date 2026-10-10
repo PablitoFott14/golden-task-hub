@@ -55,6 +55,15 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "failure-threshold",
+    date: "Oct 11, 2026",
+    kind: "guidelines",
+    what: "Model A has to fail at least 30%, and 50% is still preferred",
+    where: "Reference → Must Read: Project Updates",
+    why: "The hub had been showing Red Shell's 50% floor. Genuine failures on 30% of the final rubric score is the Green Shell minimum, and a failure forced or scored up to reach either number does not count.",
+    to: "/reference#failure-threshold",
+  },
+  {
     id: "green-shell-onboardings",
     date: "Oct 9, 2026",
     kind: "onboarding",

@@ -87,8 +87,8 @@ The guidelines document, the task folders and the CSV exports sit **inside the p
 to**, not at the repo root, and are gitignored by the patterns at the foot of
 [.gitignore](.gitignore). Red Shell carries the multi-turn guidelines and the vendor closeout task
 source; Green Shell carries the Green Shell guidelines, its own task sources, and `failure approach/`
-(the md behind the Failure Approach tab and the two internal studies it was written from, which must
-never be committed: the repo is public). They are what the
+(the two internal studies of graded Opus failures the Failure Approach tab is built from, and the
+md written from them, which must never be committed: the repo is public). They are what the
 projects transcribe into `src/data/`, never site content, and a project reads only its own. Each
 project's `CLAUDE.md` carries the table mapping a source document to the data file that holds it.
 

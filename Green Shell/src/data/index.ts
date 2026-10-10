@@ -1,4 +1,4 @@
-import type { FailureGroupId, GoldenTask, SearchEntry } from "./types";
+import type { GoldenTask, SearchEntry } from "./types";
 import { chargeDisputes } from "./tasks/chargeDisputes";
 import { methodSteps } from "./method";
 import { checklist } from "./checklist";
@@ -10,22 +10,11 @@ import { onboardingItems } from "./onboarding";
 import { universeVideos } from "./videos";
 import { specRevisions } from "./specLog";
 import {
-  faEvidence,
-  faHowToUse,
-  faIndex,
-  faIntro,
-  faKeepsPassing,
-  faLegA,
-  faLegB,
-  faNotToBuild,
-  faPanes,
-  faPlanning,
-  faRealFailure,
-  faShortVersion,
-  faWhichModel,
+  categoryById,
+  faPassing,
+  failureCategories,
   failurePatterns,
-  groupById,
-  type FaPaneId,
+  patternsIn,
 } from "./failureApproach";
 
 /** Matches the nav ids the Spec Doc page derives from its group names. */
@@ -42,30 +31,10 @@ const textOf = (v: unknown): string =>
         : "";
 
 /**
- * The Failure Approach's strings carry citation brackets and link markup that
- * the page renders and the palette never shows, so both come off before they
- * are matched against.
+ * The Failure Approach's strings carry citation brackets the page renders as
+ * badges and the palette never shows, so they come off before matching.
  */
-const faPlain = (s: string) =>
-  s
-    .replace(/\s*\[[GRCQI] [^\]]*\]/g, "")
-    .replace(/\{\{[^|}]+\|([^}]+)\}\}/g, "$1")
-    .replace(/[*`]/g, "");
-
-const isFaGroup = (id: FaPaneId): id is FailureGroupId => id in groupById;
-
-/** What each Failure Approach pane holds, for its search terms. */
-const faPaneText: Partial<Record<FaPaneId, unknown>> = {
-  overview: [faIntro, faHowToUse, faWhichModel, faShortVersion],
-  "real-failure": faRealFailure,
-  patterns: faIndex,
-  planning: faPlanning,
-  "leg-a": faLegA,
-  "leg-b": faLegB,
-  "keeps-passing": faKeepsPassing,
-  "not-to-build": faNotToBuild,
-  evidence: faEvidence,
-};
+const faPlain = (s: string) => s.replace(/\s*\[[GRCQ] [^\]]*\]/g, "");
 
 export const tasks: GoldenTask[] = [chargeDisputes];
 
@@ -280,33 +249,41 @@ export const searchIndex: SearchEntry[] = [
     },
   ]),
 
-  /* One row per pane and one per pattern. A pattern is what a contributor
-     searches for ("sent folder", "pen correction"), and its whole card rides
-     along in `terms`, so a word from any part of it finds the card. */
-  ...faPanes.map<SearchEntry>((p) => ({
+  /* One row per failure type, one per pattern and one for the "Model A
+     passed?" view. A pattern is what a contributor searches for ("sent
+     folder", "pen correction", "Framebridge"), and every case it holds rides
+     along in `terms`, so a word from any of them finds the pattern. */
+  ...failureCategories.map<SearchEntry>((c) => ({
     kind: "Failure approach",
-    title: isFaGroup(p.id) ? `${groupById[p.id].letter} · ${p.label}` : p.label,
-    hint: p.blurb,
-    to: `/failure-approach#${p.id}`,
-    terms: [
-      faPlain(textOf(isFaGroup(p.id) ? groupById[p.id] : faPaneText[p.id])),
-      "failure approach model a leg a fail failure pattern trap",
-    ].join(" "),
+    title: `${c.n} · ${c.name}`,
+    hint: c.line,
+    to: `/failure-approach#${c.id}`,
+    terms: faPlain(
+      [c.stage, c.summary, c.lever, c.stat.label, patternsIn(c.id).map((p) => p.name).join(" ")].join(" ")
+    ),
   })),
 
   ...failurePatterns.map<SearchEntry>((p) => ({
     kind: "Failure approach",
-    title: `${p.code} · ${p.name}`,
-    hint: faPlain(p.takeaway),
+    title: p.name,
+    hint: `${categoryById[p.category].name} · ${p.line}`,
     to: `/failure-approach#${p.id}`,
     terms: [
-      faPlain(
-        textOf([p.happens, p.why, p.evidence, p.guidelines, p.ideas, p.watch, p.fair, p.grade, p.fit])
-      ),
-      groupById[p.group].title,
-      "failure pattern trap model a fails",
+      faPlain(textOf([p.happens, p.why, p.cases, p.build, p.fair, p.spot])),
+      "failure pattern opus model a leg a fail real case",
     ].join(" "),
   })),
+
+  {
+    kind: "Failure approach",
+    title: faPassing.short,
+    hint: faPassing.lead,
+    to: `/failure-approach#${faPassing.id}`,
+    terms: [
+      faPlain(textOf([faPassing.rule, faPassing.diagnose, faPassing.odds, faPassing.rarely])),
+      "keeps passing passed too easy trivial redesign rerun raise the odds",
+    ].join(" "),
+  },
 
   ...checklist.flatMap<SearchEntry>((s) =>
     s.checks.map((c) => ({

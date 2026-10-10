@@ -22,15 +22,18 @@ import CommandPalette from "./CommandPalette";
  * so it is the destination, not an appendix to one.
  *
  * **Failure Approach is the sixth, and this is the argument for it.** It is
- * worked from, not looked up in: a contributor reads it while planning, again
- * while rating the Leg A run and again while steering Leg B, so it is not a
- * pane of Reference. It is not a pane of the method either: a step there is
- * three sentences and a panel, and this is seventeen failure patterns with
- * their evidence, a planning sequence and a worked example, which would turn
- * step 7 into the whole page. It is not the standard, so it is not the spec
- * doc. It sits where the parked Complexity tool did, between the worked example
- * and the standard, because it is that same step of the work: making the task
- * hard for the right reasons. Steps 3, 7, 8 and 9 of the method link into it.
+ * worked from, not looked up in: a contributor opens it while designing the
+ * scenario, to find a failure their task can build on, and again when Model A
+ * passed, to find out why. It is not a pane of the method: a step there is
+ * three sentences and a panel, and this is seven failure types, twenty eight
+ * patterns and the real runs behind each, which would turn step 7 into the
+ * whole page. It deliberately carries no planning sequence, rating guidance or
+ * Leg B hints of its own, because the method and the spec already own those.
+ * It is not the standard, so it is not the spec doc. It sits where the parked
+ * Complexity tool did, between the worked example and the standard, because it
+ * is that same step of the work: making the task hard for the right reasons.
+ * Steps 3 and 7 of the method, gate check A4 and the Golden Task's Model A run
+ * link into it.
  *
  * **Complexity is parked.** The proposals tool is off the site for now, so its
  * entry is out of this list and five tabs show. The page and everything behind

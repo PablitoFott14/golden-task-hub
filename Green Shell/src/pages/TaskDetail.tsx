@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import { taskById } from "../data";
 import { methodSteps } from "../data/method";
+import { patternById } from "../data/failureApproach";
 import type {
   AssignedParameter,
   GoldenTask,
@@ -860,8 +861,9 @@ function ModelA({ t }: { t: GoldenTask }) {
         ))}
       </div>
       <p className="mt-2.5 text-[12.5px] leading-relaxed text-ink-500">
-        The bar is at least 50% of the final rubric score, on failures that materially affect what
-        the user asked for. One negative criterion was also triggered.
+        The bar is genuine failures on at least 30% of the final rubric score, with 50% or more
+        preferred, on failures that materially affect what the user asked for. One negative
+        criterion was also triggered.
       </p>
 
       <Callout title="What it did reach" tone="ok" icon={<Check size={12} />}>
@@ -911,6 +913,18 @@ function ModelA({ t }: { t: GoldenTask }) {
                     {n}
                   </span>
                 ))}
+                {o.pattern && patternById[o.pattern] && (
+                  <Crosslinks
+                    className="ml-auto"
+                    links={[
+                      {
+                        to: `/failure-approach#${o.pattern}`,
+                        tag: "FA",
+                        label: patternById[o.pattern].name,
+                      },
+                    ]}
+                  />
+                )}
               </div>
             </div>
           </Reveal>
@@ -931,7 +945,7 @@ function ModelA({ t }: { t: GoldenTask }) {
         links={[
           { to: "/reference#s5", tag: "C5", label: "Did the model fail on things that matter?" },
           { to: "/golden-tasks/charge-disputes#subjective", tag: "GT", label: "The same page, beside the golden" },
-          { to: "/failure-approach#leg-a", tag: "FA", label: "Where else a Leg A run breaks, pattern by pattern" },
+          { to: "/failure-approach", tag: "FA", label: "The same failures in other runs, by type" },
         ]}
       />
     </>
@@ -1122,7 +1136,6 @@ function Golden({ t }: { t: GoldenTask }) {
         links={[
           { to: "/reference#s7", tag: "C7", label: "Does the golden pass its own block?" },
           { to: "/reference#faq", tag: "FAQ", label: "How much may a hint carry?" },
-          { to: "/failure-approach#leg-b", tag: "FA", label: "A hint for each failure pattern" },
         ]}
       />
     </>

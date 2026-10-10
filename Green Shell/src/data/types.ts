@@ -418,6 +418,11 @@ export interface RunObservation {
   actual: string;
   /** The criteria it costs. */
   rubrics: number[];
+  /**
+   * The Failure Approach pattern this miss is a case of. The tab shows the
+   * miss as one of that pattern's Green Shell cases, so the link runs both ways.
+   */
+  pattern?: string;
 }
 
 /** Leg A: the one prompt, answered once, measured against the GTFA. */
@@ -428,7 +433,7 @@ export interface ObservedRun {
   /** What it did reach, so the failure reads as real rather than total. */
   kept: string[];
   observations: RunObservation[];
-  /** The weight it lost, stated so the 50% bar can be checked. */
+  /** The weight it lost, stated so the failure bar can be checked: 30% at least, 50% preferred. */
   score: { label: string; lost: string; of: string; pct: string }[];
   artifacts: Deliverable[];
 }
@@ -719,82 +724,144 @@ export interface GuidelineChange {
 /* --------------------------------------------------------- failure approach */
 
 /**
- * The four groups the failure patterns fall into. Three follow the stages every
- * task must contain, and reading the media is a group of its own because every
- * task here depends on it.
+ * The seven failure types, in the order they break along an agent's run:
+ * finding the evidence, reading the media, weighing the sources, applying the
+ * rules, working it out, making the call, delivering. The ids are hash anchors.
  */
-export type FailureGroupId = "finding" | "media" | "reasoning" | "delivering";
+export type FailureCategoryId =
+  | "looking"
+  | "seeing"
+  | "trusting"
+  | "rules"
+  | "working"
+  | "calls"
+  | "finishing";
 
 /**
- * How much the studies' data supports a pattern. It is a strength of evidence,
- * not a status, so it renders as a meter beside a word and never as a colour.
+ * What a task has, in the terms a contributor reads off their parameters:
+ * the inputs they design, the services the universe holds, what the task asks
+ * for. A pattern lists the ones it can be built on, which is what the overview
+ * filter matches against.
  */
-export type EvidenceLevel = "strong" | "moderate" | "limited";
+export type TaskFeature =
+  | "photo"
+  | "handwriting"
+  | "chart"
+  | "audio"
+  | "document"
+  | "email"
+  | "chat"
+  | "calendar"
+  | "records"
+  | "rule"
+  | "numbers"
+  | "dates"
+  | "per-item"
+  | "send"
+  | "edit";
 
-export interface FailureGroup {
-  id: FailureGroupId;
-  /** The letter every pattern code in the group starts with. */
-  letter: "A" | "B" | "C" | "D";
-  title: string;
-  /** The stage of the task the group belongs to. */
+export interface FailureCategory {
+  id: FailureCategoryId;
+  n: number;
+  /** Where in the run it breaks. */
   stage: string;
-  /** One line, for the selector and the index. */
-  blurb: string;
-  /** Paragraphs that open the group, where the source has any. */
-  intro?: string[];
-}
-
-/** One reason a pattern happens, tagged by how firmly the data shows it. */
-export interface FailureWhy {
-  tag: "Documented" | "Likely" | "Likely, from OpenClaw" | "In the guidelines";
-  text: string;
+  name: string;
+  /** The label on the category bar. */
+  short: string;
+  /** One line, for the card. */
+  line: string;
+  /** What breaks, for the banner. */
+  summary: string;
+  /** The move that turns it into a failure point. */
+  lever: string;
+  /** One number that says why it matters, worded so it stands on its own. */
+  stat: { value: string; label: string };
+  /** How far the evidence goes, where that needs saying before the cases. */
+  caveat?: string;
 }
 
 /**
- * One line of "Grade it where it lands", in the order the source gives them:
- * prose, or an example criterion. `avoid` is a criterion the card warns
- * against, with the reason in `note`.
+ * Where a case comes from. `golden` and `guidelines` are runs on this project:
+ * the hub's own Golden Task, and the runs the guidelines record in section 8.2.
+ * `openclaw-mm` is the study project closest to Green Shell, and `study` is
+ * every other project in the studies.
  */
-export type FailureGradeLine =
-  | { say: string }
-  | { criterion: string; kind: "use" | "avoid"; note?: string };
+export type CaseSource = "golden" | "guidelines" | "openclaw-mm" | "study";
 
 /**
- * One way an agent breaks, as a card a contributor can plan a task around.
- * Every string keeps its source's citation brackets; the page decides which of
- * them reach the screen. See the header of `failureApproach.ts`.
+ * One real failure. Every field is what the source says happened, never a
+ * hypothetical: the request, what the model did, the right answer beside the
+ * one it wrote, and what set it off where the source names it.
+ */
+export interface FailureCase {
+  id: string;
+  source: CaseSource;
+  /** Which Opus, where the source says. */
+  model?: string;
+  /**
+   * Runs of the same task, failed of total, where the project ran it more than
+   * once. Absent means one graded run.
+   */
+  runs?: { failed: number; of: number };
+  /** Shown in place of the run count where the source gives none. */
+  runLabel?: string;
+  title: string;
+  /** The request, or the situation. */
+  ask: string;
+  /** What the model did. */
+  did: string;
+  /** The right answer. */
+  truth?: string;
+  /** What the model wrote or did instead. */
+  wrote?: string;
+  /** What set it off, where the source names it. */
+  why?: string;
+  /** The one step that would have caught it, where the source gives one. */
+  fix?: string;
+  /** A line the source adds, such as the guidelines' own verdict. */
+  note?: string;
+  link?: XLink;
+}
+
+/**
+ * One way Opus fails, with the cases that show it and the moves that build it
+ * into a Leg A. Strings may carry `[G x]` and `[Q Group, Dimension]` refs,
+ * which render as section badges and Spec Doc links, and `[R …]` / `[C …]`
+ * provenance, which never reaches the screen.
  */
 export interface FailurePattern {
-  /** "a1", the anchor every inbound link targets. */
+  /** The hash anchor every link targets. */
   id: string;
-  /** "A1", as printed. */
-  code: string;
-  group: FailureGroupId;
+  category: FailureCategoryId;
   name: string;
-  /** What the agent does, in a few sentences. */
+  /** One line, for the card. */
+  line: string;
+  /** What happens, in a few sentences. */
   happens: string;
-  why: FailureWhy[];
-  evidence: {
-    level: EvidenceLevel;
-    /** Where one card spans two levels, the wording that says so. */
-    label?: string;
-    /** What follows the level in the source, before the incidents. */
-    lead?: string;
-    points: string[];
-    /** Paragraphs after the list. */
-    after?: string[];
-  };
-  /** The rule or example in the guidelines the pattern maps to, where one exists. */
-  guidelines?: string;
-  ideas: string[];
-  watch: string[];
+  /** What the data says about why, one or two points. */
+  why: string[];
+  /** Green Shell first, then OpenClaw MM, then the runs that repeat most. */
+  cases: FailureCase[];
+  /** Ways to build the same pressure into a Green Shell Leg A. */
+  build: string[];
+  /** What keeps it a real failure rather than a manufactured one. */
   fair: string[];
-  grade: FailureGradeLine[];
-  takeaway: string;
-  /** OpenClaw MM share, as the index states it, and the codes it is shared with. */
-  share: { value: string; with?: string };
-  /** The index table's "Strongest fit". */
-  fit: string;
+  /** What it looks like in the trajectory. */
+  spot: string[];
+  fits: TaskFeature[];
+  caveat?: string;
+}
+
+/** One row of the "Model A passed?" diagnosis. */
+export interface PassDiagnosis {
+  /** Why the planned failure point passed. */
+  gave: string;
+  /** What in the trajectory shows it. */
+  tell: string;
+  /** What to change before the next Leg A. */
+  change: string;
+  /** The patterns the change builds on. */
+  patterns: string[];
 }
 
 /* ------------------------------------------------------------------- search */

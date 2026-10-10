@@ -806,6 +806,7 @@ Also, while you at it, take a look at anything I bought from my company during t
         actual:
           "It opened receipt.jpg at tool call 3 and found Iva Jean's sale email at tool call 52, then cleared the charge on the second tab and described the items as 'all at 40% off, $17.39 saved', which is wrong for two of the four.",
         rubrics: [2, 10, 19],
+        pattern: "never-compares",
       },
       {
         title: "A first read it never went back to",
@@ -813,6 +814,7 @@ Also, while you at it, take a look at anything I bought from my company during t
         actual:
           "It cropped the slip at tool calls 36 and 37 and recorded 'Amount $18.74 + tip $5.25, total written $23.99', then concluded the restaurant never captured the tip and marked the charge 'Nothing owed'.",
         rubrics: [3, 11, 20],
+        pattern: "handwriting",
       },
       {
         title: "The record it never looked at",
@@ -820,6 +822,7 @@ Also, while you at it, take a look at anything I bought from my company during t
         actual:
           "Its calendar lookups never cover Jun 25 to 28 and it never searched for El Dorado. The receipt agreed with the bank, so it cleared the $186.00 as 'Matches'.",
         rubrics: [4, 12, 21],
+        pattern: "unopened-service",
       },
       {
         title: "A page that contradicts its own draft",
@@ -827,6 +830,7 @@ Also, while you at it, take a look at anything I bought from my company during t
         actual:
           "The first tab lists the Jun 6 and Jul 5 charges but not May 2 or May 31, and totals $123.40, while the draft it wrote to Kenny claims $105.40 including the first $50.00 of May.",
         rubrics: [7],
+        pattern: "never-rechecks",
       },
       {
         title: "A tab that filled up with guesses",
@@ -834,6 +838,7 @@ Also, while you at it, take a look at anything I bought from my company during t
         actual:
           "It counts 19 charges as cleared, adding ones she never asked about and gave no evidence for, including Dillons Marketplace at $310.00 under 'No receipt exists'.",
         rubrics: [25],
+        pattern: "fills-gaps",
       },
       {
         title: "A dispute addressed to a mailbox that does not read mail",
@@ -841,6 +846,7 @@ Also, while you at it, take a look at anything I bought from my company during t
         actual:
           "It went to alerts@intrustbank.com, whose own mail says do not reply, and which Model A's page itself calls an unmonitored alerts box. The content was right; the recipient could not act on it.",
         rubrics: [22],
+        pattern: "wrong-owner",
       },
     ],
     score: [

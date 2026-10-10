@@ -9,9 +9,9 @@ dist
 task */
 Task_Data_*.csv
 \[External\]*Guidelines*.md
-# The Failure Approach md and the two studies it was written from. The tab is
-# transcribed into src/data/failureApproach.ts; the studies are internal and the
-# repo is public.
+# The two studies of graded Opus failures the Failure Approach tab is built
+# from, and the md written from them. Their cases are transcribed into
+# src/data/failureApproach.ts; the studies are internal and the repo is public.
 failure approach/
 # The spec exports gen_spec.py reads. The generated src/data/specDoc.ts is
 # committed, so a clone builds without them.

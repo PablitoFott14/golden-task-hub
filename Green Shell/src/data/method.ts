@@ -96,8 +96,7 @@ export const methodSteps: MethodStep[] = [
       link: { to: `${GT}#gtfa`, tag: "GT", label: "The resolved answer, charge by charge" },
     },
     links: [
-      { to: "/failure-approach#planning", tag: "FA", label: "Plan the failure points into the GTFA" },
-      { to: "/failure-approach#patterns", tag: "FA", label: "The patterns to plan around" },
+      { to: "/failure-approach", tag: "FA", label: "Real Opus failures to build the scenario around" },
     ],
   },
   {
@@ -191,7 +190,7 @@ export const methodSteps: MethodStep[] = [
     inherits:
       "Design is finished and the prompt goes out once. What comes back is measured against the GTFA you resolved in step 3, not against what looks reasonable.",
     means:
-      "The prompt goes out and the agent answers it once. Measure that answer against the GTFA. You are looking for genuine failure across at least half the rubric weight, on failures that materially affect what the user asked for. Failures are found, never manufactured.",
+      "The prompt goes out and the agent answers it once. Measure that answer against the GTFA. You are looking for genuine failures worth at least 30% of the final rubric score, and 50% or more is preferred, on failures that materially affect what the user asked for. Failures are found, never manufactured or scored up to the bar.",
     moves: [
       "Score the run against the GTFA before writing a single criterion.",
       "Restructure the task if the run captures the whole intent, or if what it missed is cosmetic.",
@@ -208,9 +207,8 @@ export const methodSteps: MethodStep[] = [
       link: { to: `${GT}#model-a`, tag: "GT", label: "Where the run actually broke" },
     },
     links: [
-      { to: "/failure-approach#real-failure", tag: "FA", label: "Real or manufactured: what counts" },
-      { to: "/failure-approach#leg-a", tag: "FA", label: "Where to look in the Leg A run" },
-      { to: "/failure-approach#keeps-passing", tag: "FA", label: "When Model A keeps passing" },
+      { to: "/failure-approach", tag: "FA", label: "How Opus actually fails, case by case" },
+      { to: "/failure-approach#keeps-passing", tag: "FA", label: "Model A passed? Find out why" },
     ],
   },
   {
@@ -238,9 +236,6 @@ export const methodSteps: MethodStep[] = [
       body: "Twenty six criteria, each pinning its own transaction id, amount, date and filename. None of them targets the trajectory, which is the preferred number rather than merely inside the cap, and not one checks only that something exists.",
       link: { to: `${GT}#rubrics`, tag: "GT", label: "All 26 criteria and how Model A rated" },
     },
-    links: [
-      { to: "/failure-approach#rating", tag: "FA", label: "Rate the run against the criteria you planned" },
-    ],
   },
   {
     n: 9,
@@ -267,7 +262,6 @@ export const methodSteps: MethodStep[] = [
       body: "Four steers took the same prompt from two disputes to five. The one that found the hardest of them pointed at her own photographs being taken in a rush, and at what she had filled in by hand. It never mentioned the slip, the restaurant or the figure.",
       link: { to: `${GT}#golden`, tag: "GT", label: "The four steers, and what each one never says" },
     },
-    links: [{ to: "/failure-approach#leg-b", tag: "FA", label: "A hint for each failure pattern" }],
   },
   {
     n: 10,
@@ -324,5 +318,5 @@ export const hardRequirements = [
   { label: "Cross-modal", body: "One step's output becomes the next step's necessary input." },
   { label: "Objective", body: "Every output grounded in a rule or source stated in the prompt." },
   { label: "Subjective quality", body: "A rendered artifact whose presentation can be judged." },
-  { label: "Model A fails", body: "At least 50% of the final rubric score, on failures that matter." },
+  { label: "Model A fails", body: "Genuine failures on at least 30% of the final rubric score, and 50% or more preferred." },
 ];

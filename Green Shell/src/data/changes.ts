@@ -259,6 +259,34 @@ export const guidelineChanges: GuidelineChange[] = [
     },
   },
   {
+    id: "failure-threshold",
+    date: "Sep 27, 2026",
+    version: "Green Shell v1",
+    title: "Model A has to fail at least 30%, and 50% is still preferred",
+    before: "Red Shell required Model A to fail at least 50% of the final rubric score.",
+    body: "The Model A trajectory has to show genuine failures worth at least 30% of the final rubric score, with meaningful impact on task completion and on what the user receives. A genuine failure rate of 50% or higher is still preferred. The failures have to be authentic, never forced or artificially scored to reach the threshold.",
+    does: "Aim for 50% or more, and submit a task whose genuine failures clear 30% rather than inflating a weight, adding asks after the run or forcing a miss to reach the higher number. If the model passes too easily, revisit the scenario's complexity while keeping it realistic and planned.",
+    refs: [
+      { section: "Hard Client Requirements", title: "Model A has to fail" },
+      { section: "1.1", title: "Task Parameters & Execution Rules" },
+      { section: "1.2", title: "Building the Idea" },
+    ],
+    impact: "hard",
+    detail: {
+      label: "Reading the bar",
+      items: [
+        "The QA rubric draws the same line from the other side: a Model A score above 70% fails the task as trivial.",
+        "Only genuine failures count toward it. A raised weight, an ask added after the run, or one miss repeated across several criteria is exactly what the rule rules out.",
+        "Where the assigned scenario is too simple to reach 30%, its complexity may be raised, and only as far as needed, while every other parameter stays as assigned.",
+      ],
+    },
+    links: [
+      { to: "/#failure", tag: "M7", label: "If the model sails through, the task is not ready" },
+      { to: "/failure-approach", tag: "FA", label: "How Opus actually fails, case by case" },
+      { to: "/spec#dim-all-criteria-scoring", tag: "QC", label: "All Criteria Scoring" },
+    ],
+  },
+  {
     id: "planned-complexity",
     date: "Sep 27, 2026",
     version: "Green Shell v1",
