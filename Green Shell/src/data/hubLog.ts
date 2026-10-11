@@ -55,6 +55,24 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "dynamic-values",
+    date: "Oct 11, 2026",
+    kind: "guidelines",
+    what: "A rubric on a live web value grades the retrieval, not the figure",
+    where: "Reference → Must Read: Project Updates",
+    why: "Browsing is an expected part of a task now, so more criteria are being written against values the model has to fetch. Name the figure you saw as the required answer and the next correct run fails it. Phrase it as the current value retrieved during the run, with your number in parentheses as an example.",
+    to: "/reference#dynamic-values",
+  },
+  {
+    id: "failure-approach-cases",
+    date: "Oct 11, 2026",
+    kind: "guidelines",
+    what: "Every failure case now names the trigger you can build",
+    where: "Failure Approach",
+    why: "28 patterns with 89 graded Opus runs behind them, each one saying why it failed rather than only that it did. The Opus 5 cases are marked, every build idea points back at the real cases it came from, and the tab opens on where the evidence comes from. Take your failure point from a run instead of inventing one.",
+    to: "/failure-approach",
+  },
+  {
     id: "binding-parameters",
     date: "Oct 11, 2026",
     kind: "guidelines",

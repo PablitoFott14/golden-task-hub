@@ -200,7 +200,7 @@ export const guidelineChanges: GuidelineChange[] = [
       items: [
         "Not valid: the model reports $129.99 as StrideHub's current price for the AeroRun Velocity 4. It was correct the day it was written, and a run that finds the new price is marked down for getting it right.",
         "Valid: the model reports StrideHub's current price for the AeroRun Velocity 4 based on information retrieved during the run (e.g., $129.99). The figure is an example, so what is graded is whether the agent found and reported the correct current value.",
-        "The example in brackets is what keeps the criterion ratable. Strip the value out and it stops being self-contained. A criterion saying only that the page references the Spiderman XTR listing with its current price names no file and no figure, so nobody can rate it either way.",
+        "Dropping the value instead is the opposite mistake, and the brackets are what answer both. Not valid: the page references the Spiderman XTR listing with its current price, which names no file and no figure and cannot be rated. Valid: product_listing.html includes Spiderman XTR with its current Amazon price (e.g., $99.99).",
         "Dynamic covers prices, availability, rankings, schedules, product specifications, company information and anything else live on the web.",
         "Fixed values are still fixed. Anything from an attachment, a universe record or the GTFA is a literal and has to match its source exactly.",
         "Verify it against your own golden, which has to pass the complete set. A criterion the golden would fail on a rerun because the number moved is a broken criterion, not a broken golden.",
