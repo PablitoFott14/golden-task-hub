@@ -205,7 +205,7 @@ function Parameters({ t }: { t: GoldenTask }) {
         className="mt-4"
         links={[
           { to: "/reference#use-case-and-tools", tag: "T", label: "The 11 use cases and 68 subcategories" },
-          { to: "/reference#s1", tag: "C1", label: "Is the pair implemented without drift?" },
+          { to: "/reference#s1", tag: "A1", label: "Is every assigned parameter implemented without drift?" },
         ]}
       />
     </>
@@ -255,7 +255,7 @@ function Universe({ t }: { t: GoldenTask }) {
         className="mt-4"
         links={[
           { to: "/#universe-videos", tag: "V", label: "The universe interaction recordings" },
-          { to: "/reference#s2", tag: "C2", label: "Is the scenario grounded in records you have seen?" },
+          { to: "/reference#s1", tag: "A3", label: "Is the scenario grounded in records you have seen?" },
         ]}
       />
     </>
@@ -371,7 +371,7 @@ function Gtfa({ t }: { t: GoldenTask }) {
       <Crosslinks
         className="mt-5"
         links={[
-          { to: "/reference#s3", tag: "C3", label: "Is the answer resolved before the first run?" },
+          { to: "/reference#s4", tag: "D2", label: "Is the answer resolved before the first run?" },
         ]}
       />
     </>
@@ -545,7 +545,7 @@ function Inputs({
 
       <Crosslinks
         className="mt-4"
-        links={[{ to: "/reference#s3", tag: "C3", label: "Does every input earn its place?" }]}
+        links={[{ to: "/reference#s2", tag: "B2", label: "Does every input earn its place?" }]}
       />
     </>
   );
@@ -684,7 +684,7 @@ function AnnotatedPrompt({ t }: { t: GoldenTask }) {
       <Crosslinks
         className="mt-5"
         links={[
-          { to: "/reference#s4", tag: "C4", label: "Is every graded requirement stated in the prompt?" },
+          { to: "/reference#s4", tag: "D1", label: "Is every graded requirement stated in the prompt?" },
         ]}
       />
     </>
@@ -943,7 +943,7 @@ function ModelA({ t }: { t: GoldenTask }) {
       <Crosslinks
         className="mt-4"
         links={[
-          { to: "/reference#s5", tag: "C5", label: "Did the model fail on things that matter?" },
+          { to: "/reference#s1", tag: "A5", label: "Did the model fail on things that matter?" },
           { to: "/golden-tasks/charge-disputes#subjective", tag: "GT", label: "The same page, beside the golden" },
           { to: "/failure-approach", tag: "FA", label: "The same failures in other runs, by type" },
         ]}
@@ -986,7 +986,7 @@ function RubricBlock({ t }: { t: GoldenTask }) {
         className="mt-5"
         links={[
           { to: "/spec#rubric-quality", tag: "SPEC", label: "The rubric quality issues a reviewer scores" },
-          { to: "/reference#s6", tag: "C6", label: "Is every criterion ratable without you?" },
+          { to: "/reference#s5", tag: "E4", label: "Is every criterion ratable without you?" },
         ]}
       />
     </>
@@ -1134,7 +1134,7 @@ function Golden({ t }: { t: GoldenTask }) {
       <Crosslinks
         className="mt-4"
         links={[
-          { to: "/reference#s7", tag: "C7", label: "Does the golden pass its own block?" },
+          { to: "/reference#s7", tag: "G1", label: "Does the golden pass its own block?" },
           { to: "/reference#faq", tag: "FAQ", label: "How much may a hint carry?" },
         ]}
       />
@@ -1152,7 +1152,7 @@ function Subjective({ t }: { t: GoldenTask }) {
       <Crosslinks
         className="mt-5"
         links={[
-          { to: "/reference#s6", tag: "C6", label: "Is every subjective criterion judged on the render?" },
+          { to: "/reference#s6", tag: "F1", label: "Is every subjective criterion judged on the render?" },
           { to: "/spec#rubric-quality", tag: "SPEC", label: "Filler language, and why it fails" },
         ]}
       />

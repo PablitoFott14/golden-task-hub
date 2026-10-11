@@ -115,6 +115,13 @@ function StepCard({
 
 const specDimensionCount = specGroups.reduce((n, g) => n + g.dimensions.length, 0);
 
+/** Counts written out, read off the data so a heading never states a stale one. */
+const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
+const counted = (n: number) => {
+  const w = WORDS[n] ?? String(n);
+  return w[0].toUpperCase() + w.slice(1);
+};
+
 export default function Method() {
   const [active, setActive] = useState(1);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -122,7 +129,7 @@ export default function Method() {
   const { hash, key } = useLocation();
 
   /** A step id in the hash selects that step and opens its panel. The
-   *  walkthrough rail, every section badge and every M1 to M9 crosslink in the
+   *  walkthrough rail, every section badge and every M1 to M10 crosslink in the
    *  hub arrive here, so the step the reader asked for has to be the one on
    *  screen. The steps have no anchors of their own, which is why the scroll is
    *  done here rather than left to the layout. `key` is in the deps because
@@ -183,7 +190,7 @@ export default function Method() {
                 </span>
               </h1>
               <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-ink-500">
-                Nine steps, in the order they actually happen. Read the principle, then follow it
+                {counted(methodSteps.length)} steps, in the order they actually happen. Read the principle, then follow it
                 straight into a Golden Task and see exactly where it landed.
               </p>
 
@@ -329,7 +336,7 @@ export default function Method() {
           <Reveal>
             <SectionHeading
               eyebrow="The method"
-              title="Nine steps, from an empty universe to a graded task"
+              title={`${counted(methodSteps.length)} steps, from an empty universe to a graded task`}
               sub="Each card carries the step and the principle behind it in one line. Open one to see what it means, the moves it takes, the rule attached to it, and the place in a Golden Task where you can watch it work."
             />
           </Reveal>
@@ -468,7 +475,7 @@ export default function Method() {
           <Reveal>
             <SectionHeading
               eyebrow="The floor"
-              title="Eight things every task has to contain"
+              title={`${counted(hardRequirements.length)} things every task has to contain`}
               sub="A task that misses one of them does not get graded on how good the rest of it was."
             />
           </Reveal>

@@ -32,7 +32,7 @@ import CommandPalette from "./CommandPalette";
  * It is not the standard, so it is not the spec doc. It sits where the parked
  * Complexity tool did, between the worked example and the standard, because it
  * is that same step of the work: making the task hard for the right reasons.
- * Steps 3 and 7 of the method, gate check A4 and the Golden Task's Model A run
+ * Steps 3 and 7 of the method, gate check A5 and the Golden Task's Model A run
  * link into it.
  *
  * **Complexity is parked.** The proposals tool is off the site for now, so its

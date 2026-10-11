@@ -3,8 +3,25 @@ import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Construction, CornerDownRight } from "lucide-react";
 import type { XLink } from "../data/types";
+import { methodSteps } from "../data/method";
 import { cx } from "../lib/util";
 import { useRailFollow, useStickyFit } from "../lib/useStickyFit";
+
+const stepNo: Record<string, number> = Object.fromEntries(methodSteps.map((s) => [s.id, s.n]));
+
+/**
+ * A link to a method step is labeled with that step's number, and the number
+ * is read off the method rather than off the link. The tags were typed by hand
+ * once and drifted when the method was renumbered, so an `M` tag on a link to
+ * `/#<step-id>` is always recomputed here. Every other tag is left as written.
+ */
+function tagOf(l: XLink): string | undefined {
+  const m = /^\/#([\w-]+)$/.exec(l.to);
+  if (m && /^M\d+$/.test(l.tag ?? "") && Object.prototype.hasOwnProperty.call(stepNo, m[1])) {
+    return `M${stepNo[m[1]]}`;
+  }
+  return l.tag;
+}
 
 /**
  * The work-in-progress notice.
@@ -149,11 +166,12 @@ export function Crosslinks({ links, className }: { links?: XLink[]; className?: 
     <div className={cx("flex flex-wrap gap-2", className)}>
       {links.map((l) => {
         const external = l.to.startsWith("http");
+        const tag = tagOf(l);
         const body = (
           <>
-            {l.tag && (
+            {tag && (
               <span className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-brand-600 dark:text-brand-300">
-                {l.tag}
+                {tag}
               </span>
             )}
             <span className="text-ink-600 group-hover:text-ink-900">{l.label}</span>

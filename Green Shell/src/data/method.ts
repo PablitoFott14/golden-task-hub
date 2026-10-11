@@ -5,9 +5,12 @@ const GT = "/golden-tasks/charge-disputes";
 /**
  * The method for Green Shell, ten steps, in the order they actually happen.
  *
- * Rewritten against [External] Green Shell Guidelines v1. The project is single
- * turn, so the milestone step is gone and the prompt is its own step: there is
- * one prompt and it has to carry everything.
+ * Rewritten against [External] Green Shell Guidelines v1, and brought up to the
+ * Oct 8, 2026 revision: fourteen assigned parameters rather than seven, every
+ * assigned input modality covered, the execution target stated in the prompt,
+ * and Leg A named as the Opus 5 leg. The project is single turn, so the
+ * milestone step is gone and the prompt is its own step: there is one prompt
+ * and it has to carry everything.
  *
  * The order is the argument. Step 1 is the assigned pair, because every later
  * decision is checked back against it; step 2 is the universe, because the
@@ -25,23 +28,23 @@ export const methodSteps: MethodStep[] = [
     id: "parameters",
     phase: "Design",
     title: "Task parameters",
-    slogan: "Seven are assigned. None of them is a suggestion.",
+    slogan: "Fourteen are assigned. None of them is a suggestion.",
     means:
-      "A task arrives with its parameters already decided: category, subcategory, universe, scenario, output artifact, primary capabilities and secondary capabilities. They are binding client requirements. Only the scenario has any give, and only as far as reaching the complexity bar while its core nature and intent stay as assigned.",
+      "A task arrives with fourteen parameters already decided: the task type, the use case and the subcategory, the universe, the scenario, the assigned tools, the output artifact, the primary and secondary capabilities, the input and output modalities, the execution target, the verification condition, and the access the scenario assumes. They are binding client requirements. A deviation is allowed only where the universe genuinely cannot support a parameter or the scenario is too simple to reach the failure threshold, and only as far as that strictly needs.",
     moves: [
-      "Read your subcategory definition and its scope check before anything else, and assign by the user's intent rather than by what the input files are about.",
+      "Read your subcategory definition and its scope check before anything else, and read the pair by the user's intent rather than by what the input files are about.",
       "Check the neighbouring subcategory inside the same use case. Fitting one of those better is a category relevance failure even though the use case is right.",
-      "Confirm the assigned tools, then name the step each one is necessary for. Where the scenario names them, the correct final state has to depend on them.",
-      "Keep the pair in front of you. The universe, the scenario, the inputs and the prompt are each checked back against it.",
+      "Confirm the assigned tools are loaded, then name the step each one is necessary for. The correct final state has to depend on them.",
+      "Treat the rest as the boundaries: every assigned input modality covered, the deliverable inside the output modalities, the execution target stated in the prompt, the verification condition covered without its answers in the prompt.",
     ],
-    produces: "An assigned pair you can defend, and the scope check that proves the fit.",
+    produces: "Every parameter in the task, and the scope check that proves the fit.",
     rule: {
       label: "Drift from any assigned parameter is an automatic rejection",
       body: "Omitting or substituting one makes the task invalid, however good the rest of it is. The 6 categories and 16 subcategories are retired: the taxonomy is now 11 use cases and 68 subcategories.",
     },
     inTask: {
-      body: "A receipts and disputes task sits in Personal finance, under detecting and disputing erroneous charges. What fixes the pair is the user's intent, contesting charges she believes are wrong. The receipts and the bank records are only how that intent is evidenced, and they would have pointed at a different subcategory on their own.",
-      link: { to: `${GT}#parameters`, tag: "GT", label: "All seven, and what each one binds" },
+      body: "A receipts and disputes task sits in Personal finance, under detecting and disputing erroneous charges. What fixes the pair is the user's intent, contesting charges she believes are wrong. The receipts and the bank records are only how that intent is evidenced, and they would have pointed at a different subcategory on their own. It was built when seven parameters were assigned, so its walkthrough shows those seven.",
+      link: { to: `${GT}#parameters`, tag: "GT", label: "The seven it was assigned, and what each one binds" },
     },
   },
   {
@@ -57,13 +60,13 @@ export const methodSteps: MethodStep[] = [
     moves: [
       "Confirm what is actually loaded in the Universe Explorer before designing anything around a service.",
       "Interact with the AI agent in the Database tab. Inspecting by hand is what leads people to conclude there is no connection when there is one.",
-      "Use SQL for the tables, relationships and edge cases the visualizers never surface.",
+      "Use SQL, or download the whole universe, for the tables, relationships and edge cases the visualizers never surface.",
       "Anchor to dates you have actually seen. Universe calendars are fixed, so next Tuesday can land on a week that holds nothing.",
     ],
     produces: "A grounded situation, with the records that prove it.",
     rule: {
       label: "A thin loadout is an environment defect, not a model failure",
-      body: "If only a few servers are loaded the universe loaded wrong, and it has to be reloaded before you continue. Add the Service Universe Artifact ID before you deploy, whatever the Universe Creator calls it.",
+      body: "If only a few servers are loaded the universe loaded wrong, and it has to be reloaded before you continue. Claiming the universe cannot support the scenario when exploring it would have shown it can fails the task automatically. Add the Service Universe Artifact ID before you deploy, whatever the Universe Creator calls it.",
     },
     inTask: {
       body: "Marisela Ybarra's universe carries four months of charges, the order emails and written estimates that price them, and a calendar. One of the five disputes is settled only by that calendar, which is not one of the task's assigned connectors, and nothing in the two that are assigned contradicts the receipt.",
@@ -112,7 +115,7 @@ export const methodSteps: MethodStep[] = [
     moves: [
       "Use as many inputs as the scenario naturally needs. Most tasks need substantially more than three to clear the complexity bar.",
       "Give every file a purpose. Required signal or a deliberate distractor, never decoration.",
-      "Spread the evidence across modalities, so no single source carries the whole answer. An image earns its slot by what has to be seen in it, not by the text it happens to contain.",
+      "Cover every assigned input modality, each carrying part of the answer, so no single source carries the whole of it. An image earns its slot by what has to be seen in it, not by the text it happens to contain.",
       "Keep health inputs mocked or synthetic, and keep the answer out of every filename.",
     ],
     produces: "An input set where each file earns its place.",
@@ -139,6 +142,7 @@ export const methodSteps: MethodStep[] = [
       "Name every expected output file, spelled exactly as it has to appear.",
       "Open with a realistic goal and close with a clear call to action, in language a real person would use.",
       "Require action inside the assigned universe, subcategory and tools, without naming the tools as calls.",
+      "State the assigned execution target and any limit on the run, such as nothing sent, and keep the answers to the verification condition out of the prompt.",
       "Leave room for subjectivity. State the visual requirements you want graded objectively, and no more.",
     ],
     produces: "The one prompt the whole task is built on.",
@@ -190,7 +194,7 @@ export const methodSteps: MethodStep[] = [
     inherits:
       "Design is finished and the prompt goes out once. What comes back is measured against the GTFA you resolved in step 3, not against what looks reasonable.",
     means:
-      "The prompt goes out and the agent answers it once. Measure that answer against the GTFA. You are looking for genuine failures worth at least 30% of the final rubric score, and 50% or more is preferred, on failures that materially affect what the user asked for. Failures are found, never manufactured or scored up to the bar.",
+      "Leg A runs Opus 5: the prompt goes out and the agent answers it once. Measure that answer against the GTFA. You are looking for genuine failures worth at least 30% of the final rubric score, and 50% or more is preferred, on failures that materially affect what the user asked for. Failures are found, never manufactured or scored up to the bar.",
     moves: [
       "Score the run against the GTFA before writing a single criterion.",
       "Restructure the task if the run captures the whole intent, or if what it missed is cosmetic.",
@@ -313,10 +317,10 @@ export const mindset = [
 /** The client's hard requirements, restated in the register CBs read them in. */
 export const hardRequirements = [
   { label: "Complex", body: "Planning, recovery, and work across several artifacts, tools or sources." },
-  { label: "Parameters followed", body: "All seven assigned parameters implemented, with no drift." },
-  { label: "Multimodal", body: "Media required for a core requirement, enforced by the ablation." },
+  { label: "Parameters followed", body: "All fourteen assigned parameters implemented exactly, with no omission, substitution or drift." },
+  { label: "Multimodal", body: "Media required for a core requirement, enforced by the ablation, and images that need real visual interpretation." },
   { label: "Cross-modal", body: "One step's output becomes the next step's necessary input." },
-  { label: "Objective", body: "Every output grounded in a rule or source stated in the prompt." },
+  { label: "Objective", body: "Every output asked for in the prompt and grounded in the prompt, the inputs or the universe." },
   { label: "Subjective quality", body: "A rendered artifact whose presentation can be judged." },
   { label: "Model A fails", body: "Genuine failures on at least 30% of the final rubric score, and 50% or more preferred." },
 ];

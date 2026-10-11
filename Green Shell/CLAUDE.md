@@ -15,7 +15,7 @@ so five show.
 | The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
-| Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make Model A fail for real: seven failure types as cards, 28 patterns, 88 graded runs behind them (12 on Green Shell), a filter by what the task has, and a "Model A passed?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
+| Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make Model A (Opus 5) fail for real: where the cases come from, then seven failure types as cards, 28 patterns, 89 graded runs behind them each with why it failed, a filter by what the task has, and a "Model A passed?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
 | Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | **Parked, not on the site**, and the route redirects to `/`. The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
 | Spec Doc | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec: the dimensions, the appendix and the change log, one pane at a time off a vertical rail, under one search. |
 | Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, the must-read project updates, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
@@ -98,7 +98,10 @@ the theme toggle or `localStorage`. Delete both files before copying anything ba
 render, so `/failure-approach#<type>`, `#<pattern>` and `#keeps-passing` server-render every view of
 the tab. Add them to `routes`, built from `failureCategories` and `failurePatterns` so a new pattern
 is covered, plus a legacy anchor (`#a1`) and a junk one (`#constructor`). Assert on the stripped
-text while you are there: no `[G `, `[R `, `[C ` or `[Q ` bracket, no em dash, no `undefined`.
+text while you are there: no `[G `, `[R `, `[C ` or `[Q ` bracket, no `§`, no em dash, no
+`undefined`. The smoke script can import the data too, and that is where the cheap invariants go:
+every case has a `why` and a `model`, every build idea's `from` names a case on the same page, every
+`/#<step>` link carries its step's `M` number, and the gate has no multi-turn wording left.
 Reference picks its pane in an effect, so `/reference#<entry>` always server-renders the default
 pane; check those in the browser.
 
@@ -181,11 +184,11 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | --- | --- |
 | Version History table and the `[NEW]` callouts in the guidelines, plus anything the client flags to the team afterwards | [src/data/changes.ts](src/data/changes.ts) |
 | Nothing — hand-authored, one entry per guidelines or onboarding change | [src/data/hubLog.ts](src/data/hubLog.ts) |
-| `rationale.md` and `[External] Green Shell Guidelines v1` | [src/data/method.ts](src/data/method.ts) |
-| `Coruses & Screenings/Guidelines/checklist.md` → `presubmit-gate.pdf` | [src/data/checklist.ts](src/data/checklist.ts) |
+| `rationale.md` and `[External] Green Shell Guidelines v1`, at its Oct 8, 2026 revision | [src/data/method.ts](src/data/method.ts) |
+| The guidelines, written up as a gate. Red Shell's `checklist.md` was the starting frame only | [src/data/checklist.ts](src/data/checklist.ts), which [scripts/build_presubmit_gate.py](scripts/build_presubmit_gate.py) prints into `public/docs/presubmit-gate.pdf` |
 | `*-rubric.csv` and `appendix.csv`, the spec exports (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
 | `F&Q.md` in this repo | [src/data/faq.ts](src/data/faq.ts) |
-| `failure approach/`: the two studies of graded Opus failures (`opus_failure_report (2).html`, `task_writer_cheat_sheet (3).html`) and the md written from them, plus guidelines 8.2 and the Golden Task's Model A run | [src/data/failureApproach.ts](src/data/failureApproach.ts), provenance in brackets and comments. See [The Failure Approach tab](#the-failure-approach-tab) |
+| `failure approach/`: the two studies of graded Opus failures (`opus_failure_report (2).html`, `task_writer_cheat_sheet (3).html`) and the md written from them, plus the Golden Task's Model A run | [src/data/failureApproach.ts](src/data/failureApproach.ts), provenance in brackets and comments. See [The Failure Approach tab](#the-failure-approach-tab) |
 | `Videos/Universe Dealing/finals/` on Drive, `universe_post.md` beside the recordings | [src/data/videos.ts](src/data/videos.ts) + `public/videos/universe/` |
 | `task 1 (6ab82ece4b8df21cfe07addd)/` | [src/data/tasks/chargeDisputes.ts](src/data/tasks/chargeDisputes.ts) + `public/tasks/charge-disputes/` |
 | `task 1/GTFA.md`, the answer, the must nots and the accepted variations | `answer`, `ledger`, `mustNot`, `variations` in the same file |
@@ -202,29 +205,33 @@ The consequence is the load-bearing contract: **editing a source document is onl
 and is the source of truth for everything. The hub is a companion to it and must never become a
 copy of it.
 
-The pre-submit PDF is generated from `checklist.md`; read that rather than the PDF when
-re-transcribing checks, and re-copy the regenerated PDF into `public/docs/`:
+**The pre-submit gate has one source, [checklist.ts](src/data/checklist.ts), and the PDF is printed
+from it.** The PDF used to come from Red Shell's `checklist.md` through a `build_presubmit_gate.py`
+that lived beside the guidelines on Drive; that script is gone, and `checklist.md` describes the
+multi-turn gate. On Oct 11, 2026 the gate was rewritten against the Green Shell guidelines (single
+turn, fourteen parameters, the 80/20 rule and the two automatic fails, the subjective block in
+section 7, Leg B as Leg B), keeping the original's purpose and frame: one pass when the task is
+finished, seven sections in build order, a question and a footnote per check, refs into the
+guidelines, the Ready and Fix boxes. Reprint it after any change to the gate:
 
 ```bash
-cd "g:/My Drive/Red Shell/Coruses & Screenings/Guidelines/_changes"
-python build_presubmit_gate.py          # writes ../presubmit-gate.pdf
-cp ../presubmit-gate.pdf "g:/My Drive/Red Shell/Golden Task Hub/Green Shell/public/docs/"
+python scripts/build_presubmit_gate.py          # writes public/docs/presubmit-gate.pdf
+python scripts/build_presubmit_gate.py --png    # plus a preview PNG in the temp folder
 ```
 
-**As of Oct 11, 2026 `build_presubmit_gate.py` is no longer in `_changes/`, and `checklist.md`
-still states Red Shell's 50% bar** (A4, and the C5 footnote), because that file also stands behind
-Red Shell, whose rule it is. Green Shell's `public/docs/presubmit-gate.pdf` was therefore corrected
-in place to 30%: the two glyphs were swapped in the page's content stream, using the embedded Segoe
-UI subset, so the type, the layout and the extracted text all match and nothing else on the page
-moved (a pixel diff showed only those two spots). The page's A4 additionally says "ideally 50% or
-more", which the one-page PDF line has no room for. Before regenerating the PDF from source, make a
-Green Shell copy of `checklist.md` with those two lines at 30%, or the next build brings 50% back.
+The script loads `checklist.ts` with Node's type stripping (Node 22.18+, no `node_modules`, so it
+runs straight from the Drive folder), lays the gate out as one Letter page of HTML in the original's
+palette and type (Segoe UI and Consolas), and prints it with headless Chrome, which is also how the
+original was made. **Keep `checklist.ts` free of value imports** for that reason: Node loads it on
+its own, and only `import type` is erased.
 
 The gate is **one Letter page**, and the generator holds it there by stepping the type scale down
-until the content fits, refusing to write below 80%. A check costs roughly two points of scale: 28
-checks fitted at 90%, 29 at 86%, 30 at 84%. So a new rule goes into an existing check's wording
-unless it genuinely needs its own tick box, and `checklist.ts` is transcribed from `checklist.md`
-afterwards with the em dashes flattened to the hub's copy rules.
+two points at a time until it fits, refusing to write below 80%. Sections stay whole, and the cut
+between the two columns is measured, not guessed: each cut is rendered small and the one whose
+taller column is shortest wins. At 29 checks it prints at 82% with sections 1 to 4 on the left.
+Thirty one checks did not fit at the original's type size, which is why two pairs were merged (self
+contained criteria with literal matching, Leg B with the golden passing its block). So a new rule
+goes into an existing check's wording unless it genuinely needs its own tick box.
 
 ### `universes.ts` is generated, in two places
 
@@ -307,7 +314,11 @@ into a dead one**, and nothing validates that, so rename in both files together.
 ### The method is the spine
 
 `methodSteps` in [src/data/method.ts](src/data/method.ts) is ten steps, rewritten against the
-Green Shell guidelines. **The order is the argument**: step 1 fixes the assigned pair, step 2
+Green Shell guidelines and brought up to their Oct 8, 2026 revision: fourteen assigned parameters,
+every assigned input modality covered, the execution target stated in the prompt, Leg A named as the
+Opus 5 leg. The Golden Task was built when seven parameters were assigned, and its step 1 says so.
+The headings that count the steps and the hard requirements read the count off the data. **The
+order is the argument**: step 1 fixes the assigned pair, step 2
 explores the universe inside that pair, step 3 is the one situation where both are true, step 4 is
 the evidence that situation would produce. Every step after the first carries `inherits`, which
 states what arrived from the step before and what this step does with it, and it renders in the
@@ -366,8 +377,13 @@ already reads well:
 
 ### Cross-linking is the product
 
-Any entity can carry `links?: XLink[]` (`{ to, tag, label }`), rendered by `<Crosslinks />`. Links
-are authored **in both directions**: a pre-submit check points at the golden-task section that
+Any entity can carry `links?: XLink[]` (`{ to, tag, label }`), rendered by `<Crosslinks />`.
+**A link to a method step is labeled with that step's number, and `Crosslinks` reads the number off
+`methodSteps`**: an `M` tag on a link to `/#<step-id>` is recomputed at render, because the tags were
+typed by hand once and drifted when the method was renumbered (the gate's link to step 7 read M5).
+Keep the data's tags right anyway; the smoke test checks them. Gate links use the check's id as the
+tag (`A5`, `E4`) and point at its section anchor (`/reference#s1`), since checks have no anchors of
+their own. Links are authored **in both directions**: a pre-submit check points at the golden-task section that
 demonstrates it, and that section points back at the check.
 
 An `XLink.to` targets `/<route>#<section-id>`, or an absolute URL (rendered with an external
@@ -420,73 +436,95 @@ im.resize((880, 495), Image.LANCZOS).save("public/onboarding/<id>-cover.png", op
 
 [src/data/failureApproach.ts](src/data/failureApproach.ts) holds the tab and
 [FailureApproach.tsx](src/pages/FailureApproach.tsx) lays it out. **Its one job is helping a
-contributor make Model A fail for real**: real cases of how Opus fails as an agent, what set each
-one off, and how to build the same pressure into a Green Shell Leg A. It deliberately carries no
+contributor make Model A fail for real**: real cases of how Opus fails as an agent, why each one
+failed, and how to build the same pressure into a Green Shell Leg A. It deliberately carries no
 planning sequence, rating guidance or Leg B hints, because the method, the Golden Task and the spec
 own those; where it touches them it links rather than restates.
+
+**Leg A runs Opus 5**, as guidelines section 3 names it ("Leg A (Opus 5 leg)"). `legAModel` holds
+the string once; every case names its version, the Opus 5 ones are filled in the brand colour, a
+pattern with an Opus 5 case says "Seen on Opus 5", and the sources strip counts them.
 
 **Where the content comes from.** `failure approach/` holds two studies of graded Opus failures, the
 final report (cited `[R section]`) and the task writer cheat sheet (`[C card, trap n]`), and the md
 written from them. The folder is source material and gitignored, and the repo is public, so it must
-stay that way. Two more sources are the project's own: the runs the guidelines record in section
-8.2 (`guidelines` cases) and the Golden Task's Model A run (`golden` cases, from
-`run.observations`). Those twelve cases come first in every pattern that has one.
+stay that way. The one other source is the Golden Task's Model A run (`golden` cases, from
+`run.observations`), whose trajectory names `claude-opus-5`; those six come first in every pattern
+that has one. **The runs the guidelines record in section 8.2 are not cases any more**: they are the
+guidelines' summary of a run, with no ask and no right answer, and they read as guideline references
+rather than failures. Their lessons stay only where a study case carries them.
 
 **Every case is a real graded run, and the data is held to its source.** Ask, did, truth and wrote
 are what the source says happened, paraphrased into the copy rules and never extended; a vignette
-the source cuts short stays short, and a case with no right answer in its source carries none. Two
-checks were run over the data and should be rerun after any edit to it: every figure (money,
-percentages, counts, sizes) has to occur in a source text, and every phrase in curly quotes has to
-occur verbatim (nested quotes become single quotes). `runs` is `{ failed, of }` only where the
-source states the count; `runLabel` covers a case whose source gives none.
+the source cuts short stays short, and a case with no right answer in its source carries none.
+**`why` is required and is the trigger in the task, never a guess at the model's state**: it is
+written from the trap's own recipe in the cheat sheet (what the task writer put in the environment),
+from the report vignette's mechanism and its "when it happens" list, or for the Golden Task from its
+designed friction points. Two checks were run over the data and should be rerun after any edit to
+it: every figure (money, percentages, counts, sizes) has to occur in a source text, and every phrase
+in curly quotes has to occur verbatim (nested quotes become single quotes). `runs` is
+`{ failed, of }` only where the source states the count; `runLabel` covers a case whose source gives
+none. `model` is the version the source states; OpenClaw Main ran both Opus 4.6 and 4.8 and its
+vignettes do not say which, so those three read "Opus 4.6 or 4.8".
+
+**Build ideas name the cases they are drawn from.** `build` is `{ text, from? }[]`, and `from` lists
+case ids **on the same page**: the page renders them as buttons that open the folded case list if
+needed, scroll to the case and ring it for a moment. A link cannot be a hash, because the hash is
+the view. An idea with no case behind it on the page (an adaptation to multimodal inputs, or a
+finding from the data panel) has no `from` and says where its evidence is in its own words. Ideas
+that rested on a guidelines example rather than a run were cut.
 
 **What was selected.** The studies hold seventeen capabilities and eighty five traps. The tab keeps
 the ones that work on an assigned universe with your own inputs and one prompt, regrouped into seven
 failure types in the order a run breaks (`looking`, `seeing`, `trusting`, `rules`, `working`,
 `calls`, `finishing`). Deliverable formatting, memory and logging order, and every trap that needs
 control of the environment are left out on purpose, and the "Model A passed?" view lists them as
-what rarely pays off. Category stats are each worded to stand alone, because they are different
-kinds of number: a share of OpenClaw MM failures for the two biggest types, a repeat rate or a trend
-for the others.
+what rarely pays off. Seven cases were added on Oct 11, 2026, from the second examples of traps
+already in use: the ones on Opus 5 or failing six runs of six first, and enough that "asks instead"
+and "loses the specifics" stand on more than the guidelines' summaries did. Category stats are each
+worded to stand alone, because they are different kinds of number: a share of OpenClaw MM failures
+for the two biggest types, a repeat rate or a trend for the others.
 
-**The page is three levels off one hash.** The overview is the seven type cards and the diagnosis
-tile, the task filter, the fairness principle and the sources note. `#<type>` opens a type: a
-banner with its summary, stat and lever, then its pattern cards. `#<pattern>` opens a pattern: the
-header (what happens, the most reliable case, what it builds on, what the data says), the cases (two
-shown, the rest behind a toggle), Build it into your Leg A, Keep it a real failure, and Spot it in
-your run. `#keeps-passing` is the diagnosis. **The view is derived from the hash on every render and
-never held in state**, so a deep link renders first time, the back button walks the levels, and
-every card, crumb, sibling and arrow is an ordinary `Link`. Lookups use own properties only, so
-`#constructor` falls back to the overview instead of crashing.
+**The page is three levels off one hash.** The overview opens with **where the cases come from**, a
+strip inside the band: the studies, OpenClaw MM and the Golden Task, each with the one number behind
+it, and the three things needed to read a case (the dots, the versions, the names), folded behind a
+toggle on a phone. Then the seven type cards and the diagnosis tile, the task filter, and the
+fairness principle. `#<type>` opens a type: a banner with its summary, stat and lever, then its
+pattern cards, each previewing why its first case failed. `#<pattern>` opens a pattern: the header
+(what happens, the most reliable case, whether it was seen on Opus 5, what it builds on, what the
+data says), the cases (two shown, the rest behind a toggle), Build it into your Leg A, Keep it a real
+failure, and Spot it in your run. `#keeps-passing` is the diagnosis. `#sources` lands on the strip.
+**The view is derived from the hash on every render and never held in state**, so a deep link
+renders first time, the back button walks the levels, and every card, crumb, sibling and arrow is an
+ordinary `Link`. Lookups use own properties only, so `#constructor` falls back to the overview
+instead of crashing.
 
 **The band persists across the views**, the Reference idiom: eyebrow, `h1`, counts and the bar of
 seven types plus the diagnosis. It carries the open view's id, so the layout's scroll effect lands
 every move on the bar with the new view under it, and off the overview it drops its lead paragraph
-to give the view room. The bar is one row from 1280px; below that it scrolls sideways, keeps the
-open type in view and returns to its start on the overview. The way back to the overview is the
-first crumb, the band's "All failure types" link and the nav tab.
+and the sources strip to give the view room. The bar is one row from 1280px; below that it scrolls
+sideways, keeps the open type in view and returns to its start on the overview. The way back to the
+overview is the first crumb, the band's "All failure types" link and the nav tab.
 
 **`LEGACY` maps the first version's anchors** (`#a1` to `#d4`, the four group panes, `#not-to-build`)
 to the nearest view and tidies the URL after rendering, because that version was live for a day and
 links to it may have left the hub. Anything else it had lands on the overview.
 
-**The strings keep citation brackets**, and `FaText` is the only way they reach the screen: `[G x]`
-becomes a section badge, `[Q Group, Dimension]` a link to its Spec Doc card (resolved against
-`specGroups` by group and name prefix; `dimSlug` is duplicated from
-[SpecDoc.tsx](src/pages/SpecDoc.tsx), so **the two have to agree**), and `[R …]` / `[C …]` are
-provenance, never on screen. The data carries no markdown.
+**The strings keep their provenance in brackets, and none of it reaches the screen.** `[G x]`,
+`[Q Group, Dimension]`, `[R …]` and `[C …]` all come off in `plain()`, the one way a string reaches
+the page. They used to render as section badges and Spec Doc links; a section number told a
+contributor nothing they could act on. The data carries no markdown, and no label counts cases "on
+Green Shell": the version and the source do that work.
 
-**Cross-links run both ways.** Method steps 3 and 7 carry `links` into the tab, gate check A4 links
+**Cross-links run both ways.** Method steps 3 and 7 carry `links` into the tab, gate check A5 links
 to `#keeps-passing`, and each of the Golden Task's six Model A misses carries a `pattern` id that
-renders as a link to its pattern, while the pattern's Green Shell case links back to the run. The
+renders as a link to its pattern, while the pattern's Golden Task case links back to the run. The
 ⌘K index has one row per type, one per pattern with every case in its `terms`, and one for the
 diagnosis, under the kind `Failure approach`.
 
 **It follows the guidelines where the studies do not**: the 30% failure floor with 50% preferred,
 an assigned universe you explore rather than build, grading where it lands, no breaking tools or
-files on purpose. The guidelines label Leg A "the GPT leg" (section 3), while the tab is written to
-Model A as the user describes it, Opus: the cases themselves are graded Opus runs and the Green
-Shell ones are labeled Model A or "the model", so no line on the page names which model Leg A runs.
+files on purpose, deviation from a parameter only as the guidelines allow.
 
 ### The Complexity tab is parked
 
@@ -657,6 +695,16 @@ When a change lands, the tab is only half of it. The rule it names has to be app
 Task as well, or the worked example teaches the superseded standard. `guidelinesVersion` in the
 same file is what the guidelines header currently says, and it is rendered, so move it when the
 document moves.
+
+**The guidelines' Oct 8, 2026 revision folded everything into one Version History row**, dated Oct 8,
+listing the Sep 27 updates and the new ones together. The entries keep the date each rule actually
+arrived: the Sep 27 set as it was, and the Oct 8 additions (fourteen binding parameters, the 30%
+failure threshold, planned complexity, image diversity) dated Oct 8 and leading the list, newest
+first. **Image diversity started as a client flag and is now a guidelines rule**, so its entry
+carries the guidelines version and the row's sections, and it counts toward `guidelinesOnlyChanges`.
+A flag that the guidelines later absorb graduates the same way. When the guidelines move, diff the
+new file against the one the hub was built from (strip the embedded images first: the file is
+mostly base64) and read every changed requirement into the method, the gate and this tab together.
 
 ### The use case taxonomy is a reference, collapsed
 

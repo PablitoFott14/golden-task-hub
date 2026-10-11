@@ -63,7 +63,15 @@ export const universeVideoPitch = {
 
 /** Where the set points once it has been watched. */
 export const universeVideoLinks: XLink[] = [
-  { to: "/#universe", tag: "M1", label: "Go find the story, do not invent one" },
+  // Guidelines 1.2.1 added a fourth recording on Oct 8, 2026. It is not in the
+  // strip, which plays the hub's own copies, so it is linked where the
+  // guidelines host it.
+  {
+    to: "https://static.remotasks.com/uploads/6ab56a58869b4e7ee668b45d/Outlier%20-%20Google%20Chrome%202026-09-19%2020-37-16.mp4",
+    tag: "VIDEO 4",
+    label: "Download the whole universe",
+  },
+  { to: "/#universe", tag: "M2", label: "Go find the story, do not invent one" },
   { to: "/reference#s2", tag: "B1", label: "Is the universe doing real work?" },
   { to: "/reference#universe-every-prompt", tag: "FAQ", label: "Does every prompt have to use it?" },
 ];

@@ -6,6 +6,7 @@ import {
   ArrowLeft,
   ArrowRight,
   AudioLines,
+  BadgeCheck,
   Calculator,
   CalendarClock,
   CalendarDays,
@@ -17,10 +18,12 @@ import {
   FileSearch,
   FileText,
   Flag,
+  FlaskConical,
   Gavel,
   GitCompareArrows,
   Hammer,
   Image as ImageIcon,
+  Images,
   Info,
   LayoutGrid,
   ListChecks,
@@ -38,13 +41,16 @@ import {
   ShieldCheck,
   Sigma,
   Sparkles,
+  Star,
   TriangleAlert,
   WandSparkles,
   X,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import {
   allCases,
+  caseById,
   categoryById,
   faHeader,
   faPassing,
@@ -53,13 +59,13 @@ import {
   failureCategories,
   failurePatterns,
   featureGroups,
-  isGreenShell,
+  legAModel,
   patternById,
   patternsIn,
+  seenOnLegA,
   sourceLabel,
   taskFeatures,
 } from "../data/failureApproach";
-import { specGroups } from "../data/specDoc";
 import type {
   CaseSource,
   FailureCase,
@@ -87,7 +93,9 @@ import { cx } from "../lib/util";
  * **The header band and its bar persist across the views**, the same idiom as
  * Reference: the seven types, the overview and the diagnosis, one click apart
  * from anywhere. The band carries the scroll anchor for whichever view is
- * open, so every move lands on the bar with the new view under it.
+ * open, so every move lands on the bar with the new view under it. On the
+ * overview it also carries where the cases come from, because that is what a
+ * contributor needs to know before trusting any of them.
  *
  * The first version of this tab was a thirteen pane rail with planning, Leg B
  * hints and rating guidance. Its anchors still resolve through `LEGACY` to the
@@ -96,86 +104,12 @@ import { cx } from "../lib/util";
 
 /* -------------------------------------------------------------- text layer */
 
-/** Citation brackets: `[G 4]`, `[Q Prompt, Constraints]`, `[R 3.1; C Overview]`. */
-const CITE = /\s*\[([GRCQ] [^\]]*)\]/g;
-
-const slug = (s: string) => s.replace(/[^a-z0-9]/gi, "-").toLowerCase();
-
-/** Duplicated from SpecDoc.tsx, which owns the dimension anchors. The two must agree. */
-const dimSlug = (name: string) => "dim-" + slug(name).replace(/-+/g, "-").replace(/^-|-$/g, "");
-
-interface SpecRef {
-  label: string;
-  to?: string;
-}
-
-/** A QA rubric ref, resolved against the spec by group and name prefix. */
-function specRef(ref: string): SpecRef {
-  const [group, ...rest] = ref.split(",");
-  const name = rest.join(",").trim();
-  const g = specGroups.find((x) => x.group === group.trim());
-  const d = g?.dimensions.find((x) => x.name === name || x.name.startsWith(name));
-  return d ? { label: d.name, to: `/spec#${dimSlug(d.name)}` } : { label: name };
-}
-
-/** Lifts the brackets off a string: guidelines and spec refs are kept, provenance is dropped. */
-function splitRefs(text: string) {
-  const g: string[] = [];
-  const q: SpecRef[] = [];
-  const body = text.replace(CITE, (_m, inner: string) => {
-    for (const part of inner.split(";").map((x) => x.trim()).filter(Boolean)) {
-      const kind = part[0];
-      const value = part.slice(2).trim();
-      if (kind === "G") g.push(value);
-      else if (kind === "Q") q.push(specRef(value));
-    }
-    return "";
-  });
-  return { body, g, q };
-}
-
-/** Plain text, for the places a string is quoted rather than read. */
-const plain = (s: string) => splitRefs(s).body;
-
-function RefTail({ g, q }: { g: string[]; q: SpecRef[] }) {
-  if (g.length === 0 && q.length === 0) return null;
-  return (
-    <span className="ml-1 inline-flex flex-wrap items-center gap-1 align-[1px]">
-      {g.length > 0 && (
-        <span className="rounded border border-ink-200 bg-raised px-1.5 py-px font-mono text-[10.5px] leading-tight text-ink-500">
-          §{/^\d/.test(g[0]) ? "" : " "}
-          {g.join(" · ")}
-        </span>
-      )}
-      {q.map((r) =>
-        r.to ? (
-          <Link
-            key={r.label}
-            to={r.to}
-            className="rounded border border-sky-300/60 bg-sky-500/10 px-1.5 py-px font-mono text-[10.5px] leading-tight text-sky-700 transition hover:border-sky-400 dark:border-sky-500/30 dark:text-sky-300"
-          >
-            QC · {r.label}
-          </Link>
-        ) : (
-          <span key={r.label} className="font-mono text-[10.5px] text-ink-500">
-            QC · {r.label}
-          </span>
-        )
-      )}
-    </span>
-  );
-}
-
-/** Every string from the data reaches the screen through this. */
-function FaText({ text }: { text: string }) {
-  const { body, g, q } = splitRefs(text);
-  return (
-    <>
-      {body}
-      <RefTail g={g} q={q} />
-    </>
-  );
-}
+/**
+ * The data keeps its provenance in brackets: `[G 4]`, `[Q Prompt, Constraints]`,
+ * `[R 3.1; C Overview]`. None of it reaches the screen. A section number tells
+ * a contributor nothing they can act on, and every string goes through this.
+ */
+const plain = (s: string) => s.replace(/\s*\[[GRCQ] [^\]]*\]/g, "");
 
 /* ---------------------------------------------------------------- lookups */
 
@@ -230,9 +164,10 @@ function strongest(p: FailurePattern): FailureCase | undefined {
     }, undefined);
 }
 
-const greenCount = (cases: FailureCase[]) => cases.filter((c) => isGreenShell(c.source)).length;
-
 const caveatOf = (p: FailurePattern) => p.caveat ?? categoryById[p.category].caveat;
+
+const legACases = allCases.filter((c) => c.model === legAModel).length;
+const goldenCases = allCases.filter((c) => c.source === "golden").length;
 
 /**
  * The first version's anchors, mapped to the nearest view of this one. Its
@@ -282,22 +217,41 @@ function viewOf(id: string): View {
 
 /* ------------------------------------------------------------------ pieces */
 
-const sourceTone: Record<CaseSource, string> = {
-  golden: "bg-gold-500/15 text-gold-800 ring-1 ring-gold-500/30 dark:text-gold-300",
-  guidelines: "bg-gold-500/15 text-gold-800 ring-1 ring-gold-500/30 dark:text-gold-300",
-  "openclaw-mm": "bg-sky-500/10 text-sky-700 ring-1 ring-sky-500/25 dark:text-sky-300",
-  study: "bg-ink-100 text-ink-600 ring-1 ring-ink-200",
-};
-
+/**
+ * A case says which Opus it ran on before anything else, because Leg A runs
+ * Opus 5 and a case on that version is the closest evidence a contributor has.
+ * The Leg A version is filled; the source sits beside it where it means
+ * something to a contributor.
+ */
 function SourceChip({ c }: { c: FailureCase }) {
-  const text = c.source === "study" ? c.model ?? "Study run" : sourceLabel[c.source].label;
+  const latest = c.model === legAModel;
+  const where = sourceLabel[c.source as CaseSource].label;
   return (
-    <span title={sourceLabel[c.source].hint} className={cx("chip", sourceTone[c.source])}>
-      {isGreenShell(c.source) && <Sparkles size={11} aria-hidden />}
-      {text}
-      {c.source === "openclaw-mm" && c.model && (
-        <span className="font-mono text-[10.5px] opacity-80">{c.model}</span>
-      )}
+    <span className="inline-flex flex-wrap items-center gap-1.5" title={sourceLabel[c.source].hint}>
+      <span
+        className={cx(
+          "chip",
+          latest
+            ? "bg-brand-600 text-white"
+            : "bg-ink-100 text-ink-700 ring-1 ring-ink-200"
+        )}
+      >
+        {c.model ?? "Opus"}
+        {latest && <span className="sr-only">, the model Leg A runs</span>}
+      </span>
+      {where && <span className="font-mono text-[11px] text-ink-500">{where}</span>}
+    </span>
+  );
+}
+
+/** Marks a pattern one of whose cases ran on the Leg A model. */
+function LegAChip() {
+  return (
+    <span
+      title={`At least one case here ran on ${legAModel}, the model Leg A runs`}
+      className="chip bg-brand-500/15 text-brand-700 ring-1 ring-brand-500/25 dark:text-brand-300"
+    >
+      <BadgeCheck size={11} aria-hidden /> Seen on {legAModel}
     </span>
   );
 }
@@ -319,23 +273,27 @@ function RunDots({ c, short }: { c: FailureCase; short?: boolean }) {
       : `failed ${r.failed} of ${r.of} runs`
     : c.source === "golden"
       ? "the Leg A run"
-      : c.source === "guidelines"
-        ? "a run in §8.2"
-        : "one graded run";
+      : "one graded run";
   return (
     <span className="inline-flex items-center gap-1.5">
-      <span aria-hidden className="flex gap-[3px]">
-        {dots.map((on, i) => (
-          <span
-            key={i}
-            className={cx(
-              "h-2 w-2 rounded-full",
-              on ? "bg-rose-500 dark:bg-rose-400" : "ring-1 ring-inset ring-ink-300"
-            )}
-          />
-        ))}
-      </span>
+      <DotRow dots={dots} />
       <span className="whitespace-nowrap font-mono text-[11px] text-ink-500">{label}</span>
+    </span>
+  );
+}
+
+function DotRow({ dots }: { dots: boolean[] }) {
+  return (
+    <span aria-hidden className="flex gap-[3px]">
+      {dots.map((on, i) => (
+        <span
+          key={i}
+          className={cx(
+            "h-2 w-2 rounded-full",
+            on ? "bg-rose-500 dark:bg-rose-400" : "ring-1 ring-inset ring-ink-300"
+          )}
+        />
+      ))}
     </span>
   );
 }
@@ -397,7 +355,7 @@ function SectionTitle({
 function CaveatNote({ text }: { text: string }) {
   return (
     <Callout title="How far the evidence goes" tone="warn" icon={<TriangleAlert size={13} />}>
-      <FaText text={text} />
+      {plain(text)}
     </Callout>
   );
 }
@@ -515,12 +473,85 @@ function CategoryBar({ active }: { active: string }) {
   );
 }
 
+const tileIcon: Record<string, LucideIcon> = {
+  studies: FlaskConical,
+  "openclaw-mm": Images,
+  golden: Star,
+};
+
+/**
+ * Where the cases come from, as the first thing on the overview. Three
+ * sources, each with the one number that says how much stands behind it, and
+ * the three things a reader needs to read a case: the dots, the versions, the
+ * names. On a phone the reading notes fold away, so the types are still close.
+ */
+function SourcesStrip() {
+  const notes = (
+    <dl className="grid gap-x-6 gap-y-2.5 md:grid-cols-3">
+      {faSources.notes.map((n) => (
+        <div key={n.id} className="text-[12px] leading-relaxed text-ink-500">
+          <dt className="mono-label mb-0.5 flex items-center gap-1.5 text-ink-400">
+            {n.id === "runs" && <DotRow dots={[true, true, true, false]} />}
+            {n.label}
+          </dt>
+          <dd>{plain(n.body)}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+  return (
+    <section
+      id={faSources.id}
+      aria-labelledby="fa-sources-title"
+      className="mt-6 scroll-mt-20 rounded-2xl border border-ink-200/70 bg-surface/80 p-4 shadow-soft backdrop-blur sm:p-5"
+    >
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h2 id="fa-sources-title" className="mono-label text-brand-600 dark:text-brand-300">
+          {faSources.title}
+        </h2>
+        <p className="font-mono text-[11.5px] text-ink-500">
+          {allCases.length} real cases, {legACases} of them on {legAModel}, the model Leg A runs
+        </p>
+      </div>
+      <div className="mt-3 grid gap-3 md:grid-cols-3">
+        {faSources.tiles.map((t) => {
+          const Icon = tileIcon[t.id] ?? Info;
+          return (
+            <div key={t.id} className="flex gap-3 rounded-xl border border-ink-200/60 bg-raised p-3.5">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brand-500/10 text-brand-600 dark:text-brand-300">
+                <Icon size={17} aria-hidden />
+              </span>
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-baseline gap-x-1.5">
+                  <span className="font-display text-[22px] font-bold leading-none text-ink-900">
+                    {t.value ?? String(goldenCases)}
+                  </span>
+                  <span className="text-[12px] font-semibold text-ink-600">{t.unit}</span>
+                </div>
+                <div className="mt-1 text-[12.5px] font-bold text-ink-800">{t.name}</div>
+                <p className="mt-0.5 text-[12px] leading-relaxed text-ink-500">{plain(t.body)}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="mt-3 hidden border-t border-ink-200/70 pt-3 md:block">{notes}</div>
+      <details className="group mt-3 border-t border-ink-200/70 pt-3 md:hidden">
+        <summary className="flex cursor-pointer list-none items-center gap-1.5 text-[12.5px] font-semibold text-ink-600 [&::-webkit-details-marker]:hidden">
+          How to read a case
+          <ChevronDown size={14} className="transition-transform group-open:rotate-180" aria-hidden />
+        </summary>
+        <div className="mt-2.5">{notes}</div>
+      </details>
+    </section>
+  );
+}
+
 /* ---------------------------------------------------------------- overview */
 
 function CategoryCard({ c }: { c: FailureCategory }) {
   const ps = patternsIn(c.id);
   const cases = ps.flatMap((p) => p.cases);
-  const gs = greenCount(cases);
   const Icon = catIcon[c.id];
   return (
     <Link to={{ hash: `#${c.id}` }} className="card card-hover group flex h-full flex-col p-5">
@@ -552,15 +583,10 @@ function CategoryCard({ c }: { c: FailureCategory }) {
         ))}
       </ul>
 
-      <div className="mt-4 flex flex-wrap items-center gap-2 text-[11.5px] text-ink-500">
+      <div className="mt-4 flex items-center gap-2 text-[11.5px] text-ink-500">
         <span className="font-mono">
-          {ps.length} patterns · {cases.length} cases
+          {ps.length} patterns · {cases.length} real cases
         </span>
-        {gs > 0 && (
-          <span className={cx("chip", sourceTone.golden)}>
-            <Sparkles size={11} aria-hidden /> {gs} on Green Shell
-          </span>
-        )}
         <ArrowRight
           size={14}
           className="ml-auto text-brand-500 transition-transform group-hover:translate-x-0.5"
@@ -611,7 +637,6 @@ function PassingTile() {
 function PatternRow({ p, hit }: { p: FailurePattern; hit: TaskFeature[] }) {
   const c = categoryById[p.category];
   const best = strongest(p);
-  const gs = greenCount(p.cases);
   return (
     <Link to={{ hash: `#${p.id}` }} className="card card-hover group flex h-full gap-3 p-4">
       <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-brand-500/10 font-mono text-[11px] font-bold text-brand-700 dark:text-brand-300">
@@ -628,11 +653,7 @@ function PatternRow({ p, hit }: { p: FailurePattern; hit: TaskFeature[] }) {
             <FeatureTag key={f} f={f} on />
           ))}
           {best && <RunDots c={best} short />}
-          {gs > 0 && (
-            <span className={cx("chip", sourceTone.golden)}>
-              <Sparkles size={11} aria-hidden /> Green Shell
-            </span>
-          )}
+          {seenOnLegA(p) && <LegAChip />}
         </span>
       </span>
     </Link>
@@ -733,32 +754,6 @@ function TaskFilter({
   );
 }
 
-function Sources() {
-  return (
-    <details id="sources" className="group card scroll-mt-24 p-5">
-      <summary className="flex cursor-pointer list-none items-center gap-2.5 [&::-webkit-details-marker]:hidden">
-        <span className="grid h-7 w-7 place-items-center rounded-lg bg-ink-100 text-ink-500">
-          <Info size={15} />
-        </span>
-        <span className="font-display text-[15px] font-bold text-ink-900">{faSources.title}</span>
-        <ChevronDown
-          size={16}
-          className="ml-auto text-ink-400 transition-transform group-open:rotate-180"
-          aria-hidden
-        />
-      </summary>
-      <dl className="mt-5 grid gap-x-6 gap-y-4 md:grid-cols-2">
-        {faSources.items.map((i) => (
-          <div key={i.label}>
-            <dt className="mono-label text-ink-400">{i.label}</dt>
-            <dd className="mt-1 text-[13px] leading-relaxed text-ink-600">{i.body}</dd>
-          </div>
-        ))}
-      </dl>
-    </details>
-  );
-}
-
 function Overview({
   picked,
   setPicked,
@@ -774,7 +769,7 @@ function Overview({
       <section>
         <SectionTitle
           title="Seven ways Opus fails, in the order a run breaks"
-          note="Each type holds the patterns that showed up in graded runs. Open one to see its real cases, what set each one off, and how to build the same pressure into your task."
+          note="Each type holds the patterns that showed up in graded runs. Open one to see its real cases, why each one failed, and how to build the same pressure into your task."
         />
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {failureCategories.map((c, i) => (
@@ -790,20 +785,15 @@ function Overview({
 
       <TaskFilter picked={picked} toggle={toggle} clear={() => setPicked([])} />
 
-      <section className="grid gap-4 lg:grid-cols-[1.4fr_1fr] lg:items-start">
-        <div className="rounded-2xl border border-emerald-300/60 bg-emerald-50/50 p-5 dark:border-emerald-500/25 dark:bg-emerald-500/10">
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-300">
-              <ShieldCheck size={16} />
-            </span>
-            <h3 className="font-display text-[15.5px] font-bold text-ink-900">{faPrinciple.title}</h3>
-          </div>
-          <p className="mt-3 text-[13.5px] leading-relaxed text-ink-700">
-            <FaText text={faPrinciple.body} />
-          </p>
-          <Crosslinks links={faPrinciple.links} className="mt-4" />
+      <section className="rounded-2xl border border-emerald-300/60 bg-emerald-50/50 p-5 sm:p-6 dark:border-emerald-500/25 dark:bg-emerald-500/10">
+        <div className="flex items-center gap-2.5">
+          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-300">
+            <ShieldCheck size={16} />
+          </span>
+          <h3 className="font-display text-[15.5px] font-bold text-ink-900">{faPrinciple.title}</h3>
         </div>
-        <Sources />
+        <p className="mt-3 max-w-4xl text-[13.5px] leading-relaxed text-ink-700">{plain(faPrinciple.body)}</p>
+        <Crosslinks links={faPrinciple.links} className="mt-4" />
       </section>
     </div>
   );
@@ -813,8 +803,6 @@ function Overview({
 
 function PatternCard({ p }: { p: FailurePattern }) {
   const best = strongest(p);
-  const gs = greenCount(p.cases);
-  const oc = p.cases.some((c) => c.source === "openclaw-mm");
   const lead = p.cases[0];
   return (
     <Link to={{ hash: `#${p.id}` }} className="card card-hover group flex h-full flex-col p-5">
@@ -844,30 +832,23 @@ function PatternCard({ p }: { p: FailurePattern }) {
           <SourceChip c={lead} />
         </div>
         <div className="mt-1.5 text-[13px] font-semibold text-ink-800">{lead.title}</div>
-        {lead.wrote && (
-          <div className="mt-1.5 flex gap-1.5 text-[12px] leading-snug text-ink-500">
-            <X size={13} className="mt-px shrink-0 text-rose-500" aria-hidden />
-            <span>
-              <span className="sr-only">What it wrote: </span>
-              {plain(lead.wrote)}
-            </span>
-          </div>
-        )}
+        <div className="mt-1.5 flex gap-1.5 text-[12px] leading-snug text-ink-500">
+          <Zap size={13} className="mt-px shrink-0 text-brand-500" aria-hidden />
+          <span>
+            <span className="sr-only">Why it failed: </span>
+            {plain(lead.why)}
+          </span>
+        </div>
       </div>
 
       <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-4">
-        {gs > 0 && (
-          <span className={cx("chip", sourceTone.golden)}>
-            <Sparkles size={11} aria-hidden /> {gs} Green Shell
-          </span>
-        )}
-        {oc && <span className={cx("chip", sourceTone["openclaw-mm"])}>OpenClaw MM</span>}
+        {seenOnLegA(p) && <LegAChip />}
         {p.caveat && (
           <span className="chip bg-amber-500/10 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-300">
             <TriangleAlert size={11} aria-hidden /> Evidence caveat
           </span>
         )}
-        <span className="ml-auto font-mono text-[11px] text-ink-400">{p.cases.length} cases</span>
+        <span className="ml-auto font-mono text-[11px] text-ink-400">{p.cases.length} real cases</span>
       </div>
     </Link>
   );
@@ -925,7 +906,7 @@ function CategoryView({ c }: { c: FailureCategory }) {
         <SectionTitle
           title="The patterns"
           count={ps.length}
-          note="Each one opens with the real runs behind it, then the ways to build it into your Leg A."
+          note="Each one opens with the real runs behind it and why each one failed, then the ways to build it into your Leg A."
         />
       </div>
       <div className="mt-5 grid gap-4 md:grid-cols-2">
@@ -957,15 +938,26 @@ function CategoryView({ c }: { c: FailureCategory }) {
 /** Who the run belongs to: the Golden Task is a Model A run, the studies measured Opus. */
 const actor: Record<CaseSource, string> = {
   golden: "Model A",
-  guidelines: "the model",
   "openclaw-mm": "Opus",
   study: "Opus",
 };
 
-function CaseCard({ c }: { c: FailureCase }) {
+/**
+ * One graded run, read top to bottom the way a contributor uses it: what was
+ * asked, what the model did, the right answer beside what it wrote, then why it
+ * failed, which is the part to copy into a Leg A. `flash` rings the card when a
+ * build idea below has just pointed at it.
+ */
+function CaseCard({ c, flash }: { c: FailureCase; flash: boolean }) {
   const who = actor[c.source];
   return (
-    <article className="card flex h-full flex-col p-5">
+    <article
+      id={`case-${c.id}`}
+      className={cx(
+        "card flex h-full scroll-mt-28 flex-col p-5 transition-shadow duration-500",
+        flash && "ring-2 ring-brand-400 dark:ring-brand-500"
+      )}
+    >
       <div className="flex flex-wrap items-center gap-2">
         <SourceChip c={c} />
         <span className="ml-auto">
@@ -978,7 +970,7 @@ function CaseCard({ c }: { c: FailureCase }) {
 
       <dl className="mt-3 space-y-2.5 text-[13px] leading-relaxed">
         <div>
-          <dt className="mono-label text-ink-400">{c.source === "guidelines" ? "The run" : "The ask"}</dt>
+          <dt className="mono-label text-ink-400">The ask</dt>
           <dd className="mt-0.5 text-ink-700">{c.ask}</dd>
         </div>
         <div>
@@ -1008,31 +1000,19 @@ function CaseCard({ c }: { c: FailureCase }) {
         </div>
       )}
 
-      {c.note && (
-        <div className="mt-4 flex gap-2.5 rounded-lg border border-gold-300/60 bg-gold-50/60 p-3 dark:border-gold-500/25 dark:bg-gold-500/10">
-          <Info size={14} className="mt-0.5 shrink-0 text-gold-600 dark:text-gold-300" aria-hidden />
-          <p className="text-[12.5px] leading-relaxed text-ink-700">
-            <span className="mono-label mr-1.5 text-gold-700 dark:text-gold-300">The guidelines</span>
-            <FaText text={c.note} />
-          </p>
-        </div>
-      )}
+      <div className="mt-4 flex gap-2.5 rounded-lg bg-brand-500/10 p-3">
+        <Zap size={14} className="mt-0.5 shrink-0 text-brand-600 dark:text-brand-300" aria-hidden />
+        <p className="text-[12.5px] leading-relaxed text-ink-700">
+          <span className="mono-label mr-1.5 text-brand-700 dark:text-brand-300">Why it failed</span>
+          {plain(c.why)}
+        </p>
+      </div>
 
-      {(c.why || c.fix) && (
-        <dl className="mt-4 space-y-2 border-t border-ink-200/70 pt-3 text-[12.5px] leading-relaxed">
-          {c.why && (
-            <div>
-              <dt className="mono-label inline text-ink-400">What set it off</dt>{" "}
-              <dd className="inline text-ink-600">{c.why}</dd>
-            </div>
-          )}
-          {c.fix && (
-            <div>
-              <dt className="mono-label inline text-ink-400">One step would have caught it</dt>{" "}
-              <dd className="inline text-ink-600">{c.fix}</dd>
-            </div>
-          )}
-        </dl>
+      {c.fix && (
+        <p className="mt-3 text-[12.5px] leading-relaxed text-ink-600">
+          <span className="mono-label mr-1.5 text-ink-400">One step would have caught it</span>
+          {c.fix}
+        </p>
       )}
 
       {c.link && <Crosslinks links={[c.link]} className="mt-auto pt-4" />}
@@ -1040,7 +1020,7 @@ function CaseCard({ c }: { c: FailureCase }) {
   );
 }
 
-/** Two cases on screen and the rest one click away. The data puts the closest to a Green Shell run first. */
+/** Two cases on screen and the rest one click away. The data puts the Golden Task first, then the closest project. */
 const FIRST_CASES = 2;
 
 function PatternView({ p }: { p: FailurePattern }) {
@@ -1050,11 +1030,31 @@ function PatternView({ p }: { p: FailurePattern }) {
   const prev = failurePatterns[at - 1];
   const next = failurePatterns[at + 1];
   const best = strongest(p);
-  const gs = greenCount(p.cases);
   const caveat = caveatOf(p);
   const [more, setMore] = useState(false);
+  const [target, setTarget] = useState<{ id: string; n: number } | null>(null);
   const shown = more ? p.cases : p.cases.slice(0, FIRST_CASES);
   const hidden = p.cases.length - FIRST_CASES;
+
+  /* A build idea points at the cases it comes from. The case may be folded
+     away, so it opens the list first and scrolls once the card is rendered,
+     then rings it for a moment so the eye lands on the right one. `n` makes a
+     second click on the same case count as a new request. */
+  const showCase = (id: string) => {
+    if (p.cases.findIndex((x) => x.id === id) >= FIRST_CASES) setMore(true);
+    setTarget((t) => ({ id, n: (t?.n ?? 0) + 1 }));
+  };
+  useEffect(() => {
+    if (!target) return;
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(`case-${target.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+    const done = window.setTimeout(() => setTarget(null), 1800);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.clearTimeout(done);
+    };
+  }, [target]);
 
   return (
     <div className="wrap py-8">
@@ -1133,11 +1133,7 @@ function PatternView({ p }: { p: FailurePattern }) {
                 <RunDots c={best} short />
               </span>
             )}
-            {gs > 0 && (
-              <span className={cx("chip", sourceTone.golden)}>
-                <Sparkles size={11} aria-hidden /> {gs} {gs === 1 ? "case" : "cases"} on Green Shell
-              </span>
-            )}
+            {seenOnLegA(p) && <LegAChip />}
           </div>
 
           <div className="mt-4 flex flex-wrap items-center gap-1.5">
@@ -1155,7 +1151,7 @@ function PatternView({ p }: { p: FailurePattern }) {
           <ul className="space-y-2.5">
             {p.why.map((w) => (
               <li key={w} className="text-[12.5px] leading-relaxed text-ink-600">
-                <FaText text={w} />
+                {plain(w)}
               </li>
             ))}
           </ul>
@@ -1173,11 +1169,22 @@ function PatternView({ p }: { p: FailurePattern }) {
           icon={FileSearch}
           title="Real cases"
           count={p.cases.length}
-          note="Each case is a graded run. The dots are runs of the same task: filled where it failed, hollow where it passed."
+          note={
+            <>
+              Each case is a graded run: what was asked, what the model did, the right answer beside
+              what it wrote, and why it failed. {legAModel} is the model your Leg A runs.{" "}
+              <Link
+                to={{ pathname: "/failure-approach", hash: `#${faSources.id}` }}
+                className="font-semibold text-brand-600 hover:text-brand-700 dark:text-brand-300"
+              >
+                Where the cases come from
+              </Link>
+            </>
+          }
         />
         <div className="mt-5 grid gap-4 lg:grid-cols-2">
           {shown.map((x) => (
-            <CaseCard key={x.id} c={x} />
+            <CaseCard key={x.id} c={x} flash={target?.id === x.id} />
           ))}
         </div>
         {hidden > 0 && (
@@ -1197,19 +1204,40 @@ function PatternView({ p }: { p: FailurePattern }) {
         <SectionTitle
           icon={Hammer}
           title="Build it into your Leg A"
-          note="Ways to put the same pressure into a task built on your assigned universe and your own inputs. They are starting points: confirm the structure exists in your universe before you build on it."
+          note="Ways to put the same pressure into a task built on your assigned universe and your own inputs, each drawn from the cases above. They are starting points: confirm the structure exists in your universe before you build on it."
         />
         <ol className="mt-5 grid gap-3 md:grid-cols-2">
-          {p.build.map((b, i) => (
-            <li key={b} className="card flex gap-3 p-4">
-              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brand-600 font-mono text-[12px] font-bold text-white">
-                {i + 1}
-              </span>
-              <p className="text-[13.5px] leading-relaxed text-ink-700">
-                <FaText text={b} />
-              </p>
-            </li>
-          ))}
+          {p.build.map((b, i) => {
+            /* Only cases on this page: the link scrolls, it does not navigate. */
+            const from = (b.from ?? []).filter((id) => p.cases.some((x) => x.id === id));
+            return (
+              <li key={b.text} className="card flex gap-3 p-4">
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brand-600 font-mono text-[12px] font-bold text-white">
+                  {i + 1}
+                </span>
+                <div className="min-w-0">
+                  <p className="text-[13.5px] leading-relaxed text-ink-700">{plain(b.text)}</p>
+                  {from.length > 0 && (
+                    <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
+                      <span className="mono-label text-ink-400">From</span>
+                      {from.map((id) => (
+                        <button
+                          key={id}
+                          type="button"
+                          onClick={() => showCase(id)}
+                          aria-label={`Show the case: ${caseById[id].title}`}
+                          className="inline-flex items-center gap-1 rounded-md border border-ink-200 bg-raised px-2 py-0.5 text-left text-[11.5px] font-medium text-ink-600 transition hover:border-brand-300 hover:text-ink-900"
+                        >
+                          <FileSearch size={11} className="shrink-0 text-brand-500" aria-hidden />
+                          {caseById[id].title}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </li>
+            );
+          })}
         </ol>
       </section>
 
@@ -1223,9 +1251,7 @@ function PatternView({ p }: { p: FailurePattern }) {
             {p.fair.map((f) => (
               <li key={f} className="flex gap-2 text-[13px] leading-relaxed text-ink-700">
                 <Check size={14} className="mt-[3px] shrink-0 text-emerald-600 dark:text-emerald-400" aria-hidden />
-                <span>
-                  <FaText text={f} />
-                </span>
+                <span>{plain(f)}</span>
               </li>
             ))}
           </ul>
@@ -1239,9 +1265,7 @@ function PatternView({ p }: { p: FailurePattern }) {
             {p.spot.map((s) => (
               <li key={s} className="flex gap-2 text-[13px] leading-relaxed text-ink-700">
                 <span aria-hidden className="mt-[8px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-400" />
-                <span>
-                  <FaText text={s} />
-                </span>
+                <span>{plain(s)}</span>
               </li>
             ))}
           </ul>
@@ -1283,7 +1307,7 @@ function DiagnosisCard({ d, n }: { d: PassDiagnosis; n: number }) {
         <ArrowRight size={14} className="mt-[3px] shrink-0 text-brand-600 dark:text-brand-300" aria-hidden />
         <p className="text-[13px] leading-relaxed text-ink-700">
           <span className="mono-label mr-1.5 text-brand-700 dark:text-brand-300">Change</span>
-          <FaText text={d.change} />
+          {plain(d.change)}
         </p>
       </div>
       <div className="mt-auto flex flex-wrap gap-1.5 pt-4">
@@ -1319,9 +1343,7 @@ function PassingView() {
         <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-ink-600">{faPassing.lead}</p>
         <div className="mt-5 flex max-w-3xl gap-2.5 rounded-xl border border-amber-300/60 bg-surface/80 p-4 dark:border-amber-500/25">
           <TriangleAlert size={15} className="mt-0.5 shrink-0 text-amber-600 dark:text-amber-300" aria-hidden />
-          <p className="text-[13.5px] leading-relaxed text-ink-700">
-            <FaText text={faPassing.rule} />
-          </p>
+          <p className="text-[13.5px] leading-relaxed text-ink-700">{plain(faPassing.rule)}</p>
         </div>
         <Crosslinks links={faPassing.links} className="mt-4" />
       </header>
@@ -1346,9 +1368,7 @@ function PassingView() {
           {faPassing.odds.map((o) => (
             <div key={o.id} className="card flex h-full flex-col p-5">
               <h4 className="font-display text-[15px] font-bold leading-snug text-ink-900">{o.title}</h4>
-              <p className="mt-2 flex-1 text-[13px] leading-relaxed text-ink-600">
-                <FaText text={o.body} />
-              </p>
+              <p className="mt-2 flex-1 text-[13px] leading-relaxed text-ink-600">{plain(o.body)}</p>
               {o.link && <Crosslinks links={[o.link]} className="mt-4" />}
             </div>
           ))}
@@ -1365,9 +1385,7 @@ function PassingView() {
           {faPassing.rarely.map((r) => (
             <div key={r.id} className="rounded-xl border border-ink-200/70 bg-raised p-4">
               <h4 className="text-[13.5px] font-bold text-ink-900">{r.title}</h4>
-              <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-600">
-                <FaText text={r.body} />
-              </p>
+              <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-600">{plain(r.body)}</p>
             </div>
           ))}
         </div>
@@ -1387,8 +1405,6 @@ function PassingView() {
 }
 
 /* --------------------------------------------------------------------- page */
-
-const greenCases = greenCount(allCases);
 
 export default function FailureApproach() {
   const { hash } = useLocation();
@@ -1420,7 +1436,8 @@ export default function FailureApproach() {
     <div>
       {/* The band carries the open view's anchor, so every move between views
           lands on the bar with the new view directly under it. Off the
-          overview it drops the lead paragraph, to give the view the room. */}
+          overview it drops the lead paragraph and the sources, to give the
+          view the room. */}
       <section
         id={sub ? id : undefined}
         className="relative scroll-mt-16 overflow-hidden border-b border-ink-200/70 bg-surface"
@@ -1436,32 +1453,34 @@ export default function FailureApproach() {
           >
             {faHeader.title}
           </h1>
-          {!sub && (
-            <p className="mt-2 max-w-3xl text-[14.5px] leading-relaxed text-ink-600">{faHeader.sub}</p>
-          )}
-          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-[11.5px] text-ink-500">
-            <span>{failureCategories.length} failure types</span>
-            <span>{failurePatterns.length} patterns</span>
-            <span>{allCases.length} real cases</span>
-            <span className="inline-flex items-center gap-1 text-gold-700 dark:text-gold-300">
-              <Sparkles size={11} aria-hidden /> {greenCases} from Green Shell runs
-            </span>
-            {sub ? (
+          {sub ? (
+            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-[11.5px] text-ink-500">
+              <span>{failureCategories.length} failure types</span>
+              <span>{failurePatterns.length} patterns</span>
+              <span>{allCases.length} real cases</span>
               <Link
                 to="/failure-approach"
                 className="inline-flex items-center gap-1 font-sans text-[12.5px] font-semibold text-brand-600 hover:text-brand-700 dark:text-brand-300"
               >
                 <LayoutGrid size={13} aria-hidden /> All failure types
               </Link>
-            ) : (
-              <Link
-                to={{ hash: "#your-task" }}
-                className="inline-flex items-center gap-1 font-sans text-[12.5px] font-semibold text-brand-600 hover:text-brand-700 dark:text-brand-300"
-              >
-                Start from what your task has <ArrowDown size={13} aria-hidden />
-              </Link>
-            )}
-          </div>
+            </div>
+          ) : (
+            <>
+              <p className="mt-2 max-w-3xl text-[14.5px] leading-relaxed text-ink-600">{faHeader.sub}</p>
+              <SourcesStrip />
+              <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-[11.5px] text-ink-500">
+                <span>{failureCategories.length} failure types</span>
+                <span>{failurePatterns.length} patterns</span>
+                <Link
+                  to={{ hash: "#your-task" }}
+                  className="inline-flex items-center gap-1 font-sans text-[12.5px] font-semibold text-brand-600 hover:text-brand-700 dark:text-brand-300"
+                >
+                  Start from what your task has <ArrowDown size={13} aria-hidden />
+                </Link>
+              </div>
+            </>
+          )}
           <CategoryBar active={active} />
         </div>
       </section>

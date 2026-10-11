@@ -55,6 +55,24 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "binding-parameters",
+    date: "Oct 11, 2026",
+    kind: "guidelines",
+    what: "All fourteen assigned parameters are binding",
+    where: "Reference → Must Read: Project Updates",
+    why: "The guidelines now assign fourteen parameters, not seven, adding the input and output modalities, the execution target, the verification condition and the access the scenario assumes. Every one has to show in the finished task.",
+    to: "/reference#binding-parameters",
+  },
+  {
+    id: "leg-a-opus-5",
+    date: "Oct 11, 2026",
+    kind: "guidelines",
+    what: "Leg A runs Opus 5",
+    where: "The Method → Model failure",
+    why: "The guidelines changed the Leg A model from GPT to Opus 5. Plan your failure points around how Opus actually fails: the Failure Approach is built from graded Opus runs.",
+    to: "/#failure",
+  },
+  {
     id: "failure-threshold",
     date: "Oct 11, 2026",
     kind: "guidelines",

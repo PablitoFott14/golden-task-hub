@@ -781,22 +781,21 @@ export interface FailureCategory {
 }
 
 /**
- * Where a case comes from. `golden` and `guidelines` are runs on this project:
- * the hub's own Golden Task, and the runs the guidelines record in section 8.2.
- * `openclaw-mm` is the study project closest to Green Shell, and `study` is
- * every other project in the studies.
+ * Where a case comes from. `golden` is the Leg A run of the hub's own Golden
+ * Task, on Opus 5. `openclaw-mm` is the study project closest to Green Shell,
+ * and `study` is every other project in the studies.
  */
-export type CaseSource = "golden" | "guidelines" | "openclaw-mm" | "study";
+export type CaseSource = "golden" | "openclaw-mm" | "study";
 
 /**
  * One real failure. Every field is what the source says happened, never a
  * hypothetical: the request, what the model did, the right answer beside the
- * one it wrote, and what set it off where the source names it.
+ * one it wrote, and what in the task set it off.
  */
 export interface FailureCase {
   id: string;
   source: CaseSource;
-  /** Which Opus, where the source says. */
+  /** Which Opus, as the source states it. */
   model?: string;
   /**
    * Runs of the same task, failed of total, where the project ran it more than
@@ -814,20 +813,31 @@ export interface FailureCase {
   truth?: string;
   /** What the model wrote or did instead. */
   wrote?: string;
-  /** What set it off, where the source names it. */
-  why?: string;
+  /**
+   * Why it failed: what in the task set it off, written from the trap or the
+   * vignette it came from. The trigger a contributor can build, never a guess
+   * at what the model was thinking.
+   */
+  why: string;
   /** The one step that would have caught it, where the source gives one. */
   fix?: string;
-  /** A line the source adds, such as the guidelines' own verdict. */
-  note?: string;
   link?: XLink;
 }
 
 /**
+ * One way to put a pattern's pressure into a Leg A. `from` names the cases on
+ * the same page it is drawn from, which render as links to them; an idea with
+ * no case behind it on the page says where its evidence is in its own words.
+ */
+export interface BuildIdea {
+  text: string;
+  from?: string[];
+}
+
+/**
  * One way Opus fails, with the cases that show it and the moves that build it
- * into a Leg A. Strings may carry `[G x]` and `[Q Group, Dimension]` refs,
- * which render as section badges and Spec Doc links, and `[R …]` / `[C …]`
- * provenance, which never reaches the screen.
+ * into a Leg A. Strings may carry `[G x]`, `[Q …]`, `[R …]` and `[C …]`
+ * brackets, which are provenance and never reach the screen.
  */
 export interface FailurePattern {
   /** The hash anchor every link targets. */
@@ -840,10 +850,10 @@ export interface FailurePattern {
   happens: string;
   /** What the data says about why, one or two points. */
   why: string[];
-  /** Green Shell first, then OpenClaw MM, then the runs that repeat most. */
+  /** The Golden Task first, then OpenClaw MM, then the runs that repeat most. */
   cases: FailureCase[];
   /** Ways to build the same pressure into a Green Shell Leg A. */
-  build: string[];
+  build: BuildIdea[];
   /** What keeps it a real failure rather than a manufactured one. */
   fair: string[];
   /** What it looks like in the trajectory. */

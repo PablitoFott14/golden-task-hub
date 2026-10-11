@@ -165,7 +165,7 @@ export const searchIndex: SearchEntry[] = [
     {
       kind: "Golden task",
       title: "The assigned parameters",
-      hint: "All seven, and what each one binds",
+      hint: "The seven it was assigned, and what each one binds",
       to: `/golden-tasks/${t.meta.id}#parameters`,
       terms: [
         t.parameters.map((x) => `${x.label} ${x.value} ${x.binds}`).join(" "),

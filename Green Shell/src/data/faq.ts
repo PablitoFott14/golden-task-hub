@@ -22,7 +22,7 @@ export const faq: FaqItem[] = [
       { section: "1.2.5", title: "Common Scenario Issues Getting Tasks Rejected" },
     ],
     links: [
-      { to: "/#draft-history", tag: "M4", label: "Say why the agent is there, not what to type" },
+      { to: "/#draft-history", tag: "M6", label: "Say why the agent is there, not what to type" },
       { to: `${GT}#prompt`, tag: "GT", label: "disputes.html asked for by name, with a reason" },
     ],
   },
@@ -58,7 +58,7 @@ export const faq: FaqItem[] = [
       { section: "1.2.2", title: "Select the Multimodal Inputs" },
       { section: "2.2", title: "Upload Folders" },
     ],
-    links: [{ to: "/#inputs", tag: "M2", label: "Attach what the person would actually have" }],
+    links: [{ to: "/#inputs", tag: "M4", label: "Attach what the person would actually have" }],
   },
   {
     n: 4,
@@ -74,7 +74,7 @@ export const faq: FaqItem[] = [
       { section: "7.2", title: "Steering the Run and Hinting" },
     ],
     links: [
-      { to: "/#golden", tag: "M8", label: "Point at the intent, never at the answer" },
+      { to: "/#golden", tag: "M9", label: "Point at the intent, never at the answer" },
       { to: `${GT}#golden`, tag: "GT", label: "How a misread $8.74 was recovered without naming it" },
     ],
   },
@@ -92,7 +92,7 @@ export const faq: FaqItem[] = [
       { section: "1.2.2", title: "Select the Multimodal Inputs" },
     ],
     links: [
-      { to: "/#universe", tag: "M1", label: "Go find the story, do not invent one" },
+      { to: "/#universe", tag: "M2", label: "Go find the story, do not invent one" },
       { to: `${GT}#universe`, tag: "GT", label: "Four services, and neither modality decorative" },
     ],
   },
@@ -144,7 +144,7 @@ export const faq: FaqItem[] = [
       { section: "8.2", title: "Subjective Rubric Weights" },
     ],
     links: [
-      { to: "/#subjective", tag: "M9", label: "Judge the render, nothing the prompt asked for" },
+      { to: "/#subjective", tag: "M10", label: "Judge the render, nothing the prompt asked for" },
       { to: "/reference#s6", tag: "F2", label: "Weights measure impact, not difficulty" },
     ],
   },
@@ -182,7 +182,7 @@ export const faq: FaqItem[] = [
       { section: "2.2", title: "Upload Folders" },
     ],
     links: [
-      { to: "/#inputs", tag: "M2", label: "Attach what the person would actually have" },
+      { to: "/#inputs", tag: "M4", label: "Attach what the person would actually have" },
       { to: "/reference#s2", tag: "B2", label: "Take the attachments away" },
       { to: `${GT}#inputs`, tag: "GT", label: "Nine files, and the fact each one carries" },
     ],

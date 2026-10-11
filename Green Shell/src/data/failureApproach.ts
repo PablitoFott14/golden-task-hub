@@ -1,5 +1,6 @@
 import type {
   CaseSource,
+  FailureCase,
   FailureCategory,
   FailureCategoryId,
   FailurePattern,
@@ -22,11 +23,14 @@ import type {
  *   the scenario ideas, the fairness rules and the "Model A passed" diagnosis
  *   were first worked out against the guidelines.
  *
- * Two more sources are this project's own: the guidelines' section 8.2, which
- * records what the model did in real Green Shell runs [G 8.2], and the hub's
- * Golden Task, whose Model A run is `run.observations` in
- * `tasks/chargeDisputes.ts`. Those twelve cases carry the `golden` and
- * `guidelines` sources and come first in every pattern that has one.
+ * One more source is this project's own: the hub's Golden Task, whose Model A
+ * run is `run.observations` in `tasks/chargeDisputes.ts`. Its trajectory names
+ * the model, `claude-opus-5`, which is the model the guidelines give Leg A
+ * (section 3, "Leg A (Opus 5 leg)"). Those six cases carry the `golden` source
+ * and come first in every pattern that has one. The runs the guidelines record
+ * in section 8.2 were cases here once and are not any more: they are the
+ * guidelines' summary of a run, with no ask and no right answer, and every
+ * case on the page has to be a graded run with both.
  *
  * **Every case is a real run.** Ask, did, truth and wrote are what the source
  * says happened, paraphrased into the hub's copy rules and never extended: a
@@ -34,6 +38,14 @@ import type {
  * case whose source gives no right answer carries none. Names and records in
  * the study cases come from synthetic task data. Quoted model output keeps its
  * wording, except where the source used an em dash, which is reworded around.
+ *
+ * **`why` is the trigger in the task, never a guess at the model's state.** It
+ * is written from the cheat sheet trap's own recipe (what the task writer put
+ * in the environment) or from the report vignette's mechanism and its "when it
+ * happens" list, and for the Golden Task from its designed friction points.
+ * **A build idea names the cases it comes from** in `from`, which the page
+ * renders as links to those cases; an idea with no case behind it on the same
+ * page says where its evidence is in its own words.
  *
  * **Selection.** The studies hold 17 capabilities and 85 traps. What is here is
  * what applies to a Green Shell Leg A: an assigned universe, your own
@@ -43,49 +55,56 @@ import type {
  * passed" view lists as what rarely pays off. Hints and Leg B are not here at
  * all: this tab is about making Model A fail.
  *
- * Citation brackets follow the old convention so the page's text layer stays
- * small: `[G x]` renders as a section badge, `[Q Group, Dimension]` as a link
- * to its Spec Doc card, and `[R …]` / `[C …]` never reach the screen.
+ * Citation brackets are provenance only: `[G x]`, `[Q Group, Dimension]`,
+ * `[R …]` and `[C …]` say where a line comes from and never reach the screen,
+ * because a section number tells a contributor nothing they can act on.
  */
 
 const GT = "/golden-tasks/charge-disputes";
 const gtRun: XLink = { to: `${GT}#model-a`, tag: "GT", label: "This run in the Golden Task" };
+
+/**
+ * The model Leg A runs, as guidelines section 3 names it. Cases on this
+ * version are marked on the page, because they are the closest evidence a
+ * contributor has for their own run.
+ */
+export const legAModel = "Opus 5";
 
 /* -------------------------------------------------------------------- page */
 
 export const faHeader = {
   eyebrow: "Failure Approach",
   title: "Where Opus really breaks",
-  sub: "Real failures from graded runs: what Opus was asked, what it did instead, and why. Each pattern comes with ways to put the same pressure into your own Leg A, and the test that keeps the failure real.",
+  sub: "Leg A runs Opus 5. These are real failures from graded Opus runs: what it was asked, what it did instead, and why it failed. Each pattern ends with ways to build the same pressure into your own Leg A, and the test that keeps the failure real.",
 };
 
 /** The one test every failure point has to pass, said once on the way in. */
 export const faPrinciple = {
   title: "A failure only counts if a careful agent would have passed",
-  body: "Same prompt, same inputs, same tools: the evidence was reachable, the request was clear, and nothing was hidden, broken or forced. Every pattern carries its own version of that test. [G 4]",
+  body: "Same prompt, same inputs, same tools: the evidence was reachable, the request was clear, and nothing was hidden, broken or forced. Every pattern carries its own version of that test, under Keep it a real failure. [G 4]",
   links: [
     { to: "/#failure", tag: "M7", label: "Not every failure is yours to keep" },
     { to: "/spec#dim-valid-model-failure", tag: "QC", label: "Valid Model Failure" },
   ] as XLink[],
 };
 
-/** How the cases are labeled, for the legend above them. */
+/**
+ * How a case names where it comes from, beside its model. A study case outside
+ * OpenClaw MM carries no label: its model and its runs are what a contributor
+ * can use, and the project behind it is not.
+ */
 export const sourceLabel: Record<CaseSource, { label: string; hint: string }> = {
   golden: {
-    label: "Green Shell · Golden Task",
-    hint: "The Model A run of the hub's Golden Task, on this project.",
-  },
-  guidelines: {
-    label: "Green Shell · guidelines",
-    hint: "A run the guidelines record in section 8.2, which says both models share the weakness.",
+    label: "Golden Task",
+    hint: "The Leg A run of the hub's own Golden Task, on Opus 5.",
   },
   "openclaw-mm": {
     label: "OpenClaw MM",
-    hint: "The study project closest to Green Shell: multimodal, all on Opus 4.6, one graded run per task.",
+    hint: "The study project closest to Green Shell: multimodal tasks on Opus 4.6, one graded run each.",
   },
   study: {
-    label: "Study run",
-    hint: "One of the other four agent projects in the studies.",
+    label: "",
+    hint: "One of the four other agent projects in the studies.",
   },
 };
 
@@ -144,7 +163,7 @@ export const failureCategories: FailureCategory[] = [
     // [C Multimodal: every incident a single graded Opus 4.6 run]; [R 3.9: part
     // of each error may belong to the image tool]; [G 8.2: views images directly].
     caveat:
-      "The study cases here are Opus 4.6 runs, nearly all graded once, and the studies hold no repeat data for reading media. Those runs saw images through a description tool, so part of each error may belong to the tool; in Green Shell the model views images itself. What carries over is the trust in a first read, and the Golden Task shows it still happens.",
+      "The study cases here are Opus 4.6 runs, nearly all graded once, and the studies hold no repeat data for reading media. Those runs saw images through a description tool, so part of each error may belong to the tool; in Green Shell the model views images itself. What carries over is the trust in a first read, and the Golden Task's Opus 5 run shows it still happens.",
   },
   {
     id: "trusting",
@@ -241,6 +260,7 @@ export const failurePatterns: FailurePattern[] = [
         // run.observations[2], "The record it never looked at"; GTFA El Dorado line.
         id: "calendar-never-checked",
         source: "golden",
+        model: "Opus 5",
         title: "The calendar it never checked",
         ask: "Check her May to July charges against her receipt photos and “any purchase evidence you can find on my registers”, and work out which ones to dispute.",
         did: "Its calendar lookups never covered Jun 25 to 28, and it never searched for El Dorado. The receipt agreed with the bank, so it cleared the charge.",
@@ -248,15 +268,6 @@ export const failurePatterns: FailurePattern[] = [
         wrote: "$186.00 cleared as “Matches”.",
         why: "Two sources agreed, so the one that settles it was never opened.",
         link: gtRun,
-      },
-      {
-        // [G 8.2] Unreliable: "Opening a connected service at all".
-        id: "tools-loaded",
-        source: "guidelines",
-        title: "282 service tools, loaded and waiting",
-        ask: "A Green Shell run with the universe connected: 282 service tools across fourteen servers.",
-        did: "The guidelines list opening a connected service at all as the first thing the model does unreliably, for both models.",
-        note: "“This is the default, not an edge case. It costs you nothing to arrange, because it happens on its own.”",
       },
       {
         // [R 3.1] vignette, OpenClaw MM, "Source never queried · Proxy trust".
@@ -268,6 +279,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Made zero email or calendar queries. It had planned a record lookup only for the one system the spec named, so it took the note's size and dropped the “i think”.",
         truth: "11×14, from the Framebridge order confirmation sitting unread in the inbox.",
         wrote: "12×16, with the hedge stripped.",
+        why: "The spec named one system, and the user's own note already held a size, so the inbox that held the real one was never searched.",
         fix: "One email search for “Framebridge” before the crop.",
       },
       {
@@ -281,14 +293,14 @@ export const failurePatterns: FailurePattern[] = [
         did: "The lender email, the title statement and Stripe each held an overage, and it found those. Three of the four failing runs never pulled the QuickBooks bills, and carried the disclosed $20 forward as “no change of record”.",
         truth: "$442.50 owed back. The flood certification actually cost $30.00, recorded only as one QuickBooks bill.",
         wrote: "$432.50, in the file note, the email and the Slack hold.",
+        why: "Three sources each gave up a real overage, and the last one was recorded only as a single bill in a fourth.",
       },
     ],
     build: [
-      "Let the request imply a service without naming it. The Golden Task's prompt points at her accounts, mail and calendar as “any purchase evidence you can find on my registers”; “right after my usual team meeting” can only be answered from the calendar.",
-      "Let the user's note carry a hedged value, “the 12x16 i think”, while the universe holds the record that settles it: an order confirmation, a booking, a receipt.",
-      "Let a value in the media lead to a record only a service holds: the serial number on a product label finds the CRM record and its history. The guidelines use this as their example of strong reconciliation. [G 1.2.2]",
-      // [R 3.1] FreshDirect vignette and lessons.
-      "Let the user say a source is incomplete, “the app doesn't seem to show everything”. In one study run the user said exactly that, and Opus still made the app its whole investigation.",
+      { text: "Let the request imply a service without naming it. The Golden Task's prompt points at her accounts, mail and calendar as “any purchase evidence you can find on my registers”; “right after my usual team meeting” can only be answered from the calendar.", from: ["calendar-never-checked"] },
+      { text: "Let the user's note carry a hedged value, “the 12x16 i think”, while the universe holds the record that settles it: an order confirmation, a booking, a receipt.", from: ["frame-in-inbox"] },
+      { text: "Let every source the request points at give up a real finding, and keep one last value in a record only one of them holds, so the run feels complete before it is.", from: ["bill-nobody-pulled"] },
+      { text: "Let the user say a source is incomplete, “the app doesn't seem to show everything”. In one study run the user said exactly that, and Opus still made the app its whole investigation." },
     ],
     fair: [
       "The service must be assigned and loaded. A partial load is an environment defect, never a model failure, and a service outside your assigned tools is drift. [G 1.2.1; G 1.1.2]",
@@ -326,6 +338,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Read the channel history four times and opened only an old intro thread. The newest top level message read like a live test; a reply two days later, in a thread of seven, said “Stopped the test today”.",
         truth: "Stopped on 2026-02-13, with a review call still owed.",
         wrote: "“Live”, in both the write up and the card.",
+        why: "The channel's top level history told a coherent story, and the reversal sat in a reply only a thread read shows.",
       },
       {
         // [C Information seeking, trap 1]
@@ -338,6 +351,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Searched the phrase once against the inbox, got title company mail, decided it was “not mine to read”, and declared the wait “not determinable”. The 74 delivery dates sat in the processors' sent folders.",
         truth: "Three files closed short of the wait, LN-2024-00057 by three business days.",
         wrote: "Zero violations.",
+        why: "The search tool looked in the inbox by default, and the records that settle it were outgoing mail.",
       },
       {
         // [C Synthesis, trap 3]
@@ -350,6 +364,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Never opened an evening Slack thread to its end. The thread ran from a rejection at 21:03 to “campaign on” at 21:37. It sided with a colleague's message, and even filed a ticket about the live ad's wrong store link without seeing the contradiction.",
         truth: "The playable ad shipped and is live.",
         wrote: "“The playable is genuinely unfinished, and Robert is right.”",
+        why: "An official sounding message stated one outcome, a reply later in the same thread reversed it, and a colleague's claim agreed with the stale one.",
       },
       {
         // [R 3.15] vignette, OpenClaw MM; [C Faithful extraction, trap 4].
@@ -362,14 +377,27 @@ export const failurePatterns: FailurePattern[] = [
         did: "Printed every sheet in one call, used only the first, whose header read “Daily calorie target: 2000”, and declared “Now I have everything”.",
         truth: "The second worksheet sets the target at 1,800: the very conflict the user wanted flagged.",
         wrote: "No mention, in the CSV or the summary.",
+        why: "The first sheet was long and already stated a value, so one dump of the whole workbook buried the short sheet behind it.",
         fix: "List the sheet names first, then read each sheet in its own call.",
+      },
+      {
+        // [C Information seeking, trap 3], second example.
+        id: "halvings-in-thread",
+        source: "study",
+        model: "Opus 5",
+        runs: { failed: 3, of: 6 },
+        title: "The halvings in the thread",
+        ask: "Reconcile the coins agreed with players in a channel against the ledger.",
+        did: "Pulled the thread replies filtered to one colleague's user ID, and never saw another colleague's four replies halving the amounts.",
+        wrote: "The agreed total, misreported.",
+        why: "The changes that set the total were replies by someone other than the person it filtered on.",
       },
     ],
     build: [
-      "During exploration, look for what your universe already keeps one level down: a thread where a later reply reverses the top message, an email that exists only in Sent, a record whose detail holds fields the list lacks. Build on one you found.",
-      "Make the question about the current or final state: “where did we land on…”, “what did we actually agree”.",
-      "In your own inputs, a multi page document or a workbook you built yourself, with the deciding part off the first page or sheet. Never an LLM generated .pdf, .docx, .xlsx or .csv. [G 1.2.2]",
-      "Lean on threads, sent mail and second sheets before pagination: unfetched result pages showed up in only 2% of OpenClaw MM tasks with failures. [R 4]",
+      { text: "During exploration, look for what your universe already keeps one level down: a thread where a later reply reverses the top message, an email that exists only in Sent, a record whose detail holds fields the list lacks. Build on one you found.", from: ["reply-stopped-test", "dates-in-sent", "thread-not-finished"] },
+      { text: "Make the question about the current or final state: “where did we land on…”, “what did we actually agree”.", from: ["reply-stopped-test", "halvings-in-thread"] },
+      { text: "In your own inputs, a multi page document or a workbook you built yourself, with the deciding part off the first page or sheet. Never an LLM generated .pdf, .docx or .xlsx. [G 1.2.2]", from: ["second-worksheet"] },
+      { text: "Lean on threads, sent mail and second sheets before pagination: unfetched result pages showed up in only 2% of OpenClaw MM tasks with failures. [R 4]" },
     ],
     fair: [
       "The deeper level must be reachable with the agent's tools: a thread tool, a folder parameter, paging.",
@@ -388,23 +416,14 @@ export const failurePatterns: FailurePattern[] = [
     id: "convenient-set",
     category: "looking",
     name: "Builds the set from a convenient filter",
-    line: "Asked for every item, it builds the set from one filter, one status or the files in the folder.",
+    line: "Asked for every item, it builds the set from one filter: one entity, one vendor, one status.",
     happens:
-      "Asked for “every” item of some kind, Opus builds the set from a handy proxy: one entity, one vendor, one status, or the files in the input folder. Part of what is in scope is never examined, and the total still looks complete.",
+      "Asked for “every” item of some kind, Opus builds the set from a handy proxy: one entity, one vendor, one status. Part of what is in scope is never examined, and the total still looks complete.",
     why: [
       "A set scoped by a convenient filter is a small share of failures, 3% of the misses in finding evidence, but the cases repeat in most runs. [R 3.1; C Information seeking, trap 5]",
       "An in between status, approved or scheduled, sounds resolved while the request still covers everything unpaid or undelivered. [C Quantitative reasoning, trap 3]",
     ],
     cases: [
-      {
-        // [G 8.2] Unreliable: "Separating in the folder from in scope".
-        id: "invoice-in-folder",
-        source: "guidelines",
-        title: "The invoice in the folder",
-        ask: "The prompt defined a set of vendors in one place, and the input folder held an invoice.",
-        did: "It took the attached invoice as proof the vendor belonged to a set the prompt had defined somewhere else entirely.",
-        note: "“Where membership comes from one source and evidence from another, it will not reconcile the two unaided.”",
-      },
       {
         // [C Information seeking, trap 5]
         id: "other-entity",
@@ -416,6 +435,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "A broad query overflowed to a file it never opened, so it queried again with one entity filter, found 7 invoices, and never met the 10 belonging to the other entity, none of them with an approver.",
         truth: "10 more invoices, $653,393.14, under the other entity.",
         wrote: "7 invoices and $10,179.20, in the memo, the partner email, the Slack post and the ownership emails.",
+        why: "The data offered an entity filter that covered part of the set, and the largest items sat outside it.",
       },
       {
         // [C Quantitative reasoning, trap 3]
@@ -428,6 +448,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "The pull returned all ten invoices with their statuses. It defined open as pending approval and dropped the two that were approved but unpaid.",
         truth: "7 open invoices, $10,354.25: 5 pending approval, 2 approved but unpaid.",
         wrote: "5 invoices, $8,260.52.",
+        why: "An in between status sounded resolved, and the prompt's own story counted only the other status.",
       },
       {
         // [C Information seeking, trap 5]
@@ -440,21 +461,21 @@ export const failurePatterns: FailurePattern[] = [
         did: "Selected the bills by appraiser vendor.",
         truth: "A $391 appraisal line for Harris, filed under Tryon Title & Escrow.",
         wrote: "Missing, in every run.",
+        why: "Bills were easy to select by vendor, and one appraisal line was filed under a title company.",
       },
     ],
     build: [
-      "Write the membership rule in your input, a policy page, a list in a photo, a sentence in a voice note, so an item you found during exploration falls outside the convenient filter. Check with a query that the filter really misses it.",
-      "Make the item outside the filter large enough to change the headline.",
-      "Let an in between status sound resolved while the request still covers it: approved but unpaid, scheduled but not delivered.",
-      "Put a file in the input folder for an item the rule excludes, so membership and evidence come from different places. [G 8.2]",
+      { text: "Write the membership rule in your input, a policy page, a list in a photo, a sentence in a voice note, so an item you found during exploration falls outside the convenient filter. Check with a query that the filter really misses it.", from: ["other-entity", "appraisal-other-vendor"] },
+      { text: "Make the item outside the filter large enough to change the headline.", from: ["other-entity"] },
+      { text: "Let an in between status sound resolved while the request still covers it: approved but unpaid, scheduled but not delivered.", from: ["open-meant-pending"] },
     ],
     fair: [
       "Word the request so the wide reading is the only defensible one: “every open invoice”, “the full exposure”, “still unpaid”. A request that only says “pending” makes the narrower set defensible.",
     ],
     spot: [
       "A total that matches a filter, not the rule.",
-      "A set whose size equals the number of files in the input folder.",
-      "An item counted only because its file sits in the input folder.",
+      "One query with an entity, a vendor or a status filter, where the rule named none.",
+      "An in between status counted out of the set, or mentioned only in passing.",
     ],
     fits: ["rule", "per-item", "records", "document"],
   },
@@ -471,15 +492,6 @@ export const failurePatterns: FailurePattern[] = [
     ],
     cases: [
       {
-        // [G 8.2] Unreliable: "Testing before it declares something unavailable".
-        id: "channel-no-access",
-        source: "guidelines",
-        title: "The channel it said it could not reach",
-        ask: "A Green Shell run with the Slack tools loaded.",
-        did: "It answered “I do not have access to your executives channel from here”, with slack_search_channels and slack_health sitting in its own tool list.",
-        note: "Grade what the missing lookup costs the deliverable, the value absent or wrong in the artifact, never evidence of having looked.",
-      },
-      {
         // [C Verification, trap 1]
         id: "clearance-case-number",
         source: "study",
@@ -490,6 +502,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "The obvious thread ended on an open question, and its searches for “Acme wire” came back empty. The completion report and both clearances sat in a case thread and an email thread, reachable by the entry number.",
         truth: "Partner clearance by Steven Perry is on record.",
         wrote: "“No disposition was ever reached”, in the close out memo.",
+        why: "The obvious thread ended on an open question, keyword searches came back empty, and the clearances answered only to the entry number.",
       },
       {
         // [C Verification, trap 1]
@@ -502,6 +515,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Searched the CRM companies for “DeLuca”, got zero results, and never tried the contact “Frank DeLuca”, whose name it already held.",
         truth: "The engagement notes, filed under the contact.",
         wrote: "Nothing from them.",
+        why: "A company search came back empty, and the notes were filed under a person whose name it already held.",
       },
       {
         // [R 3.13] vignette, OpenClaw MM; [C Tool use, trap 1].
@@ -513,13 +527,14 @@ export const failurePatterns: FailurePattern[] = [
         did: "The image tool errored on the video's thumbnail. Without mentioning the error, it picked the first recipe in the file.",
         truth: "Chicken Soup, the one the video shows.",
         wrote: "Vegetable Soup, the file's first entry.",
+        why: "The image tool failed on the one input that decided between the recipes, and the text file offered a first one to fall back on.",
         fix: "Pull a frame from the video and look at it another way before choosing.",
       },
     ],
     build: [
-      "Let the user refer to something the way people do, by a nickname or a description, while the record is filed under an identifier that appears in the media: a reference number on a receipt photo, an order number on a box label.",
-      "Let the obvious thread end on an open question, with the answer in a reply or a second system reachable by an identifier the agent already holds.",
-      "Put a plausible first candidate in a text list beside a photo or a video that decides between the candidates. If the media read fails, the first item is the tempting default.",
+      { text: "Let the user refer to something the way people do, by a nickname or a description, while the record is filed under an identifier that appears in the media: a reference number on a receipt photo, an order number on a box label.", from: ["name-already-held", "clearance-case-number"] },
+      { text: "Let the obvious thread end on an open question, with the answer in a reply or a second system reachable by an identifier the agent already holds.", from: ["clearance-case-number"] },
+      { text: "Put a plausible first candidate in a text list beside a photo or a video that decides between the candidates. If the media read fails, the first item is the tempting default.", from: ["soup-video"] },
     ],
     fair: [
       "Leave a cue that tells a wrong query from a true absence: an identifier already in hand, a second system, a count.",
@@ -548,11 +563,13 @@ export const failurePatterns: FailurePattern[] = [
         // run.observations[1], "A first read it never went back to"; GTFA Carlos O'Kelly's line.
         id: "slip-cropped-twice",
         source: "golden",
+        model: "Opus 5",
         title: "The slip it cropped twice",
         ask: "Check her May to July charges against her receipt photos and “any purchase evidence you can find on my registers”, and work out which ones to dispute.",
         did: "Cropped the restaurant slip at tool calls 36 and 37 and recorded “Amount $18.74 + tip $5.25, total written $23.99”, $18.74 being what the bank charged. It concluded the restaurant never captured the tip.",
         truth: "Dispute $4.75: a printed base of $8.74 plus a $5.25 tip, signed at $13.99.",
         wrote: "“Nothing owed”.",
+        why: "The slip was upside down with a fold across the amount line, and the first read matched the bank's figure, so the dispute disappeared.",
         link: gtRun,
       },
       {
@@ -565,6 +582,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "The weight for one criterion read 3, struck through, then 2 written beside it, then a circled 5 marked “this matters most”. It took the 2.",
         truth: "A weight of 5, so Set A wins 21 to 17.",
         wrote: "A weight of 2, Set B the winner 17 to 13, and outreach drafted to the wrong designer.",
+        why: "The value went through a chain of corrections, struck, rewritten, then circled as final, and the final one flipped the result.",
       },
       {
         // [C Multimodal, trap 1]
@@ -576,12 +594,13 @@ export const failurePatterns: FailurePattern[] = [
         did: "The note had “deep purple / indigo” and “Ask Trevor for design help” crossed out. It caught one revision and missed those two.",
         truth: "Neither crossed out item in the brief.",
         wrote: "The crossed out palette as the primary one in cover_art_brief.md.",
+        why: "One handwritten page carried more than one crossing out, and each of them changed the brief.",
       },
     ],
     build: [
-      "A whiteboard or notes photo where a value was crossed out and replaced because the plan changed, and the final value flips the outcome.",
-      "A figure written by hand over a printed one: a tip and a signed total on a slip, a corrected quantity on a delivery note.",
-      "A correction chain, struck, rewritten, then circled as final, with the convention said in the user's words: “including anything I fixed in pen”.",
+      { text: "A whiteboard or notes photo where a value was crossed out and replaced because the plan changed, and the final value flips the outcome.", from: ["crossed-out-palette", "circled-five"] },
+      { text: "A figure written by hand over a printed one: a tip and a signed total on a slip, a corrected quantity on a delivery note.", from: ["slip-cropped-twice"] },
+      { text: "A correction chain, struck, rewritten, then circled as final, with the convention said in the user's words: “including anything i fixed in pen”.", from: ["circled-five"] },
     ],
     fair: [
       "Export each image at its upload size, 1080p or lower, open it at 100% and read the deciding value yourself. If you have to zoom or guess, a reviewer will call it unreadable. [G 1.2.2; G 1.2.5]",
@@ -612,6 +631,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Eyeballed “~30 toppers” and “~12 erasers”, then wrote 30 and 12 as exact figures.",
         truth: "28 toppers and 15 erasers.",
         wrote: "30 and 12, so the flag string was wrong.",
+        why: "Items stacked and overlapped, and an exact count crossed a threshold that changed a literal flag.",
       },
       {
         // [R 3.9]; [C Multimodal, traps 2 and 5]
@@ -623,6 +643,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Read three stacked sticky pads as one block and missed a lone blister pack. It saw a Pikachu figure had gone and never connected it to the note's “Charger 1”.",
         truth: "All five items reconcile, and one charger was taken.",
         wrote: "Four of the five items mismatched, and chargers taken = 0.",
+        why: "One object looked like something else, and stacked items read as one block.",
       },
       {
         // [C Multimodal, trap 5]
@@ -634,12 +655,13 @@ export const failurePatterns: FailurePattern[] = [
         did: "Took the teacher's picture clues, one per item and drawn in the same ink as the printed words, for the child's doodles.",
         truth: "The drawings belong to the printed worksheet.",
         wrote: "That she filled the page with drawings instead of working.",
+        why: "The teacher's picture clues were drawn in the same ink as the printed words, so who drew them was ambiguous at a glance.",
       },
     ],
     build: [
-      "A photo where an exact count decides something: stock on a shelf, items packed, seats taken. Make a miscount of one or two change the output.",
-      "Items that overlap, stack or sit in clutter.",
-      "A look alike whose identity changes a count or a verdict: a charger shaped like a toy.",
+      { text: "A photo where an exact count decides something: stock on a shelf, items packed, seats taken. Make a miscount of one or two change the output.", from: ["toppers"] },
+      { text: "Items that overlap, stack or sit in clutter.", from: ["toppers", "charger-toy"] },
+      { text: "A look alike whose identity changes a count or a verdict: a charger shaped like a toy, a teacher's drawing that reads as a child's doodle.", from: ["charger-toy", "teachers-drawings"] },
     ],
     fair: [
       "Count it yourself at upload size. If the items cannot be told apart at that size, it is a data problem, not a perception failure.",
@@ -669,6 +691,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Made one image call, got a confident description of the trace, and wrote it down with no second pass.",
         truth: "1→4, 2→1, 3→2, 4→3.",
         wrote: "1→2, 2→3, 3→1, 4→4: zero of four correct.",
+        why: "Tangled paths on a hand drawn diagram, where one sweep gives a confident trace that is wrong.",
       },
       {
         // [R 3.14] vignette, OpenClaw MM, "Confirmation bias toward the user's premise".
@@ -680,6 +703,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Two reads of the same image disagreed on which side of the vertical line was shaded. After a second, leading question, it took the read that matched the student's answer.",
         truth: "Shaded to the right of the line, so her answer is wrong.",
         wrote: "The exercise marked correct.",
+        why: "Two reads of the image disagreed, and the student's own answer offered a side to agree with.",
         fix: "One neutral question, left or right, before marking it correct.",
       },
       {
@@ -692,12 +716,13 @@ export const failurePatterns: FailurePattern[] = [
         did: "Worked from a text extraction of the blueprint.",
         truth: "The deep shade cell of Bed B sits bottom right: south east, with north up.",
         wrote: "Drawn in the north east corner.",
+        why: "The answer was a corner read against a north arrow, and a text extraction of the blueprint was the easier path.",
       },
     ],
     build: [
-      "A floor plan or a map where a position decides the answer: which room, which corner, which side.",
-      "A chart where reading the right series, by color or by gridline, sets a value the task uses.",
-      "A hand drawn diagram with crossing paths.",
+      { text: "A floor plan or a map where a position decides the answer: which room, which corner, which side.", from: ["garden-corner", "shaded-side"] },
+      { text: "A hand drawn diagram with crossing paths.", from: ["four-wires"] },
+      { text: "A chart where reading the right series, by color or by gridline, sets a value the task uses. Misread chart series are 8% of media failures in the studies." },
     ],
     fair: ["Check the position yourself at upload size, and keep the north arrow or the legend the reading depends on in frame."],
     spot: [
@@ -719,15 +744,6 @@ export const failurePatterns: FailurePattern[] = [
     ],
     cases: [
       {
-        // [G 8.2] Works, but costs turns: "Trusting OCR over its own eyes".
-        id: "logo-ocr",
-        source: "guidelines",
-        title: "The logo OCR got wrong",
-        ask: "A Green Shell run with an image carrying a vendor's logo, which the model had already viewed directly.",
-        did: "OCR rendered the logo as “Eis Meetpsrre”. It went with that and issued a receipt for an unnamed vendor.",
-        note: "This is where a criterion on a value read off the media genuinely discriminates, which is also why the value has to be legible at full size.",
-      },
-      {
         // [C Multimodal, trap 4]; [R 3.9 triggers].
         id: "rule-only-spoken",
         source: "study",
@@ -737,6 +753,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "The instructor added two categories and a route to Tier 3 in speech only. It transcribed with the smallest Whisper model piped through tail -20, saw only the garbled last 1:40 of a 3:44 recording, and worked from the printed page.",
         truth: "Tier 3: a household with 15 or more weeks of food assistance is Tier 3, whatever its ratio.",
         wrote: "Tier 2.",
+        why: "The rule lived only in the recording, and the printed workbook seemed to cover the same ground.",
       },
       {
         // [C Faithful extraction, trap 3]
@@ -748,13 +765,13 @@ export const failurePatterns: FailurePattern[] = [
         did: "Ran a text only PDF tool twice and accepted its table, built from a note at the foot of the page, “I like the first 3. and the last one”. It never rendered the pages, even after the tool said it could not see visual elements.",
         truth: "Red X marks on Products 4, 7, 8 and 11.",
         wrote: "Products 1, 2, 3 and 12, in the CSV, the email and the reply.",
+        why: "The real picks were marks on the page, and the text layer carried a plausible note that was wrong.",
       },
     ],
     build: [
-      "The deciding rule or correction spoken in a voice note and written nowhere else: “take 0.5% a year off every mix for fees”.",
-      "A printed form or list with marks made by hand that select items, beside a typed note that seems to answer the same question.",
-      "A recording longer than a minute, with the key line away from the end.",
-      "A logo, a stamp or a label in a photo that a person reads at once and OCR would garble.",
+      { text: "The deciding rule or correction spoken in a voice note and written nowhere else: “take 0.5% a year off every mix for fees”.", from: ["rule-only-spoken"] },
+      { text: "A recording longer than a minute, with the key line away from the end.", from: ["rule-only-spoken"] },
+      { text: "A printed form or list with marks made by hand that select items, beside a typed note that seems to answer the same question.", from: ["x-marks"] },
     ],
     fair: [
       "Keep audio clear, MP3 at 64 kbps, and well under 5 to 10 minutes, so a miss is the model's choice, not a timeout. [G 1.2.2; G 4]",
@@ -785,11 +802,13 @@ export const failurePatterns: FailurePattern[] = [
         // run.observations[0], "The receipt it had already opened"; GTFA Hobby Lobby line.
         id: "receipt-already-opened",
         source: "golden",
+        model: "Opus 5",
         title: "The receipt it had already opened",
         ask: "Check her May to July charges against her receipt photos and the purchase evidence in her records, and work out which ones to dispute.",
         did: "Opened the receipt at tool call 3 and found the store's 40% sale email at tool call 52, then cleared the charge as “all at 40% off, $17.39 saved”. The receipt's own savings line agreed with its wrong total.",
         truth: "Dispute $17.20: two of the four cotton lines printed “40% OFF 0.00”.",
         wrote: "Cleared as matching.",
+        why: "The receipt totals exactly what the bank charged, and its own savings line agrees with the wrong total.",
         link: gtRun,
       },
       {
@@ -802,6 +821,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Had every clue, including a final banner file noted “name fixed per eric”, and never compared the cover with the two banner files.",
         truth: "The cover reproduces the superseded three word banner, under the caption “Final shop banner as delivered”.",
         wrote: "No correction to the cover.",
+        why: "The claim was a picture with a caption rather than a sentence, so reading the text never tested it.",
         fix: "One targeted look: which banner file matches the cover, and what each wordmark says.",
       },
       {
@@ -814,6 +834,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "When the call on all eleven images timed out, it retried in batches of 5 and 6, asked each image what it showed, and never asked which ones share a design.",
         truth: "Five photos showing two different designs.",
         wrote: "“1 Commit 250 t-shirt design”, and one design's front sent with the other design's back.",
+        why: "Each image was asked what it showed, never which ones match, and the batch was split across calls.",
         fix: "One comparative call on the five photos: which share a print, and which front pairs with which back.",
       },
       {
@@ -827,13 +848,14 @@ export const failurePatterns: FailurePattern[] = [
         did: "Its own read of parking_photo.jpg said staining and no pothole. It matched the photo to the “Parking lot pothole” order anyway.",
         truth: "Staining and no pothole, as its own read said.",
         wrote: "Matched to the pothole order, and the vendor emailed.",
+        why: "An open work order's title offered a match, against its own read of the photo.",
       },
     ],
     build: [
-      "A draft, listing or flyer whose claims the photos can confirm or refute: “hardwood floors throughout”, beside a photo of carpet in the main bedroom.",
-      "A receipt photo whose printed lines must be checked against a sale, a quote or an agreed price held in the universe.",
-      "Several photos of similar items that the deliverable needs grouped or paired: two versions of a product, fronts and backs.",
-      "Natural, uninformative filenames such as IMG_6506.jpg, so only the content can decide. [G 1.2.2]",
+      { text: "A draft, listing or flyer whose claims the photos can confirm or refute: “hardwood floors throughout”, beside a photo of carpet in the main bedroom.", from: ["banner-on-cover"] },
+      { text: "A receipt photo whose printed lines must be checked against a sale, a quote or an agreed price held in the universe.", from: ["receipt-already-opened"] },
+      { text: "Several photos of similar items that the deliverable needs grouped or paired: two versions of a product, fronts and backs.", from: ["two-shirts"] },
+      { text: "Natural, uninformative filenames such as IMG_6506.jpg, so only the content can decide. [G 1.2.2]", from: ["two-shirts"] },
     ],
     fair: [
       "A filename may suggest content the file does not hold, when a real user would have named it that way. It must never reveal the answer. [G 1.2.2]",
@@ -870,6 +892,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Retrieved the February email confirming what shipped, then graded the frames against a “pastel summer palette” floated in an April message.",
         truth: "Midnight and Sage, confirmed on 10 February. Frame 1's pink yarn matches neither.",
         wrote: "Frame 1 cleared, its pink “consistent with W&W's agreed 'pastel summer palette' campaign”.",
+        why: "A later message proposed a new palette, and the confirmation of what actually shipped was two months older.",
         fix: "Write down the confirmed colorways, and mark the April plan as proposed, before grading a single frame.",
       },
       {
@@ -882,6 +905,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Answered from the notes file without a single messaging search, and cited the notes file as its source.",
         truth: "7.0, from her Nov 18 message in the family chat.",
         wrote: "7.2, from MEMORY.md.",
+        why: "The notes file held a precise looking value for exactly the field asked, and the newer one sat in a dated chat message.",
       },
       {
         // [C Source evaluation, trap 2]
@@ -894,6 +918,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Listed the pull requests with a filter that dropped their descriptions, and anchored on a ticket note with no date: “latest work is not yet pushed to develop”.",
         truth: "PR #37, merged to develop on Feb 13, covered the work.",
         wrote: "Unpushed and out of scope, with the ticket left uncorrected.",
+        why: "An undated ticket note stated the old state, and the dated record that superseded it had a title that undersold it.",
       },
       {
         // [C Source evaluation, trap 1]
@@ -906,13 +931,15 @@ export const failurePatterns: FailurePattern[] = [
         did: "Sorted the stack by a borrower level “closed” flag that came from the borrower's earlier, funded loan. It later noticed the link to the older loan, and kept the flag anyway.",
         truth: "Still live: March emails showed him chasing a close, so the loan stays in clear_to_close.",
         wrote: "Withdrawn, with no processor assigned.",
+        why: "A true status flag came from an older loan of the same borrower, and the evidence against it was one lookup away.",
       },
     ],
     build: [
-      "What was planned against what happened: a calendar of scheduled sessions beside photos or notes from the sessions that took place.",
-      "An older and a newer version of the same thing among the inputs: two photos of a whiteboard taken an hour apart.",
-      "A notes file with a confident figure while the universe holds the current one, and a request for what the user “actually” spends.",
-      "A tracker note with no date, superseded by a later dated record.",
+      { text: "A plan or a proposal beside the record of what actually happened: a palette floated for a future campaign, next to the confirmation of what shipped.", from: ["proposed-palette"] },
+      { text: "A notes file with a confident figure while the universe holds the current one, and a request for the latest or the actual value.", from: ["reading-in-notes"] },
+      { text: "A tracker note with no date, superseded by a later dated record.", from: ["note-merge-superseded"] },
+      { text: "A status that is true for an older record of the same person, a funded loan, a closed account, while the record the task is about is still live.", from: ["closed-flag"] },
+      { text: "An older and a newer version of the same thing among your own inputs: two photos of a whiteboard taken an hour apart." },
     ],
     fair: [
       "One source must be the record, and the task has to say so: the request (“what I actually spend”, “the latest”) or a rule in an input decides which wins. A winner the prompt never names is an undecided source conflict. [G 4]",
@@ -948,6 +975,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Three systems explained the figure three ways: a currency revaluation, an unposted manual reclass, a sweep that did not run. It had all three, ruled one wrong in one run and merged them into “one cause” in another.",
         truth: "Three conflicting explanations, reported as conflicting.",
         wrote: "One story, and no word to the manager that the sources disagree.",
+        why: "Three systems gave three plausible explanations for one figure, and the data could not settle which was right.",
       },
       {
         // [C Conflict and anomaly detection, trap 3]; [R 3.14] vignette.
@@ -960,23 +988,41 @@ export const failurePatterns: FailurePattern[] = [
         did: "The colleague's message called the loan “already closed”. The loan record it retrieved showed “processing”. It carried “FUNDED/CLOSED” into the email, the CRM flag, the hold post and the summary, and one run wrote “Raymond correctly flagged this as already closed”.",
         truth: "The record says processing, against the colleague's closed.",
         wrote: "“FUNDED/CLOSED” on every surface.",
+        why: "The user and a colleague both repeated a status that one field in a long record contradicted.",
+      },
+      {
+        // [C Conflict and anomaly detection, trap 1], second example.
+        id: "assets-delivered",
+        source: "study",
+        model: "Opus 4.8",
+        runs: { failed: 6, of: 6 },
+        title: "Delivered, according to whom",
+        ask: "Audit every card on a board against the roadmaps, the tickets and the chat.",
+        did: "A card label, a Slack thread and a ticket disagreed on whether a game's ad assets were delivered. It picked a side.",
+        truth: "The disagreement listed as an open decision.",
+        wrote: "One side, and no open decision.",
+        why: "Three places held the same status, and they did not agree.",
       },
       {
         // [R 3.14] vignette, OpenClaw Main, "Contradiction collapsed instead of surfaced".
         id: "tidy-total-won",
         source: "study",
+        // OpenClaw Main ran Opus 4.6 and 4.8 [R 1]; the vignette does not say which.
+        model: "Opus 4.6 or 4.8",
         title: "The tidy total that won",
         ask: "“I need to know what I'm really spending on FreshDirect each month. The app doesn't seem to show everything.”",
         did: "The app's orders came to about $267 a month. The user's words and its own notes, about $720 to $880 a month, both said the app was missing purchases. The precise number won, and it overwrote the notes with it.",
         truth: "About $1,071 a month: 33 card charges, $6,427, in the card ledger it never queried.",
         wrote: "“Actual spend is ~$267/month”, saved over the earlier estimate.",
+        why: "A precise total from one tool sat beside softer signs that it was incomplete: the user's words and the old notes.",
         fix: "Label the $267 as the orders visible in the app, and keep the conflict in the notes instead of overwriting them.",
       },
     ],
     build: [
-      "A photo and a system record that disagree on a status: a box delivered intact, against a carrier record that marks it damaged.",
-      "Two documented explanations for one figure, and a request to reconcile them.",
-      "A precise number from one tool beside softer signs that it is incomplete: the user's own words, an older estimate.",
+      { text: "Several documented explanations for one figure, each plausible, and a request to reconcile them.", from: ["three-explanations"] },
+      { text: "A status the user and a colleague both repeat, while one field in the record says otherwise.", from: ["funded-said-everyone", "assets-delivered"] },
+      { text: "A precise number from one tool beside softer signs that it is incomplete: the user's own words, an older estimate.", from: ["tidy-total-won"] },
+      { text: "A photo and a system record that disagree on a status: a box delivered intact, against a carrier record that marks it damaged." },
     ],
     fair: [
       "The prompt must invite the surfacing: “flag anything off”, “reconcile X against Y”.",
@@ -1011,6 +1057,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Found that every Kinney Avenue listing is for sale, then found exactly two rentals elsewhere in the ring, and told the user the check “came out at exactly two”.",
         truth: "The Kinney listings in the ring are for sale, not for rent.",
         wrote: "“Exactly two”, with Kinney never mentioned in the reply or the PDF.",
+        why: "The headline number in the user's claim happened to be right while the named detail was wrong, and the contradiction turned up on the way to the number.",
       },
       {
         // [C Judgment, trap 4]
@@ -1023,6 +1070,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Treated a correct Slack explanation, that a symptom came from a development build, as one of the conclusions to overturn.",
         truth: "The code confirms it: the only switch involved compiles into editor and development builds only.",
         wrote: "That it “doesn't survive the code”.",
+        why: "The user primed a suspicion that some Slack conclusions were wrong, and a correct one sounded unresolved: “something to do with it being dev”.",
       },
       {
         // [C Calibration, trap 4]
@@ -1035,12 +1083,14 @@ export const failurePatterns: FailurePattern[] = [
         did: "The records held two troubled files moved to her and a colleague's remark that she “gets the tough files”. It cited the remark as corroboration.",
         truth: "Two recorded moves, and no pattern.",
         wrote: "The tough files pattern “confirmed”, and “she tends to get the hardest files”.",
+        why: "Two recorded events and a colleague's remark, phrased as fact, stood behind the user's claim.",
       },
     ],
     build: [
-      "A premise in the prompt or a voice note that the records partly refute: “I'm pretty sure the contractor billed us twice.”",
-      "A claim whose headline number is right while the named detail is wrong, so the agent meets the contradiction on its way to the number.",
-      "A suspicion the data refutes, with one unexplained residual nearby that keeps the suspicion tempting.",
+      { text: "A claim whose headline number is right while the named detail is wrong, so the agent meets the contradiction on its way to the number.", from: ["kinney-rentals"] },
+      { text: "A premise in the prompt or a voice note that the records partly refute: “I'm pretty sure the contractor billed us twice.”", from: ["kinney-rentals"] },
+      { text: "A suspicion the data refutes, with one unexplained residual nearby that keeps the suspicion tempting.", from: ["conclusion-survived"] },
+      { text: "Two events and a colleague's remark behind the user's claim, and the instruction to say only what the records back up.", from: ["tough-files"] },
     ],
     fair: [
       "The refuting record is reachable, and the prompt asks for the claim to be checked.",
@@ -1076,25 +1126,43 @@ export const failurePatterns: FailurePattern[] = [
         did: "Compressed the policy's eligible guests, “clients, prospective investors, and outside advisors”, into “External BD meals only”. Then it approved a dinner with a law school classmate, marked “networking”, as an external business meal.",
         truth: "A personal meal. The approved total is $289.52, $10.48 under the budget, so no exception file.",
         wrote: "The dinner approved at $75.00, the total over budget, and an exception file that should never have been written.",
+        why: "The policy's guest list was compressed into one word, “external”, and a guest marked “networking” fit the word but not the list.",
         fix: "Test each guest against the policy's own list, and look the guest up in contacts.",
       },
       {
         // [R 3.6] vignette, OpenClaw Main, "Explicit rule or procedure in provided material not applied".
         id: "duplicate-key",
         source: "study",
+        // OpenClaw Main ran Opus 4.6 and 4.8 [R 1]; the vignette does not say which.
+        model: "Opus 4.6 or 4.8",
         title: "Duplicates by its own key",
         ask: "Merge proposed events into a calendar, and “drop any exact duplicates based on the EventID”.",
         did: "Dropped EV-004 as a duplicate of EV-003 because the title, description and timestamp matched. It never mentioned the EventID.",
         truth: "Two different EventIDs, so both events stay.",
         wrote: "EV-004 dropped from schedule.ics.",
+        why: "The two events matched on every visible field except the one key the user named.",
         fix: "Compare the key the user named, and log a content overlap as a note instead of a drop.",
+      },
+      {
+        // [C Domain rules, trap 4]
+        id: "evidence-date",
+        source: "study",
+        model: "Opus 5",
+        runs: { failed: 3, of: 4 },
+        title: "The email that only mentioned the loan",
+        ask: "Reassign 22 loans under a remediation SOP whose standard is “working the file” between 1 and 27 March, with the evidence record and its date for each.",
+        did: "For one loan it cited a 26 March email that only referenced the loan.",
+        truth: "Evidence dated 2026-03-25, from the record that shows the work.",
+        wrote: "2026-03-26, from a record that does not meet the standard.",
+        why: "The standard counted only records that show the work, and records inside the window that merely mention the file looked like evidence.",
       },
     ],
     build: [
-      "A rules document, or a photo of posted rules, where a term means something narrower than usual.",
-      "An eligibility list with a near match nearby: a friend described as “networking”.",
-      "A rule whose outcome gates a write: an exception file only if the total goes over, a message only if a check fails. One misread line then flips the whole branch.",
-      "A rule split across modalities: a rate in a chart, a fee in a voice note, the compounding in a text file.",
+      { text: "A rules document, or a photo of posted rules, where a term means something narrower than usual, and an item that nearly fits it: a friend described as “networking”.", from: ["networking-dinner"] },
+      { text: "A rule whose outcome gates a write: an exception file only if the total goes over, a message only if a check fails. One misread line then flips the whole branch.", from: ["networking-dinner"] },
+      { text: "A key the user names for matching, while other fields match too: “drop any exact duplicates based on the EventID”.", from: ["duplicate-key"] },
+      { text: "A standard for what counts as evidence, “working the file”, with records nearby that only mention the item.", from: ["evidence-date"] },
+      { text: "A rule split across modalities: a rate in a chart, a fee in a voice note, the compounding in a text file." },
     ],
     fair: [
       "The rule must be retrievable and cued by the request.",
@@ -1130,6 +1198,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "One sat at “submitted”, unapproved, with a $2.31 variance under a $10 threshold field. It adopted “variance > variance_threshold” as its own blocker test.",
         truth: "A blocker, because it is unapproved.",
         wrote: "“Not blocking”, in the email, the Slack post and the chat, while the same run listed a $0.00 submitted reconciliation as a blocker.",
+        why: "Each record carried a salient threshold field, while the checklist set a different test.",
       },
       {
         // [C Domain rules, trap 2]
@@ -1142,6 +1211,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Counted a −$0.37 reconciliation inside its $10 tolerance as tying out.",
         truth: "3 tie out and 3 have gaps.",
         wrote: "4 and 2, with the total off by 37 cents.",
+        why: "The user's own words set the test, “tie out to zero”, and each record offered a tolerance instead.",
       },
       {
         // [C Domain rules, trap 1]
@@ -1154,11 +1224,12 @@ export const failurePatterns: FailurePattern[] = [
         did: "Read the email reply that set the exact entry, then reasoned from the reconciliation arithmetic that the ledger was already right, and posted nothing.",
         truth: "$55,346.26, after the approved entry.",
         wrote: "$61,415.17, in the memo, the email and the Slack note.",
+        why: "The approved treatment lived only in an email reply, and the reconciliation arithmetic offered a story where nothing needed posting.",
       },
     ],
     build: [
-      "A record with a salient field, a tolerance or a score, while the rule in your input, a checklist or the user's own words (“tie out to zero”), sets a different test. Include one item that passes the tempting test and fails the real one.",
-      "A decision recorded in a message, an email reply or a thread, while the item's own record still shows nothing.",
+      { text: "A record with a salient field, a tolerance or a score, while the rule in your input, a checklist or the user's own words (“tie out to zero”), sets a different test. Include one item that passes the tempting test and fails the real one.", from: ["variance-threshold", "tie-out-to-zero"] },
+      { text: "A decision recorded in a message, an email reply or a thread, while the item's own record still shows nothing.", from: ["approval-in-reply"] },
     ],
     fair: [
       "The governing rule or approval must be reachable and cued by the prompt.",
@@ -1190,6 +1261,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Classified the file as the firm's error, refunded the $500 charge, and even noted that the sibling's absorption “correctly hit 6351”.",
         truth: "A matching $500 bill to account 6351 for this file too.",
         wrote: "No bill, and nothing in the loan note.",
+        why: "A colloquial rule implied two actions, and the refund looked like the whole treatment, though a sibling file showed both.",
       },
       {
         // [C Domain rules, trap 3]; [R 3.6] vignette, EA Commercial.
@@ -1202,11 +1274,12 @@ export const failurePatterns: FailurePattern[] = [
         did: "Four QA test accounts, 41,000 coins, were requested in the same channel and logged under the same item, and a process page excluded them. Two runs identified them, one writing “41,000 of the ‘compensation’ total was internal QA top-ups”, and still left them in the headline table.",
         truth: "636,000 coins agreed and 630,000 landed, for real players.",
         wrote: "711,000 or 677,000 agreed and 671,000 landed, with the exclusion as a footnote.",
+        why: "The excluded accounts sat in the same channel and under the same item as the real ones, and the fuller rule was on a process page.",
       },
     ],
     build: [
-      "A rule said colloquially that implies two actions, “refund the customer and book the cost”, with one sibling item already showing the full treatment.",
-      "Items the rule excludes, stored under the same tag or in the same channel as the items it includes, with the fuller rule in a document the agent can reach.",
+      { text: "A rule said colloquially that implies two actions, “refund the customer and book the cost”, with one sibling item already showing the full treatment.", from: ["refund-no-absorption"] },
+      { text: "Items the rule excludes, stored under the same tag or in the same channel as the items it includes, with the fuller rule in a document the agent can reach.", from: ["test-accounts"] },
     ],
     fair: [
       "The precedent must match the treatment you expect, and the decoy must fail the real rule without doubt, like a test account requested as a top up.",
@@ -1228,7 +1301,7 @@ export const failurePatterns: FailurePattern[] = [
       "Opus holds every number it needs and never runs the last division, sum or comparison. A matching part lends credibility to the claim beside it, and “need to verify” stands in for a ratio it could have worked out.",
     why: [
       "A figure that could be derived and never was is 17% of number failures, and a part left out of a total 16%. [R 3.7]",
-      "The guidelines add the other half: the model sums values it already holds correctly, so the difficulty is in sourcing the numbers, never the arithmetic on them. [G 8.2]",
+      "In every case here the operands were already in hand: what failed was running the calculation, or building the total at all. [R 3.7; C Quantitative reasoning]",
     ],
     cases: [
       {
@@ -1241,6 +1314,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Pulled the March and April deposits, $275 and $387, and never divided them. Because the April $387 matched the shop's own email, it took the email's “12% growth” as confirmed too.",
         truth: "Revenue up 40.7%, so the claim needs correcting under the bank rule.",
         wrote: "“Fine as-is”, and “12% growth” confirmed to the user.",
+        why: "One matching figure lent its credibility to the claim beside it.",
         fix: "One division, 387 / 275, before assigning the verdict.",
       },
       {
@@ -1254,6 +1328,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Every record carried the loan amount, the rate, the income and the lender's cap, and no ratio field. It computed the ratio on none of them, and wrote “verify DTI” and “may be tight” into the note and the email.",
         truth: "About 57.6% against a 43% cap, on the one file over its limit.",
         wrote: "“May be tight”, and that file filed as “likely dead” on a status flag.",
+        why: "Every operand was in the record and no ratio field was, while a ready made status flag offered an easier verdict.",
       },
       {
         // [C Quantitative reasoning, trap 2]; [R 3.7] vignette, EA Advanced.
@@ -1266,12 +1341,13 @@ export const failurePatterns: FailurePattern[] = [
         did: "A $90K accrual sat in one bill and one channel, a $50K accrual in another. It reported each inside its own matter, headlining one as a “$40K exposure”.",
         truth: "About $140,000 of booked liability on the account, against $9,010 invoiced.",
         wrote: "No total, in the email, the CRM note or the reply.",
+        why: "The parts of one total sat in different systems, and every source discussed them one at a time.",
       },
     ],
     build: [
-      "A claim in an input whose truth takes one division over universe data: a photographed flyer, a chart on a slide, a price tag on a shelf.",
-      "A decision that turns on a ratio or a threshold the user set in an input: a budget in a voice note, a cap in a document. [G 1.2.3]",
-      "The parts of one total in different places, so the total only exists if the model builds it.",
+      { text: "A claim in an input whose truth takes one division over universe data: a photographed flyer, a chart on a slide, a price tag on a shelf.", from: ["growth-claim"] },
+      { text: "Every operand of a ratio in the records and no computed field, beside a status flag or a self reported figure that offers an easier verdict.", from: ["fifteen-ratios"] },
+      { text: "The parts of one total in different places, so the total only exists if the model builds it.", from: ["two-accruals"] },
     ],
     fair: [
       "Every convention the calculation needs is in the data, or standard for the domain.",
@@ -1307,6 +1383,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Retrieved 581 charges over 7 pages, with 8 loans repeated, and grouped them by eye.",
         truth: "Two loans charged twice, Gupta and Romano. Only the run that scripted the grouping found Romano.",
         wrote: "“Exactly one loan was genuinely charged the appraisal fee twice.”",
+        why: "Hundreds of records in which most repeats were innocent, and a prompt that warned against over acting, so the pressure ran toward finding fewer.",
         fix: "Save every page and script the grouping by loan, checking the count against the total.",
       },
       {
@@ -1320,6 +1397,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Pulled the vendor list, where one vendor was marked inactive, and the bills, where 48 monthly bills from it ran on to Feb 2026. It even printed that vendor's totals. Its own checklist never joined the bills to the inactive flag.",
         truth: "An inactive vendor still being billed, about $19,891.87 since 2024.",
         wrote: "The vendor cleared in the email.",
+        why: "The disqualifying flag sat in one table and the bills in another, with nothing on the bills hinting at it.",
       },
       {
         // [C Synthesis, trap 2]; [R 3.11] vignette, Long Horizon.
@@ -1332,6 +1410,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "The accounts were nicknamed by property, but the payouts landed in both. Only the booking lines named the property, and it had already read one. It summed the deposits by account.",
         truth: "Each property's income from its own booking lines.",
         wrote: "$22,571.07 of Zilker income: a split that followed where the money landed.",
+        why: "The accounts were named after the properties, and only the booking lines said which property each payout belonged to.",
       },
       {
         // [C Synthesis, trap 4]
@@ -1344,13 +1423,14 @@ export const failurePatterns: FailurePattern[] = [
         did: "Listed the tickets twice, each with its due date, assignee and state, and matched them to invoices by title only.",
         truth: "All five open tickets overdue as of a date it had used itself, and one with no assignee. Every fact was in its first list result.",
         wrote: "None of it.",
+        why: "The answer sat in small structured fields, and the main ask was framed per invoice, so it matched the tickets by title and moved on.",
       },
     ],
     build: [
-      "Media that must be matched to universe records: a receipt photo to its transaction, a label's serial number to its CRM record. [G 1.2.2]",
-      "Two contacts or accounts with similar names, where only one fits the facts.",
-      "A shared account that receives money for several things, while the bookings say which is which.",
-      "A status in one place, a vendor marked inactive, that changes what the rows somewhere else mean.",
+      { text: "Many look alike pairs, most of them innocent, the same surname on different files, a retry after a failure, and one or two real duplicates.", from: ["exactly-one"] },
+      { text: "A shared account that receives money for several things, while the bookings say which is which.", from: ["account-named-after-house"] },
+      { text: "A status in one place, a vendor marked inactive, that changes what the rows somewhere else mean.", from: ["inactive-vendor"] },
+      { text: "A question only answered by tabulating small fields, due dates and assignees, against a date the agent already uses.", from: ["every-ticket-overdue"] },
     ],
     fair: [
       "The linking key must exist and be reachable.",
@@ -1388,6 +1468,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Wrote “screenshot from Feb 12, 2026” in its own header, then crowned the screenshot's leader as the strongest video today, with no caveat.",
         truth: "A five month old first month snapshot cannot say who leads now.",
         wrote: "“Your strongest video is the Celtics switch breakdown.”",
+        why: "The freshest looking source was a dated screenshot months older than the task, and the question asked about right now.",
         fix: "One sentence saying the screenshot is a February first month snapshot, and the crown withheld.",
       },
       {
@@ -1401,6 +1482,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Got an empty result for the 30 days before the session, saw the latest transaction was Feb 24, and still headed the section “last 30 days” over February's rows.",
         truth: "The last 30 days of available data, labeled by their real dates, with the gap stated.",
         wrote: "“Last 30 days”, over February.",
+        why: "The latest record was weeks older than the task date, and the request said the last 30 days.",
       },
       {
         // [C Temporal, trap 1]
@@ -1412,6 +1494,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Queried with an exclusive end date in the same turn it read the rules, which dropped March 31. Its own check re-added the same 41 rows.",
         truth: "42 runs and 251.92 km: the 250 km goal beaten.",
         wrote: "41 runs and 244.88 km, short of the goal.",
+        why: "One real record sat on the last day of the period, and the rule that made the end inclusive was read in the same turn the query fired.",
       },
       {
         // [C Temporal, trap 5]
@@ -1423,12 +1506,13 @@ export const failurePatterns: FailurePattern[] = [
         did: "Wrote “Sprint Planning is tomorrow (Friday April 29)”, and read an April 17 email's “This Sunday” as April 26. It had a shell and never ran cal or date.",
         truth: "April 29 is a Wednesday, and that Sunday was April 19.",
         wrote: "Friday, and April 26.",
+        why: "Relative dates sat beside a cluster of real Friday dates a row or two away.",
       },
     ],
     build: [
-      "A dated snapshot among your inputs, a screenshot, a printout, a photo of a board, and a question about the current state that the universe answers.",
-      "Relative dates in an input: “this Sunday” in an email, “tomorrow” in a voice note.",
-      "A window stated in the prompt with one real item on its last day, or an evening event a time zone pushes into the next month, with the time zone discoverable in the universe.",
+      { text: "A dated snapshot among your inputs, a screenshot, a printout, a photo of a board, and a question about the current state that the universe answers.", from: ["screenshot-february"] },
+      { text: "Relative dates in an input: “this Sunday” in an email, “tomorrow” in a voice note.", from: ["tomorrow-friday"] },
+      { text: "A window stated in the prompt with one real item on its last day, or an evening event a time zone pushes into the next month, with the time zone discoverable in the universe.", from: ["last-day-of-quarter"] },
     ],
     fair: [
       "Universe dates are fixed, so write the real window into the prompt: “the week of 12 May”, not “next Tuesday”. Never build on the run's clock. [G 1.2.1]",
@@ -1462,11 +1546,13 @@ export const failurePatterns: FailurePattern[] = [
         // run.observations[4], "A tab that filled up with guesses".
         id: "tab-of-guesses",
         source: "golden",
+        model: "Opus 5",
         title: "A tab that filled up with guesses",
         ask: "Work out which of the charges she is unsure about are supported and which to dispute, on one page with a tab for each.",
         did: "Counted 19 charges as cleared, adding ones she never asked about and gave no evidence for.",
         truth: "The second tab limited to the charges she asked about that turned out correct.",
         wrote: "19 charges cleared, including Dillons Marketplace at $310.00 under “No receipt exists”.",
+        why: "The second tab had room for every charge in her statement, and only the ones she asked about belonged on it.",
         link: gtRun,
       },
       {
@@ -1479,6 +1565,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Noted which figures it was missing and searched the web four times. Every search came back “web_search is disabled or no provider is available”, and the next turn opened “Now I have everything I need”.",
         truth: "The figures held in Airtable, or cells marked as unavailable.",
         wrote: "District statistics that exist in no source, Carmel Clay's per pupil spending at $13,800 against the $11,200 in Airtable.",
+        why: "Every search failed, and the formula still had empty slots to fill.",
         fix: "Mark each unsourced input as unverified, and say which rankings are provisional.",
       },
       {
@@ -1492,6 +1579,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Several cards carried only Spanish or English language labels, and later material discussed a publisher's South America focus. It filled the cell with “SA/Spanish”, even in a run whose own card comment said Spanish was only a localization language.",
         truth: "“Not established.”",
         wrote: "A market the records never stated.",
+        why: "The register had a cell for every row, the records were silent for some, and later material suggested a plausible fill.",
       },
       {
         // [C Calibration, trap 5]
@@ -1504,12 +1592,13 @@ export const failurePatterns: FailurePattern[] = [
         did: "Never opened the agreement its main conclusion rested on, which sat behind a document link. Its “What I could NOT stand up” section listed two unreadable files instead.",
         truth: "That it could not establish whether the agreement was an exclusive license, the fact its conclusion rested on.",
         wrote: "The deal classified anyway, and the gap left off the list.",
+        why: "The fact its conclusion rested on sat behind a document link it never opened.",
       },
     ],
     build: [
-      "A deliverable with a slot per item, where the honest value for some is “not recorded”, and a user who says to state only what can be backed up.",
-      "A user who asks what could not be confirmed: “tell me anything you couldn't stand up”.",
-      "A photo that invites a measurement but holds no scale. The guidelines name fabricated precision, millimeters with no ruler in frame, as a valid failure. [G 4]",
+      { text: "A deliverable with a slot per item, where the honest value for some is “not recorded”, and a user who says to state only what can be backed up.", from: ["market-nobody-recorded", "tab-of-guesses"] },
+      { text: "A user who asks what could not be confirmed: “tell me anything you couldn't stand up”.", from: ["could-not-stand-up"] },
+      { text: "A formula or a template that needs figures the task does not supply, where the honest answer marks them unavailable.", from: ["statistics-from-nowhere"] },
     ],
     fair: [
       "State the evidence standard: “only what we can back up”, “where that's recorded”, “leave blank if you can't verify”.",
@@ -1545,6 +1634,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Each run built a different lifecycle story for the board's two games and retired 18 to 30 cards. It retired the Metadata card, whose own description said the English keywords were still outstanding, even in a run whose own cell read “EN never finished”.",
         truth: "5 cards to retire. Metadata: finish it, because the English keywords are still needed.",
         wrote: "“Retire.”",
+        why: "Dramatic later events made a bulk verdict feel justified, and a few items' own records pointed the other way.",
       },
       {
         // [C Judgment, trap 2]
@@ -1557,10 +1647,11 @@ export const failurePatterns: FailurePattern[] = [
         did: "Retired a partner's card as inactive.",
         truth: "A current, active deck for that partner sat in Drive.",
         wrote: "Retired.",
+        why: "The same sweeping story covered every card, and the partner's current deck sat in Drive.",
       },
     ],
     build: [
-      "One verdict per item across many items, with a dramatic later event, a sunset, a hand off, a pivot, that makes a bulk verdict feel justified, and a few items whose own records point the other way.",
+      { text: "One verdict per item across many items, with a dramatic later event, a sunset, a hand off, a pivot, that makes a bulk verdict feel justified, and a few items whose own records point the other way.", from: ["retired-against-description", "active-partner"] },
     ],
     fair: ["Each graded item's verdict follows from its own record, which the agent can reach."],
     spot: [
@@ -1589,6 +1680,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Found that the remaining budget bought too small a sample, and that two changes landed across both arms. Then it sorted them with its own scheme of blockers, open items and caveats, and placed both below the line.",
         truth: "Both are blockers under the user's rule, each with a clearance condition and a ticket.",
         wrote: "Neither carried a clearance condition, and both escaped ticketing.",
+        why: "The user's own blocker test caught findings that its default scheme ranks lower.",
       },
       {
         // [C Judgment, trap 5]
@@ -1600,6 +1692,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Invented a “conditional” verdict for IMG_3308.",
         truth: "A pass or a fail for every photo.",
         wrote: "A fail count of “exactly half”, and the required draft skipped.",
+        why: "A binary checklist decided whether a draft had to be written, so a third verdict changed the count that mattered.",
       },
       {
         // [C Domain rules, trap 3]
@@ -1612,12 +1705,12 @@ export const failurePatterns: FailurePattern[] = [
         did: "Invented an “ordinary CEO authority / N/A” bucket for two of them.",
         truth: "Each termination in one of the user's three buckets.",
         wrote: "A fourth bucket.",
+        why: "The user named the three buckets in plain words, with the fuller rule in a document.",
       },
     ],
     build: [
-      "Put the user's own test, tiers or buckets in the prompt or an input, and tie an obligation to them: a ticket for every blocker, a draft for every fail.",
-      "A binary checklist in an input, pass or fail, over photos where one is borderline but decidable.",
-      "A settled feasibility call beside a genuine open choice, so a hedge changes the outcome.",
+      { text: "Put the user's own test, tiers or buckets in the prompt or an input, and tie an obligation to them: a ticket for every blocker, a draft for every fail.", from: ["own-blocker-line", "fourth-bucket"] },
+      { text: "A binary checklist in an input, pass or fail, over photos where one is borderline but decidable.", from: ["conditional-verdict"] },
     ],
     fair: [
       "Grade the consequence the prompt tied to the label, the ticket, the draft, rather than the label's wording, unless the prompt defines it.",
@@ -1642,11 +1735,13 @@ export const failurePatterns: FailurePattern[] = [
         // run.observations[5], "A dispute addressed to a mailbox that does not read mail".
         id: "alerts-mailbox",
         source: "golden",
+        model: "Opus 5",
         title: "A dispute sent to a mailbox that reads no mail",
         ask: "Draft each dispute email “to whoever it needs to go to”, and leave them in drafts.",
         did: "Wrote the right content for the Kohl's dispute and addressed it to alerts@intrustbank.com, the bank's alerts address, whose own mail says not to reply and which its own page called an unmonitored alerts box.",
         truth: "The draft written to Kohl's, with the address left for her to fill in, since her records hold none.",
         wrote: "The bank's alerts inbox.",
+        why: "Her records hold no address for the merchant, and the bank's alerts address was sitting in her mail.",
         link: gtRun,
       },
       {
@@ -1660,6 +1755,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Three entries were stuck at approval, which only that manager could route, and their records carried only a preparer field. It set the owner to the preparer, or to a list of preparers and reviewers.",
         truth: "The manager himself, Daniel Jones.",
         wrote: "Someone else, so the recipient read that another person owned the fix he had to make.",
+        why: "The record carried only the preparer's name, and the person who acts next was implied by the record's state.",
       },
       {
         // [C Judgment, trap 1]; [R 3.12] vignette, Long Horizon.
@@ -1672,12 +1768,26 @@ export const failurePatterns: FailurePattern[] = [
         did: "The exchange sat in sent mail. It inferred the recipient from a similar looking discrepancy instead, and emailed the borrower, or another colleague.",
         truth: "Grace Yamamoto, the colleague in that exchange.",
         wrote: "The borrower, Larry Harrison, sent the internal findings.",
+        why: "The recipient was described, not named, and a similar discrepancy with someone else sat inside the file it was already reading.",
+      },
+      {
+        // [C Source evaluation, trap 1], second example.
+        id: "thats-me",
+        source: "study",
+        model: "Opus 4.8",
+        runs: { failed: 6, of: 6 },
+        title: "The contact flagged “That's me”",
+        ask: "Close out an accounts payable queue, with “me as owner” on the open items.",
+        did: "Resolved the “me” to whichever directory contact carried a “That's me” flag, Devon Beale, Lisa Park or Sarah Whitcomb, instead of matching the AP Coordinator role.",
+        truth: "Priya Khatri, the AP Coordinator the user is.",
+        wrote: "Whoever the flag pointed at.",
+        why: "The flag was set on several contacts, so it was true somewhere, and never for the person the task is about.",
       },
     ],
     build: [
-      "A recipient or owner the data implies instead of naming: described by role, or by a past exchange the universe holds.",
-      "A record whose visible name, a preparer, an assignee, a sender, is not the person who must act next.",
-      "A tempting address in front of the agent that cannot act on the message: an alerts box, a shared inbox.",
+      { text: "A recipient or owner the data implies instead of naming: described by role, or by a past exchange the universe holds.", from: ["back-and-forth", "thats-me"] },
+      { text: "A record whose visible name, a preparer, an assignee, a sender, is not the person who must act next.", from: ["preparer-not-approver"] },
+      { text: "A tempting address in front of the agent that cannot act on the message: an alerts box, a shared inbox.", from: ["alerts-mailbox"] },
     ],
     fair: [
       "The right person or party must be derivable from the records the task leads to.",
@@ -1713,6 +1823,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Stopped at approve, one run at submit, never called the certify step or read the state back, and declared “Both affected reconciliations are now approved and tie out at $0 residual”.",
         truth: "Both reconciliations certified.",
         wrote: "Approved.",
+        why: "The request described the outcome, “so they tie out”, and the step before the last returned plain success.",
       },
       {
         // [C Task completion, trap 2]
@@ -1725,6 +1836,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Left the ticket's stale “cosmetic, low impact” description and its priority untouched, and recorded the correction as a comment.",
         truth: "The description and the priority corrected.",
         wrote: "A comment.",
+        why: "A comment looked like compliance, and the request described a result rather than the field to change.",
       },
       {
         // [C Long horizon, trap 5]
@@ -1737,11 +1849,12 @@ export const failurePatterns: FailurePattern[] = [
         did: "After about 170 tool calls it rewrote the tracker's description to say five clips were still blocked, and never changed its state.",
         truth: "Moved back to Todo, as the other five runs did.",
         wrote: "Done, contradicting its own summary.",
+        why: "The state was a separate field from the description it rewrote, at the end of a very long session.",
       },
     ],
     build: [
-      "Phrase the request as a result, “get it reflected in the tracker”, “bring both to certified”, where the result needs a specific field change or a final state.",
-      "Read your assigned execution target for a second step it already implies: the file attached to the message, the status change after the note.",
+      { text: "Phrase the request as a result, “get it reflected in the tracker”, “bring both to certified”, where the result needs a specific field change or a final state.", from: ["approved-not-certified", "comment-not-fix"] },
+      { text: "Read your assigned execution target for a second step it already implies: the file attached to the message, the status change after the note.", from: ["still-done"] },
     ],
     fair: [
       "State the execution target in the prompt, or it cannot be graded. With read access only, the task must not depend on any write. [G 1.1.2]",
@@ -1766,24 +1879,6 @@ export const failurePatterns: FailurePattern[] = [
     ],
     cases: [
       {
-        // [G 8.2] Unreliable: "Resisting the urge to ask".
-        id: "four-figures",
-        source: "guidelines",
-        title: "Four invented figures to choose from",
-        ask: "A Green Shell run where a needed value was not in the prompt.",
-        did: "It fired AskUserQuestion with four invented figures to choose from, instead of searching the universe for the real one.",
-        note: "Expect this whenever a needed value is not in the prompt, and grade it through the deliverable: the real value, found in the universe, is the one that appears in the artifact.",
-      },
-      {
-        // [G 8.2] Unreliable: "Stopping when it is missing something".
-        id: "placeholder-email",
-        source: "guidelines",
-        title: "The placeholder in the email",
-        ask: "A Green Shell run whose deliverable was an email that needed one more figure.",
-        did: "The delivered email carried “(needs shutdown estimate amount to compute)” in its body.",
-        note: "“The artifact exists and looks finished.” Criteria have to test its contents, never its presence.",
-      },
-      {
         // [C Task completion, trap 1]
         id: "not-mine-to-decide",
         source: "study",
@@ -1794,15 +1889,29 @@ export const failurePatterns: FailurePattern[] = [
         did: "Classified the hazardous cylinders correctly, then escalated the routing and the pricing to an account manager as “not mine to decide”, held back the reply to the client, and reported the move “held for sign-off”.",
         truth: "The only qualified carrier booked, and the client told the surcharge applies and needs his sign off.",
         wrote: "An escalation.",
+        why: "An end to end mandate came with a spend caveat and a manager who could plausibly decide, so the whole call went upstream.",
+      },
+      {
+        // [C Task completion, trap 1], same task, second example.
+        id: "housing-hold",
+        source: "study",
+        model: "Opus 4.8",
+        runs: { failed: 2, of: 6 },
+        title: "The hold it would not place",
+        ask: "The same moves, “end to end, use your judgment”, under the same caveat about commitments nobody has signed off on.",
+        did: "Refused to place a $1,200 housing hold that would sit flagged pending approval.",
+        truth: "The hold placed and flagged pending approval.",
+        wrote: "No hold, and the housing contact never reached.",
+        why: "The caveat covered commitments, and a reversible hold flagged pending approval was inside the coordinator's own role.",
       },
     ],
     build: [
-      "Let a needed value live in the universe and not in the prompt. Expect the urge to ask, and grade the real value in the artifact. [G 8.2]",
-      "Give the authority to act in the prompt, with a caveat that limits one kind of action, unapproved spend, while the graded action sits inside the persona's role.",
+      { text: "Give the authority to act in the prompt, with a caveat that limits one kind of action, unapproved spend, while the graded action sits inside the persona's role.", from: ["not-mine-to-decide", "housing-hold"] },
+      { text: "Give the organization someone who could plausibly decide, so handing the call upward is the tempting move.", from: ["not-mine-to-decide"] },
     ],
     fair: [
       "Single turn means no confirmation is possible, so the prompt must give the authority to act. A caveat must not forbid the action you grade. [G 1.1.2]",
-      "Grade the value that should stand where a placeholder is, never the artifact's presence. [G 8.2]",
+      "Grade the value that should stand where a placeholder is, never the artifact's presence. [G 5.1]",
     ],
     spot: [
       "A run that ends with “Want me to…?” or another offer.",
@@ -1831,6 +1940,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "The transporter was named only in the item catalog and a vendor capability sheet, never in the emails. It wrote the split into the record, emailed a colleague to turn down his shortcut, and reported the move “LOCKED”.",
         truth: "An email to the transporter's dispatch, booking it.",
         wrote: "No email to the transporter, and no transporter named.",
+        why: "The vendor for an approved add on was named only in reference data, and one explicit recipient gave it a satisfying send to stop at.",
       },
       {
         // [C Task completion, trap 3]
@@ -1843,11 +1953,12 @@ export const failurePatterns: FailurePattern[] = [
         did: "Refunded and credited the two files that needed it, and logged only those. One run never looked up a third file at all; another declared “the batch was two files”.",
         truth: "A note on every file, the excluded one and the one the borrower asked for included.",
         wrote: "Notes on two files.",
+        why: "Only some files needed money moved, and the right outcome for the others was a note saying no action.",
       },
     ],
     build: [
-      "A recipient the data implies, found in contacts or a catalog rather than in the prompt. Name one explicit recipient as well, so there is a satisfying single send to stop at.",
-      "Items whose right outcome is “no action”, when the deliverable has a slot per item.",
+      { text: "A recipient the data implies, found in contacts or a catalog rather than in the prompt. Name one explicit recipient as well, so there is a satisfying single send to stop at.", from: ["transporter-in-catalog"] },
+      { text: "Items whose right outcome is “no action”, when the deliverable has a slot per item.", from: ["batch-two-files"] },
     ],
     fair: [
       "Every recipient or item you grade must be reachable in a place the task plausibly leads.",
@@ -1881,6 +1992,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Said it would send the link by email, mailed the user from his own mailbox to himself as more “durable”, then repeated the content in chat.",
         truth: "The reply in chat, and nothing sent.",
         wrote: "An email nobody asked for.",
+        why: "The prompt said “send me” inside a chat, with a mail tool connected to the user's own mailbox.",
       },
       {
         // [C Instruction adherence, trap 3]
@@ -1893,11 +2005,12 @@ export const failurePatterns: FailurePattern[] = [
         did: "The channel's member list, one call away, held seven accounts: the three founders and four that matched the investor channel's members. It retrieved the list, posted the full summary, and assured the user nothing had reached the investor.",
         truth: "Seven members, not three, so the post reached the investor's side.",
         wrote: "The summary posted, and the assurance.",
+        why: "The channel the user named had members the user's limit barred, one call away.",
       },
     ],
     build: [
-      "If your assigned target carries a limit, nothing sent, drafts only, state it in the user's words. With a mail tool connected, that limit is the overshoot test.",
-      "If the target posts to a channel the user limits by audience, check the channel's members during exploration.",
+      { text: "If your assigned target carries a limit, nothing sent, drafts only, state it in the user's words. With a mail tool connected, that limit is the overshoot test.", from: ["send-me-in-chat"] },
+      { text: "If the target posts to a channel the user limits by audience, check the channel's members during exploration.", from: ["founders-only"] },
     ],
     fair: [
       "Never add outbound actions or limits your parameters do not include. That is drift. [G Hard Client Requirements]",
@@ -1933,6 +2046,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Put the figures in the PDF and wrote the email as a cover note with only the combined total.",
         truth: "Each house's charged and paid figures in the body of the email.",
         wrote: "The combined total.",
+        why: "The prompt asked for the figures in the email itself, while a file also carried them.",
       },
       {
         // [C Output fidelity, trap 3]
@@ -1945,6 +2059,7 @@ export const failurePatterns: FailurePattern[] = [
         did: "Traced a $685.32 credit into one account and, in one run, the same day draw out to another.",
         truth: "That the $685.32 left account 6621 the same day, as an owner draw to account 4412.",
         wrote: "“Left the same day as an owner draw”, with no account number in any cell, email or reply.",
+        why: "The identifiers lived only in the detail records, while its own summaries were organized by friendly labels.",
       },
       {
         // [C Output fidelity, trap 5]
@@ -1957,11 +2072,40 @@ export const failurePatterns: FailurePattern[] = [
         did: "Read the access review and wrote “30+” files, and called Evan Mercer just “Evan” after pulling the staff list.",
         truth: "34 files, and the full name.",
         wrote: "“30+”, and “Evan”.",
+        why: "The headline of each incident sat in a message, and the exact detail in a secondary record.",
+      },
+      {
+        // [C Output fidelity, trap 5], second example.
+        id: "absences-never-stated",
+        source: "study",
+        model: "Opus 5",
+        runs: { failed: 5, of: 6 },
+        title: "Three absences, confirmed and never written",
+        ask: "Reconstruct what a game's launch really shipped, and publish the record.",
+        did: "Confirmed with tool calls that the game had no Linear team, no Linear project and no Trello board, and told the user in chat that one ad network never shipped.",
+        truth: "Those facts stated in the published record.",
+        wrote: "None of them in the record.",
+        why: "The facts the record needed were absences, and its tools had already confirmed them.",
+      },
+      {
+        // [R 3.5] vignette, EA Advanced, "Deliverable not produced or run
+        // abandoned"; runs and version from [C Task completion, writing the rubric].
+        id: "all-done",
+        source: "study",
+        model: "Opus 4.6",
+        runs: { failed: 3, of: 6 },
+        title: "“All done”, and nothing in it",
+        ask: "Check three surcharges on a client's invoice against the quote and the approvals, follow up, and end with “the short version”: what is confirmed, what is still open, and what was done.",
+        did: "Finished the investigation and all three writes, then closed with a single line: “All done. Everything is documented and the ball is back in Patricia's court.”",
+        truth: "The short version: $850, $1,200 and $600 of surcharges, $2,650 in all, matching the quote; no written approval from Patricia; the follow up sent; no tickets for the three clients.",
+        wrote: "A sign off with none of it.",
+        why: "The summary was the last sentence of a long prompt, and every finding had already gone into other messages, so the closing turn read as a wrap up.",
       },
     ],
     build: [
-      "A deliverable that must carry an identifier or an exact figure for each item. Ask for the content, not the layout.",
-      "A message the prompt asks to carry the key figures itself, beside a file that also holds them.",
+      { text: "A deliverable that must carry an identifier or an exact figure for each item. Ask for the content, not the layout.", from: ["two-accounts", "thirty-plus"] },
+      { text: "A message the prompt asks to carry the key figures itself, beside a file that also holds them.", from: ["cover-note", "all-done"] },
+      { text: "Facts the record must state that are absences, no team, no project, no ticket, each confirmed by a lookup.", from: ["absences-never-stated"] },
     ],
     fair: ["Require a value on a surface only when the prompt asks for it there. [G 4]"],
     spot: [
@@ -1987,11 +2131,13 @@ export const failurePatterns: FailurePattern[] = [
         // run.observations[3], "A page that contradicts its own draft".
         id: "page-against-draft",
         source: "golden",
+        model: "Opus 5",
         title: "A page that contradicts its own draft",
         ask: "Check her company purchases against a $50 monthly allowance, and draft an email to her manager for anything never sorted.",
         did: "Put the Jun 6 and Jul 5 company charges on the page and left out May 2 and May 31.",
         truth: "All four charges on the page, May's first $50.00 inside the total, as its own draft to the manager said: $105.40.",
         wrote: "$123.40 on the page, against $105.40 in the draft.",
+        why: "It built two surfaces from the same figures, the page and the draft, and never read one against the other.",
         link: gtRun,
       },
       {
@@ -2004,24 +2150,28 @@ export const failurePatterns: FailurePattern[] = [
         did: "Pasted the new logo over the old. Three image checks reported remnants, and each time it scrubbed harder. Then it deleted every preview and reported the swap done.",
         truth: "The old logo still visible around the new one.",
         wrote: "The logo reported as replaced.",
+        why: "Each check found remnants and each fix scrubbed harder, and the final edit was never checked.",
         fix: "One more image check on the final preview, before deleting it.",
       },
       {
         // [R 3.16] vignette, OpenClaw Main, "Own evidence or line items contradict own conclusion".
         id: "nineteen-rides",
         source: "study",
+        // OpenClaw Main ran Opus 4.6 and 4.8 [R 1]; the vignette does not say which.
+        model: "Opus 4.6 or 4.8",
         title: "19 rides in the table, 13 in the summary",
         ask: "A monthly ride report from the activity data.",
         did: "Listed all 19 November rides in its own detail table, reported 13 in the summary, and explained the gap with a deduplication step it never ran.",
         truth: "19 rides.",
         wrote: "13, “after deduplication”.",
+        why: "The rides were tallied by hand across a long detail table, and the gap was explained away instead of recounted.",
         fix: "Count the detail rows with a short script and copy the result into both tables.",
       },
     ],
     build: [
-      "An edit to a provided image or document where a careless first pass leaves visible traces: a logo swap, a redaction, a crop.",
-      "A deliverable with a detail table and a summary built from it, long enough to tally by hand.",
-      "Two surfaces built from the same figures, a page and a draft, so a slip in one shows against the other.",
+      { text: "An edit to a provided image or document where a careless first pass leaves visible traces: a logo swap, a redaction, a crop.", from: ["logo-still-there"] },
+      { text: "A deliverable with a detail table and a summary built from it, long enough to tally by hand.", from: ["nineteen-rides"] },
+      { text: "Two surfaces built from the same figures, a page and a draft, so a slip in one shows against the other.", from: ["page-against-draft"] },
     ],
     fair: [
       "The defect must be visible in the delivered render, at its delivered size.",
@@ -2127,7 +2277,7 @@ export const faPassing = {
       id: "deepen",
       title: "Go deeper in the universe, inside your parameters",
       // [R When nothing is working, 1]; [G 1.1; G 1.1.2]
-      body: "In the studies, more records and cross links to cover was the best supported lever, and rules whose wording matters a close second: summaries that look complete and are not, later replies that change a decision. Choose them from what your assigned services already hold, never from a service outside them, and adjust the scenario only as far as section 1.1 allows. [G 1.1; G 1.1.2]",
+      body: "In the studies, more records and cross links to cover was the best supported lever, and rules whose wording matters a close second: summaries that look complete and are not, later replies that change a decision. Choose them from what your assigned services already hold, never from a service outside them, and keep every other parameter as assigned. [G 1.1; G 1.1.2]",
     },
   ] as { id: string; title: string; body: string; link?: XLink }[],
   rarely: [
@@ -2178,34 +2328,53 @@ export const faPassing = {
 
 /* ------------------------------------------------------- where it comes from */
 
+/**
+ * The evidence behind the cases, at the top of the overview. The figures are
+ * the studies' own [R 1; R 2]; the Golden Task's count is read off the cases,
+ * so it cannot drift from what the page shows.
+ */
 export const faSources = {
+  id: "sources",
   title: "Where these cases come from",
-  items: [
+  tiles: [
     {
-      label: "Green Shell",
-      body: "Runs on this project: the Model A run of the hub's Golden Task, and the runs the guidelines record in section 8.2, which says both models share each weakness it lists.",
-    },
-    {
-      label: "The studies",
+      id: "studies",
+      value: "68,280",
+      unit: "failed rubric criteria",
+      name: "Two studies of graded Opus runs",
       // [R 1]
-      body: "Two studies of graded Opus failures: 68,280 failed rubric criteria in 8,626 tasks across five agent projects, on Opus 4.6, 4.8 and 5. In every project Opus worked as an agent, reading email, calendars, chat, files and images through tools, then writing documents, sending messages and updating records.",
+      body: "8,626 tasks across five agent projects, on Opus 4.6, 4.8 and 5. In every project Opus worked as an agent: it read email, calendars, chat, files and images through tools, then wrote documents, sent messages and updated records.",
     },
     {
-      label: "OpenClaw MM",
+      id: "openclaw-mm",
+      value: "845",
+      unit: "multimodal tasks",
+      name: "OpenClaw MM",
       // [R 1; R 2]
-      body: "The closest of the five to Green Shell, and the only one where reading images matters: 845 tasks, all on Opus 4.6, graded on one run each.",
+      body: "The closest of the five to Green Shell, and the only one where reading images mattered. All on Opus 4.6, graded on one run each.",
     },
     {
-      label: "Runs",
+      id: "golden",
+      unit: "Leg A misses",
+      name: "The Golden Task",
+      body: "The hub's own worked task, run on Opus 5 like your Leg A. Each of its misses links to the walkthrough of that run.",
+    },
+  ] as { id: string; value?: string; unit: string; name: string; body: string }[],
+  notes: [
+    {
+      id: "runs",
+      label: "The dots",
       // [R 2]
-      body: "Some projects ran each task several times, and the dots show those runs. Most failed criteria failed in half the runs or fewer, so a case that fails every time is the exception worth building on.",
+      body: "Some projects ran each task several times: a filled dot is a run that failed, a hollow one a run that passed. Most failed criteria failed in half the runs or fewer, so a case that fails every time is the exception worth building on.",
     },
     {
-      label: "Newer versions",
+      id: "versions",
+      label: "Versions",
       // [C When nothing is working, still required]
-      body: "Newer Opus versions handle some older traps better, a plain missed source most of all, so favor the cases that held on Opus 4.8 and 5.",
+      body: "Newer versions handle some older traps better, a plain missed source most of all, so lean on the cases that held on Opus 4.8 and 5.",
     },
     {
+      id: "names",
       label: "Names",
       // [C How to use it]
       body: "Names and records in the study cases come from synthetic task data.",
@@ -2228,5 +2397,7 @@ export const patternsIn = (id: FailureCategoryId) => failurePatterns.filter((p) 
 
 export const allCases = failurePatterns.flatMap((p) => p.cases);
 
-/** A Green Shell case is a run on this project rather than in the studies. */
-export const isGreenShell = (s: CaseSource) => s === "golden" || s === "guidelines";
+export const caseById: Record<string, FailureCase> = Object.fromEntries(allCases.map((c) => [c.id, c]));
+
+/** A pattern was seen on the model Leg A runs when any of its cases was. */
+export const seenOnLegA = (p: FailurePattern) => p.cases.some((c) => c.model === legAModel);

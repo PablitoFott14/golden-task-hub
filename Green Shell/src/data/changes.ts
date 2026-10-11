@@ -29,7 +29,7 @@ import type { GuidelineChange } from "./types";
  *
  * Newest first.
  */
-export const guidelinesVersion = { version: "Green Shell v1", updated: "Sep 27, 2026" };
+export const guidelinesVersion = { version: "Green Shell v1", updated: "Oct 8, 2026" };
 
 /**
  * The `version` a client flag carries, in place of a guidelines version. Read
@@ -40,13 +40,76 @@ export const clientFlagVersion = "Client flag";
 
 export const guidelineChanges: GuidelineChange[] = [
   {
+    id: "binding-parameters",
+    date: "Oct 8, 2026",
+    version: "Green Shell v1",
+    title: "All fourteen assigned parameters are binding",
+    before:
+      "Red Shell assigned four: task type, category, subcategory and universe. The rest of the brief was treated as guidance.",
+    body: "Fourteen parameters are assigned with every task: the task type, the use case and subcategory, the universe, the scenario, the assigned tools, the output artifact, the primary and secondary capabilities, the input and output modalities, the execution target, the verification condition, and the access the scenario assumes. All of them have to be followed exactly and visible in the finished task. Omitting, substituting or drifting from any one makes the task invalid.",
+    does: "Plan from the parameter sheet, and check the finished task against every line of it before you submit, not just the category pair. Deviate only where the universe genuinely cannot support a parameter or the scenario is too simple to reach the failure threshold, and only as far as that strictly needs.",
+    refs: [
+      { section: "Hard Client Requirements", title: "Task parameters are mandatory" },
+      { section: "1.1", title: "Task Parameters & Execution Rules" },
+      { section: "1.1.2", title: "Rest of the Parameters" },
+    ],
+    impact: "hard",
+    detail: {
+      label: "What counts as drift",
+      items: [
+        "Producing a different artifact than the one assigned, even a better one.",
+        "Exercising a capability the brief did not name, in place of one it did.",
+        "Reworking the scenario into a different kind of situation. Adjusting it for complexity is allowed, changing its core nature and intent is not.",
+        "Leaving an assigned input modality out, or asking for output outside the output modalities: audio when only text is listed is drift.",
+        "Depending on a write to a service the scenario only assumes read access to.",
+        "Drifting because the universe seemed unable to support the scenario, when exploring it would have shown it could. That fails the task automatically.",
+      ],
+    },
+    links: [
+      { to: "/#parameters", tag: "M1", label: "Fourteen are assigned. None of them is a suggestion" },
+      { to: "/reference#pre-submit", tag: "GATE", label: "A1 checks every one of them" },
+    ],
+  },
+  {
+    id: "failure-threshold",
+    date: "Oct 8, 2026",
+    version: "Green Shell v1",
+    title: "Model A has to fail at least 30%, and 50% is still preferred",
+    before: "Red Shell required Model A to fail at least 50% of the final rubric score.",
+    body: "The Model A trajectory has to show genuine failures worth at least 30% of the final rubric score, with meaningful impact on task completion and on what the user receives. A genuine failure rate of 50% or higher is still preferred. The failures have to be authentic, never forced or artificially scored to reach the threshold.",
+    does: "Aim for 50% or more, and submit a task whose genuine failures clear 30% rather than inflating a weight, adding asks after the run or forcing a miss to reach the higher number. If the model passes too easily, revisit the scenario's complexity while keeping it realistic and planned.",
+    refs: [
+      { section: "Hard Client Requirements", title: "Model A has to fail" },
+      { section: "1.1", title: "Task Parameters & Execution Rules" },
+      { section: "1.2", title: "Building the Idea" },
+    ],
+    impact: "hard",
+    detail: {
+      label: "Reading the bar",
+      items: [
+        "The QA rubric draws the same line from the other side: a Model A score above 70% fails the task as trivial.",
+        "Only genuine failures count toward it. A raised weight, an ask added after the run, or one miss repeated across several criteria is exactly what the rule rules out.",
+        "Where the assigned scenario is too simple to reach 30%, its complexity may be raised, and only as far as needed, while every other parameter stays as assigned.",
+      ],
+    },
+    links: [
+      { to: "/#failure", tag: "M7", label: "If the model sails through, the task is not ready" },
+      { to: "/failure-approach", tag: "FA", label: "How Opus actually fails, case by case" },
+      { to: "/spec#dim-all-criteria-scoring", tag: "QC", label: "All Criteria Scoring" },
+    ],
+  },
+  {
     id: "input-diversity",
     date: "Oct 8, 2026",
-    version: clientFlagVersion,
+    version: "Green Shell v1",
     title: "Images have to be worth looking at, not only worth reading",
-    body: "The client went through the image inputs across the project and found roughly 95% of them were text in picture form: screenshots of documents, emails and threads. An image now has to carry visual information the model interprets rather than transcribes. This bites hardest where the assigned input_modalities include image, which is where a reviewer looks first.",
+    body: "The client went through the image inputs across the project and found roughly 95% of them were text in picture form: screenshots of documents, emails and threads. The guidelines now ask for most images to need genuine visual interpretation, and for the inputs to cover every assigned input modality. This bites hardest where the assigned input modalities include images, which is where a reviewer looks first.",
     does: "Before attaching an image, ask what the model has to do with it. If the answer is read the words, it is a document, so make it one and spend the image slot on something that has to be looked at.",
-    refs: [{ section: "1.2.2", title: "Select the Multimodal Inputs" }],
+    refs: [
+      { section: "Hard Client Requirements", title: "Multimodal" },
+      { section: "1.1.2", title: "Rest of the Parameters" },
+      { section: "1.2.2", title: "Select the Multimodal Inputs" },
+    ],
     impact: "shape",
     detail: {
       label: "Images that carry visual information",
@@ -63,6 +126,29 @@ export const guidelineChanges: GuidelineChange[] = [
       { to: "/reference#input-floor", tag: "WN", label: "Three inputs is a floor, and it is enforced" },
       { to: "/spec#input-artifacts", tag: "QC", label: "Realism, safety and the input floor" },
     ],
+  },
+  {
+    id: "planned-complexity",
+    date: "Oct 8, 2026",
+    version: "Green Shell v1",
+    title: "Complexity is planned, never patched in",
+    body: "Complexity has to come from a natural, well planned scenario rather than from artificial friction, extra constraints or contrived inputs. Do not improvise the task as you go, and do not wait for the model to fail before deciding to add difficulty. The guidelines set the expectation at a minimum of two hours on planning before a task is ready.",
+    does: "Settle the deliverable, the dependencies, the inputs and the intended workflow before you build anything, and check the deliverable against the complexity bar for its type while the scenario is still on paper.",
+    refs: [
+      { section: "Complexity Bar", title: "Genuine complexity is not negotiable" },
+      { section: "1", title: "Planning the Agent Task" },
+      { section: "1.2", title: "Building the Idea" },
+    ],
+    impact: "shape",
+    detail: {
+      label: "The floor each deliverable has to clear",
+      items: [
+        "P0, explainer video: several scenes driven by the data or the documents, not one static frame with narration.",
+        "P0, interactive HTML: interaction that actually works, controls that respond, state that changes. A styled static page does not qualify.",
+        "P0, dashboard: several linked views over data the model extracted itself. One chart is not a dashboard.",
+        "P1 covers presentations of 10 to 15 slides, multi page designed PDFs and multi row structured data. A plain document or report is P2.",
+      ],
+    },
   },
   {
     id: "assigned-tool-use",
@@ -90,8 +176,42 @@ export const guidelineChanges: GuidelineChange[] = [
     },
     links: [
       { to: "/reference#assigned-tools", tag: "WN", label: "Assigned tools are mandatory, and drift is rejected" },
-      { to: "/#parameters", tag: "M1", label: "Confirm the loadout before you design" },
+      { to: "/#parameters", tag: "M1", label: "Name the step each assigned tool is needed for" },
       { to: "/spec#trajectory", tag: "QC", label: "Feasibility with tools" },
+    ],
+  },
+  {
+    id: "dynamic-values",
+    date: "Oct 8, 2026",
+    version: "Green Shell v1",
+    title: "Dynamic values: grade the retrieval, not the figure",
+    before:
+      "Red Shell carried the same note once, in the appendix at 9.3.1. The rubric sections said nothing about dynamic values, so it read as background on the built in tools rather than as a rule about writing a criterion.",
+    body: "Browsing is now an expected part of a task, so more rubric sets are being written against values the model has to fetch. Those values are live: a price, a ranking or an availability can legitimately be different the next time the task is run. A criterion that states the figure you saw as the required answer fails the run that retrieved the newer, correct one, which is the model doing exactly what the prompt asked.",
+    does: "Go through every criterion that names a value the model has to fetch, and rewrite the ones that state it as the answer. Phrase it as the current value retrieved during the run, put your figure in parentheses after it, and keep the file, the product and the source named so a grader can still rate it with the prompt closed.",
+    refs: [
+      { section: "5.1", title: "Rubric Fundamentals" },
+      { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "8.3.1", title: "The Built-in Tools" },
+    ],
+    impact: "hard",
+    detail: {
+      label: "The rewrite, and how to check it",
+      items: [
+        "Not valid: the model reports $129.99 as StrideHub's current price for the AeroRun Velocity 4. It was correct the day it was written, and a run that finds the new price is marked down for getting it right.",
+        "Valid: the model reports StrideHub's current price for the AeroRun Velocity 4 based on information retrieved during the run (e.g., $129.99). The figure is an example, so what is graded is whether the agent found and reported the correct current value.",
+        "The example in brackets is what keeps the criterion ratable. Strip the value out and it stops being self-contained. A criterion saying only that the page references the Spiderman XTR listing with its current price names no file and no figure, so nobody can rate it either way.",
+        "Dynamic covers prices, availability, rankings, schedules, product specifications, company information and anything else live on the web.",
+        "Fixed values are still fixed. Anything from an attachment, a universe record or the GTFA is a literal and has to match its source exactly.",
+        "Verify it against your own golden, which has to pass the complete set. A criterion the golden would fail on a rerun because the number moved is a broken criterion, not a broken golden.",
+        "This is scored, not a style note. An overly specific criterion is Overfitting, a Moderate issue, and more than 15% of the set carrying moderate issues fails Overall Rubric Quality. One frozen price per product reaches that quickly.",
+      ],
+    },
+    links: [
+      { to: "/#rubrics", tag: "M8", label: "Grade what was delivered, not how it got there" },
+      { to: "/reference#assigned-tool-use", tag: "WN", label: "Assigned tools have to be used, not just assigned" },
+      { to: "/reference#literal-matching", tag: "WN", label: "Every literal has to match its source exactly" },
+      { to: "/spec#rubric-quality", tag: "QC", label: "Overfitting and Underfitting" },
     ],
   },
   {
@@ -130,7 +250,8 @@ export const guidelineChanges: GuidelineChange[] = [
     does: "Read your L2 definition and its scope check before you design anything, then check the neighbouring L2 in the same use case. Fitting that one better is a category relevance failure even when the use case is right.",
     refs: [
       { section: "1.1", title: "Task Parameters & Execution Rules" },
-      { section: "1.1.1", title: "Use-Case Taxonomy (L1 & L2)" },
+      { section: "1.1.1", title: "Categories and Subcategories (L1 & L2)" },
+      { section: "1.2.3", title: "Create the Prompt" },
       { section: "1.2.5", title: "Common Scenario Issues Getting Tasks Rejected" },
     ],
     impact: "hard",
@@ -139,31 +260,8 @@ export const guidelineChanges: GuidelineChange[] = [
       label: "Reading the taxonomy",
       items: [
         "The scope check is the tie breaker. SMB needs a small business context, Shopping needs the user to be buying, Research loses to any use case that owns the topic.",
-        "Four lower traffic use cases after Learning, and emotional wellbeing support, are out of scope. Health and Fitness is not a catch all for them.",
+        "Health and Fitness needs every health input mocked or synthetic, and emotional support is out of its scope.",
         "Every scenario below clears the complexity bar for its deliverable. A pair that only supports a plain document is a pair you have not finished designing against.",
-      ],
-    },
-  },
-  {
-    id: "binding-parameters",
-    date: "Sep 27, 2026",
-    version: "Green Shell v1",
-    title: "All seven assigned parameters are binding",
-    before:
-      "Red Shell assigned four: task type, category, subcategory and universe. The rest of the brief was treated as guidance.",
-    body: "Category, subcategory, universe, scenario, output artifact, primary capabilities and secondary capabilities are all assigned, and all of them have to be implemented and visible in the finished task. Omitting, substituting or drifting from any one makes the task invalid.",
-    does: "Check the finished task against every assigned parameter before you submit, not just the category pair. The scenario is the only one you may adjust, and only to reach the complexity bar.",
-    refs: [
-      { section: "Hard Client Requirements", title: "Task parameters are mandatory" },
-      { section: "1.1", title: "Task Parameters & Execution Rules" },
-    ],
-    impact: "hard",
-    detail: {
-      label: "What counts as drift",
-      items: [
-        "Producing a different artifact than the one assigned, even a better one.",
-        "Exercising a capability the brief did not name, in place of one it did.",
-        "Reworking the scenario into a different kind of situation. Adjusting it for complexity is allowed, changing its core nature and intent is not.",
       ],
     },
   },
@@ -189,9 +287,13 @@ export const guidelineChanges: GuidelineChange[] = [
     title: "Three multimodal inputs is the floor, not the target",
     before:
       "Red Shell set the same minimum of three, and in practice it was read as the number to hit.",
-    body: "The Model A conversation needs a minimum of three multimodal inputs. Three is the requirement, not the goal, and many tasks need substantially more than that to meet the complexity bar the client expects.",
+    body: "The Model A conversation needs a minimum of three multimodal inputs, and together they have to cover every assigned input modality. Three is the requirement, not the goal, and many tasks need substantially more than that to meet the complexity bar the client expects.",
     does: "Use as many inputs as the scenario naturally needs, and never trim a task down to three or slightly more.",
-    refs: [{ section: "1.2.2", title: "Select the Multimodal Inputs" }],
+    refs: [
+      { section: "1.1.2", title: "Rest of the Parameters" },
+      { section: "1.2.2", title: "Select the Multimodal Inputs" },
+      { section: "1.3", title: "Defining the Draft History" },
+    ],
     impact: "hard",
   },
   {
@@ -206,9 +308,11 @@ export const guidelineChanges: GuidelineChange[] = [
     refs: [
       { section: "5", title: "Objective Rubrics" },
       { section: "5.1", title: "Rubric Fundamentals" },
+      { section: "5.2", title: "Rubric Weights" },
       { section: "5.4", title: "Category & Evaluation Target" },
       { section: "5.6", title: "How the Client Defines Rubric Issue Severity" },
       { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "7.4", title: "Categories and Evaluation Targets for Subjective Rubrics" },
       { section: "8.2", title: "What the Model Actually Does" },
     ],
     impact: "hard",
@@ -255,57 +359,6 @@ export const guidelineChanges: GuidelineChange[] = [
         "Not valid: array_survey.csv contains the columns string_id, output_w and variance_pct.",
         "Valid: array_survey.csv records a variance_pct of −12.4 for string S-07, the string whose output is read off the inverter photo.",
         "Naming the specific files inside a folder does not save it. If nothing in the criterion grades content, it is still an existence check.",
-      ],
-    },
-  },
-  {
-    id: "failure-threshold",
-    date: "Sep 27, 2026",
-    version: "Green Shell v1",
-    title: "Model A has to fail at least 30%, and 50% is still preferred",
-    before: "Red Shell required Model A to fail at least 50% of the final rubric score.",
-    body: "The Model A trajectory has to show genuine failures worth at least 30% of the final rubric score, with meaningful impact on task completion and on what the user receives. A genuine failure rate of 50% or higher is still preferred. The failures have to be authentic, never forced or artificially scored to reach the threshold.",
-    does: "Aim for 50% or more, and submit a task whose genuine failures clear 30% rather than inflating a weight, adding asks after the run or forcing a miss to reach the higher number. If the model passes too easily, revisit the scenario's complexity while keeping it realistic and planned.",
-    refs: [
-      { section: "Hard Client Requirements", title: "Model A has to fail" },
-      { section: "1.1", title: "Task Parameters & Execution Rules" },
-      { section: "1.2", title: "Building the Idea" },
-    ],
-    impact: "hard",
-    detail: {
-      label: "Reading the bar",
-      items: [
-        "The QA rubric draws the same line from the other side: a Model A score above 70% fails the task as trivial.",
-        "Only genuine failures count toward it. A raised weight, an ask added after the run, or one miss repeated across several criteria is exactly what the rule rules out.",
-        "Where the assigned scenario is too simple to reach 30%, its complexity may be raised, and only as far as needed, while every other parameter stays as assigned.",
-      ],
-    },
-    links: [
-      { to: "/#failure", tag: "M7", label: "If the model sails through, the task is not ready" },
-      { to: "/failure-approach", tag: "FA", label: "How Opus actually fails, case by case" },
-      { to: "/spec#dim-all-criteria-scoring", tag: "QC", label: "All Criteria Scoring" },
-    ],
-  },
-  {
-    id: "planned-complexity",
-    date: "Sep 27, 2026",
-    version: "Green Shell v1",
-    title: "Complexity is planned, never patched in",
-    body: "Complexity has to come from a natural, well planned scenario rather than from artificial friction, extra constraints or contrived inputs. Do not improvise the task as you go, and do not wait for the model to fail before deciding to add difficulty. The guidelines set the expectation at a minimum of two hours on planning before a task is ready.",
-    does: "Settle the deliverable, the dependencies, the inputs and the intended workflow before you build anything, and check the deliverable against the complexity bar for its type while the scenario is still on paper.",
-    refs: [
-      { section: "Complexity Bar", title: "Genuine complexity is not negotiable" },
-      { section: "1", title: "Planning the Agent Task" },
-      { section: "1.2", title: "Building the Idea" },
-    ],
-    impact: "shape",
-    detail: {
-      label: "The floor each deliverable has to clear",
-      items: [
-        "P0, explainer video: several scenes driven by the data or the documents, not one static frame with narration.",
-        "P0, interactive HTML: interaction that actually works, controls that respond, state that changes. A styled static page does not qualify.",
-        "P0, dashboard: several linked views over data the model extracted itself. One chart is not a dashboard.",
-        "P1 covers presentations of 10 to 15 slides, multi page designed PDFs and multi row structured data. A plain document or report is P2.",
       ],
     },
   },

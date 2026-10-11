@@ -47,9 +47,9 @@ export const chargeDisputes: GoldenTask = {
     {
       step: 1,
       id: "parameters",
-      title: "Seven parameters arrive already decided",
-      did: "The sheet fixes the pair before any design starts: Personal finance, detecting and disputing erroneous charges, with reconciling amounts as the primary capability and OCR, contradiction handling and computation behind it. The universe is named, and the output is one file called disputes.html.",
-      why: "Every decision after this is checked back against the pair, and only the scenario has any give. A task that fits the neighbouring subcategory better is a category relevance failure even when the use case is right.",
+      title: "The parameters arrive already decided",
+      did: "The sheet fixes the pair before any design starts: Personal finance, detecting and disputing erroneous charges, with reconciling amounts as the primary capability and OCR, contradiction handling and computation behind it. The universe is named, and the output is one file called disputes.html. This task was built when seven parameters were assigned; a task today carries fourteen.",
+      why: "Every decision after this is checked back against the parameters, and a deviation is allowed only where the universe cannot support one or the scenario is too simple to reach the failure threshold. A task that fits the neighbouring subcategory better is a category relevance failure even when the use case is right.",
       handoff: "A pair to design inside, and the scope check that says why the receipts belong to it.",
     },
     {
