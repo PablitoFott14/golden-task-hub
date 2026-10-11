@@ -69,7 +69,7 @@ export const hubUpdates: HubUpdate[] = [
     kind: "guidelines",
     what: "Every failure case now names the trigger you can build",
     where: "Failure Approach",
-    why: "28 patterns with 89 graded Opus runs behind them, each one saying why it failed rather than only that it did. The Opus 5 cases are marked, every build idea points back at the real cases it came from, and the tab opens on where the evidence comes from. Take your failure point from a run instead of inventing one.",
+    why: "28 patterns and 89 real cases from graded Opus runs, each one saying why it failed rather than only that it did. The Opus 5 cases are marked, the build ideas link back to the cases they came from, and the tab opens on where the evidence comes from. Take your failure point from a case instead of inventing one.",
     to: "/failure-approach",
   },
   {
