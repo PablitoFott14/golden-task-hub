@@ -634,16 +634,14 @@ section therefore opens with `WipNotice` from [src/components/ui.tsx](src/compon
 | --- | --- | --- |
 | Golden Tasks | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | Default wording **plus** the line about the Green Shell reference task that is coming |
 | Complexity | [Complexity.tsx](src/pages/Complexity.tsx) | Default |
-| Onboarding | [Onboarding.tsx](src/pages/Onboarding.tsx) | Default, **and a `WIP` chip on each of the two cards** — both onboardings are unfinished, not just the pane |
-| Pre-Submit | [PreSubmit.tsx](src/pages/PreSubmit.tsx) | Default |
 | FAQ | [Faq.tsx](src/pages/Faq.tsx) | Default |
 
 **One component and one sentence, so the status reads the same everywhere.** A section with
 something extra to say passes children and keeps the label and the opening sentence; it does not
 write its own. **The notice goes first in the section's content**, above the title where the title
-lives in the content. That is what makes it unmissable, and on the pre-submit gate it is also what
-keeps it clear of the amber warning that already sits under that heading — two amber blocks in a
-row read as one.
+lives in the content. That is what makes it unmissable. Where a section already carries an amber
+warning of its own, the notice goes above it rather than beside it: two amber blocks in a row read
+as one.
 
 **Amber, never rose.** Rose is the update notice and Must Read, and it means *read this before your
 next task*. Amber means *this is not finished yet*. Those are different claims and must not look
