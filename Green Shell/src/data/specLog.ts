@@ -56,6 +56,32 @@ export const specLogNote =
 /** Newest first. */
 export const specRevisions: SpecRevision[] = [
   {
+    id: "green-shell-v4",
+    date: "Oct 12, 2026",
+    title: "Scenario Adherence stops asking for the scenario and asks whether you are on topic",
+    note: "One dimension moved and the spec is still 33 dimensions across 7 groups. Scenario Adherence is now a topicality check: it reads the prompt against the assigned scenario and fails only where the two share nothing at all. Both of its error categories are renamed, and the note about adjusting a scenario the tools cannot perform is gone with the wording that needed it.",
+    changes: [
+      {
+        group: "Task Parameters",
+        dimension: "Scenario Adherence",
+        kind: "guidance",
+        summary:
+          "The question asks whether the prompt is broadly on topic, not whether it follows the scenario as written.",
+        detail:
+          "It now reads “Ensure that the prompt broadly aligns with the context of the scenario presented in the “Scenario” field from the task parameters section.” The worked example settles how far that goes: a scenario about comparing two companies is still followed “even if the particular companies, or number of companies changes”. What replaced is the V3 instruction to stay “as close as possible to the scenario as written” and only fill in what it leaves open, and with it the note that a scenario may be adjusted where the environment's tools cannot perform it. That note is not needed any more, because nothing in the dimension now turns on reproducing a step.",
+      },
+      {
+        group: "Task Parameters",
+        dimension: "Scenario Adherence",
+        kind: "options",
+        summary:
+          "Both error categories are renamed Off-Topic, and the Fail needs the prompt and the scenario to share nothing at all.",
+        detail:
+          "“Fail - Scenario Not Followed” and “Non-Fail - Loose Scenario Adherence” are now “Fail - Off-Topic” and “Non-Fail - Off-Topic”, so the error category a reviewer applies changes too. The Fail is “completely off-topic when examined alongside the assigned scenario; there are no elements tying the two together”, and the Non-Fail is “only tangentially related” with ties that are “loose or superficial”. A different user, a different goal or a different deliverable no longer fails the dimension on its own, which is what the V3 Fail named. The 5 keeps its shape and now reads “clearly related to the assigned scenario and faithfully recreate its goals and context”.",
+      },
+    ],
+  },
+  {
     id: "green-shell-v3",
     date: "Oct 5, 2026",
     title: "The three rubric quality bands now stand alone, and Scenario Adherence is scoped",

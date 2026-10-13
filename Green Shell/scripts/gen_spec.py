@@ -293,7 +293,7 @@ DIMENSION_LINKS = """export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#inputs", tag: "M4", label: "Evidence the model has to actually read" },
   ],
   Completeness: [
-    { to: "/reference#s7", tag: "G3", label: "Download the trajectories, star the preferred run" },
+    { to: "/reference#s6", tag: "F3", label: "Download the trajectories, star the preferred run" },
   ],
   "Golden/Preferred Run Selection": [
     { to: "/#golden", tag: "M9", label: "The run you file is part of the task" },

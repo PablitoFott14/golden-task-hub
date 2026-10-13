@@ -55,6 +55,15 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "scenario-adherence",
+    date: "Oct 14, 2026",
+    kind: "guidelines",
+    what: "Scenario Adherence is scored as a topicality check now",
+    where: "Spec Doc → Task Parameters",
+    why: "The V4 rubric fails the dimension only where the prompt and the assigned scenario share nothing at all. Changing the particular companies, or how many of them, is still on topic. Both error categories are renamed Off-Topic, so the one a reviewer applies changes too.",
+    to: "/spec#dim-scenario-adherence",
+  },
+  {
     id: "dynamic-values",
     date: "Oct 11, 2026",
     kind: "guidelines",

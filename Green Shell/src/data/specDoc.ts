@@ -72,30 +72,30 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Scenario Adherence",
         "question": "Rate the Scenario Adherence of the Task Parameters dimension.",
-        "description": "Check against the Scenario assigned to your task in column G of the task parameter sheet.\nThe CB must stay as close as possible to the scenario as written and only fill in what it leaves open.  For all options except the last, apply an error category.\nNote: When the assigned scenario or its execution target asks for an action the environment's tools cannot perform the scenario may be adjusted to make the task feasible, i.e. the closest workable version of that part counts as following the scenario.",
+        "description": "Ensure that the prompt broadly aligns with the context of the scenario presented in the \"Scenario\" field from the task parameters section.\n\nExample: If the scenario concerns comparing two companies, any prompt ultimately concerned with the same or a similar scenario should be considered \"on topic.\" E.g., even if the particular companies, or number of companies changes, if the broader scenario is reflected in the prompt, the task should not fail in this dimension.\nIf, on the other hand, the prompt appears to be completely off-topic (e.g., in the example scenario above, instead of being about comparing companies or elements thereof, the prompt pivots to being about scheduling tasks and those tasks are unrelated to the comparison set up in the scenario), the task should fail.",
         "errorTags": [
           {
-            "label": "Fail - Scenario Not Followed",
+            "label": "Fail - Off-Topic",
             "type": "fail"
           },
           {
-            "label": "Non-Fail - Loose Scenario Adherence",
+            "label": "Non-Fail - Off-Topic",
             "type": "non-fail"
           }
         ],
         "options": [
           {
-            "text": "[Fail - Scenario Not Followed]\nThe prompt and its input files are not built on the assigned scenario: they serve a different user, pursue a different goal (a different outcome for the user, not an added constraint, filter, label or section to a goal already defined in the scenario), deliver something other than what the scenario asks for, or reduce the scenario to a passing mention. Errors in the rubric or the golden are graded under their own dimensions, not here.",
+            "text": "[Fail - Off-Topic]\nThe prompt and its input files are completely off-topic when examined alongside the assigned scenario; there are no elements tying the two together such that they appear to deal with completely different contexts.",
             "score": 2,
             "justify": true
           },
           {
-            "text": "[Non-Fail - Loose Scenario Adherence]\nThe core of the scenario is followed, but one element is changed beyond filling gaps (e.g., a different deliverable type, an added goal the scenario does not imply).",
+            "text": "[Non-Fail - Off-Topic]\nThe prompt and its input files are only tangentially related to the assigned scenario; elements exist which tie the two together, but only loosely or superficially.",
             "score": 3,
             "justify": true
           },
           {
-            "text": "The task follows the scenario closely: same user, goal and deliverable; only details the scenario leaves open were filled in. Extra input files, more items or added friction that serve the same user, goal and deliverable count as filling in, including inputs added to reach the 3-input minimum.",
+            "text": "The task follows the scenario closely; the prompt and its inputs are clearly related to the assigned scenario and faithfully recreate its goals and context.",
             "score": 5,
             "justify": false
           }
