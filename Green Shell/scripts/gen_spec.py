@@ -1,7 +1,14 @@
 """
 Regenerate src/data/specDoc.ts from the Green Shell spec exports.
 
-    python scripts/gen_spec.py
+    python scripts/gen_spec.py                  # dimensions and appendix
+    python scripts/gen_spec.py --appendix-only  # appendix only, dimensions untouched
+
+`--appendix-only` rewrites everything from `rubricQualityNote` down to
+`authoringStandards` and leaves `specGroups` exactly as it is. It is for the
+case where the appendix has been re-exported but the rubric export beside the
+project is older than the dimensions already committed: a full run would then
+regress them. Check that before a full run, because nothing else will.
 
 Two CSVs beside this project, both exported from the spec sheet:
 
@@ -35,6 +42,7 @@ import glob
 import json
 import os
 import re
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -156,9 +164,14 @@ def read_appendix():
 
         elif head == "Criteria Weight Definitions":
             target = buckets
-            if len(title.split("\n", 1)) > 1:
-                # The sheet keeps a superseded scale, labelled in its own heading.
-                target, dep_label = deprecated, title.split("\n", 1)[1].strip()
+            tail = title.split("\n", 1)[1].strip() if len(title.split("\n", 1)) > 1 else ""
+            # The sheet keeps a superseded scale under the same heading, told
+            # apart by its second line. Only a DEPRECATED marker means that: the
+            # live scale carries a revision note there too ("Updated 06/10"), and
+            # reading any second line as deprecation files the live scale as
+            # superseded and leaves the page with no weights at all.
+            if tail.upper().startswith("DEPRECATED"):
+                target, dep_label = deprecated, tail
             for r in body:
                 if r[1] == "4 Difficulty Dimensions" or r[0] == "4 Difficulty Dimensions":
                     difficulty.extend(
@@ -290,17 +303,68 @@ DIMENSION_LINKS = """export const dimensionLinks: Record<string, XLink[]> = {
 
 # ----------------------------------------------------------------------- write
 
-def main():
-    groups = read_dimensions()
-    issues, difficulty, buckets, deprecated, dep_label, standards = read_appendix()
+APPENDIX_START = "export const rubricQualityNote = "
+APPENDIX_END = "/**\n * Cross-links from a dimension into the rest of the hub"
 
-    n_dims = sum(len(g["dimensions"]) for g in groups)
-    print("dimensions : %d in %d groups" % (n_dims, len(groups)))
-    for g in groups:
-        print("   %-18s %d" % (g["group"], len(g["dimensions"])))
+
+def appendix_block(issues, difficulty, buckets, deprecated, dep_label, standards):
+    """Everything in specDoc.ts that comes from appendix.csv, as it is written."""
+    return f'''export const rubricQualityNote = {json.dumps(SECTION_NOTES["quality"], ensure_ascii=False)};
+
+export const rubricQualityIssues: RubricQualityIssue[] = {ts(issues)};
+
+export const weightsNote = {json.dumps(SECTION_NOTES["weights"], ensure_ascii=False)};
+
+export const difficultyDimensions: string[] = {ts(difficulty)};
+
+export const weightBuckets: WeightBucket[] = {ts(buckets)};
+
+/**
+ * A superseded scale the sheet still carries, under its own heading. Kept so
+ * the appendix is represented in full, and labelled with the sheet's own words
+ * so nobody grades against it by mistake.
+ */
+export const deprecatedWeightsLabel = {json.dumps(dep_label, ensure_ascii=False)};
+
+export const deprecatedWeightBuckets: WeightBucket[] = {ts(deprecated)};
+
+export const standardsNote = {json.dumps(SECTION_NOTES["standards"], ensure_ascii=False)};
+
+export const authoringStandards: AuthoringStandard[] = {ts(standards)};
+
+'''
+
+
+def write_appendix_only(parsed):
+    """Swap the appendix block in place, leaving the dimensions alone."""
+    with open(OUT, encoding="utf-8") as fh:
+        current = fh.read()
+    i = current.index(APPENDIX_START)
+    j = current.index(APPENDIX_END, i)
+    out = current[:i] + appendix_block(*parsed) + current[j:]
+    with open(OUT, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(out)
+    print("\nwrote the appendix block of %s, dimensions untouched" % OUT)
+
+
+def main():
+    appendix_only = "--appendix-only" in sys.argv
+    parsed = read_appendix()
+    issues, difficulty, buckets, deprecated, dep_label, standards = parsed
+
+    if not appendix_only:
+        groups = read_dimensions()
+        n_dims = sum(len(g["dimensions"]) for g in groups)
+        print("dimensions : %d in %d groups" % (n_dims, len(groups)))
+        for g in groups:
+            print("   %-18s %d" % (g["group"], len(g["dimensions"])))
     print("appendix   : %d rubric quality issues, %d weight buckets (%d deprecated),"
           " %d difficulty dimensions, %d authoring standards"
           % (len(issues), len(buckets), len(deprecated), len(difficulty), len(standards)))
+
+    if appendix_only:
+        write_appendix_only(parsed)
+        return
 
     named = set(re.findall(r'^ {2}"?([^"\n:]+?)"?: \[', DIMENSION_LINKS, re.M))
     actual = {d["name"] for g in groups for d in g["dimensions"]}
@@ -377,30 +441,7 @@ export interface AuthoringStandard {{
 
 export const specGroups: SpecGroup[] = {ts(groups)};
 
-export const rubricQualityNote = {json.dumps(SECTION_NOTES["quality"], ensure_ascii=False)};
-
-export const rubricQualityIssues: RubricQualityIssue[] = {ts(issues)};
-
-export const weightsNote = {json.dumps(SECTION_NOTES["weights"], ensure_ascii=False)};
-
-export const difficultyDimensions: string[] = {ts(difficulty)};
-
-export const weightBuckets: WeightBucket[] = {ts(buckets)};
-
-/**
- * A superseded scale the sheet still carries, under its own heading. Kept so
- * the appendix is represented in full, and labelled with the sheet's own words
- * so nobody grades against it by mistake.
- */
-export const deprecatedWeightsLabel = {json.dumps(dep_label, ensure_ascii=False)};
-
-export const deprecatedWeightBuckets: WeightBucket[] = {ts(deprecated)};
-
-export const standardsNote = {json.dumps(SECTION_NOTES["standards"], ensure_ascii=False)};
-
-export const authoringStandards: AuthoringStandard[] = {ts(standards)};
-
-/**
+{appendix_block(*parsed)}/**
  * Cross-links from a dimension into the rest of the hub, keyed by dimension
  * name. Hand-authored in scripts/gen_spec.py, and mirrored by links pointing
  * back at `/spec#<group-slug>` from the method, the gate and Must Read.

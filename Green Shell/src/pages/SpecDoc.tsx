@@ -95,7 +95,20 @@ const dimensionNav: NavItem[] = specGroups.map((g) => ({
 const appendixNav: NavItem[] = [
   { id: "rubric-quality", label: "Rubric Quality", icon: ListChecks, count: rubricQualityIssues.length },
   { id: "weights", label: "Weight Definitions", icon: Scale, count: weightBuckets.length },
-  { id: "standards", label: "Authoring Standards", icon: PenLine, count: authoringStandards.length },
+  // The appendix carried an authoring standards section until the Oct 12
+  // export dropped it. Listed only while it has one, because a rail entry
+  // reading "0" opens a pane with nothing under its heading. The pane itself
+  // stays, so a later export that brings the section back needs no change.
+  ...(authoringStandards.length
+    ? [
+        {
+          id: "standards",
+          label: "Authoring Standards",
+          icon: PenLine,
+          count: authoringStandards.length,
+        },
+      ]
+    : []),
 ];
 
 const logNav: NavItem[] = [
