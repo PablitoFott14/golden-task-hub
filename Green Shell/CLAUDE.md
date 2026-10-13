@@ -185,7 +185,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | Version History table and the `[NEW]` callouts in the guidelines, plus anything the client flags to the team afterwards | [src/data/changes.ts](src/data/changes.ts) |
 | Nothing — hand-authored, one entry per guidelines or onboarding change | [src/data/hubLog.ts](src/data/hubLog.ts) |
 | `rationale.md` and `[External] Green Shell Guidelines v1`, at its Oct 8, 2026 revision | [src/data/method.ts](src/data/method.ts) |
-| The guidelines, written up as a gate. Red Shell's `checklist.md` was the starting frame only | [src/data/checklist.ts](src/data/checklist.ts), which [scripts/build_presubmit_gate.py](scripts/build_presubmit_gate.py) prints into `public/docs/presubmit-gate.pdf` |
+| The guidelines, written up as a gate. Red Shell's `checklist.md` was the starting frame only | [src/data/checklist.ts](src/data/checklist.ts), with [presubmit-gate.md](presubmit-gate.md) as its editable twin, which [scripts/build_presubmit_gate.py](scripts/build_presubmit_gate.py) prints into `public/docs/presubmit-gate.pdf` |
 | `*-rubric.csv` and `appendix.csv`, the spec exports (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
 | `F&Q.md` in this repo | [src/data/faq.ts](src/data/faq.ts) |
 | `failure approach/`: the two studies of graded Opus failures (`opus_failure_report (2).html`, `task_writer_cheat_sheet (3).html`) and the md written from them, plus the Golden Task's Model A run | [src/data/failureApproach.ts](src/data/failureApproach.ts), provenance in brackets and comments. See [The Failure Approach tab](#the-failure-approach-tab) |
@@ -224,6 +224,36 @@ runs straight from the Drive folder), lays the gate out as one Letter page of HT
 palette and type (Segoe UI and Consolas), and prints it with headless Chrome, which is also how the
 original was made. **Keep `checklist.ts` free of value imports** for that reason: Node loads it on
 its own, and only `import type` is erased.
+
+### The gate has an editable twin, and ids are positional
+
+[presubmit-gate.md](presubmit-gate.md) at the project root is the gate as Markdown, for editing it
+by hand without touching TypeScript. [scripts/gate_md.py](scripts/gate_md.py) moves it both ways and
+tells you when the two have drifted:
+
+```bash
+python scripts/gate_md.py check     # fails if the Markdown and checklist.ts disagree
+python scripts/gate_md.py sync      # presubmit-gate.md -> checklist.ts
+python scripts/gate_md.py export    # checklist.ts -> presubmit-gate.md
+```
+
+**Either file may be edited, and whichever moved is the one you sync from.** A sync rewrites the
+`checklistMeta` object and the `checklist` array whole, one line per field, and leaves the header
+comment and everything else alone, so do not hand wrap a string in those two blocks: the next sync
+reflows it back. **Reprint the PDF after a sync**, or the printable gate and the pane disagree, and
+`check` does not look at the PDF.
+
+**Section and check ids are positional and are recomputed on every sync.** A section is `s{n}` by
+its place in the file, a check is its section's letter plus its own place, so moving a section
+renumbers everything inside it. That is deliberate, because the gate is read in order and the ids
+are what a reader cites, but it silently repoints every `tag` elsewhere in the hub. `sync` prints
+the ids that moved and `check` verifies that every inbound `/reference#sN` link in `src/` still
+names a check that exists in that section. **Nothing else catches it**, so run `check` after any
+reorder and follow the links it lists.
+
+The subjective block moved below the golden on Oct 13, 2026, which swapped the F and G letters and
+the `s6` / `s7` anchors, and five links across `TaskDetail.tsx`, `faq.ts` and `specDoc.ts` moved
+with them. That is the shape of every reorder.
 
 The gate is **one Letter page**, and the generator holds it there by stepping the type scale down
 two points at a time until it fits, refusing to write below 80%. Sections stay whole, and the cut

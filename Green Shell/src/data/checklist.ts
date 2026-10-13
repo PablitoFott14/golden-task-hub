@@ -15,6 +15,21 @@ import type { ChecklistSection } from "./types";
  * and the printable gate cannot disagree. Keep this file free of value imports
  * for that reason: Node loads it on its own, with only `import type` erased.
  *
+ * **It has a hand-editable twin**, `presubmit-gate.md` at the project root.
+ * `scripts/gate_md.py` moves the gate between the two and `check` fails when
+ * they drift, so edit either one and sync, but reprint the PDF afterwards. The
+ * two blocks below, `checklistMeta` and `checklist`, are rewritten whole by
+ * that script: its layout is one line per field, so do not hand wrap them or
+ * the next sync will reflow it back. Everything outside them, this comment
+ * included, is left alone.
+ *
+ * **Section ids and check ids are positional**, `s{n}` and letter by section
+ * plus number within it, and the sync recomputes them from the order. Moving a
+ * section renumbers everything in it, which is why the gate reads A1 first, and
+ * it silently repoints any `tag` elsewhere in the hub. `gate_md.py check`
+ * verifies every inbound `/reference#sN` link still names a check in that
+ * section; nothing else will catch it.
+ *
  * Section refs point into `[External] Green Shell – Guidelines`, by its own
  * numbering. The links are added here and exist only in the hub.
  */
@@ -32,10 +47,8 @@ export const checklistMeta = {
   title: "Pre-Submit Gate",
   subtitle: "Run it once when the task is finished and you are deciding whether to submit.",
   estimate: "~5 min",
-  warning:
-    "Rubrics are the biggest source of rejections. Process over the 20% cap and an existence check fail a task on their own, and Major issues fail it above 10% of the criteria set.",
-  banner:
-    "Tick a box only when you have actually looked, not when you assume.",
+  warning: "Rubrics are the biggest source of rejections. Process over the 20% cap and an existence check fail a task on their own, and Major issues fail it above 10% of the criteria set.",
+  banner: "Tick a box only when you have actually looked, not when you assume.",
   pdf: "docs/presubmit-gate.pdf",
   ready: {
     title: "Ready to submit",
@@ -151,7 +164,9 @@ export const checklist: ChecklistSection[] = [
         q: "Do the inputs clear the hard rules: downsampled, no .heic, no LLM-generated .pdf/.docx/.xlsx, under the 20% LLM cap, no junk or system files, CC0 or CC BY, synthetic personas only?",
         f: "Then check the names: no filename, manifest or helper document may reveal the expected answer. Handwriting legible, images sharp, audio clear and short.",
         ref: "§1.2.2",
-        links: [{ to: "/spec#input-artifacts", tag: "QC", label: "Realism, safety and the input floor" }],
+        links: [
+          { to: "/spec#input-artifacts", tag: "QC", label: "Realism, safety and the input floor" },
+        ],
       },
     ],
   },
@@ -190,7 +205,9 @@ export const checklist: ChecklistSection[] = [
         q: "Does the prompt state the assigned execution target and any limit on the run, such as nothing sent, and keep the verification condition's answers out of it?",
         f: "A target the prompt never states cannot be graded. No shortcut, clue or filename may give the answer away.",
         ref: "§1.1.2 · 1.2.3",
-        links: [{ to: `${GT}#prompt`, tag: "GT", label: "Every span of the prompt that is doing work" }],
+        links: [
+          { to: `${GT}#prompt`, tag: "GT", label: "Every span of the prompt that is doing work" },
+        ],
       },
     ],
   },
@@ -226,8 +243,7 @@ export const checklist: ChecklistSection[] = [
     n: 5,
     id: "s5",
     title: "Objective rubrics",
-    prompt:
-      "Every criterion has to be ratable, correct at runtime, and grounded in something the prompt said.",
+    prompt: "Every criterion has to be ratable, correct at runtime, and grounded in something the prompt said.",
     checks: [
       {
         id: "E1",
@@ -252,7 +268,9 @@ export const checklist: ChecklistSection[] = [
         q: "Does every criterion grade content, and none only that a file, section, column or record exists?",
         f: "An existence check fails the task automatically at any weight. A criterion on the value inside the file already proves the file exists.",
         ref: "§5.1 · 5.6",
-        links: [{ to: "/reference#no-existence-checks", tag: "WN", label: "Existence is never a criterion" }],
+        links: [
+          { to: "/reference#no-existence-checks", tag: "WN", label: "Existence is never a criterion" },
+        ],
       },
       {
         id: "E4",
@@ -290,49 +308,20 @@ export const checklist: ChecklistSection[] = [
         q: "Are negatives around a quarter of the block and under 30%, and does any group of more than eight similar outcomes use one completeness criterion plus at most five spot checks?",
         f: "Each negative names a failure the setup genuinely invites, not every “don't” in the prompt.",
         ref: "§5.1.1 · 5.3",
-        links: [{ to: `${GT}#gtfa`, tag: "GT", label: "Nine charges, nine criteria, no group to collapse" }],
+        links: [
+          { to: `${GT}#gtfa`, tag: "GT", label: "Nine charges, nine criteria, no group to collapse" },
+        ],
       },
     ],
   },
   {
     n: 6,
     id: "s6",
-    title: "Subjective block",
-    prompt: "Presentation only, judged on the render.",
-    checks: [
-      {
-        id: "F1",
-        q: "Does the block hold 10 or more natural criteria, each anchored to one identifiable element and one visible property the prompt never asked for?",
-        f: "Do not force extra criteria to hit the number. No “looks professional”, “well designed” or “high quality”: name the property a reviewer can locate and score.",
-        ref: "§7.1",
-        links: [
-          { to: "/#subjective", tag: "M10", label: "Judge the render" },
-          { to: `${GT}#subjective`, tag: "GT", label: "Eleven criteria from one comparison" },
-        ],
-      },
-      {
-        id: "F2",
-        q: "Do the weights measure impact on the user's experience rather than difficulty, and does every criterion grade something the format can actually show?",
-        f: "A PDF cannot respond to hover and a static graphic cannot play audio. The category is Task Completion and the target the Final Answer Artifact, with User-Facing Message a rare exception.",
-        ref: "§7.1 · 7.2 · 7.4",
-      },
-      {
-        id: "F3",
-        q: "Did you rate every subjective criterion Present or Not Present against both models yourself, with justifications written at the user-experience level?",
-        f: "Pre-filled selections are not to be trusted, and the Model B set is entirely yours to determine. Literal matching applies here as rigorously as in the objective block.",
-        ref: "§5.1 · 7.5",
-        links: [{ to: "/spec#rubric-criteria", tag: "QC", label: "Subjective block scope" }],
-      },
-    ],
-  },
-  {
-    n: 7,
-    id: "s7",
     title: "Golden, dynamic values and final state",
     prompt: "The last things that break a task after everything else is right.",
     checks: [
       {
-        id: "G1",
+        id: "F1",
         q: "Did Leg B run the same prompt word for word, every hint at intent level and in the same persona, and does the golden pass the complete objective rubric set?",
         f: "If the model could copy your hint straight into the artifact, you gave away the answer. Anything the golden fails is a broken criterion, not a broken golden.",
         ref: "§5.7 · 6.1 · 6.2",
@@ -342,17 +331,48 @@ export const checklist: ChecklistSection[] = [
         ],
       },
       {
-        id: "G2",
+        id: "F2",
         q: "If the scenario touches the public internet or another dynamic type of information, essentially prices, is no criterion pinned to a value that can legitimately change between runs?",
         f: "Grade the retrieval and the relationship the model has to establish, with the value given as an example rather than as the required answer.",
         ref: "§8.3.1",
       },
       {
-        id: "G3",
+        id: "F3",
         q: "Are the trajectories and final artifacts downloaded, the preferred run starred, and does every failed criterion carry all three justification parts?",
         f: "A failure is a positive rated Not Present or a negative rated Present. Every one carries a justification; the golden needs none.",
         ref: "§3 · 5.5",
         links: [{ to: "/spec#trajectory", tag: "QC", label: "Trajectory completeness" }],
+      },
+    ],
+  },
+  {
+    n: 7,
+    id: "s7",
+    title: "Subjective block",
+    prompt: "Presentation only, judged on the render.",
+    checks: [
+      {
+        id: "G1",
+        q: "Does the block hold 10 or more natural criteria, each anchored to one identifiable element and one visible property the prompt never asked for?",
+        f: "Do not force extra criteria to hit the number. No “looks professional”, “well designed” or “high quality”: name the property a reviewer can locate and score.",
+        ref: "§7.1",
+        links: [
+          { to: "/#subjective", tag: "M10", label: "Judge the render" },
+          { to: `${GT}#subjective`, tag: "GT", label: "Eleven criteria from one comparison" },
+        ],
+      },
+      {
+        id: "G2",
+        q: "Do the weights measure impact on the user's experience rather than difficulty, and does every criterion grade something the format can actually show?",
+        f: "A PDF cannot respond to hover and a static graphic cannot play audio. The category is Task Completion and the target the Final Answer Artifact, with User-Facing Message a rare exception.",
+        ref: "§7.1 · 7.2 · 7.4",
+      },
+      {
+        id: "G3",
+        q: "Did you rate every subjective criterion Present or Not Present against both models yourself, with justifications written at the user-experience level?",
+        f: "Pre-filled selections are not to be trusted, and the Model B set is entirely yours to determine. Literal matching applies here as rigorously as in the objective block.",
+        ref: "§5.1 · 7.5",
+        links: [{ to: "/spec#rubric-criteria", tag: "QC", label: "Subjective block scope" }],
       },
     ],
   },

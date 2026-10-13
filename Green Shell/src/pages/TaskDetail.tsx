@@ -1134,7 +1134,7 @@ function Golden({ t }: { t: GoldenTask }) {
       <Crosslinks
         className="mt-4"
         links={[
-          { to: "/reference#s7", tag: "G1", label: "Does the golden pass its own block?" },
+          { to: "/reference#s6", tag: "F1", label: "Does the golden pass its own block?" },
           { to: "/reference#faq", tag: "FAQ", label: "How much may a hint carry?" },
         ]}
       />
@@ -1152,7 +1152,7 @@ function Subjective({ t }: { t: GoldenTask }) {
       <Crosslinks
         className="mt-5"
         links={[
-          { to: "/reference#s6", tag: "F1", label: "Is every subjective criterion judged on the render?" },
+          { to: "/reference#s7", tag: "G1", label: "Is every subjective criterion judged on the render?" },
           { to: "/spec#rubric-quality", tag: "SPEC", label: "Filler language, and why it fails" },
         ]}
       />

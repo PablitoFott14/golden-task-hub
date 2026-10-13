@@ -145,7 +145,7 @@ export const faq: FaqItem[] = [
     ],
     links: [
       { to: "/#subjective", tag: "M10", label: "Judge the render, nothing the prompt asked for" },
-      { to: "/reference#s6", tag: "F2", label: "Weights measure impact, not difficulty" },
+      { to: "/reference#s7", tag: "G2", label: "Weights measure impact, not difficulty" },
     ],
   },
   {
@@ -163,7 +163,7 @@ export const faq: FaqItem[] = [
       { section: "8.5", title: "Rating Against both Models and Justifications" },
     ],
     links: [
-      { to: "/reference#s6", tag: "F3", label: "Rate every criterion against both models yourself" },
+      { to: "/reference#s7", tag: "G3", label: "Rate every criterion against both models yourself" },
       { to: `${GT}#subjective`, tag: "GT", label: "Eleven criteria, each on the two renders" },
     ],
   },
