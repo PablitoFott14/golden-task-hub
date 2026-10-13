@@ -15,7 +15,7 @@ so five show.
 | The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
-| Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make Model A (Opus 5) fail for real: where the cases come from, then seven failure types as cards, 28 patterns, 89 graded runs behind them each with why it failed, a filter by what the task has, and a "Model A passed?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
+| Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make Model A (Opus 5) fail for real: where the cases come from, then seven failure types as cards, 28 patterns, and the 89 real cases from graded Opus runs behind them, each with why it failed, a filter by what the task has, and a "Model A passed?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
 | Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | **Parked, not on the site**, and the route redirects to `/`. The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
 | Spec Doc | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec: the dimensions, the appendix and the change log, one pane at a time off a vertical rail, under one search. |
 | Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, the must-read project updates, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
@@ -484,7 +484,7 @@ that has one. **The runs the guidelines record in section 8.2 are not cases any 
 guidelines' summary of a run, with no ask and no right answer, and they read as guideline references
 rather than failures. Their lessons stay only where a study case carries them.
 
-**Every case is a real graded run, and the data is held to its source.** Ask, did, truth and wrote
+**Every case comes from a real graded run, and the data is held to its source.** Ask, did, truth and wrote
 are what the source says happened, paraphrased into the copy rules and never extended; a vignette
 the source cuts short stays short, and a case with no right answer in its source carries none.
 **`why` is required and is the trigger in the task, never a guess at the model's state**: it is
@@ -494,8 +494,12 @@ designed friction points. Two checks were run over the data and should be rerun 
 it: every figure (money, percentages, counts, sizes) has to occur in a source text, and every phrase
 in curly quotes has to occur verbatim (nested quotes become single quotes). `runs` is
 `{ failed, of }` only where the source states the count; `runLabel` covers a case whose source gives
-none. `model` is the version the source states; OpenClaw Main ran both Opus 4.6 and 4.8 and its
-vignettes do not say which, so those three read "Opus 4.6 or 4.8".
+none. **A case is not a run, so count cases.** 56 of the 89 carry a stated `{ failed, of }` and each
+stands for several runs, and the six golden cases are six misses inside one Leg A run. "89 graded
+runs" has been written twice now and is wrong both ways at once: it undercounts the runs behind the
+56 and overcounts the one behind the six. `model` is the version the source states; OpenClaw Main
+ran both Opus 4.6 and 4.8 and its vignettes do not say which, so those three read
+"Opus 4.6 or 4.8".
 
 **Build ideas name the cases they are drawn from.** `build` is `{ text, from? }[]`, and `from` lists
 case ids **on the same page**: the page renders them as buttons that open the folded case list if
