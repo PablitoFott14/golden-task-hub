@@ -725,13 +725,21 @@ it survives being rendered anywhere.
 
 `useCaseCount()` and `subcategoryCount()` are read off the data. Never hardcode either.
 
-### The Universe Interaction videos are a strip, not three players
+### The Universe Interaction videos are a strip, not four players
 
-`universeVideos` in [src/data/videos.ts](src/data/videos.ts) is the three recordings, and
+`universeVideos` in [src/data/videos.ts](src/data/videos.ts) is the four recordings, and
 [VideoStrip.tsx](src/components/VideoStrip.tsx) renders them as one row of cards directly under the
 hero on `/`. **The player opens over the page and never sits in the strip**, which is the only
-thing keeping three videos down to one row: three inline players would take the band from roughly
+thing keeping four videos down to one row: four inline players would take the band from roughly
 370px to well over two thousand. Keep any addition inside a card.
+
+The row is `lg:grid-cols-4`. **A fifth recording does not fit it**: four across already leaves
+about 150px for the label, which is why the card title wraps instead of truncating. Five means
+either a second row or a different card.
+
+**The hub plays its own copies**, so a recording added to guidelines 1.2.1 is downloaded into
+`public/videos/universe/` and added to `universeVideos`, not linked from `universeVideoLinks`. A
+link there to a file the strip already plays is the same video offered twice.
 
 Each entry carries `seen` and `fix`, the mistake the recording answers and the move that replaces
 it. Those are read beside the player, never on the landing page, so the band stays a slogan, a
@@ -742,11 +750,19 @@ own, `slogan` in ink and `sloganAccent` in the accent, and `stakes` is the cost 
 stated once. **The consequence is stated plainly and only once**: it is the reason the band sits
 where it does, and repeating it in the cards would turn a strip into a lecture.
 
-The recordings are 1920 by 1140 rather than 16 by 9, so `FRAME` in the component is written from
-their real size and the poster frames are cut at that ratio. Re-cut a poster with `ffmpeg -ss <t>
--i <file> -frames:v 1 -vf scale=960:-2` into `public/videos/universe/` when a recording is
-replaced, and keep the `duration` and `seconds` fields in step with it: `seconds` is what totals
-the set in the header.
+The first three recordings are 1920 by 1140 rather than 16 by 9, so `FRAME` in the component is
+written from their real size. The fourth is 1920 by 1200 and carries its own `aspect`, which
+overrides `FRAME` for both its poster box and its player. **Set it on any recording that is not
+1920 by 1140**: without it the thumbnail is cropped to the wrong ratio and the player letterboxes
+the video at every window size. With it, the bars only appear where `maxHeight: 52vh` is the
+binding constraint, which is a short window and affects all four equally. Cut the poster at the recording's own ratio with
+`ffmpeg -sseof -0.25 -i <file> -frames:v 1 -vf scale=960:-2` into `public/videos/universe/`, and
+keep the `duration` and `seconds` fields in step with it: `seconds` is what totals the set in the
+header.
+
+Re-encode anything coming off the guidelines host before committing it. The fourth arrived at
+9.6 Mbps, 4.2MB for three and a half seconds; the set runs at 560k to 960k, so
+`-c:v libx264 -b:v 900k -r 30000/1001 -movflags +faststart` brought it to 152KB.
 
 Video chrome is black in **both** themes. The `ink` ramp inverts under `html.dark`, so
 `bg-ink-950/75` is a light scrim in dark mode; the lightbox backdrop and the play overlay are

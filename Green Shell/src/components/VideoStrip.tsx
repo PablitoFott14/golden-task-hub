@@ -6,13 +6,18 @@ import { Crosslinks } from "./ui";
 import { asset } from "../lib/util";
 
 /** The recordings are 1920 by 1140, so the frame is written from that rather
- *  than assumed to be 16 by 9. */
+ *  than assumed to be 16 by 9. A recording shot at another size carries its
+ *  own `aspect` and overrides this. */
 const FRAME = "1920 / 1140";
 
 /**
  * One recording as a strip card: poster on the left, label on the right. The
  * whole card is the play button, so the row costs one line of page height per
- * video and still reads as three distinct, titled things.
+ * video and still reads as four distinct, titled things.
+ *
+ * The title wraps rather than truncating. Four across leaves roughly 150px for
+ * the label, which is not a line, and a card whose title reads "Download the
+ * ..." is not a titled thing.
  */
 function VideoCard({
   v,
@@ -27,11 +32,11 @@ function VideoCard({
       ref={ref}
       onClick={() => ref.current && onPlay(ref.current)}
       aria-label={`Play ${v.title}, ${v.duration}`}
-      className="card card-hover group flex w-full items-center gap-3.5 p-3 text-left"
+      className="card card-hover group flex w-full items-start gap-3.5 p-3 text-left"
     >
       <span
-        className="relative w-[104px] shrink-0 overflow-hidden rounded-lg bg-ink-100 sm:w-[124px]"
-        style={{ aspectRatio: FRAME }}
+        className="relative w-[104px] shrink-0 overflow-hidden rounded-lg bg-ink-100 sm:w-[124px] lg:w-[104px] xl:w-[118px]"
+        style={{ aspectRatio: v.aspect ?? FRAME }}
       >
         <img
           src={asset(v.poster)}
@@ -50,11 +55,11 @@ function VideoCard({
       </span>
 
       <span className="min-w-0 flex-1">
-        <span className="flex items-baseline gap-1.5">
-          <span className="font-mono text-[10.5px] font-bold text-amber-600 dark:text-amber-300">
+        <span className="flex items-start gap-1.5">
+          <span className="mt-px font-mono text-[10.5px] font-bold leading-[1.45] text-amber-600 dark:text-amber-300">
             {v.n}
           </span>
-          <span className="truncate text-[13.5px] font-bold text-ink-900">{v.title}</span>
+          <span className="text-[13.5px] font-bold leading-snug text-ink-900">{v.title}</span>
         </span>
         <span className="mt-1 block text-[12.5px] leading-snug text-ink-500">{v.covers}</span>
       </span>
@@ -64,7 +69,7 @@ function VideoCard({
 
 /**
  * The player. It opens over the page rather than in the strip, which is the
- * whole reason three videos cost one row: the homepage never carries a player
+ * whole reason four videos cost one row: the homepage never carries a player
  * at all. `seen` and `fix` sit beside it, so the recording arrives with the
  * mistake it answers already stated.
  */
@@ -153,7 +158,7 @@ function Lightbox({
             playsInline
             preload="metadata"
             className="w-full"
-            style={{ aspectRatio: FRAME, maxHeight: "52vh" }}
+            style={{ aspectRatio: v.aspect ?? FRAME, maxHeight: "52vh" }}
           />
         </div>
 
@@ -186,7 +191,7 @@ function Lightbox({
 }
 
 /**
- * The video set as one row. Three recordings, three cards, one line of height,
+ * The video set as one row. Four recordings, four cards, one line of height,
  * and the player opens over the page. The band is the first thing under the
  * hero because universe interaction is the most common reason a task is
  * rejected, so it has to be found without scrolling for it.
@@ -258,7 +263,7 @@ export default function VideoStrip({
         <span>{stakes}</span>
       </p>
 
-      <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {videos.map((v) => (
           <VideoCard key={v.id} v={v} onPlay={(el) => play(v, el)} />
         ))}

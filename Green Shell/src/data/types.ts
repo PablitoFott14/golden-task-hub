@@ -676,6 +676,13 @@ export interface VideoGuide {
   src: string;
   /** Poster frame, path under public/. */
   poster: string;
+  /**
+   * The recording's own frame, as `w / h`, where it is not the set's default.
+   * The first three universe recordings are 1920 by 1140 and the fourth is
+   * 1920 by 1200, so the box has to come from the file rather than from one
+   * constant, or the player letterboxes it.
+   */
+  aspect?: string;
 }
 
 /* ------------------------------------------------------------------ changes */

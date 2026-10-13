@@ -2,10 +2,14 @@ import type { VideoGuide, XLink } from "./types";
 
 /**
  * The Universe Interaction recordings, one per step of the loop: load it,
- * explore it, redeploy it when it came up wrong. They are screen recordings of
- * the real thing, so each one carries the mistake it answers and the move that
- * replaces it, and both are read beside the player rather than on the landing
- * page.
+ * explore it, redeploy it when it came up wrong, download it whole. They are
+ * screen recordings of the real thing, so each one carries the mistake it
+ * answers and the move that replaces it, and both are read beside the player
+ * rather than on the landing page.
+ *
+ * The hub plays its own copies rather than linking the guidelines' host, so a
+ * recording added to section 1.2.1 lands here as an entry rather than as a
+ * crosslink under the strip.
  */
 export const universeVideos: VideoGuide[] = [
   {
@@ -44,6 +48,20 @@ export const universeVideos: VideoGuide[] = [
     src: "videos/universe/03-redeploy-the-universe.mp4",
     poster: "videos/universe/03-redeploy-the-universe.jpg",
   },
+  {
+    n: 4,
+    id: "download-the-universe",
+    title: "Download the whole universe",
+    covers: "Export the universe as a SQL dump and read it outside the chat.",
+    seen: "A universe explored a question at a time through the chat panel, then a scenario built on whatever came back, or dropped because the data looked like it was not there.",
+    fix: "Open the agentenv menu in the Database tab and choose Export SQL dump. Every table at once, so you can see what the universe actually holds instead of asking for it one query at a time.",
+    duration: "0:04",
+    seconds: 4,
+    src: "videos/universe/04-download-the-universe.mp4",
+    poster: "videos/universe/04-download-the-universe.jpg",
+    // Shot at 1920 by 1200, unlike the first three.
+    aspect: "1920 / 1200",
+  },
 ];
 
 /**
@@ -56,21 +74,13 @@ export const universeVideoPitch = {
   eyebrow: "Universe interaction",
   slogan: "Four minutes now,",
   sloganAccent: "or a rejected task later.",
-  sub: "Point 1 of the guidelines, in three recordings. Each one carries the mistake it answers.",
+  sub: "Point 1 of the guidelines, in four recordings. Each one carries the mistake it answers.",
   stakes:
     "A task without universe interaction is rejected automatically. It is the most common reason tasks fail right now, and a run of rejections is what puts your place on the project at risk.",
 };
 
 /** Where the set points once it has been watched. */
 export const universeVideoLinks: XLink[] = [
-  // Guidelines 1.2.1 added a fourth recording on Oct 8, 2026. It is not in the
-  // strip, which plays the hub's own copies, so it is linked where the
-  // guidelines host it.
-  {
-    to: "https://static.remotasks.com/uploads/6ab56a58869b4e7ee668b45d/Outlier%20-%20Google%20Chrome%202026-09-19%2020-37-16.mp4",
-    tag: "VIDEO 4",
-    label: "Download the whole universe",
-  },
   { to: "/#universe", tag: "M2", label: "Go find the story, do not invent one" },
   { to: "/reference#s2", tag: "B1", label: "Is the universe doing real work?" },
   { to: "/reference#universe-every-prompt", tag: "FAQ", label: "Does every prompt have to use it?" },
