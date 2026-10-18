@@ -427,10 +427,22 @@ this, so grep the old anchor before renaming.
 ### The FAQ answers name their guidelines section
 
 Every `FaqItem` carries `refs: GuidelineRef[]`, `{ section, title }` pairs pointing at the numbered
-section of `[External] OpenClaw MM Rubrics MULTI TURN – Guidelines - v2.md` that governs the answer.
-They render as the References panel beside each answer, and they are folded into the ⌘K terms.
-The field is required, so a new question needs at least one ref. Answers are never collapsed:
-question and answer are always on screen together.
+section of the Green Shell guidelines that governs the answer, its number and heading exactly as the
+guidelines write them. They render as the References panel beside each answer, and they are folded
+into the ⌘K terms. A new question needs at least one ref. **The one exception is a question no
+section covers**, such as War Room hours: its `refs` is empty, and both renders leave the panel and
+the ref numbers out rather than show an empty one. Never cite a section that does not say it to
+fill the field. Answers are never collapsed: question and answer are always on screen together.
+
+**The FAQ was written for multi-turn and was brought over to single turn on Oct 19, 2026.** The
+references all pointed at the multi-turn guidelines' numbering, which does not match Green Shell's
+(Leg B is section 6 there, the subjective block section 7), two entries were about milestones and
+ending a conversation, which a single turn task does not have, and three were worded around
+follow ups. They were removed or rewritten, and the five questions contributors had actually been
+asking were added. **When the guidelines are renumbered, check every `refs` entry against the new
+headings**, because nothing validates them and a stale number still renders. Entries are grouped
+by topic in the order of `faqTopics`, so a new question goes beside the others on its topic.
+[F&Q.md](F&Q.md) is kept in step with `faq.ts`, one entry for one entry.
 
 The FAQ is rendered twice from one array. The FAQ pane of `/reference` is the full list, and
 [QuickAnswers.tsx](src/components/QuickAnswers.tsx) is the same `faq` data on the landing page

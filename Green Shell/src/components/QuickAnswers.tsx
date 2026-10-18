@@ -60,10 +60,12 @@ function Row({ f, open, onToggle }: { f: FaqItem; open: boolean; onToggle: () =>
               ))}
               <Crosslinks links={f.links} className="mt-4" />
               <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-ink-200/70 pt-3">
-                <span className="mono-label flex items-center gap-1.5 text-ink-400">
-                  <BookMarked size={12} aria-hidden />
-                  Guidelines {f.refs.map((r) => r.section).join(" · ")}
-                </span>
+                {f.refs.length > 0 && (
+                  <span className="mono-label flex items-center gap-1.5 text-ink-400">
+                    <BookMarked size={12} aria-hidden />
+                    Guidelines {f.refs.map((r) => r.section).join(" · ")}
+                  </span>
+                )}
                 <Link
                   to={`/reference#${f.id}`}
                   className="group ml-auto inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 dark:text-brand-300"
@@ -103,14 +105,15 @@ export default function QuickAnswers() {
           The questions the method raises, answered right here
         </h2>
         <p className="mt-3 text-[14.5px] leading-relaxed text-ink-500">
-          MEMORY.md, inputs.zip against the inputs folder, how milestones split, what Model B
-          actually does. Open one and read it without leaving the page.
+          Assigned tools against assigned capabilities, the three input minimum, inputs.zip
+          against the inputs folder, what Leg B actually does. Open one and read it without
+          leaving the page.
         </p>
         <Link to="/reference#faq" className="btn-primary mt-6">
           All {faq.length} questions <ArrowRight size={15} />
         </Link>
         <p className="mt-4 text-[12px] leading-relaxed text-ink-400">
-          Every answer names the guidelines section it comes from.
+          Every answer the guidelines cover names the section it comes from.
         </p>
       </div>
 

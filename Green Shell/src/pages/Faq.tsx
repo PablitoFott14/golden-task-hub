@@ -63,24 +63,28 @@ function Answer({ f, q }: { f: FaqItem; q: string }) {
             <Crosslinks links={f.links} className="mt-5" />
           </div>
 
-          <aside className="self-start rounded-xl border border-ink-200/70 bg-raised p-4">
-            <div className="mono-label mb-2.5 flex items-center gap-1.5 text-ink-400">
-              <BookMarked size={13} /> References
-            </div>
-            <ul className="space-y-2">
-              {f.refs.map((r) => (
-                <li key={r.section + r.title} className="flex gap-2.5">
-                  <span className="shrink-0 rounded bg-brand-500/10 px-1.5 py-0.5 font-mono text-[11px] font-bold text-brand-700 dark:text-brand-300">
-                    {r.section}
-                  </span>
-                  <span className="text-[12.5px] leading-snug text-ink-600">{r.title}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-3 border-t border-ink-200/70 pt-2.5 text-[11.5px] leading-relaxed text-ink-400">
-              {guidelinesTitle}
-            </p>
-          </aside>
+          {/* A question no guidelines section covers, such as support
+              hours, carries no refs and so no panel. */}
+          {f.refs.length > 0 && (
+            <aside className="self-start rounded-xl border border-ink-200/70 bg-raised p-4">
+              <div className="mono-label mb-2.5 flex items-center gap-1.5 text-ink-400">
+                <BookMarked size={13} /> References
+              </div>
+              <ul className="space-y-2">
+                {f.refs.map((r) => (
+                  <li key={r.section + r.title} className="flex gap-2.5">
+                    <span className="shrink-0 rounded bg-brand-500/10 px-1.5 py-0.5 font-mono text-[11px] font-bold text-brand-700 dark:text-brand-300">
+                      {r.section}
+                    </span>
+                    <span className="text-[12.5px] leading-snug text-ink-600">{r.title}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-3 border-t border-ink-200/70 pt-2.5 text-[11.5px] leading-relaxed text-ink-400">
+                {guidelinesTitle}
+              </p>
+            </aside>
+          )}
         </div>
       </div>
     </article>
@@ -133,7 +137,7 @@ export default function Faq({ embedded = false }: { embedded?: boolean }) {
             The questions everyone asks in their first week
           </h2>
           <p className="mt-3 max-w-2xl text-[15.5px] leading-relaxed text-ink-600">
-            Every answer sits next to its question, and names the guidelines section it comes from.
+            Every answer sits next to its question, and names the guidelines section it comes from wherever one covers it.
           </p>
         </div>
       ) : (
@@ -147,7 +151,7 @@ export default function Faq({ embedded = false }: { embedded?: boolean }) {
               The questions everyone asks in their first week
             </h1>
             <p className="mt-3 max-w-2xl text-[15.5px] leading-relaxed text-ink-600">
-              Every answer sits next to its question, and names the guidelines section it comes from.
+              Every answer sits next to its question, and names the guidelines section it comes from wherever one covers it.
             </p>
           </div>
         </section>

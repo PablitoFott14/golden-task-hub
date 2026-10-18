@@ -645,7 +645,8 @@ export interface FaqItem {
   a: string[];
   /** Grouping shown as a filter. */
   topic: string;
-  /** Where the guidelines answer this. Every item carries at least one. */
+  /** Where the guidelines answer this. At least one, except for a question no
+   *  section covers (support hours), which carries none and shows no panel. */
   refs: GuidelineRef[];
   links?: XLink[];
 }
