@@ -1,14 +1,16 @@
 import { guidelinesOnlyChanges } from "./changes";
 import { onboardingItems } from "./onboarding";
+import { universeViewers } from "./universeViewers";
 
 /**
  * The notice bar under the nav on the landing page.
  *
- * **This is not a changelog of the site.** It carries two things and nothing
- * else: a guidelines update, and a change to the onboarding material. A tab
- * moving or a tool shipping does not go here — a contributor does not have to
- * act on it, and a bar that fills up with site housekeeping stops being read,
- * which costs us the one place a real guidelines change can be announced.
+ * **This is not a changelog of the site.** It carries three things and nothing
+ * else: a guidelines update, a change to the onboarding material, and a
+ * resource a contributor should start using on their next task. A tab moving
+ * or a tool shipping does not go here — a contributor does not have to act on
+ * it, and a bar that fills up with site housekeeping stops being read, which
+ * costs us the one place a real guidelines change can be announced.
  *
  * The test for an entry: **would a contributor do something differently because
  * of it, before their next task?** If not, leave it out.
@@ -21,14 +23,15 @@ import { onboardingItems } from "./onboarding";
  *   Doc change log.
  *
  * Every entry carries a `to` that opens the thing it describes, because an
- * entry you cannot act on is an announcement rather than a notice. Entries are
+ * entry you cannot act on is an announcement rather than a notice. A `to` that
+ * starts with `http` is a site of its own and opens in a new tab. Entries are
  * historical: they describe what landed on their date and are not rewritten
  * when the hub moves on, so a count written into one is correct to leave alone.
  *
  * Newest first. `hubUpdates[0]` is the one the collapsed bar shows.
  */
 
-export type HubUpdateKind = "guidelines" | "onboarding";
+export type HubUpdateKind = "guidelines" | "onboarding" | "resource";
 
 export interface HubUpdate {
   id: string;
@@ -41,7 +44,7 @@ export interface HubUpdate {
   where: string;
   /** Why it matters, where that is not obvious from `what`. Optional. */
   why?: string;
-  /** Opens the thing the entry describes. */
+  /** Opens the thing the entry describes: a hub route, or an `http` URL. */
   to: string;
 }
 
@@ -54,6 +57,15 @@ export interface HubUpdate {
 const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").length;
 
 export const hubUpdates: HubUpdate[] = [
+  {
+    id: "universe-viewers",
+    date: "Oct 18, 2026",
+    kind: "resource",
+    what: "Explore your universe in the Universe Viewers",
+    where: "The Method → top of the page",
+    why: "Each viewer holds one persona's apps, files and messages, so you can see what the data holds before you build a task on it. The card at the top of this page opens it too.",
+    to: universeViewers.url,
+  },
   {
     id: "scenario-adherence",
     date: "Oct 14, 2026",

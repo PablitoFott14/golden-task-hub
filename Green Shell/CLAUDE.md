@@ -183,7 +183,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | Source document | Data file here |
 | --- | --- |
 | Version History table and the `[NEW]` callouts in the guidelines, plus anything the client flags to the team afterwards | [src/data/changes.ts](src/data/changes.ts) |
-| Nothing — hand-authored, one entry per guidelines or onboarding change | [src/data/hubLog.ts](src/data/hubLog.ts) |
+| Nothing — hand-authored, one entry per guidelines, onboarding or resource change | [src/data/hubLog.ts](src/data/hubLog.ts) |
 | `rationale.md` and `[External] Green Shell Guidelines v1`, at its Oct 8, 2026 revision | [src/data/method.ts](src/data/method.ts) |
 | The guidelines, written up as a gate. Red Shell's `checklist.md` was the starting frame only | [src/data/checklist.ts](src/data/checklist.ts), with [presubmit-gate.md](presubmit-gate.md) as its editable twin, which [scripts/build_presubmit_gate.py](scripts/build_presubmit_gate.py) prints into `public/docs/presubmit-gate.pdf` |
 | `*-rubric.csv` and `appendix.csv`, the spec exports (generated, see below) | [src/data/specDoc.ts](src/data/specDoc.ts) |
@@ -629,15 +629,19 @@ answers a different question, and each links to the other two rather than restat
 | **Must Read: Project Updates** | [src/data/changes.ts](src/data/changes.ts) | [WhatsNew.tsx](src/pages/WhatsNew.tsx), the `whats-new` pane of `/reference` | What a contributor has to do differently: the *guidelines* change coming from Red Shell, and every client flag since |
 | **Spec Doc change log** | [src/data/specLog.ts](src/data/specLog.ts) | the `log` pane of `/spec` | Which *rubric dimension* moved between exports |
 
-**The update notice is not a changelog of the site.** It carries two kinds and nothing else:
-`guidelines` and `onboarding`. A tab moving or a tool shipping does not go in it — nobody has to act
-on that, and a bar that fills with site housekeeping stops being read, which costs us the one place
-a real guidelines change can be announced. The test for an entry: **would a contributor do something
-differently because of it, before their next task?**
+**The update notice is not a changelog of the site.** It carries three kinds and nothing else:
+`guidelines`, `onboarding`, and `resource`, a resource a contributor should start using on their next
+task (the first was the Universe Viewers, Oct 18, 2026). A tab moving or a tool shipping does not go
+in it — nobody has to act on that, and a bar that fills with site housekeeping stops being read,
+which costs us the one place a real guidelines change can be announced. The test for an entry:
+**would a contributor do something differently because of it, before their next task?**
 
 **Every entry carries a `to` that opens the thing it describes**, because an entry you cannot act on
-is an announcement rather than a notice. Entries are historical and are not rewritten when the hub
-moves on, so a count written into one describes what shipped that day and is correct to leave alone.
+is an announcement rather than a notice. A `to` starting with `http`, the test `Crosslinks` uses,
+opens that site in a new tab and carries the external arrow; anything else is a hub route, and
+`EntryLink` in [HubLog.tsx](src/components/HubLog.tsx) picks between the two. Entries are historical
+and are not rewritten when the hub moves on, so a count written into one describes what shipped that
+day and is correct to leave alone.
 
 **A client flag goes in all three places, in one pass.** The rule itself lands in `changes.ts` as a
 Must Read entry with `version: "Client flag"` and no `before`, because the renderer labels `before`
@@ -649,14 +653,15 @@ sheet, and a client flag is not a rubric revision.
 **It sits above the hero, not below it.** The hero is around 800px tall, so a band under it is below
 the fold on a laptop and two screens down on a phone — useless for something read on the way in.
 Collapsed the bar is one row showing `hubUpdates[0]` only; the chevron opens the rest. The headline
-is a `Link` and the toggle is a `button` **side by side**, not nested, because an anchor inside a
+is a link and the toggle is a `button` **side by side**, not nested, because an anchor inside a
 button is invalid. The toggle's label stays visible at every width: `hidden sm:inline` on it left
 the button with no accessible name on a phone, since `display: none` drops it out of the a11y tree.
 
 It is rose, which is the hub's must-read signal everywhere else too — the Must Read pane, the hero
-button on `/`, the palette chip. Amber marks an `onboarding` entry, the one kind here that is not
-urgent. **It is deliberately not dismissible and not persisted:** a contributor who hid it once
-would stop seeing guidelines changes for good, which is the thing it exists to prevent.
+button on `/`, the palette chip. Amber marks an `onboarding` entry, which is not urgent, and brand
+indigo a `resource`, the colour of the Universe Viewers card. **It is deliberately not dismissible and
+not persisted:** a contributor who hid it once would stop seeing guidelines changes for good, which is
+the thing it exists to prevent.
 
 ### Marking a section unfinished
 

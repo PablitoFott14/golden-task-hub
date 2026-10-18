@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronDown, Megaphone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronDown, Megaphone } from "lucide-react";
 import { hubUpdates, type HubUpdateKind } from "../data/hubLog";
 import { cx } from "../lib/util";
 
@@ -19,7 +19,8 @@ import { cx } from "../lib/util";
  *
  * **Rose, like every other must-read signal in the hub** — the Must Read pane,
  * the hero button, the palette chip. Amber marks an onboarding entry inside it,
- * which is the one kind here that is not urgent.
+ * which is not urgent, and brand indigo a resource, the colour of the Universe
+ * Viewers card the first one announced.
  *
  * It is deliberately not dismissible and not persisted. A contributor who hid
  * it once would stop seeing guidelines changes for good, and that is the one
@@ -35,12 +36,33 @@ const kindTone: Record<HubUpdateKind, { chip: string; label: string }> = {
     chip: "bg-amber-500/15 text-amber-700 ring-1 ring-amber-500/25 dark:text-amber-200",
     label: "Onboarding",
   },
+  resource: {
+    chip: "bg-brand-500/15 text-brand-700 ring-1 ring-brand-500/25 dark:text-brand-200",
+    label: "Resource",
+  },
 };
+
+/** A `to` starting with `http` is a site of its own, the test `Crosslinks`
+ *  uses. It opens in a new tab, and a `Link` would read it as a hub route. */
+const isExternal = (to: string) => to.startsWith("http");
+
+function EntryLink({ to, className, children }: { to: string; className: string; children: ReactNode }) {
+  return isExternal(to) ? (
+    <a href={to} target="_blank" rel="noreferrer" className={className}>
+      {children}
+    </a>
+  ) : (
+    <Link to={to} className={className}>
+      {children}
+    </Link>
+  );
+}
 
 export default function HubLog() {
   const [open, setOpen] = useState(false);
   const latest = hubUpdates[0];
   const tone = kindTone[latest.kind];
+  const LatestArrow = isExternal(latest.to) ? ArrowUpRight : ArrowRight;
 
   return (
     <section
@@ -49,7 +71,7 @@ export default function HubLog() {
     >
       <div className="wrap">
         <div className="flex items-center gap-2 py-2">
-          <Link
+          <EntryLink
             to={latest.to}
             className="group flex min-w-0 flex-1 items-center gap-2 rounded-lg px-1 py-1 transition hover:bg-rose-500/10 sm:gap-3"
           >
@@ -63,12 +85,12 @@ export default function HubLog() {
               {latest.date}
             </span>
             <span className="truncate text-[13px] font-bold text-ink-900">{latest.what}</span>
-            <ArrowRight
+            <LatestArrow
               size={13}
               aria-hidden
               className="hidden shrink-0 text-rose-600 transition-transform group-hover:translate-x-0.5 dark:text-rose-300 sm:block"
             />
-          </Link>
+          </EntryLink>
 
           <button
             onClick={() => setOpen((o) => !o)}
@@ -101,9 +123,10 @@ export default function HubLog() {
           <ol id="update-list" className="space-y-2 pb-3">
             {hubUpdates.map((u) => {
               const t = kindTone[u.kind];
+              const Arrow = isExternal(u.to) ? ArrowUpRight : ArrowRight;
               return (
                 <li key={u.id}>
-                  <Link
+                  <EntryLink
                     to={u.to}
                     className="card card-hover group flex flex-col gap-1.5 p-3.5 sm:flex-row sm:items-start sm:gap-4"
                   >
@@ -128,12 +151,12 @@ export default function HubLog() {
                       )}
                     </span>
 
-                    <ArrowRight
+                    <Arrow
                       size={15}
                       aria-hidden
                       className="hidden shrink-0 self-center text-ink-400 transition-transform group-hover:translate-x-0.5 sm:block"
                     />
-                  </Link>
+                  </EntryLink>
                 </li>
               );
             })}
