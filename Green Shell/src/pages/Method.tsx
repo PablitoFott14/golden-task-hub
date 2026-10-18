@@ -15,7 +15,7 @@ import {
   HelpCircle,
   Layers,
   MessageCircleQuestion,
-  MessageSquareQuote,
+  Orbit,
   PlayCircle,
   ShieldAlert,
   Sparkles,
@@ -29,7 +29,7 @@ import {
   universeVideos,
 } from "../data/videos";
 import { guidelineChanges } from "../data/changes";
-import { feedbackThread } from "../data/community";
+import { universeViewers } from "../data/universeViewers";
 import { checkCount, checklist } from "../data/checklist";
 import { specGroups } from "../data/specDoc";
 import { subcategoryCount } from "../data/taxonomy";
@@ -113,6 +113,59 @@ function StepCard({
   );
 }
 
+/** The Universe Viewers, the one card in the hero that leaves the hub. It is
+ *  the hero's loudest block on purpose: a filled brand panel where everything
+ *  around it is a light card. The CTA is the only link, and its `after:` layer
+ *  stretches it over the whole card, so the card is one tap target with one
+ *  accessible name. `isolate` keeps the glow and the orbit under the text.
+ *  `active:transform-none` cancels the press scale `.btn` carries: a transform
+ *  on the link shrinks that layer back to the button mid click, and a press
+ *  anywhere else on the card then opens nothing. */
+function UniverseViewersCard({ className }: { className?: string }) {
+  return (
+    <div
+      className={cx(
+        "group relative isolate overflow-hidden rounded-2xl bg-gradient-to-br from-brand-600 via-brand-700 to-brand-900 p-5 text-white shadow-glow ring-1 ring-brand-400/30 transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lift sm:p-6",
+        className
+      )}
+    >
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -bottom-16 -left-12 -z-10 h-44 w-44 rounded-full bg-gold-400/25 blur-3xl"
+      />
+      <Orbit
+        aria-hidden
+        size={190}
+        strokeWidth={1}
+        className="pointer-events-none absolute -right-12 -top-12 -z-10 text-white/10 transition-transform duration-500 ease-out group-hover:rotate-12"
+      />
+
+      <div className="flex items-center gap-2.5">
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/15 ring-1 ring-white/25">
+          <Orbit size={18} aria-hidden />
+        </span>
+        <span className="mono-label text-white/75">{universeViewers.label}</span>
+      </div>
+      <h2 className="mt-3 font-display text-[22px] sm:mt-4 font-bold leading-tight tracking-tight sm:text-[26px]">
+        {universeViewers.title}
+      </h2>
+      <p className="mt-2 text-[14px] leading-relaxed text-white/85">{universeViewers.body}</p>
+      <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <a
+          href={universeViewers.url}
+          target="_blank"
+          rel="noreferrer"
+          className="btn bg-white px-5 py-3 text-[15px] text-brand-700 shadow-soft active:transform-none after:absolute after:inset-0 after:rounded-2xl hover:bg-brand-50 focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-inset focus-visible:after:ring-white"
+        >
+          {universeViewers.cta}
+          <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+        </a>
+        <span className="text-[12px] leading-snug text-white/65">{universeViewers.note}</span>
+      </div>
+    </div>
+  );
+}
+
 const specDimensionCount = specGroups.reduce((n, g) => n + g.dimensions.length, 0);
 
 /** Counts written out, read off the data so a heading never states a stale one. */
@@ -172,7 +225,7 @@ export default function Method() {
       <section className="relative overflow-hidden border-b border-ink-200/70 bg-surface">
         <div className="pointer-events-none absolute inset-0 bg-aurora" />
         <div className="pointer-events-none absolute inset-0 bg-dots opacity-[0.35]" />
-        <div className="wrap relative py-16 lg:py-20">
+        <div className="wrap relative py-10 sm:py-16 lg:py-20">
           <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-start">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -194,6 +247,14 @@ export default function Method() {
                 straight into a Golden Task and see exactly where it landed.
               </p>
 
+              {/* The Universe Viewers sit beside the headline on a wide
+                  screen and straight under it on a narrow one, so they are
+                  above the fold on both. The right column stacks below this
+                  one under lg, which is too far down, so the card renders
+                  twice and each copy shows at one width only. `hidden` takes
+                  the other copy out of the tab order and the a11y tree. */}
+              <UniverseViewersCard className="mt-6 sm:mt-8 lg:hidden" />
+
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link to={{ hash: "#method" }} className="btn-primary">
                   <Compass size={16} /> Start with the method
@@ -207,19 +268,6 @@ export default function Method() {
                 >
                   <GraduationCap size={16} /> Onboarding
                 </Link>
-                {/* Feedback on a task is asked for in the community thread,
-                    not here. It is the one button in this row that leaves the
-                    hub, so it is tinted rather than ghosted and carries the
-                    external arrow. */}
-                <a
-                  href={feedbackThread.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn bg-gold-500/15 text-gold-800 ring-1 ring-gold-500/30 hover:bg-gold-500/25 dark:text-gold-300"
-                >
-                  <MessageSquareQuote size={16} /> {feedbackThread.cta}
-                  <ArrowUpRight size={14} className="text-gold-600 dark:text-gold-400" />
-                </a>
                 <Link
                   to="/reference#whats-new"
                   className="btn bg-rose-500/12 text-rose-800 ring-1 ring-rose-500/25 hover:bg-rose-500/20 dark:text-rose-200"
@@ -267,6 +315,8 @@ export default function Method() {
               transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
               className="space-y-4"
             >
+              <UniverseViewersCard className="hidden lg:block" />
+
               <div className="card p-5">
                 <div className="mono-label mb-4 text-brand-600 dark:text-brand-300">The mindset</div>
                 <div className="space-y-4">

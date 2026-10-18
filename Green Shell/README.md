@@ -25,7 +25,7 @@ it, and where the two disagree the guidelines win.
 
 | Tab | Route | What is in it |
 | --- | --- | --- |
-| **The Method** | `/` | The project update notice, the universe interaction videos, the ten method steps in the order they happen (each with its principle, the moves it takes, its rule and where it landed in the Golden Task), the quick answers, the hard requirements and the way into the rest of the hub. |
+| **The Method** | `/` | The project update notice, the Universe Viewers link, the universe interaction videos, the ten method steps in the order they happen (each with its principle, the moves it takes, its rule and where it landed in the Golden Task), the quick answers, the hard requirements and the way into the rest of the hub. |
 | **Golden Tasks** | `/golden-tasks` | One card per worked task, and a walkthrough behind each one, one section per method step: the assigned parameters, the universe, the resolved answer, the inputs, the prompt, the Draft History, the Model A run, the objective and subjective rubrics, and the golden run. Reference only, never something to copy. |
 | **Failure Approach** | `/failure-approach` | Real cases of how Opus fails as an agent and how to build the same pressure into a Leg A, which runs Opus 5. Where the cases come from first, then seven failure types in the order a run breaks, twenty eight patterns, and eighty nine graded runs behind them, each with why it failed. A "Model A passed?" view diagnoses a Leg A that passed. See below. |
 | **Spec Doc** | `/spec` | The QC spec the task is scored against: 33 dimensions in 7 groups, the appendix (rubric quality issues, weights, authoring standards) and the change log, one pane at a time, under one search. |

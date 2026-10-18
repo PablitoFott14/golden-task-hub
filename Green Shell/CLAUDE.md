@@ -12,7 +12,7 @@ so five show.
 
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
-| The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
+| The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the Universe Viewers, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
 | Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make Model A (Opus 5) fail for real: where the cases come from, then seven failure types as cards, 28 patterns, and the 89 real cases from graded Opus runs behind them, each with why it failed, a filter by what the task has, and a "Model A passed?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
@@ -119,7 +119,7 @@ actually doing, and one of those is parked, so five show.
 
 | Tab | Route | Panes inside it | Was |
 | --- | --- | --- | --- |
-| The Method | `/` | one scrolling page: hero, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
+| The Method | `/` | one scrolling page: hero with the Universe Viewers card, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
 | Failure Approach | `/failure-approach` | **three levels**, all off the hash: the overview (seven type cards and the diagnosis tile, the task filter), a type (`#looking` … `#finishing`), a pattern (`#<pattern-id>`), and `#keeps-passing` | new, in the slot Complexity held; rebuilt from a thirteen pane rail |
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
@@ -801,6 +801,29 @@ Re-encode anything coming off the guidelines host before committing it. The four
 Video chrome is black in **both** themes. The `ink` ramp inverts under `html.dark`, so
 `bg-ink-950/75` is a light scrim in dark mode; the lightbox backdrop and the play overlay are
 written as `bg-black/…` for that reason.
+
+### The Universe Viewers card is the hero's loudest block
+
+`universeViewers` in [src/data/universeViewers.ts](src/data/universeViewers.ts) is the link to
+<https://universe-viewers.vercel.app/>, where a contributor opens a universe and explores it in the
+browser, and `UniverseViewersCard` in [Method.tsx](src/pages/Method.tsx) renders it in the hero.
+**It has to be seen without scrolling, at every width**, so it is the one filled brand panel among
+light cards, and it is placed by width: at the top of the right column beside the headline from
+`lg`, and straight under the lead paragraph below that. Under `lg` the right column stacks below the
+whole left one, button row and counts included, which on a phone is well past the fold. So the card
+**renders twice**, one copy `lg:hidden` and one `hidden lg:block`. `display: none` takes the hidden
+copy out of the tab order and the a11y tree, and the DOM order matches the screen at each width,
+which moving a single copy with `order` would not. The hero's top padding is `py-10` below `sm` for
+the same reason: it is what keeps the card's button inside a phone's first screen.
+
+The CTA is the card's only link, and an `after:absolute after:inset-0` layer stretches it over the
+whole card, so a tap anywhere on the card opens it. **That layer is why the link carries
+`active:transform-none`.** `.btn` scales on press, a transform makes the link the containing block
+of its own `::after`, and the layer then shrinks to the button between mousedown and mouseup, so a
+press on the card text opened nothing. Keep any transform off that link.
+
+`body` and `note` say only what the viewers themselves say. The card replaced the "Want feedback on
+a task?" hero button on Oct 18, 2026, and `community.ts`, which held that link, went with it.
 
 ### The objective block is shaped by two caps
 
