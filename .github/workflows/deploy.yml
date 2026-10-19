@@ -7,6 +7,14 @@ name: Deploy to GitHub Pages
 # GitHub Pages serves one site per repo, and that site is Green Shell. Red Shell
 # is preserved, buildable and recoverable from git, but is no longer published.
 # To publish Red Shell again, swap the two paths below. Nothing else differs.
+#
+# The build also packs each persona universe as a ZIP (Green Shell's
+# vite.config.ts). Those are not part of the site: the release job attaches
+# them to the GitHub release `universes`, which the Universes tab's download
+# buttons link to, uploading a ZIP only when its contents changed
+# (Green Shell/scripts/universes_release.mjs). It runs before the deploy, so
+# the site never links to a ZIP older than itself. It is also the only job that
+# can write to the repo; the build, which runs npm packages, stays read only.
 
 on:
   push:
@@ -49,9 +57,35 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "Green Shell/dist"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: universe-zips
+          path: "Green Shell/universe-zips"
+          retention-days: 1
+          # They are ZIPs already.
+          compression-level: 0
+          if-no-files-found: error
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: "Green Shell/scripts"
+      - uses: actions/download-artifact@v4
+        with:
+          name: universe-zips
+          path: universe-zips
+      - run: node "Green Shell/scripts/universes_release.mjs" universe-zips
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
 
   deploy:
-    needs: build
+    needs: [build, release]
     runs-on: ubuntu-latest
     environment:
       name: github-pages

@@ -1,5 +1,7 @@
 node_modules
 dist
+# The universe ZIPs the build packs for the GitHub release (vite.config.ts).
+universe-zips
 .DS_Store
 *.local
 .vite

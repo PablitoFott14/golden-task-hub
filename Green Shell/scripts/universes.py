@@ -40,6 +40,7 @@ Commands:
     check  <source>...      report what would change; exit 0 in sync, 1 changes, 2 problems
     apply  <source>...      apply the changes, regenerate the catalog, then verify
     verify                  prove every stored universe reassembles and is complete
+    verify-zips <dir>       prove the <slug>.zip the build packed (universe-zips/) hold every stored file
     emit-reference <dir>    write the original pages and their files, for the parity test
 
 Never overwrites newer content with older: a version the ledger has seen and
@@ -52,6 +53,7 @@ from __future__ import annotations
 import argparse
 import base64
 import concurrent.futures as cf
+import csv
 import datetime as dt
 import difflib
 import email.utils
@@ -60,8 +62,10 @@ import io
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -1345,6 +1349,177 @@ def verify_all(quiet: bool = False) -> int:
     return 0 if not bad else 2
 
 
+# ------------------------------------------------------------- the ZIPs
+
+
+ZIP_REPORTS = ("SUMMARY.json", "MANIFEST.csv", "MISSING_FILES.txt")
+
+
+def zip_missing(u: Universe) -> tuple[list[str], dict[str, str]]:
+    """The Files records with no preview stored: those with a byte-identical
+    copy elsewhere in the universe (path -> copy), and those with none. The
+    same rule the build applies when it writes SUMMARY.json."""
+    missing: list[str] = []
+    elsewhere: dict[str, str] = {}
+    stored = {p: b for p, b in u.payload().items() if not p.startswith("viewer/")}
+    for f in (u.stored_seed.get("filesystem") or {}).get("files") or []:
+        if not isinstance(f, dict) or not f.get("viewer_external") or not f.get("viewer_uri") or not isinstance(f.get("path"), str):
+            continue
+        p = f["path"].lstrip("/")
+        if f"files/filesystem/{p}" in stored:
+            continue
+        leaf = p.split("/")[-1]
+        copy = next((q for q, b in stored.items() if f.get("sha256") and q.split("/")[-1] == leaf and sha(b) == f["sha256"]), None)
+        if copy:
+            elsewhere[p] = copy
+        else:
+            missing.append(p)
+    return missing, elsewhere
+
+
+def extract_with(tool: str, zp: Path, out: Path) -> Optional[str]:
+    """Unpack with an extractor other than this script's own. None when it
+    worked, else what went wrong."""
+    if tool == "tar":
+        exe = os.path.join(os.environ.get("SystemRoot", r"C:\Windows"), "System32", "tar.exe")
+        cmd = [exe, "-xf", str(zp), "-C", str(out)]
+    else:
+        cmd = ["powershell", "-NoProfile", "-NonInteractive", "-Command",
+               f"Expand-Archive -LiteralPath '{zp}' -DestinationPath '{out}' -Force"]
+    r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    return None if r.returncode == 0 else (r.stderr or r.stdout).strip()[:300]
+
+
+def verify_zips(where: Path) -> int:
+    """Each <slug>.zip in `where` (the build's universe-zips/, or the release's
+    assets downloaded to a folder) holds every stored file of the
+    universe but viewer/, byte for byte, under <slug>/, with a folder entry for
+    every folder, a MANIFEST.csv that matches, a SUMMARY.json that names the
+    version in place, and nothing else. It is unpacked by Python and, on
+    Windows, also by tar.exe and Expand-Archive, and the result compared."""
+    zdir = where / "universes" if (where / "universes").is_dir() else where
+    ledger = load_ledger()
+    slugs = [d.name for d in sorted(UNIV.iterdir()) if (d / "viewer" / "page.json").exists()]
+    bad = 0
+    for slug in slugs:
+        u = load_current(slug)
+        assert u is not None
+        zp = zdir / f"{slug}.zip"
+        errs: list[str] = []
+        if not zp.exists():
+            print(f"FAIL {slug}: {zp} does not exist (was the hub built?)")
+            bad += 1
+            continue
+        want = {p: b for p, b in u.payload().items() if not p.startswith("viewer/")}
+        missing, elsewhere = zip_missing(u)
+        files: dict[str, zipfile.ZipInfo] = {}
+        dirs: set[str] = set()
+        tools: list[str] = []
+        try:
+            with zipfile.ZipFile(zp) as z:
+                crc = z.testzip()
+                if crc is not None:
+                    errs.append(f"{crc} fails its CRC check")
+                infos = z.infolist()
+                names = [i.filename for i in infos]
+                if len(set(names)) != len(names):
+                    errs.append("an entry appears twice")
+                for n in names:
+                    parts = n.rstrip("/").split("/")
+                    if parts[0] != slug or "\\" in n or n.startswith("/") or any(x in ("", ".", "..") for x in parts) or re.match(r"^[A-Za-z]:", n):
+                        errs.append(f"unsafe or misplaced entry {n!r}")
+                for i in infos:
+                    if not i.filename.isascii() and not i.flag_bits & 0x800:
+                        errs.append(f"{i.filename}: a non-ASCII name not marked as UTF-8")
+                files = {i.filename[len(slug) + 1:]: i for i in infos if not i.is_dir()}
+                dirs = {i.filename[len(slug) + 1:] for i in infos if i.is_dir()}
+                reports = {r for r in ZIP_REPORTS if r in files}
+                gone = sorted(set(want) - set(files))
+                extra = sorted(set(files) - set(want) - reports)
+                if gone:
+                    errs.append(f"{len(gone)} stored files are not in it: {', '.join(gone[:4])}")
+                if extra:
+                    errs.append(f"{len(extra)} entries are not stored files: {', '.join(extra[:4])}")
+                changed = [p for p in want if p in files and z.read(files[p]) != want[p]]
+                if changed:
+                    errs.append(f"{len(changed)} files differ from the stored ones: {', '.join(changed[:4])}")
+                need_dirs = {""} | {"/".join(p.split("/")[:k]) + "/" for p in files for k in range(1, p.count("/") + 1)}
+                if dirs != need_dirs:
+                    errs.append(f"folder entries: {len(need_dirs - dirs)} missing, {len(dirs - need_dirs)} without a file")
+                for r in ("SUMMARY.json", "MANIFEST.csv"):
+                    if r not in files:
+                        errs.append(f"{r} is missing")
+                if bool(missing or elsewhere) != ("MISSING_FILES.txt" in files):
+                    errs.append("MISSING_FILES.txt should be there exactly when a Files record has no preview stored")
+                if "MANIFEST.csv" in files:
+                    rows = list(csv.DictReader(io.StringIO(z.read(files["MANIFEST.csv"]).decode("utf-8"))))
+                    listed = {r["path"]: r for r in rows}
+                    if set(listed) != set(files) - {"MANIFEST.csv"} or len(listed) != len(rows):
+                        errs.append("MANIFEST.csv does not list exactly the other entries")
+                    for p, r in listed.items():
+                        if p in files:
+                            b = z.read(files[p])
+                            if int(r["bytes"]) != len(b) or r["sha256"] != sha(b):
+                                errs.append(f"MANIFEST.csv is wrong about {p}")
+                                break
+                if "SUMMARY.json" in files:
+                    s = json.loads(z.read(files["SUMMARY.json"]))
+                    entry = ledger.get("universes", {}).get(slug, {})
+                    expect = {
+                        "persona": slug,
+                        "page_sha256": u.page.sha256,
+                        "apps": list(u.page.seed),
+                        "docs": [k for k, v in (u.page.markdown or {}).items() if v],
+                        "files_written": len(want),
+                        "bytes": sum(len(b) for b in want.values()),
+                        "missing_files": missing,
+                        "stored_elsewhere": elsewhere,
+                    }
+                    if entry:
+                        expect.update(fingerprint=entry.get("fingerprint"), source=entry.get("source", {}).get("origin"),
+                                      synced_at=entry.get("synced_at"))
+                    for k, v in expect.items():
+                        if s.get(k) != v:
+                            errs.append(f"SUMMARY.json says {k} is {str(s.get(k))[:80]}, the hub has {str(v)[:80]}")
+                # Unpacked, by more than one extractor, it is the stored tree.
+                tools = ["python"] + (["tar", "Expand-Archive"] if os.name == "nt" else [])
+                for tool in tools:
+                    tmp = Path(tempfile.mkdtemp(prefix="uvz-"))
+                    try:
+                        if tool == "python":
+                            z.extractall(tmp)
+                            err = None
+                        else:
+                            err = extract_with(tool, zp, tmp)
+                        if err:
+                            errs.append(f"{tool} could not unpack it: {err}")
+                            continue
+                        got = {}
+                        for root, _, ns in os.walk(long_path(tmp / slug)):
+                            for n in ns:
+                                full = os.path.join(root, n)
+                                got[os.path.relpath(full, long_path(tmp / slug)).replace("\\", "/")] = read_bytes(Path(full))
+                        unpacked = {p: b for p, b in got.items() if p not in ZIP_REPORTS}
+                        if unpacked != want:
+                            diff = sorted(set(unpacked) ^ set(want)) or [p for p in want if unpacked.get(p) != want[p]]
+                            errs.append(f"unpacked by {tool}, it is not the stored tree: {', '.join(diff[:4])}")
+                    finally:
+                        shutil.rmtree(long_path(tmp), ignore_errors=True)
+        except (zipfile.BadZipFile, zipfile.LargeZipFile, OSError, EOFError, KeyError, ValueError) as e:
+            # testzip() names the first damaged member; reading it again raises.
+            errs.append(f"it cannot be read: {e}")
+        if errs:
+            bad += 1
+            print(f"FAIL {slug}.zip")
+            for e in errs:
+                print(f"     {e}")
+        else:
+            kinds = ", ".join(f"{len([n for n in files if n.startswith(k)])} {k.rstrip('/')}" for k in ("seed/", "docs/", "files/"))
+            print(f"OK   {slug}.zip  {mb(zp.stat().st_size)}, {len(files)} files ({kinds}) and {len(dirs)} folders, "
+                  f"byte for byte the stored universe; unpacked cleanly by {', '.join(tools)}")
+    return 0 if not bad else 2
+
+
 # ------------------------------------------------------------------ main
 
 
@@ -1382,6 +1557,8 @@ def main() -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("status")
     sub.add_parser("verify")
+    vz = sub.add_parser("verify-zips")
+    vz.add_argument("dist", help="a folder of <slug>.zip: the build's universe-zips/, or the release's assets")
     er = sub.add_parser("emit-reference")
     er.add_argument("dir")
     er.add_argument("slugs", nargs="*")
@@ -1399,6 +1576,8 @@ def main() -> int:
         return cmd_status()
     if args.cmd == "verify":
         return verify_all()
+    if args.cmd == "verify-zips":
+        return verify_zips(Path(args.dist))
     if args.cmd == "emit-reference":
         out = Path(args.dir)
         for d in sorted(UNIV.iterdir()):

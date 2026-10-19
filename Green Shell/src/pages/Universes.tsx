@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { Link, Navigate, useHref, useLocation } from "react-router-dom";
-import { AlertTriangle, ArrowRight, ArrowUpRight, Orbit, RotateCw } from "lucide-react";
+import { AlertTriangle, ArrowRight, ArrowUpRight, Download, Orbit, RotateCw } from "lucide-react";
 import { universeCatalog, type UniverseEntry } from "../data/universeCatalog";
 import { SectionHeading } from "../components/ui";
 import { loadUniverse, mountUniverse, type LoadedUniverse, type MountedUniverse } from "../lib/universeHost";
@@ -19,6 +19,12 @@ import { cx } from "../lib/util";
  * `universeHost.ts` runs it in a shadow root; this page only decides which one
  * and when. Routes: `/universes`, `/universes/:slug` (with the newer engine's
  * `?pane=…&tab=…` deep links), and `/universes/:slug/full`.
+ *
+ * Each universe also downloads whole, from its card and from the persona bar:
+ * `<slug>.zip` on the repo's GitHub release `universes`. The build packs it
+ * from the files it publishes (see vite.config.ts) and the deploy workflow
+ * uploads it whenever its contents change, so it holds the version the hub is
+ * serving without making the site itself any larger.
  */
 
 const WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
@@ -32,14 +38,58 @@ const initials = (n: string) =>
 const mbLabel = (bytes: number) => `${Math.max(1, Math.round(bytes / 1_000_000))} MB`;
 const hue = (u: UniverseEntry) => ({ "--h": u.hue }) as CSSProperties;
 
+/* ------------------------------------------------------------ the ZIPs */
+
+/** Where the ZIPs live: the assets of the release the deploy workflow keeps
+ *  (.github/workflows/deploy.yml). GitHub answers with the file as an
+ *  attachment, so the link downloads it and the page stays where it is. */
+const ZIP_RELEASE = "https://github.com/PablitoFott14/golden-task-hub/releases/download/universes/";
+
+/** Each ZIP's size, put in the bundle by the build that packed it. A build
+ *  that packs none (the server-render check, `npm run dev`) has no sizes, and
+ *  none show. */
+const ZIP_BYTES = (import.meta.env.UNIVERSE_ZIPS ?? {}) as Record<string, number>;
+
+function ZipLink({ u, place }: { u: UniverseEntry; place: "card" | "bar" }) {
+  const size = ZIP_BYTES[u.slug] ? mbLabel(ZIP_BYTES[u.slug]) : "";
+  const name = `${u.slug}.zip`;
+  return (
+    <a
+      href={ZIP_RELEASE + name}
+      download={name}
+      title={`${name}${size ? `, ${size}` : ""}: every file and folder of this universe`}
+      aria-label={`Download ${u.name}'s universe as a ZIP${size ? `, ${size}` : ""}`}
+      className={cx(
+        "inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.64_0.15_var(--h))]",
+        place === "card"
+          ? "relative z-10 mt-3.5 rounded-xl border border-[oklch(0.88_0.04_var(--h))] bg-[oklch(0.975_0.014_var(--h))] px-3 py-2 text-[13.5px] text-[oklch(0.4_0.11_var(--h))] hover:border-[oklch(0.78_0.08_var(--h))] hover:bg-[oklch(0.95_0.03_var(--h))] dark:border-[oklch(0.4_0.05_var(--h))] dark:bg-[oklch(0.26_0.03_var(--h))] dark:text-[oklch(0.86_0.08_var(--h))] dark:hover:border-[oklch(0.52_0.08_var(--h))] dark:hover:bg-[oklch(0.3_0.045_var(--h))]"
+          : "shrink-0 rounded-lg border border-ink-200 bg-surface px-2.5 py-1.5 text-[13px] text-ink-700 hover:border-ink-300 hover:bg-ink-100 hover:text-ink-900"
+      )}
+      style={hue(u)}
+    >
+      <Download size={place === "card" ? 15 : 14} aria-hidden />
+      {place === "card" ? (
+        "Download universe (ZIP)"
+      ) : (
+        <>
+          <span className="hidden md:inline">Download universe (ZIP)</span>
+          <span className="md:hidden">ZIP</span>
+        </>
+      )}
+      {size && <span className={cx("font-medium text-ink-400", place === "bar" && "hidden lg:inline")}>{size}</span>}
+    </a>
+  );
+}
+
 /* -------------------------------------------------------------- the grid */
 
+/** The whole card opens the viewer, through the stretched "Open viewer" link,
+ *  and the ZIP button sits above that link. */
 function PersonaCard({ u }: { u: UniverseEntry }) {
   return (
-    <Link
-      to={`/universes/${u.slug}`}
+    <div
       style={hue(u)}
-      className="card group flex h-full flex-col p-[22px] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[oklch(0.8_0.07_var(--h))] hover:shadow-[0_12px_30px_-16px_oklch(0.4_0.09_var(--h)/0.45)] focus-visible:-translate-y-0.5 focus-visible:border-[oklch(0.8_0.07_var(--h))] focus-visible:outline-none dark:hover:border-[oklch(0.5_0.08_var(--h))] dark:focus-visible:border-[oklch(0.5_0.08_var(--h))]"
+      className="card group relative flex h-full flex-col p-[22px] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[oklch(0.8_0.07_var(--h))] hover:shadow-[0_12px_30px_-16px_oklch(0.4_0.09_var(--h)/0.45)] has-[.card-open:focus-visible]:-translate-y-0.5 has-[.card-open:focus-visible]:border-[oklch(0.8_0.07_var(--h))] dark:hover:border-[oklch(0.5_0.08_var(--h))] dark:has-[.card-open:focus-visible]:border-[oklch(0.5_0.08_var(--h))]"
     >
       <div className="mb-3.5 flex items-center gap-3.5">
         <span
@@ -68,12 +118,17 @@ function PersonaCard({ u }: { u: UniverseEntry }) {
         <span>
           {u.apps.length} apps · {u.files} files · {mbLabel(u.loadBytes)}
         </span>
-        <span className="inline-flex items-center gap-1 whitespace-nowrap font-semibold text-[oklch(0.44_0.13_var(--h))] dark:text-[oklch(0.8_0.1_var(--h))]">
+        <Link
+          to={`/universes/${u.slug}`}
+          aria-label={`Open ${u.name}'s viewer`}
+          className="card-open inline-flex items-center gap-1 whitespace-nowrap font-semibold text-[oklch(0.44_0.13_var(--h))] outline-none after:absolute after:inset-0 after:rounded-2xl after:content-[''] dark:text-[oklch(0.8_0.1_var(--h))]"
+        >
           Open viewer
           <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
-        </span>
+        </Link>
       </div>
-    </Link>
+      <ZipLink u={u} place="card" />
+    </div>
   );
 }
 
@@ -104,7 +159,8 @@ function UniversesHome() {
 
 /* ------------------------------------------------------------- the stage */
 
-function PersonaBar({ current, fullHref }: { current: string; fullHref: string }) {
+function PersonaBar({ u: staged, fullHref }: { u: UniverseEntry; fullHref: string }) {
+  const current = staged.slug;
   return (
     <div className="flex h-[52px] shrink-0 items-center gap-3 border-b border-ink-200/70 bg-surface px-3 sm:gap-[18px] sm:px-[18px]">
       <Link
@@ -137,6 +193,7 @@ function PersonaBar({ current, fullHref }: { current: string; fullHref: string }
         })}
       </nav>
       <span className="flex-1" />
+      <ZipLink u={staged} place="bar" />
       <a
         href={fullHref}
         target="_blank"
@@ -277,7 +334,7 @@ function UniverseStage({
       className={cx("fixed inset-x-0 bottom-0 flex flex-col bg-ink-50", full ? "top-0 z-[60]" : "top-16 z-30", !visible && "hidden")}
       aria-hidden={!visible}
     >
-      {!full && <PersonaBar current={u.slug} fullHref={fullHref} />}
+      {!full && <PersonaBar u={u} fullHref={fullHref} />}
       <div className="relative min-h-0 flex-1 bg-[#0b0d10]">
         <div ref={hostRef} className="absolute inset-0" />
         {phase.k === "loading" && (

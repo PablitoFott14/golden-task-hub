@@ -853,6 +853,44 @@ fails loudly rather than being read as data.
 ⌘K belongs to the open universe, as it did on its own page: the viewer's handler calls
 `preventDefault`, and the palette handler in Layout stands down on a `defaultPrevented` event.
 
+**Downloads are a layer over the engine, never an edit of it.**
+[universeDownloads.ts](src/lib/universeDownloads.ts) works on the engine's markup from outside, so
+the stored engines stay byte for byte what they were. Every `a[download]` is drawn as one button,
+the download glyph, the label and the viewer's own `--accent`, because the Files app's bare link
+rendered as dark blue text on the viewer's dark theme. A PDF attachment and an attachment opened in
+the image viewer get a Download beside Open, wired to the engine's own `vaAttHref`, so it saves the
+bytes Open shows. A Files record whose preview is not stored saves its byte-identical copy from
+elsewhere in the universe when its SHA-256 finds one (Kofi's `Lumen_Studio_Reference_Guidelines.pdf`,
+attached to an email), and otherwise says "Not included" (Elena's `Access_Grants.md`), never a saved
+404 page; `loadUniverse` works both out. A file the engine holds inline, as a `data:` URL, is saved
+through a Blob URL, which has none of the length limits browsers put on a `data:` download.
+
+**Each universe also downloads whole**, from its card and from the persona bar, as `<slug>.zip` on
+the repo's GitHub release `universes`
+(`https://github.com/PablitoFott14/golden-task-hub/releases/download/universes/<slug>.zip`), so the
+ZIPs add nothing to the Pages site. The `universe-zips` plugin in [vite.config.ts](vite.config.ts)
+packs them at build time from `public/universes/<slug>/` into `universe-zips/` (beside `dist/`,
+gitignored), with `universes.json` recording each one's `contents`, the SHA-256 of its MANIFEST.csv.
+The deploy workflow's release job then runs [scripts/universes_release.mjs](scripts/universes_release.mjs),
+which uploads a ZIP only when its contents differ from the release's copy of that index, removes the
+ZIP of a universe no longer carried, and uploads the index last, so a run cut short is finished by
+the next. It runs before the deploy, so the site never links to a ZIP older than itself, and it is
+the only job with a token that can write; the build, which runs npm packages, stays read only.
+`node scripts/universes_release.mjs universe-zips --dry-run` says what a deploy would upload. So a
+ZIP always holds the version the deploy serves, and no sync step can forget it. A ZIP has the
+layout of the export ZIPs the tab syncs from: `<slug>/` with
+`SUMMARY.json` (persona, source, sync date, page checksum, fingerprint, counts), `MANIFEST.csv`
+(every file, its size and its SHA-256), `MISSING_FILES.txt` when a Files record has no preview
+stored, then `seed/`, `docs/` and `files/` exactly as stored, with a folder entry for every folder.
+`viewer/` is the hub's copy of the program rather than the universe, and stays out. A file is
+deflated only where that saves 3% (JSON, Markdown, most PDFs); media go in as they are. The sizes
+reach the buttons as `import.meta.env.UNIVERSE_ZIPS`, and a build without the plugin (the SSR check,
+`npm run dev`) simply shows none; the link is the release either way. A ZIP kept on the release from
+an earlier deploy has the same contents but may differ by a few KB in size, since the compressor's
+output can vary between runners, which the label's whole megabytes never show. The plugin reads
+`scripts/universes.lock.json` for the source and the sync date, so a mirror without the ledger
+builds ZIPs whose SUMMARY leaves those two out.
+
 **Keeping them current is the `/openclaw-universe-sync` skill**, in `~/.claude/skills/`, which runs
 [scripts/universes.py](scripts/universes.py):
 
@@ -861,7 +899,8 @@ python scripts/universes.py status                # what the hub carries
 python scripts/universes.py check <source>...     # what would change: exit 0 in sync, 1 changes, 2 problems
 python scripts/universes.py apply <source>...     # write it, regenerate the catalog and the ledger, verify
 python scripts/universes.py verify                # every universe reassembles and is complete
-bash scripts/universes_validate.sh                # verify, build in a mirror, SSR every route, parity crawl
+python scripts/universes.py verify-zips universe-zips  # each built ZIP is its stored universe, file for file
+bash scripts/universes_validate.sh                # all of it: verify, build, ZIPs, SSR, parity, downloads
 ```
 
 A source is the viewer site (`https://universe-viewers.vercel.app/`, every persona on it), one viewer
@@ -885,7 +924,21 @@ through every nav entry, the tabs inside each pane, a record opened in each pane
 scroll and every element's box in the open panel. Lazy images are loaded eagerly in both, because a
 pane of previews has one layout only once all of them are in. At import it read 196 of 196 states.
 `universes_validate.sh` serves the hub with Vite's `appType: "mpa"`, as GitHub Pages serves it, so a
-missing file is a 404 rather than the app's own page.
+missing file is a 404 rather than the app's own page. The crawl runs the hub with the download layer
+off (`window.__uvPlain`), so it compares the engine alone; the layer changes how downloads look on
+purpose.
+
+**The download test is the other half.** [scripts/universes_downloads.mjs](scripts/universes_downloads.mjs)
+clicks, in Chrome, both ZIP buttons and every download each universe offers: every file in the Files
+app (175, 136 and 58), every attachment in every email, and the image viewer. Each saved file must
+carry the right name and exactly the stored bytes. Against a local build, the release URL is
+answered with the ZIP that build packed, as GitHub answers it; `--live`, run on the deployed site
+with the release's assets in `--zips`, lets the download go to GitHub for real. It clicks with the mouse, as a reader does, and
+paces itself, because Chrome silently drops any download a page starts after its tenth in one
+second. `verify-zips` checks the ZIPs themselves: every stored file byte for byte, no other entry,
+every folder entry, a MANIFEST that matches, a SUMMARY that names the version in place, and a clean
+unpack by Python, `tar.exe` and `Expand-Archive`. The validation also hands the ZIPs back to `check`
+beside the original pages, and every universe has to come back in sync.
 
 **The repo is public, and so is this data.** The universes are synthetic, as the viewers say, and the
 site they came from was public; they are committed so Pages can serve them. The source ZIPs stay

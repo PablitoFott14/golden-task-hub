@@ -18,6 +18,11 @@
  *
  * Exit 0 when every state matches and the hub logged no error the original did
  * not, 1 otherwise. A mismatch prints the step, what differs, and both values.
+ *
+ * The hub runs with its download layer off (`window.__uvPlain`), so what is
+ * compared is the engine alone. The layer changes on purpose how downloads
+ * look and adds a Download where the original had none; universes_downloads.mjs
+ * tests it.
  */
 import { chromium } from "playwright-core";
 
@@ -86,8 +91,9 @@ const HELPERS = (slug) => {
   window.__attr = (sel, i, a) => window.__R().querySelectorAll(sel)[i]?.getAttribute(a) ?? null;
 };
 
-async function open(browser, url, slug, size) {
+async function open(browser, url, slug, size, plain = false) {
   const page = await browser.newPage({ viewport: size });
+  if (plain) await page.addInitScript(() => (window.__uvPlain = true));
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
@@ -167,7 +173,7 @@ const browser = await chromium.launch({ channel: "chrome" });
 let failed = 0;
 for (const slug of slugs) {
   const hubSize = { width: WIDTH, height: HEIGHT };
-  const hub = await open(browser, `${HUB}#/universes/${slug}`, slug, hubSize);
+  const hub = await open(browser, `${HUB}#/universes/${slug}`, slug, hubSize, true);
   const stage = await hub.page.evaluate((s) => {
     const r = document.querySelector(`[data-universe="${s}"]`).getBoundingClientRect();
     return { width: Math.round(r.width), height: Math.round(r.height) };

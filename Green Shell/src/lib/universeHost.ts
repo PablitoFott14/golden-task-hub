@@ -1,4 +1,5 @@
 import { asset } from "./util";
+import { attachDownloads, DOWNLOAD_CSS, type DownloadInfo } from "./universeDownloads";
 
 /**
  * Runs a persona's own viewer program inside the hub.
@@ -32,6 +33,9 @@ import { asset } from "./util";
  * export ZIP's format. They are fetched and turned back into the base64 or text
  * the engine expects, by the same rule the sync script verified against the
  * original page.
+ *
+ * Downloads get a layer of their own on top of the engine's markup, in
+ * `universeDownloads.ts`.
  */
 
 export interface UniversePage {
@@ -44,6 +48,8 @@ export interface UniversePage {
   skin: string[];
   markdown: Record<string, string | null> | null;
   exports: string[];
+  /** The Files previews stored, as `files/filesystem/<path>`. */
+  externals: string[];
   renderedPrefix: string;
   pageSha256: string;
   loadBytes: number;
@@ -62,6 +68,7 @@ export interface LoadedUniverse {
     c: Record<string, unknown>;
     markdown: Record<string, string>;
   };
+  downloads: DownloadInfo;
 }
 
 export interface MountOptions {
@@ -197,6 +204,24 @@ export async function loadUniverse(
     Promise.all(docs.map(([, p]) => get(p).then((r) => r.text()).finally(tick))),
   ]);
 
+  // Files records whose preview is not stored: the original site never served
+  // them either. One may still have its bytes elsewhere in the universe (the
+  // same file attached to an email), and when the SHA-256 the record states
+  // matches, its Download saves that copy. See universeDownloads.ts.
+  const previews = Array.isArray(page.externals) ? new Set(page.externals) : null;
+  const fsStored = seeds[page.seed.indexOf("filesystem")] as { files?: Record<string, unknown>[] } | undefined;
+  const absent = new Map<string, { sha: string; size: number }>();
+  for (const f of previews ? (fsStored?.files ?? []) : []) {
+    const p = typeof f?.path === "string" ? f.path.replace(/^\/+/, "") : "";
+    const u = f?.viewer_uri;
+    if (f?.viewer_external && typeof u === "string" && u.startsWith(page.renderedPrefix) && p && !previews?.has("files/filesystem/" + p)) {
+      absent.set(p, { sha: String(f.sha256 ?? "").toLowerCase(), size: Number(f.size_bytes ?? f.size ?? -1) });
+    }
+  }
+  const leaf = (p: string) => p.slice(p.lastIndexOf("/") + 1);
+  const absentNames = new Set([...absent.keys()].map(leaf));
+  const candidates = new Map<string, Blob>();
+
   const refs = new Map<string, boolean>();
   seeds.forEach((s) => collectRefs(s, refs));
   total += refs.size;
@@ -205,8 +230,22 @@ export async function loadUniverse(
     const blob = await (await get(p)).blob();
     const [b64, text] = await Promise.all([blobToBase64(blob), wantText ? blob.text() : Promise.resolve(null)]);
     blobs.set(p, { b64, text });
+    if (absentNames.has(leaf(p))) candidates.set(p, blob);
     tick();
   });
+
+  const copies = new Map<string, string>();
+  for (const [p, want] of absent) {
+    if (!want.sha || !globalThis.crypto?.subtle) continue;
+    for (const [q, blob] of candidates) {
+      if (leaf(q) !== leaf(p) || (want.size >= 0 && blob.size !== want.size)) continue;
+      if ((await sha256Hex(blob)) === want.sha) {
+        copies.set(p, q);
+        break;
+      }
+    }
+  }
+  const downloads: DownloadInfo = { aliases: new Map(), unavailable: new Set() };
 
   const seed: Record<string, unknown> = {};
   page.seed.forEach((name, i) => (seed[name] = rehydrate(seeds[i], blobs)));
@@ -226,14 +265,25 @@ export async function loadUniverse(
     } catch {
       /* raw already */
     }
-    f.viewer_uri = base + "files/filesystem/" + (path && (rest === path || decoded === path) ? urlPath(path) : rest);
+    const rebased = base + "files/filesystem/" + (path && (rest === path || decoded === path) ? urlPath(path) : rest);
+    f.viewer_uri = rebased;
+    if (absent.has(path)) {
+      const copy = copies.get(path);
+      if (copy) downloads.aliases.set(rebased, url(copy));
+      else downloads.unavailable.add(rebased);
+    }
   }
 
   const markdown: Record<string, string> = {};
   let di = 0;
   for (const [k, p] of Object.entries(page.markdown ?? {})) markdown[k] = p ? mdTexts[di++] : "";
 
-  return { slug, page, engine, css, body, data: { seed, skin: data.skin, c: data.c, markdown } };
+  return { slug, page, engine, css, body, data: { seed, skin: data.skin, c: data.c, markdown }, downloads };
+}
+
+async function sha256Hex(b: Blob): Promise<string> {
+  const d = new Uint8Array(await crypto.subtle.digest("SHA-256", await b.arrayBuffer()));
+  return Array.from(d, (x) => x.toString(16).padStart(2, "0")).join("");
 }
 
 /* ------------------------------------------------------------ the stylesheet */
@@ -395,8 +445,12 @@ export function mountUniverse(container: HTMLElement, u: LoadedUniverse, opts: M
   // `all: initial` on the host also drops the locale the page's own <html lang>
   // gave it, and the locale picks fallback glyphs, so the wrapper carries it.
   const lang = /<html[^>]*\blang="([^"]+)"/.exec(u.page.pre ?? "")?.[1] ?? "en";
-  root.innerHTML = `<style>${HOST_CSS}${adaptCss(u.css)}</style><div class="uv-root" lang="${lang.replace(/[^\w-]/g, "")}">${u.body}</div>`;
+  // The parity crawl sets this before the hub loads, to compare the engine
+  // with its original page without the download layer on top.
+  const plain = (window as { __uvPlain?: boolean }).__uvPlain === true;
+  root.innerHTML = `<style>${HOST_CSS}${adaptCss(u.css)}${plain ? "" : DOWNLOAD_CSS}</style><div class="uv-root" lang="${lang.replace(/[^\w-]/g, "")}">${u.body}</div>`;
   const uvRoot = root.querySelector(".uv-root") as HTMLElement;
+  const detachDownloads = plain ? () => {} : attachDownloads(root, uvRoot, u.downloads);
 
   let active = true;
   let alive = true;
@@ -631,6 +685,7 @@ export function mountUniverse(container: HTMLElement, u: LoadedUniverse, opts: M
     alive = false;
     for (const t of tracked.splice(0)) t.target.removeEventListener(t.type, t.wrapped, t.options);
     hashListeners.length = 0;
+    detachDownloads();
     withdrawGlobals();
     removeLookupFallback(root);
     objectUrls.splice(0).forEach((s) => URL.revokeObjectURL(s));
