@@ -18,8 +18,10 @@
 #    with the hub's download layer off so the engine alone is compared.
 # 6. The download test: every download the tab offers, clicked in a browser,
 #    saves the right bytes under the right name.
+# 7. The Explore test: each universe's Explore against the index the same
+#    code builds from the stored files, every dataset, filter and view.
 #
-# Exit 0 only when all six pass. MIRROR overrides the mirror folder.
+# Exit 0 only when all seven pass. MIRROR overrides the mirror folder.
 set -euo pipefail
 
 HERE="$(cd "$(dirname "$0")/.." && pwd)"
@@ -33,10 +35,10 @@ cleanup() { for p in "${PIDS[@]:-}"; do [ -n "$p" ] && kill "$p" 2>/dev/null || 
 trap cleanup EXIT
 py() { (cd "$HERE" && PYTHONIOENCODING=utf-8 python scripts/universes.py "$@"); }
 
-echo "== 1/6 verify"
+echo "== 1/7 verify"
 py verify
 
-echo "== 2/6 build in $BUILD"
+echo "== 2/7 build in $BUILD"
 mkdir -p "$BUILD"
 # Refresh everything but node_modules, so a rerun skips the install.
 find "$BUILD" -mindepth 1 -maxdepth 1 ! -name node_modules -exec rm -rf {} +
@@ -44,7 +46,7 @@ find "$BUILD" -mindepth 1 -maxdepth 1 ! -name node_modules -exec rm -rf {} +
   tsconfig.json vite.config.ts "$BUILD/")
 # The ledger, so each ZIP's SUMMARY.json names its source and sync date as CI's do.
 mkdir -p "$BUILD/scripts" && cp "$HERE/scripts/universes.lock.json" "$BUILD/scripts/"
-cp "$HERE/scripts/universes_parity.mjs" "$HERE/scripts/universes_downloads.mjs" "$BUILD/"
+cp "$HERE/scripts/universes_parity.mjs" "$HERE/scripts/universes_downloads.mjs" "$HERE/scripts/universes_explore.mjs" "$BUILD/"
 cd "$BUILD"
 if [ ! -d node_modules/playwright-core ] || [ ! -d node_modules/vite ]; then
   npm install --no-audit --no-fund >/dev/null
@@ -52,7 +54,7 @@ if [ ! -d node_modules/playwright-core ] || [ ! -d node_modules/vite ]; then
 fi
 npm run build
 
-echo "== 3/6 the universe ZIPs"
+echo "== 3/7 the universe ZIPs"
 if ls "$BUILD"/dist/universes/*.zip >/dev/null 2>&1; then
   echo "FAIL a universe ZIP is in dist/, which would put it on the site"; exit 1
 fi
@@ -65,13 +67,13 @@ ZIPS=(); PAGES=()
 for d in "$REF"/*/; do s="$(basename "$d")"; ZIPS+=("$BUILD/universe-zips/$s.zip"); PAGES+=("$d/index.html"); done
 py check "${ZIPS[@]}" "${PAGES[@]}" --offline
 
-echo "== 4/6 server-render every route"
+echo "== 4/7 server-render every route"
 cat > src/ssr-smoke.tsx <<'EOF'
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import App from "./App";
 import { universeCatalog } from "./data/universeCatalog";
-const routes = ["/", "/universes", ...universeCatalog.flatMap((u) => [`/universes/${u.slug}`, `/universes/${u.slug}/full`, `/universes/${u.slug}?pane=email`]), "/universes/nope", "/golden-tasks", "/golden-tasks/charge-disputes", "/failure-approach", "/complexity", "/spec", "/self-evals", "/reference", "/nope"];
+const routes = ["/", "/universes", ...universeCatalog.flatMap((u) => [`/universes/${u.slug}`, `/universes/${u.slug}/full`, `/universes/${u.slug}?pane=email`, `/universes/${u.slug}/explore`, `/universes/${u.slug}/explore?s=email&q=x`]), "/universes/nope", "/universes/nope/explore", "/golden-tasks", "/golden-tasks/charge-disputes", "/failure-approach", "/complexity", "/spec", "/self-evals", "/reference", "/nope"];
 let fail = 0;
 for (const r of routes) {
   try {
@@ -93,7 +95,7 @@ npx vite build --config vite.ssr.config.ts >/dev/null
 node ssr-dist/ssr-smoke.js
 rm -rf src/ssr-smoke.tsx vite.ssr.config.ts ssr-dist
 
-echo "== 5/6 parity with the original pages"
+echo "== 5/7 parity with the original pages"
 (cd "$REF" && exec python -m http.server "$REF_PORT" >/dev/null 2>&1) & PIDS+=($!)
 # Served as GitHub Pages serves it: a missing file is a 404, never the app's
 # index.html, which Vite's default SPA fallback would hand to a broken preview.
@@ -108,6 +110,9 @@ for _ in $(seq 1 60); do
 done
 node universes_parity.mjs --hub "http://localhost:$HUB_PORT/" --ref "http://localhost:$REF_PORT/" "$@"
 
-echo "== 6/6 every download"
+echo "== 6/7 every download"
 node universes_downloads.mjs --hub "http://localhost:$HUB_PORT/" --store public/universes --zips universe-zips "$@"
+
+echo "== 7/7 Explore"
+node universes_explore.mjs --hub "http://localhost:$HUB_PORT/" --store public/universes --src src "$@"
 echo "== all checks passed"

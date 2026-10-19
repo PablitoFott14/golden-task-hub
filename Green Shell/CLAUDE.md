@@ -13,7 +13,7 @@ so six show.
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
 | The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the Universe Viewers, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
-| Universes | `/universes` | [Universes.tsx](src/pages/Universes.tsx) | The three persona universes, run inside the hub: a grid of persona cards, then one persona's own viewer at a time under a bar of persona tabs (`/universes/:slug`), and the viewer alone at `/universes/:slug/full`. See [The Universes tab](#the-universes-tab). |
+| Universes | `/universes` | [Universes.tsx](src/pages/Universes.tsx) | The three persona universes, run inside the hub: a grid of persona cards, then one persona's own viewer at a time under a bar of persona tabs (`/universes/:slug`), the viewer alone at `/universes/:slug/full`, and Explore, the same universe as a research tool, at `/universes/:slug/explore`. See [The Universes tab](#the-universes-tab). |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
 | Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make Model A (Opus 5) fail for real: where the cases come from, then seven failure types as cards, 28 patterns, and the 89 real cases from graded Opus runs behind them, each with why it failed, a filter by what the task has, and a "Model A passed?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
@@ -121,7 +121,7 @@ actually doing, and one of those is parked; Universes made it seven, so six show
 | Tab | Route | Panes inside it | Was |
 | --- | --- | --- | --- |
 | The Method | `/` | one scrolling page: hero with the Universe Viewers card, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
-| Universes | `/universes`, `/universes/:slug`, `/universes/:slug/full` | the persona grid, then one persona's viewer at a time under the persona bar | new, in place of the external Universe Viewers site |
+| Universes | `/universes`, `/universes/:slug`, `/universes/:slug/full`, `/universes/:slug/explore` | the persona grid, then one persona's viewer or Explore at a time under the persona bar | new, in place of the external Universe Viewers site |
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
 | Failure Approach | `/failure-approach` | **three levels**, all off the hash: the overview (seven type cards and the diagnosis tile, the task filter), a type (`#looking` … `#finishing`), a pattern (`#<pattern-id>`), and `#keeps-passing` | new, in the slot Complexity held; rebuilt from a thirteen pane rail |
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
@@ -891,6 +891,67 @@ output can vary between runners, which the label's whole megabytes never show. T
 `scripts/universes.lock.json` for the source and the sync date, so a mirror without the ledger
 builds ZIPs whose SUMMARY leaves those two out.
 
+**Explore is the same universe as a research tool**, at `/universes/:slug/explore`, reached from the
+persona bar's Viewer and Explore switch and from each card's "Explore the data". The viewer shows the
+persona's apps as they look; Explore lays every record of every server out to be searched, filtered,
+grouped and followed across servers. [src/components/explore/](src/components/explore/) is the page
+and [src/lib/explore/](src/lib/explore/) builds what it shows. **It never touches the viewer**: it reads
+the stored seed itself (`load.ts`: `page.json`, `data.json`, the seeds and the docs, a few MB; blobs stay
+`_extracted_to` refs and become links), so the engines, parity and downloads are unaffected. The
+viewer now downloads only when it is first shown, so opening Explore first costs a few MB rather than
+23 to 34. Both stay mounted on the stage once opened, and switching keeps each where it was; Explore
+holds on to its own address while hidden, and the switch back goes to it. It is its own chunk, about
+65 KB gzipped, loaded only on the route.
+
+`build.ts` turns a seed into one `ExploreIndex` in five passes:
+
+- **Who is who** ([people.ts](src/lib/explore/people.ts)). Every server names people its own way; each
+  sighting is a claim, and claims sharing an address, a phone, a server id or an exact full name are one
+  entity. Organization names merge with "LLC", "Inc." or "Co." taken off, never by similarity, so Blue
+  Ridge Mill Supply and Blue Ridge Community Bank stay two. A first name alone (a calendar invite,
+  `p_luis`) is the one known person with that first name, if only one has it. A Zelle or Venmo line names
+  its payee. An entity's kind comes from the strongest evidence: the contact card, a profile on a
+  people server, then anything that says organization (an automated address, a business account, a
+  merchant, a business-like name).
+- **Records**, one builder per server in [lib/explore/servers/](src/lib/explore/servers/), each turning
+  its collections into datasets with the facets, sorts, groupings and charts that its data supports:
+  email by folder, sender, thread and attachment kind; transactions by account, category, direction,
+  payee and recurring series, with a money chart; calendar by tag, attendee, repeating series and past
+  or upcoming; Airtable by its own schema (select fields filter, number fields sort and range); Files by
+  a folder tree, identical copies and files also sent as attachments; health as one row per day.
+  **A server with no builder, or one whose builder throws on data it did not expect, gets generic
+  datasets** with facets read off its fields, so a newly synced server is explorable with no code and no
+  record is ever unreachable.
+- **Links the data states**: the emails of a thread, a recurring series and its transactions, the same
+  transaction in Plaid and Fintrack (same amount and account mask, a day and a half apart at most), a
+  Duffel order and its offer, a booking and its quote, rate, room and property, a comment and its post,
+  a saved item and what it saved, identical files by SHA-256.
+- **Mentions and shared references.** A full name, phone number or address in a record's text ties it
+  to that entity. Codes (`INV-4471`, `CAW-1124`, `K7QZ4M`), labelled numbers ("Invoice #20931"), file
+  names and phone numbers shared by records become `Ident`s; an amount does only when it is rare (eight
+  records at most) and reaches beyond the two bank feeds, which hold every transaction twice.
+- **Days and search.** Records are bucketed into days in the engine's own `TZ`, so a day holds what the
+  viewer shows under that date; stays and trips span their days. Health servers keep one record per
+  metric per day, or many sleep segments a night: a three hour gap starts a new night, and a night
+  belongs to the day it ends on.
+
+The views: Overview (one search over every server, the servers, the people reaching across the most
+servers, the references that tie servers together, the busiest days), a server (its datasets as tabs,
+the filters with live counts, the time strip that filters by dragging, the charts, sort and group, a
+list that draws only what is in view), People, Days, Connections, Pinned, one person, one day, one
+reference, and a search. **Every state is in the address**: `?s=<server>&ds=<dataset>&f.<facet>=…&q=…&from=…&to=…&sort=…&g=…&r=<record>`,
+`?p=<person>`, `?d=<day>`, `?x=<reference>`, `?v=people|links|pinned|search`, so a filtered view can be
+linked and the back button walks back through it. A record's detail is everything stored about it, then
+its people, its linked records, the references it shares, the rest of its day, and what the same people
+did three days either side, with every stored field at the foot. Records no item holds (profiles,
+institutions, channel lists) are listed with their server. "Show in viewer" opens the same server in
+the viewer: the newer engine through its own `#pane=`, the older two through their `navTo`
+(`MountedUniverse.show` in [universeHost.ts](src/lib/universeHost.ts)), after which the address drops
+the pane those two will not keep. Pins are a per-device convenience under `gsh.explore.pins.v1`.
+**Nothing is written back and nothing is invented**: buckets such as "6 to 7 hours" or "Evening, 5 to
+9 pm" are ranges over stored values, and a facet that has one value on every record is said once, under
+"Every record here", rather than offered as a filter.
+
 **Keeping them current is the `/openclaw-universe-sync` skill**, in `~/.claude/skills/`, which runs
 [scripts/universes.py](scripts/universes.py):
 
@@ -900,7 +961,7 @@ python scripts/universes.py check <source>...     # what would change: exit 0 in
 python scripts/universes.py apply <source>...     # write it, regenerate the catalog and the ledger, verify
 python scripts/universes.py verify                # every universe reassembles and is complete
 python scripts/universes.py verify-zips universe-zips  # each built ZIP is its stored universe, file for file
-bash scripts/universes_validate.sh                # all of it: verify, build, ZIPs, SSR, parity, downloads
+bash scripts/universes_validate.sh                # all of it: verify, build, ZIPs, SSR, parity, downloads, Explore
 ```
 
 A source is the viewer site (`https://universe-viewers.vercel.app/`, every persona on it), one viewer
@@ -939,6 +1000,24 @@ second. `verify-zips` checks the ZIPs themselves: every stored file byte for byt
 every folder entry, a MANIFEST that matches, a SUMMARY that names the version in place, and a clean
 unpack by Python, `tar.exe` and `Expand-Archive`. The validation also hands the ZIPs back to `check`
 beside the original pages, and every universe has to come back in sync.
+
+**Explore has a test of its own.** [scripts/universes_explore.mjs](scripts/universes_explore.mjs)
+builds each index in Node, from the stored files and with the same code, and checks that every stored
+record is reachable, through a record or listed with its server. Then, in Chrome and against that
+index, it checks:
+
+- every dataset lists exactly its records;
+- a filter in every dataset leaves exactly the count its facet shows;
+- a clicked filter and an opened row show the right thing;
+- a search, the person on the most servers, the busiest day and the widest reference each list what the
+  index holds;
+- "Show in viewer" opens the server in the viewer, in the old engines and the new;
+- the switch back finds Explore where it was;
+- pins list and clear;
+- a search over the largest dataset (Kofi's 6,100 Instagram accounts) answers in well under a second.
+
+At its first run it read 37, 35 and 29 datasets over 7,208, 21,184 and 2,539 stored records, with every
+one reachable.
 
 **The repo is public, and so is this data.** The universes are synthetic, as the viewers say, and the
 site they came from was public; they are committed so Pages can serve them. The source ZIPs stay

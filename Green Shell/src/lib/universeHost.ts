@@ -83,6 +83,10 @@ export interface MountedUniverse {
   setActive(active: boolean): void;
   /** The route's pane string changed under the engine. */
   paneChanged(): void;
+  /** Open the pane a `#pane=…` string names, whether or not the engine reads one. */
+  show(pane: string): void;
+  /** The engine keeps `#pane=…` deep links itself (the newer engine). */
+  deepLinks: boolean;
   destroy(): void;
 }
 
@@ -164,7 +168,7 @@ export function universeBase(slug: string): string {
  *  `encodeURIComponent` turns a comma into %2C, which a server decoding with
  *  `decodeURI` (Vite's does) leaves encoded and then misses, so the separators
  *  that are legal in a path stay literal and only the rest is escaped. */
-const urlPath = (p: string) =>
+export const urlPath = (p: string) =>
   p
     .split("/")
     .map((s) => encodeURIComponent(s).replace(/%(2C|26|2B|3D|40|24|3B|3A)/gi, (m) => decodeURIComponent(m)))
@@ -668,6 +672,26 @@ export function mountUniverse(container: HTMLElement, u: LoadedUniverse, opts: M
     throw e;
   }
 
+  // The newer engine listens for `#pane=…` itself. The older two do not, so a
+  // pane asked for from outside (Explore's "Show in viewer") is opened through
+  // the engine's own navTo, the function its sidebar calls.
+  const deepLinks = hashListeners.length > 0;
+  const navIds = new Set((Array.isArray(u.data.c.DATA_NAV) ? (u.data.c.DATA_NAV as { id?: unknown }[]) : []).map((n) => String(n.id)));
+  const show = (hash: string) => {
+    const m = /(?:^#?|&)pane=([^&]+)/.exec(hash);
+    if (!m || !alive) return;
+    if (deepLinks) return firePane();
+    const navTo = exportsMap.get("navTo");
+    if (typeof navTo !== "function") return;
+    try {
+      const id = decodeURIComponent(m[1]);
+      (navTo as (id: string, isServer: boolean) => void)(id, navIds.has(id));
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  if (!deepLinks) show(opts.getPane());
+
   function withdrawGlobals() {
     for (const [name, desc] of saved) {
       try {
@@ -705,6 +729,8 @@ export function mountUniverse(container: HTMLElement, u: LoadedUniverse, opts: M
       }
     },
     paneChanged: firePane,
+    show,
+    deepLinks,
     destroy,
   };
 }

@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { lazy, Suspense, useEffect, useRef, useState, type CSSProperties } from "react";
 import { Link, Navigate, useHref, useLocation } from "react-router-dom";
-import { AlertTriangle, ArrowRight, ArrowUpRight, Download, Orbit, RotateCw } from "lucide-react";
+import { AlertTriangle, ArrowRight, ArrowUpRight, Download, MonitorSmartphone, Orbit, RotateCw, Telescope } from "lucide-react";
 import { universeCatalog, type UniverseEntry } from "../data/universeCatalog";
 import { SectionHeading } from "../components/ui";
 import { loadUniverse, mountUniverse, type LoadedUniverse, type MountedUniverse } from "../lib/universeHost";
@@ -17,8 +17,14 @@ import { cx } from "../lib/util";
  *
  * The viewer on the stage is the persona's own program, not a rebuild of it.
  * `universeHost.ts` runs it in a shadow root; this page only decides which one
- * and when. Routes: `/universes`, `/universes/:slug` (with the newer engine's
- * `?pane=…&tab=…` deep links), and `/universes/:slug/full`.
+ * and when. Routes: `/universes`, `/universes/:slug` (with `?pane=…&tab=…`
+ * deep links), `/universes/:slug/full`, and `/universes/:slug/explore`.
+ *
+ * Explore is the same universe as a research tool: every record of every
+ * server in one index, filtered, grouped and cross referenced by person, by
+ * day and by shared reference (components/explore, lib/explore). It reads the
+ * stored seed itself and never touches the viewer, so the two sit side by
+ * side on the stage and switching between them keeps both where they were.
  *
  * Each universe also downloads whole, from its card and from the persona bar:
  * `<slug>.zip` on the repo's GitHub release `universes`. The build packs it
@@ -37,6 +43,11 @@ const initials = (n: string) =>
     .toUpperCase();
 const mbLabel = (bytes: number) => `${Math.max(1, Math.round(bytes / 1_000_000))} MB`;
 const hue = (u: UniverseEntry) => ({ "--h": u.hue }) as CSSProperties;
+
+/** Explore is its own chunk: the tab's grid and viewer never load it. */
+const Explore = lazy(() => import("../components/explore/Explore"));
+
+type Mode = "viewer" | "explore";
 
 /* ------------------------------------------------------------ the ZIPs */
 
@@ -62,7 +73,7 @@ function ZipLink({ u, place }: { u: UniverseEntry; place: "card" | "bar" }) {
       className={cx(
         "inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.64_0.15_var(--h))]",
         place === "card"
-          ? "relative z-10 mt-3.5 rounded-xl border border-[oklch(0.88_0.04_var(--h))] bg-[oklch(0.975_0.014_var(--h))] px-3 py-2 text-[13.5px] text-[oklch(0.4_0.11_var(--h))] hover:border-[oklch(0.78_0.08_var(--h))] hover:bg-[oklch(0.95_0.03_var(--h))] dark:border-[oklch(0.4_0.05_var(--h))] dark:bg-[oklch(0.26_0.03_var(--h))] dark:text-[oklch(0.86_0.08_var(--h))] dark:hover:border-[oklch(0.52_0.08_var(--h))] dark:hover:bg-[oklch(0.3_0.045_var(--h))]"
+          ? "relative z-10 rounded-xl border border-[oklch(0.88_0.04_var(--h))] bg-[oklch(0.975_0.014_var(--h))] px-3 py-2 text-[13.5px] text-[oklch(0.4_0.11_var(--h))] hover:border-[oklch(0.78_0.08_var(--h))] hover:bg-[oklch(0.95_0.03_var(--h))] dark:border-[oklch(0.4_0.05_var(--h))] dark:bg-[oklch(0.26_0.03_var(--h))] dark:text-[oklch(0.86_0.08_var(--h))] dark:hover:border-[oklch(0.52_0.08_var(--h))] dark:hover:bg-[oklch(0.3_0.045_var(--h))]"
           : "shrink-0 rounded-lg border border-ink-200 bg-surface px-2.5 py-1.5 text-[13px] text-ink-700 hover:border-ink-300 hover:bg-ink-100 hover:text-ink-900"
       )}
       style={hue(u)}
@@ -84,7 +95,7 @@ function ZipLink({ u, place }: { u: UniverseEntry; place: "card" | "bar" }) {
 /* -------------------------------------------------------------- the grid */
 
 /** The whole card opens the viewer, through the stretched "Open viewer" link,
- *  and the ZIP button sits above that link. */
+ *  and the Explore and ZIP buttons sit above that link. */
 function PersonaCard({ u }: { u: UniverseEntry }) {
   return (
     <div
@@ -127,7 +138,17 @@ function PersonaCard({ u }: { u: UniverseEntry }) {
           <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
         </Link>
       </div>
-      <ZipLink u={u} place="card" />
+      <div className="relative z-10 mt-3.5 grid gap-2">
+        <Link
+          to={`/universes/${u.slug}/explore`}
+          aria-label={`Explore ${u.name}'s universe: every server, person and day, filtered and cross referenced`}
+          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[oklch(0.5_0.14_var(--h))] px-3 py-2 text-[13.5px] font-semibold text-white transition hover:bg-[oklch(0.45_0.14_var(--h))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.64_0.15_var(--h))] focus-visible:ring-offset-2 dark:bg-[oklch(0.62_0.13_var(--h))] dark:text-[oklch(0.15_0.03_var(--h))] dark:hover:bg-[oklch(0.68_0.12_var(--h))]"
+          style={hue(u)}
+        >
+          <Telescope size={15} aria-hidden /> Explore the data
+        </Link>
+        <ZipLink u={u} place="card" />
+      </div>
     </div>
   );
 }
@@ -159,8 +180,9 @@ function UniversesHome() {
 
 /* ------------------------------------------------------------- the stage */
 
-function PersonaBar({ u: staged, fullHref }: { u: UniverseEntry; fullHref: string }) {
+function PersonaBar({ u: staged, fullHref, mode }: { u: UniverseEntry; fullHref: string; mode: Mode }) {
   const current = staged.slug;
+  const tail = mode === "explore" ? "/explore" : "";
   return (
     <div className="flex h-[52px] shrink-0 items-center gap-3 border-b border-ink-200/70 bg-surface px-3 sm:gap-[18px] sm:px-[18px]">
       <Link
@@ -176,7 +198,7 @@ function PersonaBar({ u: staged, fullHref }: { u: UniverseEntry; fullHref: strin
           return (
             <Link
               key={u.slug}
-              to={`/universes/${u.slug}`}
+              to={`/universes/${u.slug}${tail}`}
               aria-current={on ? "page" : undefined}
               style={hue(u)}
               className={cx(
@@ -193,15 +215,43 @@ function PersonaBar({ u: staged, fullHref }: { u: UniverseEntry; fullHref: strin
         })}
       </nav>
       <span className="flex-1" />
+      <ModeSwitch u={staged} mode={mode} />
       <ZipLink u={staged} place="bar" />
-      <a
-        href={fullHref}
-        target="_blank"
-        rel="noopener"
-        className="hidden items-center gap-1 whitespace-nowrap text-[13px] font-semibold text-ink-500 hover:text-ink-900 sm:inline-flex"
-      >
-        Open full page <ArrowUpRight size={14} aria-hidden />
-      </a>
+      {mode === "viewer" && (
+        <a
+          href={fullHref}
+          target="_blank"
+          rel="noopener"
+          className="hidden items-center gap-1 whitespace-nowrap text-[13px] font-semibold text-ink-500 hover:text-ink-900 xl:inline-flex"
+        >
+          Open full page <ArrowUpRight size={14} aria-hidden />
+        </a>
+      )}
+    </div>
+  );
+}
+
+/** The persona's own viewer, or Explore: the same universe two ways. */
+function ModeSwitch({ u, mode }: { u: UniverseEntry; mode: Mode }) {
+  const tab = (to: Mode, label: string, short: string, Icon: typeof Telescope) => (
+    <Link
+      to={to === "explore" ? `/universes/${u.slug}/explore${lastExplore.get(u.slug) ?? ""}` : `/universes/${u.slug}`}
+      aria-current={mode === to ? "page" : undefined}
+      title={to === "explore" ? "Filter, group and cross reference every server" : "The persona's apps, as they look"}
+      className={cx(
+        "inline-flex items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1 text-[13px] font-semibold transition",
+        mode === to ? "bg-surface text-ink-900 shadow-soft ring-1 ring-ink-200" : "text-ink-500 hover:text-ink-900"
+      )}
+    >
+      <Icon size={14} aria-hidden />
+      <span className="hidden md:inline">{label}</span>
+      <span className="md:hidden">{short}</span>
+    </Link>
+  );
+  return (
+    <div className="flex shrink-0 rounded-lg bg-ink-100 p-0.5" role="group" aria-label="View">
+      {tab("viewer", "Viewer", "Viewer", MonitorSmartphone)}
+      {tab("explore", "Explore", "Explore", Telescope)}
     </div>
   );
 }
@@ -230,11 +280,13 @@ function UniverseStage({
   u,
   visible,
   full,
+  mode,
   search,
 }: {
   u: UniverseEntry;
   visible: boolean;
   full: boolean;
+  mode: Mode;
   search: string;
 }) {
   const hostRef = useRef<HTMLDivElement>(null);
@@ -245,9 +297,19 @@ function UniverseStage({
   const [ready, setReady] = useState(0);
   const [attempt, setAttempt] = useState(0);
   const fullHref = useHref(`/universes/${u.slug}/full`);
-
-  // Fetch the universe whenever the persona changes, and take the old one down.
+  const showViewer = visible && mode === "viewer";
+  // Each side loads the first time it is shown, so opening Explore first reads
+  // a few MB of records rather than the viewer's whole download.
+  const [wanted, setWanted] = useState(showViewer);
+  const [explored, setExplored] = useState(visible && mode === "explore");
   useEffect(() => {
+    if (showViewer) setWanted(true);
+    if (visible && mode === "explore") setExplored(true);
+  }, [showViewer, visible, mode]);
+
+  // Fetch the viewer once it is wanted, and take it down with the stage.
+  useEffect(() => {
+    if (!wanted) return;
     const ctrl = new AbortController();
     setPhase({ k: "loading", done: 0, total: 0 });
     let last = 0;
@@ -276,12 +338,12 @@ function UniverseStage({
       mounted.current?.destroy();
       mounted.current = null;
     };
-  }, [u.slug, attempt]);
+  }, [u.slug, attempt, wanted]);
 
   // Run it once it is here and on screen, so it lays out against a real stage.
   useEffect(() => {
     const data = loaded.current;
-    if (!data || !visible || mounted.current || !hostRef.current) return;
+    if (!data || !showViewer || mounted.current || !hostRef.current) return;
     try {
       mounted.current = mountUniverse(hostRef.current, data, {
         getPane: () => pane.current,
@@ -292,23 +354,34 @@ function UniverseStage({
       });
       loaded.current = null;
       setPhase({ k: "ready" });
+      // An engine without deep links of its own opened the pane once; the
+      // address does not go on claiming a pane it will not keep.
+      if (!mounted.current.deepLinks && pane.current) {
+        pane.current = "";
+        writePane("");
+      }
     } catch (e) {
       console.error(e);
       setPhase({ k: "error", message: e instanceof Error ? e.message : String(e) });
     }
-  }, [ready, visible]);
+  }, [ready, showViewer]);
 
-  // A universe kept loaded behind the grid hears no keys.
+  // A universe kept loaded behind the grid, or behind Explore, hears no keys.
   useEffect(() => {
-    mounted.current?.setActive(visible);
-  }, [visible, ready]);
+    mounted.current?.setActive(showViewer);
+  }, [showViewer, ready]);
 
-  // A link to another pane of the open universe.
+  // A link to another pane of the open universe, Explore's "Show in viewer" among them.
   useEffect(() => {
     const next = paneOf(search);
-    if (next && next !== pane.current) {
-      pane.current = next;
-      mounted.current?.paneChanged();
+    if (!next || next === pane.current) return;
+    pane.current = next;
+    const m = mounted.current;
+    if (!m) return;
+    m.show(next);
+    if (!m.deepLinks) {
+      pane.current = "";
+      writePane("");
     }
   }, [search]);
 
@@ -320,12 +393,12 @@ function UniverseStage({
     const prev = el.style.overflow;
     el.style.overflow = "hidden";
     const title = document.title;
-    document.title = `${u.name} · Universes · Golden Task Hub`;
+    document.title = `${u.name} · ${mode === "explore" ? "Explore" : "Universes"} · Golden Task Hub`;
     return () => {
       el.style.overflow = prev;
       document.title = title;
     };
-  }, [visible, u.name]);
+  }, [visible, u.name, mode]);
 
   const pct = phase.k === "loading" && phase.total ? Math.round((100 * phase.done) / phase.total) : 0;
 
@@ -334,34 +407,43 @@ function UniverseStage({
       className={cx("fixed inset-x-0 bottom-0 flex flex-col bg-ink-50", full ? "top-0 z-[60]" : "top-16 z-30", !visible && "hidden")}
       aria-hidden={!visible}
     >
-      {!full && <PersonaBar u={u} fullHref={fullHref} />}
-      <div className="relative min-h-0 flex-1 bg-[#0b0d10]">
-        <div ref={hostRef} className="absolute inset-0" />
-        {phase.k === "loading" && (
-          <div
-            style={hue(u)}
-            className="absolute inset-0 grid place-content-center justify-items-center gap-2.5 bg-ink-50 text-center"
-            role="status"
-          >
-            <span className="h-7 w-7 animate-spin rounded-full border-[3px] border-[oklch(0.9_0.03_var(--h))] border-t-[oklch(0.56_0.15_var(--h))] dark:border-[oklch(0.35_0.04_var(--h))] dark:border-t-[oklch(0.7_0.14_var(--h))]" />
-            <b className="text-[16px] font-bold text-ink-900">Opening {u.name}</b>
-            <span className="text-[14px] text-ink-500">{mbLabel(u.loadBytes)}, usually a few seconds</span>
-            <span className="mt-1 h-1 w-40 overflow-hidden rounded-full bg-ink-200">
-              <span
-                className="block h-full rounded-full bg-[oklch(0.56_0.15_var(--h))] transition-[width] duration-200"
-                style={{ width: `${pct}%` }}
-              />
-            </span>
-          </div>
-        )}
-        {phase.k === "error" && (
-          <div className="absolute inset-0 grid place-content-center justify-items-center gap-3 bg-ink-50 px-6 text-center">
-            <AlertTriangle size={24} className="text-rose-500" aria-hidden />
-            <b className="text-[16px] font-bold text-ink-900">{u.name} could not be opened</b>
-            <span className="max-w-md font-mono text-[12px] text-ink-500">{phase.message}</span>
-            <button onClick={() => setAttempt((n) => n + 1)} className="btn-primary mt-2">
-              <RotateCw size={15} /> Try again
-            </button>
+      {!full && <PersonaBar u={u} fullHref={fullHref} mode={mode} />}
+      <div className="relative min-h-0 flex-1">
+        <div className={cx("absolute inset-0 bg-[#0b0d10]", mode !== "viewer" && "hidden")}>
+          <div ref={hostRef} className="absolute inset-0" />
+          {phase.k === "loading" && (
+            <div
+              style={hue(u)}
+              className="absolute inset-0 grid place-content-center justify-items-center gap-2.5 bg-ink-50 text-center"
+              role="status"
+            >
+              <span className="h-7 w-7 animate-spin rounded-full border-[3px] border-[oklch(0.9_0.03_var(--h))] border-t-[oklch(0.56_0.15_var(--h))] dark:border-[oklch(0.35_0.04_var(--h))] dark:border-t-[oklch(0.7_0.14_var(--h))]" />
+              <b className="text-[16px] font-bold text-ink-900">Opening {u.name}</b>
+              <span className="text-[14px] text-ink-500">{mbLabel(u.loadBytes)}, usually a few seconds</span>
+              <span className="mt-1 h-1 w-40 overflow-hidden rounded-full bg-ink-200">
+                <span
+                  className="block h-full rounded-full bg-[oklch(0.56_0.15_var(--h))] transition-[width] duration-200"
+                  style={{ width: `${pct}%` }}
+                />
+              </span>
+            </div>
+          )}
+          {phase.k === "error" && (
+            <div className="absolute inset-0 grid place-content-center justify-items-center gap-3 bg-ink-50 px-6 text-center">
+              <AlertTriangle size={24} className="text-rose-500" aria-hidden />
+              <b className="text-[16px] font-bold text-ink-900">{u.name} could not be opened</b>
+              <span className="max-w-md font-mono text-[12px] text-ink-500">{phase.message}</span>
+              <button onClick={() => setAttempt((n) => n + 1)} className="btn-primary mt-2">
+                <RotateCw size={15} /> Try again
+              </button>
+            </div>
+          )}
+        </div>
+        {explored && (
+          <div className={cx("absolute inset-0", mode !== "explore" && "hidden")} style={hue(u)}>
+            <Suspense fallback={<div className="h-full bg-ink-50" />}>
+              <Explore slug={u.slug} name={u.name} active={visible && mode === "explore"} />
+            </Suspense>
           </div>
         )}
       </div>
@@ -371,16 +453,25 @@ function UniverseStage({
 
 /* ------------------------------------------------------------------ page */
 
+/** Where Explore was last left, per persona, so the switch goes back there. */
+const lastExplore = new Map<string, string>();
+
 export default function Universes() {
   const { pathname, search } = useLocation();
-  const m = pathname.match(/^\/universes(?:\/([^/]+))?(\/full)?\/?$/);
+  const m = pathname.match(/^\/universes(?:\/([^/]+))?(\/full|\/explore)?\/?$/);
   const slug = m?.[1] ? decodeURIComponent(m[1]) : null;
   const entry = slug ? universeCatalog.find((u) => u.slug === slug) : undefined;
+  const mode: Mode = m?.[2] === "/explore" ? "explore" : "viewer";
+  if (entry && mode === "explore") lastExplore.set(entry.slug, search);
   // The stage keeps the last persona opened while the grid is showing.
   const [kept, setKept] = useState<string | null>(entry?.slug ?? null);
+  const [keptMode, setKeptMode] = useState<Mode>(mode);
   useEffect(() => {
-    if (entry) setKept(entry.slug);
-  }, [entry]);
+    if (entry) {
+      setKept(entry.slug);
+      setKeptMode(mode);
+    }
+  }, [entry, mode]);
 
   if (!m || (slug && !entry)) return <Navigate to="/universes" replace />;
   const staged = universeCatalog.find((u) => u.slug === (entry?.slug ?? kept));
@@ -388,7 +479,16 @@ export default function Universes() {
   return (
     <>
       {!entry && <UniversesHome />}
-      {staged && <UniverseStage u={staged} visible={!!entry} full={!!m[2]} search={entry ? search : ""} />}
+      {staged && (
+        <UniverseStage
+          key={staged.slug}
+          u={staged}
+          visible={!!entry}
+          full={m[2] === "/full"}
+          mode={entry ? mode : keptMode}
+          search={entry && mode === "viewer" ? search : ""}
+        />
+      )}
     </>
   );
 }
