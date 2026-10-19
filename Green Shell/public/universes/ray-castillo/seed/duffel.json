@@ -1,0 +1,1490 @@
+{
+ "users": [
+  {
+   "id": "1bda17381f99c19c353efb07",
+   "email": "ray.castillo.phx@gmail.com"
+  }
+ ],
+ "offers": [
+  {
+   "id": "c5b2032fa18a90ac03c76905",
+   "owner": {
+    "name": "Southwest Airlines",
+    "iata_code": "WN",
+    "id": "8dcc51e9c0415b81032757e5"
+   },
+   "slices": [
+    {
+     "id": "ce4c9507f0453bc5e868e0f3",
+     "origin": {
+      "iata_code": "PHX",
+      "type": "airport",
+      "name": "Phoenix Sky Harbor",
+      "city_name": "Phoenix",
+      "time_zone": "America/Phoenix"
+     },
+     "destination": {
+      "iata_code": "SAN",
+      "type": "airport",
+      "name": "San Diego International",
+      "city_name": "San Diego",
+      "time_zone": "America/Los_Angeles"
+     },
+     "duration": "PT1H15M",
+     "fare_brand_name": "Wanna Get Away",
+     "segments": [
+      {
+       "id": "418abaada14983171a095eea",
+       "origin": {
+        "iata_code": "PHX",
+        "type": "airport",
+        "name": "Phoenix Sky Harbor",
+        "city_name": "Phoenix",
+        "time_zone": "America/Phoenix"
+       },
+       "destination": {
+        "iata_code": "SAN",
+        "type": "airport",
+        "name": "San Diego International",
+        "city_name": "San Diego",
+        "time_zone": "America/Los_Angeles"
+       },
+       "departing_at": "2027-03-15T07:40:00",
+       "arriving_at": "2027-03-15T08:55:00",
+       "marketing_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN",
+        "id": "8dcc51e9c0415b81032757e5"
+       },
+       "operating_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN",
+        "id": "8dcc51e9c0415b81032757e5"
+       },
+       "marketing_carrier_flight_number": "1847",
+       "duration": "PT1H15M",
+       "passengers": [
+        {
+         "passenger_id": "ed6f90c4f194d5703fa3f112",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "d073bffc62bb770a1de4854f",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "7c9b023e560a4533e68dd333",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "030e0c333cc41fbb72b63abe",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "016c299a979c700257617c48",
+     "origin": {
+      "iata_code": "SAN",
+      "type": "airport",
+      "name": "San Diego International",
+      "city_name": "San Diego",
+      "time_zone": "America/Los_Angeles"
+     },
+     "destination": {
+      "iata_code": "PHX",
+      "type": "airport",
+      "name": "Phoenix Sky Harbor",
+      "city_name": "Phoenix",
+      "time_zone": "America/Phoenix"
+     },
+     "duration": "PT1H15M",
+     "fare_brand_name": "Wanna Get Away",
+     "segments": [
+      {
+       "id": "c4f37d76854d69ac251f5da9",
+       "origin": {
+        "iata_code": "SAN",
+        "type": "airport",
+        "name": "San Diego International",
+        "city_name": "San Diego",
+        "time_zone": "America/Los_Angeles"
+       },
+       "destination": {
+        "iata_code": "PHX",
+        "type": "airport",
+        "name": "Phoenix Sky Harbor",
+        "city_name": "Phoenix",
+        "time_zone": "America/Phoenix"
+       },
+       "departing_at": "2027-03-19T16:10:00",
+       "arriving_at": "2027-03-19T17:25:00",
+       "marketing_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN",
+        "id": "8dcc51e9c0415b81032757e5"
+       },
+       "operating_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN",
+        "id": "8dcc51e9c0415b81032757e5"
+       },
+       "marketing_carrier_flight_number": "612",
+       "duration": "PT1H15M",
+       "passengers": [
+        {
+         "passenger_id": "ed6f90c4f194d5703fa3f112",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "d073bffc62bb770a1de4854f",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "7c9b023e560a4533e68dd333",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "030e0c333cc41fbb72b63abe",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "ed6f90c4f194d5703fa3f112",
+     "type": "adult",
+     "given_name": "Ray",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "d073bffc62bb770a1de4854f",
+     "type": "adult",
+     "given_name": "Dana",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "7c9b023e560a4533e68dd333",
+     "type": "adult",
+     "given_name": "Mateo",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "030e0c333cc41fbb72b63abe",
+     "type": "child",
+     "given_name": "Lucía",
+     "family_name": "Castillo"
+    }
+   ],
+   "total_amount": "876.40",
+   "total_currency": "USD",
+   "base_amount": "748.00",
+   "base_currency": "USD",
+   "tax_amount": "128.40",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false
+    }
+   },
+   "expires_at": "2026-11-03T16:04:37-07:00",
+   "created_at": "2026-11-01T23:04:37+00:00"
+  },
+  {
+   "id": "9390c64d3f205d5337b07052",
+   "owner": {
+    "name": "American Airlines",
+    "iata_code": "AA",
+    "id": "b1c8a07aa5adf8638e74cd54"
+   },
+   "slices": [
+    {
+     "id": "be15762a5f4d442775842988",
+     "origin": {
+      "iata_code": "PHX",
+      "type": "airport",
+      "name": "Phoenix Sky Harbor",
+      "city_name": "Phoenix",
+      "time_zone": "America/Phoenix"
+     },
+     "destination": {
+      "iata_code": "SAN",
+      "type": "airport",
+      "name": "San Diego International",
+      "city_name": "San Diego",
+      "time_zone": "America/Los_Angeles"
+     },
+     "duration": "PT1H15M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "c787d66107dee7f3e4359baa",
+       "origin": {
+        "iata_code": "PHX",
+        "type": "airport",
+        "name": "Phoenix Sky Harbor",
+        "city_name": "Phoenix",
+        "time_zone": "America/Phoenix"
+       },
+       "destination": {
+        "iata_code": "SAN",
+        "type": "airport",
+        "name": "San Diego International",
+        "city_name": "San Diego",
+        "time_zone": "America/Los_Angeles"
+       },
+       "departing_at": "2027-03-15T11:50:00",
+       "arriving_at": "2027-03-15T13:05:00",
+       "marketing_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA",
+        "id": "b1c8a07aa5adf8638e74cd54"
+       },
+       "operating_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA",
+        "id": "b1c8a07aa5adf8638e74cd54"
+       },
+       "marketing_carrier_flight_number": "1422",
+       "duration": "PT1H15M",
+       "passengers": [
+        {
+         "passenger_id": "ed6f90c4f194d5703fa3f112",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "d073bffc62bb770a1de4854f",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "7c9b023e560a4533e68dd333",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "030e0c333cc41fbb72b63abe",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "db9ac8fbb1e7970af487ae9d",
+     "origin": {
+      "iata_code": "SAN",
+      "type": "airport",
+      "name": "San Diego International",
+      "city_name": "San Diego",
+      "time_zone": "America/Los_Angeles"
+     },
+     "destination": {
+      "iata_code": "PHX",
+      "type": "airport",
+      "name": "Phoenix Sky Harbor",
+      "city_name": "Phoenix",
+      "time_zone": "America/Phoenix"
+     },
+     "duration": "PT1H15M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "fc86f55a690e2710c4581817",
+       "origin": {
+        "iata_code": "SAN",
+        "type": "airport",
+        "name": "San Diego International",
+        "city_name": "San Diego",
+        "time_zone": "America/Los_Angeles"
+       },
+       "destination": {
+        "iata_code": "PHX",
+        "type": "airport",
+        "name": "Phoenix Sky Harbor",
+        "city_name": "Phoenix",
+        "time_zone": "America/Phoenix"
+       },
+       "departing_at": "2027-03-19T18:25:00",
+       "arriving_at": "2027-03-19T19:40:00",
+       "marketing_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA",
+        "id": "b1c8a07aa5adf8638e74cd54"
+       },
+       "operating_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA",
+        "id": "b1c8a07aa5adf8638e74cd54"
+       },
+       "marketing_carrier_flight_number": "3088",
+       "duration": "PT1H15M",
+       "passengers": [
+        {
+         "passenger_id": "ed6f90c4f194d5703fa3f112",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "d073bffc62bb770a1de4854f",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "7c9b023e560a4533e68dd333",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "030e0c333cc41fbb72b63abe",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "ed6f90c4f194d5703fa3f112",
+     "type": "adult",
+     "given_name": "Ray",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "d073bffc62bb770a1de4854f",
+     "type": "adult",
+     "given_name": "Dana",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "7c9b023e560a4533e68dd333",
+     "type": "adult",
+     "given_name": "Mateo",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "030e0c333cc41fbb72b63abe",
+     "type": "child",
+     "given_name": "Lucía",
+     "family_name": "Castillo"
+    }
+   ],
+   "total_amount": "1024.75",
+   "total_currency": "USD",
+   "base_amount": "881.30",
+   "base_currency": "USD",
+   "tax_amount": "143.45",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": true,
+     "penalty_amount": "75.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "expires_at": "2026-11-03T16:06:12-07:00",
+   "created_at": "2026-11-01T23:06:12+00:00"
+  },
+  {
+   "id": "722c1f49d1735d0c61ca9e39",
+   "owner": {
+    "name": "Southwest Airlines",
+    "iata_code": "WN",
+    "id": "8dcc51e9c0415b81032757e5"
+   },
+   "slices": [
+    {
+     "id": "6537010abdf01383f3445531",
+     "origin": {
+      "iata_code": "PHX",
+      "type": "airport",
+      "name": "Phoenix Sky Harbor",
+      "city_name": "Phoenix",
+      "time_zone": "America/Phoenix"
+     },
+     "destination": {
+      "iata_code": "SAN",
+      "type": "airport",
+      "name": "San Diego International",
+      "city_name": "San Diego",
+      "time_zone": "America/Los_Angeles"
+     },
+     "duration": "PT1H15M",
+     "fare_brand_name": "Wanna Get Away",
+     "segments": [
+      {
+       "id": "58cd64c12dc177303f6edcc9",
+       "origin": {
+        "iata_code": "PHX",
+        "type": "airport",
+        "name": "Phoenix Sky Harbor",
+        "city_name": "Phoenix",
+        "time_zone": "America/Phoenix"
+       },
+       "destination": {
+        "iata_code": "SAN",
+        "type": "airport",
+        "name": "San Diego International",
+        "city_name": "San Diego",
+        "time_zone": "America/Los_Angeles"
+       },
+       "departing_at": "2027-03-15T13:20:00",
+       "arriving_at": "2027-03-15T14:35:00",
+       "marketing_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN",
+        "id": "8dcc51e9c0415b81032757e5"
+       },
+       "operating_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN",
+        "id": "8dcc51e9c0415b81032757e5"
+       },
+       "marketing_carrier_flight_number": "2208",
+       "duration": "PT1H15M",
+       "passengers": [
+        {
+         "passenger_id": "ed6f90c4f194d5703fa3f112",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "d073bffc62bb770a1de4854f",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "7c9b023e560a4533e68dd333",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "030e0c333cc41fbb72b63abe",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5545e6cc640b8000de3300ed",
+     "origin": {
+      "iata_code": "SAN",
+      "type": "airport",
+      "name": "San Diego International",
+      "city_name": "San Diego",
+      "time_zone": "America/Los_Angeles"
+     },
+     "destination": {
+      "iata_code": "PHX",
+      "type": "airport",
+      "name": "Phoenix Sky Harbor",
+      "city_name": "Phoenix",
+      "time_zone": "America/Phoenix"
+     },
+     "duration": "PT1H15M",
+     "fare_brand_name": "Wanna Get Away",
+     "segments": [
+      {
+       "id": "b104da2fecd1d8326b719d44",
+       "origin": {
+        "iata_code": "SAN",
+        "type": "airport",
+        "name": "San Diego International",
+        "city_name": "San Diego",
+        "time_zone": "America/Los_Angeles"
+       },
+       "destination": {
+        "iata_code": "PHX",
+        "type": "airport",
+        "name": "Phoenix Sky Harbor",
+        "city_name": "Phoenix",
+        "time_zone": "America/Phoenix"
+       },
+       "departing_at": "2027-03-19T11:05:00",
+       "arriving_at": "2027-03-19T12:20:00",
+       "marketing_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN",
+        "id": "8dcc51e9c0415b81032757e5"
+       },
+       "operating_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN",
+        "id": "8dcc51e9c0415b81032757e5"
+       },
+       "marketing_carrier_flight_number": "1739",
+       "duration": "PT1H15M",
+       "passengers": [
+        {
+         "passenger_id": "ed6f90c4f194d5703fa3f112",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "d073bffc62bb770a1de4854f",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "7c9b023e560a4533e68dd333",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "030e0c333cc41fbb72b63abe",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "ed6f90c4f194d5703fa3f112",
+     "type": "adult",
+     "given_name": "Ray",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "d073bffc62bb770a1de4854f",
+     "type": "adult",
+     "given_name": "Dana",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "7c9b023e560a4533e68dd333",
+     "type": "adult",
+     "given_name": "Mateo",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "030e0c333cc41fbb72b63abe",
+     "type": "child",
+     "given_name": "Lucía",
+     "family_name": "Castillo"
+    }
+   ],
+   "total_amount": "966.70",
+   "total_currency": "USD",
+   "base_amount": "832.00",
+   "base_currency": "USD",
+   "tax_amount": "134.70",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false
+    }
+   },
+   "expires_at": "2026-11-03T16:04:38-07:00",
+   "created_at": "2026-11-01T23:04:38+00:00"
+  },
+  {
+   "id": "7e36284b26cb18aae073385b",
+   "owner": {
+    "name": "Alaska Airlines",
+    "iata_code": "AS",
+    "id": "bb510c861728b5284f46086a"
+   },
+   "slices": [
+    {
+     "id": "56d44c97d9f9e3a3e025160e",
+     "origin": {
+      "iata_code": "PHX",
+      "type": "airport",
+      "name": "Phoenix Sky Harbor",
+      "city_name": "Phoenix",
+      "time_zone": "America/Phoenix"
+     },
+     "destination": {
+      "iata_code": "SAN",
+      "type": "airport",
+      "name": "San Diego International",
+      "city_name": "San Diego",
+      "time_zone": "America/Los_Angeles"
+     },
+     "duration": "PT1H20M",
+     "fare_brand_name": "Main",
+     "segments": [
+      {
+       "id": "dbc4160ed9069357df179cb6",
+       "origin": {
+        "iata_code": "PHX",
+        "type": "airport",
+        "name": "Phoenix Sky Harbor",
+        "city_name": "Phoenix",
+        "time_zone": "America/Phoenix"
+       },
+       "destination": {
+        "iata_code": "SAN",
+        "type": "airport",
+        "name": "San Diego International",
+        "city_name": "San Diego",
+        "time_zone": "America/Los_Angeles"
+       },
+       "departing_at": "2027-03-15T09:10:00",
+       "arriving_at": "2027-03-15T10:30:00",
+       "marketing_carrier": {
+        "name": "Alaska Airlines",
+        "iata_code": "AS",
+        "id": "bb510c861728b5284f46086a"
+       },
+       "operating_carrier": {
+        "name": "Alaska Airlines",
+        "iata_code": "AS",
+        "id": "bb510c861728b5284f46086a"
+       },
+       "marketing_carrier_flight_number": "1371",
+       "duration": "PT1H20M",
+       "passengers": [
+        {
+         "passenger_id": "ed6f90c4f194d5703fa3f112",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "d073bffc62bb770a1de4854f",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "7c9b023e560a4533e68dd333",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "030e0c333cc41fbb72b63abe",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "05dc7e6796369b708ae0c6de",
+     "origin": {
+      "iata_code": "SAN",
+      "type": "airport",
+      "name": "San Diego International",
+      "city_name": "San Diego",
+      "time_zone": "America/Los_Angeles"
+     },
+     "destination": {
+      "iata_code": "PHX",
+      "type": "airport",
+      "name": "Phoenix Sky Harbor",
+      "city_name": "Phoenix",
+      "time_zone": "America/Phoenix"
+     },
+     "duration": "PT1H15M",
+     "fare_brand_name": "Main",
+     "segments": [
+      {
+       "id": "524d2889711497ad169d2131",
+       "origin": {
+        "iata_code": "SAN",
+        "type": "airport",
+        "name": "San Diego International",
+        "city_name": "San Diego",
+        "time_zone": "America/Los_Angeles"
+       },
+       "destination": {
+        "iata_code": "PHX",
+        "type": "airport",
+        "name": "Phoenix Sky Harbor",
+        "city_name": "Phoenix",
+        "time_zone": "America/Phoenix"
+       },
+       "departing_at": "2027-03-19T17:45:00",
+       "arriving_at": "2027-03-19T19:00:00",
+       "marketing_carrier": {
+        "name": "Alaska Airlines",
+        "iata_code": "AS",
+        "id": "bb510c861728b5284f46086a"
+       },
+       "operating_carrier": {
+        "name": "Alaska Airlines",
+        "iata_code": "AS",
+        "id": "bb510c861728b5284f46086a"
+       },
+       "marketing_carrier_flight_number": "1374",
+       "duration": "PT1H15M",
+       "passengers": [
+        {
+         "passenger_id": "ed6f90c4f194d5703fa3f112",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "d073bffc62bb770a1de4854f",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "7c9b023e560a4533e68dd333",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        },
+        {
+         "passenger_id": "030e0c333cc41fbb72b63abe",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "ed6f90c4f194d5703fa3f112",
+     "type": "adult",
+     "given_name": "Ray",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "d073bffc62bb770a1de4854f",
+     "type": "adult",
+     "given_name": "Dana",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "7c9b023e560a4533e68dd333",
+     "type": "adult",
+     "given_name": "Mateo",
+     "family_name": "Castillo"
+    },
+    {
+     "id": "030e0c333cc41fbb72b63abe",
+     "type": "child",
+     "given_name": "Lucía",
+     "family_name": "Castillo"
+    }
+   ],
+   "total_amount": "1051.30",
+   "total_currency": "USD",
+   "base_amount": "906.00",
+   "base_currency": "USD",
+   "tax_amount": "145.30",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false
+    }
+   },
+   "expires_at": "2026-11-03T16:08:51-07:00",
+   "created_at": "2026-11-01T23:08:51+00:00"
+  }
+ ],
+ "seat_map_elements": [
+  {
+   "id": "824a8fe5de44799c3014364c",
+   "offer_id": "c5b2032fa18a90ac03c76905",
+   "segment_id": "418abaada14983171a095eea",
+   "type": "seat",
+   "designator": "9A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "493a253d9933286c3d10cbf5",
+   "offer_id": "c5b2032fa18a90ac03c76905",
+   "segment_id": "418abaada14983171a095eea",
+   "type": "seat",
+   "designator": "9B",
+   "name": "Middle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 0,
+   "position": 1,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "fbc805d616d29b5ef47be8fb",
+   "offer_id": "c5b2032fa18a90ac03c76905",
+   "segment_id": "418abaada14983171a095eea",
+   "type": "seat",
+   "designator": "9C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 1,
+   "position": 0,
+   "total_amount": "29.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "f5f97f8485c3f81a3c9e0a32",
+   "offer_id": "c5b2032fa18a90ac03c76905",
+   "segment_id": "418abaada14983171a095eea",
+   "type": "seat",
+   "designator": "10A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 10,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "c2bbb4027206a98cb19e962e",
+   "offer_id": "9390c64d3f205d5337b07052",
+   "segment_id": "c787d66107dee7f3e4359baa",
+   "type": "seat",
+   "designator": "16A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 16,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "7fec44b2d9e67614ffe46644",
+   "offer_id": "9390c64d3f205d5337b07052",
+   "segment_id": "c787d66107dee7f3e4359baa",
+   "type": "seat",
+   "designator": "16B",
+   "name": "Middle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 16,
+   "section": 0,
+   "position": 1,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "0e77451fbbdbfb78a29d74fd",
+   "offer_id": "9390c64d3f205d5337b07052",
+   "segment_id": "c787d66107dee7f3e4359baa",
+   "type": "seat",
+   "designator": "16C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 16,
+   "section": 1,
+   "position": 0,
+   "total_amount": "34.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "8cadb83a8d5c008b6e4cfcd1",
+   "offer_id": "9390c64d3f205d5337b07052",
+   "segment_id": "c787d66107dee7f3e4359baa",
+   "type": "seat",
+   "designator": "17A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "b42106339bfbf4e3d11644d9",
+   "offer_id": "722c1f49d1735d0c61ca9e39",
+   "segment_id": "58cd64c12dc177303f6edcc9",
+   "type": "seat",
+   "designator": "11A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "3b69dfbd2028d08578029460",
+   "offer_id": "722c1f49d1735d0c61ca9e39",
+   "segment_id": "58cd64c12dc177303f6edcc9",
+   "type": "seat",
+   "designator": "11B",
+   "name": "Middle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 0,
+   "position": 1,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "61e5bda33a20932fe72fb58c",
+   "offer_id": "722c1f49d1735d0c61ca9e39",
+   "segment_id": "58cd64c12dc177303f6edcc9",
+   "type": "seat",
+   "designator": "11C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 1,
+   "position": 0,
+   "total_amount": "29.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "2f5d87e4aa03311ea4d8568c",
+   "offer_id": "722c1f49d1735d0c61ca9e39",
+   "segment_id": "58cd64c12dc177303f6edcc9",
+   "type": "seat",
+   "designator": "12A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "fa027e1a5e3b13ba7c5bd21a",
+   "offer_id": "722c1f49d1735d0c61ca9e39",
+   "segment_id": "58cd64c12dc177303f6edcc9",
+   "type": "seat",
+   "designator": "12B",
+   "name": "Middle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 0,
+   "position": 1,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "12723cf0dc41ace45ae64866",
+   "offer_id": "7e36284b26cb18aae073385b",
+   "segment_id": "dbc4160ed9069357df179cb6",
+   "type": "seat",
+   "designator": "8A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 8,
+   "section": 0,
+   "position": 0,
+   "total_amount": "45.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "278311c3021657645f6489d6",
+   "offer_id": "7e36284b26cb18aae073385b",
+   "segment_id": "dbc4160ed9069357df179cb6",
+   "type": "seat",
+   "designator": "19A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 19,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "eb4e24fee7413ae7042b19e3",
+   "offer_id": "7e36284b26cb18aae073385b",
+   "segment_id": "dbc4160ed9069357df179cb6",
+   "type": "seat",
+   "designator": "19B",
+   "name": "Middle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 19,
+   "section": 0,
+   "position": 1,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "46b5f5a28dfadc841e98b618",
+   "offer_id": "7e36284b26cb18aae073385b",
+   "segment_id": "dbc4160ed9069357df179cb6",
+   "type": "seat",
+   "designator": "19C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 19,
+   "section": 1,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "be22afac9781476f0ffcfbe9",
+   "offer_id": "7e36284b26cb18aae073385b",
+   "segment_id": "dbc4160ed9069357df179cb6",
+   "type": "seat",
+   "designator": "20C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 20,
+   "section": 1,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  }
+ ],
+ "orders": [],
+ "order_cancellations": [],
+ "accommodations": [
+  {
+   "id": "078bec22ff5ceb3a3ffa8943",
+   "name": "Pacific Terrace Lodge",
+   "location": {
+    "address": {
+     "line_one": "1845 Grand Avenue",
+     "city_name": "San Diego",
+     "country_code": "US",
+     "region": "CA",
+     "postal_code": "92109"
+    },
+    "geographic_coordinates": {
+     "latitude": 32.7956,
+     "longitude": -117.2534
+    }
+   },
+   "description": "Outdoor pool and a kitchenette. Check-in after 4pm.",
+   "rating": 3,
+   "review_score": 8.1,
+   "amenities": [
+    {
+     "type": "wifi",
+     "description": "Wifi"
+    },
+    {
+     "type": "pool",
+     "description": "Outdoor pool"
+    }
+   ],
+   "check_in_information": {
+    "check_in_after_time": "16:00",
+    "check_out_before_time": "11:00"
+   }
+  },
+  {
+   "id": "79c376c76f4819d750731e6f",
+   "name": "Riverbend Suites Mission Valley",
+   "location": {
+    "address": {
+     "line_one": "1930 Camino del Rio North",
+     "city_name": "San Diego",
+     "country_code": "US",
+     "region": "CA",
+     "postal_code": "92108"
+    },
+    "geographic_coordinates": {
+     "latitude": 32.7709,
+     "longitude": -117.1528
+    }
+   },
+   "description": "Hot breakfast included and a heated outdoor pool. The Green Line trolley stop is a short walk. Check-in after 3pm.",
+   "rating": 3,
+   "review_score": 8.4,
+   "amenities": [
+    {
+     "type": "wifi",
+     "description": "Wifi"
+    },
+    {
+     "type": "pool",
+     "description": "Heated outdoor pool"
+    },
+    {
+     "type": "parking",
+     "description": "Self parking"
+    }
+   ],
+   "check_in_information": {
+    "check_in_after_time": "15:00",
+    "check_out_before_time": "11:00"
+   }
+  }
+ ],
+ "rooms": [
+  {
+   "id": "ca58ad9dddb0d322a11c3c82",
+   "accommodation_id": "078bec22ff5ceb3a3ffa8943",
+   "name": "Two Queen Room",
+   "beds": [
+    {
+     "type": "queen",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "9dd8d0dcfcc1d8fa89ab5f8b",
+   "accommodation_id": "078bec22ff5ceb3a3ffa8943",
+   "name": "Family Suite",
+   "beds": [
+    {
+     "type": "king",
+     "count": 1
+    },
+    {
+     "type": "queen",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "61f828f99bc8f04d4166817d",
+   "accommodation_id": "79c376c76f4819d750731e6f",
+   "name": "Two Queen Studio",
+   "beds": [
+    {
+     "type": "queen",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "680eec2198902ff28869a6a0",
+   "accommodation_id": "79c376c76f4819d750731e6f",
+   "name": "One Bedroom Suite",
+   "beds": [
+    {
+     "type": "king",
+     "count": 1
+    },
+    {
+     "type": "sofabed",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "rates": [
+  {
+   "id": "6df6060f3debf0a10061694c",
+   "room_id": "ca58ad9dddb0d322a11c3c82",
+   "check_in_date": "2027-03-15",
+   "check_out_date": "2027-03-19",
+   "total_amount": "628.40",
+   "total_currency": "USD",
+   "base_amount": "564.00",
+   "tax_amount": "64.40",
+   "board_type": "room_only",
+   "payment_type": "pay_at_property",
+   "cancellation_timeline": [],
+   "quantity_available": 3
+  },
+  {
+   "id": "8be97747581467ab56c42286",
+   "room_id": "9dd8d0dcfcc1d8fa89ab5f8b",
+   "check_in_date": "2027-03-15",
+   "check_out_date": "2027-03-19",
+   "total_amount": "812.16",
+   "total_currency": "USD",
+   "base_amount": "728.00",
+   "tax_amount": "84.16",
+   "board_type": "breakfast",
+   "payment_type": "pay_at_property",
+   "cancellation_timeline": [
+    {
+     "before": "2027-03-13T07:00:00Z",
+     "refund_amount": "812.16",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 2
+  },
+  {
+   "id": "32d8be2a4493c22f7fd3fc40",
+   "room_id": "61f828f99bc8f04d4166817d",
+   "check_in_date": "2027-03-15",
+   "check_out_date": "2027-03-19",
+   "total_amount": "575.34",
+   "total_currency": "USD",
+   "base_amount": "516.00",
+   "tax_amount": "59.34",
+   "board_type": "breakfast",
+   "payment_type": "pay_at_property",
+   "cancellation_timeline": [
+    {
+     "before": "2027-03-13T07:00:00Z",
+     "refund_amount": "575.34",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 4
+  },
+  {
+   "id": "e261ad691b9a238f9b434042",
+   "room_id": "680eec2198902ff28869a6a0",
+   "check_in_date": "2027-03-15",
+   "check_out_date": "2027-03-19",
+   "total_amount": "709.14",
+   "total_currency": "USD",
+   "base_amount": "636.00",
+   "tax_amount": "73.14",
+   "board_type": "breakfast",
+   "payment_type": "pay_at_property",
+   "cancellation_timeline": [
+    {
+     "before": "2027-03-12T07:00:00Z",
+     "refund_amount": "709.14",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 1
+  }
+ ],
+ "quotes": [],
+ "bookings": []
+}

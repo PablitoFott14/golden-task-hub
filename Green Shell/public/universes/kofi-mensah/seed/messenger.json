@@ -1,0 +1,1591 @@
+{
+ "users": [
+  {
+   "id": "contact_7d70e40f0bedb6145566bc4c",
+   "email": "t.gaines313@gmail.com",
+   "name": "Terrence Gaines"
+  },
+  {
+   "id": "contact_624483321982237cde191eea",
+   "email": "marcusbell.hvac@gmail.com",
+   "name": "Marcus Bell"
+  },
+  {
+   "id": "ms_user_jalen",
+   "email": "jalenprice.det@gmail.com",
+   "name": "Jalen Price"
+  },
+  {
+   "id": "ms_user_andre",
+   "email": "andrewills313@gmail.com",
+   "name": "Andre Wills"
+  },
+  {
+   "id": "ms_user_nina",
+   "email": "nina.kowalczyk@gmail.com",
+   "name": "Nina Kowalczyk"
+  },
+  {
+   "id": "ms_user_walt",
+   "email": "walt.jefferson.det@gmail.com",
+   "name": "Walt Jefferson"
+  },
+  {
+   "id": "contact_97d96f0ae605829fbdfbf3f4",
+   "email": "dpruitt.rides@gmail.com",
+   "name": "Denise Pruitt"
+  },
+  {
+   "id": "contact_99c47301821727611431ecac",
+   "email": "derek.hollis.oh@gmail.com",
+   "name": "Derek Hollis"
+  },
+  {
+   "id": "ms_user_kofi",
+   "email": "kofi@corktownaudio.com",
+   "name": "Kofi Mensah"
+  },
+  {
+   "id": "u_whitaker_lorraine_e0a3a6",
+   "email": "whitaker.lorraine@outlook.com",
+   "name": "Lorraine Whitaker"
+  },
+  {
+   "id": "u_pruitt_gerald_55987c",
+   "email": "pruitt.gerald@gmail.com",
+   "name": "Gerald Pruitt"
+  },
+  {
+   "id": "u_tasha_monroe73_3174e2",
+   "email": "tasha.monroe73@gmail.com",
+   "name": "Tasha Monroe"
+  },
+  {
+   "id": "u_asante_yaa_9cec64",
+   "email": "asante.yaa@icloud.com",
+   "name": "Yaa Asante"
+  },
+  {
+   "id": "u_kwabenaowusu_c6ead6",
+   "email": "kwabenaowusu@gmail.com",
+   "name": "Kwabena Owusu"
+  },
+  {
+   "id": "u_darnell_rucker_b5b88e",
+   "email": "darnell.rucker@gmail.com",
+   "name": "Darnell Rucker"
+  },
+  {
+   "id": "u_samuel_adjei_6f4752",
+   "email": "samuel.adjei@icloud.com",
+   "name": "Samuel Adjei"
+  },
+  {
+   "id": "u_brenda_cole_fc64ec",
+   "email": "brenda.cole@outlook.com",
+   "name": "Brenda Cole"
+  },
+  {
+   "id": "u_dgrant27_798494",
+   "email": "dgrant27@gmail.com",
+   "name": "Denise Grant"
+  },
+  {
+   "id": "u_mueller_tom_8564bd",
+   "email": "mueller.tom@icloud.com",
+   "name": "Tom Mueller"
+  },
+  {
+   "id": "u_akua_darko_e1ad46",
+   "email": "akua.darko@gmail.com",
+   "name": "Akua Darko"
+  },
+  {
+   "id": "u_ellis_vernon_2b22b1",
+   "email": "ellis.vernon@gmail.com",
+   "name": "Vernon Ellis"
+  },
+  {
+   "id": "u_gloria_mathis43_f7fb04",
+   "email": "gloria.mathis43@yahoo.com",
+   "name": "Gloria Mathis"
+  },
+  {
+   "id": "u_curtis_bland_98e527",
+   "email": "curtis.bland@outlook.com",
+   "name": "Curtis Bland"
+  },
+  {
+   "id": "u_aaron_whitmore58_73f85f",
+   "email": "aaron.whitmore58@gmail.com",
+   "name": "Aaron Whitmore"
+  },
+  {
+   "id": "u_keisha_whitmore23_a56812",
+   "email": "keisha.whitmore23@gmail.com",
+   "name": "Keisha Whitmore"
+  },
+  {
+   "id": "u_ansah_kojo_73bdff",
+   "email": "ansah.kojo@icloud.com",
+   "name": "Kojo Ansah"
+  },
+  {
+   "id": "u_btate87_f9f7bf",
+   "email": "btate87@gmail.com",
+   "name": "Bernard Tate"
+  },
+  {
+   "id": "u_luisherrera_cc8421",
+   "email": "luisherrera@gmail.com",
+   "name": "Luis Herrera"
+  },
+  {
+   "id": "u_ivory_pamela_d71608",
+   "email": "ivory.pamela@outlook.com",
+   "name": "Pamela Ivory"
+  },
+  {
+   "id": "u_wsharpe67_397327",
+   "email": "wsharpe67@outlook.com",
+   "name": "Wendell Sharpe"
+  },
+  {
+   "id": "u_omalley_erin_582080",
+   "email": "omalley.erin@gmail.com",
+   "name": "Erin O'Malley"
+  },
+  {
+   "id": "u_reginaldmoore_98f4d2",
+   "email": "reginaldmoore@gmail.com",
+   "name": "Reginald Moore"
+  },
+  {
+   "id": "u_haroldsimms_6cbaf3",
+   "email": "haroldsimms@gmail.com",
+   "name": "Harold Simms"
+  },
+  {
+   "id": "u_eagyeman27_8b70fd",
+   "email": "eagyeman27@outlook.com",
+   "name": "Esther Agyeman"
+  },
+  {
+   "id": "u_gmitchell32_f9a413",
+   "email": "gmitchell32@icloud.com",
+   "name": "Gloria Mitchell"
+  },
+  {
+   "id": "u_pdombrowski97_053952",
+   "email": "pdombrowski97@gmail.com",
+   "name": "Patrick Dombrowski"
+  },
+  {
+   "id": "u_trhodes97_873b19",
+   "email": "trhodes97@outlook.com",
+   "name": "Tamika Rhodes"
+  },
+  {
+   "id": "u_gregwisniewski_fe8e81",
+   "email": "gregwisniewski@icloud.com",
+   "name": "Greg Wisniewski"
+  },
+  {
+   "id": "u_dfontaine27_043669",
+   "email": "dfontaine27@yahoo.com",
+   "name": "Derrick Fontaine"
+  },
+  {
+   "id": "u_megan_orourke_653cdd",
+   "email": "megan.orourke@gmail.com",
+   "name": "Megan O'Rourke"
+  },
+  {
+   "id": "u_calvin_brooks_188312",
+   "email": "calvin.brooks@gmail.com",
+   "name": "Calvin Brooks"
+  },
+  {
+   "id": "u_tomkaczmarek_073d56",
+   "email": "tomkaczmarek@icloud.com",
+   "name": "Tom Kaczmarek"
+  },
+  {
+   "id": "u_bernardellis_c8538d",
+   "email": "bernardellis@gmail.com",
+   "name": "Bernard Ellis"
+  },
+  {
+   "id": "u_vaughn_courtney_96d6a2",
+   "email": "vaughn.courtney@outlook.com",
+   "name": "Courtney Vaughn"
+  },
+  {
+   "id": "u_hpettway12_354c2d",
+   "email": "hpettway12@gmail.com",
+   "name": "Harold Pettway"
+  },
+  {
+   "id": "u_sharon_pulaski78_0823b3",
+   "email": "sharon.pulaski78@outlook.com",
+   "name": "Sharon Pulaski"
+  },
+  {
+   "id": "u_moniquedupree_0171a4",
+   "email": "moniquedupree@yahoo.com",
+   "name": "Monique Dupree"
+  },
+  {
+   "id": "u_frank_zielinski88_09f0f3",
+   "email": "frank.zielinski88@icloud.com",
+   "name": "Frank Zielinski"
+  },
+  {
+   "id": "u_keisha_lambert_3551cb",
+   "email": "keisha.lambert@icloud.com",
+   "name": "Keisha Lambert"
+  },
+  {
+   "id": "u_cibarra22_208083",
+   "email": "cibarra22@yahoo.com",
+   "name": "Carlos Ibarra"
+  },
+  {
+   "id": "u_lorraine_givens53_9fdcee",
+   "email": "lorraine.givens53@icloud.com",
+   "name": "Lorraine Givens"
+  },
+  {
+   "id": "u_deborah_asamoah78_442c15",
+   "email": "deborah.asamoah78@gmail.com",
+   "name": "Deborah Asamoah"
+  },
+  {
+   "id": "u_tate_marvin_52959c",
+   "email": "tate.marvin@yahoo.com",
+   "name": "Marvin Tate"
+  },
+  {
+   "id": "u_reggie_thornton83_9ca479",
+   "email": "reggie.thornton83@icloud.com",
+   "name": "Reggie Thornton"
+  },
+  {
+   "id": "u_gpearson17_7fcf60",
+   "email": "gpearson17@gmail.com",
+   "name": "Gary Pearson"
+  },
+  {
+   "id": "u_rutledge_lamar_5980cf",
+   "email": "rutledge.lamar@yahoo.com",
+   "name": "Lamar Rutledge"
+  },
+  {
+   "id": "u_gmendez42_15d8c6",
+   "email": "gmendez42@gmail.com",
+   "name": "Gloria Mendez"
+  },
+  {
+   "id": "u_zielinski_piotr_0526f4",
+   "email": "zielinski.piotr@gmail.com",
+   "name": "Piotr Zielinski"
+  },
+  {
+   "id": "u_yaw_asante_5e2428",
+   "email": "yaw.asante@icloud.com",
+   "name": "Yaw Asante"
+  },
+  {
+   "id": "u_pawlak_greg_0cf370",
+   "email": "pawlak.greg@yahoo.com",
+   "name": "Greg Pawlak"
+  },
+  {
+   "id": "u_samirahaddad_78b966",
+   "email": "samirahaddad@gmail.com",
+   "name": "Samira Haddad"
+  },
+  {
+   "id": "u_marisol_trevino48_9343b6",
+   "email": "marisol.trevino48@gmail.com",
+   "name": "Marisol Trevino"
+  },
+  {
+   "id": "u_frank_wisniewski73_cf2393",
+   "email": "frank.wisniewski73@gmail.com",
+   "name": "Frank Wisniewski"
+  },
+  {
+   "id": "u_asaleh12_9b46c8",
+   "email": "asaleh12@gmail.com",
+   "name": "Abdul Saleh"
+  },
+  {
+   "id": "u_russkaminski_eb9198",
+   "email": "russkaminski@gmail.com",
+   "name": "Russ Kaminski"
+  },
+  {
+   "id": "u_klattimore67_283fbd",
+   "email": "klattimore67@gmail.com",
+   "name": "Keisha Lattimore"
+  },
+  {
+   "id": "u_carl_dombrowski58_a25d59",
+   "email": "carl.dombrowski58@yahoo.com",
+   "name": "Carl Dombrowski"
+  },
+  {
+   "id": "u_kwesi_ofori88_f5048b",
+   "email": "kwesi.ofori88@icloud.com",
+   "name": "Kwesi Ofori"
+  },
+  {
+   "id": "u_trish_mcallister48_ca6b34",
+   "email": "trish.mcallister48@outlook.com",
+   "name": "Trish McAllister"
+  },
+  {
+   "id": "u_rpemberton37_2ab26c",
+   "email": "rpemberton37@icloud.com",
+   "name": "Rashad Pemberton"
+  },
+  {
+   "id": "u_wharrington37_64d6a5",
+   "email": "wharrington37@icloud.com",
+   "name": "Wendell Harrington"
+  },
+  {
+   "id": "u_brzezinski_tom_aacf87",
+   "email": "brzezinski.tom@gmail.com",
+   "name": "Tom Brzezinski"
+  },
+  {
+   "id": "u_gary_lutz_beaa00",
+   "email": "gary.lutz@gmail.com",
+   "name": "Gary Lutz"
+  },
+  {
+   "id": "u_stanley_hutchins_6aa6df",
+   "email": "stanley.hutchins@icloud.com",
+   "name": "Stanley Hutchins"
+  },
+  {
+   "id": "u_whitaker_jamal_b8e9d0",
+   "email": "whitaker.jamal@yahoo.com",
+   "name": "Jamal Whitaker"
+  },
+  {
+   "id": "u_lindapruitt_9c9a2b",
+   "email": "lindapruitt@gmail.com",
+   "name": "Linda Pruitt"
+  },
+  {
+   "id": "u_ahmedjaber_6c342c",
+   "email": "ahmedjaber@gmail.com",
+   "name": "Ahmed Jaber"
+  },
+  {
+   "id": "u_esanders57_985669",
+   "email": "esanders57@outlook.com",
+   "name": "Ebony Sanders"
+  },
+  {
+   "id": "u_leon_gibbs_56caca",
+   "email": "leon.gibbs@gmail.com",
+   "name": "Leon Gibbs"
+  },
+  {
+   "id": "u_kwabena_asante23_27f49a",
+   "email": "kwabena.asante23@gmail.com",
+   "name": "Kwabena Asante"
+  },
+  {
+   "id": "u_mensah_akosua_53699e",
+   "email": "mensah.akosua@yahoo.com",
+   "name": "Akosua Mensah"
+  },
+  {
+   "id": "u_ymensah32_487874",
+   "email": "ymensah32@yahoo.com",
+   "name": "Yaw Mensah"
+  },
+  {
+   "id": "u_grace_owusu53_8b53c7",
+   "email": "grace.owusu53@gmail.com",
+   "name": "Grace Owusu"
+  },
+  {
+   "id": "u_nana_agyeman_4e2706",
+   "email": "nana.agyeman@gmail.com",
+   "name": "Nana Agyeman"
+  },
+  {
+   "id": "u_aboateng32_a4cc8e",
+   "email": "aboateng32@icloud.com",
+   "name": "Adwoa Boateng"
+  },
+  {
+   "id": "u_ankrah_kwesi_f4c0a9",
+   "email": "ankrah.kwesi@gmail.com",
+   "name": "Kwesi Ankrah"
+  },
+  {
+   "id": "u_joe_kaminski_72c0a8",
+   "email": "joe.kaminski@gmail.com",
+   "name": "Joe Kaminski"
+  },
+  {
+   "id": "u_danielle_brooks_f290ca",
+   "email": "danielle.brooks@gmail.com",
+   "name": "Danielle Brooks"
+  },
+  {
+   "id": "u_pete_duchene48_dfdf0d",
+   "email": "pete.duchene48@yahoo.com",
+   "name": "Pete Duchene"
+  },
+  {
+   "id": "u_earl_thompson_74d020",
+   "email": "earl.thompson@gmail.com",
+   "name": "Earl Thompson"
+  },
+  {
+   "id": "u_doristhompson_16f405",
+   "email": "doristhompson@gmail.com",
+   "name": "Doris Thompson"
+  },
+  {
+   "id": "u_comfort_mensah88_89df8e",
+   "email": "comfort.mensah88@gmail.com",
+   "name": "Comfort Mensah"
+  },
+  {
+   "id": "u_darko_afua_5e4b2a",
+   "email": "darko.afua@gmail.com",
+   "name": "Afua Darko"
+  },
+  {
+   "id": "u_benofori_758d03",
+   "email": "benofori@icloud.com",
+   "name": "Ben Ofori"
+  },
+  {
+   "id": "u_arusso87_d0eb1c",
+   "email": "arusso87@yahoo.com",
+   "name": "Anthony Russo"
+  },
+  {
+   "id": "u_gary_pawlak23_e13d50",
+   "email": "gary.pawlak23@yahoo.com",
+   "name": "Gary Pawlak"
+  },
+  {
+   "id": "u_itetteh72_f4943c",
+   "email": "itetteh72@icloud.com",
+   "name": "Isaac Tetteh"
+  },
+  {
+   "id": "u_philip_osei_490fa2",
+   "email": "philip.osei@gmail.com",
+   "name": "Philip Osei"
+  },
+  {
+   "id": "u_rcoleman92_7ab790",
+   "email": "rcoleman92@gmail.com",
+   "name": "Reggie Coleman"
+  },
+  {
+   "id": "u_haroldjenkins_c620f0",
+   "email": "haroldjenkins@gmail.com",
+   "name": "Harold Jenkins"
+  },
+  {
+   "id": "u_samuel_antwi_e080cf",
+   "email": "samuel.antwi@outlook.com",
+   "name": "Samuel Antwi"
+  },
+  {
+   "id": "u_felix_amoah33_87264f",
+   "email": "felix.amoah33@icloud.com",
+   "name": "Felix Amoah"
+  },
+  {
+   "id": "u_ruth_addo_8e50e8",
+   "email": "ruth.addo@gmail.com",
+   "name": "Ruth Addo"
+  },
+  {
+   "id": "u_yoforiatta82_bd82c0",
+   "email": "yoforiatta82@gmail.com",
+   "name": "Yaw Ofori-Atta"
+  },
+  {
+   "id": "u_lena_kraus_370b2c",
+   "email": "lena.kraus@outlook.com",
+   "name": "Lena Kraus"
+  },
+  {
+   "id": "u_adjei_grace_468b6d",
+   "email": "adjei.grace@outlook.com",
+   "name": "Grace Adjei"
+  },
+  {
+   "id": "u_patriciadunlap_46e4ee",
+   "email": "patriciadunlap@yahoo.com",
+   "name": "Patricia Dunlap"
+  }
+ ],
+ "contacts": [
+  {
+   "owner_id": "ms_user_kofi",
+   "contact_id": "contact_7d70e40f0bedb6145566bc4c"
+  },
+  {
+   "owner_id": "ms_user_kofi",
+   "contact_id": "contact_624483321982237cde191eea"
+  },
+  {
+   "owner_id": "ms_user_kofi",
+   "contact_id": "contact_97d96f0ae605829fbdfbf3f4"
+  },
+  {
+   "owner_id": "ms_user_kofi",
+   "contact_id": "contact_99c47301821727611431ecac"
+  },
+  {
+   "owner_id": "contact_7d70e40f0bedb6145566bc4c",
+   "contact_id": "ms_user_kofi"
+  },
+  {
+   "owner_id": "ms_user_kofi",
+   "contact_id": "ms_user_jalen"
+  },
+  {
+   "owner_id": "ms_user_kofi",
+   "contact_id": "ms_user_andre"
+  },
+  {
+   "owner_id": "ms_user_kofi",
+   "contact_id": "ms_user_nina"
+  },
+  {
+   "owner_id": "ms_user_kofi",
+   "contact_id": "ms_user_walt"
+  }
+ ],
+ "threads": [
+  {
+   "id": "ms_thread_5e8a2c71",
+   "title": "Terrence Gaines",
+   "created_at": "2026-06-30T23:30:14.382000Z",
+   "updated_at": "2026-07-01T00:09:33.517000Z",
+   "participant_ids": [
+    "ms_user_kofi",
+    "contact_7d70e40f0bedb6145566bc4c"
+   ]
+  },
+  {
+   "id": "ms_thread_3c9e71a4",
+   "title": "Marcus Bell",
+   "created_at": "2026-10-11T01:14:37.412806Z",
+   "updated_at": "2026-10-15T00:02:47.193524Z",
+   "participant_ids": [
+    "ms_user_kofi",
+    "contact_624483321982237cde191eea"
+   ]
+  },
+  {
+   "id": "ms_thread_8b20d5f6",
+   "title": "Jalen Price",
+   "created_at": "2026-10-24T17:40:09.337120Z",
+   "updated_at": "2026-10-24T17:40:51.804455Z",
+   "participant_ids": [
+    "ms_user_kofi",
+    "ms_user_jalen"
+   ]
+  },
+  {
+   "id": "ms_thread_e47a19c2",
+   "title": "Andre Wills",
+   "created_at": "2026-10-24T19:20:33.561902Z",
+   "updated_at": "2026-10-24T19:21:14.270318Z",
+   "participant_ids": [
+    "ms_user_kofi",
+    "ms_user_andre"
+   ]
+  },
+  {
+   "id": "ms_thread_5d0f3b88",
+   "title": "Nina Kowalczyk",
+   "created_at": "2026-10-27T00:05:48.649071Z",
+   "updated_at": "2026-10-27T00:06:30.915263Z",
+   "participant_ids": [
+    "ms_user_kofi",
+    "ms_user_nina"
+   ]
+  },
+  {
+   "id": "ms_thread_7e4c2a91",
+   "title": "Monday Rollers",
+   "created_at": "2026-05-04T12:00:41.318204Z",
+   "updated_at": "2026-10-27T00:33:52.640279Z",
+   "participant_ids": [
+    "ms_user_walt",
+    "ms_user_kofi",
+    "contact_97d96f0ae605829fbdfbf3f4",
+    "u_darnell_rucker_b5b88e"
+   ]
+  },
+  {
+   "id": "ms_thread_4e7a1c90",
+   "title": "Derek Hollis",
+   "created_at": "2026-10-18T22:47:23.418000Z",
+   "updated_at": "2026-10-26T00:40:31.276000Z",
+   "participant_ids": [
+    "ms_user_kofi",
+    "contact_99c47301821727611431ecac"
+   ]
+  },
+  {
+   "id": "ms_thread_7d3e91a4",
+   "title": "Walt Jefferson",
+   "created_at": "2026-07-10T00:41:37.418000Z",
+   "updated_at": "2026-10-28T13:30:05.118000Z",
+   "participant_ids": [
+    "ms_user_kofi",
+    "ms_user_walt"
+   ]
+  }
+ ],
+ "messages": [
+  {
+   "id": "ms_msg_a3f07c19",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "hey Kofi, its Terrence from Detroit Vintage Audio (the AU-555A hum guy). had to say thanks",
+   "attachments": [],
+   "created_at": "2026-06-30T23:30:14.382000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_1d6b4e82",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "hum is GONE. dead quiet at full volume with nothing playing",
+   "attachments": [],
+   "created_at": "2026-06-30T23:30:49.617000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c94e2a07",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "",
+   "attachments": [],
+   "created_at": "2026-06-30T23:31:41.204000Z",
+   "unsent_at": "2026-06-30T23:31:53.950000Z"
+  },
+  {
+   "id": "ms_msg_7b21f5d3",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "oops wrong pic",
+   "attachments": [],
+   "created_at": "2026-06-30T23:32:02.071000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e05c8a6f",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "it was the ground lug like you said, this one under the cap bracket",
+   "attachments": [
+    {
+     "name": "au555a-ground-lug.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-06-30T23:33:09.538000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_4f9d3b10",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "ms_user_kofi",
+   "text": "That's great to hear, Terrence. Was the nut loose, or had the ground wire come off the lug?",
+   "attachments": [],
+   "created_at": "2026-06-30T23:39:02.846000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_b812e7c4",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "loose. pulling the old cans let the nut back off, and the new caps are on a little board now so nothing holds that lug tight",
+   "attachments": [],
+   "created_at": "2026-06-30T23:40:37.129000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_29a6d0f8",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "so ground was going thru the bracket paint. scraped it to bare metal, star washer, cranked it down",
+   "attachments": [],
+   "created_at": "2026-06-30T23:41:15.774000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_f37c1e95",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "ms_user_kofi",
+   "text": "That's the classic one after a recap. A painted joint makes a high-resistance ground, so the ripple current through it shows up as hum. Bare metal and a star washer is the right fix.",
+   "attachments": [],
+   "created_at": "2026-06-30T23:44:58.309000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_6ad84b2e",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "took it slow on the first power-up like you said, a buddy's variac a little at a time. nothing got warm so i plugged it in straight",
+   "attachments": [],
+   "created_at": "2026-06-30T23:47:23.660000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_0e5f9c37",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "ms_user_kofi",
+   "text": "Good, keep doing that on every first power-up. Next I'd check DC offset at the speaker terminals, then set idle current from the service manual now that it's quiet.",
+   "attachments": [],
+   "created_at": "2026-06-30T23:53:40.418000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_d4b72a61",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "offset is 8 mV left, 11 right. got the service manual pdf but havent touched bias yet, prob this weekend",
+   "attachments": [],
+   "created_at": "2026-06-30T23:55:29.092000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_83c1e0b9",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "ms_user_kofi",
+   "text": "Those offsets are fine. For bias, give it about 15 minutes to warm up and move the trimmers in small steps.",
+   "attachments": [],
+   "created_at": "2026-06-30T23:58:49.735000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_5a0f6d24",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "will do. seriously thank you man, i was this close to boxing it back up for good",
+   "attachments": [],
+   "created_at": "2026-07-01T00:03:31.281000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c2e93f78",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "gonna post an update in the group so the next person with a 555A finds it 👍",
+   "attachments": [],
+   "created_at": "2026-07-01T00:04:18.906000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_917b4d0a",
+   "thread_id": "ms_thread_5e8a2c71",
+   "sender_id": "ms_user_kofi",
+   "text": "Please do, that'll help someone down the line. Enjoy the Sansui.",
+   "attachments": [],
+   "created_at": "2026-07-01T00:09:33.517000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_0a7c3e51",
+   "thread_id": "ms_thread_3c9e71a4",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "Hey Kofi, sorry to message so late on a Saturday. I saw your Pioneer SX-780 on Marketplace for $425 (facebook.com/marketplace/item/fbml_5401). Is it still available? I'm pretty new to vintage gear so bear with me if I ask basic stuff 👍",
+   "attachments": [],
+   "created_at": "2026-10-11T01:14:37.412806Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_b91d4f27",
+   "thread_id": "ms_thread_3c9e71a4",
+   "sender_id": "ms_user_kofi",
+   "text": "Hi Marcus, no trouble at all. Yes, it's available. It was serviced on my bench in September: power supply recapped, new dial lamps, controls and switches cleaned, all functions to spec. Graded Very Good under our written guide, which here means light scuffs on the top cover you can see at arm's length. Faceplate and dial glass are clean.\n- Kofi, Corktown Audio Works",
+   "attachments": [],
+   "created_at": "2026-10-11T13:42:18.905377Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_5e28a0c3",
+   "thread_id": "ms_thread_3c9e71a4",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "Sorry, one more basic one. Does it have a phono input? My uncle gave me his old Technics belt-drive and I'd like to run it through this. And what kind of speakers would you pair with it? 👍",
+   "attachments": [],
+   "created_at": "2026-10-11T16:06:51.228640Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c47f9b12",
+   "thread_id": "ms_thread_3c9e71a4",
+   "sender_id": "ms_user_kofi",
+   "text": "Yes, there's a phono input with a ground post, so the Technics plugs straight in. For speakers, anything rated 8 ohms and around 87 dB or more will be happy on it. At pick-up I can play it through a pair on the bench so you hear it first.",
+   "attachments": [],
+   "created_at": "2026-10-11T16:31:09.774013Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_2d6be894",
+   "thread_id": "ms_thread_3c9e71a4",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "Hey Kofi, sorry for the slow reply, long day on a job site. I'd like to take it at $425. Could I pick it up this Saturday morning? Cash works for me 👍",
+   "attachments": [],
+   "created_at": "2026-10-12T21:40:26.051937Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_f803c15a",
+   "thread_id": "ms_thread_3c9e71a4",
+   "sender_id": "ms_user_kofi",
+   "text": "Sounds good. Saturday 10/17 at 11:00 at the workshop, near Livernois & 7 Mile. I'll send the exact address Friday. Bring the turntable if you want to try them together.",
+   "attachments": [],
+   "created_at": "2026-10-12T21:51:44.618209Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_7a91e3d0",
+   "thread_id": "ms_thread_3c9e71a4",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "Perfect, see you Saturday at 11 👍",
+   "attachments": [],
+   "created_at": "2026-10-12T21:58:03.347785Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e65c0b48",
+   "thread_id": "ms_thread_3c9e71a4",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "Hey Kofi, I'm really sorry about this. My transmission went yesterday and that was the stereo money, so I can't make Saturday. Is there any way you could hold it until after Nov 15? Or if it's still there then, would you take $375? Totally understand if not 👍",
+   "attachments": [],
+   "created_at": "2026-10-14T23:30:12.889410Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_93b2d7f6",
+   "thread_id": "ms_thread_3c9e71a4",
+   "sender_id": "ms_user_kofi",
+   "text": "No worries, Marcus. Hope the car's sorted soon.",
+   "attachments": [],
+   "created_at": "2026-10-15T00:02:47.193524Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_14fa6c39",
+   "thread_id": "ms_thread_8b20d5f6",
+   "sender_id": "ms_user_jalen",
+   "text": "hey saw ur pioneer sx-780 on marketplace facebook.com/marketplace/item/fbml_5401",
+   "attachments": [],
+   "created_at": "2026-10-24T17:40:09.337120Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_a28e57b1",
+   "thread_id": "ms_thread_8b20d5f6",
+   "sender_id": "ms_user_jalen",
+   "text": "listing says sold, still around?",
+   "attachments": [],
+   "created_at": "2026-10-24T17:40:51.804455Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_6c03f9e4",
+   "thread_id": "ms_thread_e47a19c2",
+   "sender_id": "ms_user_andre",
+   "text": "whats good, saw the technics teaser on ur ig",
+   "attachments": [],
+   "created_at": "2026-10-24T19:20:33.561902Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_d7b41a85",
+   "thread_id": "ms_thread_e47a19c2",
+   "sender_id": "ms_user_andre",
+   "text": "what are you asking for the 1200? silver mk2 is exactly what i been looking for",
+   "attachments": [],
+   "created_at": "2026-10-24T19:21:14.270318Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_38e9c2f0",
+   "thread_id": "ms_thread_5d0f3b88",
+   "sender_id": "ms_user_nina",
+   "text": "Hi Kofi! Is the silver Technics SL-1200MK2 from your Instagram teaser for sale yet?",
+   "attachments": [],
+   "created_at": "2026-10-27T00:05:48.649071Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_b5f07d63",
+   "thread_id": "ms_thread_5d0f3b88",
+   "sender_id": "ms_user_nina",
+   "text": "If so, what's the price? I'm in Hamtramck and can pick up any evening.",
+   "attachments": [],
+   "created_at": "2026-10-27T00:06:30.915263Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_3a9f0c41",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Season opener tonight. Roosevelt Park, rolling 6:30. Belle Isle loop. Pump your tires before you leave the house.",
+   "attachments": [],
+   "created_at": "2026-05-04T12:00:41.318204Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_b72e5d08",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Finally!! Been waiting since October 🚲",
+   "attachments": [],
+   "created_at": "2026-05-04T12:13:57.662810Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e41c9a76",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "In. Trek's back together, new bar tape and a fresh chain.",
+   "attachments": [],
+   "created_at": "2026-05-04T16:22:37.104455Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_0d8b3f52",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "u_darnell_rucker_b5b88e",
+   "text": "running like 5 min late dont leave w/o me",
+   "attachments": [],
+   "created_at": "2026-05-04T21:41:55.870913Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_9c5a2e17",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "We wait five minutes. Not ten.",
+   "attachments": [],
+   "created_at": "2026-05-04T21:43:20.229174Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_5f1d7b93",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "6:30 tonight. Wind is coming off the river. Bring a vest for the island.",
+   "attachments": [],
+   "created_at": "2026-05-11T12:02:13.547620Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_a6e0c3d4",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Did anyone grab a blue water bottle by the Casino? 😩",
+   "attachments": [],
+   "created_at": "2026-05-12T00:47:31.093388Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_2b8f4e6a",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "I have it. You get it back Monday.",
+   "attachments": [],
+   "created_at": "2026-05-12T01:06:02.415771Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_d3c7a1f0",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Rolling 6:30. Jefferson is torn up by the bridge. We detour on Lafayette and come down Mt Elliott.",
+   "attachments": [],
+   "created_at": "2026-05-18T12:01:27.938102Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_7e2b9d45",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Holiday. Ride is still on. 6:30, easy pace if it's hot.",
+   "attachments": [],
+   "created_at": "2026-05-25T11:55:48.301967Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c0a4f6b8",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "Out tonight, family thing. See you all on the 1st.",
+   "attachments": [],
+   "created_at": "2026-05-25T13:12:30.774520Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_41f8e2c9",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Noted.",
+   "attachments": [],
+   "created_at": "2026-05-25T13:20:11.052336Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_8d6c0a3e",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "6:30. Two new riders tonight. First lap stays at 16 so nobody gets dropped.",
+   "attachments": [],
+   "created_at": "2026-06-08T12:03:55.640017Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_f2a9b5d1",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "u_darnell_rucker_b5b88e",
+   "text": "16 lol ok walt we'll see how long that lasts",
+   "attachments": [],
+   "created_at": "2026-06-08T12:40:12.390245Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_6b3e8f07",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Somebody fixed the taillight on my bike last Monday. I want a name.",
+   "attachments": [],
+   "created_at": "2026-06-15T11:58:44.817330Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_1c7d4a92",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "Guilty. The battery contact was corroded and the spring tab was flat. Cleaned it and bent the tab back.",
+   "attachments": [],
+   "created_at": "2026-06-15T16:09:26.455901Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e9f05b3c",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "At the plant that was a work order and two days. Thank you.",
+   "attachments": [],
+   "created_at": "2026-06-15T16:31:03.198874Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_57a2c8e6",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "Dealership habit. Put dielectric grease on it, should stay clean through the fall.",
+   "attachments": [],
+   "created_at": "2026-06-15T16:33:47.502613Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_b4d1e7f3",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "90 degrees at the start tonight. Two bottles. We stop at the Scott Fountain.",
+   "attachments": [],
+   "created_at": "2026-06-29T12:04:19.006548Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_0f6a3c28",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Bringing frozen bottles for whoever wants one 🧊",
+   "attachments": [],
+   "created_at": "2026-06-29T12:27:51.734120Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_93c8b0d5",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Rolling 6:30. Holiday weekend is over. Normal route.",
+   "attachments": [],
+   "created_at": "2026-07-06T12:01:08.249931Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_d8e2f4a1",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "Out tonight. Still up at Sleeping Bear, home late. Next week.",
+   "attachments": [],
+   "created_at": "2026-07-06T14:37:44.912006Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_26b9a5e0",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "6:30. Sun is down by 8:40 now. Lights for the ride back.",
+   "attachments": [],
+   "created_at": "2026-08-10T12:02:36.580744Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_ac1f7d63",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Storms through 9 tonight. No ride. Back next Monday.",
+   "attachments": [],
+   "created_at": "2026-08-17T19:46:22.127365Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_4e7c2b9f",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Booo ☔ ok next week then",
+   "attachments": [],
+   "created_at": "2026-08-17T19:52:09.881403Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_f5d0e8a4",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "u_darnell_rucker_b5b88e",
+   "text": "was gonna pr the bridge tonight too smh",
+   "attachments": [],
+   "created_at": "2026-08-17T20:20:40.335217Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_7a4b1c0e",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Last 6:30 start of the year. Next week we move up to 6:00.",
+   "attachments": [],
+   "created_at": "2026-08-31T12:03:02.771049Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c9e3d6b2",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Ride is on tonight, holiday or not. Rides now start at 6:00 through the end of the season. Lights on every bike.",
+   "attachments": [],
+   "created_at": "2026-09-07T12:00:29.463190Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_18f7a2d5",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "u_darnell_rucker_b5b88e",
+   "text": "6 is tough after work but ill make most of them",
+   "attachments": [],
+   "created_at": "2026-09-07T12:31:15.017822Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e6b0c4f9",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "In. I'll be coming straight from a cookout in Southfield, so I'll be the slow one.",
+   "attachments": [],
+   "created_at": "2026-09-07T15:48:02.659401Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_3d5f9e81",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "6:00. Dark by 7:45. Front and rear lights or you ride home early.",
+   "attachments": [],
+   "created_at": "2026-09-14T12:01:50.774902Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_b0c2a7e4",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Rolling 6:00. Cooler tonight. Arm warmers.",
+   "attachments": [],
+   "created_at": "2026-09-21T12:02:58.360115Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_5a8e1d3b",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "Out tonight, Kwame's running a fever. Ride safe.",
+   "attachments": [],
+   "created_at": "2026-09-21T19:54:37.118846Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_92d4f6c0",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Tell him to get well.",
+   "attachments": [],
+   "created_at": "2026-09-21T20:07:13.490571Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_0e9b3a57",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "6:00. Four Mondays left this season.",
+   "attachments": [],
+   "created_at": "2026-10-05T12:00:55.912336Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_d7a6c1e2",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Rolling 6:00. Leaves are down on the island road. Easy in the turns.",
+   "attachments": [],
+   "created_at": "2026-10-19T11:59:16.205480Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_6f2e9b08",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Rolling 6:00. Lights on. Last one of the year.",
+   "attachments": [],
+   "created_at": "2026-10-26T12:00:12.648913Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_a1c5d8f7",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Nooo already?? 😭 I'm bringing cider for after",
+   "attachments": [],
+   "created_at": "2026-10-26T12:19:40.002517Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_4b9e0c63",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "In. Wouldn't miss the Last Roll.",
+   "attachments": [],
+   "created_at": "2026-10-26T16:35:27.731845Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e3d7f2a9",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Good season. Thank you all for showing up. Same spot, first Monday in May.",
+   "attachments": [],
+   "created_at": "2026-10-27T00:09:48.554102Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_7c0a4e1d",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "u_darnell_rucker_b5b88e",
+   "text": "who got the group pic at the fountain, send it",
+   "attachments": [],
+   "created_at": "2026-10-27T00:14:33.871290Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_15c3f7e9",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "Mine. Just put it on my Strava, grab it from there.",
+   "attachments": [],
+   "created_at": "2026-10-27T00:25:02.118437Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_29f6b3c8",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "",
+   "attachments": [],
+   "created_at": "2026-10-27T00:27:15.410662Z",
+   "unsent_at": "2026-10-27T00:27:41.902118Z"
+  },
+  {
+   "id": "ms_msg_b8e1d5a0",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Kofi everyone's eyes are closed except Walt's 😂",
+   "attachments": [],
+   "created_at": "2026-10-27T00:29:40.336604Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c6a0e4b2",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_kofi",
+   "text": "Walt doesn't blink. Thanks for leading it again, Walt. Twelve years and you still drop us on the bridge.",
+   "attachments": [],
+   "created_at": "2026-10-27T00:31:19.087143Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_8f3b6d27",
+   "thread_id": "ms_thread_7e4c2a91",
+   "sender_id": "ms_user_walt",
+   "text": "Thirteen in May. Same bridge.",
+   "attachments": [],
+   "created_at": "2026-10-27T00:33:52.640279Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_0a3f9c21",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "contact_99c47301821727611431ecac",
+   "text": "Hello. Is the Marantz 2230 still available? facebook.com/marketplace/item/fbml_5724",
+   "attachments": [],
+   "created_at": "2026-10-18T22:47:23.418000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_17be4d08",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "contact_99c47301821727611431ecac",
+   "text": "Three questions before I commit. Do all the dial and meter lamps work? Are there any flaws not shown in the photos? How do you pack for shipping?",
+   "attachments": [],
+   "created_at": "2026-10-18T22:48:51.902000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_2c95e7a4",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "ms_user_kofi",
+   "text": "Hi Derek, it's still available. Every lamp works: dial, both meters and the stereo light. I replaced two dial lamps with new incandescents during service, so the glow is stock.",
+   "attachments": [],
+   "created_at": "2026-10-18T23:10:36.155000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_38d0a6f2",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "ms_user_kofi",
+   "text": "Only cosmetic flaw is a ~2 cm hairline on the case top, rear left, photo 5. Double-boxed, UPS Ground.",
+   "attachments": [],
+   "created_at": "2026-10-18T23:12:04.630000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_41c7b5e9",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "contact_99c47301821727611431ecac",
+   "text": "Understood. I looked at photo 5. I'll take it at the listed price and can pay by Zelle on Tuesday. Is $620 with shipping correct?",
+   "attachments": [],
+   "created_at": "2026-10-18T23:31:47.207000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_5a2e08d3",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "ms_user_kofi",
+   "text": "Correct, $575 plus $45 shipping, $620 total. Zelle goes to kofi@corktownaudio.com. It ships the business day after payment.",
+   "attachments": [],
+   "created_at": "2026-10-18T23:38:12.884000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_63f1c9b7",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "contact_99c47301821727611431ecac",
+   "text": "Good. I will send payment Tuesday afternoon and email you the shipping address.",
+   "attachments": [],
+   "created_at": "2026-10-18T23:40:29.051000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_7d84a2e0",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "contact_99c47301821727611431ecac",
+   "text": "Zelle sent, $620. The shipping address is in your inbox.",
+   "attachments": [],
+   "created_at": "2026-10-20T18:02:16.773000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_8e0b3f65",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "ms_user_kofi",
+   "text": "Got it, thank you Derek. Payment's in. It ships tomorrow by UPS Ground and I'll send tracking once the label prints.",
+   "attachments": [],
+   "created_at": "2026-10-20T18:22:40.329000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_9b67c1da",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "ms_user_kofi",
+   "text": "",
+   "attachments": [],
+   "created_at": "2026-10-21T16:10:51.604000Z",
+   "unsent_at": "2026-10-21T16:11:03.918000Z"
+  },
+  {
+   "id": "ms_msg_a4d2e875",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "ms_user_kofi",
+   "text": "Label's printed. UPS Ground, tracking 1Z4W8A770398215374. It goes out this afternoon and Pirate Ship estimates Friday delivery.",
+   "attachments": [],
+   "created_at": "2026-10-21T16:11:20.447000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_b1f09c3e",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "contact_99c47301821727611431ecac",
+   "text": "Received. Thank you.",
+   "attachments": [],
+   "created_at": "2026-10-21T16:44:58.112000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c6a3d7f1",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "contact_99c47301821727611431ecac",
+   "text": "Photos of the case top and the packaging.",
+   "attachments": [
+    {
+     "name": "IMG_6614.jpg",
+     "mime_type": "image/jpeg"
+    },
+    {
+     "name": "IMG_6615.jpg",
+     "mime_type": "image/jpeg"
+    },
+    {
+     "name": "IMG_6617.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-10-25T14:05:19.583000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_d2e8b40a",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "contact_99c47301821727611431ecac",
+   "text": "The receiver arrived Friday. When I unpacked it I found a scratch on the top of the case. The outer box had no damage. I'm emailing you photos of it and the box now.",
+   "attachments": [],
+   "created_at": "2026-10-25T14:06:37.240000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e95c1a66",
+   "thread_id": "ms_thread_4e7a1c90",
+   "sender_id": "ms_user_kofi",
+   "text": "Thanks Derek, sorry to hear it. I'll go through your photos against the listing and come back to you by Thursday.",
+   "attachments": [],
+   "created_at": "2026-10-26T00:40:31.276000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_1f8a3c62",
+   "thread_id": "ms_thread_7d3e91a4",
+   "sender_id": "ms_user_walt",
+   "text": "Found a box of Sylvania tubes clearing the basement. Yours if you want them.",
+   "attachments": [],
+   "created_at": "2026-07-10T00:41:37.418000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_9b4e7d05",
+   "thread_id": "ms_thread_7d3e91a4",
+   "sender_id": "ms_user_kofi",
+   "text": "Yes please. Bring them Monday?",
+   "attachments": [],
+   "created_at": "2026-07-10T00:58:12.093000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c27a5f91",
+   "thread_id": "ms_thread_7d3e91a4",
+   "sender_id": "ms_user_walt",
+   "text": "In the truck Monday.",
+   "attachments": [],
+   "created_at": "2026-07-10T01:03:55.771000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_5e9d2b48",
+   "thread_id": "ms_thread_7d3e91a4",
+   "sender_id": "ms_user_kofi",
+   "text": "Walt, the Ebo Taylor LP you mentioned Monday. Original Ghana pressing? Still have it?",
+   "attachments": [],
+   "created_at": "2026-10-22T00:15:09.264000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_a3f6c1e7",
+   "thread_id": "ms_thread_7d3e91a4",
+   "sender_id": "ms_user_walt",
+   "text": "Have it. $85 cash. Sat 10/31 after 10.",
+   "attachments": [],
+   "created_at": "2026-10-22T00:31:44.580000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_80d4e2b9",
+   "thread_id": "ms_thread_7d3e91a4",
+   "sender_id": "ms_user_kofi",
+   "text": "10:15 on my estate-sale loop. Efua can't know 🙂",
+   "attachments": [],
+   "created_at": "2026-10-22T00:34:02.917000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e6b1a8d3",
+   "thread_id": "ms_thread_7d3e91a4",
+   "sender_id": "ms_user_walt",
+   "text": "Understood.",
+   "attachments": [],
+   "created_at": "2026-10-22T00:36:27.305000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_3c7f9a26",
+   "thread_id": "ms_thread_7d3e91a4",
+   "sender_id": "ms_user_walt",
+   "text": "Saturday stands. 10:15. Side door.",
+   "attachments": [],
+   "created_at": "2026-10-28T13:12:40.662000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_d14b6e8f",
+   "thread_id": "ms_thread_7d3e91a4",
+   "sender_id": "ms_user_kofi",
+   "text": "Perfect. See you Saturday.",
+   "attachments": [],
+   "created_at": "2026-10-28T13:30:05.118000Z",
+   "unsent_at": null
+  }
+ ],
+ "current_user_email": "kofi@corktownaudio.com"
+}

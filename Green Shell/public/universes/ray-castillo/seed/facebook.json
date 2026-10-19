@@ -1,0 +1,6230 @@
+{
+ "users": [
+  {
+   "id": "e7428f417fba5b50ebaf4c7d",
+   "email": "ray.castillo.phx@gmail.com",
+   "name": "Ray Castillo",
+   "visibility": "friends",
+   "friend_ids": [
+    "f9cc6ecbc615b0870d877cc4",
+    "1e0ede89540b9ea40c29a699",
+    "db56793f9da13c08c4b3cf91",
+    "0ad6eb4391c4c8293550f4fc",
+    "69cd08e04514edbc2107a353",
+    "b2d3194d21aa6394093354cf",
+    "f3e63364189c5970e7859cdb",
+    "2ce1b4f64e15d93f1f5832d3",
+    "1822518ba5c0e333aa79da5e",
+    "2e5e50792bbe5111d1e67280",
+    "5fddf760e2e721f680d21c4f",
+    "aeae068397072981c227c38d",
+    "4cf92c173b27e73ee2861a29",
+    "a6d18876323294edc98e7bcd",
+    "9092e778bda8b46acf0a5cc8",
+    "12b1d77836e1a7224351fadf",
+    "e6b07dc5fa75e400a89c5e0b",
+    "4c45fe1f0ca64604e27a015d",
+    "9c6dcfeb7ac9b48e4c884794",
+    "b6d72adec1c3ef1239a55f8c",
+    "8082e5df01b5ee4bccc03e74",
+    "ec7d4944e3742432614ba17a",
+    "f24e4654df1bc759a3a2981d",
+    "43031fa01dcff6c2cf8a6fa7",
+    "3057e11263621177a8ae02b8",
+    "986ccd3902f09d0c9849da54",
+    "b375aaa582855e4eb9f3f2f2",
+    "0c459bdc34fe14c874892def",
+    "42e017226dc0cf3cc71f18c4",
+    "86ba4b961b91ac327876da0f",
+    "eec8f92f223c106eb167365d",
+    "132184be70eaec166405905d",
+    "d4b2d494b9630306c6ae0569",
+    "45031e6bf3773c9268dbcc8b",
+    "3a7ad66348a6b03eaa9d21da",
+    "cf36b68ca1fde07de981a8a8",
+    "d4fa5b89cc198cf6ea7da627",
+    "51da2b80db9710ee0864b4a8",
+    "fb879c73fbd954062c238f58",
+    "80e56f12b91156d768241fd3",
+    "900c9c8935b3a8cc581fcb96",
+    "61e954956c348ed95ec0ce82",
+    "ad800d1c4ebef41e2ca866d2",
+    "59a789c93c4da00c0bb996c0",
+    "1807038ac1fcfc1728accc64",
+    "b53ebc864a45137246d6c258",
+    "c3c02b969f17558ab08f9862",
+    "da7be0657faaf8f032c14deb"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "ef30fd79c4e1e8151d7965a0",
+   "email": "andre.solis.az@gmail.com",
+   "name": "Andre Solis",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "9ca10814b7b1025ecf8f1d92",
+   "email": "luz.mendoza.phx@gmail.com",
+   "name": "Luz Mendoza",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "2f5dfcd25f1cbfb29c8c39bd",
+   "email": "marco.vega.phx@gmail.com",
+   "name": "Marco Vega",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "dbcf3dd613d4897eeefd31f0",
+   "email": "tina.alvarez.phx@gmail.com",
+   "name": "Tina Alvarez",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "ca9f8d58efcb19f61eab8a39",
+   "email": "sofia.navarro.phx@gmail.com",
+   "name": "Sofia Navarro",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "5a8965676ba91f9cf38851a7",
+   "email": "luis.ortega.phx@gmail.com",
+   "name": "Luis Ortega",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fa0f484bc5b18a822e23428c",
+   "email": "camila.reyes.phx@gmail.com",
+   "name": "Camila Reyes",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "78a219502d7db416897c3533",
+   "email": "ruben.fuentes.phx@gmail.com",
+   "name": "Ruben Fuentes",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "b47a8310299b23e0cb28b2c2",
+   "email": "ana.paredes.phx@gmail.com",
+   "name": "Ana Paredes",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fd131ae76a5154a64a5a1a25",
+   "email": "pablo.ibarra.phx@gmail.com",
+   "name": "Pablo Ibarra",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "b613ba92cd6663e4062991e5",
+   "email": "nina.flores.phx@gmail.com",
+   "name": "Nina Flores",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "c2a9b81515b3d5eaa0c99874",
+   "email": "jorge.salinas.phx@gmail.com",
+   "name": "Jorge Salinas",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "5d0fe424085926694b3b701b",
+   "email": "rita.santos.phx@gmail.com",
+   "name": "Rita Santos",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "5e292f4e33f7e0b2fd62898d",
+   "email": "oscar.medina.phx@gmail.com",
+   "name": "Oscar Medina",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "67fd37bc5d97ed1922037499",
+   "email": "clara.espinoza.phx@gmail.com",
+   "name": "Clara Espinoza",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "46992a2bc3a492f84f69099c",
+   "email": "ivan.robles.phx@gmail.com",
+   "name": "Ivan Robles",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "cdd46a9974ab2ffd844bf8c1",
+   "email": "paula.cardenas.phx@gmail.com",
+   "name": "Paula Cardenas",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "143a4aa15ebd70dc60b61171",
+   "email": "sergio.molina.phx@gmail.com",
+   "name": "Sergio Molina",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "69b2e577bf0119b67602d00d",
+   "email": "bianca.torres.phx@gmail.com",
+   "name": "Bianca Torres",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "4f7b18861632cf480d041dac",
+   "email": "ramon.chavez.phx@gmail.com",
+   "name": "Ramon Chavez",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "90c00964a6f13e6a56750939",
+   "email": "lila.romero.phx@gmail.com",
+   "name": "Lila Romero",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "b1ebd2da3b7720517d15c090",
+   "email": "felix.duarte.phx@gmail.com",
+   "name": "Felix Duarte",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "1d180f093def3d01639a83e3",
+   "email": "nora.calderon.phx@gmail.com",
+   "name": "Nora Calderon",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "35570a856c8bd470e1623b8c",
+   "email": "hugo.pena.phx@gmail.com",
+   "name": "Hugo Pena",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "cbb06439024ff12facbd0c00",
+   "email": "silvia.rios.phx@gmail.com",
+   "name": "Silvia Rios",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "bfe10f87ca002ce1bf6a0dd6",
+   "email": "adam.benitez.phx@gmail.com",
+   "name": "Adam Benitez",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "bbe75152735deae4d0a5fe2c",
+   "email": "vera.contreras.phx@gmail.com",
+   "name": "Vera Contreras",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "9e1ad2bc94e48a7c932fb84e",
+   "email": "leo.sandoval.phx@gmail.com",
+   "name": "Leo Sandoval",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "bab1275371804d1cfbe0a7b8",
+   "email": "iris.beltran.phx@gmail.com",
+   "name": "Iris Beltran",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "e7f286ff91d4e2c299ab3d56",
+   "email": "cesar.quintero.phx@gmail.com",
+   "name": "Cesar Quintero",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "f9cc6ecbc615b0870d877cc4",
+   "email": "gloria.ruiz.maryvale@gmail.com",
+   "name": "Gloria Ruiz",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "1e0ede89540b9ea40c29a699",
+    "0ad6eb4391c4c8293550f4fc",
+    "b375aaa582855e4eb9f3f2f2",
+    "2ce1b4f64e15d93f1f5832d3",
+    "df8f005e395657532c09ff8d",
+    "aeae068397072981c227c38d",
+    "320291e34fe9ea09b98fb95a",
+    "e6b07dc5fa75e400a89c5e0b",
+    "cf36b68ca1fde07de981a8a8",
+    "4c45fe1f0ca64604e27a015d",
+    "86ba4b961b91ac327876da0f",
+    "b2d3194d21aa6394093354cf",
+    "12b1d77836e1a7224351fadf",
+    "45031e6bf3773c9268dbcc8b",
+    "821c39ba681fa11aa3f76209",
+    "986ccd3902f09d0c9849da54",
+    "b2a4ea1670c688e4a78ce593",
+    "339a6d6e94fe3456057a318a",
+    "630e371f2d3d4d639b97c7f2",
+    "9092e778bda8b46acf0a5cc8",
+    "6e11065f144743924b03c110",
+    "1822518ba5c0e333aa79da5e",
+    "b79c7de7de7361229831b0aa"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "1e0ede89540b9ea40c29a699",
+   "email": "elena.morales.phx@gmail.com",
+   "name": "Elena Morales",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "f9cc6ecbc615b0870d877cc4",
+    "aeae068397072981c227c38d",
+    "4c45fe1f0ca64604e27a015d",
+    "b2d3194d21aa6394093354cf",
+    "45031e6bf3773c9268dbcc8b",
+    "986ccd3902f09d0c9849da54",
+    "1822518ba5c0e333aa79da5e"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "9e34437639e20c9f3287d0d0",
+   "email": "priya.nandakumar@gmail.com",
+   "name": "Priya Nandakumar",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "0ad6eb4391c4c8293550f4fc",
+   "email": "dana.castillo.phx@gmail.com",
+   "name": "Dana Castillo",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "db56793f9da13c08c4b3cf91",
+    "b2d3194d21aa6394093354cf",
+    "f3e63364189c5970e7859cdb",
+    "bc544661edcda2d483e358c2",
+    "173b9bca817eb3d244af3ec8",
+    "34da4761356025a3ea67dea4",
+    "4c45fe1f0ca64604e27a015d",
+    "43031fa01dcff6c2cf8a6fa7",
+    "7297ec109eead1c0b3c7a630",
+    "3057e11263621177a8ae02b8",
+    "986ccd3902f09d0c9849da54",
+    "b375aaa582855e4eb9f3f2f2",
+    "3f540078538c703309cbf3b2",
+    "7c17e8241f5dee97a13fb43b",
+    "42e017226dc0cf3cc71f18c4",
+    "e9417b3c2c695f383977af6e",
+    "320291e34fe9ea09b98fb95a",
+    "fb879c73fbd954062c238f58",
+    "f9cc6ecbc615b0870d877cc4",
+    "80e56f12b91156d768241fd3",
+    "900c9c8935b3a8cc581fcb96",
+    "61e954956c348ed95ec0ce82",
+    "ad800d1c4ebef41e2ca866d2",
+    "59a789c93c4da00c0bb996c0",
+    "1807038ac1fcfc1728accc64",
+    "b53ebc864a45137246d6c258",
+    "c3c02b969f17558ab08f9862",
+    "da7be0657faaf8f032c14deb"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "b53ebc864a45137246d6c258",
+   "email": "teresa.castillo58@yahoo.com",
+   "name": "Teresa Castillo",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "db56793f9da13c08c4b3cf91",
+    "f3e63364189c5970e7859cdb",
+    "ba52acc0c2a2fdcdb05a60d7",
+    "80e56f12b91156d768241fd3",
+    "900c9c8935b3a8cc581fcb96",
+    "61e954956c348ed95ec0ce82",
+    "59a789c93c4da00c0bb996c0",
+    "1807038ac1fcfc1728accc64"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85301",
+    "latitude": 33.5309,
+    "longitude": -112.1781
+   }
+  },
+  {
+   "id": "59a789c93c4da00c0bb996c0",
+   "email": "rogeliocastillo57@yahoo.com",
+   "name": "Rogelio Castillo",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b53ebc864a45137246d6c258",
+    "f3e63364189c5970e7859cdb",
+    "fb879c73fbd954062c238f58",
+    "80e56f12b91156d768241fd3",
+    "61e954956c348ed95ec0ce82"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85301",
+    "latitude": 33.5309,
+    "longitude": -112.1781
+   }
+  },
+  {
+   "id": "80e56f12b91156d768241fd3",
+   "email": "javi.castillo.tuc@gmail.com",
+   "name": "Javier Castillo",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b53ebc864a45137246d6c258",
+    "59a789c93c4da00c0bb996c0",
+    "db56793f9da13c08c4b3cf91",
+    "69cd08e04514edbc2107a353",
+    "f3e63364189c5970e7859cdb",
+    "3a7ad66348a6b03eaa9d21da",
+    "fb879c73fbd954062c238f58",
+    "61e954956c348ed95ec0ce82",
+    "1807038ac1fcfc1728accc64"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Midtown",
+    "city": "Tucson",
+    "state": "AZ",
+    "postal_code": "85716",
+    "latitude": 32.2466,
+    "longitude": -110.923
+   }
+  },
+  {
+   "id": "61e954956c348ed95ec0ce82",
+   "email": "marisa.castillo.tuc@gmail.com",
+   "name": "Marisa Castillo",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b53ebc864a45137246d6c258",
+    "59a789c93c4da00c0bb996c0",
+    "80e56f12b91156d768241fd3",
+    "db56793f9da13c08c4b3cf91",
+    "f3e63364189c5970e7859cdb"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Midtown",
+    "city": "Tucson",
+    "state": "AZ",
+    "postal_code": "85716",
+    "latitude": 32.2466,
+    "longitude": -110.923
+   }
+  },
+  {
+   "id": "db56793f9da13c08c4b3cf91",
+   "email": "carla.gutierrez.az@gmail.com",
+   "name": "Carla Gutierrez",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b53ebc864a45137246d6c258",
+    "80e56f12b91156d768241fd3",
+    "61e954956c348ed95ec0ce82",
+    "42e017226dc0cf3cc71f18c4",
+    "900c9c8935b3a8cc581fcb96",
+    "1807038ac1fcfc1728accc64"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Chandler",
+    "city": "Chandler",
+    "state": "AZ",
+    "postal_code": "85225",
+    "latitude": 33.32,
+    "longitude": -111.845
+   }
+  },
+  {
+   "id": "1807038ac1fcfc1728accc64",
+   "email": "rgutierrez480@gmail.com",
+   "name": "Rudy Gutierrez",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b53ebc864a45137246d6c258",
+    "80e56f12b91156d768241fd3",
+    "db56793f9da13c08c4b3cf91",
+    "fb879c73fbd954062c238f58",
+    "900c9c8935b3a8cc581fcb96"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Chandler",
+    "city": "Chandler",
+    "state": "AZ",
+    "postal_code": "85225",
+    "latitude": 33.32,
+    "longitude": -111.845
+   }
+  },
+  {
+   "id": "900c9c8935b3a8cc581fcb96",
+   "email": "linda.ochoa.mesa@gmail.com",
+   "name": "Linda Ochoa",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b53ebc864a45137246d6c258",
+    "db56793f9da13c08c4b3cf91",
+    "1807038ac1fcfc1728accc64"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Mesa",
+    "city": "Mesa",
+    "state": "AZ",
+    "postal_code": "85201",
+    "latitude": 33.435,
+    "longitude": -111.847
+   }
+  },
+  {
+   "id": "fb879c73fbd954062c238f58",
+   "email": "gil.soto.phx@gmail.com",
+   "name": "Gilbert Soto",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "59a789c93c4da00c0bb996c0",
+    "80e56f12b91156d768241fd3",
+    "1807038ac1fcfc1728accc64",
+    "69cd08e04514edbc2107a353",
+    "3057e11263621177a8ae02b8",
+    "132184be70eaec166405905d",
+    "d4b2d494b9630306c6ae0569",
+    "3a7ad66348a6b03eaa9d21da",
+    "d4fa5b89cc198cf6ea7da627",
+    "c3c02b969f17558ab08f9862"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   }
+  },
+  {
+   "id": "69cd08e04514edbc2107a353",
+   "email": "ernie.saldana@gmail.com",
+   "name": "Ernie Saldaña",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "80e56f12b91156d768241fd3",
+    "fb879c73fbd954062c238f58",
+    "3a7ad66348a6b03eaa9d21da"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "West Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85009",
+    "latitude": 33.456,
+    "longitude": -112.128
+   }
+  },
+  {
+   "id": "c3c02b969f17558ab08f9862",
+   "email": "truelas.hvac@gmail.com",
+   "name": "Tony Ruelas",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "fb879c73fbd954062c238f58",
+    "a6d18876323294edc98e7bcd",
+    "8082e5df01b5ee4bccc03e74",
+    "ec7d4944e3742432614ba17a",
+    "0c459bdc34fe14c874892def",
+    "d4fa5b89cc198cf6ea7da627"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85035",
+    "latitude": 33.4723,
+    "longitude": -112.1887
+   }
+  },
+  {
+   "id": "da7be0657faaf8f032c14deb",
+   "email": "yesi.lopez.strikers@gmail.com",
+   "name": "Yesenia Lopez",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "173b9bca817eb3d244af3ec8",
+    "34da4761356025a3ea67dea4",
+    "3f540078538c703309cbf3b2",
+    "ad800d1c4ebef41e2ca866d2"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "ad800d1c4ebef41e2ca866d2",
+   "email": "mike.alvarado.az@gmail.com",
+   "name": "Mike Alvarado",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "da7be0657faaf8f032c14deb",
+    "2e5e50792bbe5111d1e67280",
+    "d4fa5b89cc198cf6ea7da627"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   }
+  },
+  {
+   "id": "0c459bdc34fe14c874892def",
+   "email": "manny.cervantes82@gmail.com",
+   "name": "Manny Cervantes",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "c3c02b969f17558ab08f9862",
+    "a6d18876323294edc98e7bcd",
+    "8082e5df01b5ee4bccc03e74",
+    "ec7d4944e3742432614ba17a"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Tolleson",
+    "city": "Tolleson",
+    "state": "AZ",
+    "postal_code": "85353",
+    "latitude": 33.437,
+    "longitude": -112.259
+   }
+  },
+  {
+   "id": "8082e5df01b5ee4bccc03e74",
+   "email": "jpruitt.hvac@gmail.com",
+   "name": "Josh Pruitt",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "c3c02b969f17558ab08f9862",
+    "0c459bdc34fe14c874892def",
+    "a6d18876323294edc98e7bcd",
+    "ec7d4944e3742432614ba17a"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85302",
+    "latitude": 33.5675,
+    "longitude": -112.2052
+   }
+  },
+  {
+   "id": "a6d18876323294edc98e7bcd",
+   "email": "desiree.holguin@yahoo.com",
+   "name": "Desiree Holguin",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "c3c02b969f17558ab08f9862",
+    "0c459bdc34fe14c874892def",
+    "8082e5df01b5ee4bccc03e74",
+    "ec7d4944e3742432614ba17a"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "West Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85009",
+    "latitude": 33.456,
+    "longitude": -112.128
+   }
+  },
+  {
+   "id": "ec7d4944e3742432614ba17a",
+   "email": "kenny.vo.az@gmail.com",
+   "name": "Kenny Vo",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "c3c02b969f17558ab08f9862",
+    "0c459bdc34fe14c874892def",
+    "8082e5df01b5ee4bccc03e74",
+    "a6d18876323294edc98e7bcd"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Peoria",
+    "city": "Peoria",
+    "state": "AZ",
+    "postal_code": "85345",
+    "latitude": 33.5767,
+    "longitude": -112.2348
+   }
+  },
+  {
+   "id": "f3e63364189c5970e7859cdb",
+   "email": "angie.castillo.az@gmail.com",
+   "name": "Angie Castillo",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b53ebc864a45137246d6c258",
+    "59a789c93c4da00c0bb996c0",
+    "80e56f12b91156d768241fd3",
+    "61e954956c348ed95ec0ce82"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85301",
+    "latitude": 33.5309,
+    "longitude": -112.1781
+   }
+  },
+  {
+   "id": "3a7ad66348a6b03eaa9d21da",
+   "email": "salbustamante85@yahoo.com",
+   "name": "Sal Bustamante",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "80e56f12b91156d768241fd3",
+    "fb879c73fbd954062c238f58",
+    "69cd08e04514edbc2107a353",
+    "3057e11263621177a8ae02b8"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Avondale",
+    "city": "Avondale",
+    "state": "AZ",
+    "postal_code": "85323",
+    "latitude": 33.4194,
+    "longitude": -112.3283
+   }
+  },
+  {
+   "id": "3057e11263621177a8ae02b8",
+   "email": "lisa.corral@outlook.com",
+   "name": "Lisa Corral",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "fb879c73fbd954062c238f58",
+    "3a7ad66348a6b03eaa9d21da"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Peoria",
+    "city": "Peoria",
+    "state": "AZ",
+    "postal_code": "85345",
+    "latitude": 33.5767,
+    "longitude": -112.2348
+   }
+  },
+  {
+   "id": "43031fa01dcff6c2cf8a6fa7",
+   "email": "krystal.huerta@gmail.com",
+   "name": "Krystal Huerta",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "42e017226dc0cf3cc71f18c4"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85303",
+    "latitude": 33.5251,
+    "longitude": -112.2155
+   }
+  },
+  {
+   "id": "42e017226dc0cf3cc71f18c4",
+   "email": "nadia.esparza@icloud.com",
+   "name": "Nadia Esparza",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "db56793f9da13c08c4b3cf91",
+    "43031fa01dcff6c2cf8a6fa7"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Estrella",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85043",
+    "latitude": 33.432,
+    "longitude": -112.198
+   }
+  },
+  {
+   "id": "ba52acc0c2a2fdcdb05a60d7",
+   "email": "chela.ramos@yahoo.com",
+   "name": "Chela Ramos",
+   "visibility": "public",
+   "friend_ids": [
+    "b53ebc864a45137246d6c258"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85301",
+    "latitude": 33.5309,
+    "longitude": -112.1781
+   }
+  },
+  {
+   "id": "b375aaa582855e4eb9f3f2f2",
+   "email": "lupe.arvizu61@yahoo.com",
+   "name": "Lupe Arvizu",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b2d3194d21aa6394093354cf",
+    "2ce1b4f64e15d93f1f5832d3",
+    "aeae068397072981c227c38d",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "2ce1b4f64e15d93f1f5832d3",
+   "email": "art.villanueva@yahoo.com",
+   "name": "Art Villanueva",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "b375aaa582855e4eb9f3f2f2",
+    "9092e778bda8b46acf0a5cc8",
+    "12b1d77836e1a7224351fadf",
+    "e6b07dc5fa75e400a89c5e0b",
+    "821c39ba681fa11aa3f76209",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "df8f005e395657532c09ff8d",
+   "email": "denisew.phx@gmail.com",
+   "name": "Denise Washington",
+   "visibility": "friends",
+   "friend_ids": [
+    "d98ba866199a87b4badee372",
+    "4cf92c173b27e73ee2861a29",
+    "e9417b3c2c695f383977af6e",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "bc544661edcda2d483e358c2",
+   "email": "brenda.zamora90@gmail.com",
+   "name": "Brenda Zamora",
+   "visibility": "friends",
+   "friend_ids": [
+    "0ad6eb4391c4c8293550f4fc",
+    "173b9bca817eb3d244af3ec8",
+    "34da4761356025a3ea67dea4",
+    "7297ec109eead1c0b3c7a630",
+    "7c17e8241f5dee97a13fb43b"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "9c6dcfeb7ac9b48e4c884794",
+   "email": "jbarajas602@gmail.com",
+   "name": "Jaime Barajas",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "5fddf760e2e721f680d21c4f",
+    "b6d72adec1c3ef1239a55f8c",
+    "132184be70eaec166405905d",
+    "d4b2d494b9630306c6ae0569"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "aeae068397072981c227c38d",
+   "email": "connie.lucero@aol.com",
+   "name": "Connie Lucero",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "b375aaa582855e4eb9f3f2f2",
+    "1e0ede89540b9ea40c29a699",
+    "b2a4ea1670c688e4a78ce593",
+    "630e371f2d3d4d639b97c7f2",
+    "4c45fe1f0ca64604e27a015d",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "1e167b76864187827364a9f5",
+   "email": "ricky.esquivel23@gmail.com",
+   "name": "Ricky Esquivel",
+   "visibility": "public",
+   "friend_ids": [
+    "e72ff072082c9db04a8a5f14",
+    "ae14ee78cecb2a143967116c",
+    "7297ec109eead1c0b3c7a630"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "320291e34fe9ea09b98fb95a",
+   "email": "yoli.cisneros@hotmail.com",
+   "name": "Yolanda Cisneros",
+   "visibility": "friends",
+   "friend_ids": [
+    "0ad6eb4391c4c8293550f4fc",
+    "173b9bca817eb3d244af3ec8",
+    "3f540078538c703309cbf3b2",
+    "7c17e8241f5dee97a13fb43b",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "e6b07dc5fa75e400a89c5e0b",
+   "email": "hpatterson.az@gmail.com",
+   "name": "Hank Patterson",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "2ce1b4f64e15d93f1f5832d3",
+    "1822518ba5c0e333aa79da5e",
+    "86ba4b961b91ac327876da0f",
+    "821c39ba681fa11aa3f76209",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "42e5e87e038d2be5b38ebf34",
+   "email": "baotran.az@gmail.com",
+   "name": "Bao Tran",
+   "visibility": "friends",
+   "friend_ids": [
+    "b0a18869f2c83b322efab518",
+    "b79c7de7de7361229831b0aa",
+    "42c1686b5dc24d84ced4d9c5"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "cf36b68ca1fde07de981a8a8",
+   "email": "sandramontoya44@yahoo.com",
+   "name": "Sandra Montoya",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "b6d72adec1c3ef1239a55f8c",
+    "6e11065f144743924b03c110",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "51da2b80db9710ee0864b4a8",
+   "email": "victor.gallegos@outlook.com",
+   "name": "Victor Gallegos",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "5fddf760e2e721f680d21c4f",
+    "f24e4654df1bc759a3a2981d",
+    "eec8f92f223c106eb167365d"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "4c45fe1f0ca64604e27a015d",
+   "email": "irma.valenzuela@yahoo.com",
+   "name": "Irma Valenzuela",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "aeae068397072981c227c38d",
+    "1e0ede89540b9ea40c29a699",
+    "b2a4ea1670c688e4a78ce593",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "f24e4654df1bc759a3a2981d",
+   "email": "kbegay.phx@gmail.com",
+   "name": "Kevin Begay",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "51da2b80db9710ee0864b4a8",
+    "eec8f92f223c106eb167365d",
+    "b3a0c2324353a01d7cb4ba67",
+    "d4fa5b89cc198cf6ea7da627"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "d4fa5b89cc198cf6ea7da627",
+   "email": "teo.carrillo@gmail.com",
+   "name": "Teo Carrillo",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "fb879c73fbd954062c238f58",
+    "c3c02b969f17558ab08f9862",
+    "ad800d1c4ebef41e2ca866d2",
+    "f24e4654df1bc759a3a2981d",
+    "d4b2d494b9630306c6ae0569"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "86ba4b961b91ac327876da0f",
+   "email": "nkowalski@cox.net",
+   "name": "Nancy Kowalski",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "e6b07dc5fa75e400a89c5e0b",
+    "1822518ba5c0e333aa79da5e",
+    "42c1686b5dc24d84ced4d9c5",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "b2d3194d21aa6394093354cf",
+   "email": "alma.dominguez@gmail.com",
+   "name": "Alma Dominguez",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b375aaa582855e4eb9f3f2f2",
+    "1e0ede89540b9ea40c29a699",
+    "339a6d6e94fe3456057a318a",
+    "986ccd3902f09d0c9849da54",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "12b1d77836e1a7224351fadf",
+   "email": "felipe.rangel@yahoo.com",
+   "name": "Felipe Rangel",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "2ce1b4f64e15d93f1f5832d3",
+    "9092e778bda8b46acf0a5cc8",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85035",
+    "latitude": 33.4723,
+    "longitude": -112.1887
+   }
+  },
+  {
+   "id": "3f540078538c703309cbf3b2",
+   "email": "maribel.pacheco@gmail.com",
+   "name": "Maribel Pacheco",
+   "visibility": "friends",
+   "friend_ids": [
+    "0ad6eb4391c4c8293550f4fc",
+    "da7be0657faaf8f032c14deb",
+    "320291e34fe9ea09b98fb95a"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "4cf92c173b27e73ee2861a29",
+   "email": "darnell.jefferson@gmail.com",
+   "name": "Darnell Jefferson",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "df8f005e395657532c09ff8d",
+    "e72ff072082c9db04a8a5f14",
+    "42c1686b5dc24d84ced4d9c5"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "45031e6bf3773c9268dbcc8b",
+   "email": "rosaherrera63@yahoo.com",
+   "name": "Rosa Herrera",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "1e0ede89540b9ea40c29a699",
+    "630e371f2d3d4d639b97c7f2",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "b8b4398b62ca35327ece12c1",
+   "email": "jerry.maldonado@gmail.com",
+   "name": "Jerry Maldonado",
+   "visibility": "friends",
+   "friend_ids": [
+    "ae14ee78cecb2a143967116c",
+    "132184be70eaec166405905d"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "173b9bca817eb3d244af3ec8",
+   "email": "cindy.trujillo@icloud.com",
+   "name": "Cindy Trujillo",
+   "visibility": "friends",
+   "friend_ids": [
+    "0ad6eb4391c4c8293550f4fc",
+    "da7be0657faaf8f032c14deb",
+    "bc544661edcda2d483e358c2",
+    "320291e34fe9ea09b98fb95a",
+    "34da4761356025a3ea67dea4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "132184be70eaec166405905d",
+   "email": "paco.marquez58@gmail.com",
+   "name": "Paco Marquez",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "fb879c73fbd954062c238f58",
+    "9c6dcfeb7ac9b48e4c884794",
+    "b8b4398b62ca35327ece12c1"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85035",
+    "latitude": 33.4723,
+    "longitude": -112.1887
+   }
+  },
+  {
+   "id": "7297ec109eead1c0b3c7a630",
+   "email": "leti.galvan@gmail.com",
+   "name": "Leticia Galvan",
+   "visibility": "friends",
+   "friend_ids": [
+    "0ad6eb4391c4c8293550f4fc",
+    "bc544661edcda2d483e358c2",
+    "1e167b76864187827364a9f5"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   }
+  },
+  {
+   "id": "b0a18869f2c83b322efab518",
+   "email": "hodan.abdi@gmail.com",
+   "name": "Hodan Abdi",
+   "visibility": "friends",
+   "friend_ids": [
+    "42e5e87e038d2be5b38ebf34",
+    "b79c7de7de7361229831b0aa",
+    "42c1686b5dc24d84ced4d9c5"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "821c39ba681fa11aa3f76209",
+   "email": "twhitaker@cox.net",
+   "name": "Tom Whitaker",
+   "visibility": "public",
+   "friend_ids": [
+    "2ce1b4f64e15d93f1f5832d3",
+    "e6b07dc5fa75e400a89c5e0b",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "e9417b3c2c695f383977af6e",
+   "email": "vero.lara@gmail.com",
+   "name": "Veronica Lara",
+   "visibility": "friends",
+   "friend_ids": [
+    "0ad6eb4391c4c8293550f4fc",
+    "df8f005e395657532c09ff8d"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "d4b2d494b9630306c6ae0569",
+   "email": "rafa.tapia@gmail.com",
+   "name": "Rafael Tapia",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "fb879c73fbd954062c238f58",
+    "9c6dcfeb7ac9b48e4c884794",
+    "d4fa5b89cc198cf6ea7da627"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   }
+  },
+  {
+   "id": "34da4761356025a3ea67dea4",
+   "email": "delia.urias@yahoo.com",
+   "name": "Delia Urias",
+   "visibility": "friends",
+   "friend_ids": [
+    "0ad6eb4391c4c8293550f4fc",
+    "da7be0657faaf8f032c14deb",
+    "bc544661edcda2d483e358c2",
+    "173b9bca817eb3d244af3ec8"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "b6d72adec1c3ef1239a55f8c",
+   "email": "joepadilla.az@gmail.com",
+   "name": "Joe Padilla",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "9c6dcfeb7ac9b48e4c884794",
+    "cf36b68ca1fde07de981a8a8"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "986ccd3902f09d0c9849da54",
+   "email": "lourdes.saenz@gmail.com",
+   "name": "Lourdes Saenz",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "0ad6eb4391c4c8293550f4fc",
+    "b2d3194d21aa6394093354cf",
+    "1e0ede89540b9ea40c29a699",
+    "339a6d6e94fe3456057a318a",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "e72ff072082c9db04a8a5f14",
+   "email": "brandonmiller.az@gmail.com",
+   "name": "Brandon Miller",
+   "visibility": "public",
+   "friend_ids": [
+    "1e167b76864187827364a9f5",
+    "4cf92c173b27e73ee2861a29",
+    "ae14ee78cecb2a143967116c"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "b2a4ea1670c688e4a78ce593",
+   "email": "amparo.figueroa@yahoo.com",
+   "name": "Amparo Figueroa",
+   "visibility": "friends",
+   "friend_ids": [
+    "aeae068397072981c227c38d",
+    "4c45fe1f0ca64604e27a015d",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "eec8f92f223c106eb167365d",
+   "email": "nestor.aguilar@gmail.com",
+   "name": "Nestor Aguilar",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "51da2b80db9710ee0864b4a8",
+    "f24e4654df1bc759a3a2981d"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "339a6d6e94fe3456057a318a",
+   "email": "araceli.zavala@gmail.com",
+   "name": "Araceli Zavala",
+   "visibility": "friends",
+   "friend_ids": [
+    "b2d3194d21aa6394093354cf",
+    "986ccd3902f09d0c9849da54",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85035",
+    "latitude": 33.4723,
+    "longitude": -112.1887
+   }
+  },
+  {
+   "id": "d98ba866199a87b4badee372",
+   "email": "abel.camacho@outlook.com",
+   "name": "Abel Camacho",
+   "visibility": "friends",
+   "friend_ids": [
+    "df8f005e395657532c09ff8d"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "b3a0c2324353a01d7cb4ba67",
+   "email": "syazzie.phx@gmail.com",
+   "name": "Shirley Yazzie",
+   "visibility": "friends",
+   "friend_ids": [
+    "f24e4654df1bc759a3a2981d",
+    "630e371f2d3d4d639b97c7f2"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   }
+  },
+  {
+   "id": "630e371f2d3d4d639b97c7f2",
+   "email": "hilda.rosales@yahoo.com",
+   "name": "Hilda Rosales",
+   "visibility": "friends",
+   "friend_ids": [
+    "aeae068397072981c227c38d",
+    "45031e6bf3773c9268dbcc8b",
+    "b3a0c2324353a01d7cb4ba67",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "2e5e50792bbe5111d1e67280",
+   "email": "beto.estrada@gmail.com",
+   "name": "Beto Estrada",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "ad800d1c4ebef41e2ca866d2",
+    "5fddf760e2e721f680d21c4f"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85035",
+    "latitude": 33.4723,
+    "longitude": -112.1887
+   }
+  },
+  {
+   "id": "7c17e8241f5dee97a13fb43b",
+   "email": "monica.villegas@gmail.com",
+   "name": "Monica Villegas",
+   "visibility": "friends",
+   "friend_ids": [
+    "0ad6eb4391c4c8293550f4fc",
+    "bc544661edcda2d483e358c2",
+    "320291e34fe9ea09b98fb95a"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "9092e778bda8b46acf0a5cc8",
+   "email": "efrain.cordova@yahoo.com",
+   "name": "Efrain Cordova",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "2ce1b4f64e15d93f1f5832d3",
+    "12b1d77836e1a7224351fadf",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "42c1686b5dc24d84ced4d9c5",
+   "email": "tanya.okafor@gmail.com",
+   "name": "Tanya Okafor",
+   "visibility": "friends",
+   "friend_ids": [
+    "42e5e87e038d2be5b38ebf34",
+    "86ba4b961b91ac327876da0f",
+    "4cf92c173b27e73ee2861a29",
+    "b0a18869f2c83b322efab518"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "ae14ee78cecb2a143967116c",
+   "email": "gabe.leyva@gmail.com",
+   "name": "Gabe Leyva",
+   "visibility": "friends",
+   "friend_ids": [
+    "1e167b76864187827364a9f5",
+    "b8b4398b62ca35327ece12c1",
+    "e72ff072082c9db04a8a5f14"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85037",
+    "latitude": 33.4908,
+    "longitude": -112.2461
+   }
+  },
+  {
+   "id": "6e11065f144743924b03c110",
+   "email": "yvonne.macias@gmail.com",
+   "name": "Yvonne Macias",
+   "visibility": "friends",
+   "friend_ids": [
+    "cf36b68ca1fde07de981a8a8",
+    "1822518ba5c0e333aa79da5e",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "5fddf760e2e721f680d21c4f",
+   "email": "chuy.olivas@gmail.com",
+   "name": "Chuy Olivas",
+   "visibility": "friends",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "9c6dcfeb7ac9b48e4c884794",
+    "51da2b80db9710ee0864b4a8",
+    "2e5e50792bbe5111d1e67280"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   }
+  },
+  {
+   "id": "1822518ba5c0e333aa79da5e",
+   "email": "becky.guerrero@yahoo.com",
+   "name": "Becky Guerrero",
+   "visibility": "public",
+   "friend_ids": [
+    "e7428f417fba5b50ebaf4c7d",
+    "e6b07dc5fa75e400a89c5e0b",
+    "86ba4b961b91ac327876da0f",
+    "6e11065f144743924b03c110",
+    "1e0ede89540b9ea40c29a699",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "b79c7de7de7361229831b0aa",
+   "email": "lin.pham@gmail.com",
+   "name": "Lin Pham",
+   "visibility": "friends",
+   "friend_ids": [
+    "42e5e87e038d2be5b38ebf34",
+    "b0a18869f2c83b322efab518",
+    "f9cc6ecbc615b0870d877cc4"
+   ],
+   "group_ids": [
+    "cbb93fd7ae705c1bbf758574"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [],
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85031",
+    "latitude": 33.4948,
+    "longitude": -112.1694
+   }
+  },
+  {
+   "id": "64c309eb4b1cc926155ac427",
+   "email": "renee.pauley.az@gmail.com",
+   "name": "Renee Pauley",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "ae4b60d557aa860ba9aac478",
+   "email": "omar.haddad.phx@gmail.com",
+   "name": "Omar Haddad",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "65cba1c786ec24beb372b677",
+   "email": "chris.delgado.az@gmail.com",
+   "name": "Chris Delgado",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  }
+ ],
+ "pages": [],
+ "groups": [
+  {
+   "id": "cbb93fd7ae705c1bbf758574",
+   "name": "Maryvale Neighbors",
+   "visibility": "private",
+   "member_ids": [
+    "0ad6eb4391c4c8293550f4fc",
+    "12b1d77836e1a7224351fadf",
+    "132184be70eaec166405905d",
+    "173b9bca817eb3d244af3ec8",
+    "1822518ba5c0e333aa79da5e",
+    "1e0ede89540b9ea40c29a699",
+    "1e167b76864187827364a9f5",
+    "2ce1b4f64e15d93f1f5832d3",
+    "2e5e50792bbe5111d1e67280",
+    "320291e34fe9ea09b98fb95a",
+    "339a6d6e94fe3456057a318a",
+    "34da4761356025a3ea67dea4",
+    "3f540078538c703309cbf3b2",
+    "42c1686b5dc24d84ced4d9c5",
+    "42e5e87e038d2be5b38ebf34",
+    "45031e6bf3773c9268dbcc8b",
+    "4c45fe1f0ca64604e27a015d",
+    "4cf92c173b27e73ee2861a29",
+    "51da2b80db9710ee0864b4a8",
+    "5fddf760e2e721f680d21c4f",
+    "630e371f2d3d4d639b97c7f2",
+    "6e11065f144743924b03c110",
+    "7297ec109eead1c0b3c7a630",
+    "7c17e8241f5dee97a13fb43b",
+    "821c39ba681fa11aa3f76209",
+    "86ba4b961b91ac327876da0f",
+    "9092e778bda8b46acf0a5cc8",
+    "986ccd3902f09d0c9849da54",
+    "9c6dcfeb7ac9b48e4c884794",
+    "ad800d1c4ebef41e2ca866d2",
+    "ae14ee78cecb2a143967116c",
+    "aeae068397072981c227c38d",
+    "b0a18869f2c83b322efab518",
+    "b2a4ea1670c688e4a78ce593",
+    "b2d3194d21aa6394093354cf",
+    "b375aaa582855e4eb9f3f2f2",
+    "b3a0c2324353a01d7cb4ba67",
+    "b6d72adec1c3ef1239a55f8c",
+    "b79c7de7de7361229831b0aa",
+    "b8b4398b62ca35327ece12c1",
+    "bc544661edcda2d483e358c2",
+    "c3c02b969f17558ab08f9862",
+    "cf36b68ca1fde07de981a8a8",
+    "d4b2d494b9630306c6ae0569",
+    "d4fa5b89cc198cf6ea7da627",
+    "d98ba866199a87b4badee372",
+    "da7be0657faaf8f032c14deb",
+    "df8f005e395657532c09ff8d",
+    "e6b07dc5fa75e400a89c5e0b",
+    "e72ff072082c9db04a8a5f14",
+    "e7428f417fba5b50ebaf4c7d",
+    "e9417b3c2c695f383977af6e",
+    "eec8f92f223c106eb167365d",
+    "f24e4654df1bc759a3a2981d",
+    "f9cc6ecbc615b0870d877cc4",
+    "fb879c73fbd954062c238f58"
+   ]
+  }
+ ],
+ "posts": [
+  {
+   "id": "e53f40d8884552f0474d213e",
+   "author_id": "b375aaa582855e4eb9f3f2f2",
+   "message": "Does anyone have a handyman they trust for a block wall gate? Ours drags on the ground now and the post is starting to lean. Not looking for a big company, just somebody honest.",
+   "created_at": "2026-05-02T08:47:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "f8eb78a3cf7be4cd13979c89",
+   "author_id": "f9cc6ecbc615b0870d877cc4",
+   "message": "Lupe, Hector Salas fixed the latch on my side gate last spring and he was honest about what it needed. I'll message you his number.",
+   "created_at": "2026-05-02T10:16:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "a06fa0d3f573419f3e292574",
+   "author_id": "59a789c93c4da00c0bb996c0",
+   "message": "SWAP MEET WITH MY SON THIS MORNING. GOT A LAMP FOR 8 THEY WANTED 20. TERESA SAYS WE HAVE FOUR LAMPS. NOW WE HAVE FIVE 😂",
+   "created_at": "2026-05-02T10:48:00-07:00",
+   "visibility": "public",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "a4a4fa6eeca109caa3c47973",
+   "author_id": "2ce1b4f64e15d93f1f5832d3",
+   "message": "Another vote for Hector Salas. He reset our gate post in concrete two years ago and it hasn't moved since. Shows up when he says he will, which is half the battle.",
+   "created_at": "2026-05-02T13:05:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "50efd5e2bce0dcebc8e32bb5",
+   "author_id": "b375aaa582855e4eb9f3f2f2",
+   "message": "Update for anyone with a sagging gate: Hector came out Monday and had ours fixed by lunch. Thank you Gloria and Art.",
+   "created_at": "2026-05-05T19:22:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "a6b0caa722fe2412e5b8934c",
+   "author_id": "b53ebc864a45137246d6c258",
+   "message": "Feliz Día de las Madres to all the mamás!! My Ray called me before 8, before he goes to Costco, ay that boy and his Costco. Everybody is coming for lunch hear at the house today and I made too much like always. Dios los bendiga to all my family, and to my mamá in heaven te extraño mucho.",
+   "created_at": "2026-05-10T08:20:00-07:00",
+   "visibility": "public",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "be1ad8d62855e72d6b0e95a0",
+   "author_id": "e7428f417fba5b50ebaf4c7d",
+   "message": "Happy Mother's Day to my mom, who sent everybody home with too much food again, and to Dana, who keeps this whole house running. We love you both.",
+   "created_at": "2026-05-10T16:05:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "1167cb1bac45c286d57bf793",
+   "author_id": "db56793f9da13c08c4b3cf91",
+   "message": "To my mom, who still calls to make sure I ate, and to my big sister Dana, who did all of this first so I could copy her. Happy Mother's Day ❤️",
+   "created_at": "2026-05-10T17:40:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "b5e2d422613d98614fd44ebf",
+   "author_id": "900c9c8935b3a8cc581fcb96",
+   "message": "My girls and my grandbabies spoiled me today. I am so blessed ❤️",
+   "created_at": "2026-05-10T19:12:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "a3840775e276d74cf82da45c",
+   "author_id": "0ad6eb4391c4c8293550f4fc",
+   "message": "lucía's spring concert. she found us in the crowd during the second song and waved the whole rest of it 😂❤️",
+   "created_at": "2026-05-21T19:05:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "f53928dcd19cb0b1d113a65d",
+   "author_id": "fb879c73fbd954062c238f58",
+   "message": "Lake Pleasant at sunrise. Two stripers before the wind came up and back home before it hit 100.",
+   "created_at": "2026-05-23T11:10:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "0bd0aec1a3828011db4d91e2",
+   "author_id": "db56793f9da13c08c4b3cf91",
+   "message": "Sofi's first dance recital! She forgot half the moves and smiled through every single one of them ❤️",
+   "created_at": "2026-05-30T19:40:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "98499594289e8f26381542e1",
+   "author_id": "df8f005e395657532c09ff8d",
+   "message": "Heads up, a package was taken off my porch on 49th Ave today around 1:30. My camera shows a guy in a gray hoodie on a black bike, and he rode off toward Campbell. I filed a report. If you're on our block, please check your cameras.",
+   "created_at": "2026-06-09T15:58:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "1a263e67b6083bc5380ee4bd",
+   "author_id": "d98ba866199a87b4badee372",
+   "message": "Denise, same thing happened on 48th Dr two weeks ago, also a guy on a bike, also in the middle of the afternoon. I have everything held at the store now.",
+   "created_at": "2026-06-09T18:44:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "ef22fe6bd9d1dccdab278684",
+   "author_id": "e9417b3c2c695f383977af6e",
+   "message": "Denise, send the clip to the community officer at the Maryvale precinct too, not just the report line. They told us they look for patterns on the same streets.",
+   "created_at": "2026-06-10T07:15:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "dcdff7aae932a2a9f01b531d",
+   "author_id": "b53ebc864a45137246d6c258",
+   "message": "My viejo Rogelio, happy Father's Day! All these years and he still can't find his keys, but he always finds a deal at the swap meet. We had the family here for lunch and he was king for the day. Gracias a Dios por mi familia.",
+   "created_at": "2026-06-21T15:48:00-07:00",
+   "visibility": "public",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "4938d18c57d159f341f360bf",
+   "author_id": "80e56f12b91156d768241fd3",
+   "message": "Happy Father's Day to my pops, the original swap meet hustler. And to my brother Ray, the only man alive who negotiates a five dollar lamp like it's a house.",
+   "created_at": "2026-06-21T16:30:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "4009b3bbb5483f6461b766d9",
+   "author_id": "aeae068397072981c227c38d",
+   "message": "Excessive heat warning through Sunday, 115 to 117 they're saying. If you have older neighbors on your street, please knock on their doors this weekend, especially anyone who lives alone. I'm 70 and I know I don't always feel the heat until it's too late.",
+   "created_at": "2026-06-25T07:38:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "f4ff403b122c7e13ef778b25",
+   "author_id": "4c45fe1f0ca64604e27a015d",
+   "message": "Thank you Connie. If anyone needs a ride to a cooling center this weekend, message me. I'm home all day Saturday and my car has good AC.",
+   "created_at": "2026-06-25T12:10:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "5fbb185a49b1633c9ea62cfa",
+   "author_id": "c3c02b969f17558ab08f9862",
+   "message": "Four rooftop calls today and the last one in Tolleson was 118. If your AC tech shows up late and soaked, hand him a cold water. We're all running behind out here.",
+   "created_at": "2026-06-25T18:55:00-07:00",
+   "visibility": "public",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "31dd675b3cae38429c5675ea",
+   "author_id": "b2a4ea1670c688e4a78ce593",
+   "message": "Thank you to the young man from 46th Dr who brought me two cases of water today and fixed my thermostat. It got set wrong when the power blinked. God bless you, mijo.",
+   "created_at": "2026-06-27T17:22:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "3b6be0c71fece960d6ec3cda",
+   "author_id": "4cf92c173b27e73ee2861a29",
+   "message": "Our AC quit Friday afternoon and it was 96 inside by dinner. Desert Air got a tech out Saturday morning even though they're slammed. It was the capacitor. If your unit hums but won't start, that's probably it.",
+   "created_at": "2026-06-28T14:05:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "4a84208c736a63ad3dafae83",
+   "author_id": "80e56f12b91156d768241fd3",
+   "message": "Heading up to my brother's in Phoenix for the long weekend. Nico asked if we were there yet before we even got on the 10.",
+   "created_at": "2026-07-03T09:12:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "8bd2ed6a45deaf1f925af176",
+   "author_id": "e7428f417fba5b50ebaf4c7d",
+   "message": "Good Fourth at our place. Javi, Marisa and Nico came up from Tucson, my folks were here, Carla and Rudy brought the kids, and Gilbert ran the grill with me. Biscuit is riding out the fireworks in the bathtub.",
+   "created_at": "2026-07-04T21:40:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "6c40be0cea3fe04946504ae9",
+   "author_id": "630e371f2d3d4d639b97c7f2",
+   "message": "Whoever has the big aerial ones by 48th Dr, my dog has been shaking under the bed since 8. I know it's the Fourth, but please.",
+   "created_at": "2026-07-04T21:08:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "18b2fa6cdd61cb9ee83efd2a",
+   "author_id": "821c39ba681fa11aa3f76209",
+   "message": "Hilda, for what it's worth, the aerial ones are illegal in Phoenix. Not that anybody's coming out tonight. Same thing every year.",
+   "created_at": "2026-07-04T21:31:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "d4ffd9add78fbf4b6140f5be",
+   "author_id": "9c6dcfeb7ac9b48e4c884794",
+   "message": "It's one night a year, guys. Let the kids have their fun. It'll be over by midnight.",
+   "created_at": "2026-07-04T21:56:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "c22032c02090fe7ff60095e0",
+   "author_id": "bc544661edcda2d483e358c2",
+   "message": "Jaime, midnight?? I have a 4 month old who just fell asleep for the third time. The ones on 47th Dr are shaking my windows.",
+   "created_at": "2026-07-04T22:47:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "9b36b7a6d3049bec3d898f39",
+   "author_id": "45031e6bf3773c9268dbcc8b",
+   "message": "Finally quiet on our end. For the dogs next year: a thunder shirt and a fan running in a closet helped ours more than anything. And please pick up your debris tomorrow, some of it landed on roofs over on 47th Ave.",
+   "created_at": "2026-07-04T23:39:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "b104b8a3dd95d04ea0a17a55",
+   "author_id": "61e954956c348ed95ec0ce82",
+   "message": "Back home in Tucson. Thank you Ray and Dana for having us all weekend. Nico already misses Biscuit.",
+   "created_at": "2026-07-05T18:30:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "af5b944d4fffa68188c39e6c",
+   "author_id": "c3c02b969f17558ab08f9862",
+   "message": "Rooftop in Tolleson at 2, black clouds coming up from the south by 3. Got off that roof just in time. Stay safe tonight, west side.",
+   "created_at": "2026-07-28T16:40:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "1718d6a970f406ab618bafc4",
+   "author_id": "f24e4654df1bc759a3a2981d",
+   "message": "Power just went out on 47th Dr and 48th Ave. That wind came out of nowhere. Anyone else?",
+   "created_at": "2026-07-28T19:51:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "6e0e3a38d340b4c0896cdb43",
+   "author_id": "d4fa5b89cc198cf6ea7da627",
+   "message": "Big mesquite branch down on 47th Ave at the south end of the block, across the sidewalk and partly into the street. Go slow if you're driving, it's dark with the power out. I called it in to the city.",
+   "created_at": "2026-07-28T20:04:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "fb79bfd5ef29eab21f1efb78",
+   "author_id": "eec8f92f223c106eb167365d",
+   "message": "SRP outage map says 9:45 for our area. Around 1,800 customers out.",
+   "created_at": "2026-07-28T20:37:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "b7308654bdcac5548474b948",
+   "author_id": "f24e4654df1bc759a3a2981d",
+   "message": "Lights are back on 47th Dr. Hope everybody's fridge made it.",
+   "created_at": "2026-07-28T21:52:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "7309a935401cb1989d8aa339",
+   "author_id": "d4fa5b89cc198cf6ea7da627",
+   "message": "47th Ave is clear this morning. Thank you to whoever took care of that branch.",
+   "created_at": "2026-07-29T07:46:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "15dd41df8055be27097f52ce",
+   "author_id": "f9cc6ecbc615b0870d877cc4",
+   "message": "Hey Ray, the resin on your patio chairs is getting chalky, I can see it from my side of the block. Mine did the same before one finally cracked. Hector Salas does small repairs if you want a name.",
+   "created_at": "2026-08-09T19:05:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "72405b667204599654cd939c",
+   "author_id": "1e0ede89540b9ea40c29a699",
+   "message": "Hector is fine.",
+   "created_at": "2026-08-09T19:20:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "172ddf552e3ca46fb8294352",
+   "author_id": "339a6d6e94fe3456057a318a",
+   "message": "Ray, we switched to the heavy poly lumber Adirondacks three summers ago and they still look new. Pricey new, but they come up on Marketplace sometimes.",
+   "created_at": "2026-08-09T20:48:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "38c8d05a59aa02190f92f246",
+   "author_id": "0ad6eb4391c4c8293550f4fc",
+   "message": "first day. 8th grade and 4th grade. how is this happening 🙄❤️",
+   "created_at": "2026-08-10T07:42:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "24dc7745e1c19682788ecd8b",
+   "author_id": "fb879c73fbd954062c238f58",
+   "message": "Lake Pleasant with my carnal Ray this morning. On the water by 6:30 and off before it got stupid hot. He caught two little stripers, I caught a 9 pound catfish. You decide who won.",
+   "created_at": "2026-08-16T10:24:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "7f8e908873d9a8ee3c818e79",
+   "author_id": "1e167b76864187827364a9f5",
+   "message": "LOST DOG. Rocco, brown and white pit mix, blue collar, about 60 lbs. He dug under our side gate last night on 50th Ave. Friendly, but scared of men in hats. Please message me if you see him, and don't chase him.",
+   "created_at": "2026-08-17T06:41:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "f772091bf1838ef49140356d",
+   "author_id": "7297ec109eead1c0b3c7a630",
+   "message": "Ricky, I think I saw him around 7 this morning by the ramadas at the park on 51st. He was drinking from the sprinklers.",
+   "created_at": "2026-08-17T12:26:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "776858121f3ed8473428acfd",
+   "author_id": "1e167b76864187827364a9f5",
+   "message": "FOUND! A family on 53rd Ave had him in their backyard. He walked right in and lay down next to their kids. Thank you to everyone who shared and looked. The gate is getting fixed tomorrow.",
+   "created_at": "2026-08-17T20:19:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "30023a6bdc8ab8cc52800e78",
+   "author_id": "b53ebc864a45137246d6c258",
+   "message": "Ay thank you all for the beautiful birthday wishes!! 66 years and still dancing in my kitchen. We had lunch with the whole family and Lucía made me a card with Biscuit on it, I'm going to frame it. Dios los bendiga a todos.",
+   "created_at": "2026-08-22T19:30:00-07:00",
+   "visibility": "public",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "1543c3a239f63b8771b4280b",
+   "author_id": "986ccd3902f09d0c9849da54",
+   "message": "Looking for someone to patch a small hole in our stucco and fix a sticking screen door. Is Hector Salas still doing small jobs? I've seen his name in here a few times.",
+   "created_at": "2026-08-26T08:55:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "0db551d695dceb79eda4039e",
+   "author_id": "b79c7de7de7361229831b0aa",
+   "message": "Lourdes, yes. Hector fixed our screen door and two outlet covers last month and was very reasonable. Gloria has his number.",
+   "created_at": "2026-08-26T12:41:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "19d32483404a9d21dd6f351a",
+   "author_id": "59a789c93c4da00c0bb996c0",
+   "message": "SWAP MEET THIS MORNING. SAW A MAYTAG WASHER FOR 60. RAY SAYS HIS WASHER IS FINE. WE WILL SEE",
+   "created_at": "2026-08-29T11:05:00-07:00",
+   "visibility": "public",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "ea748d9cd3c4cf714d41b577",
+   "author_id": "fb879c73fbd954062c238f58",
+   "message": "Thanks to everybody who came out today. Too much carne, not enough shade, perfect Labor Day.",
+   "created_at": "2026-09-07T17:45:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "6417481cac435703ff3cebc6",
+   "author_id": "e6b07dc5fa75e400a89c5e0b",
+   "message": "Bulk trash for our part of Maryvale: you can put items out starting this Saturday, and the trucks come through the week of the 14th. Keep piles off the sidewalk and away from mailboxes, meters and cars, or they skip you. No tires, no paint.",
+   "created_at": "2026-09-08T07:30:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "9e1008a72d931cc9e6e0c7c7",
+   "author_id": "cf36b68ca1fde07de981a8a8",
+   "message": "Free: a working treadmill and a box of picture frames on my curb on 49th Dr. Too heavy for me to drag back in, so take them before the bulk truck does.",
+   "created_at": "2026-09-12T10:34:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "fa3c987ab2a0dce2f412a6e8",
+   "author_id": "b6d72adec1c3ef1239a55f8c",
+   "message": "Treadmill is gone, sorry to whoever came after me. My wife is thrilled. Thank you Sandra.",
+   "created_at": "2026-09-12T13:48:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "7b946fe9c676ef50c5443777",
+   "author_id": "80e56f12b91156d768241fd3",
+   "message": "Cardinals season starts today. Every year I say this is the year. This is the year, bro.",
+   "created_at": "2026-09-13T09:30:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "6e7ab03fc51b0450a76cc5f0",
+   "author_id": "e7428f417fba5b50ebaf4c7d",
+   "message": "Who do people use for washer repair? Our top loader started grinding on the spin today. It's only a couple of years old, so I'd rather fix it than replace it if I can.",
+   "created_at": "2026-09-16T16:56:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "627d357f550c29a5afe69e3f",
+   "author_id": "51da2b80db9710ee0864b4a8",
+   "message": "Ray, grinding on the spin is usually the bearings or the drive coupling. The coupling is a cheap part. If it's the bearings on a top loader, most repair guys will tell you to replace the machine.",
+   "created_at": "2026-09-16T18:37:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "846b2b6b73e68da984e92d18",
+   "author_id": "f9cc6ecbc615b0870d877cc4",
+   "message": "Ray, a grinding washer is really a replace-or-repair choice, and the repair can cost close to a newer used one. Hector Salas can look at small repairs if you want that name again, at least to tell you which it is.",
+   "created_at": "2026-09-16T19:40:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "29393e611bb66d8fcf48b252",
+   "author_id": "da7be0657faaf8f032c14deb",
+   "message": "Strikers U14 fall season starts this morning! Home game at Maryvale Park, field 2, kickoff at 9. Bring water, chairs and shade, it's still September in Phoenix. Let's go Strikers!",
+   "created_at": "2026-09-19T08:05:00-07:00",
+   "visibility": "public",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "09cf0b208858bf8dd7c505a7",
+   "author_id": "42e5e87e038d2be5b38ebf34",
+   "message": "Garage sale today, 7 to noon, on 49th Dr. Baby clothes, a crib, a rice cooker, hand tools, Christmas decorations and a lot of random stuff. Everything has to go before my in-laws move in.",
+   "created_at": "2026-09-26T06:15:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "7fb9547ce2f824ace252ebf8",
+   "author_id": "900c9c8935b3a8cc581fcb96",
+   "message": "Happy birthday to my Dana. You were such a sweet baby and now you're the best mom. Love you mija ❤️",
+   "created_at": "2026-09-27T08:02:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "d864f33e07514f9ada26c036",
+   "author_id": "db56793f9da13c08c4b3cf91",
+   "message": "39 looks good on you, sis! Happy birthday Dana, see you this afternoon ❤️",
+   "created_at": "2026-09-27T09:15:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "11c9e9d47f4afb306525cfde",
+   "author_id": "0ad6eb4391c4c8293550f4fc",
+   "message": "thank you everyone for the birthday love today ❤️ my mom came with carla and rudy and the kids, ray grilled, and i didn't wash a single dish. 39 is good so far",
+   "created_at": "2026-09-27T19:48:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "6551790d20a60a00e429c992",
+   "author_id": "6e11065f144743924b03c110",
+   "message": "The streetlight by the alley on 48th Ave has been out since July. I reported it again today on the city app. If a few more of us report it, maybe it moves up the list.",
+   "created_at": "2026-09-29T19:12:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "ed2f400798431237a88e3e35",
+   "author_id": "e7428f417fba5b50ebaf4c7d",
+   "message": "Strikers U14 beat Avondale this morning. Proud of Mateo and the whole team. They played hard and they listened to their coach.",
+   "created_at": "2026-10-03T11:52:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "915612a377d545a2d891fa3e",
+   "author_id": "ad800d1c4ebef41e2ca866d2",
+   "message": "Diego with the assist this morning. Good win, Strikers ⚽",
+   "created_at": "2026-10-03T12:30:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "4992993d077a95ec481218b7",
+   "author_id": "b53ebc864a45137246d6c258",
+   "message": "Mis nietos spent the whole week with me while school was out. We made empanadas, Lucía beat me at lottery every single day, and Mateo ate everything in my kitchen ay. The house is so quiet tonight. Gracias a Dios for these kids.",
+   "created_at": "2026-10-09T17:20:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "c4ab8d042ca6f6114662d49b",
+   "author_id": "320291e34fe9ea09b98fb95a",
+   "message": "Our cat Mango hasn't come home since Friday night. Orange tabby with a white chest, chipped, no collar. He's an indoor cat who slipped out on 48th Dr. Please check your sheds and garages, he hides when he's scared.",
+   "created_at": "2026-10-11T07:58:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "0ba3d11805c3b1169a133406",
+   "author_id": "320291e34fe9ea09b98fb95a",
+   "message": "Mango is HOME. He showed up at the back door tonight, hungry and very offended. Thank you all for checking your sheds.",
+   "created_at": "2026-10-13T21:05:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "89c9c0edfb1777af4bbef870",
+   "author_id": "b53ebc864a45137246d6c258",
+   "message": "Our Lady of Guadalupe needs volunteers for the food pantry on Saturdays, 8 to 11. If you can help even one Saturday, please call the parish office. Gracias y Dios los bendiga.",
+   "created_at": "2026-10-18T12:15:00-07:00",
+   "visibility": "public",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "b9a5e84d645f90f38baaa4c4",
+   "author_id": "80e56f12b91156d768241fd3",
+   "message": "Suns are back. Me and Nico in our jerseys on the couch, Marisa pretending she doesn't care. Let's go.",
+   "created_at": "2026-10-21T20:10:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "03d33f1559599555efafdf14",
+   "author_id": "69cd08e04514edbc2107a353",
+   "message": "Suns season. Here we go again.",
+   "created_at": "2026-10-21T21:15:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fa41aad3403375cd34e7c24f",
+   "author_id": "e7428f417fba5b50ebaf4c7d",
+   "message": "Well, one of our resin chairs finally gave out yesterday. The seat split right across and a front leg cracked. Has anyone seen a decent resin set around here that isn't already sun-baked?",
+   "created_at": "2026-10-25T14:31:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "516584ee23fa8ca09705fbf4",
+   "author_id": "f9cc6ecbc615b0870d877cc4",
+   "message": "Oh Ray, I'm sorry about the chair! After all those summers. I hope you find a good set soon.",
+   "created_at": "2026-10-25T15:02:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "e23fbc557dc9951d7441d684",
+   "author_id": "2ce1b4f64e15d93f1f5832d3",
+   "message": "Ray, check the legs before you buy used. If they're white and chalky like yours were getting, they're on their way out too. Good ones still have a little shine to them.",
+   "created_at": "2026-10-25T17:12:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "f4a1e3fafc82a6bca9b9627a",
+   "author_id": "db56793f9da13c08c4b3cf91",
+   "message": "Our little witch and our very tall ninja are ready. Happy Halloween from the Gutierrez house 🎃",
+   "created_at": "2026-10-31T18:10:00-07:00",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "5a423c5448902102af5e1a80",
+   "author_id": "173b9bca817eb3d244af3ec8",
+   "message": "We had well over 100 kids on 47th Dr tonight and ran out of candy at 7:40. Sorry to the late crowd! Best costume goes to the little guy dressed as a saguaro.",
+   "created_at": "2026-10-31T20:55:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "94d839fe6cb47fcf454acce0",
+   "author_id": "1822518ba5c0e333aa79da5e",
+   "message": "Someone left a pumpkin bucket full of candy on our wall on 48th Ave last night. Message me and I'll get it back to you.",
+   "created_at": "2026-11-01T09:40:00-07:00",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "cbb93fd7ae705c1bbf758574"
+  },
+  {
+   "id": "b57661102c06ad5762074304",
+   "author_id": "b53ebc864a45137246d6c258",
+   "message": "Mi ofrenda for my mamá and papá and for all our family who went before us. Pan de muerto from the panadería and marigolds from my own yard. Que descansen en paz.",
+   "created_at": "2026-11-01T13:20:00-07:00",
+   "visibility": "public",
+   "page_id": "",
+   "group_id": ""
+  }
+ ],
+ "marketplace_listings": [
+  {
+   "id": "8ee37282d6acee91cc6d0b7f",
+   "seller_id": "ca9f8d58efcb19f61eab8a39",
+   "title": "Green market umbrella",
+   "price": 35.0,
+   "currency": "USD",
+   "created_at": "2026-05-05T09:31:14-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Nine-foot green market umbrella. Base not included.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Laveen",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85339",
+    "latitude": 33.3419,
+    "longitude": -112.17
+   },
+   "distance_miles": 10.6,
+   "media": [
+    {
+     "asset_id": "1a80950aab4bd8efd33c4809",
+     "mime_type": "image/jpeg",
+     "size": 193696,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/8ee37282d6acee91cc6d0b7f.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "db683260650bac93840e6d5b",
+   "seller_id": "5a8965676ba91f9cf38851a7",
+   "title": "Wrought iron patio set with umbrella",
+   "price": 150.0,
+   "currency": "USD",
+   "created_at": "2026-05-06T16:16:22-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Wrought iron table, four chairs and the umbrella.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Goodyear",
+    "city": "Goodyear",
+    "state": "AZ",
+    "postal_code": "85338",
+    "latitude": 33.4339,
+    "longitude": -112.382
+   },
+   "distance_miles": 13.0,
+   "media": [
+    {
+     "asset_id": "ffd4dc76ddc8cacf3cc4d22c",
+     "mime_type": "image/jpeg",
+     "size": 162049,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/db683260650bac93840e6d5b.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "853656f46c4d78e5004a80e5",
+   "seller_id": "fa0f484bc5b18a822e23428c",
+   "title": "Patio set with umbrella",
+   "price": 160.0,
+   "currency": "USD",
+   "created_at": "2026-05-08T09:34:40-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Round patio table, four cushioned chairs and the umbrella.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Mesa",
+    "city": "Mesa",
+    "state": "AZ",
+    "postal_code": "85201",
+    "latitude": 33.435,
+    "longitude": -111.847
+   },
+   "distance_miles": 19.0,
+   "media": [
+    {
+     "asset_id": "186ef727da97bb365838687b",
+     "mime_type": "image/jpeg",
+     "size": 130155,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/853656f46c4d78e5004a80e5.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "4339d91e8b12ff3c18d80ec4",
+   "seller_id": "78a219502d7db416897c3533",
+   "title": "Garden bench, iron ends",
+   "price": 45.0,
+   "currency": "USD",
+   "created_at": "2026-05-09T10:31:19-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Garden bench with cast iron ends. Grill not included.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85301",
+    "latitude": 33.5309,
+    "longitude": -112.1781
+   },
+   "distance_miles": 2.5,
+   "media": [
+    {
+     "asset_id": "7f62e71eea5a5d48bc2ff42f",
+     "mime_type": "image/jpeg",
+     "size": 207563,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/4339d91e8b12ff3c18d80ec4.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "25952ff449c299841f087ca0",
+   "seller_id": "b47a8310299b23e0cb28b2c2",
+   "title": "Copper tripod floor lamp",
+   "price": 35.0,
+   "currency": "USD",
+   "created_at": "2026-05-11T13:48:59-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Copper tripod floor lamp. Bulb included.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Peoria",
+    "city": "Peoria",
+    "state": "AZ",
+    "postal_code": "85345",
+    "latitude": 33.5767,
+    "longitude": -112.2348
+   },
+   "distance_miles": 6.8,
+   "media": [
+    {
+     "asset_id": "7b00779d2b09721eb8df59bc",
+     "mime_type": "image/jpeg",
+     "size": 29543,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/25952ff449c299841f087ca0.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "c3f94b3f792cd16f021f1d61",
+   "seller_id": "fd131ae76a5154a64a5a1a25",
+   "title": "White three-drawer dresser",
+   "price": 65.0,
+   "currency": "USD",
+   "created_at": "2026-05-13T14:54:18-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "White dresser with three drawers from a kid's room. Drawers slide fine, one small scuff on top.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85037",
+    "latitude": 33.4908,
+    "longitude": -112.2461
+   },
+   "distance_miles": 4.4,
+   "media": [
+    {
+     "asset_id": "7ddbeb75339b0f65ebac687f",
+     "mime_type": "image/jpeg",
+     "size": 42773,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/c3f94b3f792cd16f021f1d61.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cd3f5bf1dd2c00da7d7082a9",
+   "seller_id": "b613ba92cd6663e4062991e5",
+   "title": "Light wood nightstand",
+   "price": 30.0,
+   "currency": "USD",
+   "created_at": "2026-05-14T21:22:53-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Small light wood nightstand with three drawers. Doesn't fit the new bedroom.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Encanto",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85013",
+    "latitude": 33.5084,
+    "longitude": -112.0827
+   },
+   "distance_miles": 5.1,
+   "media": [
+    {
+     "asset_id": "d845e9ae03e834b5881e759a",
+     "mime_type": "image/jpeg",
+     "size": 65834,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/cd3f5bf1dd2c00da7d7082a9.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ee8143f4434bf6d0fd6a5a8e",
+   "seller_id": "c2a9b81515b3d5eaa0c99874",
+   "title": "Orange six-drawer dresser",
+   "price": 80.0,
+   "currency": "USD",
+   "created_at": "2026-05-16T20:47:13-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Painted orange dresser, six drawers, solid wood. You haul.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Avondale",
+    "city": "Avondale",
+    "state": "AZ",
+    "postal_code": "85323",
+    "latitude": 33.4194,
+    "longitude": -112.3283
+   },
+   "distance_miles": 10.5,
+   "media": [
+    {
+     "asset_id": "1ff011d77e37a307e0b8fdcd",
+     "mime_type": "image/jpeg",
+     "size": 61027,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/ee8143f4434bf6d0fd6a5a8e.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "01c99c8b6e67265cdbe44546",
+   "seller_id": "5d0fe424085926694b3b701b",
+   "title": "Black floor lamp",
+   "price": 20.0,
+   "currency": "USD",
+   "created_at": "2026-05-18T11:34:52-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Black floor lamp with a drum shade. Works.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Arcadia",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85018",
+    "latitude": 33.498,
+    "longitude": -111.987
+   },
+   "distance_miles": 10.5,
+   "media": [
+    {
+     "asset_id": "84fad7ccbbfc2e258d6013e9",
+     "mime_type": "image/jpeg",
+     "size": 60380,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/01c99c8b6e67265cdbe44546.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "a5a77c631b76fdc974be242f",
+   "seller_id": "5e292f4e33f7e0b2fd62898d",
+   "title": "Throw pillows, set of three",
+   "price": 15.0,
+   "currency": "USD",
+   "created_at": "2026-05-19T09:23:05-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Three throw pillows, two green and one cactus print. Covers come off to wash.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Scottsdale",
+    "city": "Scottsdale",
+    "state": "AZ",
+    "postal_code": "85251",
+    "latitude": 33.494,
+    "longitude": -111.921
+   },
+   "distance_miles": 14.3,
+   "media": [
+    {
+     "asset_id": "6fe04f693a1fa55d18bf7562",
+     "mime_type": "image/jpeg",
+     "size": 110134,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/a5a77c631b76fdc974be242f.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "dfaee54b16b10a7483c76a7e",
+   "seller_id": "67fd37bc5d97ed1922037499",
+   "title": "Red tricycle",
+   "price": 20.0,
+   "currency": "USD",
+   "created_at": "2026-05-21T17:29:25-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Kids' tricycle. Helmet included.",
+   "category": "Kids",
+   "location": {
+    "neighborhood": "Ahwatukee",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85044",
+    "latitude": 33.329,
+    "longitude": -111.99
+   },
+   "distance_miles": 15.4,
+   "media": [
+    {
+     "asset_id": "7befb372ee4619927ce04a52",
+     "mime_type": "image/jpeg",
+     "size": 144208,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/dfaee54b16b10a7483c76a7e.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "f245418a93ed9622dfc8295e",
+   "seller_id": "46992a2bc3a492f84f69099c",
+   "title": "Rolling tool chest",
+   "price": 180.0,
+   "currency": "USD",
+   "created_at": "2026-05-23T11:21:10-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Rolling tool chest, eight drawers. Keys included.",
+   "category": "Tools",
+   "location": {
+    "neighborhood": "Tolleson",
+    "city": "Tolleson",
+    "state": "AZ",
+    "postal_code": "85353",
+    "latitude": 33.437,
+    "longitude": -112.259
+   },
+   "distance_miles": 6.5,
+   "media": [
+    {
+     "asset_id": "f75f3cd4ece2207b76a90d1b",
+     "mime_type": "image/jpeg",
+     "size": 152150,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/f245418a93ed9622dfc8295e.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b8f6a36c6dc06ac552b69e69",
+   "seller_id": "cdd46a9974ab2ffd844bf8c1",
+   "title": "Kettle charcoal grill",
+   "price": 40.0,
+   "currency": "USD",
+   "created_at": "2026-05-24T20:49:59-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "22-inch kettle grill. Grate is good, ash catcher included.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Sunnyslope",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85021",
+    "latitude": 33.56,
+    "longitude": -112.095
+   },
+   "distance_miles": 6.2,
+   "media": [
+    {
+     "asset_id": "98cb288e1607445565d110ab",
+     "mime_type": "image/jpeg",
+     "size": 119890,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/b8f6a36c6dc06ac552b69e69.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "d175c5c04b44db0dc2a1eece",
+   "seller_id": "143a4aa15ebd70dc60b61171",
+   "title": "Three-burner gas grill",
+   "price": 150.0,
+   "currency": "USD",
+   "created_at": "2026-05-26T16:38:35-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Three-burner gas grill with side shelves. Tank not included.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85302",
+    "latitude": 33.5675,
+    "longitude": -112.2052
+   },
+   "distance_miles": 5.4,
+   "media": [
+    {
+     "asset_id": "d952d1b6f896bd2f5e8f7bb9",
+     "mime_type": "image/jpeg",
+     "size": 224909,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/d175c5c04b44db0dc2a1eece.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b0ae0b647abecafc82b5af7e",
+   "seller_id": "69b2e577bf0119b67602d00d",
+   "title": "Stainless microwave",
+   "price": 45.0,
+   "currency": "USD",
+   "created_at": "2026-05-28T19:02:52-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Stainless countertop microwave. We put in an over-the-range one.",
+   "category": "Appliances",
+   "location": {
+    "neighborhood": "Downtown",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85004",
+    "latitude": 33.451,
+    "longitude": -112.07
+   },
+   "distance_miles": 6.5,
+   "media": [
+    {
+     "asset_id": "c472e94b3fc7f8d4f66294f2",
+     "mime_type": "image/jpeg",
+     "size": 106342,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/b0ae0b647abecafc82b5af7e.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "603a7df5e315adf97ed22ced",
+   "seller_id": "4f7b18861632cf480d041dac",
+   "title": "Older chest of drawers",
+   "price": 120.0,
+   "currency": "USD",
+   "created_at": "2026-05-29T08:37:58-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Chest of drawers, 49 x 28 x 17. Chair not included.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "West Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85009",
+    "latitude": 33.456,
+    "longitude": -112.128
+   },
+   "distance_miles": 3.6,
+   "media": [
+    {
+     "asset_id": "0f515deb77dffd46fc4ea34a",
+     "mime_type": "image/jpeg",
+     "size": 111365,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/603a7df5e315adf97ed22ced.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "7ae0e3b28fc413b9b30833ac",
+   "seller_id": "c2a9b81515b3d5eaa0c99874",
+   "title": "Resin Adirondack conversation set",
+   "price": 90.0,
+   "currency": "USD",
+   "created_at": "2026-05-30T15:22:41-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four white poly lumber Adirondack chairs. The side table is not included. $90 a chair.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Avondale",
+    "city": "Avondale",
+    "state": "AZ",
+    "postal_code": "85323",
+    "latitude": 33.4194,
+    "longitude": -112.3283
+   },
+   "distance_miles": 10.5,
+   "media": [
+    {
+     "asset_id": "1a6516c22a7345bb88441d30",
+     "mime_type": "image/jpeg",
+     "size": 137492,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/7ae0e3b28fc413b9b30833ac.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "e7c084982b2e7b91e38e0f1a",
+   "seller_id": "90c00964a6f13e6a56750939",
+   "title": "Table fan",
+   "price": 12.0,
+   "currency": "USD",
+   "created_at": "2026-05-31T20:19:57-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Table fan, three speeds. Works fine.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Litchfield Park",
+    "city": "Litchfield Park",
+    "state": "AZ",
+    "postal_code": "85340",
+    "latitude": 33.505,
+    "longitude": -112.41
+   },
+   "distance_miles": 13.9,
+   "media": [
+    {
+     "asset_id": "8ebcfa02cef392d4b9884743",
+     "mime_type": "image/jpeg",
+     "size": 157081,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/e7c084982b2e7b91e38e0f1a.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "febc28c7ec3496da40e39964",
+   "seller_id": "b1ebd2da3b7720517d15c090",
+   "title": "Wooden tool tote",
+   "price": 20.0,
+   "currency": "USD",
+   "created_at": "2026-06-02T14:31:32-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Old wooden tool tote. Chisel not included.",
+   "category": "Tools",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85303",
+    "latitude": 33.5251,
+    "longitude": -112.2155
+   },
+   "distance_miles": 3.4,
+   "media": [
+    {
+     "asset_id": "53409020964d4647e43ec3a2",
+     "mime_type": "image/jpeg",
+     "size": 111276,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/febc28c7ec3496da40e39964.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cc6905d2cf12ae60354423d7",
+   "seller_id": "1d180f093def3d01639a83e3",
+   "title": "Teal pedestal fan",
+   "price": 20.0,
+   "currency": "USD",
+   "created_at": "2026-06-03T18:59:08-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Teal pedestal fan with a timer knob. Works great.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Moon Valley",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85023",
+    "latitude": 33.632,
+    "longitude": -112.111
+   },
+   "distance_miles": 10.1,
+   "media": [
+    {
+     "asset_id": "68340520c94be9ef3d4880cc",
+     "mime_type": "image/jpeg",
+     "size": 112958,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/cc6905d2cf12ae60354423d7.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "f51b5c03897539714063d768",
+   "seller_id": "35570a856c8bd470e1623b8c",
+   "title": "Gas grill with side burner",
+   "price": 120.0,
+   "currency": "USD",
+   "created_at": "2026-06-05T15:51:02-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "The black grill on the left. Ignitor works, cover included.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Tempe",
+    "city": "Tempe",
+    "state": "AZ",
+    "postal_code": "85281",
+    "latitude": 33.436,
+    "longitude": -111.93
+   },
+   "distance_miles": 14.4,
+   "media": [
+    {
+     "asset_id": "8aa93b11861da4a305ddbbab",
+     "mime_type": "image/jpeg",
+     "size": 165745,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/f51b5c03897539714063d768.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b5f05f0a5ac003dbb3f033f9",
+   "seller_id": "cbb06439024ff12facbd0c00",
+   "title": "Small charcoal grill",
+   "price": 15.0,
+   "currency": "USD",
+   "created_at": "2026-06-07T12:52:18-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Small round charcoal grill on legs. Good for camping.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Chandler",
+    "city": "Chandler",
+    "state": "AZ",
+    "postal_code": "85225",
+    "latitude": 33.32,
+    "longitude": -111.845
+   },
+   "distance_miles": 22.3,
+   "media": [
+    {
+     "asset_id": "74a6e647ce64750d3af67483",
+     "mime_type": "image/jpeg",
+     "size": 205175,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/b5f05f0a5ac003dbb3f033f9.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "99004b41bee61f4e58d6cc43",
+   "seller_id": "bfe10f87ca002ce1bf6a0dd6",
+   "title": "Clear storage bin with lid",
+   "price": 8.0,
+   "currency": "USD",
+   "created_at": "2026-06-08T18:26:37-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Large clear storage bin with a latching lid.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Peoria",
+    "city": "Peoria",
+    "state": "AZ",
+    "postal_code": "85345",
+    "latitude": 33.5767,
+    "longitude": -112.2348
+   },
+   "distance_miles": 6.8,
+   "media": [
+    {
+     "asset_id": "b20cc3ee0659105c49cf2469",
+     "mime_type": "image/jpeg",
+     "size": 71526,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/99004b41bee61f4e58d6cc43.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "13f3958c2ae04a77a26110f8",
+   "seller_id": "bbe75152735deae4d0a5fe2c",
+   "title": "Hose with wall hanger",
+   "price": 15.0,
+   "currency": "USD",
+   "created_at": "2026-06-10T17:46:56-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "50-foot hose with the wall hanger.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Alhambra",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85015",
+    "latitude": 33.5082,
+    "longitude": -112.1009
+   },
+   "distance_miles": 4.1,
+   "media": [
+    {
+     "asset_id": "d6cc085e94cc1f9e0dc90758",
+     "mime_type": "image/jpeg",
+     "size": 253856,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/13f3958c2ae04a77a26110f8.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "4ad979809f2480317847ce75",
+   "seller_id": "9e1ad2bc94e48a7c932fb84e",
+   "title": "Concrete garden bench",
+   "price": 60.0,
+   "currency": "USD",
+   "created_at": "2026-06-12T11:39:34-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Concrete garden bench, two pieces. Heavy.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   },
+   "distance_miles": 2.5,
+   "media": [
+    {
+     "asset_id": "54312ffa390433efa6c2b326",
+     "mime_type": "image/jpeg",
+     "size": 185973,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/4ad979809f2480317847ce75.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "4f4eeb1a3610842e8b18b6ed",
+   "seller_id": "bab1275371804d1cfbe0a7b8",
+   "title": "Folding bistro set",
+   "price": 45.0,
+   "currency": "USD",
+   "created_at": "2026-06-13T18:55:24-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Folding wood bistro table and two chairs. Fits a small balcony.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Alhambra",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85019",
+    "latitude": 33.5121,
+    "longitude": -112.1426
+   },
+   "distance_miles": 2.0,
+   "media": [
+    {
+     "asset_id": "bbf3fb5feb0652d9fb8d2ea9",
+     "mime_type": "image/jpeg",
+     "size": 61988,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/4f4eeb1a3610842e8b18b6ed.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "6624d74422f937cd1e017f0d",
+   "seller_id": "5a8965676ba91f9cf38851a7",
+   "title": "Stackable resin Adirondack chairs",
+   "price": 40.0,
+   "currency": "USD",
+   "created_at": "2026-06-14T18:52:07-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four light blue resin Adirondack chairs. They stack, so they store in the garage. $40 a chair. Pickup in Goodyear.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Goodyear",
+    "city": "Goodyear",
+    "state": "AZ",
+    "postal_code": "85338",
+    "latitude": 33.4339,
+    "longitude": -112.382
+   },
+   "distance_miles": 13.0,
+   "media": [
+    {
+     "asset_id": "0d2c2e9323950966bf2e6526",
+     "mime_type": "image/jpeg",
+     "size": 96836,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/6624d74422f937cd1e017f0d.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "0d8831adb6cfa11ef645f216",
+   "seller_id": "e7f286ff91d4e2c299ab3d56",
+   "title": "Outdoor loveseat set with rug",
+   "price": 200.0,
+   "currency": "USD",
+   "created_at": "2026-06-15T19:20:23-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Outdoor loveseat, two chairs and the coffee table. Rug included.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85303",
+    "latitude": 33.5251,
+    "longitude": -112.2155
+   },
+   "distance_miles": 3.4,
+   "media": [
+    {
+     "asset_id": "5345db989aad831027812006",
+     "mime_type": "image/jpeg",
+     "size": 118197,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/0d8831adb6cfa11ef645f216.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "54619ba26d2d17fb1e90a69a",
+   "seller_id": "2f5dfcd25f1cbfb29c8c39bd",
+   "title": "Pet food storage container",
+   "price": 15.0,
+   "currency": "USD",
+   "created_at": "2026-06-17T13:50:56-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Airtight pet food container, new with the tag. Holds about 25 lb.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Alhambra",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85019",
+    "latitude": 33.5121,
+    "longitude": -112.1426
+   },
+   "distance_miles": 2.0,
+   "media": [
+    {
+     "asset_id": "aaf1fec8231be13022550ffc",
+     "mime_type": "image/jpeg",
+     "size": 35401,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/54619ba26d2d17fb1e90a69a.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "0ea92f303751bbf46e662310",
+   "seller_id": "dbcf3dd613d4897eeefd31f0",
+   "title": "Black three-drawer dresser",
+   "price": 45.0,
+   "currency": "USD",
+   "created_at": "2026-06-18T19:54:45-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Black three-drawer dresser. TV not included.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Estrella",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85043",
+    "latitude": 33.432,
+    "longitude": -112.198
+   },
+   "distance_miles": 4.6,
+   "media": [
+    {
+     "asset_id": "01794e6227f78e619b4c5826",
+     "mime_type": "image/jpeg",
+     "size": 51998,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/0ea92f303751bbf46e662310.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "57be5f642c70c70b53e4e473",
+   "seller_id": "ca9f8d58efcb19f61eab8a39",
+   "title": "Two wood nightstands",
+   "price": 70.0,
+   "currency": "USD",
+   "created_at": "2026-06-20T16:04:43-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Pair of wood nightstands, still taped from our move. $70 for both.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Laveen",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85339",
+    "latitude": 33.3419,
+    "longitude": -112.17
+   },
+   "distance_miles": 10.6,
+   "media": [
+    {
+     "asset_id": "b8fa5dc3d4b92afc667b2091",
+     "mime_type": "image/jpeg",
+     "size": 106788,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/57be5f642c70c70b53e4e473.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "48f2da3ac0d74ac92609dd4c",
+   "seller_id": "b47a8310299b23e0cb28b2c2",
+   "title": "Taupe resin arm chairs",
+   "price": 65.0,
+   "currency": "USD",
+   "created_at": "2026-06-21T10:38:50-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four modern resin arm chairs in taupe. Heavy enough that they stay put in the wind. $65 each.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Peoria",
+    "city": "Peoria",
+    "state": "AZ",
+    "postal_code": "85345",
+    "latitude": 33.5767,
+    "longitude": -112.2348
+   },
+   "distance_miles": 6.8,
+   "media": [
+    {
+     "asset_id": "522a3d48fbfd98edb43376fa",
+     "mime_type": "image/jpeg",
+     "size": 97786,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/48f2da3ac0d74ac92609dd4c.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "5b01773491b3819e714036a4",
+   "seller_id": "5a8965676ba91f9cf38851a7",
+   "title": "White nightstand",
+   "price": 25.0,
+   "currency": "USD",
+   "created_at": "2026-06-21T18:43:19-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "White nightstand with a drawer. Clean top.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Goodyear",
+    "city": "Goodyear",
+    "state": "AZ",
+    "postal_code": "85338",
+    "latitude": 33.4339,
+    "longitude": -112.382
+   },
+   "distance_miles": 13.0,
+   "media": [
+    {
+     "asset_id": "5c77abca271ec2940ea2b7f3",
+     "mime_type": "image/jpeg",
+     "size": 61841,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/5b01773491b3819e714036a4.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "2fc649ebbe0840eb22e92240",
+   "seller_id": "fa0f484bc5b18a822e23428c",
+   "title": "Upright vacuum",
+   "price": 60.0,
+   "currency": "USD",
+   "created_at": "2026-06-23T09:06:54-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Upright vacuum, good suction. Comes with a pack of bags.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Mesa",
+    "city": "Mesa",
+    "state": "AZ",
+    "postal_code": "85201",
+    "latitude": 33.435,
+    "longitude": -111.847
+   },
+   "distance_miles": 19.0,
+   "media": [
+    {
+     "asset_id": "454f9adb0e0f1ee1dbb43d96",
+     "mime_type": "image/jpeg",
+     "size": 154807,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/2fc649ebbe0840eb22e92240.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "306437c201b5fdb88eeb9272",
+   "seller_id": "78a219502d7db416897c3533",
+   "title": "Dyson canister vacuum",
+   "price": 85.0,
+   "currency": "USD",
+   "created_at": "2026-06-25T07:01:00-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Dyson canister vacuum with the hose and wand. Filter just cleaned.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85301",
+    "latitude": 33.5309,
+    "longitude": -112.1781
+   },
+   "distance_miles": 2.5,
+   "media": [
+    {
+     "asset_id": "ddb198931a91e2690c3c7b71",
+     "mime_type": "image/jpeg",
+     "size": 82751,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/306437c201b5fdb88eeb9272.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ac1217a5f3771bb814aaf754",
+   "seller_id": "b47a8310299b23e0cb28b2c2",
+   "title": "Classic red tricycle",
+   "price": 25.0,
+   "currency": "USD",
+   "created_at": "2026-06-26T12:39:43-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Classic red tricycle, a little rust on the step.",
+   "category": "Kids",
+   "location": {
+    "neighborhood": "Peoria",
+    "city": "Peoria",
+    "state": "AZ",
+    "postal_code": "85345",
+    "latitude": 33.5767,
+    "longitude": -112.2348
+   },
+   "distance_miles": 6.8,
+   "media": [
+    {
+     "asset_id": "2a135cc818eb8a727ca909e1",
+     "mime_type": "image/jpeg",
+     "size": 53738,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/ac1217a5f3771bb814aaf754.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cc305a7134c2cc07afbfe8a3",
+   "seller_id": "67fd37bc5d97ed1922037499",
+   "title": "Turquoise resin Adirondack chairs",
+   "price": 130.0,
+   "currency": "USD",
+   "created_at": "2026-06-27T09:12:44-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four turquoise resin Adirondack chairs. The fire pit is not included. $130 a chair.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Ahwatukee",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85044",
+    "latitude": 33.329,
+    "longitude": -111.99
+   },
+   "distance_miles": 15.4,
+   "media": [
+    {
+     "asset_id": "1ef3d1d7786e54c07145f217",
+     "mime_type": "image/jpeg",
+     "size": 200338,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/cc305a7134c2cc07afbfe8a3.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "0278000a8c59f7563679b9ad",
+   "seller_id": "fd131ae76a5154a64a5a1a25",
+   "title": "Cordless drill, 14.4V",
+   "price": 25.0,
+   "currency": "USD",
+   "created_at": "2026-06-28T13:42:34-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Cordless drill with one battery and the charger.",
+   "category": "Tools",
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85037",
+    "latitude": 33.4908,
+    "longitude": -112.2461
+   },
+   "distance_miles": 4.4,
+   "media": [
+    {
+     "asset_id": "1d9751757affbbe0b2c38488",
+     "mime_type": "image/jpeg",
+     "size": 41341,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/0278000a8c59f7563679b9ad.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "804808a571c6a2eb48bb2f5e",
+   "seller_id": "b613ba92cd6663e4062991e5",
+   "title": "Yellow garden hose",
+   "price": 10.0,
+   "currency": "USD",
+   "created_at": "2026-06-30T14:00:36-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Yellow garden hose, about 50 feet. No leaks.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Encanto",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85013",
+    "latitude": 33.5084,
+    "longitude": -112.0827
+   },
+   "distance_miles": 5.1,
+   "media": [
+    {
+     "asset_id": "1bbf7b53722d9c06f4a3c816",
+     "mime_type": "image/jpeg",
+     "size": 202768,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/804808a571c6a2eb48bb2f5e.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "33b0d0b6567afb77846196ab",
+   "seller_id": "c2a9b81515b3d5eaa0c99874",
+   "title": "Wall-mount hose reel",
+   "price": 25.0,
+   "currency": "USD",
+   "created_at": "2026-07-01T12:06:04-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Wall-mount hose reel with the hose.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Avondale",
+    "city": "Avondale",
+    "state": "AZ",
+    "postal_code": "85323",
+    "latitude": 33.4194,
+    "longitude": -112.3283
+   },
+   "distance_miles": 10.5,
+   "media": [
+    {
+     "asset_id": "6940e912bdb637f745d5907b",
+     "mime_type": "image/jpeg",
+     "size": 132278,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/33b0d0b6567afb77846196ab.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "32db688327d63b182a164413",
+   "seller_id": "5d0fe424085926694b3b701b",
+   "title": "Countertop microwave",
+   "price": 35.0,
+   "currency": "USD",
+   "created_at": "2026-07-03T11:04:44-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Countertop microwave, clean inside, turntable included.",
+   "category": "Appliances",
+   "location": {
+    "neighborhood": "Arcadia",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85018",
+    "latitude": 33.498,
+    "longitude": -111.987
+   },
+   "distance_miles": 10.5,
+   "media": [
+    {
+     "asset_id": "7d9bec0b7cdc220b789ca434",
+     "mime_type": "image/jpeg",
+     "size": 51178,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/32db688327d63b182a164413.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "bee62e04f5f2f8a1b1647b02",
+   "seller_id": "5e292f4e33f7e0b2fd62898d",
+   "title": "Clear acrylic side table",
+   "price": 35.0,
+   "currency": "USD",
+   "created_at": "2026-07-05T13:05:12-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Clear acrylic side table with a carved pattern. A few light scratches.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Scottsdale",
+    "city": "Scottsdale",
+    "state": "AZ",
+    "postal_code": "85251",
+    "latitude": 33.494,
+    "longitude": -111.921
+   },
+   "distance_miles": 14.3,
+   "media": [
+    {
+     "asset_id": "2cef4a03ed362e4b35a6b246",
+     "mime_type": "image/jpeg",
+     "size": 59728,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/bee62e04f5f2f8a1b1647b02.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8d91ae137e74426d0acc0316",
+   "seller_id": "67fd37bc5d97ed1922037499",
+   "title": "Box of vinyl records",
+   "price": 25.0,
+   "currency": "USD",
+   "created_at": "2026-07-06T21:23:14-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Box of old records plus the crate. Easy listening and some soundtracks.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Ahwatukee",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85044",
+    "latitude": 33.329,
+    "longitude": -111.99
+   },
+   "distance_miles": 15.4,
+   "media": [
+    {
+     "asset_id": "534eb105cb1862386b8391b0",
+     "mime_type": "image/jpeg",
+     "size": 182172,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/8d91ae137e74426d0acc0316.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fc362aebbad9c04637e60bb4",
+   "seller_id": "46992a2bc3a492f84f69099c",
+   "title": "Heavy duty totes, three",
+   "price": 30.0,
+   "currency": "USD",
+   "created_at": "2026-07-08T19:51:30-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Three heavy duty totes with yellow lids. The other stuff on the shelf is not included.",
+   "category": "Tools",
+   "location": {
+    "neighborhood": "Tolleson",
+    "city": "Tolleson",
+    "state": "AZ",
+    "postal_code": "85353",
+    "latitude": 33.437,
+    "longitude": -112.259
+   },
+   "distance_miles": 6.5,
+   "media": [
+    {
+     "asset_id": "ad977580c587f9f265d61d4d",
+     "mime_type": "image/jpeg",
+     "size": 78520,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/fc362aebbad9c04637e60bb4.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "c47dac7bd38e1653865e54c1",
+   "seller_id": "cdd46a9974ab2ffd844bf8c1",
+   "title": "Pet stroller",
+   "price": 30.0,
+   "currency": "USD",
+   "created_at": "2026-07-10T13:42:53-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Pet stroller for a small dog. Folds flat.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Sunnyslope",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85021",
+    "latitude": 33.56,
+    "longitude": -112.095
+   },
+   "distance_miles": 6.2,
+   "media": [
+    {
+     "asset_id": "fbaace4cff545b3b5a610ee8",
+     "mime_type": "image/jpeg",
+     "size": 213437,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/c47dac7bd38e1653865e54c1.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fcdf7278ab569617d4481020",
+   "seller_id": "143a4aa15ebd70dc60b61171",
+   "title": "Clear blue hose, never used",
+   "price": 12.0,
+   "currency": "USD",
+   "created_at": "2026-07-11T15:54:32-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Clear blue hose, never used, still coiled.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85302",
+    "latitude": 33.5675,
+    "longitude": -112.2052
+   },
+   "distance_miles": 5.4,
+   "media": [
+    {
+     "asset_id": "eed540b782a190a5945953b1",
+     "mime_type": "image/jpeg",
+     "size": 251175,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/fcdf7278ab569617d4481020.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "91a55b51ed030ed6fe9ed696",
+   "seller_id": "fd131ae76a5154a64a5a1a25",
+   "title": "Tan resin patio chairs",
+   "price": 70.0,
+   "currency": "USD",
+   "created_at": "2026-07-12T20:14:02-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four tan resin patio chairs. The birds like them too. $70 a chair.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85037",
+    "latitude": 33.4908,
+    "longitude": -112.2461
+   },
+   "distance_miles": 4.4,
+   "media": [
+    {
+     "asset_id": "ac68aa5da5cfcf864f673a02",
+     "mime_type": "image/jpeg",
+     "size": 66624,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/91a55b51ed030ed6fe9ed696.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "5f4ca24f15e979946c424f59",
+   "seller_id": "69b2e577bf0119b67602d00d",
+   "title": "Blue ceramic garden stool",
+   "price": 35.0,
+   "currency": "USD",
+   "created_at": "2026-07-13T20:46:49-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Cobalt blue ceramic garden stool. Works as a plant stand or side table.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Downtown",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85004",
+    "latitude": 33.451,
+    "longitude": -112.07
+   },
+   "distance_miles": 6.5,
+   "media": [
+    {
+     "asset_id": "d6da1394ce73b0ae0f30d76b",
+     "mime_type": "image/jpeg",
+     "size": 102798,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/5f4ca24f15e979946c424f59.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "72280762ceb16a488f8dd1c7",
+   "seller_id": "4f7b18861632cf480d041dac",
+   "title": "Drip coffee maker",
+   "price": 10.0,
+   "currency": "USD",
+   "created_at": "2026-07-15T14:03:01-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "12-cup drip coffee maker. Works, we switched to a pod machine.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "West Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85009",
+    "latitude": 33.456,
+    "longitude": -112.128
+   },
+   "distance_miles": 3.6,
+   "media": [
+    {
+     "asset_id": "f8e1084499721a06ce6e4494",
+     "mime_type": "image/jpeg",
+     "size": 125053,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/72280762ceb16a488f8dd1c7.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "90fe0d56102688966c0ed0d8",
+   "seller_id": "90c00964a6f13e6a56750939",
+   "title": "Gas push mower",
+   "price": 90.0,
+   "currency": "USD",
+   "created_at": "2026-07-16T19:07:30-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Gas push mower, starts on the second pull. Bag included.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Litchfield Park",
+    "city": "Litchfield Park",
+    "state": "AZ",
+    "postal_code": "85340",
+    "latitude": 33.505,
+    "longitude": -112.41
+   },
+   "distance_miles": 13.9,
+   "media": [
+    {
+     "asset_id": "f9d870cc12a4e1e1ac420708",
+     "mime_type": "image/jpeg",
+     "size": 188897,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/90fe0d56102688966c0ed0d8.jpg"
+     }
+    },
+    {
+     "asset_id": "ed4235d4c818eff9c198f631",
+     "mime_type": "image/jpeg",
+     "size": 156299,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/90fe0d56102688966c0ed0d8__2.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "1850a46ad2c7df5f2067028f",
+   "seller_id": "b1ebd2da3b7720517d15c090",
+   "title": "L-shaped desk",
+   "price": 90.0,
+   "currency": "USD",
+   "created_at": "2026-07-18T17:13:10-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "L-shaped desk with two file drawers. Comes apart in two pieces.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85303",
+    "latitude": 33.5251,
+    "longitude": -112.2155
+   },
+   "distance_miles": 3.4,
+   "media": [
+    {
+     "asset_id": "1cd8fdf7e0540bb936bfcced",
+     "mime_type": "image/jpeg",
+     "size": 114355,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/1850a46ad2c7df5f2067028f.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "2b9640fbf06861a903874052",
+   "seller_id": "1d180f093def3d01639a83e3",
+   "title": "Gray metal office desk",
+   "price": 75.0,
+   "currency": "USD",
+   "created_at": "2026-07-20T09:17:19-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Gray metal L-desk with drawers on both sides. Heavy, bring help.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Moon Valley",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85023",
+    "latitude": 33.632,
+    "longitude": -112.111
+   },
+   "distance_miles": 10.1,
+   "media": [
+    {
+     "asset_id": "8aed1a48a77b6eeb0f03b5e8",
+     "mime_type": "image/jpeg",
+     "size": 72432,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/2b9640fbf06861a903874052.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "053b398ae93c495bc04d41a9",
+   "seller_id": "35570a856c8bd470e1623b8c",
+   "title": "Red cruiser bike",
+   "price": 90.0,
+   "currency": "USD",
+   "created_at": "2026-07-21T10:55:17-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Women's cruiser, 26 inch, coaster brake.",
+   "category": "Bicycles",
+   "location": {
+    "neighborhood": "Tempe",
+    "city": "Tempe",
+    "state": "AZ",
+    "postal_code": "85281",
+    "latitude": 33.436,
+    "longitude": -111.93
+   },
+   "distance_miles": 14.4,
+   "media": [
+    {
+     "asset_id": "38c85b666474379417eedd78",
+     "mime_type": "image/jpeg",
+     "size": 286150,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/053b398ae93c495bc04d41a9.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "20b7fe99632a542cda7dd100",
+   "seller_id": "cbb06439024ff12facbd0c00",
+   "title": "Pour-over coffee set",
+   "price": 18.0,
+   "currency": "USD",
+   "created_at": "2026-07-23T20:27:11-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Glass pour-over carafe with the dripper and a scale.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Chandler",
+    "city": "Chandler",
+    "state": "AZ",
+    "postal_code": "85225",
+    "latitude": 33.32,
+    "longitude": -111.845
+   },
+   "distance_miles": 22.3,
+   "media": [
+    {
+     "asset_id": "e54ed8d8df1dec8e6caae1c8",
+     "mime_type": "image/jpeg",
+     "size": 38328,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/20b7fe99632a542cda7dd100.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "bcf962043870cfa6cfcd2eec",
+   "seller_id": "bfe10f87ca002ce1bf6a0dd6",
+   "title": "Two end tables",
+   "price": 60.0,
+   "currency": "USD",
+   "created_at": "2026-07-25T08:36:02-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Two end tables from the living room. $60 for both or $35 each.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Peoria",
+    "city": "Peoria",
+    "state": "AZ",
+    "postal_code": "85345",
+    "latitude": 33.5767,
+    "longitude": -112.2348
+   },
+   "distance_miles": 6.8,
+   "media": [
+    {
+     "asset_id": "bb0b7b0cf802d4d6d4ebaae0",
+     "mime_type": "image/jpeg",
+     "size": 116002,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/bcf962043870cfa6cfcd2eec.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "4ddb65a4cb4a67cc1b27fd4e",
+   "seller_id": "bbe75152735deae4d0a5fe2c",
+   "title": "Wood slice side table",
+   "price": 25.0,
+   "currency": "USD",
+   "created_at": "2026-07-26T17:58:17-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Small side table, wood slice top on metal legs.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Alhambra",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85015",
+    "latitude": 33.5082,
+    "longitude": -112.1009
+   },
+   "distance_miles": 4.1,
+   "media": [
+    {
+     "asset_id": "f2cb2c3f5c045a0dff05e927",
+     "mime_type": "image/jpeg",
+     "size": 51183,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/4ddb65a4cb4a67cc1b27fd4e.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "5db3f8e3709d8b5dd49211b3",
+   "seller_id": "9e1ad2bc94e48a7c932fb84e",
+   "title": "Coffee table with drawers",
+   "price": 55.0,
+   "currency": "USD",
+   "created_at": "2026-07-28T12:27:01-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Dark wood coffee table with two drawers and an open shelf.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   },
+   "distance_miles": 2.5,
+   "media": [
+    {
+     "asset_id": "3d0a5ae24ceff5ee0f31dda2",
+     "mime_type": "image/jpeg",
+     "size": 91897,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/5db3f8e3709d8b5dd49211b3.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "2874fe6f72a944819b25d7ed",
+   "seller_id": "bab1275371804d1cfbe0a7b8",
+   "title": "Storage totes, lot of six",
+   "price": 25.0,
+   "currency": "USD",
+   "created_at": "2026-07-30T14:54:41-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Six storage totes with lids, mixed sizes. Emptied from a move.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Alhambra",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85019",
+    "latitude": 33.5121,
+    "longitude": -112.1426
+   },
+   "distance_miles": 2.0,
+   "media": [
+    {
+     "asset_id": "8badb7b4c66a355dbbb33668",
+     "mime_type": "image/jpeg",
+     "size": 120772,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/2874fe6f72a944819b25d7ed.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "205b2cdcf22ea842073a8660",
+   "seller_id": "e7f286ff91d4e2c299ab3d56",
+   "title": "Folding step stool",
+   "price": 12.0,
+   "currency": "USD",
+   "created_at": "2026-07-31T11:41:00-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Two-step folding stool. Sturdy.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85303",
+    "latitude": 33.5251,
+    "longitude": -112.2155
+   },
+   "distance_miles": 3.4,
+   "media": [
+    {
+     "asset_id": "ac44956dad27d69940a0b27e",
+     "mime_type": "image/jpeg",
+     "size": 194010,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/205b2cdcf22ea842073a8660.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8ef4978c9493548671625f83",
+   "seller_id": "2f5dfcd25f1cbfb29c8c39bd",
+   "title": "Toy tractors and trailer",
+   "price": 15.0,
+   "currency": "USD",
+   "created_at": "2026-08-02T18:56:14-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Two toy tractors and a dump trailer.",
+   "category": "Kids",
+   "location": {
+    "neighborhood": "Alhambra",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85019",
+    "latitude": 33.5121,
+    "longitude": -112.1426
+   },
+   "distance_miles": 2.0,
+   "media": [
+    {
+     "asset_id": "a3399845575ac18561716353",
+     "mime_type": "image/jpeg",
+     "size": 139375,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/8ef4978c9493548671625f83.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8ea21d3581fa27a192e52068",
+   "seller_id": "dbcf3dd613d4897eeefd31f0",
+   "title": "Six-foot aluminum step ladder",
+   "price": 45.0,
+   "currency": "USD",
+   "created_at": "2026-08-03T17:03:59-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Six-foot aluminum step ladder, 225 lb rating.",
+   "category": "Tools",
+   "location": {
+    "neighborhood": "Estrella",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85043",
+    "latitude": 33.432,
+    "longitude": -112.198
+   },
+   "distance_miles": 4.6,
+   "media": [
+    {
+     "asset_id": "a79011f673606199049b3bf4",
+     "mime_type": "image/jpeg",
+     "size": 47704,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/8ea21d3581fa27a192e52068.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "c0460537ecd3f7c645e34229",
+   "seller_id": "ca9f8d58efcb19f61eab8a39",
+   "title": "Red push mower",
+   "price": 75.0,
+   "currency": "USD",
+   "created_at": "2026-08-05T08:49:09-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Red gas push mower with the rear bag.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Laveen",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85339",
+    "latitude": 33.3419,
+    "longitude": -112.17
+   },
+   "distance_miles": 10.6,
+   "media": [
+    {
+     "asset_id": "171854b4ea4066ddd6a96ea6",
+     "mime_type": "image/jpeg",
+     "size": 187813,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/c0460537ecd3f7c645e34229.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b822922a84db0c44d778f121",
+   "seller_id": "5a8965676ba91f9cf38851a7",
+   "title": "Wheelbarrow planter",
+   "price": 25.0,
+   "currency": "USD",
+   "created_at": "2026-08-07T12:50:10-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Wooden wheelbarrow planter. Flowers not included.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Goodyear",
+    "city": "Goodyear",
+    "state": "AZ",
+    "postal_code": "85338",
+    "latitude": 33.4339,
+    "longitude": -112.382
+   },
+   "distance_miles": 13.0,
+   "media": [
+    {
+     "asset_id": "a06893024b8de6b9ecfcbf67",
+     "mime_type": "image/jpeg",
+     "size": 240483,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/b822922a84db0c44d778f121.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "5e593be1f13aded3eaae8517",
+   "seller_id": "5e292f4e33f7e0b2fd62898d",
+   "title": "White resin Adirondack chairs",
+   "price": 110.0,
+   "currency": "USD",
+   "created_at": "2026-08-08T17:31:09-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four white Adirondack chairs from a patio remodel, recycled resin lumber. $110 each, firm.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Scottsdale",
+    "city": "Scottsdale",
+    "state": "AZ",
+    "postal_code": "85251",
+    "latitude": 33.494,
+    "longitude": -111.921
+   },
+   "distance_miles": 14.3,
+   "media": [
+    {
+     "asset_id": "33b30f2b82345ec0383b30b7",
+     "mime_type": "image/jpeg",
+     "size": 241547,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/5e593be1f13aded3eaae8517.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "2bc18ccab98a7460b87bc5ae",
+   "seller_id": "fa0f484bc5b18a822e23428c",
+   "title": "Black microwave",
+   "price": 30.0,
+   "currency": "USD",
+   "created_at": "2026-08-08T19:01:46-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Black microwave, 1100 watts. Works.",
+   "category": "Appliances",
+   "location": {
+    "neighborhood": "Mesa",
+    "city": "Mesa",
+    "state": "AZ",
+    "postal_code": "85201",
+    "latitude": 33.435,
+    "longitude": -111.847
+   },
+   "distance_miles": 19.0,
+   "media": [
+    {
+     "asset_id": "9acec1e6886e970d2291e711",
+     "mime_type": "image/jpeg",
+     "size": 84622,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/2bc18ccab98a7460b87bc5ae.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "c399acca75ba7308c464aa1d",
+   "seller_id": "78a219502d7db416897c3533",
+   "title": "Round wood coffee table",
+   "price": 70.0,
+   "currency": "USD",
+   "created_at": "2026-08-10T12:24:08-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Round solid wood coffee table, about 36 inches across.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85301",
+    "latitude": 33.5309,
+    "longitude": -112.1781
+   },
+   "distance_miles": 2.5,
+   "media": [
+    {
+     "asset_id": "962470cec5f155220d82fd11",
+     "mime_type": "image/jpeg",
+     "size": 130679,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/c399acca75ba7308c464aa1d.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "800fcd338a7e35ced0a75c00",
+   "seller_id": "b47a8310299b23e0cb28b2c2",
+   "title": "Bright area rug, 5 x 7",
+   "price": 40.0,
+   "currency": "USD",
+   "created_at": "2026-08-12T20:39:28-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Colorful 5 x 7 rug from a playroom. Vacuumed, no stains.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Peoria",
+    "city": "Peoria",
+    "state": "AZ",
+    "postal_code": "85345",
+    "latitude": 33.5767,
+    "longitude": -112.2348
+   },
+   "distance_miles": 6.8,
+   "media": [
+    {
+     "asset_id": "4d0e26dff7f122e5276a3783",
+     "mime_type": "image/jpeg",
+     "size": 118062,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/800fcd338a7e35ced0a75c00.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cc4bf5edbd168da9d1539a6a",
+   "seller_id": "fd131ae76a5154a64a5a1a25",
+   "title": "Two older road bikes",
+   "price": 70.0,
+   "currency": "USD",
+   "created_at": "2026-08-13T17:11:30-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Two older road bikes, $70 each.",
+   "category": "Bicycles",
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85037",
+    "latitude": 33.4908,
+    "longitude": -112.2461
+   },
+   "distance_miles": 4.4,
+   "media": [
+    {
+     "asset_id": "429e4818bdeeb57f098edbc4",
+     "mime_type": "image/jpeg",
+     "size": 157820,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/cc4bf5edbd168da9d1539a6a.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "3314f1629fed7b24b0dacd4c",
+   "seller_id": "b613ba92cd6663e4062991e5",
+   "title": "Fireplace screen",
+   "price": 20.0,
+   "currency": "USD",
+   "created_at": "2026-08-15T14:18:53-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Black mesh fireplace screen, three panels. Rocker is not for sale.",
+   "category": "Home",
+   "location": {
+    "neighborhood": "Encanto",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85013",
+    "latitude": 33.5084,
+    "longitude": -112.0827
+   },
+   "distance_miles": 5.1,
+   "media": [
+    {
+     "asset_id": "1003394c614c74f66fad3ece",
+     "mime_type": "image/jpeg",
+     "size": 109881,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/3314f1629fed7b24b0dacd4c.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ee5042e40ed38043950936dc",
+   "seller_id": "ca9f8d58efcb19f61eab8a39",
+   "title": "Resin patio chairs",
+   "price": 72.0,
+   "currency": "USD",
+   "created_at": "2026-08-16T14:05:00-07:00",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Resin patio chairs, set of four, $72 a chair.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Laveen",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85339",
+    "latitude": 33.3419,
+    "longitude": -112.17
+   },
+   "distance_miles": 10.6,
+   "media": [
+    {
+     "asset_id": "bfb585cecb73608534efaf5f",
+     "mime_type": "image/jpeg",
+     "size": 145779,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/ee5042e40ed38043950936dc.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "38f220e855b88e3edccfeddd",
+   "seller_id": "c2a9b81515b3d5eaa0c99874",
+   "title": "Folding camp chair",
+   "price": 15.0,
+   "currency": "USD",
+   "created_at": "2026-08-17T18:33:52-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Padded folding camp chair with a cup holder.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Avondale",
+    "city": "Avondale",
+    "state": "AZ",
+    "postal_code": "85323",
+    "latitude": 33.4194,
+    "longitude": -112.3283
+   },
+   "distance_miles": 10.5,
+   "media": [
+    {
+     "asset_id": "9c42e29c03d823342786f61a",
+     "mime_type": "image/jpeg",
+     "size": 240651,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/38f220e855b88e3edccfeddd.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "5f9ff43ca0acd8d3fd5e64aa",
+   "seller_id": "5d0fe424085926694b3b701b",
+   "title": "Red garden hose, 50 ft",
+   "price": 8.0,
+   "currency": "USD",
+   "created_at": "2026-08-18T16:40:21-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Red rubber hose, 50 feet, brass ends.",
+   "category": "Garden",
+   "location": {
+    "neighborhood": "Arcadia",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85018",
+    "latitude": 33.498,
+    "longitude": -111.987
+   },
+   "distance_miles": 10.5,
+   "media": [
+    {
+     "asset_id": "7fb1729d1290dd24c258acc8",
+     "mime_type": "image/jpeg",
+     "size": 533151,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/5f9ff43ca0acd8d3fd5e64aa.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "4e52639ed4dbe24ad1018a91",
+   "seller_id": "5e292f4e33f7e0b2fd62898d",
+   "title": "Road bike, 54 cm",
+   "price": 450.0,
+   "currency": "USD",
+   "created_at": "2026-08-20T12:52:41-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Road bike, 54 cm frame. Shifts clean.",
+   "category": "Bicycles",
+   "location": {
+    "neighborhood": "Scottsdale",
+    "city": "Scottsdale",
+    "state": "AZ",
+    "postal_code": "85251",
+    "latitude": 33.494,
+    "longitude": -111.921
+   },
+   "distance_miles": 14.3,
+   "media": [
+    {
+     "asset_id": "bac6347df396a16015794912",
+     "mime_type": "image/jpeg",
+     "size": 129932,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/4e52639ed4dbe24ad1018a91.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "0a3c41d4f8dcdd944e052265",
+   "seller_id": "67fd37bc5d97ed1922037499",
+   "title": "Commuter bike",
+   "price": 80.0,
+   "currency": "USD",
+   "created_at": "2026-08-22T18:01:45-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Commuter bike with fenders and a rack.",
+   "category": "Bicycles",
+   "location": {
+    "neighborhood": "Ahwatukee",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85044",
+    "latitude": 33.329,
+    "longitude": -111.99
+   },
+   "distance_miles": 15.4,
+   "media": [
+    {
+     "asset_id": "a2679482b85bbccdb21d6fac",
+     "mime_type": "image/jpeg",
+     "size": 170019,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/0a3c41d4f8dcdd944e052265.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "a4902013148eddc5b22f483a",
+   "seller_id": "46992a2bc3a492f84f69099c",
+   "title": "Cream counter stools, pair",
+   "price": 60.0,
+   "currency": "USD",
+   "created_at": "2026-08-23T17:23:38-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Two upholstered counter stools, 26 inch seat height. Easy to wipe.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Tolleson",
+    "city": "Tolleson",
+    "state": "AZ",
+    "postal_code": "85353",
+    "latitude": 33.437,
+    "longitude": -112.259
+   },
+   "distance_miles": 6.5,
+   "media": [
+    {
+     "asset_id": "4e83e58ca162f069e56ab984",
+     "mime_type": "image/jpeg",
+     "size": 104331,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/a4902013148eddc5b22f483a.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "12f6506f3890c9d975918cc7",
+   "seller_id": "cdd46a9974ab2ffd844bf8c1",
+   "title": "Leather butterfly chair",
+   "price": 55.0,
+   "currency": "USD",
+   "created_at": "2026-08-25T10:54:26-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Butterfly chair, brown leather sling on a black frame.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Sunnyslope",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85021",
+    "latitude": 33.56,
+    "longitude": -112.095
+   },
+   "distance_miles": 6.2,
+   "media": [
+    {
+     "asset_id": "517e9ecd8f14e2ee346a0f58",
+     "mime_type": "image/jpeg",
+     "size": 120036,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/12f6506f3890c9d975918cc7.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b3276b28b673eb83c3223608",
+   "seller_id": "143a4aa15ebd70dc60b61171",
+   "title": "Lavender cruiser bike",
+   "price": 85.0,
+   "currency": "USD",
+   "created_at": "2026-08-27T21:39:05-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Women's cruiser with a basket mount and fenders. New tubes.",
+   "category": "Bicycles",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85302",
+    "latitude": 33.5675,
+    "longitude": -112.2052
+   },
+   "distance_miles": 5.4,
+   "media": [
+    {
+     "asset_id": "7686ad71c1f65136886e5b09",
+     "mime_type": "image/jpeg",
+     "size": 299150,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/b3276b28b673eb83c3223608.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "707e2a8742fbc47b8ab676fc",
+   "seller_id": "69b2e577bf0119b67602d00d",
+   "title": "Silver city bike",
+   "price": 60.0,
+   "currency": "USD",
+   "created_at": "2026-08-28T13:19:58-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Silver city bike, 28 inch wheels. Needs a new rear tire.",
+   "category": "Bicycles",
+   "location": {
+    "neighborhood": "Downtown",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85004",
+    "latitude": 33.451,
+    "longitude": -112.07
+   },
+   "distance_miles": 6.5,
+   "media": [
+    {
+     "asset_id": "17e658ee4ca9a81df440654c",
+     "mime_type": "image/jpeg",
+     "size": 214266,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/707e2a8742fbc47b8ab676fc.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "3ee45684dd2b9a31efba327e",
+   "seller_id": "fa0f484bc5b18a822e23428c",
+   "title": "Outdoor resin chairs",
+   "price": 45.0,
+   "currency": "USD",
+   "created_at": "2026-08-29T09:41:33-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "White resin chairs, four of them. Used on a covered patio. $45 a chair. Pickup in Mesa.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Mesa",
+    "city": "Mesa",
+    "state": "AZ",
+    "postal_code": "85201",
+    "latitude": 33.435,
+    "longitude": -111.847
+   },
+   "distance_miles": 19.0,
+   "media": [
+    {
+     "asset_id": "db7b56d82acd319e7dad3c27",
+     "mime_type": "image/jpeg",
+     "size": 35330,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/3ee45684dd2b9a31efba327e.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "6364af2c415f6c6c0797d287",
+   "seller_id": "4f7b18861632cf480d041dac",
+   "title": "Two small coffee tables",
+   "price": 40.0,
+   "currency": "USD",
+   "created_at": "2026-08-30T08:01:31-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Two small coffee tables, one has a magazine shelf. $40 for the pair.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "West Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85009",
+    "latitude": 33.456,
+    "longitude": -112.128
+   },
+   "distance_miles": 3.6,
+   "media": [
+    {
+     "asset_id": "b886672e7bee1beb61ed0e44",
+     "mime_type": "image/jpeg",
+     "size": 113234,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/6364af2c415f6c6c0797d287.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "1a1ceae4bafa8807d21a4514",
+   "seller_id": "90c00964a6f13e6a56750939",
+   "title": "White bookshelf",
+   "price": 40.0,
+   "currency": "USD",
+   "created_at": "2026-09-01T20:09:27-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "White metal bookshelf, four shelves. Books not included.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Litchfield Park",
+    "city": "Litchfield Park",
+    "state": "AZ",
+    "postal_code": "85340",
+    "latitude": 33.505,
+    "longitude": -112.41
+   },
+   "distance_miles": 13.9,
+   "media": [
+    {
+     "asset_id": "8061fed480eac4d6d0bc1484",
+     "mime_type": "image/jpeg",
+     "size": 129320,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/1a1ceae4bafa8807d21a4514.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "308998f1d0e265bf397239c0",
+   "seller_id": "b1ebd2da3b7720517d15c090",
+   "title": "Tall storage cabinet",
+   "price": 60.0,
+   "currency": "USD",
+   "created_at": "2026-09-02T12:03:29-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Tall cabinet with adjustable shelves and doors. Bring a dolly.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85303",
+    "latitude": 33.5251,
+    "longitude": -112.2155
+   },
+   "distance_miles": 3.4,
+   "media": [
+    {
+     "asset_id": "568251083b593fe2be072c6d",
+     "mime_type": "image/jpeg",
+     "size": 60735,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/308998f1d0e265bf397239c0.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "938066dd765fb774909596fe",
+   "seller_id": "dbcf3dd613d4897eeefd31f0",
+   "title": "Gray resin Adirondack chairs",
+   "price": 85.0,
+   "currency": "USD",
+   "created_at": "2026-09-04T10:15:00-07:00",
+   "status": "removed",
+   "visibility": "public",
+   "description": "Four gray resin Adirondack chairs. $85 a chair.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Estrella",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85043",
+    "latitude": 33.432,
+    "longitude": -112.198
+   },
+   "distance_miles": 4.6,
+   "media": [
+    {
+     "asset_id": "01f2add641aaaa0b3e88a509",
+     "mime_type": "image/jpeg",
+     "size": 82214,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/938066dd765fb774909596fe.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "722a9c0778f95b5eccd9061c",
+   "seller_id": "cbb06439024ff12facbd0c00",
+   "title": "Wicker baby bassinet",
+   "price": 30.0,
+   "currency": "USD",
+   "created_at": "2026-09-07T07:02:18-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Wicker bassinet on legs. Mattress not included.",
+   "category": "Kids",
+   "location": {
+    "neighborhood": "Chandler",
+    "city": "Chandler",
+    "state": "AZ",
+    "postal_code": "85225",
+    "latitude": 33.32,
+    "longitude": -111.845
+   },
+   "distance_miles": 22.3,
+   "media": [
+    {
+     "asset_id": "5982f24f87ac08b802d0e5e6",
+     "mime_type": "image/jpeg",
+     "size": 55717,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/722a9c0778f95b5eccd9061c.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "5185e761d7aa3b78e716e219",
+   "seller_id": "e7f286ff91d4e2c299ab3d56",
+   "title": "Black sectional sofa",
+   "price": 180.0,
+   "currency": "USD",
+   "created_at": "2026-09-15T14:52:58-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Black sectional, the chaise can go on either side. No pets, no smoking.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85303",
+    "latitude": 33.5251,
+    "longitude": -112.2155
+   },
+   "distance_miles": 3.4,
+   "media": [
+    {
+     "asset_id": "d1a85121aa3d3217ce603514",
+     "mime_type": "image/jpeg",
+     "size": 122371,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/5185e761d7aa3b78e716e219.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "9f2e8c9f4eb1612dfed2db30",
+   "seller_id": "9e34437639e20c9f3287d0d0",
+   "title": "Whirlpool washer WTW5000DW",
+   "price": 180.0,
+   "currency": "USD",
+   "created_at": "2026-09-16T14:10:00-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Whirlpool top-load washer. Model WTW5000DW. Runs. Asking $180. Pickup in the Phoenix area.",
+   "category": "Appliances",
+   "location": {
+    "neighborhood": "Tempe",
+    "city": "Tempe",
+    "state": "AZ",
+    "postal_code": "85281",
+    "latitude": 33.436,
+    "longitude": -111.93
+   },
+   "distance_miles": 14.4,
+   "media": [
+    {
+     "asset_id": "7de91600e96de9ce628f44cf",
+     "mime_type": "image/jpeg",
+     "size": 66966,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/9f2e8c9f4eb1612dfed2db30.jpg"
+     }
+    },
+    {
+     "asset_id": "24441eed8a5133e5ec6f6251",
+     "mime_type": "image/jpeg",
+     "size": 184455,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/9f2e8c9f4eb1612dfed2db30__2.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b7a93fdb45fed867574eeeec",
+   "seller_id": "b613ba92cd6663e4062991e5",
+   "title": "White resin Adirondack chairs",
+   "price": 75.0,
+   "currency": "USD",
+   "created_at": "2026-09-19T08:47:26-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four white resin Adirondack chairs. A little yard dust, they hose off. $75 each.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Encanto",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85013",
+    "latitude": 33.5084,
+    "longitude": -112.0827
+   },
+   "distance_miles": 5.1,
+   "media": [
+    {
+     "asset_id": "1837c7321a688d95872283f5",
+     "mime_type": "image/jpeg",
+     "size": 111001,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/b7a93fdb45fed867574eeeec.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ff8d7b83447a95c43c64bbb1",
+   "seller_id": "5d0fe424085926694b3b701b",
+   "title": "Heavy resin Adirondack chairs, red",
+   "price": 95.0,
+   "currency": "USD",
+   "created_at": "2026-10-03T11:05:12-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Red poly lumber Adirondack chairs, four. Heavy and solid, no fading. $95 each.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Arcadia",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85018",
+    "latitude": 33.498,
+    "longitude": -111.987
+   },
+   "distance_miles": 10.5,
+   "media": [
+    {
+     "asset_id": "f1668579a32ebb4411aaacc4",
+     "mime_type": "image/jpeg",
+     "size": 126486,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/ff8d7b83447a95c43c64bbb1.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "3a9d816fb8bbac006f7a9bd0",
+   "seller_id": "5e292f4e33f7e0b2fd62898d",
+   "title": "White slipcovered loveseat",
+   "price": 120.0,
+   "currency": "USD",
+   "created_at": "2026-10-05T12:03:04-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Loveseat with a washable white slipcover. Throws not included.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Scottsdale",
+    "city": "Scottsdale",
+    "state": "AZ",
+    "postal_code": "85251",
+    "latitude": 33.494,
+    "longitude": -111.921
+   },
+   "distance_miles": 14.3,
+   "media": [
+    {
+     "asset_id": "9cce2976859303b36a96546c",
+     "mime_type": "image/jpeg",
+     "size": 108765,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/3a9d816fb8bbac006f7a9bd0.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "51afd32609d44c88a67283d6",
+   "seller_id": "67fd37bc5d97ed1922037499",
+   "title": "Gray tufted sofa",
+   "price": 220.0,
+   "currency": "USD",
+   "created_at": "2026-10-07T07:02:51-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Gray tufted sofa, about 80 inches long. Coffee table is a separate listing.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Ahwatukee",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85044",
+    "latitude": 33.329,
+    "longitude": -111.99
+   },
+   "distance_miles": 15.4,
+   "media": [
+    {
+     "asset_id": "a28479f45dcf8436ce3bacf8",
+     "mime_type": "image/jpeg",
+     "size": 96241,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/51afd32609d44c88a67283d6.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "27333e9415dcaedce028d579",
+   "seller_id": "46992a2bc3a492f84f69099c",
+   "title": "Black leather sofa",
+   "price": 150.0,
+   "currency": "USD",
+   "created_at": "2026-10-09T10:25:17-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Black leather sofa. Comfortable, some wear on the seat cushions.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Tolleson",
+    "city": "Tolleson",
+    "state": "AZ",
+    "postal_code": "85353",
+    "latitude": 33.437,
+    "longitude": -112.259
+   },
+   "distance_miles": 6.5,
+   "media": [
+    {
+     "asset_id": "52fb2940144ce3caa4d1acfc",
+     "mime_type": "image/jpeg",
+     "size": 93201,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/27333e9415dcaedce028d579.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "7269725ff5737934d98014c3",
+   "seller_id": "bfe10f87ca002ce1bf6a0dd6",
+   "title": "Yellow plastic cruiser board, 22 in",
+   "price": 25.0,
+   "currency": "USD",
+   "created_at": "2026-10-12T17:48:30-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Small yellow plastic cruiser, 22 inches. Good for getting around the block. $25.",
+   "category": "Sporting Goods",
+   "location": {
+    "neighborhood": "Peoria",
+    "city": "Peoria",
+    "state": "AZ",
+    "postal_code": "85345",
+    "latitude": 33.5767,
+    "longitude": -112.2348
+   },
+   "distance_miles": 6.8,
+   "media": [
+    {
+     "asset_id": "b4898e7d7c58d31146a0ae29",
+     "mime_type": "image/jpeg",
+     "size": 145103,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/7269725ff5737934d98014c3.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "7014e4c2b3cf65e12b47a444",
+   "seller_id": "ef30fd79c4e1e8151d7965a0",
+   "title": "Resin patio chairs",
+   "price": 80.0,
+   "currency": "USD",
+   "created_at": "2026-10-17T15:40:00-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four resin patio chairs. Asking $80 a chair. Still in the yard in Maryvale.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85035",
+    "latitude": 33.4723,
+    "longitude": -112.1887
+   },
+   "distance_miles": 1.9,
+   "media": [
+    {
+     "asset_id": "c29d68ee12c1ed35613adf41",
+     "mime_type": "image/jpeg",
+     "size": 67623,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/7014e4c2b3cf65e12b47a444.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "742b3ecd6964a9213a870be8",
+   "seller_id": "2f5dfcd25f1cbfb29c8c39bd",
+   "title": "Resin patio chairs, four",
+   "price": 60.0,
+   "currency": "USD",
+   "created_at": "2026-10-18T11:20:00-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four resin patio chairs. Asking $60 a chair.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Alhambra",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85019",
+    "latitude": 33.5121,
+    "longitude": -112.1426
+   },
+   "distance_miles": 2.0,
+   "media": [
+    {
+     "asset_id": "662c31c6dedc7314fbb73fb8",
+     "mime_type": "image/jpeg",
+     "size": 92514,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/742b3ecd6964a9213a870be8.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "c5de5b30e8631c9f38e80e03",
+   "seller_id": "e7f286ff91d4e2c299ab3d56",
+   "title": "Complete skateboard, 8.0",
+   "price": 35.0,
+   "currency": "USD",
+   "created_at": "2026-10-21T18:03:55-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Complete board, 8.0 deck with trucks and wheels. Some wear on the tail, bearings are fine. $35.",
+   "category": "Sporting Goods",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85303",
+    "latitude": 33.5251,
+    "longitude": -112.2155
+   },
+   "distance_miles": 3.4,
+   "media": [
+    {
+     "asset_id": "c25e8922875709d838a739d7",
+     "mime_type": "image/jpeg",
+     "size": 175823,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/c5de5b30e8631c9f38e80e03.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "7e00005b0a058db894405886",
+   "seller_id": "35570a856c8bd470e1623b8c",
+   "title": "Cream three-seat sofa",
+   "price": 140.0,
+   "currency": "USD",
+   "created_at": "2026-10-22T14:19:41-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Cream sofa, three seats, firm cushions. Pickup only.",
+   "category": "Furniture",
+   "location": {
+    "neighborhood": "Tempe",
+    "city": "Tempe",
+    "state": "AZ",
+    "postal_code": "85281",
+    "latitude": 33.436,
+    "longitude": -111.93
+   },
+   "distance_miles": 14.4,
+   "media": [
+    {
+     "asset_id": "e60829c39e718d892e9d2d56",
+     "mime_type": "image/jpeg",
+     "size": 116763,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/7e00005b0a058db894405886.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "a9b8f257f0e37a27d2124597",
+   "seller_id": "9ca10814b7b1025ecf8f1d92",
+   "title": "Resin patio chair set",
+   "price": 50.0,
+   "currency": "USD",
+   "created_at": "2026-10-23T13:05:00-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four resin patio chairs in Maryvale. Condition is excellent. Asking $50 a chair.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   },
+   "distance_miles": 2.5,
+   "media": [
+    {
+     "asset_id": "f10aad97040f868df967e3a2",
+     "mime_type": "image/jpeg",
+     "size": 76524,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/a9b8f257f0e37a27d2124597.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ce5907bd1c246af14b341fd9",
+   "seller_id": "35570a856c8bd470e1623b8c",
+   "title": "Wood longboard",
+   "price": 65.0,
+   "currency": "USD",
+   "created_at": "2026-10-25T14:37:21-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Wood longboard, smooth wheels, rides straight. Pickup in Tempe. $65.",
+   "category": "Sporting Goods",
+   "location": {
+    "neighborhood": "Tempe",
+    "city": "Tempe",
+    "state": "AZ",
+    "postal_code": "85281",
+    "latitude": 33.436,
+    "longitude": -111.93
+   },
+   "distance_miles": 14.4,
+   "media": [
+    {
+     "asset_id": "95e0ca5eca7447bd5c766697",
+     "mime_type": "image/jpeg",
+     "size": 149080,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/ce5907bd1c246af14b341fd9.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "275e9d2661c919c1a892b4a8",
+   "seller_id": "78a219502d7db416897c3533",
+   "title": "Green resin patio chairs",
+   "price": 55.0,
+   "currency": "USD",
+   "created_at": "2026-10-27T19:42:18-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Four green resin patio chairs with the slatted back. Kept under a covered patio, no cracks or fading. $55 a chair. Pickup in Glendale.",
+   "category": "Patio",
+   "location": {
+    "neighborhood": "Glendale",
+    "city": "Glendale",
+    "state": "AZ",
+    "postal_code": "85301",
+    "latitude": 33.5309,
+    "longitude": -112.1781
+   },
+   "distance_miles": 2.5,
+   "media": [
+    {
+     "asset_id": "e04cdff2f3ed12c998b1864e",
+     "mime_type": "image/jpeg",
+     "size": 211134,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/275e9d2661c919c1a892b4a8.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "6390524d42515c92641052c9",
+   "seller_id": "bab1275371804d1cfbe0a7b8",
+   "title": "Skateboard complete, black and white graphic",
+   "price": 40.0,
+   "currency": "USD",
+   "created_at": "2026-10-28T20:11:07-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Black and white graphic deck, 8.25, green wheels. Ridden a few months. $40.",
+   "category": "Sporting Goods",
+   "location": {
+    "neighborhood": "Alhambra",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85019",
+    "latitude": 33.5121,
+    "longitude": -112.1426
+   },
+   "distance_miles": 2.0,
+   "media": [
+    {
+     "asset_id": "498252809b74b09c90990dd1",
+     "mime_type": "image/jpeg",
+     "size": 134633,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/6390524d42515c92641052c9.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "1a96bd3be04a699e06ba95ca",
+   "seller_id": "9e1ad2bc94e48a7c932fb84e",
+   "title": "Wilted Daisies skateboard deck, 8.25",
+   "price": 55.0,
+   "currency": "USD",
+   "created_at": "2026-10-30T19:26:40-07:00",
+   "status": "active",
+   "visibility": "public",
+   "description": "Wilted Daisies deck from Saltbush Skate Supply, 8.25 in. Bought it for my nephew and it was the wrong size. Never gripped or set up. $55.",
+   "category": "Sporting Goods",
+   "location": {
+    "neighborhood": "Maryvale",
+    "city": "Phoenix",
+    "state": "AZ",
+    "postal_code": "85033",
+    "latitude": 33.4944,
+    "longitude": -112.2134
+   },
+   "distance_miles": 2.5,
+   "media": [
+    {
+     "asset_id": "8c4d3eace1ba83625db2a4e9",
+     "mime_type": "image/jpeg",
+     "size": 128764,
+     "content_base64": {
+      "_extracted_to": "files/facebook_media/1a96bd3be04a699e06ba95ca.jpg"
+     }
+    }
+   ]
+  }
+ ],
+ "saved_items": [
+  {
+   "id": "84aa4fe43e0af2c3443793c6",
+   "user_id": "e7428f417fba5b50ebaf4c7d",
+   "item_type": "marketplace_listing",
+   "item_id": "7014e4c2b3cf65e12b47a444",
+   "created_at": "2026-10-25T19:15:00-07:00"
+  },
+  {
+   "id": "3bd7c5396fc63a865be15948",
+   "user_id": "e7428f417fba5b50ebaf4c7d",
+   "item_type": "marketplace_listing",
+   "item_id": "a9b8f257f0e37a27d2124597",
+   "created_at": "2026-10-26T11:40:00-07:00"
+  },
+  {
+   "id": "f226ce684797bbe744e8e7cc",
+   "user_id": "e7428f417fba5b50ebaf4c7d",
+   "item_type": "marketplace_listing",
+   "item_id": "9f2e8c9f4eb1612dfed2db30",
+   "created_at": "2026-09-16T19:15:00-07:00"
+  },
+  {
+   "id": "b6196d7082732f78978942d6",
+   "user_id": "e7428f417fba5b50ebaf4c7d",
+   "item_type": "post",
+   "item_id": "15dd41df8055be27097f52ce",
+   "created_at": "2026-08-09T19:36:00-07:00"
+  },
+  {
+   "id": "989ab4e0fef4b8965d4f4171",
+   "user_id": "e7428f417fba5b50ebaf4c7d",
+   "item_type": "post",
+   "item_id": "e23fbc557dc9951d7441d684",
+   "created_at": "2026-10-25T20:08:00-07:00"
+  }
+ ],
+ "current_user_id": "e7428f417fba5b50ebaf4c7d"
+}

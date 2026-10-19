@@ -896,6 +896,7 @@ export interface SearchEntry {
     | "QC spec"
     | "FAQ"
     | "Video"
+    | "Universe"
     | "Must read";
   title: string;
   hint: string;

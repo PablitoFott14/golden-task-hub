@@ -1,0 +1,56 @@
+{
+ "format": 1,
+ "universes": {
+  "kofi-mensah": {
+   "fingerprint": "b924ba3a6038c4d8e72037ce61122b1c9fb2de3a42492ee2a1ec894952e6c279",
+   "page_sha256": "c6cc1c9ac56a6034b4aceafaf1de55c71d356d950c9b0ee9b86dd99077c1a860",
+   "source": {
+    "kind": "viewer page",
+    "origin": "https://universe-viewers.vercel.app/kofi-mensah/",
+    "time": "2026-10-18T21:29:18+00:00",
+    "export": {
+     "origin": "kofi-mensah.zip",
+     "time": "2026-10-19T10:52:36+00:00",
+     "matches_page": true
+    }
+   },
+   "synced_at": "2026-10-19T11:17:36+00:00",
+   "notes": [],
+   "history": []
+  },
+  "elena-marsh": {
+   "fingerprint": "e92a54985907831121fb0a4f1cfdfcbef480c342e337928c4ec6a0a384092582",
+   "page_sha256": "83c7a89c7cb5e56713855e99c5bf8d3d6b39c307e2b2299882e91828a1a88b4f",
+   "source": {
+    "kind": "viewer page",
+    "origin": "https://universe-viewers.vercel.app/elena-marsh/",
+    "time": "2026-10-19T10:26:10+00:00",
+    "export": {
+     "origin": "elena-marsh (1).zip",
+     "time": "2026-10-19T10:50:52+00:00",
+     "matches_page": true
+    }
+   },
+   "synced_at": "2026-10-19T11:17:40+00:00",
+   "notes": [],
+   "history": []
+  },
+  "ray-castillo": {
+   "fingerprint": "21d278c0ac1ab199ae54f42beb9be9dc78c413ddb269343cb5ffc8e7b525786c",
+   "page_sha256": "358b16d75147b0b606a17fa8aaa82fa9114143cc50829f37466019325b34a417",
+   "source": {
+    "kind": "viewer page",
+    "origin": "https://universe-viewers.vercel.app/ray-castillo/",
+    "time": "2026-10-19T10:46:51+00:00",
+    "export": {
+     "origin": "ray-castillo.zip",
+     "time": "2026-10-19T10:50:36+00:00",
+     "matches_page": true
+    }
+   },
+   "synced_at": "2026-10-19T11:17:43+00:00",
+   "notes": [],
+   "history": []
+  }
+ }
+}

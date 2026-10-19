@@ -1,0 +1,1180 @@
+{
+ "events": [
+  {
+   "event_id": "b8f40e6a2c17d9003e5a91c0",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1777115700.0,
+   "end_datetime": 1777134600.0,
+   "tag": "work",
+   "description": "New tent weights in the van.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "3c71a9e04d2bf8016a5e2d47",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1777720500.0,
+   "end_datetime": 1777739400.0,
+   "tag": "work",
+   "description": "Rhubarb galettes, country sourdough, cinnamon rolls.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "1d02e41eebea4d7f912668fe",
+   "title": "Sourwood class planning",
+   "start_datetime": 1778076000.0,
+   "end_datetime": 1778077800.0,
+   "tag": "work",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Elena Marsh",
+    "Bea"
+   ]
+  },
+  {
+   "event_id": "d41f8a2c7e9b05d3c6a1f0e8",
+   "title": "Hazel home",
+   "start_datetime": 1778299200.0,
+   "end_datetime": 1778385599.0,
+   "tag": "personal",
+   "description": null,
+   "location": "214 Westwood Pl",
+   "attendees": [
+    "Elena Marsh",
+    "Hazel Marsh"
+   ]
+  },
+  {
+   "event_id": "7c2e91b04fd36a58e1b7c40d",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1778325300.0,
+   "end_datetime": 1778344200.0,
+   "tag": "work",
+   "description": "Mother's Day weekend: extra cinnamon rolls and the lemon loaves.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "a4d17b9e2c05f63a8e1db740",
+   "title": "Sourwood workshop: Sourdough Fundamentals",
+   "start_datetime": 1778508000.0,
+   "end_datetime": 1778518800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Sourwood Culinary Studio, Asheville",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "b10c7d49e2a6f3085d91be47",
+   "title": "NAABE Expo, day 2",
+   "start_datetime": 1779199200.0,
+   "end_datetime": 1779208200.0,
+   "tag": "work",
+   "description": "Laminated dough lab and show floor. Leave McCormick Place in time for UA 5397 out of O'Hare.",
+   "location": "McCormick Place, Chicago, IL",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "7d04f1b8c3e2a95b60d71e2c",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1778930100.0,
+   "end_datetime": 1778949000.0,
+   "tag": "work",
+   "description": "Strawberry hand pies at the stand, two trays.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "0b7f4d2a9e61c38f7a5d2e06",
+   "title": "Flight AVL to ORD (UA 5412)",
+   "start_datetime": 1779051900.0,
+   "end_datetime": 1779058920.0,
+   "tag": "work",
+   "description": "Luis closes the café. Conf K7QZ4M.",
+   "location": "Asheville Regional Airport (AVL)",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "d6e1a8c35b0f92e7c4a1d8b3",
+   "title": "NAABE Expo",
+   "start_datetime": 1779076800.0,
+   "end_datetime": 1779163199.0,
+   "tag": "work",
+   "description": "Full Expo Pass, order NAABE26-03184. Lakeshore Grand Hotel Chicago, conf 58219364.",
+   "location": "McCormick Place, Chicago, IL",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "48c9f2e6a1d03b75e8f4c2a9",
+   "title": "Flight ORD to AVL (UA 5397)",
+   "start_datetime": 1779214800.0,
+   "end_datetime": 1779221640.0,
+   "tag": "work",
+   "description": "Conf K7QZ4M.",
+   "location": "O'Hare International Airport (ORD)",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "a96e2d5c08f1b3740e9a6c2d",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1779534900.0,
+   "end_datetime": 1779553800.0,
+   "tag": "work",
+   "description": "Memorial Day weekend crowd. Double the sourdough.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "15c8b3e7a0d24f9e81b5c0a6",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1780139700.0,
+   "end_datetime": 1780158600.0,
+   "tag": "work",
+   "description": "Strawberry rhubarb hand pies. Bring the second card reader.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "f40d9a62c1e7b58301f4d9b2",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1780744500.0,
+   "end_datetime": 1780763400.0,
+   "tag": "work",
+   "description": "Seeded rye and the first blueberry muffins.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "e58a03d7c1f94b26a0d8e3f5",
+   "title": "Dentist: cleaning with Dr. Shah",
+   "start_datetime": 1781010000.0,
+   "end_datetime": 1781013600.0,
+   "tag": "personal",
+   "description": "Confirmed by text. Call (828) 555-0124 to reschedule.",
+   "location": "Westgate Family Dentistry, 40 Westgate Pkwy, Suite 2",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "62b1e8f05a3c9d7420b6e1f8",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1781349300.0,
+   "end_datetime": 1781368200.0,
+   "tag": "work",
+   "description": "Bring the shade sail; forecast hot.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "f1c49a7e0b36d82f5e19a4c0",
+   "title": "Q2 estimated tax due",
+   "start_datetime": 1781496000.0,
+   "end_datetime": 1781582399.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "3f6b0c8e2a17d94f5c3e8b01",
+   "title": "Ridgeline Home Repair: gutters and porch step",
+   "start_datetime": 1781611200.0,
+   "end_datetime": 1781622000.0,
+   "tag": "personal",
+   "description": "Gutter cleaning and porch tread, $385.00. Side gate on the left, crew parks in the driveway.",
+   "location": "214 Westwood Pl",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "c83f5a1d97e0b264f1c83a5e",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1781954100.0,
+   "end_datetime": 1781973000.0,
+   "tag": "work",
+   "description": "Peach galettes, sourdough, morning buns.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "a1d94e6f08b3c27e5f90a4c6",
+   "title": "Hike: Craggy Gardens w/ Gloria and Ben",
+   "start_datetime": 1782072000.0,
+   "end_datetime": 1782077400.0,
+   "tag": "personal",
+   "description": "Meet at the visitor center lot.",
+   "location": "Craggy Gardens Visitor Center, Blue Ridge Pkwy",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "0e7a4c92b6d1f358a0e7c4b9",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1782558900.0,
+   "end_datetime": 1782577800.0,
+   "tag": "work",
+   "description": "Blueberry hand pies and the honey oat loaves.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "9b25d0e8f3a17c46b9d20e5f",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1783163700.0,
+   "end_datetime": 1783182600.0,
+   "tag": "work",
+   "description": "Fourth of July, extra hand pies",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "5b08e3c7f2a6d1e94b7c0f38",
+   "title": "Oil change: Firestone",
+   "start_datetime": 1783429200.0,
+   "end_datetime": 1783432800.0,
+   "tag": "personal",
+   "description": "Full synthetic oil change.",
+   "location": "Firestone Complete Auto Care, 1033 Patton Ave",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "d1f6a38c0e5b92740d1f6a3c",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1783768500.0,
+   "end_datetime": 1783787400.0,
+   "tag": "work",
+   "description": "Peach galettes and focaccia.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "48e0c7b2a9d3f15e64a8c0b7",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1784373300.0,
+   "end_datetime": 1784392200.0,
+   "tag": "work",
+   "description": "Tomato focaccia, morning buns, sourdough.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "b5a39e1f6c0d48270b5a39e2",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1784978100.0,
+   "end_datetime": 1784997000.0,
+   "tag": "work",
+   "description": "Blackberry galettes. Extra ice in the cooler.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "e7a3c1d9f20b84e6a5c3d7f1",
+   "title": "Call - Hal Greer",
+   "start_datetime": 1785439800.0,
+   "end_datetime": 1785442500.0,
+   "tag": "work",
+   "description": null,
+   "location": "Phone",
+   "attendees": [
+    "Elena Marsh",
+    "Hal Greer"
+   ]
+  },
+  {
+   "event_id": "2f8c6d04e1a7b9353f8c6d1a",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1785582900.0,
+   "end_datetime": 1785601800.0,
+   "tag": "work",
+   "description": "Peach and blackberry hand pies.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "2b7f04c9e1a83d56f0c2e914",
+   "title": "Piedmont delivery",
+   "start_datetime": 1786098600.0,
+   "end_datetime": 1786100400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "e6d1b07a3f925c48e6d1b07f",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1786187700.0,
+   "end_datetime": 1786206600.0,
+   "tag": "work",
+   "description": "First market on the new Piedmont flour. Watch the sourdough proof.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "4b9d2e6a8c1f03d7e5a2b9c4",
+   "title": "Hal - review demand letter",
+   "start_datetime": 1786384800.0,
+   "end_datetime": 1786387500.0,
+   "tag": "work",
+   "description": null,
+   "location": "Phone",
+   "attendees": [
+    "Elena Marsh",
+    "Hal Greer"
+   ]
+  },
+  {
+   "event_id": "8d13e6a0f5b29c47d1e08a35",
+   "title": "Piedmont delivery",
+   "start_datetime": 1786456800.0,
+   "end_datetime": 1786458600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "f4a09c2e7b16d58a3e0f9c71",
+   "title": "Piedmont delivery",
+   "start_datetime": 1786703400.0,
+   "end_datetime": 1786705200.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "71c4e9a26b08d3f571c4e9a0",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1786792500.0,
+   "end_datetime": 1786811400.0,
+   "tag": "work",
+   "description": "Tomato focaccia and the last of the peaches.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "c4f7a2e09d6b31f58e2a7d90",
+   "title": "Hazel back to Chapel Hill",
+   "start_datetime": 1786852800.0,
+   "end_datetime": 1786939199.0,
+   "tag": "personal",
+   "description": "Hazel drives back for fall move-in, leaving around 11.",
+   "location": "UNC Chapel Hill",
+   "attendees": [
+    "Elena Marsh",
+    "Hazel Marsh"
+   ]
+  },
+  {
+   "event_id": "8f1d3a6c2e94b07a5d18c3e2",
+   "title": "Espresso machine service",
+   "start_datetime": 1787058000.0,
+   "end_datetime": 1787063400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill Bakehouse, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "13c8e5f0a92d47b6e1f03a8c",
+   "title": "Piedmont delivery",
+   "start_datetime": 1787061600.0,
+   "end_datetime": 1787063400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "a6e2d9047c1b85f3d0e6a2b9",
+   "title": "Piedmont delivery",
+   "start_datetime": 1787308200.0,
+   "end_datetime": 1787310000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "a0f7c35e8d19b246a0f7c35b",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1787397300.0,
+   "end_datetime": 1787416200.0,
+   "tag": "work",
+   "description": "Back to school weekend. Cinnamon rolls and sourdough.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "9e3d6b1f47c0a85e2d6f1b4a",
+   "title": "Westwood Pl block party",
+   "start_datetime": 1787428800.0,
+   "end_datetime": 1787436000.0,
+   "tag": "personal",
+   "description": "Bringing two loaves and a tray of cookies.",
+   "location": "Westwood Pl, Asheville",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "5f0b3a8e2c96d14f7a0e3b58",
+   "title": "Piedmont delivery",
+   "start_datetime": 1787666400.0,
+   "end_datetime": 1787668200.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "bd3ef38cca1803227a893370",
+   "title": "Sourwood class planning",
+   "start_datetime": 1787760000.0,
+   "end_datetime": 1787761800.0,
+   "tag": "work",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Elena Marsh",
+    "Bea"
+   ]
+  },
+  {
+   "event_id": "c9d47e1a0b63f85c2d9e4a07",
+   "title": "Piedmont delivery",
+   "start_datetime": 1787913000.0,
+   "end_datetime": 1787914800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "5d3b8f1c0a6e294d5d3b8f17",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1788002100.0,
+   "end_datetime": 1788021000.0,
+   "tag": "work",
+   "description": "Fig and honey galettes.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "0e8a6c3f5d21b97e4c0a8f13",
+   "title": "Piedmont delivery",
+   "start_datetime": 1788271200.0,
+   "end_datetime": 1788273000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "7b35f1d0e8a46c29b5f1d3e6",
+   "title": "Piedmont delivery",
+   "start_datetime": 1788517800.0,
+   "end_datetime": 1788519600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "c2e9064b7f3a18d5c2e9064e",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1788606900.0,
+   "end_datetime": 1788625800.0,
+   "tag": "work",
+   "description": "Labor Day weekend. Double batch of morning buns.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "e2f09a7c4b1d68e3a2f0c95b",
+   "title": "Piedmont delivery",
+   "start_datetime": 1788876000.0,
+   "end_datetime": 1788877800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "49a6c2e8f03b7d15c4a9e2f0",
+   "title": "Piedmont delivery",
+   "start_datetime": 1789122600.0,
+   "end_datetime": 1789124400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "86a1d5f2c09e3b7486a1d5f9",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1789211700.0,
+   "end_datetime": 1789230600.0,
+   "tag": "work",
+   "description": "First apple hand pies.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "0e5bc8a247f19d3eb60c2a7f",
+   "title": "Q3 estimated tax due",
+   "start_datetime": 1789444800.0,
+   "end_datetime": 1789531199.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "d1e7b04a9c25f6e8d1b3a074",
+   "title": "Piedmont delivery",
+   "start_datetime": 1789480800.0,
+   "end_datetime": 1789482600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "86c3f9e2a07d4b51e6c8f3a9",
+   "title": "Piedmont delivery",
+   "start_datetime": 1789727400.0,
+   "end_datetime": 1789729200.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "1b7e4a0d93c6f2581b7e4a03",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1789816500.0,
+   "end_datetime": 1789835400.0,
+   "tag": "work",
+   "description": "Cider donut test batch at the café today. Fall menu starts Wed.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "3e8c06f2b9a14d75c2e091fb",
+   "title": "Sourwood workshop: Rye and Whole Grain",
+   "start_datetime": 1789999200.0,
+   "end_datetime": 1790010000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Sourwood Culinary Studio, Asheville",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "3a0d5e8c1f94b27a6d0e5c82",
+   "title": "Piedmont delivery",
+   "start_datetime": 1790085600.0,
+   "end_datetime": 1790087400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "bf62a1d7e39c08f4b2a6d1e5",
+   "title": "Piedmont delivery",
+   "start_datetime": 1790332200.0,
+   "end_datetime": 1790334000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "f9c03e6a1b8d47d2f9c03e64",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1790421300.0,
+   "end_datetime": 1790440200.0,
+   "tag": "work",
+   "description": "Apple hand pies, cider donuts, seeded rye.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "24e9c7b0d5a16f38e2c4b9d0",
+   "title": "Piedmont delivery",
+   "start_datetime": 1790690400.0,
+   "end_datetime": 1790692200.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "9c5b1f3e6a0d82c7f9b5e1a4",
+   "title": "Piedmont delivery",
+   "start_datetime": 1790937000.0,
+   "end_datetime": 1790938800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "34d8b2f7e0a5c96134d8b2f1",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1791026100.0,
+   "end_datetime": 1791045000.0,
+   "tag": "work",
+   "description": "Pumpkin loaf and cider donuts.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "61f8d2a4c7e30b95d6a1f8c2",
+   "title": "Piedmont delivery",
+   "start_datetime": 1791295200.0,
+   "end_datetime": 1791297000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "ed04a9b6f2c18e73a0d4b6f9",
+   "title": "Piedmont delivery",
+   "start_datetime": 1791541800.0,
+   "end_datetime": 1791543600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "e07b5c19a4f2d863e07b5c1d",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1791630900.0,
+   "end_datetime": 1791649800.0,
+   "tag": "work",
+   "description": "Pumpkin loaf, apple hand pies, sourdough.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "6e1b9d4f2a7c0e5b8d3f6a1c",
+   "title": "Test bake w/ June",
+   "start_datetime": 1791892800.0,
+   "end_datetime": 1791900000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill Bakehouse, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh",
+    "June Okafor"
+   ]
+  },
+  {
+   "event_id": "72b1e5c8d93f0a46b7e2c5d1",
+   "title": "Piedmont delivery",
+   "start_datetime": 1791900600.0,
+   "end_datetime": 1791902400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "c80f3a6d1e5b29c4f8a0d3e7",
+   "title": "Piedmont delivery",
+   "start_datetime": 1792146600.0,
+   "end_datetime": 1792148400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "6a2f9d84c1b07e356a2f9d8b",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1792235700.0,
+   "end_datetime": 1792254600.0,
+   "tag": "work",
+   "description": "Pumpkin loaf and pear galettes.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "f1a5d8c2e7b04936d0c5a8e7",
+   "title": "Test bake w/ June",
+   "start_datetime": 1792501200.0,
+   "end_datetime": 1792504800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill Bakehouse, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh",
+    "June Okafor"
+   ]
+  },
+  {
+   "event_id": "6d2b9e0f3a84c17e5b9d2f60",
+   "title": "Piedmont delivery",
+   "start_datetime": 1792504800.0,
+   "end_datetime": 1792506600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "d7a2c6f1e9b4d0a8c3f7e2b6",
+   "title": "Staff dinner - Sorrel & Pine",
+   "start_datetime": 1794265200.0,
+   "end_datetime": 1794274200.0,
+   "tag": "work",
+   "description": "Back room, party of 12, deposit paid.",
+   "location": "Sorrel & Pine, 588 Haywood Rd",
+   "attendees": [
+    "Luis Ortega",
+    "June Okafor",
+    "Priya Raman",
+    "Marco Ruiz",
+    "Noor Haddad",
+    "Eli Brandt",
+    "Sasha Kim",
+    "Caleb Dunn",
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "2b8e5a1d7f4c0b3e6a9d2f8c",
+   "title": "L - 5 yrs",
+   "start_datetime": 1794114000.0,
+   "end_datetime": 1794200399.0,
+   "tag": "work",
+   "description": null,
+   "location": null,
+   "attendees": []
+  },
+  {
+   "event_id": "9c4f0e7b3a6d1c8f5b2e9a4d",
+   "title": "Pick up cake from café",
+   "start_datetime": 1794261600.0,
+   "end_datetime": 1794262800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Marsh & Mill Bakehouse, 731 Haywood Rd",
+   "attendees": []
+  },
+  {
+   "event_id": "c5e19a3f72d084b6e1a9c3f7",
+   "title": "Permit renewal due",
+   "start_datetime": 1796014800.0,
+   "end_datetime": 1796101199.0,
+   "tag": "work",
+   "description": "Market stand permit TFE-11-0417, $150.",
+   "location": null,
+   "attendees": []
+  },
+  {
+   "event_id": "d70a5c3e91b4f28d06a7e5c3",
+   "title": "CPA: Priscilla Vance (2026 planning)",
+   "start_datetime": 1794927600.0,
+   "end_datetime": 1794933000.0,
+   "tag": "work",
+   "description": "Deductions packet due to Priscilla this week.",
+   "location": "Vance & Fields CPA PLLC, 22 Biltmore Ave, Suite 300, Asheville",
+   "attendees": [
+    "Elena Marsh",
+    "Priscilla Vance"
+   ]
+  },
+  {
+   "event_id": "b9e6031d7c5a4f28b9e6031a",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1792840500.0,
+   "end_datetime": 1792859400.0,
+   "tag": "work",
+   "description": "Bennett hummingbird cake pickup at the stand.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "70afb7f125144404ec49452c",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1793445300.0,
+   "end_datetime": 1793464200.0,
+   "tag": "work",
+   "description": "Halloween market. Pumpkin loaf and cider donuts.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "b8f698e0cbefd81bfc68b0e0",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1794053700.0,
+   "end_datetime": 1794072600.0,
+   "tag": "work",
+   "description": "Pear galettes and cranberry orange scones.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "f33eaf1b444b54358fe9bddc",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1794658500.0,
+   "end_datetime": 1794677400.0,
+   "tag": "work",
+   "description": "Taking Thanksgiving pie orders at the stand too. Pickup at the café the Wednesday before Thanksgiving.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "5c740d055982b720b65eb468",
+   "title": "Farmers market - North Asheville",
+   "start_datetime": 1795263300.0,
+   "end_datetime": 1795282200.0,
+   "tag": "work",
+   "description": "Last market of the season. Load-out after close.",
+   "location": "North Asheville Farmers Market",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "6b2fe0d83a94c15e7f02b6a8",
+   "title": "Q4 estimated tax due",
+   "start_datetime": 1799989200.0,
+   "end_datetime": 1800075599.0,
+   "tag": "personal",
+   "description": "IRS 1040-ES and NC-40, from MCU checking",
+   "location": null,
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "82a6d612e96e7df5193248b8",
+   "title": "Piedmont delivery",
+   "start_datetime": 1792751400.0,
+   "end_datetime": 1792753200.0,
+   "tag": "work",
+   "description": "",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "f5f67adcd505cb73634a25a4",
+   "title": "Piedmont delivery",
+   "start_datetime": 1793109600.0,
+   "end_datetime": 1793111400.0,
+   "tag": "work",
+   "description": "",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "e0198932f6bd6d14b320c5d1",
+   "title": "Piedmont delivery",
+   "start_datetime": 1793356200.0,
+   "end_datetime": 1793358000.0,
+   "tag": "work",
+   "description": "",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "9ab1420d00c099155a053536",
+   "title": "Piedmont delivery",
+   "start_datetime": 1793718000.0,
+   "end_datetime": 1793719800.0,
+   "tag": "work",
+   "description": "",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "1991f6d64d664fe1ec3c2ec7",
+   "title": "Piedmont delivery",
+   "start_datetime": 1793964600.0,
+   "end_datetime": 1793966400.0,
+   "tag": "work",
+   "description": "",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "7e770e8b815a6019e16bcafd",
+   "title": "Piedmont delivery",
+   "start_datetime": 1794322800.0,
+   "end_datetime": 1794324600.0,
+   "tag": "work",
+   "description": "",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "b2424e4338172bf03ab71b84",
+   "title": "Piedmont delivery",
+   "start_datetime": 1794569400.0,
+   "end_datetime": 1794571200.0,
+   "tag": "work",
+   "description": "",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "a6f90ece1ad1f464c63de417",
+   "title": "Piedmont delivery",
+   "start_datetime": 1794927600.0,
+   "end_datetime": 1794929400.0,
+   "tag": "work",
+   "description": "Marco takes it. I'm at Priscilla's.",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Marco Ruiz"
+   ]
+  },
+  {
+   "event_id": "94f6d11711158d1d60511f95",
+   "title": "Piedmont delivery",
+   "start_datetime": 1795174200.0,
+   "end_datetime": 1795176000.0,
+   "tag": "work",
+   "description": "",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "5fec990444a475f311cae6d4",
+   "title": "Piedmont delivery",
+   "start_datetime": 1795532400.0,
+   "end_datetime": 1795534200.0,
+   "tag": "work",
+   "description": "",
+   "location": "Marsh & Mill, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "1b72af88143b7e38be0f892d",
+   "title": "Water heater: Blue Ridge Plumbing",
+   "start_datetime": 1777291200.0,
+   "end_datetime": 1777305600.0,
+   "tag": "personal",
+   "description": "Home warranty claim HW-570214. $100 service fee at the visit.",
+   "location": "214 Westwood Pl",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "ceb21b46fbb9a01dd0700b6a",
+   "title": "Hazel: dentist, Dr. Patel",
+   "start_datetime": 1795621200.0,
+   "end_datetime": 1795624800.0,
+   "tag": "personal",
+   "description": "Cleaning and checkup. Dr. Patel is checking the cold-sensitive back tooth.",
+   "location": "Westgate Family Dentistry, 40 Westgate Pkwy, Suite 2",
+   "attendees": [
+    "Hazel Marsh"
+   ]
+  },
+  {
+   "event_id": "8ebe81b8b1ad6c20b92988df",
+   "title": "Deck oven repair",
+   "start_datetime": 1787853600.0,
+   "end_datetime": 1787857200.0,
+   "tag": "work",
+   "description": "Left side running about 25 degrees under the dial.",
+   "location": "Marsh & Mill Bakehouse, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "2bc94974e98838b6a6ee328c",
+   "title": "Book club at June's",
+   "start_datetime": 1792882800.0,
+   "end_datetime": 1792887300.0,
+   "tag": "personal",
+   "description": "Bring bread and the whipped feta.",
+   "location": null,
+   "attendees": [
+    "Elena Marsh",
+    "June Okafor"
+   ]
+  },
+  {
+   "event_id": "1e70051882eb8416b895d929",
+   "title": "Walk-in repair: Smoky Mtn Refrigeration",
+   "start_datetime": 1782225000.0,
+   "end_datetime": 1782237600.0,
+   "tag": "work",
+   "description": "Walk-in reading 46 since Sunday. Dairy stays in the reach-ins until it's fixed.",
+   "location": "Marsh & Mill Bakehouse, 731 Haywood Rd",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  },
+  {
+   "event_id": "f66332c42e617ef1b5d4d9f3",
+   "title": "Hike: Bent Creek w/ Gloria",
+   "start_datetime": 1786303800.0,
+   "end_datetime": 1786309200.0,
+   "tag": "personal",
+   "description": "Storms later. Ben's at the soccer tournament.",
+   "location": "Bent Creek Experimental Forest",
+   "attendees": [
+    "Elena Marsh"
+   ]
+  }
+ ]
+}

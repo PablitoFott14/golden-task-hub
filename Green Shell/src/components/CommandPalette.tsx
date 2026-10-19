@@ -18,6 +18,8 @@ const kindTone: Record<SearchEntry["kind"], string> = {
   "QC spec": "bg-sky-500/12 text-sky-700 dark:text-sky-300",
   FAQ: "bg-violet-500/12 text-violet-700 dark:text-violet-300",
   Video: "bg-amber-500/12 text-amber-700 dark:text-amber-300",
+  // Brand indigo, the colour of the Universe Viewers card that leads here.
+  Universe: "bg-brand-500/15 text-brand-700 dark:text-brand-300",
   "Must read": "bg-rose-500/12 text-rose-700 dark:text-rose-300",
 };
 

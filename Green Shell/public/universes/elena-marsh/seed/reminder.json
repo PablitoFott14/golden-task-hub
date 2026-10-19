@@ -1,0 +1,391 @@
+{
+ "reminders": [
+  {
+   "reminder_id": "7e3b91c0a4d852f6e1b70c39",
+   "title": "Send Sourwood the class handout",
+   "due_datetime": 1778268600.0,
+   "description": "Sourdough Fundamentals, Mon 5/11, 12 students. They print copies, need it by Fri 5/8.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1778182200.0
+  },
+  {
+   "reminder_id": "c58a0f2d6e91b34c7a05d8e2",
+   "title": "Starter for 12, Sourwood class",
+   "due_datetime": 1778500800.0,
+   "description": "Setup from 9:15, class 10 to 1. Bring my bench scrapers. $900 fee by check at the end.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1778500800.0
+  },
+  {
+   "reminder_id": "2d9f64a10bc7e835f6a219d4",
+   "title": "Certificate of insurance to market board",
+   "due_datetime": 1777989600.0,
+   "description": "Due Fri 5/15. Market listed as holder and additional insured, policy BOP-NC-2026-118407. No setup on 5/16 without it.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1777989600.0
+  },
+  {
+   "reminder_id": "a1c6e07b3f95d2480e6cb7a3",
+   "title": "Out the door by 2:30 for AVL",
+   "due_datetime": 1779040800.0,
+   "description": "UA 5412 flight leaves at 5:05, conf K7QZ4M. Luis has the Sunday close.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1779040800.0
+  },
+  {
+   "reminder_id": "5b07d3e9c1a64f829d0be57c",
+   "title": "Dentist cleaning, Dr. Shah",
+   "due_datetime": 1781006400.0,
+   "description": "Westgate Family Dentistry at 9:00, 40 Westgate Pkwy, Suite 2. Call (828) 555-0124 to move it.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781006400.0
+  },
+  {
+   "reminder_id": "e94d2a8c07f1b6e35c9a0d41",
+   "title": "Q2 estimates (IRS + NC)",
+   "due_datetime": 1781524800.0,
+   "description": "$4,800 federal 1040-ES and $1,150 NC-40 from personal checking 1904. Save both confirmations to Tax/2026.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781524800.0
+  },
+  {
+   "reminder_id": "0f8e5c3a9b14d7e6a20c63f9",
+   "title": "Greer Law retainer, $1,500",
+   "due_datetime": 1785762000.0,
+   "description": "ACH from business checking to Greer Law PLLC. Hal bills $250 an hour against it.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785762000.0
+  },
+  {
+   "reminder_id": "b6a2f91d4e073c58d1b9e40a",
+   "title": "Send Hal the Blue Ridge Mill paperwork",
+   "due_datetime": 1785956400.0,
+   "description": "Scan the July temp log and pull up the 2024 supply agreement first, then send it all in one email.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785956400.0
+  },
+  {
+   "reminder_id": "3c710e9bf5a482d6c3e07b1f",
+   "title": "Pay UNC fall bill, my share $4,215",
+   "due_datetime": 1786712400.0,
+   "description": "Hazel thinks it's due the 21st. Move $4,000 from savings to checking first.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786712400.0
+  },
+  {
+   "reminder_id": "d82e6b4f1a09c7e53f6da92b",
+   "title": "Espresso service at 9, back door",
+   "due_datetime": 1787054400.0,
+   "description": "Carolina Espresso: descale and new group gaskets. Machine on and up to temp by 8:30. Bill the Visa on file.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787054400.0
+  },
+  {
+   "reminder_id": "6a4fc2e8d0739b51e8a60f3c",
+   "title": "Block party at 4: two loaves and cookies",
+   "due_datetime": 1787423400.0,
+   "description": "Saturday on Westwood, sign-up sheet on Tamsin's porch. Walt has the smoker, sides still needed.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787423400.0
+  },
+  {
+   "reminder_id": "f17c3a0e8d65b29f4c1e7a08",
+   "title": "Order Hazel's orgo book",
+   "due_datetime": 1789390800.0,
+   "description": "Klein, 4th edition, for Chem 261. Link is in her texts. First quiz Thursday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789390800.0
+  },
+  {
+   "reminder_id": "81d3b7f0e6c24a950d7ec3b8",
+   "title": "Q3 estimates (IRS + NC)",
+   "due_datetime": 1789473600.0,
+   "description": "Same as June: $4,800 IRS Direct Pay and $1,150 NCDOR from 1904. Set the Q4 reminder after.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789473600.0
+  },
+  {
+   "reminder_id": "4e9a06d1c5b8f372a6e01d94",
+   "title": "Send Sourwood the rye class handout",
+   "due_datetime": 1789673400.0,
+   "description": "Rye and Whole Grain Sourdough, Mon 9/21. 14 enrolled, they added a bench.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789673400.0
+  },
+  {
+   "reminder_id": "c06b8e3f2d7a51c9b4f8e2a6",
+   "title": "Rye starter to Sourwood, there by 9",
+   "due_datetime": 1789992000.0,
+   "description": "Class 10 to 1, same room as May. $1,050 check at the end.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789992000.0
+  },
+  {
+   "reminder_id": "9a2d5f71e0b4c86e3a19f7d0",
+   "title": "Post the fall menu",
+   "due_datetime": 1790166600.0,
+   "description": "Starts Wed 9/23. Cider donuts Sat and Sun only, June leads pastry. Told Luis I'd post Monday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789993800.0
+  },
+  {
+   "reminder_id": "27f5c9a3b1e80d64f2c7a59e",
+   "title": "Feldman cake to the market stand",
+   "due_datetime": 1790418600.0,
+   "description": "Saturday pickup at the stand, 8 to 12. Chocolate with the green toy dinosaur, no writing. $42 balance.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790418600.0
+  },
+  {
+   "reminder_id": "e3c0a7b65d92f14e8b0c2e7d",
+   "title": "Pay Greer Law statement, $725.00",
+   "due_datetime": 1790946000.0,
+   "description": "September statement: $2,225.00 in fees less the $1,500.00 retainer. Due on receipt, ACH from business checking.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790946000.0
+  },
+  {
+   "reminder_id": "5d8b1e46a3f0c97d2b5e0a81",
+   "title": "Pears for Tuesday test bake",
+   "due_datetime": 1791828000.0,
+   "description": "June at 8:00, back door, before the Piedmont truck. She brings the rye caramel.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791828000.0
+  },
+  {
+   "reminder_id": "4f2c8e0a6d91b37f5e2c0a84",
+   "title": "Match Oct slips to Piedmont invoices",
+   "due_datetime": 1792497600.0,
+   "description": "October slip photos in Deliveries/2026-10 against the Piedmont invoice PDFs. Fill in Rec'd in Bakehouse Ops and tick Qty checked.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792497600.0
+  },
+  {
+   "reminder_id": "d6a0b3e95f1c47a28e0b5c13",
+   "title": "Piedmont: charged twice on the 9th?",
+   "due_datetime": 1792497600.0,
+   "description": "Saw two $1,186.40 Piedmont lines on the Visa around the 9th. Check against invoice 4468.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792497600.0
+  },
+  {
+   "reminder_id": "e9b5a1d3f70c26e8b4a9d1f5",
+   "title": "Send Piedmont order for Tue 10/20",
+   "due_datetime": 1792418400.0,
+   "description": "Check the stock sheet in Bakehouse Ops, then send to orders@ before noon.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792418400.0
+  },
+  {
+   "reminder_id": "a07ed4c29f1b6e83c5a0b39f",
+   "title": "Box the Bennett hummingbird cake",
+   "due_datetime": 1792778400.0,
+   "description": "June checks the frosting first. Rides to market in the cooler Sat 10/24. $95 balance at pickup, her brother may come.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "1b6f8a3dc0e57942e1d6f0a3",
+   "title": "Review Business Visa statement before autopay",
+   "due_datetime": 1792783800.0,
+   "description": "Closes the 22nd, autopay in full from business checking on the 17th. Flag anything personal before it goes to Priscilla.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "3d7a0e6c2b84f19d7a3e0c62",
+   "title": "Ask Dana about Piedmont net-30 terms",
+   "due_datetime": 1793023200.0,
+   "description": "Application went in when the account opened 08-03. Still paying each delivery on the Visa.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "47e1c9b3f6a0d5e8c2b7f4a1",
+   "title": "Final head count to Sorrel & Pine",
+   "due_datetime": 1793368800.0,
+   "description": "Staff plus-ones are due today. Sorrel & Pine needs the final count by Thu 11/5. Booked for 12.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f5e20c97b84a3d1f6e0b95c7",
+   "title": "Winter market: answer the board",
+   "due_datetime": 1793388600.0,
+   "description": "First Saturdays of Dec, Jan and Feb. Reply to board@ by Fri 10/30 if we're in.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6c39e1a507d8b2f4a9c61e0d",
+   "title": "Café rent, $4,850 to Haywood Road Properties",
+   "due_datetime": 1793534400.0,
+   "description": "Due on the 1st by ACH from business checking 5520.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "d0a47f2ce9b153e80c6af4d7",
+   "title": "Mortgage payment, Mountain CU 7740",
+   "due_datetime": 1793536200.0,
+   "description": "$1,524.05 from personal checking 1904: $1,081.55 principal and interest plus $442.50 escrow.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "8f1eb5c3a26d0e974b3fc8a1",
+   "title": "Owner draw, 1st of the month",
+   "due_datetime": 1793538000.0,
+   "description": "$3,500 from business checking 5520 to personal checking 1904. A draw, not a business expense.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "3a7d0b9ef6c1d485e2a76c0f",
+   "title": "Zelle Hazel $250",
+   "due_datetime": 1793539800.0,
+   "description": "Monthly allowance from Mountain CU checking, after the 1st draw lands.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "0f6c3a9e5d2b8f1c4a7e0d3b",
+   "title": "Pick up order - Carolina Knife Works",
+   "due_datetime": 1793631600.0,
+   "description": "Order CKW-20417, already paid. Open Mon to Sat 10 to 6.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a8d5b1f7c4e0a3d9b6f2c8e5",
+   "title": "Cake boxes 10\" for 11/9",
+   "due_datetime": 1793973600.0,
+   "description": "Pull two from dry storage before the Saturday count.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b92c4e0a7d36f18bc5e9a24d",
+   "title": "Save a slice for Hazel",
+   "due_datetime": 1794259800.0,
+   "description": "Freeze one slice of the pear cake before it goes to Sorrel & Pine. Promised her on 10/18.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "27d6a0e3c94f1b58e72a0d6c",
+   "title": "Deductions packet to Priscilla",
+   "due_datetime": 1794578400.0,
+   "description": "2026 YTD deductions for the 11/17 meeting. Business and personal in separate sections. Due Fri 11/13.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "0e5ba8d3c7f62e19d4b08f63",
+   "title": "Owner draw, 15th of the month",
+   "due_datetime": 1794747600.0,
+   "description": "Second $3,500 draw of the month, 5520 to 1904.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "74c8f0e2b5a9d16c3e8f0b27",
+   "title": "Thanksgiving pie pickups at the café",
+   "due_datetime": 1795608000.0,
+   "description": "7 to 3 at Haywood Rd. Holloway: one apple, one pecan, $60 paid at pickup, around noon.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "9d4a17e3b06c2f85a8e31d70",
+   "title": "Renew county permit ($150)",
+   "due_datetime": 1796047200.0,
+   "description": "TFE-11-0417, market stand. County portal, card or e-check.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "2f6c0b8e94a17d53c6e0f2a9",
+   "title": "Upload renewed permit to market vendor portal",
+   "due_datetime": 1796392800.0,
+   "description": "Certificate PDF under Documents. Needed for 2027 stall.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c2f96d1a0e8b47c3a5d2e96f",
+   "title": "Hearth: update Luis's pay rate",
+   "due_datetime": 1798470000.0,
+   "description": "GM rate starts Jan 1. Priscilla says change it before the first January pay run.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "49e0d7b3a1f6c2589e4d0b7a",
+   "title": "Register for NAABE 2027",
+   "due_datetime": 1799766000.0,
+   "description": "Registration opens today. Past-attendee rate $275 through Fri 2/26, then $325. Hotel block opens with registration. Book flights after: out 5/16, back 5/18.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b9f24e1c07a8d35b6c9e2f14",
+   "title": "Q4 estimates (IRS + NC)",
+   "due_datetime": 1800021600.0,
+   "description": "Federal 1040-ES and NC-40 Q4 payments from Mountain CU checking 1904.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "eb371c8f5a0d92e6b4c1f8d5",
+   "title": "Book February espresso service",
+   "due_datetime": 1800975600.0,
+   "description": "Carolina Espresso recommended Feb 2027, six months after the 8/18 visit (SR-20818-07). Ask for a Tuesday, café closed.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  }
+ ]
+}

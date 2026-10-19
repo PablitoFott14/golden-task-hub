@@ -1,0 +1,436 @@
+{
+ "reminders": [
+  {
+   "reminder_id": "9e3f4a07c2b815d66af0e3c9",
+   "title": "Get back to Tony on the garage circuit",
+   "due_datetime": 1780059600.0,
+   "description": "Tony Marchetti quoted $640 for a dedicated 20 amp run to the garage, permit included, and the price holds 30 days. Told him I'd answer by the end of the month.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780059600.0
+  },
+  {
+   "reminder_id": "27d1b8ee0546c3fa91d27b08",
+   "title": "Hiscox GL renews 6/3, check the details",
+   "due_datetime": 1780491600.0,
+   "description": "Policy UDC-6083147-CGL-25 renews on its own June 3, limits and $38 a month unchanged. If the address, revenue or type of work changed, update the Hiscox account before the 3rd.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780318800.0
+  },
+  {
+   "reminder_id": "c0a56d93f1e24b8708cde516",
+   "title": "VPD order Monday: lamps, belts, fuses",
+   "due_datetime": 1780923600.0,
+   "description": "Told Gary the order goes in Monday. DL-8V50 wedges are back in stock, so it ships complete. Wedge and pilot lamps, square belts, fuse assortment, two mains cords, DeoxIT, cap kit.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780923600.0
+  },
+  {
+   "reminder_id": "5b8e21f0d47c9a63e05b2d1f",
+   "title": "Kwame's moving-up, doors 9:40",
+   "due_datetime": 1781181900.0,
+   "description": "Ceremony at 10 in the Greenlawn gym, doors 9:40. Hold two seats up front for Efua. Good camera, not the phone. Battery charged, spare card in the bag.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781181900.0
+  },
+  {
+   "reminder_id": "3b7e0c9a5d1f48e2a6c4b830",
+   "title": "Q2 estimated tax, pay by 6/15",
+   "due_datetime": 1781528400.0,
+   "description": "1040-ES #2 for 2026. $2,150 through IRS Direct Pay from business checking 8803, keep the confirmation email.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781528400.0
+  },
+  {
+   "reminder_id": "e74d0c19b6a2f38e5d07a4c1",
+   "title": "Pick up the dehumidifier, Home Depot Southfield",
+   "due_datetime": 1781697600.0,
+   "description": "Order W948372615 at the Service Desk, held until June 23. Bring the order number and a photo ID.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781697600.0
+  },
+  {
+   "reminder_id": "0f62a9d37e1bc845f2a096de",
+   "title": "Last day of school, pick-up at 12:15",
+   "due_datetime": 1781710200.0,
+   "description": "Greenlawn half day, dismissal at 12:15 instead of 3:15. Lost and found is out on the tables by the front office until then.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781710200.0
+  },
+  {
+   "reminder_id": "b3c95e40a1f7d8260b9c4e73",
+   "title": "Cherry Republic for Ama",
+   "due_datetime": 1783179000.0,
+   "description": "Promised her cherry stuff from up north. Glen Arbor shop, holiday Saturday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783179000.0
+  },
+  {
+   "reminder_id": "48a0d7e63c159bf2a64e01d8",
+   "title": "Uline order tonight",
+   "due_datetime": 1784064600.0,
+   "description": "Same as last time: 24x18x12 outers, 20x14x8 inners, 1/2 in foam roll, plus a case of tape. Ama is down to 3 outers and 2 inners. Ask for side-door delivery at the garage.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784063700.0
+  },
+  {
+   "reminder_id": "d915f3b08e6c27a4c1d95f0e",
+   "title": "Saturday: Boston-Edison estate sale",
+   "due_datetime": 1784373300.0,
+   "description": "Ray's tip, the preview pics show a Marantz in a wood case. Opens at 9, runs Sat and Sun. Work it into the morning loop.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784372400.0
+  },
+  {
+   "reminder_id": "6ad20e8fc573b149e6a2d80b",
+   "title": "Block party Saturday, bring speakers",
+   "due_datetime": 1786206600.0,
+   "description": "Prairie St block party 3 to 8, street closes at 2. A pair of speakers for the music and a chair. Efua has the jollof.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786206600.0
+  },
+  {
+   "reminder_id": "f05e7b3c2d9a864f1c0ea7b5",
+   "title": "Pay Windy City table fee, $175 by 8/21",
+   "due_datetime": 1787317200.0,
+   "description": "windycityrecordfair.com/vendors/pay, on the business Visa. Told Rosa it would be paid this week.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787058000.0
+  },
+  {
+   "reminder_id": "13c7e9a5b04df62e8d31c7a0",
+   "title": "Meijer: Kwame's first-grade supply list",
+   "due_datetime": 1787749200.0,
+   "description": "4 boxes of Crayola 24s, 24 pencils, 12 glue sticks, 2 pink erasers, blunt scissors, red and blue pocket folders, wide-ruled comp book, over-ear headphones in a Ziploc with his name, tissues, wipes, gallon Ziplocs. New backpack, no wheels, no lights.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787749200.0
+  },
+  {
+   "reminder_id": "a8e41f6bd3c07952e4a80f1d",
+   "title": "Double-check summer haul tags",
+   "due_datetime": 1788181200.0,
+   "description": "Ama entered batches 1 to 3 (1066 to 1128) by copying the closest row. Go through finish and grade tags against the masters and grading guide v3. Prices stay as they are.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788181200.0
+  },
+  {
+   "reminder_id": "7f0bc428e91da3560c7fb2e9",
+   "title": "Sunday: load the table, chairs and speaker",
+   "due_datetime": 1788732000.0,
+   "description": "Labor Day cookout at Auntie Abena's in Southfield, we eat at 1. The folding table, six chairs and the small powered speaker (the good amps stay home). Leave by 4:30 for the Monday ride.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788699600.0
+  },
+  {
+   "reminder_id": "d82f4a6c0e3b97d15f2a8c46",
+   "title": "Q3 estimated tax, pay by 9/15",
+   "due_datetime": 1789477200.0,
+   "description": "1040-ES #3 for 2026. $2,150 via Direct Pay out of 8803, same as June.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789477200.0
+  },
+  {
+   "reminder_id": "c62d9a1e05f7b83cd24a6e10",
+   "title": "Furnace tune-up, stay in the house 9 to 11",
+   "due_datetime": 1791462600.0,
+   "description": "Six Mile Heating & Cooling, confirmation SMH-48217. Tech calls my cell about 30 minutes ahead. Three feet clear around the furnace, no UPS runs till they're done.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791462600.0
+  },
+  {
+   "reminder_id": "2b97e4d0c81af65b3e09d7a2",
+   "title": "Send Derek the UPS tracking number",
+   "due_datetime": 1792598400.0,
+   "description": "Marantz 2230 (CAW-1124) goes out today, UPS Ground, double-boxed. Post the tracking number in his Messenger thread as soon as the Pirate Ship label prints.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792598400.0
+  },
+  {
+   "reminder_id": "e1a05c3f9d72b4e80a61f5c3",
+   "title": "Draft Ama's reference for Priya",
+   "due_datetime": 1793019600.0,
+   "description": "Reliability, photo and lighting skills, and two example shoots with SKUs and dates: the August haul masters and the Aug 12 Bench Notes recap. Mention she built the raking-light setup herself.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793019600.0
+  },
+  {
+   "reminder_id": "94f6d2b1a07e3c58e9d41b06",
+   "title": "Napkins and cups in Kwame's backpack",
+   "due_datetime": 1793275200.0,
+   "description": "For the class Halloween party Friday after the parade. Efua told the room parent we'd send them in Thursday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793275200.0
+  },
+  {
+   "reminder_id": "d83a0f6c2e9b47150ac6e3b9",
+   "title": "Answer Derek, Thu 10-29",
+   "due_datetime": 1793278800.0,
+   "description": "Marantz 2230 (CAW-1124). Go through his three photos against listing photo 5 and Ama's pre-ship set, then reply in Messenger.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793278800.0
+  },
+  {
+   "reminder_id": "0d3b8f6ae254c19d7f0ba3e8",
+   "title": "Kwame's red homework folder back to school",
+   "due_datetime": 1793358900.0,
+   "description": "Comes home every Monday and has to go back by Friday. Go through it with him, then into the backpack.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b7e24c091fa6d83e5b72c0d4",
+   "title": "Robot costume to school in a labeled bag",
+   "due_datetime": 1793359800.0,
+   "description": "Halloween parade this afternoon on the blacktop. Costume goes in a bag with his name, he changes after lunch. Face stays open, battery cover screwed shut, he gets in and out by himself.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b9e4c1f7a3d28b65e9c4f1a7",
+   "title": "Cash for Walt, Fri 10/30",
+   "due_datetime": 1793365200.0,
+   "description": "Small bills. MCCU branch on Livernois.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "5f94a3d8e07c6b21f9508ea3",
+   "title": "Parent-teacher conference sign-up, by Fri 10/30",
+   "due_datetime": 1793376000.0,
+   "description": "Greenlawn, 15 minutes with Kwame's teacher, in person or by phone. Pick a slot in ParentSquare after checking Efua's schedule.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c3d07e5ab9f124c86d03e7b9",
+   "title": "Zelle Efua household share, 1st",
+   "due_datetime": 1793541600.0,
+   "description": "$1,250 from personal checking 8851 on the 1st. The other half goes on the 15th.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "8b16f4e90d2ca75e31b8c6f4",
+   "title": "Pay Ama for last week",
+   "due_datetime": 1793626200.0,
+   "description": "Zelle from business checking 8803. Usually 18 hours at $19, so $342. Check the week's hours before sending.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "1fa6c8e30d74b92e5a1cf6d8",
+   "title": "Send Ama's reference to Priya (Mon 11/2)",
+   "due_datetime": 1793629800.0,
+   "description": "Email body is fine, about a page. Dates for the two example shoots. priya@lumenstudiodetroit.com",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "7d2a6f0c4e83b19d5f2a6c04",
+   "title": "Fair teaser post (after 11/2)",
+   "due_datetime": 1793631600.0,
+   "description": "Windy City announces Mon 11/2. Teaser goes up after that.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "e5a82d71c6b09f43a85e1d27",
+   "title": "Send Rosa the 4 UPS tracking numbers",
+   "due_datetime": 1793649600.0,
+   "description": "Told her I'd send them Monday once UPS picks up the fair cartons, so receiving can match boxes to tables. Each box is marked CAW - RECEIVING, 1 of 4 to 4 of 4, with my cell. vendors@windycityrecordfair.com",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "1c7fb0a3e8d564920c1fe5ab",
+   "title": "Hiscox $38 draft on the 3rd",
+   "due_datetime": 1793714400.0,
+   "description": "General liability premium, automatic draft from business checking 8803. Make sure 8803 covers it.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6e09c5d43b7af18e2d6c90b5",
+   "title": "Bench Notes post, Wednesday lunch",
+   "due_datetime": 1793811600.0,
+   "description": "Ama shoots on her Tuesday shift, I write the caption and post at 12. Next up is knob pullers, not screwdrivers. Long version of the dim-bulb tip for Walt after that.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f0a4c8e2b6d91f35a7c0e4b8",
+   "title": "Approve insert proof (Fri 10/30)",
+   "due_datetime": 1793365200.0,
+   "description": "Eastern Market Print needs an answer today to deliver Thu 11/5. 500 cards, job EMP-4418.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "1b7e3d9f5a02c68e4b1d7f93",
+   "title": "UPS pickup, 4 fair cartons (Mon 11/2)",
+   "due_datetime": 1793628000.0,
+   "description": "Cartons by the side door, labeled CAW receiving. Must reach Fulton Market Hall by Thu 11/5.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f8b31e6da42c07f9e1b35ac8",
+   "title": "Owner draw, 5th",
+   "due_datetime": 1793890800.0,
+   "description": "$1,600 from business checking 8803 to personal checking 8851.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "30d6e9c25a8fb17d4c30f9e2",
+   "title": "Insert cards: $71.25 balance on delivery",
+   "due_datetime": 1793372400.0,
+   "description": "Eastern Market Print job EMP-4418, 500 cards. Deposit of $71.25 went in 9/28, the other $71.25 is due when they deliver Thu 11/5. The slot is only held through Fri 10/30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a2f7053ed8b6c9417a2f0e6d",
+   "title": "Check in for WN 2214, DTW to MDW",
+   "due_datetime": 1793913000.0,
+   "description": "Online check-in opens 24 hours before the 4:10 PM Friday departure. Confirmation K4XW7P, Basic fare.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "d6c18a4f2e07b95dc3a641f8",
+   "title": "Fair morning: dock badges from 7:15",
+   "due_datetime": 1794055500.0,
+   "description": "Load-in 7:30 to 9:30, doors at 10. Two badges per table at the dock check-in, bring a photo ID. Power strip and the 25 ft extension cord for the wall outlet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "4e0ab7d3f6921c5e08b4a7d1",
+   "title": "Check in for WN 2531, MDW to DTW",
+   "due_datetime": 1794095100.0,
+   "description": "Check-in opens 24 hours before the 5:45 PM Sunday flight home. Same confirmation, K4XW7P.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "9a5d3f1c0e8b72a6d45fc90e",
+   "title": "Garrett popcorn for Efua",
+   "due_datetime": 1794168000.0,
+   "description": "She has Kwame and the Friday pick-up, the popcorn makes us even. Grab a tin on the way to Midway.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "71c8e2a0b5f4d9371e6a0bc5",
+   "title": "Lumen panel may call, week of 11/9",
+   "due_datetime": 1794234600.0,
+   "description": "Priya Raman said the panel might want a 15-minute follow-up. Told her weekdays 9:30 to 3 on my cell. Keep the reference and the shoot dates handy.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "e0b496f1c73da28e5f0b1d94",
+   "title": "Zelle Efua household share, 15th",
+   "due_datetime": 1794751200.0,
+   "description": "$1,250 from personal checking 8851, the mid-month half.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "2c6af8d51b09e74ca3f26e8d",
+   "title": "Owner draw, 20th",
+   "due_datetime": 1795186800.0,
+   "description": "Second $1,600 draw of the month, 8803 to 8851.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b9f03a7ed16c58b2e0a9c4d7",
+   "title": "Pay the MCCU Visa in full",
+   "due_datetime": 1795356000.0,
+   "description": "Statement balance on Visa 2290, paid in full from business checking 8803 on the 22nd.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "05e3c9b8a7f2d0146b5ee83a",
+   "title": "Ask Gary about the VPD rate for 2027",
+   "due_datetime": 1797346800.0,
+   "description": "Gary's rate sheet runs through Dec 31 and he reviews it in January. Ask before the first parts order of the new year.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f4a16d0e82c9b37f5a14d6e0",
+   "title": "Furnace filter, 16x25x1",
+   "due_datetime": 1799506800.0,
+   "description": "January change is mine. Six Mile put a fresh one in at the Oct 8 tune-up.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6a9c1e5f3b0d72a48e6f1c93",
+   "title": "Q4 estimated tax due",
+   "due_datetime": 1800021600.0,
+   "description": "Last 1040-ES payment for 2026. Check the year's sales and parts totals before setting the amount, then Direct Pay from business checking 8803.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f1d4b8073c6e2a95d0b7e4c2",
+   "title": "Ama's 1099-NEC",
+   "due_datetime": 1801490400.0,
+   "description": "Add up Ama's 2026 Monday Zelles from business checking, file her 1099-NEC and send her copy. The 31st is a Sunday, so the IRS cutoff is Mon 2/1.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  }
+ ]
+}

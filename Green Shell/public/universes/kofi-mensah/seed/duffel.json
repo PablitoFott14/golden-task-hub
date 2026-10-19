@@ -1,0 +1,592 @@
+{
+ "users": [
+  {
+   "id": "07692a2f3a05a66730378811",
+   "email": "kofi@corktownaudio.com"
+  }
+ ],
+ "offers": [
+  {
+   "id": "off_0000Wc7Rf2Kd",
+   "owner": {
+    "name": "Southwest Airlines",
+    "iata_code": "WN",
+    "id": "arl_0000Sw7NtKq2"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Ht4Lp9Va",
+     "origin": {
+      "iata_code": "DTW",
+      "type": "airport",
+      "name": "Detroit Metropolitan Wayne County Airport",
+      "city_name": "Detroit",
+      "time_zone": "America/Detroit"
+     },
+     "destination": {
+      "iata_code": "MDW",
+      "type": "airport",
+      "name": "Chicago Midway International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H10M",
+     "fare_brand_name": "Basic",
+     "segments": [
+      {
+       "id": "seg_0000Qm8Zr3Tb",
+       "origin": {
+        "iata_code": "DTW",
+        "type": "airport",
+        "name": "Detroit Metropolitan Wayne County Airport",
+        "city_name": "Detroit",
+        "time_zone": "America/Detroit"
+       },
+       "destination": {
+        "iata_code": "MDW",
+        "type": "airport",
+        "name": "Chicago Midway International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-06T16:10:00",
+       "arriving_at": "2026-11-06T16:20:00",
+       "marketing_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN"
+       },
+       "operating_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN"
+       },
+       "marketing_carrier_flight_number": "2214",
+       "duration": "PT1H10M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Kf5Mn8Yx",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Basic",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Jw2Bc6Ne",
+     "origin": {
+      "iata_code": "MDW",
+      "type": "airport",
+      "name": "Chicago Midway International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "DTW",
+      "type": "airport",
+      "name": "Detroit Metropolitan Wayne County Airport",
+      "city_name": "Detroit",
+      "time_zone": "America/Detroit"
+     },
+     "duration": "PT1H10M",
+     "fare_brand_name": "Basic",
+     "segments": [
+      {
+       "id": "seg_0000Vd9Hs4Pg",
+       "origin": {
+        "iata_code": "MDW",
+        "type": "airport",
+        "name": "Chicago Midway International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "DTW",
+        "type": "airport",
+        "name": "Detroit Metropolitan Wayne County Airport",
+        "city_name": "Detroit",
+        "time_zone": "America/Detroit"
+       },
+       "departing_at": "2026-11-08T17:45:00",
+       "arriving_at": "2026-11-08T19:55:00",
+       "marketing_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN"
+       },
+       "operating_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN"
+       },
+       "marketing_carrier_flight_number": "2531",
+       "duration": "PT1H10M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Kf5Mn8Yx",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Basic",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Kf5Mn8Yx",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "186.40",
+   "total_currency": "USD",
+   "base_amount": "144.74",
+   "base_currency": "USD",
+   "tax_amount": "41.66",
+   "tax_currency": "USD",
+   "conditions": {
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "expires_at": "2026-10-31T00:24:51Z",
+   "created_at": "2026-09-16T00:24:51Z"
+  }
+ ],
+ "seat_map_elements": [
+  {
+   "id": "sea_0000Ma1Rw4Xc",
+   "offer_id": "off_0000Wc7Rf2Kd",
+   "segment_id": "seg_0000Qm8Zr3Tb",
+   "type": "seat",
+   "designator": "9A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Nb2Sx5Yd",
+   "offer_id": "off_0000Wc7Rf2Kd",
+   "segment_id": "seg_0000Qm8Zr3Tb",
+   "type": "seat",
+   "designator": "9B",
+   "name": "Middle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Pc3Ty6Ze",
+   "offer_id": "off_0000Wc7Rf2Kd",
+   "segment_id": "seg_0000Qm8Zr3Tb",
+   "type": "seat",
+   "designator": "9C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Qd4Uz7Af",
+   "offer_id": "off_0000Wc7Rf2Kd",
+   "segment_id": "seg_0000Qm8Zr3Tb",
+   "type": "seat",
+   "designator": "21D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 21,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Re5Va8Bg",
+   "offer_id": "off_0000Wc7Rf2Kd",
+   "segment_id": "seg_0000Vd9Hs4Pg",
+   "type": "seat",
+   "designator": "14A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Sf6Wb9Ch",
+   "offer_id": "off_0000Wc7Rf2Kd",
+   "segment_id": "seg_0000Vd9Hs4Pg",
+   "type": "seat",
+   "designator": "14B",
+   "name": "Middle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Tg7Xc1Di",
+   "offer_id": "off_0000Wc7Rf2Kd",
+   "segment_id": "seg_0000Vd9Hs4Pg",
+   "type": "seat",
+   "designator": "17E",
+   "name": "Middle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Uh8Yd2Ej",
+   "offer_id": "off_0000Wc7Rf2Kd",
+   "segment_id": "seg_0000Vd9Hs4Pg",
+   "type": "seat",
+   "designator": "17F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  }
+ ],
+ "orders": [
+  {
+   "id": "ord_0000Bn6Tq1Wz",
+   "user_id": "07692a2f3a05a66730378811",
+   "offer_id": "off_0000Wc7Rf2Kd",
+   "booking_reference": "K4XW7P",
+   "owner": {
+    "name": "Southwest Airlines",
+    "iata_code": "WN",
+    "id": "arl_0000Sw7NtKq2"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Ht4Lp9Va",
+     "origin": {
+      "iata_code": "DTW",
+      "type": "airport",
+      "name": "Detroit Metropolitan Wayne County Airport",
+      "city_name": "Detroit",
+      "time_zone": "America/Detroit"
+     },
+     "destination": {
+      "iata_code": "MDW",
+      "type": "airport",
+      "name": "Chicago Midway International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H10M",
+     "fare_brand_name": "Basic",
+     "segments": [
+      {
+       "id": "seg_0000Qm8Zr3Tb",
+       "origin": {
+        "iata_code": "DTW",
+        "type": "airport",
+        "name": "Detroit Metropolitan Wayne County Airport",
+        "city_name": "Detroit",
+        "time_zone": "America/Detroit"
+       },
+       "destination": {
+        "iata_code": "MDW",
+        "type": "airport",
+        "name": "Chicago Midway International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-06T16:10:00",
+       "arriving_at": "2026-11-06T16:20:00",
+       "marketing_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN"
+       },
+       "operating_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN"
+       },
+       "marketing_carrier_flight_number": "2214",
+       "duration": "PT1H10M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Kf5Mn8Yx",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Basic",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Jw2Bc6Ne",
+     "origin": {
+      "iata_code": "MDW",
+      "type": "airport",
+      "name": "Chicago Midway International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "DTW",
+      "type": "airport",
+      "name": "Detroit Metropolitan Wayne County Airport",
+      "city_name": "Detroit",
+      "time_zone": "America/Detroit"
+     },
+     "duration": "PT1H10M",
+     "fare_brand_name": "Basic",
+     "segments": [
+      {
+       "id": "seg_0000Vd9Hs4Pg",
+       "origin": {
+        "iata_code": "MDW",
+        "type": "airport",
+        "name": "Chicago Midway International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "DTW",
+        "type": "airport",
+        "name": "Detroit Metropolitan Wayne County Airport",
+        "city_name": "Detroit",
+        "time_zone": "America/Detroit"
+       },
+       "departing_at": "2026-11-08T17:45:00",
+       "arriving_at": "2026-11-08T19:55:00",
+       "marketing_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN"
+       },
+       "operating_carrier": {
+        "name": "Southwest Airlines",
+        "iata_code": "WN"
+       },
+       "marketing_carrier_flight_number": "2531",
+       "duration": "PT1H10M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Kf5Mn8Yx",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Basic",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Kf5Mn8Yx",
+     "type": "adult",
+     "given_name": "Kofi",
+     "family_name": "Mensah",
+     "title": "mr",
+     "gender": "m",
+     "born_on": "1990-03-14",
+     "email": "kofi@corktownaudio.com",
+     "phone_number": "+13135550147"
+    }
+   ],
+   "services": [],
+   "total_amount": "186.40",
+   "total_currency": "USD",
+   "created_at": "2026-09-16T00:30:22Z",
+   "cancelled_at": null,
+   "conditions": {
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "base_amount": "144.74",
+   "base_currency": "USD",
+   "tax_amount": "41.66",
+   "tax_currency": "USD"
+  }
+ ],
+ "order_cancellations": [],
+ "accommodations": [
+  {
+   "id": "acc_0000Ah3Ld7Qs",
+   "name": "The Ashland Hotel",
+   "location": {
+    "address": {
+     "line_one": "1555 W Lake St",
+     "city_name": "Chicago",
+     "country_code": "US",
+     "region": "IL",
+     "postal_code": "60607"
+    },
+    "geographic_coordinates": {
+     "latitude": 41.8856,
+     "longitude": -87.6641
+    }
+   },
+   "description": "Boutique hotel in the West Loop, a block from the Ashland Green and Pink Line station and a short walk to Fulton Market.",
+   "rating": 4,
+   "review_score": 8.6,
+   "amenities": [
+    {
+     "type": "wifi",
+     "description": "Free Wi-Fi"
+    },
+    {
+     "type": "gym",
+     "description": "24-hour fitness room"
+    }
+   ],
+   "check_in_information": {
+    "check_in_after_time": "15:00",
+    "check_out_before_time": "11:00"
+   }
+  }
+ ],
+ "rooms": [
+  {
+   "id": "rom_0000Rk2Vn8Cj",
+   "accommodation_id": "acc_0000Ah3Ld7Qs",
+   "name": "King Room",
+   "beds": [
+    {
+     "type": "king",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "rates": [
+  {
+   "id": "rat_0000Tz5Xp1Mh",
+   "room_id": "rom_0000Rk2Vn8Cj",
+   "check_in_date": "2026-11-06",
+   "check_out_date": "2026-11-08",
+   "total_amount": "514.21",
+   "total_currency": "USD",
+   "base_amount": "438.00",
+   "tax_amount": "76.21",
+   "board_type": "room_only",
+   "payment_type": "pay_now",
+   "cancellation_timeline": [
+    {
+     "before": "2026-11-04T05:59:00Z",
+     "refund_amount": "514.21",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 3
+  }
+ ],
+ "quotes": [
+  {
+   "id": "quo_0000Qe7Gm3Ls",
+   "user_id": "07692a2f3a05a66730378811",
+   "rate_id": "rat_0000Tz5Xp1Mh",
+   "check_in_date": "2026-11-06",
+   "check_out_date": "2026-11-08",
+   "rooms": 1,
+   "guests": [
+    {
+     "type": "adult",
+     "age": 36
+    }
+   ],
+   "total_amount": "514.21",
+   "total_currency": "USD",
+   "expires_at": "2026-10-31T00:38:10Z",
+   "created_at": "2026-09-16T00:38:10Z"
+  }
+ ],
+ "bookings": [
+  {
+   "id": "bok_0000Bk9Ws4Fr",
+   "user_id": "07692a2f3a05a66730378811",
+   "quote_id": "quo_0000Qe7Gm3Ls",
+   "rate_id": "rat_0000Tz5Xp1Mh",
+   "reference": "ASH4471906",
+   "status": "confirmed",
+   "confirmed_at": "2026-09-16T00:40:37Z",
+   "cancelled_at": null,
+   "check_in_date": "2026-11-06",
+   "check_out_date": "2026-11-08",
+   "rooms": 1,
+   "guests": [
+    {
+     "given_name": "Kofi",
+     "family_name": "Mensah",
+     "born_on": "1990-03-14"
+    }
+   ],
+   "email": "kofi@corktownaudio.com",
+   "phone_number": "+13135550147",
+   "total_amount": "514.21",
+   "total_currency": "USD",
+   "cancellation_timeline": [
+    {
+     "before": "2026-11-04T05:59:00Z",
+     "refund_amount": "514.21",
+     "currency": "USD"
+    }
+   ]
+  }
+ ]
+}

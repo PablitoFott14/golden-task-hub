@@ -1,0 +1,3299 @@
+{
+ "conversations": [
+  {
+   "conversation_id": "4be1a07d93c2f58e6a1d0b37",
+   "title": "Darnell Hughes",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "8c41f0b7e3d5a926c8e0f14d"
+   ],
+   "messages": [
+    {
+     "message_id": "2f8c4a9e1d7b03c6e5a8f142",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1778802038.0,
+     "content": "Kofi! Long time man. You still doing car stereos on the side, or is it strictly the old hi-fi now?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a6d02e7f9c3b815d4e0a7c93",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1778802903.0,
+     "content": "Darnell! Strictly home audio. Haven't had my head under a dash since I left the dealership. What's going on?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "73e9b1c5a8f04d2e6b9c1a05",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1778803262.2,
+     "content": "My nephew's 2011 F-150. Radio went totally dead, no clock, no display, nothing. Shop wants $900 to swap the whole head unit",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b9d490f953f855a9fdb5615b",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1778803460.2,
+     "content": "You were always the one who chased the wire before throwing parts at it, so I figured I'd ask you first",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c1f57d3a0e96b2840d7f3e6a",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1778804479.738,
+     "content": "Dead with no clock usually means no power is getting to it. Have him check the radio fuse and the ground behind the dash before anybody spends $900.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "edebcdf55afac56a13a96b17",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1778804700.738,
+     "content": "Fuse panel is behind the trim in the passenger footwell. Tell him to pull the negative battery cable before he unplugs anything back there.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "58a2e6c9f1d40b73a5e8c2d7",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1778804797.738,
+     "content": "Bet. He's off Saturday, I'll make him do it 👊🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b8b7a6da6ced32366bb8e64e",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1779036341.65,
+     "content": "Update: fuse was fine, it was the ground. Strap behind the dash was loose and green with corrosion. He cleaned it up and the radio came right back on. Shop can keep that $900 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "91b5fa2ae3eb8d071260a96f",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1779036974.65,
+     "content": "Glad it was the cheap fix. A dab of dielectric grease on that connection will keep the green from coming back.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "69f03b1122d655b979c54dbe",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1779039876.615,
+     "content": "Passing that along. He says he owes you a Buddy's pizza",
+     "attachment_name": null
+    },
+    {
+     "message_id": "390be13a704fe2f3fcc2b393",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1779578684.013,
+     "content": "Luis is collecting $20 a head for Big Mike's retirement gift. I'll cover yours and you can square up with me at the lunch",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0959f403ac18cd4e6287f921",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1779579586.136,
+     "content": "Appreciate it. Cash at the lunch, no dealership markup.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1779579586.136
+  },
+  {
+   "conversation_id": "d71f3a96c04e8b25a7f2e913",
+   "title": "Sam Novak",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "d07b3e95a1c6f42e8b7d05a1"
+   ],
+   "messages": [
+    {
+     "message_id": "e07b4c2d8f5a91e3b6d0c4f8",
+     "sender_id": "d07b3e95a1c6f42e8b7d05a1",
+     "timestamp": 1781130753.0,
+     "content": "finally caved and bought a Hakko for my makerspace bench. want my old Weller station before it goes on eBay?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4d93f6a0c2e85b17d9a3f0e6",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1781131587.326,
+     "content": "The tan Magnastat? Maybe. What tips come with it?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b2c8e05a7d1f364c8e2b5a90",
+     "sender_id": "d07b3e95a1c6f42e8b7d05a1",
+     "timestamp": 1781132255.8,
+     "content": "that one. two chisels and a fine conical, plus the stand and sponge. $30 and it's yours",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3f7081eae82124c9537fa837",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1781135522.286,
+     "content": "Deal. A second iron with a fat chisel saves me swapping tips every time I hit a ground lug.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "19f6a3d7b0c54e82f1a6d3b5",
+     "sender_id": "d07b3e95a1c6f42e8b7d05a1",
+     "timestamp": 1781136403.251,
+     "content": "sold. I'll hang onto it till I see you, it's not going anywhere",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b551ca38226be930cb0e3410",
+     "sender_id": "d07b3e95a1c6f42e8b7d05a1",
+     "timestamp": 1782089846.579,
+     "content": "you around for coffee this week? I can bring the Weller, and there's something I want to pick your brain on",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5347dc7f20d0c1e036befc7d",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1782090724.579,
+     "content": "Friday at 8:30, Astro? I need to be back on my bench by 10.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0ad99ceaaec373093476c568",
+     "sender_id": "d07b3e95a1c6f42e8b7d05a1",
+     "timestamp": 1782095680.011,
+     "content": "perfect. it's about repair night at the space. we keep getting old receivers and nobody knows where to start",
+     "attachment_name": null
+    },
+    {
+     "message_id": "fc89aea7f3f2583494d4a959",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1782096532.011,
+     "content": "Sounds familiar. Bring a list of what's been coming in and we'll sort it out over coffee.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "adedac85470a518edf62710b",
+     "sender_id": "d07b3e95a1c6f42e8b7d05a1",
+     "timestamp": 1782096812.55,
+     "content": "will do. see you friday",
+     "attachment_name": null
+    },
+    {
+     "message_id": "47d7c7b9976a925f68903ab4",
+     "sender_id": "d07b3e95a1c6f42e8b7d05a1",
+     "timestamp": 1782501769.843,
+     "content": "good catching up friday. the space said yes, you're on for repair night Thu July 9 at 6:30. putting 'vintage audio with Kofi' on the flyer",
+     "attachment_name": null
+    },
+    {
+     "message_id": "11542e8713a9b775bed7bf94",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1782503135.122,
+     "content": "I'll be there with a variac and a box of fuses. Your old Weller is already earning its keep, by the way.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1782503135.122
+  },
+  {
+   "conversation_id": "9c35e0b7a1f46d28c3e5b074",
+   "title": "Lorraine Pettiford",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "2a9f6c13e8b0d74a5c2f9e60"
+   ],
+   "messages": [
+    {
+     "message_id": "6c0e9a4f2b7d158e3c6a9f04",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1783632459.0,
+     "content": "Kofi, UPS left one of your boxes on my porch this afternoon. Heavy one, marked FRAGILE on two sides.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "029cc8077db33fd32bb31730",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1783633227.211,
+     "content": "I didn't want it sitting out in the heat, so it's just inside my front door.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f4a17e3b9c0d26f5a8e1b7c3",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783636764.547,
+     "content": "Sorry about that, Lorraine, and thank you for bringing it in. Walking over now.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0b5d8c2f6e9a473b1d5c8e2a",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1783636908.547,
+     "content": "I'm on the porch. Tell Kwame I'm still admiring his chalk robot on my sidewalk.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e8cf57092ec9632a9c835477",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1784680651.959,
+     "content": "Lorraine, is my garage floodlight shining into your back windows? I've been leaving it on overnight since that car door business.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2bb70269b504474ab2cd9647",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1784682176.959,
+     "content": "Not one bit. My blinds are thick, and I'd rather have the light.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e9317f551926b9e69623ad5a",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1784682647.89,
+     "content": "Malik says nobody's been back since, so leave it on.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "47049aa6bcfa8550c81777c5",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1785254838.217,
+     "content": "Saw your message about the speakers. Would you run the music for the whole party? Last year we had one little Bluetooth speaker nobody could hear past my steps.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6c43fb03c16493d6b3b2c18f",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785257277.738,
+     "content": "Happy to. I'll need power out by the street. Okay if I run a cord from your porch outlet?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "13b63998c86d9d54b1f5bf97",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1785258068.089,
+     "content": "The outlet is yours. I'll set out a card table by the steps for your equipment.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b0d49166fb95f6fc8cfe58d0",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785634528.783,
+     "content": "Meant to tell you, I set my UPS account earlier to leave everything at my side door by the garage. Hopefully that's the last box you have to haul inside.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "870286141018b520bba368a9",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1785634720.783,
+     "content": "We'll see what that driver does with it. Thank you, Kofi.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1785634720.783
+  },
+  {
+   "conversation_id": "e2a849d1f06b7c3a5d9e8f12",
+   "title": "Kwesi Asante",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "fc58a2e0d93b17c64f8a2d0b"
+   ],
+   "messages": [
+    {
+     "message_id": "d5e2b8f1a4c07936e2d5b8a1",
+     "sender_id": "fc58a2e0d93b17c64f8a2d0b",
+     "timestamp": 1782067205.0,
+     "content": "Chale, happy Father's Day! You saw the Black Stars? Whole street here watched on one TV running off a generator 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8a37c0e5d9f2b14a6c3e0d78",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1782067903.092,
+     "content": "Thank you! Watched every minute. Efua says I shouted at the TV louder than Kwame did.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3f6b9d2a7e1c05f8b4a9d6e3",
+     "sender_id": "fc58a2e0d93b17c64f8a2d0b",
+     "timestamp": 1782068015.092,
+     "content": "😂 as you should",
+     "attachment_name": null
+    },
+    {
+     "message_id": "db9d71515a978fd94acf6d5e",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1782068402.156,
+     "content": "Wish I'd been on that street with you. Our watch party was three people on one couch.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c8d14f7b0a6e392d5f8c1b4e",
+     "sender_id": "fc58a2e0d93b17c64f8a2d0b",
+     "timestamp": 1782068613.004,
+     "content": "I'm back in Detroit Friday. Rest of the tournament we watch together",
+     "attachment_name": null
+    },
+    {
+     "message_id": "ebe767338a8e009ce27b41ce",
+     "sender_id": "fc58a2e0d93b17c64f8a2d0b",
+     "timestamp": 1782068952.862,
+     "content": "And tell Kwame I found him a real Black Stars World Cup jersey. Not the fake ones from the roadside",
+     "attachment_name": null
+    },
+    {
+     "message_id": "71b0e6a3c5d98f2e4a7b0c69",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1782069216.862,
+     "content": "He's going to lose his mind. Safe travels, text me when you land.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "007be53c27c28bf67b8f4857",
+     "sender_id": "fc58a2e0d93b17c64f8a2d0b",
+     "timestamp": 1782507793.204,
+     "content": "Landed! Jersey survived the trip, and there's a jar of shito in my bag with your name on it",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4d45a6c34b9e119070ed5a1b",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1782509707.047,
+     "content": "Welcome back! Kwame has asked about that jersey every day this week. Come by tomorrow after 2? I'll be back from an estate sale by then.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2856e7fb94ff092bbe23348b",
+     "sender_id": "fc58a2e0d93b17c64f8a2d0b",
+     "timestamp": 1782510532.047,
+     "content": "After 2 works. If I fall asleep on your couch, just leave me there",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a3c07de20e56ba9bf1ca1a21",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783380470.012,
+     "content": "Just got back from camping at Sleeping Bear. Kwame wore that jersey the whole weekend, sand and all. Efua says thank you. The shito is already half gone and she's blaming me.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4ec509756f4ed5d783881c84",
+     "sender_id": "fc58a2e0d93b17c64f8a2d0b",
+     "timestamp": 1783380926.012,
+     "content": "😂 Best review I could ask for. Welcome home, rest up",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1783380926.012
+  },
+  {
+   "conversation_id": "57f0c3b2e9a14d86b0c7a5e3",
+   "title": "Tony Marchetti",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "5e2d8b4f1a07c39e6d5b8f21"
+   ],
+   "messages": [
+    {
+     "message_id": "a9c25e8d1f3b704a6e9c2d5f",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1778860610.0,
+     "content": "Hi Tony, this is Kofi Mensah on Prairie St. Lorraine Pettiford gave me your number. I'm looking for a quote on a dedicated 20 amp circuit for my garage.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e6f81b4c7a2d930e5b8f1c47",
+     "sender_id": "5e2d8b4f1a07c39e6d5b8f21",
+     "timestamp": 1778861531.11,
+     "content": "Lorraine's good people. I can swing by Monday around 4 and take a look at your panel.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "af78e70d22c32e6ee83c16a0",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1778861723.11,
+     "content": "Monday works. Could you make it 4:15? I do school pickup at 3:15. It's 17241 Prairie, garage is out back.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "09a15d27718a79c1e29359bb",
+     "sender_id": "5e2d8b4f1a07c39e6d5b8f21",
+     "timestamp": 1778862493.777,
+     "content": "4:15 is fine. I'll look at the main panel first, then walk out to the garage.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "250d7a3e9b6c14f8d0a5e7b2",
+     "sender_id": "5e2d8b4f1a07c39e6d5b8f21",
+     "timestamp": 1779137357.473,
+     "content": "Thanks for having me out. Dedicated 20 amp run to the garage comes to $640, permit included.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a87ad7014bf0ae5692c47422",
+     "sender_id": "5e2d8b4f1a07c39e6d5b8f21",
+     "timestamp": 1779141147.191,
+     "content": "That's a new breaker, 12 gauge out to the garage and two GFCI outlets on the bench wall. Your panel has room, so no upgrade needed.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "bc4e0f6a2d8195c7e3b0f9a6",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1779141306.546,
+     "content": "Thanks Tony. Let me look at the numbers and I'll get back to you by the end of the month.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "07a3d9c5e1b48f26a0d3c7e5",
+     "sender_id": "5e2d8b4f1a07c39e6d5b8f21",
+     "timestamp": 1779142894.952,
+     "content": "Sounds good. Price holds 30 days.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c42d4edb9daff2610c6e1a98",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1779322551.48,
+     "content": "One question while I think it over. Should the bench lights move to the new circuit, or stay where they are?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "44bbf7727d705ef8d13468ab",
+     "sender_id": "5e2d8b4f1a07c39e6d5b8f21",
+     "timestamp": 1779324267.034,
+     "content": "Leave the lights where they are. If a heat gun or an amp on test trips the 20, you're not standing in the dark holding a hot iron.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9596b9aef1d897336b54b7a8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1779326779.031,
+     "content": "That's happened to me twice already. Lights stay put.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5d1dd6a86cc6154634bdc170",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1780348623.704,
+     "content": "Tony, sorry I'm a couple days past the end of the month. I'm going to hold off until fall, since summer is when most of my money goes into estate-sale stock. I'll text you in September for a fresh number. Thanks for coming out.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1780348623.704
+  },
+  {
+   "conversation_id": "b86e2d4f17a03c95e8b1d6a0",
+   "title": "Yaw Darko",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "ce8775ae3557f74ad87a0338"
+   ],
+   "messages": [
+    {
+     "message_id": "f9e3a7c1b5d02e84f6a9c3b7",
+     "sender_id": "ce8775ae3557f74ad87a0338",
+     "timestamp": 1786295891.0,
+     "content": "Massa! Sunday ball at Palmer Park is back. 4pm, same field. You coming or you've retired? 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "58d5983c2bd9eb82cf976ddf",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1786298244.26,
+     "content": "Not retired, just tired. Block party was yesterday and I was hauling speakers till late. Next Sunday, save me the gloves.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4a8d2f6e0c9b37a1d4f8e2c6",
+     "sender_id": "ce8775ae3557f74ad87a0338",
+     "timestamp": 1786422277.512,
+     "content": "Just off shift. Sunday we had nine guys and nobody wanted goal. Lost 7-3 😂 This week no excuse oo",
+     "attachment_name": null
+    },
+    {
+     "message_id": "21d46496211219a37aeb97cd",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1786446542.24,
+     "content": "7-3 is painful. I'm in for Sunday. Just know I don't dive anymore, my hip filed a complaint.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "44c7a12447ff33965c8fe03b",
+     "sender_id": "ce8775ae3557f74ad87a0338",
+     "timestamp": 1786448825.86,
+     "content": "Up early eh! Bring Kwame one of these Sundays, the small ones kick around behind the goal. He's what, 6 now?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e2bb0988577c464b5c65db03",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1786449066.86,
+     "content": "6, and first grade starts in a couple weeks. He's up at 6:30 every day, summer or not. He'd love it.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "dc1b5e9a3f7064d2b8c1e5a9",
+     "sender_id": "ce8775ae3557f74ad87a0338",
+     "timestamp": 1789338638.945,
+     "content": "Good game today. Not many Sundays left before the cold comes. Bring Kwame next week, my nephews will be there too.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9237f12e5e01931e0754f55b",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1789687737.369,
+     "content": "Sorry for the slow reply, long week. Just got out of curriculum night at his school. We're both in for Sunday. My auntie gave him a new ball and he won't put it down.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6f649949d75c12fd19af8a3d",
+     "sender_id": "ce8775ae3557f74ad87a0338",
+     "timestamp": 1789688415.458,
+     "content": "Perfect. Tell him to bring water and shin guards if he has them. The kids go hard by the fence 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2a0542d92ba5a05b4af495fd",
+     "sender_id": "ce8775ae3557f74ad87a0338",
+     "timestamp": 1789690584.225,
+     "content": "Also my speaker died, the orange one. It charges but no sound. Can you look at it?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "18458583218766821dbd101e",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1789691129.943,
+     "content": "Bring it Sunday. Charges but no sound is usually the amp board or a loose ribbon cable. My fee is one plate of kelewele.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "64299097145505d898c46a68",
+     "sender_id": "ce8775ae3557f74ad87a0338",
+     "timestamp": 1789911022.483,
+     "content": "Field is dry, we're on for 4. Speaker is in my trunk and the kelewele is handled. Tell Kwame to bring the new ball 💪🏾",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1789911022.483
+  },
+  {
+   "conversation_id": "1a9d7e3c5b20f4e86c13a7d9",
+   "title": "Prairie St Neighbors",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "2a9f6c13e8b0d74a5c2f9e60",
+    "p_dennis",
+    "p_yvonne",
+    "p_malik"
+   ],
+   "messages": [
+    {
+     "message_id": "8e0c3a7f5b1d92e6c0a4f8b3",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1778331770.0,
+     "content": "Block club cleanup is Saturday May 16, 9 to noon. Bags and gloves will be on my porch.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "35b9f2d6a8e014c7b3f9d2a5",
+     "sender_id": "p_dennis",
+     "timestamp": 1778332501.945,
+     "content": "I'll bring the leaf blower and the big rake.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e1d7a0c4f9b6538e1a7d0c4b",
+     "sender_id": "p_yvonne",
+     "timestamp": 1778332596.945,
+     "content": "👍🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9b4f6e2a1c8d07b5f3e9a6c0",
+     "sender_id": "p_malik",
+     "timestamp": 1781697998.435,
+     "content": "Heads up, somebody was pulling car door handles on our block around 3am. Lock up later.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c27a5d9e3b0f61c4a8d2e7f1",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1781698750.435,
+     "content": "Thank you Malik. I'll call our neighborhood police officer this morning.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "60e8b3f1d7a42c9e6b0f5d38",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1781698841.435,
+     "content": "Thanks for the heads up. I'll leave the floodlight over the garage on overnight.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f5c2e9b7a0d384f1c6e2b9a4",
+     "sender_id": "p_yvonne",
+     "timestamp": 1783258702.992,
+     "content": "Fireworks went till 2am. Anybody else's dog still hiding under the bed?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1d6a8c0e4f2b75d9a1c6e3f0",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1783384349.988,
+     "content": "Block party is Saturday August 8, 3 to 8. Bring a dish and a chair, street closes at 2.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a3f0d5b8e6c129a7f4d0b5e8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785238072.532,
+     "content": "We're in. Efua's making jollof and I'll bring a pair of speakers for the music.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "7c9e1a4d3b5f80e2c7a9d4b1",
+     "sender_id": "p_dennis",
+     "timestamp": 1786240589.662,
+     "content": "Great party everybody. Kofi, those speakers had the whole block doing the electric slide",
+     "attachment_name": "IMG_7083.jpg"
+    },
+    {
+     "message_id": "d08b6f2c9e3a47b1d5f8c0e6",
+     "sender_id": "p_yvonne",
+     "timestamp": 1786241550.35,
+     "content": "Thank you Lorraine for pulling it together again ❤️",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4e7d0b9a5c1f36e8b2d7a0c5",
+     "sender_id": "p_dennis",
+     "timestamp": 1790286480.722,
+     "content": "Anybody have a snow guy lined up for this winter? Mine finally retired.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b9a5c3e8f0d612b4e9a5c7f3",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1790287367.244,
+     "content": "My grandson Trey does driveways, $25 a pass. I'll send you his number.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2c4f8a1e7b9d05c3f6a2e8d0",
+     "sender_id": "2a9f6c13e8b0d74a5c2f9e60",
+     "timestamp": 1793139205.892,
+     "content": "Trick-or-treat on Prairie is Saturday 6 to 8. Porch lights on if you're handing out candy 🎃",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e8b1d4f7c2a593e0b8d1f6a4",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1793140626.323,
+     "content": "We'll be out with Kwame from 6, bowl on the porch. Look for the robot with blinking lights.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "56d3a9e0b4c78f1d2a6e9b3c",
+     "sender_id": "p_yvonne",
+     "timestamp": 1793140856.323,
+     "content": "Kwame about to win Halloween 😂",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1793140856.323
+  },
+  {
+   "conversation_id": "f3c06b8a2e7d19b4a05c6e2f",
+   "title": "Greenlawn 1st Grade Parents",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "3f9c2a71d84be05c6a1f7d93",
+    "p_tasha",
+    "p_brandon",
+    "p_keisha",
+    "p_rachel"
+   ],
+   "messages": [
+    {
+     "message_id": "93a6e2c8d1f704b9a3e6c2d8",
+     "sender_id": "p_tasha",
+     "timestamp": 1788996699.0,
+     "content": "Hi 1st grade families! I'm room parent this year, so class updates and volunteer asks will go here 🍎",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0f2d7b5e9a3c68f0d2b7e5a1",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788997555.0,
+     "content": "Thank you for organizing, Tasha. Happy to help with anything science related.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c6e9f3a2b8d015e7c4f9a3b6",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788998569.0,
+     "content": "Found a blue water bottle with a dinosaur sticker in Kwame's backpack. Anyone missing one?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "7b1a4d8f0e6c93b2a7d4f1e9",
+     "sender_id": "p_keisha",
+     "timestamp": 1788999347.1,
+     "content": "That's Jayden's!! He's been mourning it all week 😭 thank you",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e4c0b6d2a9f357e1c8b0d6a2",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788999787.1,
+     "content": "Sending it back with Kwame tomorrow.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d9e5b2a8c6f031d7e4b9a5c0",
+     "sender_id": "p_tasha",
+     "timestamp": 1789000964.815,
+     "content": "Class Halloween party is Friday right after the parade. Snack and supply sign up sheet went home in folders 🎃",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1f8c6e3b9d4a72f0c5e1b8d6",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1789001225.815,
+     "content": "We'll send napkins and cups with Kwame on Thursday.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a4b2f7d0e5c869a3b1f6d2e7",
+     "sender_id": "p_keisha",
+     "timestamp": 1789001352.815,
+     "content": "Juice boxes from us 🧃",
+     "attachment_name": null
+    },
+    {
+     "message_id": "29f8e1c7b3a640d5f2e8c1b7",
+     "sender_id": "p_tasha",
+     "timestamp": 1791591149.19,
+     "content": "Cider mill field trip is Thursday 10/15. We still need 3 chaperones, reply here if you can come.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b5d3a0f9e7c218b6d3a0f4c9",
+     "sender_id": "p_brandon",
+     "timestamp": 1791592166.1,
+     "content": "I can do it, I'm off Thursdays",
+     "attachment_name": null
+    },
+    {
+     "message_id": "62a7c4e1d0b985f3a6c2e7d4",
+     "sender_id": "p_rachel",
+     "timestamp": 1791592778.815,
+     "content": "Count me in too!",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1791592778.815
+  },
+  {
+   "conversation_id": "6e4b1f0a8d35c27e9f6a3b18",
+   "title": "Service Bay Crew",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "8c41f0b7e3d5a926c8e0f14d",
+    "p_luis",
+    "p_rick"
+   ],
+   "messages": [
+    {
+     "message_id": "5e0a9c3f7d2b16e4a0c9f5d3",
+     "sender_id": "p_luis",
+     "timestamp": 1779468146.0,
+     "content": "Big Mike's last day is June 12. Retirement lunch at noon, place TBD. Who's in?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c3b7e1a6f4d892c0b7e3a1f6",
+     "sender_id": "p_rick",
+     "timestamp": 1779469011.168,
+     "content": "I'm in. 31 years in that building, man deserves a parade",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8f4d0c2b6e9a35f8d1c4b0e2",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1779469531.168,
+     "content": "in",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1b6e8f5a3c0d97b2e6f8a4c1",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1779470773.168,
+     "content": "Count me in. Still owe Mike for every wiring diagram he ever bailed me out with.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e7a2c9d4b1f063e8a2c5d9b0",
+     "sender_id": "p_luis",
+     "timestamp": 1781287941.617,
+     "content": "Good turnout today. Mike teared up twice, don't tell him I said that",
+     "attachment_name": "IMG_5521.jpg"
+    },
+    {
+     "message_id": "4c9f3b7e0a5d28c1f9b3e6a7",
+     "sender_id": "p_rick",
+     "timestamp": 1781288864.827,
+     "content": "😂 he'll deny it till the day he dies",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a0d5e8b2c7f41a6d0e8b3c9f",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1788135255.867,
+     "content": "Fantasy draft is Sunday at 9. Need two more teams, $20 buy in. Who's in?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f2e6a1d9b4c057f2e6a0d8b5",
+     "sender_id": "p_rick",
+     "timestamp": 1788136307.868,
+     "content": "In. And I'm not finishing last again",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a88a0ce765404d0b0edd660f",
+     "sender_id": "8c41f0b7e3d5a926c8e0f14d",
+     "timestamp": 1788830588.943,
+     "content": "League rule change. Last place buys wings for the whole league once the season's over.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "28bc9a0b3b806cb9fdecec4f",
+     "sender_id": "p_luis",
+     "timestamp": 1788831576.406,
+     "content": "Dealership's doing a trunk or treat in the service lot this year, day TBD. Alumni welcome. Who's bringing kids?",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1788831576.406
+  },
+  {
+   "conversation_id": "a05d93e7b6c1428f0e7d5a6c",
+   "title": "UPS",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_ups"
+   ],
+   "messages": [
+    {
+     "message_id": "8d1e5b9f3a7c02e8d6b1f4a9",
+     "sender_id": "p_ups",
+     "timestamp": 1778779761.0,
+     "content": "UPS: Your package from VINTAGE PARTS DEPOT was delivered 05/14 at 1:22 PM. Left at: Front Door. Tracking 1Z7E4V830331864207.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1585075e6d3ce742fb08b6f4",
+     "sender_id": "p_ups",
+     "timestamp": 1781003236.115,
+     "content": "UPS: Delivery alerts are on for 17241 PRAIRIE ST. We'll text this number when a package is out for delivery and when it's delivered. Reply STOP to opt out.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b8c1f5e3a9d270b4c8f1e6a3",
+     "sender_id": "p_ups",
+     "timestamp": 1783599159.544,
+     "content": "UPS: Your package from VINTAGE PARTS DEPOT is out for delivery today, 07/09. Estimated delivery between 1:15 PM and 5:15 PM.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3a5e9d7c1b0f84a3e5d9c2b6",
+     "sender_id": "p_ups",
+     "timestamp": 1783623425.342,
+     "content": "UPS: Your package 1Z7E4V830347718206 was delivered 07/09 at 2:47 PM. Left at: Front Porch.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "18af821c7643fb9b6a18d61f",
+     "sender_id": "p_ups",
+     "timestamp": 1785582726.391,
+     "content": "UPS: Delivery instructions updated for 17241 PRAIRIE ST. Leave at: Side Door. Driver note: Detached garage behind the house. Please don't leave packages on the front porch.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d6f0b4a2e8c937d6f0b2a5e8",
+     "sender_id": "p_ups",
+     "timestamp": 1787832324.7,
+     "content": "UPS: Out for delivery today, 08/27: 1Z7E4V830370832164 from VINTAGE PARTS DEPOT. Est. 12:00 PM - 4:00 PM. It will be left at the Side Door per your instructions.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0e3c7a9f5d1b64e0c3a7f9d1",
+     "sender_id": "p_ups",
+     "timestamp": 1787853938.052,
+     "content": "UPS: Delivered 08/27 at 1:54 PM. Left at: Side Door, as requested. Tracking 1Z7E4V830370832164.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5b22187137cb0819a10ea51e",
+     "sender_id": "p_ups",
+     "timestamp": 1790029937.294,
+     "content": "UPS: Your package 1Z9W47E80356083912 was delivered 09/21 at 6:28 PM. Left at: Side Door.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "97b4d2e6c0a815b9d4e2c6a0",
+     "sender_id": "p_ups",
+     "timestamp": 1792093361.414,
+     "content": "UPS: Delivered today at 3:38 PM: 1Z7E4V830394716528 from VINTAGE PARTS DEPOT. Left at: Side Door.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "22a0a87ae694c5f80140caed",
+     "sender_id": "p_ups",
+     "timestamp": 1792794094.414,
+     "content": "UPS: Your pickup is confirmed for Mon, 11/02. Packages: 4. Address: 17241 PRAIRIE ST, DETROIT MI 48221. Pickup location: Side Door. Have labels attached before the driver arrives.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1792794094.414
+  },
+  {
+   "conversation_id": "3d8c6a1e40f9b7d2c5e81a4b",
+   "title": "DTE Energy",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_dte"
+   ],
+   "messages": [
+    {
+     "message_id": "f1a8d3c6e0b759f1a4d8c2e5",
+     "sender_id": "p_dte",
+     "timestamp": 1787002950.0,
+     "content": "DTE Energy: We're aware of a power outage affecting 17241 PRAIRIE ST. Crews are assessing damage. Est. restoration 08/17 11:30 PM. Reply STATUS for updates.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6d2b9e4f8a1c03d7b2e9f5a8",
+     "sender_id": "p_dte",
+     "timestamp": 1787005741.156,
+     "content": "DTE Energy: Severe storms are causing outages across metro Detroit. Stay at least 20 ft away from downed lines and report them at 800.477.4747.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "ca7e0f3b5d9284c6a1e0f7b3",
+     "sender_id": "p_dte",
+     "timestamp": 1787005916.189,
+     "content": "DTE Energy: A crew has been assigned to the outage affecting 17241 PRAIRIE ST. Est. restoration is now 08/17 10:00 PM.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b3ebe910e7e7c15b21ae0c0c",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787006214.025,
+     "content": "STATUS",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1cf4fb7707302c9ef89d54cb",
+     "sender_id": "p_dte",
+     "timestamp": 1787006623.26,
+     "content": "DTE Energy: Outage at 17241 PRAIRIE ST. Cause: tree on lines. Customers affected: 1,184. Crew assigned. Est. restoration 08/17 10:00 PM.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6a1fc2d8bc45acd509610b67",
+     "sender_id": "p_dte",
+     "timestamp": 1787007123.203,
+     "content": "DTE Energy: Crews are on site. Your est. restoration has moved up to 08/17 8:00 PM.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1b8b01aa54342f159cc441da",
+     "sender_id": "p_dte",
+     "timestamp": 1787007391.203,
+     "content": "DTE Energy: Power has been restored at 17241 PRAIRIE ST. Still without power? Reply OUT.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "ec6bfd40c52178b2fbb26344",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787007573.648,
+     "content": "We're back on. Thank you to the crew out there 🙏🏾",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1787007573.648
+  },
+  {
+   "conversation_id": "c9e17b5d2a0f63e8d4b9a1c7",
+   "title": "Motor City Credit Union",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_mccu"
+   ],
+   "messages": [
+    {
+     "message_id": "53f9c1e7a2d846b0f3c9e1a7",
+     "sender_id": "p_mccu",
+     "timestamp": 1789518551.0,
+     "content": "Motor City CU: 604117 is your code to approve a $186.40 online purchase at DUFFEL*SOUTHWEST AIR on card ending 2290. We will never call to ask for this code.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e9b6a4d0f7c312e9b5a8d4f0",
+     "sender_id": "p_mccu",
+     "timestamp": 1789519156.0,
+     "content": "Motor City CU: Use code 381552 to approve $514.21 at DUFFEL*THE ASHLAND HOTEL on card ending 2290. Don't share this code with anyone.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "44620afe6872eb13a7a39bbb",
+     "sender_id": "p_mccu",
+     "timestamp": 1790345711.111,
+     "content": "Motor City CU: Your statement for Visa ending 2290 is ready. View it in Online Banking under Statements.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9ef6cd4a4144851e10b0220b",
+     "sender_id": "p_mccu",
+     "timestamp": 1790346767.305,
+     "content": "Motor City CU: A deposit has posted to checking ending 8803. See the amount and details in the MCCU app.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2879d291ac950df2e752bb0f",
+     "sender_id": "p_mccu",
+     "timestamp": 1790346870.305,
+     "content": "Motor City CU: 270958 is your code to sign in to Online Banking on a new device. It expires in 10 minutes. Didn't request it? Call us right away.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "fba902132cd8eae092c337a0",
+     "sender_id": "p_mccu",
+     "timestamp": 1790432887.224,
+     "content": "Motor City CU: Online and Mobile Banking will be unavailable Sat 9/26 from 11 PM to 5 AM Sun for scheduled maintenance. Card purchases and ATMs will work as usual.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4d50075f4e03097e96309a63",
+     "sender_id": "p_mccu",
+     "timestamp": 1791214084.442,
+     "content": "Motor City CU: A payment on Visa ending 2290 is due soon. Check the minimum due and due date in Online Banking, or set up AutoPay.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "caae2f159cfff438ed3887e1",
+     "sender_id": "p_mccu",
+     "timestamp": 1791215488.813,
+     "content": "Motor City CU: Drive-up lanes at our Livernois branch are closed for repairs this week. The lobby and ATM are open during regular hours.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "cc903be86a6288272bf313cd",
+     "sender_id": "p_mccu",
+     "timestamp": 1791215748.979,
+     "content": "Motor City CU: Transfer complete. $1,600.00 moved from checking ending 8803 to checking ending 8851.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "01811be7d48f8a75c459916e",
+     "sender_id": "p_mccu",
+     "timestamp": 1791215932.979,
+     "content": "Motor City CU: Travel notice saved for card ending 2290. Destination: Illinois, 11/06 to 11/08. Use your card as usual while you're away.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1791215932.979
+  },
+  {
+   "conversation_id": "28b4f6e0d93a5c1b7e2f08d6",
+   "title": "Fresh Edge Barbershop",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_freshedge"
+   ],
+   "messages": [
+    {
+     "message_id": "2d7f5a0c8e3b91d6f2a7c0e4",
+     "sender_id": "p_freshedge",
+     "timestamp": 1780416856.0,
+     "content": "Fresh Edge Barbershop: Reminder of your appointment with Reggie on Wed, Jun 3 at 12:30 PM. Reply C to confirm or R to reschedule.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b0e4c8a6d2f935b0e7c4a8d1",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1780417505.529,
+     "content": "C",
+     "attachment_name": null
+    },
+    {
+     "message_id": "bfccfa80b82457868584d992",
+     "sender_id": "p_freshedge",
+     "timestamp": 1780417770.529,
+     "content": "You're confirmed for tomorrow at 12:30. Heads up, we now need 24 hours notice to cancel or move a booking, or a fee may apply. You can manage it in Booksy.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "75c1e9f3b7a028d5c1e6f9b2",
+     "sender_id": "p_freshedge",
+     "timestamp": 1785253451.317,
+     "content": "Fresh Edge Barbershop: You're booked with Reggie tomorrow, Wed, Jul 29 at 12:30 PM. Reply C to confirm. Need a different time? Reply R.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e3a9b5d1f8c46e2a9b7d0f5c",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785254728.516,
+     "content": "C. Same as last time, just a little shorter on top. Too hot for anything else.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e74a9d3092c9d8b3ff75effa",
+     "sender_id": "p_freshedge",
+     "timestamp": 1785255022.691,
+     "content": "Got it, I'll let Reggie know. Also our card reader is down this week, so please pay in the Booksy app or bring cash. Sorry about that!",
+     "attachment_name": null
+    },
+    {
+     "message_id": "18d6f2b0a4e973c8d6f1b4a9",
+     "sender_id": "p_freshedge",
+     "timestamp": 1790093055.131,
+     "content": "Fresh Edge Barbershop: Reggie has you down for Wed, Sep 23 at 12:30 PM. Reply C to confirm. Need a different time? Reply R.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c5f3a8e7d0b26c4f9a3e8d7b",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1790094475.848,
+     "content": "C. Do you have any weekend slots? Weekdays are getting tight.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "7651d5f4c9ed0f172e5d4c03",
+     "sender_id": "p_freshedge",
+     "timestamp": 1790094667.848,
+     "content": "Good timing, we just opened Sundays. Reggie works 10 to 3 and those slots are live in Booksy now.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6a0b9d4e2c7f15a8b0d3e6c2",
+     "sender_id": "p_freshedge",
+     "timestamp": 1793116204.624,
+     "content": "Fresh Edge Barbershop: It's been about a month since your last cut with Reggie. Book your next visit in the Booksy app.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1793116204.624
+  },
+  {
+   "conversation_id": "7f2a0c9e6b4d18a3f5c0e97b",
+   "title": "Greenlawn Elementary",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "f2c05b9e47a1d38c6b0e5f72"
+   ],
+   "messages": [
+    {
+     "message_id": "f7d4b1e8c3a065f7d2b9e4a1",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1781208470.0,
+     "content": "Greenlawn Elementary: Thank you to all the families who joined us for Kindergarten Moving-Up earlier! Reminder: library books are due back tomorrow, Friday 6/12.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2263b987811216d13e669e12",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1783166872.491,
+     "content": "Greenlawn Elementary (1/3): Happy Fourth of July! Supply lists for the 2026-27 school year are posted on our website. Please label backpacks, lunch boxes and jackets with your child's name.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5327dfe9b0a56c905d698984",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1783167945.992,
+     "content": "Greenlawn Elementary (2/3): New this fall, every visitor signs in at the main office with a photo ID, including parents picking up early. Please allow a few extra minutes.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a6e7a9a7d6bfc1c909ad3dc5",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1783168137.992,
+     "content": "Greenlawn Elementary (3/3): Using the car line this fall? Keep your family tag on the dash, stay in your vehicle, and staff will walk your child out to you.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "002d895dd2ef56fd88b71ca0",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1784836242.254,
+     "content": "Greenlawn Elementary: Summer reading check-in! Keep those logs going. Students who bring a finished reading log in the first week of school get to pick a free book from the library cart.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "ce8cae6169ff26398b8214c8",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1791198214.977,
+     "content": "Greenlawn Elementary: Hearing and vision screenings for grades K-2 are this week during the school day. A letter comes home only if a follow-up is recommended.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0f55ae9ed94b99e22d2dbc03",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1791198706.468,
+     "content": "Greenlawn Elementary: Our main office phone line is down this morning while the provider works on a repair. To report an absence, email office@greenlawnelementary.org or send a signed note.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3b8e6c0f9d5a27b3e8c1f6d0",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1791317378.389,
+     "content": "Greenlawn Elementary: First grade families, permission slips for the Thursday 10/15 cider mill field trip came home in backpacks today. Please sign and return them by Friday 10/9.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b01ab60ca20ceaa3aadf5bc2",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1791371303.709,
+     "content": "Greenlawn Elementary: Wednesday 10/7 is Fall Count Day. Please make sure your child is in school and on time. Every student present that day counts toward our state funding.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a9c2d7f4e1b680a5c2d9f3e7",
+     "sender_id": "f2c05b9e47a1d38c6b0e5f72",
+     "timestamp": 1793045790.396,
+     "content": "Greenlawn Elementary: Our Halloween parade is Friday 10/30 at 2:00 PM on the blacktop. Families welcome! Send costumes in a bag labeled with your child's name. No masks or toy weapons, please.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1793045790.396
+  },
+  {
+   "conversation_id": "e5b3d1a87c06f29e4b8d3c50",
+   "title": "(469) 555-0193",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_unknown_0193"
+   ],
+   "messages": [
+    {
+     "message_id": "4f0e8a6d3c9b52f1e7a4d0c8",
+     "sender_id": "p_unknown_0193",
+     "timestamp": 1786720821.0,
+     "content": "USPS: Your package is on hold due to an incomplete address. Update your details within 12 hours to avoid return: uspsredeliver-care.com",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b7a3e0d5f2c819b4a7e3d6f1",
+     "sender_id": "p_unknown_0193",
+     "timestamp": 1786801652.485,
+     "content": "USPS: Second notice. Your parcel is still at the local facility waiting on a valid address. Confirm it today at uspsredeliver-care.com",
+     "attachment_name": null
+    },
+    {
+     "message_id": "031b4c5be2890075007e88f1",
+     "sender_id": "p_unknown_0193",
+     "timestamp": 1787129898.185,
+     "content": "USPS: Redelivery could not be scheduled. An unpaid $0.30 address correction fee is holding your parcel. Pay now: uspsredeliver-care.com/fee",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c2c306460818faf4ef9de382",
+     "sender_id": "p_unknown_0193",
+     "timestamp": 1787132164.185,
+     "content": "(Please reply Y, then exit this text and open it again to activate the link, or copy the link into your browser.)",
+     "attachment_name": null
+    },
+    {
+     "message_id": "bfb434fb0a8dae3039716286",
+     "sender_id": "p_unknown_0193",
+     "timestamp": 1787132808.45,
+     "content": "USPS: Parcel status changed to HELD - ACTION REQUIRED. A daily storage charge applies to items not released within 24 hours.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "ee9bcb6c74c9120b775e6c01",
+     "sender_id": "p_unknown_0193",
+     "timestamp": 1787133002.45,
+     "content": "we have not received your response. Our carrier will make one final attempt once your address and payment are confirmed.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e7e8d816f94886a0e73f8141",
+     "sender_id": "p_unknown_0193",
+     "timestamp": 1787134317.119,
+     "content": "Reply 1 to receive a new secure link. Reply 2 if you are no longer expecting this item.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e7be95f92ffe72c255c355d1",
+     "sender_id": "p_unknown_0193",
+     "timestamp": 1787134422.119,
+     "content": "USPS: Last notice. Unclaimed parcels are returned to the sender at 5:00 PM today. Release yours now at uspsredeliver-care.com/release",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1787134422.119
+  },
+  {
+   "conversation_id": "0c7e5f2b9a4d36e1c8f0b7a2",
+   "title": "(762) 555-0124",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_unknown_0124"
+   ],
+   "messages": [
+    {
+     "message_id": "d2c6f9a1e5b307d2c8f4a9e6",
+     "sender_id": "p_unknown_0124",
+     "timestamp": 1782311677.0,
+     "content": "FINAL NOTICE: Our records show the factory warranty on your vehicle has expired. Reply YES to speak with a coverage specialist today.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "80f5b3e9d7a164f0b5e2d8a3",
+     "sender_id": "p_unknown_0124",
+     "timestamp": 1784224777.633,
+     "content": "Your vehicle service contract file is scheduled to close today. Reply YES to activate coverage before rates go up, or STOP to opt out.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "fce308eaeafb3c5695564ea2",
+     "sender_id": "p_unknown_0124",
+     "timestamp": 1785013084.507,
+     "content": "Vehicle Services Dept: Save up to 40% on bumper-to-bumper protection with $0 down. Limited spots left for Michigan drivers. Reply YES to lock in your rate.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0328c1e8fdc8c793e54c9736",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785015044.469,
+     "content": "STOP",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d6b418d29438a58dd2da726b",
+     "sender_id": "p_unknown_0124",
+     "timestamp": 1785016471.629,
+     "content": "We have received your request. A specialist will call you to confirm before your number is removed from our list.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0738104ae355a6db3101a4d2",
+     "sender_id": "p_unknown_0124",
+     "timestamp": 1785891189.938,
+     "content": "REOPENED: Your vehicle protection file was flagged for a second review. Reply YES to keep your eligibility or STOP to end messages.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "223a5762af4ec6f4e156aad6",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785892148.286,
+     "content": "I replied STOP already. Forwarding this one to 7726.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "293555521b4b82a80e5f25cc",
+     "sender_id": "p_unknown_0124",
+     "timestamp": 1785892328.286,
+     "content": "MILEAGE CHECK: Vehicles past 100,000 miles may no longer qualify for extended protection. Reply YES to verify your odometer reading.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d347621bd988053b3b0731d6",
+     "sender_id": "p_unknown_0124",
+     "timestamp": 1786912160.78,
+     "content": "POLICY UPDATE: Powertrain plans now include 24/7 roadside assistance and rental car reimbursement. Reply YES for plan details.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8831c1f50230d183cc808b5b",
+     "sender_id": "p_unknown_0124",
+     "timestamp": 1786912892.78,
+     "content": "Don't get stuck with a repair bill this winter. Enrollment for your vehicle closes Sunday. Reply YES to enroll or STOP to unsubscribe.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1786912892.78
+  },
+  {
+   "conversation_id": "94a1c6e3f8b2075d1e9c4a6f",
+   "title": "Buddy's Pizza",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_buddys"
+   ],
+   "messages": [
+    {
+     "message_id": "c4e8a2f6d0b935c4e1a7f2d9",
+     "sender_id": "p_buddys",
+     "timestamp": 1777662637.0,
+     "content": "Buddy's Rewards: Friday means pizza night. Earn double points on carryout orders today only. Reply STOP to opt out.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "630e743b52ddfe8472a31074",
+     "sender_id": "p_buddys",
+     "timestamp": 1778929260.251,
+     "content": "Buddy's Rewards: Online ordering and the app will be down later from 11 PM to 4 AM for scheduled maintenance. Calling in? Give your phone number and you'll still earn points.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e407f9f50e77f1931dcc59bd",
+     "sender_id": "p_buddys",
+     "timestamp": 1778929751.35,
+     "content": "Buddy's Rewards: Planning a grad party or a Memorial Day cookout? Catering orders earn points too, from party trays to a stack of 8-square pizzas.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5b1d9f7e3a6c08b5d1f4e9a7",
+     "sender_id": "p_buddys",
+     "timestamp": 1783003976.027,
+     "content": "Buddy's Rewards: Fourth of July weekend plans? Order ahead in the app and skip the line. Txt STOP to end.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "ea6f2c0b8d4e71a6f9c3b0d4",
+     "sender_id": "p_buddys",
+     "timestamp": 1783124219.976,
+     "content": "Buddy's Rewards: Holiday hours for tomorrow, Saturday 7/4: all locations open 11 AM to 8 PM. Regular hours return Sunday.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6ad818f2895deb918fc4d6d5",
+     "sender_id": "p_buddys",
+     "timestamp": 1786101005.235,
+     "content": "Buddy's Rewards: Severe storms are expected across metro Detroit later today. Some locations may close early and delivery could be paused. Call your store before heading out.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "bd5d2af0154ab4cc61cbb3cb",
+     "sender_id": "p_buddys",
+     "timestamp": 1786104226.235,
+     "content": "Buddy's Rewards: We've updated our Rewards terms and privacy policy. No action is needed and your points balance is not affected. Full terms are on our website.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "57c503116e29f12e7971cc07",
+     "sender_id": "p_buddys",
+     "timestamp": 1786104773.343,
+     "content": "Buddy's Rewards: Your usual, saved. Favorite any order in the Buddy's app and reorder it in two taps. Update the app to try it.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "17c3e5a9f1d286c7e0a5f3b8",
+     "sender_id": "p_buddys",
+     "timestamp": 1792781553.72,
+     "content": "Buddy's Rewards: You have 250 points, enough for a free 4-square cheese pizza. Redeem in the app or at the counter by 11/30. Reply STOP to unsubscribe.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "cf1b10ac3bcf172d1ba6c38c",
+     "sender_id": "p_buddys",
+     "timestamp": 1793048428.598,
+     "content": "Buddy's Rewards: Halloween is Saturday! Kids 12 and under who come in costume get a free dessert with any dine-in kids' meal at participating locations.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1793048428.598
+  },
+  {
+   "conversation_id": "bd02e8f5a3c917b6e0d4f28a",
+   "title": "Detroit Department of Elections",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_detroitvotes"
+   ],
+   "messages": [
+    {
+     "message_id": "ce7873a5be2a049e27d795ae",
+     "sender_id": "p_detroitvotes",
+     "timestamp": 1785790519.0,
+     "content": "Detroit Department of Elections: You're signed up for election alerts for Detroit voters. Expect a few texts before each election. Msg & data rates may apply. Reply HELP for help, STOP to cancel.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6f3c0a8e5b2d94f6c0a3e8b5",
+     "sender_id": "p_detroitvotes",
+     "timestamp": 1785791362.56,
+     "content": "Detroit Department of Elections: Tomorrow, Tuesday Aug 4, is the state primary. Polls are open 7 AM to 8 PM. Find your polling place at michigan.gov/vote.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "84932546cc5ecd3f24b15f35",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785791511.56,
+     "content": "Do I need a photo ID tomorrow, or is my voter registration card enough?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1012db3539aa65f6b0406bac",
+     "sender_id": "p_detroitvotes",
+     "timestamp": 1785791581.806,
+     "content": "You'll be asked for a photo ID, like a Michigan driver's license or state ID card. Your voter registration card isn't required. If you don't have ID with you, you can sign an affidavit and vote a regular ballot.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "79032507f88b220e017101c3",
+     "sender_id": "p_detroitvotes",
+     "timestamp": 1785792327.415,
+     "content": "Detroit Department of Elections: We're hiring paid election inspectors for the Nov 3 general election. No experience needed, and training is provided. Reply WORK for the application link.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5cd32ce3148cf1287a558592",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788030703.237,
+     "content": "My son will probably be with me when I vote in November. He's 6. Is he allowed in the booth with me?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4198323e40f8b47470a55ce4",
+     "sender_id": "p_detroitvotes",
+     "timestamp": 1788031213.237,
+     "content": "Yes. Children under 18 can come into the voting booth with a parent or guardian, and he's welcome to watch your ballot go into the tabulator.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9e5a1c7d3f0b48e9a5c2d7f1",
+     "sender_id": "p_detroitvotes",
+     "timestamp": 1790628631.864,
+     "content": "Detroit Department of Elections: Absentee ballots for the Nov 3 general election are now available. Apply or track yours at michigan.gov/vote.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d50d8e15fbaa87119a76f52e",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1790629613.864,
+     "content": "Is there a way to see my exact ballot ahead of time? I'd like to read through the proposals at home before I go in.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "eb60dbabf67d1fcd647fe299",
+     "sender_id": "p_detroitvotes",
+     "timestamp": 1790629987.521,
+     "content": "Yes. Your sample ballot shows every race and proposal you'll be voting on. Look it up at michigan.gov/vote with your name, birth month and year, and ZIP code.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "16a9f8c51c26f822ef9419f7",
+     "sender_id": "p_detroitvotes",
+     "timestamp": 1792444037.5,
+     "content": "Detroit Department of Elections: Moved recently or not registered yet? Online and mail registration closes Mon 10/19. After that, you can still register in person at your clerk's office with proof of residency through Election Day.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2a8f4d6b0e9c53a8f1d6b4e0",
+     "sender_id": "p_detroitvotes",
+     "timestamp": 1793047515.703,
+     "content": "Detroit Department of Elections: Early voting for the Nov 3 general election is open now through Sunday 11/1. Find your early voting site and hours at michigan.gov/vote.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1793047515.703
+  },
+  {
+   "conversation_id": "5a6f9b3d0e12c84a7b5e9d31",
+   "title": "(313) 555-0161",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_tiff"
+   ],
+   "messages": [
+    {
+     "message_id": "d8b0e3f7a5c192d8b4e0f6a5",
+     "sender_id": "p_tiff",
+     "timestamp": 1784984349.0,
+     "content": "Hey Brenda it's Tiff from choir!! Are we still carpooling to the retreat next Saturday?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c9e305647c03b98ca79a28f0",
+     "sender_id": "p_tiff",
+     "timestamp": 1784984841.0,
+     "content": "I'm happy to drive if you'd rather not!! Just let me know so I can tell the others",
+     "attachment_name": null
+    },
+    {
+     "message_id": "41e7c9a3d6f025e1c7a9d3b8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1784999480.005,
+     "content": "Sorry, just seeing this. Wrong number, there's no Brenda here.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "aa9b110f711122b3229154b9",
+     "sender_id": "p_tiff",
+     "timestamp": 1785000668.465,
+     "content": "Oh no, really?? This is the number she wrote on the retreat sign-up sheet",
+     "attachment_name": null
+    },
+    {
+     "message_id": "da3ee16020660a2babaa09d3",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785000826.436,
+     "content": "I've had this number for years. The sheet might have a digit off.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f6a2b8d4c1e079f6a2d5c8e1",
+     "sender_id": "p_tiff",
+     "timestamp": 1785000933.436,
+     "content": "Oh my goodness, so sorry to bother you!! Have a blessed weekend",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8ab401e7975a57756ffcfe39",
+     "sender_id": "p_tiff",
+     "timestamp": 1785196914.713,
+     "content": "Found her!! Two of the numbers were flipped on the sheet. Thank you for being so gracious about it",
+     "attachment_name": null
+    },
+    {
+     "message_id": "56b3857fcb6f1a2370ae01aa",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785197857.713,
+     "content": "Glad you tracked her down. Enjoy the retreat.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f3ef914a0542aa2b78766c53",
+     "sender_id": "p_tiff",
+     "timestamp": 1785199026.782,
+     "content": "Hey girl!! Do you still have my music folder? Need it back before Thursday practice",
+     "attachment_name": null
+    },
+    {
+     "message_id": "14f69092c277546d19120852",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785199291.037,
+     "content": "Still the wrong number, I'm afraid. No Brenda here.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d5645a27842144f4421f728e",
+     "sender_id": "p_tiff",
+     "timestamp": 1785199521.037,
+     "content": "Oh my word!! I saved her new number but never deleted the old one, and my phone grabbed you first. Deleting it right now",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5ece71b1ac96fded1f668641",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1785805250.186,
+     "content": "Heads up, a practice reminder from your choir director came to this number tonight. Looks like the choir list has the same flipped number for Brenda.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1785805250.186
+  },
+  {
+   "conversation_id": "83d5a2c7e1b0f496d8a3c5e2",
+   "title": "Meijer",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "p_meijer"
+   ],
+   "messages": [
+    {
+     "message_id": "0a4d6e2c9f8b17a0d4e3c9f6",
+     "sender_id": "p_meijer",
+     "timestamp": 1787749497.0,
+     "content": "Meijer: Thanks for shopping with us on 8/26! How did we do? Rate your trip in about 2 minutes from your mPerks receipt in the app. Reply STOP to end.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4b6c63218f5c54a77f804325",
+     "sender_id": "p_meijer",
+     "timestamp": 1789816972.345,
+     "content": "Meijer: Reply YES to confirm you'd like mPerks texts with weekly deals, rewards and order updates. Up to 6 msgs/wk. Msg & data rates may apply. Reply STOP to cancel.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9dbb433b822a26a16be3b4c8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1789817766.345,
+     "content": "YES",
+     "attachment_name": null
+    },
+    {
+     "message_id": "22ecf900fcd7b2ac714c134e",
+     "sender_id": "p_meijer",
+     "timestamp": 1789817979.345,
+     "content": "Meijer: You're in! Welcome to mPerks texts. Reply HELP for help or STOP to end at any time.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "fe519522fe1e192cf0342284",
+     "sender_id": "p_meijer",
+     "timestamp": 1789818576.345,
+     "content": "Meijer: Michigan apple season is here. Honeycrisp, fresh cider and cider donuts are in store now, with mPerks offers ready to clip. Reply STOP to end.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a9d98933feef98a2c45e974f",
+     "sender_id": "p_meijer",
+     "timestamp": 1790594303.203,
+     "content": "Meijer: Halloween is close. Fun size candy, glow sticks and AA batteries are on sale this week with mPerks. Reply STOP to end.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "003df241b8e039c06e983316",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1790594987.203,
+     "content": "STOP. That's enough deal texts for me.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "57eabd9e2d17e2f7dfb347e1",
+     "sender_id": "p_meijer",
+     "timestamp": 1790595123.386,
+     "content": "Meijer: You're unsubscribed from deal texts and won't get more offers. mPerks reward alerts will still come to this number. Reply START to rejoin.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "be75a2ff05c037d0c2ef654a",
+     "sender_id": "p_meijer",
+     "timestamp": 1792239060.948,
+     "content": "Meijer: Welcome offer: spend $100 on groceries by Sat 10/17 and earn a $5 mPerks reward. Track your progress under Rewards in the app.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "bf9c3a7e1d5064bf8c2a7e0d",
+     "sender_id": "p_meijer",
+     "timestamp": 1792418245.778,
+     "content": "Meijer: Your mPerks reward is ready. Take $5 off your next grocery trip of $50 or more through 11/1. It's already loaded to your account.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1792418245.778
+  },
+  {
+   "conversation_id": "3e8b17d4f2a96c05b7e1d39a",
+   "title": "Mensah-Boateng Fam",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "3f9c2a71d84be05c6a1f7d93",
+    "6c736bf60496cbd1794d06b9",
+    "e81b6f04c9d27a35b8f1e60d"
+   ],
+   "messages": [
+    {
+     "message_id": "a41f0c7e93b25d68e0c7f114",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1783207917.0,
+     "content": "Happy Fourth from Sleeping Bear! Kwame ran all the way up the Dune Climb by himself, then rolled most of the way down. 😂",
+     "attachment_name": "IMG_2207.jpg"
+    },
+    {
+     "message_id": "5bd29e70c1a8f346d92b0e85",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1783209213.0,
+     "content": "The view from the top. Worth every step of that sand.",
+     "attachment_name": "IMG_2211.jpg"
+    },
+    {
+     "message_id": "e07c3a91b4d6258f1ac0e9d3",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1783209480.0,
+     "content": "And this one is for Auntie: proof that he is wearing his sunscreen. 🙏🏾",
+     "attachment_name": "IMG_2216.jpg"
+    },
+    {
+     "message_id": "91c5e2f8a07d43b6e5f12c90",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783209650.0,
+     "content": "WAIT",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2fa86d13c9e05b74a1d8e6f2",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783209919.0,
+     "content": "kwame rolling down the dune is sending me 😭😭",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c63e0b5a2d971f48e3c06ab1",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783210162.0,
+     "content": "theres sand in his eyebrows lmaooo",
+     "attachment_name": null
+    },
+    {
+     "message_id": "08d4f7a1e6c39b25d07e4f63",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783210395.0,
+     "content": "pls tell me somebody got a vidoe",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b7e2a4c90f15d863a2b9c7e0",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783210568.0,
+     "content": "and is there one of all 3 of u",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4a9c1d6e83f02b57c4e8a1d9",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783210757.0,
+     "content": "Video exists. Sending when I get more than one bar out here.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d25f8b0e7a4c193e6f2d5b08",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783210939.0,
+     "content": "A stranger at the overlook took this one.",
+     "attachment_name": "IMG_5541.jpg"
+    },
+    {
+     "message_id": "6e13c7a5f9d0b248e1a7c3f6",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783211101.0,
+     "content": "Heritage Trail earlier, 14.2 miles with Kwame on the tag-along. He says he did all the pedaling.",
+     "attachment_name": "IMG_5527.jpg"
+    },
+    {
+     "message_id": "f8a06e2d4b1c97305e8f2a4d",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783211338.0,
+     "content": "the tag along 😭😭",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1b7d3f9a0e5c28d6b4f71e3a",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783211518.0,
+     "content": "kofi in a helmet towing a 6 yr old is lowkey the best content this chat has ever seen",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a9e4b2d70c6f15e83a9d0c27",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1783211609.0,
+     "content": "He pedaled for about a mile. After that he was the cheering section. 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "37c0e8f5b1a96d42c7e0f3b8",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1783211785.0,
+     "content": "Good evening my dears, These pictures are BEAUTIFUL. Kwame looks just like Kofi did at that age, always running ahead of everybody. Please keep him in the shade tomorrow and make sure he drinks plenty of water, the sun by the lake is stronger than it looks. Enjoy the rest of your holiday and drive carefully on Monday. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e5d17a3c9f0b48e26d1c5a90",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783211882.0,
+     "content": "Good evening Auntie. Thank you. Efua packed enough sunscreen for the whole campground. We'll text when we're home Monday.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8f2b6c04d9e3a71f5b8c2e6d",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1783212122.0,
+     "content": "Fireworks over the bay at 10:15. Kwame says he is staying up for every single one.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c41a9e7f2b05d83c6a4e9f1b",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783212283.0,
+     "content": "he is NOT making it lol",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0e6d3b8a5c2f917e4d0b6a3c",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783212511.0,
+     "content": "asleep by the 3rd one i stg",
+     "attachment_name": null
+    },
+    {
+     "message_id": "7a5f1e9c3d6b204a8f5e1c7d",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783218966.0,
+     "content": "He made it to the fourth one. Out cold in the tent now.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d93c6a0f8e2b5174c9d3a6e0",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783219930.0,
+     "content": "4!! ok i underestimated him 🔥",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4f8e2c7b1a0d695f3e8c2b74",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783253280.0,
+     "content": "Dune video, as promised. Volume up for the end.",
+     "attachment_name": "IMG_5538.MOV"
+    },
+    {
+     "message_id": "b06a4d9e7c3f185b2a6d4e91",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783260093.0,
+     "content": "IM CRYING",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5e2c8f0a6d4b391e7c2f8a05",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1783260699.0,
+     "content": "the little yell at the bottom 😭😭 hes so proud of himself",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a17b5e3d9c0f264a1e7b5d38",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1783273614.0,
+     "content": "Good afternoon my dears, I showed the video to the ladies after service and they laughed until they cried. That is a BRAVE boy. Kofi, please do not let him climb anything taller than that before I see him again. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e8c2a6f4b0d9573c8e2a6f19",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1783273822.0,
+     "content": "Thank you, Auntie. He has watched it eleven times today and narrates it every time. 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2d9f7b1e5a3c086d2f9b7e41",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783369382.0,
+     "content": "Home safe. Kwame was asleep before Flint.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9b4e0d6a2f8c513b9e4d0a76",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1783371030.0,
+     "content": "Thank God you are all home safe. Let that boy sleep, and Kofi, rest your back after all that driving. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a83c2e5f9d14b07e6c3a1f82",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1788391921.0,
+     "content": "Good evening family, I am doing a small cookout here on Labor Day, Monday the 7th, from 1 p.m. Grilled tilapia, chicken, kelewele and plenty of Fanta for Kwame. I want to see EVERYBODY before he starts first grade on Tuesday. Please tell me who is coming so I know how much chicken to buy. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5be9d07a3c61f24e8a9b0d13",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1788392584.0,
+     "content": "she bought a second cooler for this lol",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c06f4a92e7b5813d2f6e9c40",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1788393191.0,
+     "content": "im on drinks and ice",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1e7d3b8f60a2c95e4d1b7a26",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788393290.0,
+     "content": "Thank you, Auntie! All three of us will be there. I'll bring jollof and a big salad. 🙏🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9a2f5c1e8b7d04a63e9f2c58",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788393861.0,
+     "content": "Good evening Auntie. Thank you for having us. I can bring the folding table and six chairs. We'll have to head out around 4:30 for my Monday ride.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e46b0d9c27f3a8150b6e4d9f",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1788394473.0,
+     "content": "Thank you Kofi. Bring the table, mine has a bad leg. And you and that bicycle! You will eat before you go, and I will pack food for later. 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3d8a1f6c4e0b92d75a3c8e17",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1788394986.0,
+     "content": "kofi bring a speaker too pls",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b72e9c4a15d0f683c7a2e5b4",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1788395109.0,
+     "content": "moms playlist is the same 4 highlife songs on repeat 😭",
+     "attachment_name": null
+    },
+    {
+     "message_id": "60c5f8e3a9b1274d0e8c6f3a",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788395271.0,
+     "content": "I'll bring the small powered speaker. The good amps don't go near grill smoke.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f9d40b7e2c86a51f3b0d9e72",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1788395553.0,
+     "content": "lmaooo ok mr corktown audio",
+     "attachment_name": null
+    },
+    {
+     "message_id": "28e6a3d1f7c94b0e5a28d6c1",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1788396452.0,
+     "content": "Ama, my songs are CLASSICS. Highlife never gets old. 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c4b17f0e9a3d62c8e1f47b05",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788396671.0,
+     "content": "Auntie is right. The classics stay. 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "7f0a2d5b8e41c9367d2f0a8e",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1788732997.0,
+     "content": "Good evening family. Reminder, tomorrow at 1 p.m. The tilapia is marinating already. Kofi, do not forget the table. God bless 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e1a9c63f0b72d84e9c5a1d30",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788733205.0,
+     "content": "Noted, Auntie. The jollof goes on first thing in the morning. Kwame wants to know if there will be a ball to kick around.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4c8e7a2d9f13b6e0a4c71f95",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1788734255.0,
+     "content": "Tell him Auntie has a new football waiting for him. 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a0d63e9b5c27f18a4e0d3b6c",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788734980.0,
+     "content": "Table, chairs and the speaker are loaded, Auntie.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8b5f1c0a6e39d27b4f8c5a1e",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1788798814.0,
+     "content": "mom has been up since 6 marinatng chicken",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d7e20f4b9a8c13e6b5d7f02a",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1788799641.0,
+     "content": "pls come early i need backup 😭",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2a9c6e1d4b0f87a3c2e96d5b",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788799835.0,
+     "content": "Leaving in ten minutes. The jollof is riding on Kwame's lap, so pray for it. 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b3f8a05c7d2e169b0a3f8c4d",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788800498.0,
+     "content": "Backup is 20 minutes out.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a1c4e7f2b9d63e85a1c7f4b2",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792366396.0,
+     "content": "Ama, are you still good to watch Kwame on the 21st for our anniversary dinner? Table is at 7:30.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "52e8b1d6f3a94c07e52b8d1f",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1792367256.0,
+     "content": "yes ofc!! me and kwame already planned a robot movie marathon 🤖",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e9b3f7a2c5d18e64b9f3a7c0",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1792367431.0,
+     "content": "ok but the 19th is gonna be 🔥",
+     "attachment_name": null
+    },
+    {
+     "message_id": "17d4a9e3b6f25c81d7a4e9b6",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792367551.0,
+     "content": "What's on the 19th? 👀",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c6f1b8e4a2d97f53c6b1e8a4",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1792367818.0,
+     "content": "NOTHING wrong chat lol",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8a3e6c1f9b54d27a3e8c6f19",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1792367915.0,
+     "content": "i meant the 21st. the dinner",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f4d9a2c7e1b86f30d4a9c2e7",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792368013.0,
+     "content": "Mm-hmm. K, anything you want to tell me? 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3e7b5f8a1c49d62e7b3f5a8c",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1792368269.0,
+     "content": "Ama can't read a calendar. Dinner is the 21st.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b2a8d4e9f6c31a75b2d8e4f9",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1792368506.0,
+     "content": "Good evening my dears. Ten years already! I still have the photographs from the wedding in Accra. I will bring them the next time I come by. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "69c3f1a7d8e24b96c3a1f7d5",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792368753.0,
+     "content": "Thank you Auntie 🙏🏾 I would love to see them.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1792368753.0
+  },
+  {
+   "conversation_id": "d29f06ab4e8c71f3b5a20c6e",
+   "title": "Efua & Auntie Abena",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "e81b6f04c9d27a35b8f1e60d",
+    "3f9c2a71d84be05c6a1f7d93"
+   ],
+   "messages": [
+    {
+     "message_id": "6e1b9f3a0c58d27e4b6a1c9f",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788812860.0,
+     "content": "Thank you so much for today, Auntie. The tilapia was perfect, and Kwame has not put his new football down once. 🙏🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c9a04d7e2b6f15c3a8e0d74b",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788813939.866,
+     "content": "Your new goalkeeper.",
+     "attachment_name": "IMG_2231.jpg"
+    },
+    {
+     "message_id": "0f5d8b2c6a91e47f3d5b0c28",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788814759.554,
+     "content": "All of us in one picture, finally!",
+     "attachment_name": "IMG_2236.jpg"
+    },
+    {
+     "message_id": "93b7e1f5a2d08c6b7e3f91a4",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788814977.554,
+     "content": "And the grill master herself. 😂",
+     "attachment_name": "IMG_2240.jpg"
+    },
+    {
+     "message_id": "5d2a8c0f7e4b39d1a6c5e82f",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1788815221.554,
+     "content": "My dear Efua, thank you for coming, and for the jollof. Not one grain is left. Kwame is getting so big, he will be the tallest in first grade. I will print the one of all of us for my living room. Did you reach home safe? God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "ea4f60b3d9c172e8f04a6b3d",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788815315.554,
+     "content": "Yes, home safe. Kofi is changing for his bike ride, and Kwame is practicing his saves in the hallway.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "17c8d4a9f0e2b65c1d8a4f7e",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1788815501.554,
+     "content": "Always that bicycle! Tell Kofi the kelewele in the blue container is for HIM, not for sharing. And you must write down that jollof for me, mine never comes out like yours. 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "669d2326307ea1094de8540a",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788815749.554,
+     "content": "The kelewele went straight to the back of the fridge, Auntie. That is my reward after the ride, and Efua and Kwame have been warned.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a6e3b0c58f71d94a2e6b3c0d",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788815935.78,
+     "content": "It's all in frying the tomato paste longer than feels right. I'll write it out for you this week. Thank you again for having us, Auntie. 🙏🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f0d5bd3f7d68685be4a41c7b",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1789497235.316,
+     "content": "Auntie, here is the jollof recipe. Once the paste is dark red, add the blended tomatoes and peppers and cook until the oil rises. Then add the stock, thyme, curry powder and a bay leaf, and stir in the washed rice. Put foil under the lid, keep the heat very low, and do not stir for 30 minutes.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "110c680aa8aa42d8769a6fad",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1789498003.316,
+     "content": "Thank you my dear, I have copied it into my recipe book. Foil under the lid, nobody EVER told me that! I will make it for the ladies at church and see if they notice the difference. 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "889bf68963f3ab3d1d67c466",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1789498254.316,
+     "content": "My dear Kofi, Kwame told me after church that he is going to be a ROBOT for Halloween and that his daddy is putting lights in it. Please make sure those wires do not get HOT against his chest. When I was nursing I saw burns from less. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1789498254.316
+  },
+  {
+   "conversation_id": "5d8e2b71f04c9a36e1b7c250",
+   "title": "Auntie Abena",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "e81b6f04c9d27a35b8f1e60d"
+   ],
+   "messages": [
+    {
+     "message_id": "c13a8e4f6b20d97e05a1f38c",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1778418324.0,
+     "content": "Good morning Auntie. Happy Mother's Day. Efua and Kwame say hello.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4e7b0d92a3f615c8e2b97a04",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1778429329.0,
+     "content": "Good afternoon Kofi, Thank you. I am just back from church and Ama is taking me for lunch. Give Kwame a big hug from me, and tell Efua Happy Mother's Day too. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "91f2c6a83d05b7e14c9f0a6d",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1781216855.0,
+     "content": "Good evening Kofi, Efua told me our Kwame had his moving-up ceremony today. Tell him I am very PROUD of him. There is a little something waiting for him the next time you all come to Southfield. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0b5ce8d172a4f39b6e07c1d5",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1781219967.0,
+     "content": "Good evening Auntie. I'll tell him. He shook the principal's hand like he was closing a deal, then waved at us all the way back to his seat.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f6a92c13e8b540d7a2c69e18",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1781220144.0,
+     "content": "That is my boy! God bless. Auntie Abena",
+     "attachment_name": null
+    },
+    {
+     "message_id": "38d4a0e6c91b5f27d3a80e4b",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1783378143.0,
+     "content": "Good evening Kofi, I showed the dune video to the ladies at church and now one of them wants to take her grandchildren camping. What is the name of the place where you stayed? God bless. Auntie Abena",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d27e6b9c04f1a8d3c5e07b62",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1783381093.0,
+     "content": "Good evening Auntie. D.H. Day Campground in Glen Arbor, close to the Dune Climb. Tell her to book early. Summer weekends fill up months ahead.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6a0f3d8be5c291a70f4ed8b3",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1786489941.0,
+     "content": "Good evening Kofi, The orange engine light came on in my car earlier on Telegraph. The car is driving fine. Should I be worried? I do not want to go to the dealer and pay them for NOTHING. God bless. Auntie Abena",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e45b9f172d6ca0e8b3f54c91",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1786490947.0,
+     "content": "Good evening Auntie. If the light is steady and not flashing, it's usually something small. Did you fill the tank recently? A loose gas cap is the most common cause.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "17c8d4a2f9e03b6d52a1e7f4",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1786491973.0,
+     "content": "Yes, on Saturday. I will go out and check the cap now. God bless. Auntie Abena",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a9e306b4c7d2e15f8a30b6c9",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1786492886.0,
+     "content": "Tighten it until it clicks, then give it a few days of driving. If it's still on by the weekend, I'll bring my scanner over.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5b1df7c0a46e2938d0b7f1a5",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1786827549.0,
+     "content": "Good evening Kofi, The light went off earlier! You saved me a trip to the dealer. Thank you. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c8f42e9a6d17b0c3e5a24f86",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1786829338.0,
+     "content": "Good evening Auntie. Glad to hear it. If it ever comes back on, call me before you call the dealer.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "203ea5d9b8f17c460e2bd9a7",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1788481101.0,
+     "content": "Good evening Kofi, The plantains at my store are still too green for kelewele. If you pass the African market before Monday, please bring me ten ripe ones. Black on the outside is GOOD. God bless. Auntie Abena",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f0b861c53e7ad24f9b0c5e13",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788482906.0,
+     "content": "Good evening Auntie. Ten ripe plantains, the blacker the better. I'll pick them up Saturday and bring them Monday with the table.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8d6ac3f0e12b47d9a5e60c38",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1788828822.0,
+     "content": "Good evening Kofi, Thank you for the table, the music and the plantains. The kelewele was finished before the chicken! Everybody was asking who made the music sound so nice. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4a2c9e0d7f35b18ec6a4d0f2",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788829667.0,
+     "content": "Thank you for having us, Auntie. My container of kelewele was waiting in the fridge after the ride. Best part of the night.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "be9315a7d0c4e8f23b61a7d0",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1791761874.0,
+     "content": "Good evening Kofi, Kwame tells me the robot is going to be SILVER. I want to buy him a treat bag that MATCHES. Is it silver all over? God bless. Auntie Abena",
+     "attachment_name": null
+    },
+    {
+     "message_id": "06e5d2b8a1f9c47e1d03b5a8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791762580.0,
+     "content": "Good evening Auntie. Silver with blue buttons, by special request. The lights came Friday and run off a small battery pack, so nothing gets warm against his chest.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d9c14f6e08a3b2d7e9f06c45",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1791764121.0,
+     "content": "Silver and blue. I will find it. Thank you for minding those wires. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    },
+    {
+     "message_id": "73abe0c6f5d19a284e7bc3f9",
+     "sender_id": "e81b6f04c9d27a35b8f1e60d",
+     "timestamp": 1792971854.0,
+     "content": "Good evening Kofi, I hope Efua and Kwame are well. Is Ama working extra hours for you? She is on that laptop until 1 a.m. and won't tell me ANYTHING. If it is work, please make sure she rests. She has stopped eating breakfast. God bless. Auntie Abena 🙏",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1792971854.0
+  },
+  {
+   "conversation_id": "a8e3f71c2b9d4065e1c7a3f8",
+   "title": "Efua Mensah",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "3f9c2a71d84be05c6a1f7d93"
+   ],
+   "messages": [
+    {
+     "message_id": "3f7a9c1e5b2d8046a9f3c7e1",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1781108347.0,
+     "content": "Coverage is set for 2nd and 3rd hour tomorrow, so I can be at Greenlawn by 9:45.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d6b2e8a4f1c9735062d8b4a9",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1781108916.0,
+     "content": "Good. I'll be there when the doors open at 9:40 and hold two seats up front.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0e9c4a7f3b6d1285c4e0a9f7",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1781111347.0,
+     "content": "Please bring the good camera, babe, not your phone. This only happens once.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b8f1d5a2c7e9406371b5f8d2",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1781111579.0,
+     "content": "Battery's already on the charger. Spare card is in the bag.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6a3e0c9f8d2b5174e6a0c3f9",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1781190875.0,
+     "content": "Back at school. I cried in the parking lot for one minute and now I'm completely fine 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c2d7f4b1a9e8360517c2f4d8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1781191071.0,
+     "content": "He bowed at the end. Nobody told him to bow. Got it on camera.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9f5b8e3a6c1d7420b9f5e8a3",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1781191287.0,
+     "content": "Of course he did. Send me the photos later, please ❤️",
+     "attachment_name": null
+    },
+    {
+     "message_id": "41e8a6d3f9b2c075d1e4a8f6",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1781201522.0,
+     "content": "In the shared album now. 14 keepers out of 212, and the bow is the winner ❤️",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a91f3c0e7b24d58a06e3f1c7",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787696635.0,
+     "content": "Greenlawn posted the first-grade list: 4 boxes of Crayola 24s, 24 #2 pencils, 12 glue sticks, 2 pink erasers, blunt scissors, red and blue pocket folders, a wide-ruled comp book, over-ear headphones, 2 boxes of tissues, wipes and gallon Ziplocs.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5d02e8b741c9a3f69e152b08",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787696738.0,
+     "content": "The headphones go in one of the Ziploc bags with his name on it. They were very clear about that.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e7c42a9d0f61b83e5c27d94a",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787696878.0,
+     "content": "I'm in PD at Rouge Park through Wednesday, so Meijer is not happening for me this week. Could you take this one, babe?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "38b6f1d0c92e74a5e0b31f68",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787697854.0,
+     "content": "Yes. I'll go tomorrow morning. The bench can wait an hour.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c05a9e732d48f1b6a7c0e392",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787699259.0,
+     "content": "Does it have to be name-brand crayons or is the school being fancy?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "71e9d4b208f3c6a51e97b40d",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787700056.0,
+     "content": "Crayola. The cheap ones snap on the first day and then there are tears 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f3a806c1e5d92b74c08f6a13",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787700278.0,
+     "content": "Also, his backpack zipper finally gave out. He needs a new one, and no wheels. The school doesn't allow them.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2b97c4e0a13f58d6e9b207c5",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787700580.0,
+     "content": "So a robot backpack.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d6f041a8b3c29e570d1bf84a",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787702381.0,
+     "content": "If they have one, he will never take it off. Nothing that lights up, please.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0e5cb7a36f92d1e84a0bc7f3",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787702524.0,
+     "content": "No lights. Plain robot, zero batteries.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9a24e6f1c0b837d5a29e4f06",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787746682.0,
+     "content": "At Meijer. They're out of red plastic folders. Green or orange?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b8d315f7e4a0c62b9d310e7f",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787747182.0,
+     "content": "Green. Kwame has decided orange is a baby color this week.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "47c1a0e9d2b5f8360c4ae19d",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787747289.0,
+     "content": "Green it is.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e20f9b6437ca05d1b8e3a7f2",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787747961.0,
+     "content": "Found the backpack. Silver robot, no lights, no wheels. He's going to live in it.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6fa3d8c01e47b92d54f0c3e8",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787748189.0,
+     "content": "That's the one. Thank you 🙏🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1c8e72f5a04be3d9c61a08b7",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787748726.0,
+     "content": "Done. Whole list plus one robot.",
+     "attachment_name": "IMG_4417.jpg"
+    },
+    {
+     "message_id": "d47b0e2c96f1a8e53b0d72c4",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787748873.0,
+     "content": "❤️",
+     "attachment_name": null
+    },
+    {
+     "message_id": "83e6c5a1f20d4b98e7c315a0",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787748972.0,
+     "content": "He is going to want to sleep with that backpack. How much was all of it?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a5d93f08c7e261b40a9fd3c6",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787749153.0,
+     "content": "$81.47 with tax. Backpack and headphones were about half of it.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f81c6d3a09e4b72fc5d0a4e1",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1787751624.0,
+     "content": "Already labeled the headphone bag with the label maker from the shop.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3e70b9c4d16a0f85e2b79c4d",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1787752592.0,
+     "content": "Of course you did. Thank you, K ❤️",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e7c3b9f2d5a8146093e7b2c5",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788870143.0,
+     "content": "He's in. Lined up on the playground with his class and didn't look back once.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2b9f6d1e4a7c8305f2b6e9d4",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788870554.0,
+     "content": "That's our boy. I'm the one who needs a minute. Did he remember his water bottle?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a5d0e7c4b2f9613874a0d5e2",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788871386.0,
+     "content": "Water bottle, backpack, and the dinosaur eraser he was told to leave at home.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "7c1f9b5e3d8a2046e7c9f1b3",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788872959.0,
+     "content": "Let him have the eraser. It's a big day.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f4a8c2e6d9b1753028f4c6a1",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788895972.0,
+     "content": "Picked up. His report: first grade is 'way harder' because there's homework. Also there's a class fish.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "18d5b3f7a2e9c406b1d8f3a5",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788896146.0,
+     "content": "A class fish! What is the fish's name?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c9e2a6f1b8d4307529c6e1a8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1788896226.0,
+     "content": "They vote on Friday. He's campaigning hard for Sparky.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5b6f3d9a1c7e8240f5b3d6a7",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1788896443.0,
+     "content": "Sparky. That is absolutely your son 😂 I'm home in five minutes.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e0a7c5d2f8b3961406e2a5c9",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1790985532.0,
+     "content": "Did you see the Greenlawn newsletter? The parade is Friday the 30th at 1:30, and nothing can cover the face.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8d3c1f6b9e4a5072d8c6f3b1",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1790986813.0,
+     "content": "Saw it. The helmet stays open in front and the lights go around the face.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3a9e7b2d5f1c8604a3e9d2b7",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1790987074.0,
+     "content": "He also has to get in and out of it by himself. No bolts, Mr. Engineer 🤨",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b1f6d8a3c5e2794016b8f1d3",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1790988801.0,
+     "content": "Two boxes, shoulder straps, one switch. A first grader can run it.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6e4b2a9d7f3c1580e6b4d9a2",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1790988985.0,
+     "content": "Famous last words, K.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b37f0d92c4e81a65f2d9037c",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791239785.0,
+     "content": "K, I booked the furnace tune-up for Thursday morning, 9 to 11. Can you be home, and actually in the house, for it?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8c21e6f4a90b37d5c18e2fa6",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791240091.0,
+     "content": "Forwarded you the confirmation. I gave them your number, so the tech will call you about 30 minutes ahead.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e05a93b7d2c64f18a7e30b9d",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791247087.0,
+     "content": "Off the bike. Thursday's fine, I'll do listings at the kitchen table till they're done.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2fd84a1ce97b5603d4a2c8e1",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791247618.0,
+     "content": "Thank you. Did you see the part about clearing space around the furnace?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a6c3f17e08d295b4e6f1a73c",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791247763.0,
+     "content": "Three feet, I read it. The spare cartons go out to the garage tonight.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "71be4d09f3a8c62e5d07b9f4",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791248144.0,
+     "content": "Also, no UPS runs in the middle of it, please 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d94f2a6b1e07c385fa29d6e0",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791248261.0,
+     "content": "No UPS runs. Ama has the garage code, she can let herself in at 10.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3a07e5c9b2f41d86e7c03a5b",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791248538.0,
+     "content": "Perfect. How was the ride?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c58d1b3f7a94e06d2b8f15ae",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791248746.0,
+     "content": "Cold once the sun dropped. Three more Mondays. See you soon ❤️",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d2c8f5e1a6b9437092d5c8e1",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791332716.0,
+     "content": "Ordered the LEDs. A strip for the chest, two big blue ones for the eyes, and a little board so they blink. Should be here Friday.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9a7d4c3f1e8b2065b9a4f7c3",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791332963.0,
+     "content": "How much did this robot cost us?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4c5e9b8a2d6f7031c4e8b5a9",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791333252.0,
+     "content": "$42.41. Cheaper than the store one, and his actually lights up.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f8b3a1e7c4d2596038f1a3e7",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791333975.0,
+     "content": "Fine. I'll do the boxes and the paint. You do the wires and nothing else.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2e1d7f9c6b5a8340e2d9f6c5",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791372658.595,
+     "content": "Deal. Silver?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a3f9c6b4e8d1720563a6c9b4",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791373292.595,
+     "content": "Silver with blue buttons. He was very specific about it at bedtime.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "7b8e2d5a9f4c6013b7e5d2a8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791373778.595,
+     "content": "Blue buttons, noted. Any other requirements from the client?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c6a4f8e3d1b7509246c8f3e1",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791373991.595,
+     "content": "He wants it to beep. A lot.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1f2c9a6e7d3b8450f1c6a9e3",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791375534.595,
+     "content": "No beeps. That one's for all of us.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e9d5b7c2a4f8361079d2b5c4",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791376161.595,
+     "content": "Thank you 🙏🏾 I'll ask in the copy room tomorrow for two of the big paper boxes.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5a8f1e4d6c9b2073a5f4e1d6",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791377856.595,
+     "content": "Two is right. One for the body, one for the head, and I'll cut the face opening.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b4c7e2a9f5d1683024c9a7e5",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791423636.595,
+     "content": "Are you coming in soon? It's getting cold out there.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8e6a3f5c2b9d7140e8a5f3c2",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791423763.595,
+     "content": "Twenty minutes. Letting the iron cool down ❤️",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f1e62c08a4d79b35c0e6a28d",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791463827.595,
+     "content": "Did they call yet?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5b93d7e0c16a2f84b9d3e07f",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791464022.595,
+     "content": "Not yet. Cartons are gone and the coffee's on.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "09c4a8f2e5b17d63a0c9f48e",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791466266.595,
+     "content": "He called at 9. Here now and down in the basement.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e8a25f6d03c9b471e2a8d50c",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791470405.595,
+     "content": "Furnace done. Filter changed.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b2e709a5d4c38f16e0b7a39d",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791470684.595,
+     "content": "🙏🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0d9b6e1f8a3c5427d0b1e6f8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791575920.595,
+     "content": "LEDs came. The strip is a lot brighter than I expected. He'll be visible from space.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f1e3c8d6b2a9704581e6d3c8",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791576123.595,
+     "content": "Good, then I can find him in the parade 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6c2a9d4e3f7b1508c6a4e9d7",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791576398.595,
+     "content": "That was always the plan.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a9b5f2c8e1d6437029b8c5f2",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791975520.595,
+     "content": "Picture day today! The blue shirt is on his door. No syrup at breakfast, please 🙏🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "3d7e4b1a9c5f8062d3e7a1b9",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791975926.595,
+     "content": "Blue shirt, no syrup. Copy that.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c8f6d3a5b9e2174068f3a5d9",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1791980709.595,
+     "content": "Dropped off. The shirt survived breakfast. The hair did not cooperate at all.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "7a1b8e6c4d2f9305a7b6c8e4",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1791983572.595,
+     "content": "😂 As long as he smiles with his teeth this year.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e2f4a9b7d8c3615042a7d9b8",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792102399.595,
+     "content": "The boxes are finally dry. Can you come in for a fitting before his bath? He's still wired from the cider mill.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "9c3d5f8b2a6e1470c9d8b2f5",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1792102601.595,
+     "content": "Coming now with the harness. Battery cover's screwed shut, per the newsletter.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4b9a6c2e7f1d8053b4a2e7f1",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792102821.595,
+     "content": "You went back out too soon. He refuses to take it off and says robots don't take baths.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d7e1b3f9c5a2846017e3f9c5",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1792102922.595,
+     "content": "Tell him robots recharge in the bath. It's in the manual.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1a6c8e4f2d9b7350a1c4f2d9",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792104501.595,
+     "content": "It worked 😂 You are a menace, K.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d7e2a9f4c1b63d85e7a2f9c4",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792440722.595,
+     "content": "Kwame says you have a 'secret radio' in the garage 🤨",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4a8f3c6e9d21b74a8f6c3e9d",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1792440801.595,
+     "content": "Kwame also says he's a robot.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e3c9b5a1f7d42e86c9b3a5f1",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792440908.595,
+     "content": "He IS a robot. He has answered me in beeps since 3:45 😂",
+     "attachment_name": null
+    },
+    {
+     "message_id": "91f6d2e8a4c37b19f6e2d8a3",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792441621.595,
+     "content": "He also wants to know if robots get two desserts.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c4a7e1d9b3f56c28a7d1e9b5",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1792442334.595,
+     "content": "Robots run on batteries. One dessert.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "2f5b8e3a6d19c47f5b2e8a6d",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792443205.595,
+     "content": "I'll tell him you said that. Are you riding later?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "b7d3f9c2e5a84b61d3c9f2e5",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1792444024.595,
+     "content": "Yes, 6:00 from Roosevelt Park. Home by 8:30.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5c9a4e7b2f13d86c9a7e4b2f",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1792444591.595,
+     "content": "Plate will be in the oven ❤️",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e8b1d6a3c9f27e54b1a6d3c9",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1793046296.595,
+     "content": "Last ride of the season later? Also, Greenlawn moved the parade to 2:00.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "36e4c8f1a5d92b73e4f8c1a5",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1793046401.595,
+     "content": "Saw the text, 2:00 it is. Last Roll later, back around 8:30.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a9f2b7e4d6c15a38f2e7b4d6",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1793047618.595,
+     "content": "Wear the reflective vest, please 🙏🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1b6d3a9f8e24c57b6a3d9f8e",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1793049013.595,
+     "content": "Already on ❤️",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f3e8c2a5b7d91f46e8a2c5b7",
+     "sender_id": "3f9c2a71d84be05c6a1f7d93",
+     "timestamp": 1793274168.595,
+     "content": "What time are you back Saturday? Want to take Kwame for pumpkins at 1.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1793274168.595
+  },
+  {
+   "conversation_id": "3b8ef1c60a92d74e15b3c8f0",
+   "title": "Terrence Gaines",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "a81c3f6e0b5d92e7c4a1f83d"
+   ],
+   "messages": [
+    {
+     "message_id": "9f2a6c04e3b187d5a0c94e62",
+     "sender_id": "a81c3f6e0b5d92e7c4a1f83d",
+     "timestamp": 1784246285.0,
+     "content": "Hey Kofi, Terrence Gaines from Detroit Vintage Audio. Got your number off the shop's Instagram, hope that's ok.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "0c7de95a2b14f6a83d90e1b7",
+     "sender_id": "a81c3f6e0b5d92e7c4a1f83d",
+     "timestamp": 1784246602.0,
+     "content": "Picked up a Pioneer SX-650 at a garage sale in Ferndale. Sat in a basement for years. Want to bring it up slow like you said with my Sansui.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c5a13e8f70d2b49c6e05a2f8",
+     "sender_id": "a81c3f6e0b5d92e7c4a1f83d",
+     "timestamp": 1784247193.26,
+     "content": "Did you build your dim bulb tester or buy one?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "62e0b8d74f1ac3e905b6d72c",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1784247469.378,
+     "content": "Built it. Outlet box, 100W incandescent in series, bypass switch. Use a real incandescent, an LED bulb won't limit current.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "f81b2a6ed9057c3fb4e10a98",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1784247545.53,
+     "content": "I have a spare you can borrow. Thursday afternoon at the garage works.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "47d3c0f9a25e18b6e7c43f0d",
+     "sender_id": "a81c3f6e0b5d92e7c4a1f83d",
+     "timestamp": 1784248814.608,
+     "content": "That's generous, thank you. Saturday the 25th?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "ad965e2b3c710f4a98d0b5e3",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1784249047.608,
+     "content": "25th at 1:30. 17241 Prairie St, garage is around back.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "1e05f7c8b3a46d922e8bf0c1",
+     "sender_id": "a81c3f6e0b5d92e7c4a1f83d",
+     "timestamp": 1786056900.307,
+     "content": "Update: ran it on the tester a few nights. Bulb flashed bright, then settled to a dim glow. No smoke lol. Both channels playing now.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "8b4ca1d6e09f35e77a2dc6b0",
+     "sender_id": "a81c3f6e0b5d92e7c4a1f83d",
+     "timestamp": 1786057553.307,
+     "content": "Ok if I drop the tester back Saturday?",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d2f7093e6b8ac1d4f5a32e97",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1786059551.38,
+     "content": "Good result. Saturday at 1:30 works. Come before 2, they close the street for our block party.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5c3ae8b014f9d6c2a07e9b51",
+     "sender_id": "a81c3f6e0b5d92e7c4a1f83d",
+     "timestamp": 1786213054.971,
+     "content": "Thanks again for the loan. A few of us from the group grab a beer at Motor City Brewing every couple months. Next one is Thu Sept 17. You should come.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "e9b17d4c02a8f3e6c5d01a74",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1786213818.971,
+     "content": "I'll be there. Thanks Terrence.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1786213818.971
+  },
+  {
+   "conversation_id": "6d9e4b2a7f38c15d9e4a2b73",
+   "title": "Ama Boateng",
+   "participant_ids": [
+    "01636af92193c186c00c8aaf",
+    "6c736bf60496cbd1794d06b9"
+   ],
+   "messages": [
+    {
+     "message_id": "7c2e9a4f1d86b35c2e7a9f4d",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1792367576.0,
+     "content": "The 19th 😐",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d5a1f8c3e6b29d74a1c8f3e6",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1792368404.0,
+     "content": "IM SORRY",
+     "attachment_name": null
+    },
+    {
+     "message_id": "28f7b4e1a9c63d58f7e4b1a9",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1792368642.27,
+     "content": "i panicked 😭",
+     "attachment_name": null
+    },
+    {
+     "message_id": "c9e5a2d7f3b18c46e5d2a7f3",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1792368867.27,
+     "content": "do u think she bought it??",
+     "attachment_name": null
+    },
+    {
+     "message_id": "4e1c8f6b2a97d53e1f6c8b2a",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1792369259.377,
+     "content": "Mostly. She's been side-eyeing the garage for weeks anyway. No more fire emojis in the family chat till the 19th 🙏🏾",
+     "attachment_name": null
+    },
+    {
+     "message_id": "a3d7e9b5c2f84a16d7b9e5c2",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1792369558.626,
+     "content": "lips sealed for real this time 🤐",
+     "attachment_name": null
+    },
+    {
+     "message_id": "090f1479ac927b227ee5254e",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1793026989.07,
+     "content": "Heads up. Your mom texted me last night, wants to know if I'm the reason you're on the laptop till 1am. Haven't answered her yet.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "80766b6826859659704a72ec",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1793027703.07,
+     "content": "just woke up to this 😭 pls dont tell her or efua abt lumen til i hear back 🤐 tell her im fine",
+     "attachment_name": null
+    },
+    {
+     "message_id": "5a34263326f8c7178d823a80",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1793028873.283,
+     "content": "Not a word about Lumen. But she says you've quit breakfast, and on that one I'm with her. Eat something.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "6d4071562b6533a397d6b9e0",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1793152393.887,
+     "content": "Your reference is drafted. The raking light rig made it in, clamp light and diffusion frame. Goes to Lumen Monday morning.",
+     "attachment_name": null
+    },
+    {
+     "message_id": "d3c0c25f63c6381f1ac9e8ec",
+     "sender_id": "6c736bf60496cbd1794d06b9",
+     "timestamp": 1793153131.887,
+     "content": "wait already?? 😭😭 ok i kno i cant see it but ngl im so nervous",
+     "attachment_name": null
+    },
+    {
+     "message_id": "71822538114e62d2fc1d32c8",
+     "sender_id": "01636af92193c186c00c8aaf",
+     "timestamp": 1793153243.887,
+     "content": "Your photos already did the talking. Now close the laptop before your mom texts me again.",
+     "attachment_name": null
+    }
+   ],
+   "last_updated": 1793153243.887
+  }
+ ],
+ "current_user_id": "01636af92193c186c00c8aaf"
+}

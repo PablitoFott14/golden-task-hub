@@ -1,0 +1,1501 @@
+{
+ "users": [
+  {
+   "id": "07692a2f3a05a66730378811",
+   "email": "elena.marsh.avl@gmail.com"
+  }
+ ],
+ "offers": [
+  {
+   "id": "off_0000Kp7mR2xQ",
+   "owner": {
+    "name": "United Airlines",
+    "iata_code": "UA",
+    "id": "arl_0000Ua7kQm2X"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Kp7mS4aT",
+     "origin": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H56M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Kp7mT1aB",
+       "origin": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2027-05-16T13:07:00",
+       "arriving_at": "2027-05-16T14:03:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "5421",
+       "duration": "PT1H56M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Kp7mP8vR",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Kp7mS5bU",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "duration": "PT1H58M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Kp7mT2bC",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2027-05-18T17:41:00",
+       "arriving_at": "2027-05-18T20:39:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "5388",
+       "duration": "PT1H58M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Kp7mP8vR",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Kp7mP8vR",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "446.38",
+   "total_currency": "USD",
+   "base_amount": "382.51",
+   "base_currency": "USD",
+   "tax_amount": "63.87",
+   "tax_currency": "USD",
+   "conditions": {
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    },
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    }
+   },
+   "expires_at": "2026-10-21T23:41:03Z",
+   "created_at": "2026-10-19T23:41:03+00:00"
+  },
+  {
+   "id": "off_0000Bw4nT9vE",
+   "owner": {
+    "name": "United Airlines",
+    "iata_code": "UA",
+    "id": "arl_0000Ua7kQm2X"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Bw4nU1cV",
+     "origin": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H58M",
+     "fare_brand_name": "Basic Economy",
+     "segments": [
+      {
+       "id": "seg_0000Bw4nX3cD",
+       "origin": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2027-05-16T06:13:00",
+       "arriving_at": "2027-05-16T07:11:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "5227",
+       "duration": "PT1H58M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Bw4nP6wS",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Bw4nU2dW",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "duration": "PT1H57M",
+     "fare_brand_name": "Basic Economy",
+     "segments": [
+      {
+       "id": "seg_0000Bw4nX4dE",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2027-05-18T11:52:00",
+       "arriving_at": "2027-05-18T14:49:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "5694",
+       "duration": "PT1H57M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Bw4nP6wS",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": []
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Bw4nP6wS",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "318.94",
+   "total_currency": "USD",
+   "base_amount": "266.12",
+   "base_currency": "USD",
+   "tax_amount": "52.82",
+   "tax_currency": "USD",
+   "conditions": {
+    "change_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    }
+   },
+   "expires_at": "2026-10-21T23:41:03Z",
+   "created_at": "2026-10-19T23:41:03+00:00"
+  },
+  {
+   "id": "off_0000Hs2qY6cL",
+   "owner": {
+    "name": "American Airlines",
+    "iata_code": "AA",
+    "id": "arl_0000Aa3pLr8N"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Hs2qV3eX",
+     "origin": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H54M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000Hs2qZ5eF",
+       "origin": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2027-05-16T16:35:00",
+       "arriving_at": "2027-05-16T17:29:00",
+       "marketing_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA"
+       },
+       "operating_carrier": {
+        "name": "Envoy Air",
+        "iata_code": "MQ"
+       },
+       "marketing_carrier_flight_number": "3876",
+       "duration": "PT1H54M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Hs2qP4xT",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Hs2qV4fY",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "duration": "PT1H53M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000Hs2qZ6fG",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2027-05-18T18:15:00",
+       "arriving_at": "2027-05-18T21:08:00",
+       "marketing_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA"
+       },
+       "operating_carrier": {
+        "name": "Envoy Air",
+        "iata_code": "MQ"
+       },
+       "marketing_carrier_flight_number": "4012",
+       "duration": "PT1H53M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Hs2qP4xT",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Hs2qP4xT",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "472.06",
+   "total_currency": "USD",
+   "base_amount": "405.33",
+   "base_currency": "USD",
+   "tax_amount": "66.73",
+   "tax_currency": "USD",
+   "conditions": {
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    },
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    }
+   },
+   "expires_at": "2026-10-21T23:41:03Z",
+   "created_at": "2026-10-19T23:41:03+00:00"
+  },
+  {
+   "id": "off_0000Ze8jF3uN",
+   "owner": {
+    "name": "Delta Air Lines",
+    "iata_code": "DL",
+    "id": "arl_0000Dl5tWz4H"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Ze8jW5gZ",
+     "origin": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT4H31M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000Ze8jA7gH",
+       "origin": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "ATL",
+        "type": "airport",
+        "name": "Hartsfield-Jackson Atlanta International Airport",
+        "city_name": "Atlanta",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2027-05-16T15:22:00",
+       "arriving_at": "2027-05-16T16:31:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Endeavor Air",
+        "iata_code": "9E"
+       },
+       "marketing_carrier_flight_number": "2318",
+       "duration": "PT1H09M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ze8jP2yU",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Delta Main",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "seg_0000Ze8jA8hJ",
+       "origin": {
+        "iata_code": "ATL",
+        "type": "airport",
+        "name": "Hartsfield-Jackson Atlanta International Airport",
+        "city_name": "Atlanta",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2027-05-16T17:47:00",
+       "arriving_at": "2027-05-16T18:53:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "marketing_carrier_flight_number": "1407",
+       "duration": "PT2H06M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ze8jP2yU",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Delta Main",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Ze8jW6hA",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "duration": "PT4H31M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000Ze8jB9jK",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "ATL",
+        "type": "airport",
+        "name": "Hartsfield-Jackson Atlanta International Airport",
+        "city_name": "Atlanta",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2027-05-18T14:10:00",
+       "arriving_at": "2027-05-18T17:12:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "marketing_carrier_flight_number": "1966",
+       "duration": "PT2H02M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ze8jP2yU",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Delta Main",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "seg_0000Ze8jB1kL",
+       "origin": {
+        "iata_code": "ATL",
+        "type": "airport",
+        "name": "Hartsfield-Jackson Atlanta International Airport",
+        "city_name": "Atlanta",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2027-05-18T18:35:00",
+       "arriving_at": "2027-05-18T19:41:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Endeavor Air",
+        "iata_code": "9E"
+       },
+       "marketing_carrier_flight_number": "1173",
+       "duration": "PT1H06M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ze8jP2yU",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Delta Main",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Ze8jP2yU",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "389.57",
+   "total_currency": "USD",
+   "base_amount": "327.84",
+   "base_currency": "USD",
+   "tax_amount": "61.73",
+   "tax_currency": "USD",
+   "conditions": {
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    },
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    }
+   },
+   "expires_at": "2026-10-21T23:41:03Z",
+   "created_at": "2026-10-19T23:41:03+00:00"
+  },
+  {
+   "id": "off_0000Ux8nQ3vL",
+   "owner": {
+    "name": "United Airlines",
+    "iata_code": "UA",
+    "id": "arl_0000VME7DAGi"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Ux8pR4wM",
+     "origin": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H57M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Ux8rT6yP",
+       "origin": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-05-17T17:05:00",
+       "arriving_at": "2026-05-17T18:02:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "5412",
+       "duration": "PT1H57M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ux8tV2aR",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Ux8qS5xN",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "duration": "PT1H54M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Ux8sU7zQ",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2026-05-19T13:20:00",
+       "arriving_at": "2026-05-19T16:14:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "5397",
+       "duration": "PT1H54M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ux8tV2aR",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Ux8tV2aR",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "418.60",
+   "total_currency": "USD",
+   "base_amount": "362.79",
+   "base_currency": "USD",
+   "tax_amount": "55.81",
+   "tax_currency": "USD",
+   "conditions": {
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    },
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    }
+   },
+   "expires_at": "2026-04-25T22:58:12Z",
+   "created_at": "2026-04-23T22:58:12+00:00"
+  }
+ ],
+ "seat_map_elements": [
+  {
+   "id": "sea_0000Kp7mE1qA",
+   "offer_id": "off_0000Kp7mR2xQ",
+   "segment_id": "seg_0000Kp7mT1aB",
+   "type": "seat",
+   "designator": "9A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 102440981113023,
+   "position": 0,
+   "total_amount": "34.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Kp7mE2rB",
+   "offer_id": "off_0000Kp7mR2xQ",
+   "segment_id": "seg_0000Kp7mT1aB",
+   "type": "seat",
+   "designator": "9C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 102440981113023,
+   "position": 0,
+   "total_amount": "34.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Kp7mE3sC",
+   "offer_id": "off_0000Kp7mR2xQ",
+   "segment_id": "seg_0000Kp7mT1aB",
+   "type": "seat",
+   "designator": "15D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 15,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Kp7mE4tD",
+   "offer_id": "off_0000Kp7mR2xQ",
+   "segment_id": "seg_0000Kp7mT1aB",
+   "type": "seat",
+   "designator": "15F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 15,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Kp7mE5uE",
+   "offer_id": "off_0000Kp7mR2xQ",
+   "segment_id": "seg_0000Kp7mT2bC",
+   "type": "seat",
+   "designator": "10F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 10,
+   "section": 102440981113023,
+   "position": 0,
+   "total_amount": "29.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Kp7mE6vF",
+   "offer_id": "off_0000Kp7mR2xQ",
+   "segment_id": "seg_0000Kp7mT2bC",
+   "type": "seat",
+   "designator": "13A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 13,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Kp7mE7wG",
+   "offer_id": "off_0000Kp7mR2xQ",
+   "segment_id": "seg_0000Kp7mT2bC",
+   "type": "seat",
+   "designator": "13C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 13,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Kp7mE8xH",
+   "offer_id": "off_0000Kp7mR2xQ",
+   "segment_id": "seg_0000Kp7mT2bC",
+   "type": "seat",
+   "designator": "17D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Hs2qG1aJ",
+   "offer_id": "off_0000Hs2qY6cL",
+   "segment_id": "seg_0000Hs2qZ5eF",
+   "type": "seat",
+   "designator": "8A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 8,
+   "section": 103069770577828,
+   "position": 0,
+   "total_amount": "41.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Hs2qG2bK",
+   "offer_id": "off_0000Hs2qY6cL",
+   "segment_id": "seg_0000Hs2qZ5eF",
+   "type": "seat",
+   "designator": "12C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Hs2qG3cL",
+   "offer_id": "off_0000Hs2qY6cL",
+   "segment_id": "seg_0000Hs2qZ5eF",
+   "type": "seat",
+   "designator": "12D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Hs2qG4dM",
+   "offer_id": "off_0000Hs2qY6cL",
+   "segment_id": "seg_0000Hs2qZ5eF",
+   "type": "seat",
+   "designator": "16F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 16,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Hs2qG5eN",
+   "offer_id": "off_0000Hs2qY6cL",
+   "segment_id": "seg_0000Hs2qZ6fG",
+   "type": "seat",
+   "designator": "9D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 103069770577828,
+   "position": 0,
+   "total_amount": "38.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Hs2qG6fP",
+   "offer_id": "off_0000Hs2qY6cL",
+   "segment_id": "seg_0000Hs2qZ6fG",
+   "type": "seat",
+   "designator": "11A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Hs2qG7gQ",
+   "offer_id": "off_0000Hs2qY6cL",
+   "segment_id": "seg_0000Hs2qZ6fG",
+   "type": "seat",
+   "designator": "14C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Hs2qG8hR",
+   "offer_id": "off_0000Hs2qY6cL",
+   "segment_id": "seg_0000Hs2qZ6fG",
+   "type": "seat",
+   "designator": "18F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 18,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Ux9aK1mB",
+   "offer_id": "off_0000Ux8nQ3vL",
+   "segment_id": "seg_0000Ux8rT6yP",
+   "type": "seat",
+   "designator": "8A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 8,
+   "section": 102440981113023,
+   "position": 0,
+   "total_amount": "39.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Ux9bL2nC",
+   "offer_id": "off_0000Ux8nQ3vL",
+   "segment_id": "seg_0000Ux8rT6yP",
+   "type": "seat",
+   "designator": "9C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 102440981113023,
+   "position": 0,
+   "total_amount": "39.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ux9cM3pD",
+   "offer_id": "off_0000Ux8nQ3vL",
+   "segment_id": "seg_0000Ux8rT6yP",
+   "type": "seat",
+   "designator": "14A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ux9dN4qE",
+   "offer_id": "off_0000Ux8nQ3vL",
+   "segment_id": "seg_0000Ux8rT6yP",
+   "type": "seat",
+   "designator": "17F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Ux9eP5rF",
+   "offer_id": "off_0000Ux8nQ3vL",
+   "segment_id": "seg_0000Ux8sU7zQ",
+   "type": "seat",
+   "designator": "7D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 7,
+   "section": 102440981113023,
+   "position": 0,
+   "total_amount": "34.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ux9fQ6sG",
+   "offer_id": "off_0000Ux8nQ3vL",
+   "segment_id": "seg_0000Ux8sU7zQ",
+   "type": "seat",
+   "designator": "12A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Ux9gR7tH",
+   "offer_id": "off_0000Ux8nQ3vL",
+   "segment_id": "seg_0000Ux8sU7zQ",
+   "type": "seat",
+   "designator": "15C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 15,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ux9hS8uJ",
+   "offer_id": "off_0000Ux8nQ3vL",
+   "segment_id": "seg_0000Ux8sU7zQ",
+   "type": "seat",
+   "designator": "18F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 18,
+   "section": 139110916493295,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  }
+ ],
+ "orders": [
+  {
+   "id": "ord_0000Wk5mB9cD",
+   "user_id": "07692a2f3a05a66730378811",
+   "offer_id": "off_0000Ux8nQ3vL",
+   "booking_reference": "K7QZ4M",
+   "owner": {
+    "name": "United Airlines",
+    "iata_code": "UA",
+    "id": "arl_0000VME7DAGi"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Ux8pR4wM",
+     "origin": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H57M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Ux8rT6yP",
+       "origin": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-05-17T17:05:00",
+       "arriving_at": "2026-05-17T18:02:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "5412",
+       "duration": "PT1H57M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ux8tV2aR",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Ux8qS5xN",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "AVL",
+      "type": "airport",
+      "name": "Asheville Regional Airport",
+      "city_name": "Asheville",
+      "time_zone": "America/New_York"
+     },
+     "duration": "PT1H54M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Ux8sU7zQ",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "AVL",
+        "type": "airport",
+        "name": "Asheville Regional Airport",
+        "city_name": "Asheville",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2026-05-19T13:20:00",
+       "arriving_at": "2026-05-19T16:14:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "5397",
+       "duration": "PT1H54M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ux8tV2aR",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Ux8tV2aR",
+     "type": "adult",
+     "given_name": "Elena",
+     "family_name": "Marsh",
+     "title": "ms",
+     "gender": "f",
+     "born_on": "1979-06-15",
+     "email": "elena@marshandmill.com",
+     "phone_number": "+18285550142"
+    }
+   ],
+   "services": [],
+   "total_amount": "418.60",
+   "total_currency": "USD",
+   "created_at": "2026-04-23T23:10:41Z",
+   "cancelled_at": null
+  }
+ ],
+ "order_cancellations": [],
+ "accommodations": [
+  {
+   "id": "acc_0000rM8IXalh",
+   "name": "Lakeshore Grand Hotel Chicago",
+   "location": {
+    "address": {
+     "line_one": null,
+     "city_name": "Chicago",
+     "country_code": "US",
+     "region": "IL",
+     "postal_code": null
+    },
+    "geographic_coordinates": {
+     "latitude": 41.8781,
+     "longitude": -87.6298
+    }
+   },
+   "description": "McCormick Place is a 12-minute ride from the hotel.",
+   "check_in_information": {
+    "check_in_after_time": "16:00",
+    "check_out_before_time": "11:00"
+   }
+  }
+ ],
+ "rooms": [
+  {
+   "id": "rom_00000HjXgUdt",
+   "accommodation_id": "acc_0000rM8IXalh",
+   "name": "Standard King",
+   "beds": [
+    {
+     "type": "king",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "rates": [
+  {
+   "id": "rat_0000PxcVv9bD",
+   "room_id": "rom_00000HjXgUdt",
+   "check_in_date": "2026-05-17",
+   "check_out_date": "2026-05-19",
+   "total_amount": "437.18",
+   "total_currency": "USD",
+   "base_amount": "372.00",
+   "tax_amount": "65.18",
+   "board_type": "room_only",
+   "payment_type": "guarantee",
+   "cancellation_timeline": [
+    {
+     "before": "2026-05-16T21:00:00Z",
+     "refund_amount": "437.18",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 0
+  }
+ ],
+ "quotes": [],
+ "bookings": []
+}

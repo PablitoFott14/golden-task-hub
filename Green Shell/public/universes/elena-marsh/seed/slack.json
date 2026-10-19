@@ -1,0 +1,3137 @@
+{
+ "users": [
+  {
+   "id": "U_ELENA",
+   "name": "elena.marsh",
+   "real_name": "Elena Marsh",
+   "display_name": "Elena",
+   "email": "elena@marshandmill.com",
+   "avatar_url": "",
+   "is_bot": false,
+   "is_admin": true,
+   "deleted": false,
+   "timezone": "America/New_York"
+  },
+  {
+   "id": "U_LUIS",
+   "name": "luis.ortega",
+   "real_name": "Luis Ortega",
+   "display_name": "Luis",
+   "email": "luis@marshandmill.com",
+   "avatar_url": "",
+   "is_bot": false,
+   "is_admin": false,
+   "deleted": false,
+   "timezone": "America/New_York"
+  },
+  {
+   "id": "U_JUNE",
+   "name": "june.okafor",
+   "real_name": "June Okafor",
+   "display_name": "June",
+   "email": "june@marshandmill.com",
+   "avatar_url": "",
+   "is_bot": false,
+   "is_admin": false,
+   "deleted": false,
+   "timezone": "America/New_York"
+  },
+  {
+   "id": "U_PRIYA",
+   "name": "priya.raman",
+   "real_name": "Priya Raman",
+   "display_name": "Priya",
+   "email": "priya@marshandmill.com",
+   "avatar_url": "",
+   "is_bot": false,
+   "is_admin": false,
+   "deleted": false,
+   "timezone": "America/New_York"
+  },
+  {
+   "id": "U_MARCO",
+   "name": "marco.ruiz",
+   "real_name": "Marco Ruiz",
+   "display_name": "Marco",
+   "email": "marco@marshandmill.com",
+   "avatar_url": "",
+   "is_bot": false,
+   "is_admin": false,
+   "deleted": false,
+   "timezone": "America/New_York"
+  },
+  {
+   "id": "U_NOOR",
+   "name": "noor.haddad",
+   "real_name": "Noor Haddad",
+   "display_name": "Noor",
+   "email": "noor@marshandmill.com",
+   "avatar_url": "",
+   "is_bot": false,
+   "is_admin": false,
+   "deleted": false,
+   "timezone": "America/New_York"
+  },
+  {
+   "id": "U_ELI",
+   "name": "eli.brandt",
+   "real_name": "Eli Brandt",
+   "display_name": "Eli",
+   "email": "eli@marshandmill.com",
+   "avatar_url": "",
+   "is_bot": false,
+   "is_admin": false,
+   "deleted": false,
+   "timezone": "America/New_York"
+  },
+  {
+   "id": "U_SASHA",
+   "name": "sasha.kim",
+   "real_name": "Sasha Kim",
+   "display_name": "Sasha",
+   "email": "sasha@marshandmill.com",
+   "avatar_url": "",
+   "is_bot": false,
+   "is_admin": false,
+   "deleted": false,
+   "timezone": "America/New_York"
+  },
+  {
+   "id": "U_CALEB",
+   "name": "caleb.dunn",
+   "real_name": "Caleb Dunn",
+   "display_name": "Caleb",
+   "email": "caleb@marshandmill.com",
+   "avatar_url": "",
+   "is_bot": false,
+   "is_admin": false,
+   "deleted": false,
+   "timezone": "America/New_York"
+  }
+ ],
+ "channels": [
+  {
+   "id": "C_SCHEDULE",
+   "name": "schedule",
+   "is_channel": true,
+   "is_private": false,
+   "is_im": false,
+   "is_mpim": false,
+   "is_archived": false,
+   "is_general": false,
+   "num_members": 9,
+   "topic": "Weekly schedule goes up Mondays. Swaps go here.",
+   "purpose": "Shift schedule, swaps and time-off requests for bake, café and the market stand.",
+   "created": "1772632817.000000",
+   "creator": "U_ELENA",
+   "members": [
+    "U_CALEB",
+    "U_ELENA",
+    "U_ELI",
+    "U_JUNE",
+    "U_LUIS",
+    "U_MARCO",
+    "U_NOOR",
+    "U_PRIYA",
+    "U_SASHA"
+   ]
+  },
+  {
+   "id": "C_86_LIST",
+   "name": "86-list",
+   "is_channel": true,
+   "is_private": false,
+   "is_im": false,
+   "is_mpim": false,
+   "is_archived": false,
+   "is_general": false,
+   "num_members": 9,
+   "topic": "Post it the minute it sells out.",
+   "purpose": "Sold-out items and low stock, café and market stand.",
+   "created": "1772632910.000000",
+   "creator": "U_ELENA",
+   "members": [
+    "U_CALEB",
+    "U_ELENA",
+    "U_ELI",
+    "U_JUNE",
+    "U_LUIS",
+    "U_MARCO",
+    "U_NOOR",
+    "U_PRIYA",
+    "U_SASHA"
+   ]
+  },
+  {
+   "id": "D8e0f6f55eaf5a4bbfc1a67c",
+   "name": "elena.marsh-luis.ortega",
+   "is_channel": false,
+   "is_private": true,
+   "is_im": true,
+   "is_mpim": false,
+   "is_archived": false,
+   "is_general": false,
+   "num_members": 2,
+   "topic": "",
+   "purpose": "",
+   "created": "1789855907.207300",
+   "creator": "U_ELENA",
+   "members": [
+    "U_ELENA",
+    "U_LUIS"
+   ]
+  }
+ ],
+ "messages": [
+  {
+   "ts": "1776693686.706742",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 4/22.\nBake 4:00 Wed-Sun: Marco. I'm on bread.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis runs the café with Noor and Eli. Sasha is at market with me, load-out 6:45.\nCaleb dish Wed-Sun 7:00-15:30.\nPost swaps here.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1776693686.706742",
+   "reply_count": 4,
+   "reply_users_count": 4,
+   "latest_reply": "1776695525.897889",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1776694049.366619",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Got it. I'll be at the café by 6:45 Sat to help load the van!",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1776693686.706742",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1776694947.290182",
+   "type": "message",
+   "user": "U_PRIYA",
+   "text": "Works for me 🙂 Can I leave at 12 on Thursday? I have a dentist appointment.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1776693686.706742",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1776695119.108112",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Yes. Marco covers the Thu 12:00 bake-off.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1776693686.706742",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "pray",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1776695525.897889",
+   "type": "message",
+   "user": "U_MARCO",
+   "text": "on it. thu 12:00 bake-off is mine.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1776693686.706742",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1776964808.357046",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Caleb, 15 minutes with me at 2:00 once the dish pit is clear. I want to go over your summer hours.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1777298523.615290",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 4/29.\nBake 4:00 Wed-Sun: Marco. I'm on bread.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis runs the café with Noor and Eli. Sasha is at market with me, load-out 6:45.\nMarco takes the Fri 6:30 flour drop.\nCaleb dish Wed-Sun 7:00-15:30.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1777736468.088179",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "86 almond croissants 11:40.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1777736468.088179",
+   "reply_count": 3,
+   "reply_users_count": 2,
+   "latest_reply": "1777736800.966031",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "eyes",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1777736531.564953",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "FYI oat milk is low 👍",
+   "channel": "C_86_LIST",
+   "thread_ts": "1777736468.088179",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1777736661.783834",
+   "type": "message",
+   "user": "U_NOOR",
+   "text": "one carton left behind the bar. steering people to whole or almond til it's gone",
+   "channel": "C_86_LIST",
+   "thread_ts": "1777736468.088179",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1777736800.966031",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Thanks Noor. Oat milk is on Tuesday's order list 🙌",
+   "channel": "C_86_LIST",
+   "thread_ts": "1777736468.088179",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1777902985.753454",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 5/6.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha is at market with me, load-out 6:45.\nSun 5/10 is Mother's Day. June leads strawberry shortcakes. Expect a line at 7.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    },
+    {
+     "name": "strawberry",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1778523629.145793",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 5/13.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha is at market with me, load-out 6:45.\nSun 5/17: I leave at 2:30 for the baking expo in Chicago. Luis has the close. I'm back for the Wed 5/20 bake.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1778523629.145793",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1778525041.786340",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    },
+    {
+     "name": "airplane",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1778525041.786340",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Got it. Sunday close is covered 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1778523629.145793",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1778612892.882428",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule for the week is up. Sat market setup 07:15. Luis has the café. Swaps here.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1778612892.882428",
+   "reply_count": 5,
+   "reply_users_count": 3,
+   "latest_reply": "1778613799.598620",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1778613268.409536",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Got it. FYI Saturdays have been tight with just me and Eli on counter. Noor asked for more hours. Can we put her on bar Sat from 11:30 through close? 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1778612892.882428",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1778613460.636226",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "i can be in at 4 sat and finish the café bake after you load out. lmk",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1778612892.882428",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1778613569.508674",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Yes to both. Noor on bar Sat 11:30 to close. June, 4:00 with me. Rye and country loaves come out first for the stand.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1778612892.882428",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1778613665.703862",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Perfect. I'll tell Noor and walk her through the Saturday close on her first one. 🙌",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1778612892.882428",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1778613799.598620",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "ok ok 4 it is. rye and country first, stand crates packed before you head out 🥐",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1778612892.882428",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1779039626.182054",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 5/20. Posting early, I'm at the expo Mon and Tue.\nTue 5/19: June takes the 10:00 flour drop.\nBake 4:00 Wed-Sun: Marco. I'm back on bread Wed.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nMarco takes the Fri 6:30 drop.\nSat 5/23: Memorial Day weekend market. Sasha with me, load-out 6:45. Luis on café with Noor and Eli.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1779039626.182054",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1779200776.235233",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1779046401.588604",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Closed up. Drawer counted, walk-in temp logged, cash deposit is in the office safe. I'll drop it at the bank tomorrow morning 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "raised_hands",
+     "count": 3
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1779200776.235233",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "tuesday drop is in and racked in dry storage. slip is on your desk",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1779039626.182054",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1779717858.144012",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 5/27.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me, load-out 6:45.\nCaleb dish Wed-Sun.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1780322281.685795",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 6/3.\nBake 4:00 Wed-Sun: Marco. 36 strawberry hand pies for the market Sat.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me.\nMarco takes the Fri 6:30 flour drop.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1780842048.197062",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "86 morning buns 10:20. last tray went in like 8 min 🔥",
+   "channel": "C_86_LIST",
+   "thread_ts": "1780842048.197062",
+   "reply_count": 2,
+   "reply_users_count": 2,
+   "latest_reply": "1780842402.385148",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "fire",
+     "count": 3
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1780842263.712128",
+   "type": "message",
+   "user": "U_MARCO",
+   "text": "Second batch is proofing. 12 out by 10:50.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1780842048.197062",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1780842402.385148",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Good. 18 more next Sunday. Put it on the board.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1780842048.197062",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "white_check_mark",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1780927292.698087",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 6/10.\nBake 4:00 Wed-Sun: Marco. Herb focaccia Wed and Sun.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me, load-out 6:45.\nCaleb dish Wed-Sun.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1781116557.671012",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Sasha: market vendor parking moves to the upper lot starting Sat 6/13. Weights on all four tent legs. Afternoon storms have been gusty. July 4 market runs as usual, set up by 7:30.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1781116557.671012",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1781117548.414551",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1781117548.414551",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Got it. I'll load the extra sandbags from the back hall Friday!",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1781116557.671012",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1781351207.014724",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "FYI Marco is out sick today. Caleb has porter until 9:00, then back on dish 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1781351207.014724",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1781352744.461938",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1781352744.461938",
+   "type": "message",
+   "user": "U_MARCO",
+   "text": "sorry. fever. back sunday.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1781351207.014724",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1781532373.237201",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 6/17.\nBake 4:00 Wed-Sun: Marco. Cherry clafoutis Thu-Sun.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me.\nSun 6/21 is Father's Day.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782067601.702981",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "86 whipped cream for the rest of today. walk-in is reading 46 and the fan is loud. moved butter and cream to the reach-ins",
+   "channel": "C_86_LIST",
+   "thread_ts": "1782067601.702981",
+   "reply_count": 2,
+   "reply_users_count": 1,
+   "latest_reply": "1782239104.711954",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "eyes",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782068307.797342",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Good. Keep the door shut. I'll call Smoky Mtn first thing Monday.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1782067601.702981",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782136666.725546",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 6/24.\nWalk-in repair Tue at 10:30. Dairy stays in the reach-ins until then.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat 6/27: peach galettes at the stand again. Sasha with me, load-out 6:45. Luis on café with Noor and Eli.\nMarco takes the Fri 6:30 flour drop.\nCheck-in: Priya today at 12:00.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782136666.725546",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1782138677.805017",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782138677.805017",
+   "type": "message",
+   "user": "U_PRIYA",
+   "text": "Sounds good, talk at 12 🙂",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782136666.725546",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782239104.711954",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Walk-in is fixed and holding 36 again. Dairy goes back in.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1782067601.702981",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "raised_hands",
+     "count": 3
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782587544.183226",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "June asked me Monday about a swap. Marco's good to take her Sunday bake and she picks up his Thursday. OK to lock it in? 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782587544.183226",
+   "reply_count": 5,
+   "reply_users_count": 3,
+   "latest_reply": "1782588786.117364",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782587916.937427",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "yep, that's the plan. i'll leave marco notes on the levain feed so sunday isn't a scramble 🥐",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782587544.183226",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782588187.698246",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Approved. June bakes Thursday, Marco bakes Sunday.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782587544.183226",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782588269.276039",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Locked in on the sheet. FYI Eli asked off Saturday, so I'm thin on counter. Any chance Sasha stays at the café instead of the stand? 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782587544.183226",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782588570.925417",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Sasha stays at the stand. We set up at 07:15. Put Caleb on counter once dishes are caught up.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782587544.183226",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782588786.117364",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Got it. I'll walk Caleb through the register Friday so he's not learning it mid-rush. Noor stays on bar. 🙌",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782587544.183226",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782741827.907242",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 7/1.\nBake 4:00 Wed-Sun: Marco. 48 blueberry hand pies for the market Sat.\nBar: Noor Wed/Thu/Sat/Sun, Eli Fri.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat 7/4: market runs 8 to 12. Set up by 7:30, so load-out is 6:15. Sasha with me. Luis on café with Noor, Caleb on counter once dishes are caught up.\nCaleb dish Wed-Sun.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782741827.907242",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1782744057.338187",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    },
+    {
+     "name": "blueberries",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1782744057.338187",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "I'll be at the café by 6:00 Saturday to load!",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1782741827.907242",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783173953.522855",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Market sold out of blueberry hand pies by 10!",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783173953.522855",
+   "reply_count": 2,
+   "reply_users_count": 2,
+   "latest_reply": "1783174646.719182",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "fire",
+     "count": 3
+    },
+    {
+     "name": "blueberries",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783174166.869942",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Nice! Café still has 5 on the counter. Want me to send them up with Marco? 👍",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783173953.522855",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783174646.719182",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Keep them at the café. Note for next Fourth: 80 hand pies for the market, not 48.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783173953.522855",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783179663.828878",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "86 blueberry hand pies at the café too, the last 5 went at 11:40.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783179663.828878",
+   "reply_count": 2,
+   "reply_users_count": 2,
+   "latest_reply": "1783180094.373999",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "eyes",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783179666.129877",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "FYI cold brew low too 👍",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783179663.828878",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783180094.373999",
+   "type": "message",
+   "user": "U_NOOR",
+   "text": "on it! last carafe is out, new batch went in this morning so it's ready tmrw. pushing iced americanos for the rest of today 🙏",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783179663.828878",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "raised_hands",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783346365.731595",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 7/8.\nBake 4:00 Wed-Sun: Marco. Tomato pie Wednesdays start this week, June leads.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me, load-out 6:45. Peach galettes for the stand.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    },
+    {
+     "name": "peach",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783780259.307468",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Rye gone by 10:30 at the market!",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783780259.307468",
+   "reply_count": 3,
+   "reply_users_count": 3,
+   "latest_reply": "1783782362.749534",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "bread",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783780460.216627",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Good. 6 more rye for next Saturday's market. add them to Friday's mix.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783780259.307468",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783781585.970942",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "ok ok adding 6 rye to fri. how are the peach galettes holding up?",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783780259.307468",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783782362.749534",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Going fast too! Maybe 8 left, people keep asking if we'll have them next week.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1783780259.307468",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "peach",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1783951547.613586",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 7/15.\nBake 4:00 Wed-Sun: Marco. 6 extra rye for the Sat market.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me.\nMarco takes the Fri 6:30 flour drop.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1784374568.321156",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "86 morning buns 7:30.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1784374568.321156",
+   "reply_count": 2,
+   "reply_users_count": 2,
+   "latest_reply": "1784381040.939109",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "fire",
+     "count": 3
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1784375393.301188",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "FYI sending 10 country loaves up to the market on the 9:00 run 🙌",
+   "channel": "C_86_LIST",
+   "thread_ts": "1784374568.321156",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1784381040.939109",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Got the loaves! Line's 20 deep, thank you!!",
+   "channel": "C_86_LIST",
+   "thread_ts": "1784374568.321156",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1784556131.006693",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 7/22.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me, load-out 6:45.\nCheck-ins: Eli today 4:00 by phone. Noor Tue 2:00, coffee after at 4:00. Luis Wed 10:00 in the office.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1784819145.630314",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "86 country loaf and baguettes for today. Flour problem.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1784819145.630314",
+   "reply_count": 3,
+   "reply_users_count": 3,
+   "latest_reply": "1784820113.614969",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "eyes",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1784819276.130629",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "ok pulling both off the case. pushing extra rye and seeded into the 12:00 bake so the shelves don't look empty",
+   "channel": "C_86_LIST",
+   "thread_ts": "1784819145.630314",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1784819390.949178",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Got it. Telling the counter now. We have 3 baguette pre-orders for today. I'll call them and offer rye instead. 👍",
+   "channel": "C_86_LIST",
+   "thread_ts": "1784819145.630314",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1784820113.614969",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Thanks both. Cash and carry flour run tomorrow morning. Country loaf and baguettes back Sat.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1784819145.630314",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "raised_hands",
+     "count": 3
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1785160820.333239",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 7/29.\nFlour comes from cash and carry for now. I do the runs Tue and Fri. Flag anything low by close the day before.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me.\nCaleb dish Wed-Sun.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1785160820.333239",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1785163311.795855",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1785163311.795855",
+   "type": "message",
+   "user": "U_MARCO",
+   "text": "Fri run, I'll unload.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1785160820.333239",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1785765345.965686",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 8/5.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me, load-out 6:45.\nTue is the last cash and carry flour run. New supplier starts Fri 6:30. Details Wed.\nCheck-ins: Sasha Tue 2:00, Noor Fri 10:00, Priya Sun 4:00 after close.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1785954769.174306",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "We switched flour suppliers. Piedmont Grain Co. starts Fri 8/7. Drops are Tue around 10:00 and Fri at 6:30 at the back door. The truck pulls into the side lot. Marco has Fridays. Recipes stay the same.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1785954769.174306",
+   "reply_count": 2,
+   "reply_users_count": 1,
+   "latest_reply": "1786100312.143359",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 6
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1785955825.219593",
+   "type": "message",
+   "user": "U_MARCO",
+   "text": "on it. fri 6:30.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1785954769.174306",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786100312.143359",
+   "type": "message",
+   "user": "U_MARCO",
+   "text": "piedmont drop is in. racked in dry storage, slip's on your desk.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1785954769.174306",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786370668.516216",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 8/12.\nBake 4:00 Wed-Sun: Marco. Country loaf stays at the new hydration.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me.\nPiedmont drops Tue 10:00 and Fri 6:30. Marco has Fri.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786539766.999434",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "FYI almond croissants 86 at 9:00. Plain are down to the last tray in the case. 👍",
+   "channel": "C_86_LIST",
+   "thread_ts": "1786539766.999434",
+   "reply_count": 5,
+   "reply_users_count": 3,
+   "latest_reply": "1786540639.393791",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786539845.718383",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "ok ok, one more pan of plain is proofing in the back. baking it off now, out in about 20 🥐 no frangipane left though so almond is done for today",
+   "channel": "C_86_LIST",
+   "thread_ts": "1786539766.999434",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786539964.645386",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Good. Almond stays 86. Raising almond par by 12.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1786539766.999434",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786540313.786501",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Thanks June, telling the counter plain are back around 9:25. 🙌",
+   "channel": "C_86_LIST",
+   "thread_ts": "1786539766.999434",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786540565.295883",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "buns are going fast every morning this week 🔥 i can roll 6 more on the next bake, lmk",
+   "channel": "C_86_LIST",
+   "thread_ts": "1786539766.999434",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786540639.393791",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "6 works. Luis, post the time when the rye goes.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1786539766.999434",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786976675.989958",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 8/19.\nEspresso machine service Tue 9:00. dial in the grinder Wed at 6:30 before open.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis on café with Noor and Eli. Sasha at market with me, load-out 6:45.\nCheck-ins: Caleb today 12:00, Sasha Tue 12:00, Priya Sat 12:30 by phone after market.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1786976675.989958",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1786979156.124325",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1786979156.124325",
+   "type": "message",
+   "user": "U_NOOR",
+   "text": "on it, 6:30 wed 🙏",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1786976675.989958",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1787067352.184451",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Espresso machine is done. Descaled, new gaskets and screens on both groups, pressure set at 9 bar. Shots pull even again.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1787067352.184451",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1787069428.700962",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "coffee",
+     "count": 3
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1787069428.700962",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Great. Cappuccinos should taste right again tomorrow. 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1787067352.184451",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1787399480.095135",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "FYI oat milk is low, maybe 4 cartons left. Grabbing a case at Ingles after close. 👍",
+   "channel": "C_86_LIST",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1787579898.462557",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 8/26.\nBake 4:00 Wed-Sun: Marco. First apple galettes Thu.\nBar: Noor Wed/Thu/Sun, Eli Fri/Sat.\nCounter: Sasha Wed/Thu, Eli Sun.\nSat: Luis runs the café with Noor and Eli. Sasha at the market with me. We leave the café at 6:45.\nMarco takes the Fri 6:30 Piedmont drop.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    },
+    {
+     "name": "apple",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1787769864.193713",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Sasha: per the market board, the last market is Sat 11/21. Load-out has to be finished by 12:45 so they can reopen the lot. Sat 10/31 is Halloween and costumes are welcome.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1787769864.193713",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1787770969.154251",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "jack_o_lantern",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1787770969.154251",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Costumes, I'm in! We're usually packed by 12:30 anyway, so 12:45 is fine.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1787769864.193713",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1788184844.953932",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 9/2.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed-Fri, Eli Sat/Sun.\nCounter: Sasha Wed/Thu/Sun, Eli Fri.\nSat: Luis runs the café with Noor and Eli. Sasha at the market with me.\nCaleb on dish Wed-Sun.\nMarco takes the Fri 6:30 Piedmont delivery and puts it in dry storage.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1788184844.953932",
+   "reply_count": 3,
+   "reply_users_count": 3,
+   "latest_reply": "1788186882.168625",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1788185707.490632",
+   "type": "message",
+   "user": "U_NOOR",
+   "text": "hey! could i come in at 7:15 thurs instead of 7? my bus schedule changed 🙏",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1788184844.953932",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1788186043.059030",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Fine. Sasha opens the bar at 7:00 Thu.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1788184844.953932",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1788186882.168625",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "On it. I'll have the grinder dialed in before Noor gets there.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1788184844.953932",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "heart",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1788356479.564747",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Eli, I'll call you at 10:00 about your Fri counter and weekend bar hours.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1788356479.564747",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1788356674.412767",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1788356674.412767",
+   "type": "message",
+   "user": "U_ELI",
+   "text": "sounds good, phone's on",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1788356479.564747",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1788789836.678813",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 9/9.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed-Fri, Eli Sat/Sun.\nCounter: Sasha Wed/Thu/Sun, Eli Fri.\nSat: Luis on café with Noor and Eli. Sasha at market with me.\nMarco takes the Fri 6:30 Piedmont drop.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789221942.144486",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "86 rye at the market, 10:05. Sold out!",
+   "channel": "C_86_LIST",
+   "thread_ts": "1789221942.144486",
+   "reply_count": 2,
+   "reply_users_count": 2,
+   "latest_reply": "1789222744.639318",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "fire",
+     "count": 3
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789222350.194499",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Nice. Café has 4 rye left on the shelf, holding them for walk-ins 👍",
+   "channel": "C_86_LIST",
+   "thread_ts": "1789221942.144486",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789222744.639318",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Good. Bake 4 extra rye for the stand next Sat.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1789221942.144486",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789231539.869036",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Market's packed up. A couple of regulars asked if the rye has changed. I told them it's the same recipe!",
+   "channel": "C_86_LIST",
+   "thread_ts": "1789231539.869036",
+   "reply_count": 2,
+   "reply_users_count": 2,
+   "latest_reply": "1789232603.455849",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789232451.422406",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Good. We switched flour suppliers in August. Same recipe. That's the answer.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1789231539.869036",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "+1",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789232603.455849",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Perfect, that's pretty much what I said! Most of them just said they love the crust.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1789231539.869036",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789394221.600204",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule for the week of 9/16.\nBake 4:00 Wed-Sun: Marco. Fall menu tests: pumpkin loaf Thu, cider donut test batch at the café Sat.\nBar: Noor Wed-Fri, Eli Sat/Sun.\nCounter: Sasha Wed/Thu/Sun, Eli Fri.\nSat: Luis runs the café with Noor and Eli. Sasha at the market with me, load-out 6:45.\nMarco takes the Fri 6:30 Piedmont drop.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1789394221.600204",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1789396253.752726",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789396253.752726",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "ok ok. pumpkin loaf thurs after bake-off, donut dough sat at 4",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1789394221.600204",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789991065.342716",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule for the week of 9/23.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed-Fri, Eli Sat/Sun.\nCounter: Sasha Wed/Thu/Sun, Eli Fri.\nSat: Luis runs the café with Noor and Eli. Sasha at the market with me, load-out 6:45.\nCustom cakes: Pryor, 8 inch chocolate stout, pickup Fri 2:00 at the café. Feldman, chocolate with the green dinosaur, goes to the market Sat.\nCheck-ins: Caleb today 1:00, Priya Tue 2:00.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1789991065.342716",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1789993220.057024",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    },
+    {
+     "name": "t-rex",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789993220.057024",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "I'll keep the dinosaur cake in the shade under the table on Saturday!",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1789991065.342716",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789999252.510949",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Fall menu starts Wed 9/23. Cider donuts Sat/Sun only. June leads pastry.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1789999252.510949",
+   "reply_count": 4,
+   "reply_users_count": 4,
+   "latest_reply": "1790000706.381970",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "apple",
+     "count": 3
+    },
+    {
+     "name": "fire",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789999434.573245",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "ok ok finally. pumpkin loaf goes in the case wed, i'll do one more test tmrw after the stock count",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1789999252.510949",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1789999582.704121",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Got it. I'll swap the menu board Tuesday afternoon and brief counter at 6:45 Wednesday 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1789999252.510949",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "+1",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790000613.396961",
+   "type": "message",
+   "user": "U_NOOR",
+   "text": "hey! are we doing a cider drink at the bar too or just the donuts?? 🙏",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1789999252.510949",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790000706.381970",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Just donuts for now. Hot cider by the cup if June has some left after the batter.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1789999252.510949",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790435767.237003",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "86 cider donuts 11:15",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790435767.237003",
+   "reply_count": 5,
+   "reply_users_count": 4,
+   "latest_reply": "1790437053.605578",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "doughnut",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790435812.970723",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Copy. Taking them off the board now.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790435767.237003",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790435853.159631",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "FYI that's 5 dozen gone since 7. Line was out the door at 9:30 🙌",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790435767.237003",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790436695.493372",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Market's out too! Three people asked if we'll have more tomorrow",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790435767.237003",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790436880.283017",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Double the donut batch tomorrow and next weekend. June, add 2 gal cider to Tuesday's count.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790435767.237003",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "+1",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790437053.605578",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "on it. i'll mix the extra dough tonight so it's ready at 4",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790435767.237003",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790533111.190958",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Saturday recap. Café 86 croissants 10:30, country loaf 12:10. Rye made it to close with 6 left. 👍",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790533111.190958",
+   "reply_count": 5,
+   "reply_users_count": 3,
+   "latest_reply": "1790534493.710410",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790533466.084535",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Market 86 rye 10:05. Country loaf 11:20. People were still asking for rye at close.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790533111.190958",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790533847.698567",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "ok ok croissants sell out earlier every week. i can run an extra block friday for 2 more dozen on saturday. lmk 🥐",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790533111.190958",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790534142.334501",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Run it. Move 6 rye from the café to the market. Country loaf up 10, split 5 and 5.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790533111.190958",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790534386.745616",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "adding the extra block + 10 country to friday prep. saturday oven will be packed but it fits 🔥",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790533111.190958",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790534493.710410",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Got it. If the market still sells through rye early, I'll send Sasha a few off the café rack. I'll keep posting café times as things sell out. 🙌",
+   "channel": "C_86_LIST",
+   "thread_ts": "1790533111.190958",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790604172.799535",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 9/30.\nBake 4:00 Wed-Sun: Marco. Cider donuts stay doubled Sat/Sun. Adding 2 gal cider to Tuesday's order.\nBar: Noor Wed-Fri, Eli Sat/Sun.\nCounter: Sasha Wed/Thu/Sun, Eli Fri.\nSat: Luis on café with Noor and Eli. Sasha at market with me, load-out 6:45.\nMarco takes the Fri 6:30 Piedmont drop.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1790604172.799535",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1790606147.189330",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    },
+    {
+     "name": "doughnut",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1790606147.189330",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "got it. doubling donut dough sat and sun 🍩",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1790604172.799535",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791039667.449938",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Market sold out of rye by 11!",
+   "channel": "C_86_LIST",
+   "thread_ts": "1791039667.449938",
+   "reply_count": 2,
+   "reply_users_count": 2,
+   "latest_reply": "1791040514.769664",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "tada",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791040038.929660",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "ok ok bumping rye to 14 loaves for next sat then",
+   "channel": "C_86_LIST",
+   "thread_ts": "1791039667.449938",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791040514.769664",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Make it 16 for the 10th. 12 market, 4 café.",
+   "channel": "C_86_LIST",
+   "thread_ts": "1791039667.449938",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791208794.145319",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 10/7.\nBake 4:00 Wed-Sun: Marco. Apple butter morning buns start Wed.\nBar: Noor Wed-Fri, Eli Sat/Sun.\nCounter: Sasha Wed/Thu/Sun, Eli Fri.\nSat 10/10: 16 rye, 12 market and 4 café. Sasha with me, load-out 6:45. Luis on café with Noor and Eli.\nMarco takes the Fri 6:30 Piedmont drop.\nHearth: check your mailing address and W-2 delivery choice in the employee portal by 12/4.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791208794.145319",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1791213155.157315",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 5
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791213155.157315",
+   "type": "message",
+   "user": "U_ELI",
+   "text": "done, my address is updated in hearth",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791208794.145319",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791484841.632777",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Staff dinner Mon 11/9, 6pm, Sorrel & Pine. On me. Partners welcome.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791484841.632777",
+   "reply_count": 7,
+   "reply_users_count": 7,
+   "latest_reply": "1791488920.988038",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "tada",
+     "count": 6
+    },
+    {
+     "name": "heart",
+     "count": 3
+    },
+    {
+     "name": "thumbsup",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791485131.387684",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "So in! Thank you Elena!!",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791484841.632777",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791485245.623801",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "so in, thanks elena. bringing my partner",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791484841.632777",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791485577.901538",
+   "type": "message",
+   "user": "U_PRIYA",
+   "text": "Thank you Elena! Me plus one 😊",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791484841.632777",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791486449.868307",
+   "type": "message",
+   "user": "U_NOOR",
+   "text": "yay!! my partner's coming too, thank u 🙏",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791484841.632777",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791487178.410786",
+   "type": "message",
+   "user": "U_ELI",
+   "text": "ill be there, just me",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791484841.632777",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791487920.064806",
+   "type": "message",
+   "user": "U_MARCO",
+   "text": "count me in. plus one.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791484841.632777",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791488920.988038",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Booked for 12 for now. Send me plus-ones by Fri 10/30 and I'll update the count.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791484841.632777",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791648971.874284",
+   "type": "message",
+   "user": "U_ELI",
+   "text": "86 oat milk fyi, last carton went at 12:10",
+   "channel": "C_86_LIST",
+   "thread_ts": "1791648971.874284",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1791649100.221831",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791649100.221831",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Thanks Eli. Almond only until Tuesday's order. Updating the board now 👍",
+   "channel": "C_86_LIST",
+   "thread_ts": "1791648971.874284",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791813708.533672",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 10/14.\nBake 4:00 Wed-Sun: Marco. Chocolate rye cookies go on the menu Thu.\nBar: Noor Wed-Fri, Eli Sat/Sun.\nCounter: Sasha Wed/Thu/Sun, Eli Fri.\nSat 10/17: big market bake. Rye, seeded, country, sandwich and cider donuts. Sasha with me, load-out 6:45. Luis on café with Noor and Eli.\nSix market Saturdays left. Last one is 11/21.\nMarco takes the Fri 6:30 Piedmont drop.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791813708.533672",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1791815860.018300",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    },
+    {
+     "name": "cookie",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1791815860.018300",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Six more! Let's make them count!",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1791813708.533672",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792001895.065353",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Thanksgiving pie preorders open today. Orders come in through the Facebook page and I log them. Pickup Wed 11/25 at the café, 7:00-15:00. Pies bake that morning, so plan on a full oven.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792001895.065353",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1792002711.894912",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "pie",
+     "count": 3
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792002711.894912",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Got it. I'll clear a pickup shelf behind the counter that week 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792001895.065353",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792006268.657661",
+   "type": "message",
+   "user": "U_NOOR",
+   "text": "hey! can anyone swap sun 11/1? 🙏",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792006268.657661",
+   "reply_count": 3,
+   "reply_users_count": 3,
+   "latest_reply": "1792007877.102705",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792006591.889127",
+   "type": "message",
+   "user": "U_ELI",
+   "text": "i can take it noor, free that sunday. put me on bar for your hours",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792006268.657661",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "raised_hands",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792006705.080930",
+   "type": "message",
+   "user": "U_NOOR",
+   "text": "thank you eli!! i owe you one 🙏",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792006268.657661",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792007877.102705",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Approved. Eli on bar Sun 11/1, Noor off.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792006268.657661",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "white_check_mark",
+     "count": 2
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792080681.596051",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Saw the invite for Mon 11/9 at Sorrel & Pine. Partners welcome too? Need me to do anything?",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792080681.596051",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1792080992.216088",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792080992.216088",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Yes, partners welcome. Tell me by Fri 10/30 so I can update the count. Otherwise nothing. Just show up.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792080681.596051",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "raised_hands",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792246936.901627",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Market's slammed. Rye gone at 10:15, cider donuts going fast!",
+   "channel": "C_86_LIST",
+   "thread_ts": "1792246936.901627",
+   "reply_count": 1,
+   "reply_users_count": 1,
+   "latest_reply": "1792247516.896686",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "fire",
+     "count": 3
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792247516.896686",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Copy. Down to 3 rye here, holding them for walk-ins. Sending a dozen donuts up with Marco at 11:00 🙌",
+   "channel": "C_86_LIST",
+   "thread_ts": "1792246936.901627",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792418473.494545",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Schedule wk of 10/21.\nBake 4:00 Wed-Sun: Marco.\nBar: Noor Wed/Thu/Sat, Eli Fri/Sun.\nCounter: Sasha Wed/Thu, Eli Sat.\nSat 10/24: Luis on café with Noor and Eli. Sasha at market with me, load-out 6:45.\nBennett order (2-tier hummingbird) rides to market in the cooler Sat.\nCaleb dish Wed-Sun.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792418473.494545",
+   "reply_count": 4,
+   "reply_users_count": 4,
+   "latest_reply": "1792421215.069914",
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "thumbsup",
+     "count": 4
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792419198.750299",
+   "type": "message",
+   "user": "U_SASHA",
+   "text": "Got it! I'll pull the big cooler out of the walk-in Friday before I leave.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792418473.494545",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792419385.102745",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Good. Cake gets boxed Fri 14:00. June checks the frosting first.",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792418473.494545",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792420842.010042",
+   "type": "message",
+   "user": "U_PRIYA",
+   "text": "I can make the cream cheese frosting batch Thursday if June wants a hand 🙂",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792418473.494545",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792421215.069914",
+   "type": "message",
+   "user": "U_JUNE",
+   "text": "yes priya, thurs after morning bake. i'll leave the recipe card on the reach-in",
+   "channel": "C_SCHEDULE",
+   "thread_ts": "1792418473.494545",
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [
+    {
+     "name": "heart",
+     "count": 1
+    }
+   ],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792447868.579638",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "For the 9th, want me to set up the back room or bring anything? Happy to handle it 👍",
+   "channel": "C_SCHEDULE",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792447934.782584",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "Sunday close recap: oat milk is down to 4 cartons and the hand pies sold through by 2.",
+   "channel": "D8e0f6f55eaf5a4bbfc1a67c",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792447978.827182",
+   "type": "message",
+   "user": "U_ELENA",
+   "text": "Thanks Luis. I'll grab oat milk on the way in. I've got the Piedmont drop tomorrow, enjoy your day off.",
+   "channel": "D8e0f6f55eaf5a4bbfc1a67c",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  },
+  {
+   "ts": "1792448152.170960",
+   "type": "message",
+   "user": "U_LUIS",
+   "text": "👍",
+   "channel": "D8e0f6f55eaf5a4bbfc1a67c",
+   "thread_ts": null,
+   "reply_count": 0,
+   "reply_users_count": 0,
+   "latest_reply": null,
+   "is_activity_message": false,
+   "subtype": "",
+   "reactions": [],
+   "files": [],
+   "attachments": []
+  }
+ ],
+ "reactions": [],
+ "files": []
+}

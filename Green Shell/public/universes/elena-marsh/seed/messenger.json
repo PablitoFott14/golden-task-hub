@@ -1,0 +1,486 @@
+{
+ "users": [
+  {
+   "id": "contact_7d70e40f0bedb6145566bc4c",
+   "email": "tkeener.avl@gmail.com",
+   "name": "Tom Keener"
+  },
+  {
+   "id": "contact_624483321982237cde191eea",
+   "email": "diane.holloway@gmail.com",
+   "name": "Diane Holloway"
+  },
+  {
+   "id": "contact_9c321ee51d227da2814dfec0",
+   "email": "rachel.ostrander@gmail.com",
+   "name": "Rachel Ostrander"
+  },
+  {
+   "id": "contact_f69b0da89f3f2a7f1332efc0",
+   "email": "abbyfeldman.avl@gmail.com",
+   "name": "Abby Feldman"
+  },
+  {
+   "id": "contact_ab80b2d22efe889631eaef8c",
+   "email": "marisolbennett.avl@gmail.com",
+   "name": "Marisol Bennett"
+  },
+  {
+   "id": "ms_user_elena",
+   "email": "elena.marsh.avl@gmail.com",
+   "name": "Elena Marsh"
+  }
+ ],
+ "contacts": [
+  {
+   "owner_id": "ms_user_elena",
+   "contact_id": "contact_7d70e40f0bedb6145566bc4c"
+  },
+  {
+   "owner_id": "contact_9c321ee51d227da2814dfec0",
+   "contact_id": "contact_624483321982237cde191eea"
+  },
+  {
+   "owner_id": "contact_624483321982237cde191eea",
+   "contact_id": "contact_9c321ee51d227da2814dfec0"
+  },
+  {
+   "owner_id": "contact_ab80b2d22efe889631eaef8c",
+   "contact_id": "contact_f69b0da89f3f2a7f1332efc0"
+  },
+  {
+   "owner_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "contact_id": "contact_ab80b2d22efe889631eaef8c"
+  }
+ ],
+ "threads": [
+  {
+   "id": "ms_thread_7c2e9a41",
+   "title": "Tom Keener",
+   "created_at": "2026-10-11T12:02:37.418000Z",
+   "updated_at": "2026-10-19T11:48:19.305000Z",
+   "participant_ids": [
+    "ms_user_elena",
+    "contact_7d70e40f0bedb6145566bc4c"
+   ]
+  },
+  {
+   "id": "ms_thread_5d2b8e17",
+   "title": "Diane Holloway",
+   "created_at": "2026-10-15T16:30:41.382000Z",
+   "updated_at": "2026-10-15T18:24:12.907000Z",
+   "participant_ids": [
+    "ms_user_elena",
+    "contact_624483321982237cde191eea"
+   ]
+  },
+  {
+   "id": "ms_thread_a93f06c4",
+   "title": "Rachel Ostrander",
+   "created_at": "2026-10-17T17:00:17.645000Z",
+   "updated_at": "2026-10-17T17:44:03.218000Z",
+   "participant_ids": [
+    "ms_user_elena",
+    "contact_9c321ee51d227da2814dfec0"
+   ]
+  },
+  {
+   "id": "ms_thread_6a1f3c9e",
+   "title": "Abby Feldman",
+   "created_at": "2026-09-20T13:30:41.208000Z",
+   "updated_at": "2026-09-26T17:49:05.317000Z",
+   "participant_ids": [
+    "ms_user_elena",
+    "contact_f69b0da89f3f2a7f1332efc0"
+   ]
+  },
+  {
+   "id": "ms_thread_d40b72e5",
+   "title": "Marisol Bennett",
+   "created_at": "2026-10-18T14:15:08.402000Z",
+   "updated_at": "2026-10-19T13:46:19.551000Z",
+   "participant_ids": [
+    "ms_user_elena",
+    "contact_ab80b2d22efe889631eaef8c"
+   ]
+  }
+ ],
+ "messages": [
+  {
+   "id": "ms_msg_3f8b1d06",
+   "thread_id": "ms_thread_7c2e9a41",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "Good morning Elena, the rye seems different lately. Did you change flour? Regards, Tom Keener",
+   "attachments": [],
+   "created_at": "2026-10-11T12:02:37.418000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_5d0e8b73",
+   "thread_id": "ms_thread_7c2e9a41",
+   "sender_id": "ms_user_elena",
+   "text": "Hi Tom, we switched flour suppliers in August. Same recipe; the new rye is a touch coarser. Glad you noticed!",
+   "attachments": [],
+   "created_at": "2026-10-12T13:15:24.157000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e61f2a98",
+   "thread_id": "ms_thread_7c2e9a41",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "Thank you, Elena. It still makes a fine sandwich. I will see you Saturday at the market. Regards, Tom Keener",
+   "attachments": [],
+   "created_at": "2026-10-12T14:41:50.662000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_08b7c3d4",
+   "thread_id": "ms_thread_7c2e9a41",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "Good morning Elena, I heard at the market that Blue Ridge Mill had some trouble with a bad batch. Was that your problem? Regards, Tom Keener",
+   "attachments": [],
+   "created_at": "2026-10-19T11:48:19.305000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_1e7c4a90",
+   "thread_id": "ms_thread_5d2b8e17",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "hi! saw the pie post, can i get one apple and one pecan",
+   "attachments": [],
+   "created_at": "2026-10-15T16:30:41.382000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_8b02f3d6",
+   "thread_id": "ms_thread_5d2b8e17",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "for the wednesday pickup, this one",
+   "attachments": [
+    {
+     "name": "pie-post-screenshot.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-10-15T16:31:58.114000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_4c9a71e2",
+   "thread_id": "ms_thread_5d2b8e17",
+   "sender_id": "ms_user_elena",
+   "text": "Hi Diane, you're on the list. Apple is $28 and pecan is $32, so $60 total, paid at pickup. Wednesday 11/25 at the café, 731 Haywood Rd, anytime 7 to 3.",
+   "attachments": [],
+   "created_at": "2026-10-15T18:10:23.551000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_f05d6b38",
+   "thread_id": "ms_thread_5d2b8e17",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "perfect thank you!! i'll swing by around noon",
+   "attachments": [],
+   "created_at": "2026-10-15T18:24:12.907000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_29e8c5a1",
+   "thread_id": "ms_thread_a93f06c4",
+   "sender_id": "contact_9c321ee51d227da2814dfec0",
+   "text": "Hello, quick question before I order. Do you make a gluten free pie for Thanksgiving? My sister can't have wheat.",
+   "attachments": [],
+   "created_at": "2026-10-17T17:00:17.645000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_d7a4102f",
+   "thread_id": "ms_thread_a93f06c4",
+   "sender_id": "ms_user_elena",
+   "text": "Hi Rachel, not this year, sorry. We run wheat flour all day in one kitchen and I can't promise a safe crust. All four pies use our regular crust.",
+   "attachments": [],
+   "created_at": "2026-10-17T17:30:52.073000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_6f3be890",
+   "thread_id": "ms_thread_a93f06c4",
+   "sender_id": "contact_9c321ee51d227da2814dfec0",
+   "text": "understood, thanks for being straight about it. I'll probably still order a pumpkin for the rest of us closer to the date",
+   "attachments": [],
+   "created_at": "2026-10-17T17:44:03.218000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_1c7e40a2",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "hi! do you do custom birthday cakes? my son turns 7 on saturday the 26th",
+   "attachments": [],
+   "created_at": "2026-09-20T13:30:41.208000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_83d2b9f0",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "something like this but less green lol",
+   "attachments": [
+    {
+     "name": "dino-cake-idea.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-09-20T13:31:57.660000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_9d4c18e7",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "ms_user_elena",
+   "text": "Hi Abby! Yes, we can do that. An 8 inch two-layer chocolate cake with chocolate buttercream feeds about 14 and runs $62.",
+   "attachments": [],
+   "created_at": "2026-09-20T13:41:26.115000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_47ea2f05",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "ms_user_elena",
+   "text": "Pickup Saturday at the café on Haywood Rd from 7:00, or at our North Asheville market stand 8 to noon. A $20 deposit holds the date.",
+   "attachments": [],
+   "created_at": "2026-09-20T13:42:03.480000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c06b83d1",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "market is perfect, we're there most saturdays anyway",
+   "attachments": [],
+   "created_at": "2026-09-20T13:44:38.772000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e81f5a6b",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "could it say happy birthday theo? and is a little dinosaur on top possible",
+   "attachments": [],
+   "created_at": "2026-09-20T13:45:10.309000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_5a3d97c2",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "ms_user_elena",
+   "text": "Yes to the dinosaur, I'll put a little toy one on top, no extra charge. On an 8 inch he takes up the middle, so I'd skip the writing and let him have the top. What color dinosaur?",
+   "attachments": [],
+   "created_at": "2026-09-20T13:51:47.026000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_b72e0c48",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "ok skip the writing, the dinosaur is the whole point lol. green!! he is obsessed with green right now",
+   "attachments": [],
+   "created_at": "2026-09-20T13:52:30.554000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_0f9a6d31",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "how do i pay the deposit?",
+   "attachments": [],
+   "created_at": "2026-09-20T13:52:41.190000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_d6c12b8e",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "ms_user_elena",
+   "text": "I'll send the $20 Square invoice here in a second. Balance of $42 at pickup.",
+   "attachments": [],
+   "created_at": "2026-09-20T13:55:58.843000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_3e85f4a9",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "ms_user_elena",
+   "text": "Deposit invoice.",
+   "attachments": [
+    {
+     "name": "Marsh-and-Mill-deposit-invoice.pdf",
+     "mime_type": "application/pdf"
+    }
+   ],
+   "created_at": "2026-09-20T13:56:40.271000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_a29b0e67",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "paid! thank you so much, he's going to flip",
+   "attachments": [],
+   "created_at": "2026-09-20T13:58:12.639000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_71f4c3d0",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "ms_user_elena",
+   "text": "Got it, thank you. See you Saturday at the stand.",
+   "attachments": [],
+   "created_at": "2026-09-20T14:01:20.488000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e0d58a1f",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "theo lost his mind over the dinosaur. it is currently on his plate being guarded",
+   "attachments": [],
+   "created_at": "2026-09-26T17:26:44.902000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_8c6a2e94",
+   "thread_id": "ms_thread_6a1f3c9e",
+   "sender_id": "ms_user_elena",
+   "text": "That's the best news of my day. Happy 7th to Theo.",
+   "attachments": [],
+   "created_at": "2026-09-26T17:49:05.317000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_4b1e9f72",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Good morning! I'd love a hummingbird cake for my mom's 80th, serves 20.",
+   "attachments": [],
+   "created_at": "2026-10-18T14:15:08.402000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_f3a706c5",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Party is next Saturday, the 24th. Is that too short notice?",
+   "attachments": [],
+   "created_at": "2026-10-18T14:15:49.877000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_6d29e1b8",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "ms_user_elena",
+   "text": "Hi Marisol. Not too short, the 24th works. Easier to sort out by phone. Can I call you in about 10 minutes?",
+   "attachments": [],
+   "created_at": "2026-10-18T14:24:31.660000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c8b40f3a",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Yes please, I'm home all morning",
+   "attachments": [],
+   "created_at": "2026-10-18T14:25:14.093000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_19e7d25c",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "ms_user_elena",
+   "text": "Calling you here now.",
+   "attachments": [],
+   "created_at": "2026-10-18T14:36:02.518000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_a7f3c08e",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Just paid the $50 deposit. Two tiers is perfect, she is going to cry",
+   "attachments": [],
+   "created_at": "2026-10-18T14:53:40.229000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_52c9e6d4",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "ms_user_elena",
+   "text": "Got it, thank you. Saturday 10/24 at the North Asheville market stand, 8 to 12. $95 balance at pickup.",
+   "attachments": [],
+   "created_at": "2026-10-18T14:58:17.745000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_e4086b1f",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "One thing, my brother might be the one picking up. Is that ok?",
+   "attachments": [],
+   "created_at": "2026-10-18T15:03:26.381000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_0a6d3f97",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "ms_user_elena",
+   "text": "Of course. He just gives your name at the stand.",
+   "attachments": [],
+   "created_at": "2026-10-18T15:19:55.012000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_bd71a4e2",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Perfect. Thank you so much!",
+   "attachments": [],
+   "created_at": "2026-10-18T15:21:08.640000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_38f2c5a0",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Sorry, forgot to ask yesterday. Are there nuts in hummingbird cake? One of my cousins avoids pecans.",
+   "attachments": [],
+   "created_at": "2026-10-19T12:12:33.207000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_c1e98d76",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "ms_user_elena",
+   "text": "Yes, pecans in the layers and on top. I can leave them off the top, but the cake itself has them.",
+   "attachments": [],
+   "created_at": "2026-10-19T13:40:47.918000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_7e5b2a19",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "That's fine, keep it the classic way. He'll have ice cream lol",
+   "attachments": [],
+   "created_at": "2026-10-19T13:44:02.336000Z",
+   "unsent_at": null
+  },
+  {
+   "id": "ms_msg_96a0f3e8",
+   "thread_id": "ms_thread_d40b72e5",
+   "sender_id": "ms_user_elena",
+   "text": "Sounds good. Classic it is.",
+   "attachments": [],
+   "created_at": "2026-10-19T13:46:19.551000Z",
+   "unsent_at": null
+  }
+ ],
+ "current_user_email": "elena.marsh.avl@gmail.com"
+}

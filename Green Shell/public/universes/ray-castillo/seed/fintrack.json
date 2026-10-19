@@ -1,0 +1,3496 @@
+{
+ "users": [
+  {
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "name": "Ray Castillo",
+   "email": "ray.castillo.phx@gmail.com",
+   "member_since": null,
+   "linked_accounts_count": 3,
+   "status": "active",
+   "ssn": null,
+   "date_of_birth": null,
+   "mothers_maiden_name": null,
+   "phone": "(623) 555-0142"
+  }
+ ],
+ "accounts": [
+  {
+   "account_id": "d89c321d29b7782da9c20fbf",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "institution_name": "Saguaro Credit Union",
+   "account_type": "checking",
+   "last_four": "4471",
+   "balance": 22924.0,
+   "status": "active"
+  },
+  {
+   "account_id": "57146d968180fe95dcb0731e",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "institution_name": "Saguaro Credit Union",
+   "account_type": "savings",
+   "last_four": "4490",
+   "balance": 2275.0,
+   "status": "active"
+  },
+  {
+   "account_id": "1e65fe7c9c1b92feae69e8ea",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "institution_name": "Copper State Bank",
+   "account_type": "credit_card",
+   "last_four": "3306",
+   "balance": -2518.34,
+   "status": "active"
+  }
+ ],
+ "subscriptions": [
+  {
+   "subscription_id": "fd262cba90f77bedb958b037",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "service_name": "Netflix",
+   "amount": 17.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-09",
+   "status": "active"
+  },
+  {
+   "subscription_id": "1c2ed6b3b90c2fa8957ac0e2",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "service_name": "Spotify",
+   "amount": 11.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-16",
+   "status": "active"
+  },
+  {
+   "subscription_id": "f7b61476c6385f2702850407",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "service_name": "Chewy autoship, Biscuit's food",
+   "amount": 47.26,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-04",
+   "status": "active"
+  }
+ ],
+ "transactions": [
+  {
+   "transaction_id": "ab88635d9cd51a5636444218",
+   "date": "2026-05-03",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -86.41,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1777832582.0
+  },
+  {
+   "transaction_id": "1788915e470dce345ea7e2b4",
+   "date": "2026-05-03",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -17.8,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1777839961.0
+  },
+  {
+   "transaction_id": "0ca33ccf13c8d20b73a50755",
+   "date": "2026-05-03",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -15.45,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1777844605.0
+  },
+  {
+   "transaction_id": "589fa070ead86433e6d8dcb4",
+   "date": "2026-05-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chewy",
+   "amount": -47.26,
+   "category": "pets",
+   "account_last_four": "3306",
+   "timestamp": 1777886443.0
+  },
+  {
+   "transaction_id": "c9bdb0983dd53ea0e3b845d7",
+   "date": "2026-05-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -62.14,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1778027723.0
+  },
+  {
+   "transaction_id": "39e8ced4c6fa4668c3ed80d9",
+   "date": "2026-05-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -34.89,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1778029124.0
+  },
+  {
+   "transaction_id": "a88a29dd2eb10590a50546a0",
+   "date": "2026-05-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -38.47,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1778033181.0
+  },
+  {
+   "transaction_id": "6faccb9de72b60e7c640f4c4",
+   "date": "2026-05-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "City of Phoenix Water",
+   "amount": -48.58,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1778063247.0
+  },
+  {
+   "transaction_id": "0e4a4c6b37f89d129bc50a34",
+   "date": "2026-05-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1548.36,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1778242549.0
+  },
+  {
+   "transaction_id": "8002d1e30532c12dfb10013b",
+   "date": "2026-05-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Netflix",
+   "amount": -17.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1778318233.0
+  },
+  {
+   "transaction_id": "85401c8ad4927d32f877820d",
+   "date": "2026-05-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -38.7,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1778368982.0
+  },
+  {
+   "transaction_id": "b47f93df02bf52a720e9a563",
+   "date": "2026-05-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -24.76,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1778371780.0
+  },
+  {
+   "transaction_id": "ccd52dfa06cbac3577167068",
+   "date": "2026-05-10",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -5.2,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1778424477.0
+  },
+  {
+   "transaction_id": "78d0819f952fa9bac71e2c64",
+   "date": "2026-05-10",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -112.08,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1778434849.0
+  },
+  {
+   "transaction_id": "1aa41aa78ba6d61adeb4fb8b",
+   "date": "2026-05-10",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "47th Ave Food Store",
+   "amount": -35.97,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1778442460.0
+  },
+  {
+   "transaction_id": "1886a806f0b0e103822170f4",
+   "date": "2026-05-10",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "CVS Pharmacy",
+   "amount": -14.28,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1778454253.0
+  },
+  {
+   "transaction_id": "9ac993d3bc23365e76fbb842",
+   "date": "2026-05-12",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -26.37,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1778628911.0
+  },
+  {
+   "transaction_id": "802db1a689ec30b40ddb929e",
+   "date": "2026-05-12",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -42.74,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1778640172.0
+  },
+  {
+   "transaction_id": "2b5cb1fdfca5a85ad9d321ec",
+   "date": "2026-05-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -35.38,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1778712842.0
+  },
+  {
+   "transaction_id": "7bacd1a147e73e41c12dcd6d",
+   "date": "2026-05-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "State Farm",
+   "amount": -138.72,
+   "category": "insurance",
+   "account_last_four": "4471",
+   "timestamp": 1778846377.0
+  },
+  {
+   "transaction_id": "38ad903d81ffafe9b0662a4c",
+   "date": "2026-05-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -22.14,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1778889851.0
+  },
+  {
+   "transaction_id": "e9dbbdb389285a574870a62e",
+   "date": "2026-05-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -26.99,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1778902615.0
+  },
+  {
+   "transaction_id": "296c5cce4b4c380fa874d295",
+   "date": "2026-05-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1778927858.0
+  },
+  {
+   "transaction_id": "59bfd3ba89526a7788e2cb56",
+   "date": "2026-05-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -97.63,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1779038002.0
+  },
+  {
+   "transaction_id": "579be21a6ff8fd4b4d82c282",
+   "date": "2026-05-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -39.36,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1779046055.0
+  },
+  {
+   "transaction_id": "6be4d6c097079d1c122a20a2",
+   "date": "2026-05-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -37.8,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1779051651.0
+  },
+  {
+   "transaction_id": "c74126ecd47438752bcf1954",
+   "date": "2026-05-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Vallarta Supermarkets",
+   "amount": -43.77,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1779064888.0
+  },
+  {
+   "transaction_id": "de5fe6b2279741692681484a",
+   "date": "2026-05-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -27.13,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1779233355.0
+  },
+  {
+   "transaction_id": "7cf54abd5423fab4faf3e0bc",
+   "date": "2026-05-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -18.64,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1779238189.0
+  },
+  {
+   "transaction_id": "718d084e083ca5d5c1020a3c",
+   "date": "2026-05-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "T-Mobile",
+   "amount": -79.84,
+   "category": "phone",
+   "account_last_four": "3306",
+   "timestamp": 1779281245.0
+  },
+  {
+   "transaction_id": "3c1d010c5d86d7e42be4a467",
+   "date": "2026-05-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -48.85,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1779320825.0
+  },
+  {
+   "transaction_id": "1e1e34eb831c6741e4159c56",
+   "date": "2026-05-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -8.86,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1779324679.0
+  },
+  {
+   "transaction_id": "79718b56ac36420866310564",
+   "date": "2026-05-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1548.36,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1779452113.0
+  },
+  {
+   "transaction_id": "b326ac6065a4d0cdd4273771",
+   "date": "2026-05-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "SRP",
+   "amount": -118.39,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1779457234.0
+  },
+  {
+   "transaction_id": "d9533e4b7b12f0cac51f737c",
+   "date": "2026-05-24",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -19.84,
+   "category": "home",
+   "account_last_four": "3306",
+   "timestamp": 1779644104.0
+  },
+  {
+   "transaction_id": "71e9967baa29e0c863783bdc",
+   "date": "2026-05-24",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -35.9,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1779650982.0
+  },
+  {
+   "transaction_id": "e977ed46825adf30009cb1f5",
+   "date": "2026-05-24",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "El Super",
+   "amount": -36.39,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1779662338.0
+  },
+  {
+   "transaction_id": "f334e63d010dc89f7920f15a",
+   "date": "2026-05-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -41.08,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1779757503.0
+  },
+  {
+   "transaction_id": "90b0d727b6f954c5a61e40f7",
+   "date": "2026-05-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Copper State Visa payment",
+   "amount": -2061.24,
+   "category": "credit_card_payment",
+   "account_last_four": "4471",
+   "timestamp": 1779799343.0
+  },
+  {
+   "transaction_id": "6c889385d7e118c72857ae8d",
+   "date": "2026-05-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Payment received - thank you",
+   "amount": 2061.24,
+   "category": "credit_card_payment",
+   "account_last_four": "3306",
+   "timestamp": 1779801323.0
+  },
+  {
+   "transaction_id": "aa4f28dc6f2e58d2f2eb2167",
+   "date": "2026-05-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Southwest Gas",
+   "amount": -28.38,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1779879013.0
+  },
+  {
+   "transaction_id": "83768cfe9c47274623831fea",
+   "date": "2026-05-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -6.13,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1779887858.0
+  },
+  {
+   "transaction_id": "064767781f32e29470db788c",
+   "date": "2026-05-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -55.26,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1779925326.0
+  },
+  {
+   "transaction_id": "e0da00688729d98c37148eb3",
+   "date": "2026-05-29",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "47th Ave Food Store",
+   "amount": -48.27,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1780098823.0
+  },
+  {
+   "transaction_id": "955b0c17a3cff9e3667af199",
+   "date": "2026-05-29",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -27.46,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1780106561.0
+  },
+  {
+   "transaction_id": "867fb54aa20e70e8f568f3d8",
+   "date": "2026-05-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Filiberto's Mexican Food",
+   "amount": -26.4,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1780168897.0
+  },
+  {
+   "transaction_id": "4df2caa9c219b394b80d84db",
+   "date": "2026-05-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -18.83,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1780171050.0
+  },
+  {
+   "transaction_id": "275803606a7888bd55283d81",
+   "date": "2026-05-31",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -154.22,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1780250316.0
+  },
+  {
+   "transaction_id": "af0431c9f4d0eb42aacce3cb",
+   "date": "2026-05-31",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -23.44,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1780255957.0
+  },
+  {
+   "transaction_id": "b295ed787393cf0b5d42aa7d",
+   "date": "2026-05-31",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Interest Payment",
+   "amount": 3.79,
+   "category": "income",
+   "account_last_four": "4490",
+   "timestamp": 1780272005.0
+  },
+  {
+   "transaction_id": "9324cfe73ee3ad38535d3d55",
+   "date": "2026-06-01",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Mr. Cooper",
+   "amount": -1312.46,
+   "category": "housing",
+   "account_last_four": "4471",
+   "timestamp": 1780316239.0
+  },
+  {
+   "transaction_id": "df21dfbbebb0ff6ab0debed6",
+   "date": "2026-06-02",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -44.11,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1780447580.0
+  },
+  {
+   "transaction_id": "d0a01cfa8a0a08492deb1cac",
+   "date": "2026-06-03",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -34.82,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1780539061.0
+  },
+  {
+   "transaction_id": "602707a18df40ab3c6f6d484",
+   "date": "2026-06-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chewy",
+   "amount": -47.26,
+   "category": "pets",
+   "account_last_four": "3306",
+   "timestamp": 1780577606.0
+  },
+  {
+   "transaction_id": "8ddf69a897139ee2f0bcf264",
+   "date": "2026-06-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1716.42,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1780661759.0
+  },
+  {
+   "transaction_id": "4a434607f949ac0784fcf1c6",
+   "date": "2026-06-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -47.74,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1780699253.0
+  },
+  {
+   "transaction_id": "a32cca991686cbb8741a81af",
+   "date": "2026-06-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "City of Phoenix Water",
+   "amount": -52.08,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1780744720.0
+  },
+  {
+   "transaction_id": "fbaa3057d3d700910f361288",
+   "date": "2026-06-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Banfield Pet Hospital",
+   "amount": -92.15,
+   "category": "pets",
+   "account_last_four": "3306",
+   "timestamp": 1780764012.0
+  },
+  {
+   "transaction_id": "18491cb24b6e498c4400738c",
+   "date": "2026-06-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -17.71,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1780770179.0
+  },
+  {
+   "transaction_id": "d410c4c3086243396542c511",
+   "date": "2026-06-07",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -131.75,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1780853522.0
+  },
+  {
+   "transaction_id": "b5b984da4cb97291ab9c9dd3",
+   "date": "2026-06-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -5.34,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1780923464.0
+  },
+  {
+   "transaction_id": "d07defc5df368010925edd77",
+   "date": "2026-06-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "CVS Pharmacy",
+   "amount": -18.64,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1780965731.0
+  },
+  {
+   "transaction_id": "9ffdbfb0e5dc68819772b713",
+   "date": "2026-06-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -23.88,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1780971782.0
+  },
+  {
+   "transaction_id": "58a81bc960356fee44c9e245",
+   "date": "2026-06-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Vallarta Supermarkets",
+   "amount": -48.78,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1780973143.0
+  },
+  {
+   "transaction_id": "731d69948177955c104f6782",
+   "date": "2026-06-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Netflix",
+   "amount": -17.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1781002246.0
+  },
+  {
+   "transaction_id": "2ad1e613958d6772b1edeb89",
+   "date": "2026-06-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "El Super",
+   "amount": -36.7,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1781061155.0
+  },
+  {
+   "transaction_id": "922f98e486a75b83320a3892",
+   "date": "2026-06-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -49.3,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1781216911.0
+  },
+  {
+   "transaction_id": "924f0a837fe1826ac77b2831",
+   "date": "2026-06-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -24.31,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1781218062.0
+  },
+  {
+   "transaction_id": "e860c16bbafa09280bead81e",
+   "date": "2026-06-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -42.32,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1781218410.0
+  },
+  {
+   "transaction_id": "ac7dd6696b3916e1b5198e11",
+   "date": "2026-06-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -32.04,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1781221262.0
+  },
+  {
+   "transaction_id": "3b271e256c14e7726a5e3216",
+   "date": "2026-06-12",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -58.4,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1781311979.0
+  },
+  {
+   "transaction_id": "b80c6358ccc61d7009cdc084",
+   "date": "2026-06-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -22.45,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1781407007.0
+  },
+  {
+   "transaction_id": "6d680a6e70261a3165883f48",
+   "date": "2026-06-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -108.94,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1781459485.0
+  },
+  {
+   "transaction_id": "cc05fc4a80591ec1ba3373e5",
+   "date": "2026-06-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "State Farm",
+   "amount": -138.72,
+   "category": "insurance",
+   "account_last_four": "4471",
+   "timestamp": 1781521423.0
+  },
+  {
+   "transaction_id": "112c373cb7cb1abe71b227fb",
+   "date": "2026-06-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -18.45,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1781566480.0
+  },
+  {
+   "transaction_id": "04ca23dae442b74a4a7d1050",
+   "date": "2026-06-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -46.42,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1781566674.0
+  },
+  {
+   "transaction_id": "783209332069986a3a1d9b7e",
+   "date": "2026-06-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1781608353.0
+  },
+  {
+   "transaction_id": "f9adfe59f4cf9db431ee08d7",
+   "date": "2026-06-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -24.51,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1781736305.0
+  },
+  {
+   "transaction_id": "8e11fab58add40e9ad9daa9a",
+   "date": "2026-06-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -16.91,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1781737385.0
+  },
+  {
+   "transaction_id": "25eaf3cecea244dec0db0e9c",
+   "date": "2026-06-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -23.92,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1781739715.0
+  },
+  {
+   "transaction_id": "ca5b0e436d8debb8b2afbe30",
+   "date": "2026-06-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1885.17,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1781871329.0
+  },
+  {
+   "transaction_id": "f93c003f32913935d2c17a2e",
+   "date": "2026-06-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -41.25,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1781923946.0
+  },
+  {
+   "transaction_id": "5bdb1a121eccfe6128e301e9",
+   "date": "2026-06-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -48.43,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1781925691.0
+  },
+  {
+   "transaction_id": "d8f53f4a19527e386d635be7",
+   "date": "2026-06-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "T-Mobile",
+   "amount": -79.84,
+   "category": "phone",
+   "account_last_four": "3306",
+   "timestamp": 1781954909.0
+  },
+  {
+   "transaction_id": "c3ee01c046c9b5a26bb178fc",
+   "date": "2026-06-21",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -173.16,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1782063290.0
+  },
+  {
+   "transaction_id": "84b2340e3305f078713c9f13",
+   "date": "2026-06-21",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "47th Ave Food Store",
+   "amount": -31.1,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1782087336.0
+  },
+  {
+   "transaction_id": "a98f75f9ff72a38c1e7c4ebb",
+   "date": "2026-06-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "SRP",
+   "amount": -156.26,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1782138584.0
+  },
+  {
+   "transaction_id": "85aaa069ca4da9f7f6ab7e38",
+   "date": "2026-06-23",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -64.13,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1782269300.0
+  },
+  {
+   "transaction_id": "315c97681de61e0d072173e3",
+   "date": "2026-06-23",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Vallarta Supermarkets",
+   "amount": -36.69,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1782269802.0
+  },
+  {
+   "transaction_id": "733a7f5d2b8cb50dc99e9982",
+   "date": "2026-06-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -7.21,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1782392810.0
+  },
+  {
+   "transaction_id": "157841f102807c2962a48455",
+   "date": "2026-06-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -29.77,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1782427242.0
+  },
+  {
+   "transaction_id": "1f4d95b4d4ee0a9bf7da958c",
+   "date": "2026-06-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -23.46,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1782441467.0
+  },
+  {
+   "transaction_id": "862cb0bbf29d3aa83976ab8b",
+   "date": "2026-06-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -34.24,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1782442517.0
+  },
+  {
+   "transaction_id": "e642246f289d7012c1ceab1d",
+   "date": "2026-06-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Copper State Visa payment",
+   "amount": -1807.46,
+   "category": "credit_card_payment",
+   "account_last_four": "4471",
+   "timestamp": 1782476191.0
+  },
+  {
+   "transaction_id": "4fd6380d2acfde23c2c5ff36",
+   "date": "2026-06-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Payment received - thank you",
+   "amount": 1807.46,
+   "category": "credit_card_payment",
+   "account_last_four": "3306",
+   "timestamp": 1782476551.0
+  },
+  {
+   "transaction_id": "f60811202cfe4c9d15ad0281",
+   "date": "2026-06-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Southwest Gas",
+   "amount": -22.15,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1782571511.0
+  },
+  {
+   "transaction_id": "e271a6bb71cd2ce3d8472d32",
+   "date": "2026-06-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -13.74,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1782591627.0
+  },
+  {
+   "transaction_id": "ab0900c0946745aa26bcdb45",
+   "date": "2026-06-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -19.12,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1782597770.0
+  },
+  {
+   "transaction_id": "5fbaf7602240cbb76d3c235a",
+   "date": "2026-06-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -99.48,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1782670568.0
+  },
+  {
+   "transaction_id": "c88522185f784121c92a8e05",
+   "date": "2026-06-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Interest Payment",
+   "amount": 3.67,
+   "category": "income",
+   "account_last_four": "4490",
+   "timestamp": 1782864031.0
+  },
+  {
+   "transaction_id": "765c9582fee1cf97713efdb1",
+   "date": "2026-06-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -27.6,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1782866083.0
+  },
+  {
+   "transaction_id": "2464bf58199dcae3f1d6737b",
+   "date": "2026-07-01",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Mr. Cooper",
+   "amount": -1312.46,
+   "category": "housing",
+   "account_last_four": "4471",
+   "timestamp": 1782903976.0
+  },
+  {
+   "transaction_id": "2d51d87410bdf8a4dbfdbe7c",
+   "date": "2026-07-03",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1716.42,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1783080913.0
+  },
+  {
+   "transaction_id": "d7a0738840bf11507050e572",
+   "date": "2026-07-03",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Vallarta Supermarkets",
+   "amount": -34.62,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1783119051.0
+  },
+  {
+   "transaction_id": "9e44fcf0a554736c6474806d",
+   "date": "2026-07-03",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -25.99,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1783123449.0
+  },
+  {
+   "transaction_id": "7bf05496788751155398c257",
+   "date": "2026-07-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chewy",
+   "amount": -47.26,
+   "category": "pets",
+   "account_last_four": "3306",
+   "timestamp": 1783169744.0
+  },
+  {
+   "transaction_id": "0addbd147f1e947d749680d1",
+   "date": "2026-07-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -42.68,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1783197655.0
+  },
+  {
+   "transaction_id": "d5e13fef98da362186e7a84d",
+   "date": "2026-07-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -37.56,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1783201430.0
+  },
+  {
+   "transaction_id": "2a8472fb747d7bbcd7a76a53",
+   "date": "2026-07-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -42.4,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1783212416.0
+  },
+  {
+   "transaction_id": "71a9d7fff448efb0c5cb48c3",
+   "date": "2026-07-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -121.37,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1783274995.0
+  },
+  {
+   "transaction_id": "1ed1c20917afb4ea56a20d28",
+   "date": "2026-07-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "El Super",
+   "amount": -30.14,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1783284413.0
+  },
+  {
+   "transaction_id": "2b668aa2756ae36b331ee5f8",
+   "date": "2026-07-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -55.71,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1783298614.0
+  },
+  {
+   "transaction_id": "2c7db0f14f1315ad6dcfd109",
+   "date": "2026-07-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "City of Phoenix Water",
+   "amount": -61.38,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1783332615.0
+  },
+  {
+   "transaction_id": "b5d67bfbf88884ff579cdfee",
+   "date": "2026-07-07",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -35.55,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1783463005.0
+  },
+  {
+   "transaction_id": "13902d5532cd2629a17df8e6",
+   "date": "2026-07-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Valley Smiles Orthodontics",
+   "amount": -38.5,
+   "category": "healthcare",
+   "account_last_four": "3306",
+   "timestamp": 1783546217.0
+  },
+  {
+   "transaction_id": "e6bd467573aa73f095486e33",
+   "date": "2026-07-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -71.22,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1783556684.0
+  },
+  {
+   "transaction_id": "e06fea4b822b3b1528c3e65a",
+   "date": "2026-07-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Netflix",
+   "amount": -17.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1783600886.0
+  },
+  {
+   "transaction_id": "a2b954db9473f8e0a695c043",
+   "date": "2026-07-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -6.99,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1783600929.0
+  },
+  {
+   "transaction_id": "d5b02e661db9ff06af98a3b2",
+   "date": "2026-07-10",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -23.28,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1783740251.0
+  },
+  {
+   "transaction_id": "01a7697155bf2d2b6c1aa1b4",
+   "date": "2026-07-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -38.01,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1783806686.0
+  },
+  {
+   "transaction_id": "20dfaddac72ed78728e5c27f",
+   "date": "2026-07-12",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -65.0,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1783876808.0
+  },
+  {
+   "transaction_id": "821e9c5ed865695e78210bd6",
+   "date": "2026-07-12",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -146.85,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1783878496.0
+  },
+  {
+   "transaction_id": "b25c8e444d72b650529d9266",
+   "date": "2026-07-12",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "47th Ave Food Store",
+   "amount": -50.94,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1783896191.0
+  },
+  {
+   "transaction_id": "8ecc29d8841acf50add4a290",
+   "date": "2026-07-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -36.05,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1783981093.0
+  },
+  {
+   "transaction_id": "ac0cc994dce6b7bbae4f06fd",
+   "date": "2026-07-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -14.99,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1783985701.0
+  },
+  {
+   "transaction_id": "cf595cc0fc91407e902d31ed",
+   "date": "2026-07-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -39.6,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1783987525.0
+  },
+  {
+   "transaction_id": "0c4089533887d8fef62c65a0",
+   "date": "2026-07-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -25.68,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1784068576.0
+  },
+  {
+   "transaction_id": "775da1d1a631bb0932469730",
+   "date": "2026-07-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -10.29,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1784070478.0
+  },
+  {
+   "transaction_id": "691c212999e26c3ac8ab8efc",
+   "date": "2026-07-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "CVS Pharmacy",
+   "amount": -12.95,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1784071096.0
+  },
+  {
+   "transaction_id": "83e1fd7ebdebfb79607e2982",
+   "date": "2026-07-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -52.55,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1784074167.0
+  },
+  {
+   "transaction_id": "c341129a4167d1eb406e9f3d",
+   "date": "2026-07-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "State Farm",
+   "amount": -138.72,
+   "category": "insurance",
+   "account_last_four": "4471",
+   "timestamp": 1784114288.0
+  },
+  {
+   "transaction_id": "3af7f701c33cc28b3f8587b1",
+   "date": "2026-07-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -31.49,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1784158410.0
+  },
+  {
+   "transaction_id": "e61602815ce179a935a84a9b",
+   "date": "2026-07-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1784200510.0
+  },
+  {
+   "transaction_id": "d0ce15c742d2c8d5e4f84623",
+   "date": "2026-07-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Vallarta Supermarkets",
+   "amount": -47.11,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1784248141.0
+  },
+  {
+   "transaction_id": "d6a8d45f996f4324ac1c30bb",
+   "date": "2026-07-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1885.17,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1784290516.0
+  },
+  {
+   "transaction_id": "74ead331e101c2c406302c36",
+   "date": "2026-07-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -88.19,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1784481685.0
+  },
+  {
+   "transaction_id": "7302bd4d23dd893f3192cd7c",
+   "date": "2026-07-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "T-Mobile",
+   "amount": -79.84,
+   "category": "phone",
+   "account_last_four": "3306",
+   "timestamp": 1784550850.0
+  },
+  {
+   "transaction_id": "995c4f0879c9248e8311166f",
+   "date": "2026-07-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -43.76,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1784594195.0
+  },
+  {
+   "transaction_id": "6d84e19ed7de10a26ff549dc",
+   "date": "2026-07-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Peter Piper Pizza",
+   "amount": -32.15,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1784602355.0
+  },
+  {
+   "transaction_id": "0a0ccb45c2de6d1b15979a34",
+   "date": "2026-07-21",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "El Super",
+   "amount": -48.28,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1784682162.0
+  },
+  {
+   "transaction_id": "088b712e3865f8496724a7cf",
+   "date": "2026-07-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "SRP",
+   "amount": -189.53,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1784729669.0
+  },
+  {
+   "transaction_id": "dfb2bef9053dd92561a4818b",
+   "date": "2026-07-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -29.3,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1784759219.0
+  },
+  {
+   "transaction_id": "13728c68f33bac6d6ef82b5b",
+   "date": "2026-07-23",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -6.41,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1784811708.0
+  },
+  {
+   "transaction_id": "db4747a0442eda64f2550bb6",
+   "date": "2026-07-24",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -21.71,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1784949910.0
+  },
+  {
+   "transaction_id": "d8ff4de4ebff36aab0d2678e",
+   "date": "2026-07-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -34.57,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1785019936.0
+  },
+  {
+   "transaction_id": "c989b7e836ad3e968150a669",
+   "date": "2026-07-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -167.52,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1785089211.0
+  },
+  {
+   "transaction_id": "69e4964abcad11c6c7b4e90c",
+   "date": "2026-07-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Copper State Visa payment",
+   "amount": -2006.54,
+   "category": "credit_card_payment",
+   "account_last_four": "4471",
+   "timestamp": 1785154096.0
+  },
+  {
+   "transaction_id": "107c7d14d8740cd8757f04d7",
+   "date": "2026-07-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Payment received - thank you",
+   "amount": 2006.54,
+   "category": "credit_card_payment",
+   "account_last_four": "3306",
+   "timestamp": 1785156256.0
+  },
+  {
+   "transaction_id": "0c660ef347b0357f71b33a6b",
+   "date": "2026-07-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Southwest Gas",
+   "amount": -18.58,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1785162968.0
+  },
+  {
+   "transaction_id": "f2f0fa0ac78e0530e22ee9c6",
+   "date": "2026-07-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -17.52,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1785284678.0
+  },
+  {
+   "transaction_id": "19d2db1d7cade7ffa2a134d9",
+   "date": "2026-07-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -21.78,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1785285103.0
+  },
+  {
+   "transaction_id": "bc79e9490f9b92e2bee9bd20",
+   "date": "2026-07-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -24.95,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1785291151.0
+  },
+  {
+   "transaction_id": "876765fa03cee9453d1292ba",
+   "date": "2026-07-29",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "47th Ave Food Store",
+   "amount": -57.49,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1785364277.0
+  },
+  {
+   "transaction_id": "f5c1e1ad99e29c06cdd5c887",
+   "date": "2026-07-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -44.04,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1785458157.0
+  },
+  {
+   "transaction_id": "639936a3fdeb2be4ed4b1897",
+   "date": "2026-07-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -47.99,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1785459764.0
+  },
+  {
+   "transaction_id": "ea0f663ec6c36453d5db4308",
+   "date": "2026-07-31",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1716.42,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1785500104.0
+  },
+  {
+   "transaction_id": "da4ba3b540973530296ff60c",
+   "date": "2026-07-31",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Interest Payment",
+   "amount": 3.8,
+   "category": "income",
+   "account_last_four": "4490",
+   "timestamp": 1785542404.0
+  },
+  {
+   "transaction_id": "b91fdd2c0581da5c1a27679a",
+   "date": "2026-07-31",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -21.38,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1785545876.0
+  },
+  {
+   "transaction_id": "f8ba95337da2302c2c7b31da",
+   "date": "2026-08-02",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -104.33,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1785691210.0
+  },
+  {
+   "transaction_id": "566af98573362b5f82261c42",
+   "date": "2026-08-03",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Mr. Cooper",
+   "amount": -1312.46,
+   "category": "housing",
+   "account_last_four": "4471",
+   "timestamp": 1785760920.0
+  },
+  {
+   "transaction_id": "0c51312714f3797e80a6fc21",
+   "date": "2026-08-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chewy",
+   "amount": -47.26,
+   "category": "pets",
+   "account_last_four": "3306",
+   "timestamp": 1785835521.0
+  },
+  {
+   "transaction_id": "25c40c428848248e7cc59611",
+   "date": "2026-08-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -5.51,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1785933881.0
+  },
+  {
+   "transaction_id": "9ea5366b449fa2aca1ddf851",
+   "date": "2026-08-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -35.88,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1785970796.0
+  },
+  {
+   "transaction_id": "e0f1eecbae8a7d1bf759ae5f",
+   "date": "2026-08-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Vallarta Supermarkets",
+   "amount": -52.2,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1785982637.0
+  },
+  {
+   "transaction_id": "2ec4f6c86dda6435ea52ff06",
+   "date": "2026-08-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "City of Phoenix Water",
+   "amount": -67.27,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1786016443.0
+  },
+  {
+   "transaction_id": "6c7fe4128ca9c989e9ae86ee",
+   "date": "2026-08-07",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -16.34,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1786150991.0
+  },
+  {
+   "transaction_id": "e11c9b53b4d23893ff4ae80d",
+   "date": "2026-08-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -41.63,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1786219859.0
+  },
+  {
+   "transaction_id": "69067fcb5ae82e1f464f7a6b",
+   "date": "2026-08-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -16.7,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1786221501.0
+  },
+  {
+   "transaction_id": "f78178e8a1ffe77a7ff6eed7",
+   "date": "2026-08-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Carolina's Mexican Food",
+   "amount": -24.9,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1786238415.0
+  },
+  {
+   "transaction_id": "1cd8ab4036d0b60aca1c86be",
+   "date": "2026-08-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Netflix",
+   "amount": -17.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1786270729.0
+  },
+  {
+   "transaction_id": "e55444f351250193d452c0ae",
+   "date": "2026-08-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -139.7,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1786296233.0
+  },
+  {
+   "transaction_id": "11d496b8199943980cae39b7",
+   "date": "2026-08-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -31.39,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1786313694.0
+  },
+  {
+   "transaction_id": "3dc627d8b53cb82d0904976b",
+   "date": "2026-08-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -10.37,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1786322427.0
+  },
+  {
+   "transaction_id": "e4bc73c43c7f291d486c9282",
+   "date": "2026-08-10",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -44.01,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1786400781.0
+  },
+  {
+   "transaction_id": "e93e36985b35414dc1778bc4",
+   "date": "2026-08-10",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -16.93,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1786415041.0
+  },
+  {
+   "transaction_id": "66e7c8964b94b9d928579e0c",
+   "date": "2026-08-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "CVS Pharmacy",
+   "amount": -16.4,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1786488750.0
+  },
+  {
+   "transaction_id": "5af542f4115214d4e4d23b15",
+   "date": "2026-08-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "El Super",
+   "amount": -28.1,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1786676158.0
+  },
+  {
+   "transaction_id": "e12cb6f0eb957f0ce8c323ca",
+   "date": "2026-08-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1885.17,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1786709727.0
+  },
+  {
+   "transaction_id": "58ce67722f27ebc10d52f274",
+   "date": "2026-08-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -13.6,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1786747470.0
+  },
+  {
+   "transaction_id": "7996f50791861843339c673c",
+   "date": "2026-08-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -42.19,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1786751510.0
+  },
+  {
+   "transaction_id": "0dcf5c459c2763ab3b6e7ea4",
+   "date": "2026-08-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -32.98,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1786763864.0
+  },
+  {
+   "transaction_id": "02e8ceec094b84e1558be840",
+   "date": "2026-08-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -66.85,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1786831557.0
+  },
+  {
+   "transaction_id": "c74f640e276a79c7d1f1b474",
+   "date": "2026-08-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -25.62,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1786848456.0
+  },
+  {
+   "transaction_id": "0594ee2e8b0e7d3416de2441",
+   "date": "2026-08-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1786872421.0
+  },
+  {
+   "transaction_id": "137252ff6bf6505592a65416",
+   "date": "2026-08-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -118.26,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1786904576.0
+  },
+  {
+   "transaction_id": "7b1690fd60083d1d4ce95f20",
+   "date": "2026-08-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -13.15,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1786919439.0
+  },
+  {
+   "transaction_id": "3008b74c63136a66cead1782",
+   "date": "2026-08-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "State Farm",
+   "amount": -138.72,
+   "category": "insurance",
+   "account_last_four": "4471",
+   "timestamp": 1786968831.0
+  },
+  {
+   "transaction_id": "adecd3dbdaaa509ae7971be3",
+   "date": "2026-08-18",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -7.63,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1787058638.0
+  },
+  {
+   "transaction_id": "efaa4f15e402bc1b70857a35",
+   "date": "2026-08-18",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "47th Ave Food Store",
+   "amount": -35.99,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1787105833.0
+  },
+  {
+   "transaction_id": "678d5a5f7d408e54812960bf",
+   "date": "2026-08-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -42.68,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1787185837.0
+  },
+  {
+   "transaction_id": "b111ebde51d36ea562d7a1e4",
+   "date": "2026-08-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -23.53,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1787195868.0
+  },
+  {
+   "transaction_id": "8989ebd9f1094f1b199f8e77",
+   "date": "2026-08-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "T-Mobile",
+   "amount": -79.84,
+   "category": "phone",
+   "account_last_four": "3306",
+   "timestamp": 1787233848.0
+  },
+  {
+   "transaction_id": "6abdb69bc365eeb009cbb175",
+   "date": "2026-08-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -43.87,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1787271827.0
+  },
+  {
+   "transaction_id": "ef6b1df20304232deff163d6",
+   "date": "2026-08-21",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Filiberto's Mexican Food",
+   "amount": -19.75,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1787360581.0
+  },
+  {
+   "transaction_id": "46453869ded4a8e2e2277117",
+   "date": "2026-08-21",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -44.15,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1787366798.0
+  },
+  {
+   "transaction_id": "87fd19a1c5384b012c49d06a",
+   "date": "2026-08-21",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -36.87,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1787367124.0
+  },
+  {
+   "transaction_id": "292ad08b8969daff388f9ec3",
+   "date": "2026-08-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "SRP",
+   "amount": -201.36,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1787404452.0
+  },
+  {
+   "transaction_id": "f84f5e5c8551434461a6482f",
+   "date": "2026-08-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -9.57,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1787438433.0
+  },
+  {
+   "transaction_id": "0630db095137bab55f26928b",
+   "date": "2026-08-23",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -155.91,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1787508306.0
+  },
+  {
+   "transaction_id": "2dd01ad5edfa50dbd8b0e7b7",
+   "date": "2026-08-24",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -15.73,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1787617355.0
+  },
+  {
+   "transaction_id": "64aa956f1fb3e2637a467e4c",
+   "date": "2026-08-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -31.25,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1787696570.0
+  },
+  {
+   "transaction_id": "00886e313d7e80e2b1f69fac",
+   "date": "2026-08-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -20.9,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1787698817.0
+  },
+  {
+   "transaction_id": "3f0b2fe89f0dd9d6115fc280",
+   "date": "2026-08-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -22.59,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1787701939.0
+  },
+  {
+   "transaction_id": "3cf99fd604541b3c3e29d125",
+   "date": "2026-08-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -47.61,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1787713364.0
+  },
+  {
+   "transaction_id": "1ac29aa3a46d188fb3325770",
+   "date": "2026-08-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Vallarta Supermarkets",
+   "amount": -43.26,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1787713380.0
+  },
+  {
+   "transaction_id": "3a45dadf65d63f3c2c2b38c4",
+   "date": "2026-08-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Copper State Visa payment",
+   "amount": -2271.13,
+   "category": "credit_card_payment",
+   "account_last_four": "4471",
+   "timestamp": 1787746870.0
+  },
+  {
+   "transaction_id": "04c82a2b9a9f8e0f755ccd46",
+   "date": "2026-08-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Payment received - thank you",
+   "amount": 2271.13,
+   "category": "credit_card_payment",
+   "account_last_four": "3306",
+   "timestamp": 1787748310.0
+  },
+  {
+   "transaction_id": "9dfdb499a717ad4142842573",
+   "date": "2026-08-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Southwest Gas",
+   "amount": -17.95,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1787826036.0
+  },
+  {
+   "transaction_id": "a89b29229a0e3e36e85743ad",
+   "date": "2026-08-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -11.8,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1787876291.0
+  },
+  {
+   "transaction_id": "e631a970034dcbdad9a448d4",
+   "date": "2026-08-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1716.42,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1787919333.0
+  },
+  {
+   "transaction_id": "d7f4db6e77146ac31dcab695",
+   "date": "2026-08-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -7.47,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1788105014.0
+  },
+  {
+   "transaction_id": "08e45f3dc5de80198a61ba23",
+   "date": "2026-08-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -92.44,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1788109974.0
+  },
+  {
+   "transaction_id": "5ec5bff9fb326925f2e02ec1",
+   "date": "2026-08-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -42.88,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1788119435.0
+  },
+  {
+   "transaction_id": "98422badbff14d1a04f57880",
+   "date": "2026-08-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -66.42,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1788130068.0
+  },
+  {
+   "transaction_id": "1cd88993a0725b4d17e37df8",
+   "date": "2026-08-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -9.38,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1788134756.0
+  },
+  {
+   "transaction_id": "c633846f67163a3d8e0c0abe",
+   "date": "2026-08-31",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Interest Payment",
+   "amount": 3.81,
+   "category": "income",
+   "account_last_four": "4490",
+   "timestamp": 1788220840.0
+  },
+  {
+   "transaction_id": "93b762286f730e0c344dd929",
+   "date": "2026-09-01",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Mr. Cooper",
+   "amount": -1312.46,
+   "category": "housing",
+   "account_last_four": "4471",
+   "timestamp": 1788263945.0
+  },
+  {
+   "transaction_id": "b19ccffa9f010a589a7d4698",
+   "date": "2026-09-01",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -9.3,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1788301874.0
+  },
+  {
+   "transaction_id": "2ebf201dfd2c974bb72d39c2",
+   "date": "2026-09-02",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -26.1,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1788404284.0
+  },
+  {
+   "transaction_id": "ad2952501968a1ea5bce5837",
+   "date": "2026-09-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chewy",
+   "amount": -47.26,
+   "category": "pets",
+   "account_last_four": "3306",
+   "timestamp": 1788526659.0
+  },
+  {
+   "transaction_id": "dd56c794883fe876a8be508b",
+   "date": "2026-09-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "El Super",
+   "amount": -38.65,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1788561964.0
+  },
+  {
+   "transaction_id": "079fe87a5e66142383fdaaae",
+   "date": "2026-09-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -14.36,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1788569938.0
+  },
+  {
+   "transaction_id": "cb0af280db8ff940ba03ec28",
+   "date": "2026-09-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -44.39,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1788637764.0
+  },
+  {
+   "transaction_id": "321dd8746807f0b23938c217",
+   "date": "2026-09-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "City of Phoenix Water",
+   "amount": -54.79,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1788690244.0
+  },
+  {
+   "transaction_id": "4a8395d3f2e980dacdd3e117",
+   "date": "2026-09-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -176.08,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1788714803.0
+  },
+  {
+   "transaction_id": "b301759e40499de069a43a58",
+   "date": "2026-09-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -15.04,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1788723500.0
+  },
+  {
+   "transaction_id": "a218362709272e3b804de3a4",
+   "date": "2026-09-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -19.77,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1788735664.0
+  },
+  {
+   "transaction_id": "ba99a0995a2ea05a033d5b34",
+   "date": "2026-09-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -13.55,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1788907584.0
+  },
+  {
+   "transaction_id": "58c9d74db95f29dacb0b6dc9",
+   "date": "2026-09-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -26.96,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1788911132.0
+  },
+  {
+   "transaction_id": "f88f5654bdefbbe53cb6359c",
+   "date": "2026-09-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Netflix",
+   "amount": -17.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1788953754.0
+  },
+  {
+   "transaction_id": "3c6e79374226ea6872fda067",
+   "date": "2026-09-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -10.92,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1788996686.0
+  },
+  {
+   "transaction_id": "09ef410ba54f1b2d7fc2bedd",
+   "date": "2026-09-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -15.53,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1789001853.0
+  },
+  {
+   "transaction_id": "c78b33bf9f07049e21d242ab",
+   "date": "2026-09-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1885.17,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1789128912.0
+  },
+  {
+   "transaction_id": "ddd6e9084798cb1bdcc6f7ba",
+   "date": "2026-09-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "47th Ave Food Store",
+   "amount": -58.18,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1789170019.0
+  },
+  {
+   "transaction_id": "9d9891c0c1b57f98b8d623d3",
+   "date": "2026-09-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -59.39,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1789174806.0
+  },
+  {
+   "transaction_id": "afe72581471c385c4957c046",
+   "date": "2026-09-12",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -34.12,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1789258213.0
+  },
+  {
+   "transaction_id": "66e9a4e3518ebe16c8c2db58",
+   "date": "2026-09-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -101.57,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1789321477.0
+  },
+  {
+   "transaction_id": "d6b14e9e0dcc9f919915bc13",
+   "date": "2026-09-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -73.1,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1789333964.0
+  },
+  {
+   "transaction_id": "2ac1e1f92741b31303ad3d01",
+   "date": "2026-09-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -44.21,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1789340936.0
+  },
+  {
+   "transaction_id": "de64d1567be9f13fec26b21d",
+   "date": "2026-09-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -6.1,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1789390567.0
+  },
+  {
+   "transaction_id": "11ec9865748f53f9cf578f20",
+   "date": "2026-09-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "CVS Pharmacy",
+   "amount": -21.15,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1789431848.0
+  },
+  {
+   "transaction_id": "60c726fd4e0d9d942fdd2cb7",
+   "date": "2026-09-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "State Farm",
+   "amount": -138.72,
+   "category": "insurance",
+   "account_last_four": "4471",
+   "timestamp": 1789477043.0
+  },
+  {
+   "transaction_id": "66ce46289db2972eb0731adc",
+   "date": "2026-09-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1789562877.0
+  },
+  {
+   "transaction_id": "c99bee04f5980cc956d5c034",
+   "date": "2026-09-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Vallarta Supermarkets",
+   "amount": -55.19,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1789601662.0
+  },
+  {
+   "transaction_id": "c04d871112da638a4f019c7c",
+   "date": "2026-09-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -10.41,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1789603095.0
+  },
+  {
+   "transaction_id": "d00f4d04c07a118b1c5fd3ae",
+   "date": "2026-09-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -36.9,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1789686812.0
+  },
+  {
+   "transaction_id": "a8e671845c6947ee4f47c974",
+   "date": "2026-09-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -44.97,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1789694278.0
+  },
+  {
+   "transaction_id": "dedc239064c64356f1f26c12",
+   "date": "2026-09-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -37.91,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1789697199.0
+  },
+  {
+   "transaction_id": "a3a8f25b329f61edaa48bc98",
+   "date": "2026-09-18",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -18.38,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1789773427.0
+  },
+  {
+   "transaction_id": "68946a8d45acfe35395fd55f",
+   "date": "2026-09-18",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -13.47,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1789780396.0
+  },
+  {
+   "transaction_id": "b514de1d8ed9922a43b1576f",
+   "date": "2026-09-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -21.4,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1789873518.0
+  },
+  {
+   "transaction_id": "46b0108495613e648f91e01c",
+   "date": "2026-09-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "T-Mobile",
+   "amount": -79.84,
+   "category": "phone",
+   "account_last_four": "3306",
+   "timestamp": 1789909136.0
+  },
+  {
+   "transaction_id": "fb066bbe0366f372c8fa4b4f",
+   "date": "2026-09-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -128.63,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1789927478.0
+  },
+  {
+   "transaction_id": "ba73085abdf10141e45259d2",
+   "date": "2026-09-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -15.27,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1789934443.0
+  },
+  {
+   "transaction_id": "8fabaadcb19db02b0412e44e",
+   "date": "2026-09-21",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -10.59,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1790030896.0
+  },
+  {
+   "transaction_id": "55d0ba4de86663069cdfec40",
+   "date": "2026-09-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "SRP",
+   "amount": -164.71,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1790072720.0
+  },
+  {
+   "transaction_id": "33fa94d65338e990b4852611",
+   "date": "2026-09-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -44.89,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1790117713.0
+  },
+  {
+   "transaction_id": "7847a24df673620bcc029c57",
+   "date": "2026-09-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -14.99,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1790122197.0
+  },
+  {
+   "transaction_id": "1adfd7fb2d3ad1166b04a524",
+   "date": "2026-09-24",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -53.13,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1790289412.0
+  },
+  {
+   "transaction_id": "d6b152b329d1ed5708c8944b",
+   "date": "2026-09-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1716.42,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1790338555.0
+  },
+  {
+   "transaction_id": "5d2566e4578a298b69fee8e1",
+   "date": "2026-09-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -6.48,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1790341290.0
+  },
+  {
+   "transaction_id": "936859090e59e038f3f0dba4",
+   "date": "2026-09-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -39.46,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1790456984.0
+  },
+  {
+   "transaction_id": "dda710bda530cc68a530d9e0",
+   "date": "2026-09-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -8.84,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1790467015.0
+  },
+  {
+   "transaction_id": "569ce1bed16b4c7763604fd1",
+   "date": "2026-09-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Southwest Gas",
+   "amount": -19.35,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1790517898.0
+  },
+  {
+   "transaction_id": "70c0fef32727c692e58fca71",
+   "date": "2026-09-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -149.15,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1790530459.0
+  },
+  {
+   "transaction_id": "1b5b2df8c231f18263116cfa",
+   "date": "2026-09-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "El Super",
+   "amount": -33.56,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1790549186.0
+  },
+  {
+   "transaction_id": "f57e669d3ad54a236627cd72",
+   "date": "2026-09-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -26.61,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1790552038.0
+  },
+  {
+   "transaction_id": "542efd970705262703edc317",
+   "date": "2026-09-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Copper State Visa payment",
+   "amount": -2181.68,
+   "category": "credit_card_payment",
+   "account_last_four": "4471",
+   "timestamp": 1790597386.0
+  },
+  {
+   "transaction_id": "dee4e6f864bbebcbb2c3d337",
+   "date": "2026-09-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Payment received - thank you",
+   "amount": 2181.68,
+   "category": "credit_card_payment",
+   "account_last_four": "3306",
+   "timestamp": 1790599066.0
+  },
+  {
+   "transaction_id": "95860e81f4898e5bf924fb14",
+   "date": "2026-09-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -8.73,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1790642131.0
+  },
+  {
+   "transaction_id": "8921ab3c8942a30045478bdd",
+   "date": "2026-09-29",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "47th Ave Food Store",
+   "amount": -25.43,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1790728664.0
+  },
+  {
+   "transaction_id": "8a9113329afcf5a664db0b1b",
+   "date": "2026-09-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -52.41,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1790809030.0
+  },
+  {
+   "transaction_id": "d342b55b12216af4afb6cf30",
+   "date": "2026-09-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Interest Payment",
+   "amount": 3.69,
+   "category": "income",
+   "account_last_four": "4490",
+   "timestamp": 1790812823.0
+  },
+  {
+   "transaction_id": "bd6500d86f444d735ddb51ff",
+   "date": "2026-10-01",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Mr. Cooper",
+   "amount": -1312.46,
+   "category": "housing",
+   "account_last_four": "4471",
+   "timestamp": 1790852646.0
+  },
+  {
+   "transaction_id": "8298401c2a07699cfd8718b4",
+   "date": "2026-10-01",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -10.38,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1790893995.0
+  },
+  {
+   "transaction_id": "c815e081e76e4bbba8ff211b",
+   "date": "2026-10-01",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -35.26,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1790895421.0
+  },
+  {
+   "transaction_id": "2b1726ffa8b77a06400b4cbb",
+   "date": "2026-10-01",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -17.48,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1790907814.0
+  },
+  {
+   "transaction_id": "337b93e8fca083c9cc0213c2",
+   "date": "2026-10-02",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Saguaro ATM",
+   "amount": -40.0,
+   "category": "cash",
+   "account_last_four": "4471",
+   "timestamp": 1790957521.0
+  },
+  {
+   "transaction_id": "ffc8b28fda2cd675658eec9a",
+   "date": "2026-10-02",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Peter Piper Pizza",
+   "amount": -29.85,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1790996760.0
+  },
+  {
+   "transaction_id": "83321e857cbbb1aaddd6ea36",
+   "date": "2026-10-03",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -24.2,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1791081746.0
+  },
+  {
+   "transaction_id": "99ef256fc6aaee95059fbd12",
+   "date": "2026-10-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chewy",
+   "amount": -47.26,
+   "category": "pets",
+   "account_last_four": "3306",
+   "timestamp": 1791109584.0
+  },
+  {
+   "transaction_id": "acc9c36e41f8dea146cfb99b",
+   "date": "2026-10-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -93.82,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1791138244.0
+  },
+  {
+   "transaction_id": "76e010593eeabe7da70d9119",
+   "date": "2026-10-04",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -22.55,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1791155506.0
+  },
+  {
+   "transaction_id": "1937dad350b4332aa7a1d0fd",
+   "date": "2026-10-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Amazon",
+   "amount": -42.17,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1791227132.0
+  },
+  {
+   "transaction_id": "e66f603429f813ffb543f2f8",
+   "date": "2026-10-05",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -10.72,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1791247068.0
+  },
+  {
+   "transaction_id": "774e6e4468dedf67198d45ea",
+   "date": "2026-10-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "City of Phoenix Water",
+   "amount": -46.15,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1791289115.0
+  },
+  {
+   "transaction_id": "15f42a04468bd8fd9ee3a033",
+   "date": "2026-10-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -67.16,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1791326312.0
+  },
+  {
+   "transaction_id": "9b0b7ae4926171128f1fc919",
+   "date": "2026-10-06",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -35.88,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1791339045.0
+  },
+  {
+   "transaction_id": "327aa41960197844cd8867dd",
+   "date": "2026-10-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -28.64,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1791484845.0
+  },
+  {
+   "transaction_id": "8fd09ffd6e76c55bc657cd6e",
+   "date": "2026-10-08",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Vallarta Supermarkets",
+   "amount": -36.78,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1791507823.0
+  },
+  {
+   "transaction_id": "ffd83c6afe305533c71cf327",
+   "date": "2026-10-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Netflix",
+   "amount": -17.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1791544837.0
+  },
+  {
+   "transaction_id": "a31e4ff8b4650e89d469d7b4",
+   "date": "2026-10-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1548.36,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1791548137.0
+  },
+  {
+   "transaction_id": "5d85c769c487c5b92fa4cc03",
+   "date": "2026-10-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -13.75,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1791588579.0
+  },
+  {
+   "transaction_id": "29d045d766ed4ffb0a99d9f0",
+   "date": "2026-10-09",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -16.4,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1791592734.0
+  },
+  {
+   "transaction_id": "c921834be61819f94ce097fd",
+   "date": "2026-10-10",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -64.18,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1791668242.0
+  },
+  {
+   "transaction_id": "e6d16501e221b2f4fa12a416",
+   "date": "2026-10-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -162.47,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1791739917.0
+  },
+  {
+   "transaction_id": "5520b274d5d681be2c3088d9",
+   "date": "2026-10-11",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -69.45,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1791760979.0
+  },
+  {
+   "transaction_id": "dca1fabfffa6b043f6431d5e",
+   "date": "2026-10-12",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -18.73,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1791845178.0
+  },
+  {
+   "transaction_id": "0fedbc92b9542f8982af3486",
+   "date": "2026-10-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -7.13,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1791895348.0
+  },
+  {
+   "transaction_id": "4c17f56e2706516778719b3e",
+   "date": "2026-10-13",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -41.05,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1791937922.0
+  },
+  {
+   "transaction_id": "1af1aa6b365b8133bd3025c6",
+   "date": "2026-10-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -38.51,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1792017365.0
+  },
+  {
+   "transaction_id": "464307d40bca9b76724b5778",
+   "date": "2026-10-14",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -31.91,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1792020161.0
+  },
+  {
+   "transaction_id": "89ef0d39ab934f798e90ba64",
+   "date": "2026-10-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "State Farm",
+   "amount": -146.1,
+   "category": "insurance",
+   "account_last_four": "4471",
+   "timestamp": 1792063593.0
+  },
+  {
+   "transaction_id": "71fa32b91bd73716d189f647",
+   "date": "2026-10-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -13.86,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1792109348.0
+  },
+  {
+   "transaction_id": "12347b346b83bd908d594775",
+   "date": "2026-10-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -42.3,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1792117968.0
+  },
+  {
+   "transaction_id": "5d004e05cbd6a3b983e9db3c",
+   "date": "2026-10-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -48.03,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1792120030.0
+  },
+  {
+   "transaction_id": "3b1fbdfd7f366b0f7cd98f6e",
+   "date": "2026-10-15",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Los Betos",
+   "amount": -24.68,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1792120929.0
+  },
+  {
+   "transaction_id": "8fb30b688cb0410b32a88453",
+   "date": "2026-10-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "entertainment",
+   "account_last_four": "3306",
+   "timestamp": 1792146560.0
+  },
+  {
+   "transaction_id": "99ca38683c81a16d138fe019",
+   "date": "2026-10-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Copper State Visa payment",
+   "amount": -1250.0,
+   "category": "credit_card_payment",
+   "account_last_four": "4471",
+   "timestamp": 1792155901.0
+  },
+  {
+   "transaction_id": "6143dece5c1a2381af0cf1e6",
+   "date": "2026-10-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Payment received - thank you",
+   "amount": 1250.0,
+   "category": "credit_card_payment",
+   "account_last_four": "3306",
+   "timestamp": 1792156081.0
+  },
+  {
+   "transaction_id": "ed9b41892a051084885ac0a9",
+   "date": "2026-10-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "CVS Pharmacy",
+   "amount": -15.7,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1792192902.0
+  },
+  {
+   "transaction_id": "265213f7d7c094fcc41317f2",
+   "date": "2026-10-16",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "El Super",
+   "amount": -27.2,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1792193906.0
+  },
+  {
+   "transaction_id": "7f238ce3cc630c1c7d82ed54",
+   "date": "2026-10-17",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -10.68,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1792278837.0
+  },
+  {
+   "transaction_id": "a7c7aba74a7cb40e5fe03767",
+   "date": "2026-10-18",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -114.29,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1792346848.0
+  },
+  {
+   "transaction_id": "48141ccd74a659389ef5bac8",
+   "date": "2026-10-18",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Food City",
+   "amount": -38.13,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1792350642.0
+  },
+  {
+   "transaction_id": "5d48e37d0cf7b54951c17e01",
+   "date": "2026-10-18",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -21.24,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1792355525.0
+  },
+  {
+   "transaction_id": "225395fb4b5be6a933478806",
+   "date": "2026-10-18",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Carolina's Mexican Food",
+   "amount": -23.5,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1792366715.0
+  },
+  {
+   "transaction_id": "0fa60d9c7857acafc51e413e",
+   "date": "2026-10-18",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -9.51,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1792367869.0
+  },
+  {
+   "transaction_id": "6ac151b272b601a186986a00",
+   "date": "2026-10-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Valley Tire & Auto",
+   "amount": -214.37,
+   "category": "auto",
+   "account_last_four": "3306",
+   "timestamp": 1792444356.0
+  },
+  {
+   "transaction_id": "f04d39dc4386e6ec10c38f18",
+   "date": "2026-10-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Valley Tire & Auto",
+   "amount": -214.37,
+   "category": "auto",
+   "account_last_four": "3306",
+   "timestamp": 1792444681.0
+  },
+  {
+   "transaction_id": "4b2f3330d66a764872f95789",
+   "date": "2026-10-19",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walgreens",
+   "amount": -17.8,
+   "category": "pharmacy",
+   "account_last_four": "3306",
+   "timestamp": 1792448807.0
+  },
+  {
+   "transaction_id": "c511a0e1f884a6ff3de4b505",
+   "date": "2026-10-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "T-Mobile",
+   "amount": -79.84,
+   "category": "phone",
+   "account_last_four": "3306",
+   "timestamp": 1792498282.0
+  },
+  {
+   "transaction_id": "775b2b0335b2ab5557386109",
+   "date": "2026-10-20",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "47th Ave Food Store",
+   "amount": -39.18,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1792537997.0
+  },
+  {
+   "transaction_id": "21e5b17d3113840975857951",
+   "date": "2026-10-21",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -46.12,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1792625780.0
+  },
+  {
+   "transaction_id": "9cd77b6b4c035c4ca15e208a",
+   "date": "2026-10-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "SRP",
+   "amount": -121.05,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1792673301.0
+  },
+  {
+   "transaction_id": "bd0a5a2cf8f67a3ab3a2e04c",
+   "date": "2026-10-22",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -9.3,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1792708993.0
+  },
+  {
+   "transaction_id": "25dbd7842c86a77920286942",
+   "date": "2026-10-23",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Desert Air Mechanical payroll",
+   "amount": 1548.36,
+   "category": "income",
+   "account_last_four": "4471",
+   "timestamp": 1792757705.0
+  },
+  {
+   "transaction_id": "a531a839fd0e084760089df9",
+   "date": "2026-10-23",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Dutch Bros",
+   "amount": -5.22,
+   "category": "coffee",
+   "account_last_four": "3306",
+   "timestamp": 1792761260.0
+  },
+  {
+   "transaction_id": "c539167ae4b44f26ff395719",
+   "date": "2026-10-23",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -25.64,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1792800302.0
+  },
+  {
+   "transaction_id": "7d0d6aa10f221cee5e6d5dfb",
+   "date": "2026-10-23",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Target",
+   "amount": -27.83,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1792804135.0
+  },
+  {
+   "transaction_id": "2112728de5914ebc60d736c3",
+   "date": "2026-10-25",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Costco Wholesale",
+   "amount": -137.54,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1792952594.0
+  },
+  {
+   "transaction_id": "523bcb6e916afcb16fc8a5bb",
+   "date": "2026-10-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Copper State Visa payment",
+   "amount": -865.02,
+   "category": "credit_card_payment",
+   "account_last_four": "4471",
+   "timestamp": 1793018627.0
+  },
+  {
+   "transaction_id": "1ace380c9d7297fd3e043267",
+   "date": "2026-10-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Payment received - thank you",
+   "amount": 865.02,
+   "category": "credit_card_payment",
+   "account_last_four": "3306",
+   "timestamp": 1793018867.0
+  },
+  {
+   "transaction_id": "03c13c42c1b66b615eca31c1",
+   "date": "2026-10-26",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Fry's Food",
+   "amount": -49.5,
+   "category": "groceries",
+   "account_last_four": "3306",
+   "timestamp": 1793059844.0
+  },
+  {
+   "transaction_id": "d643d48b89ba477e272d61bd",
+   "date": "2026-10-27",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Southwest Gas",
+   "amount": -24.69,
+   "category": "utilities",
+   "account_last_four": "3306",
+   "timestamp": 1793105233.0
+  },
+  {
+   "transaction_id": "bf8d0eb230541e3c5d0d2e06",
+   "date": "2026-10-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "QuikTrip",
+   "amount": -43.77,
+   "category": "gas",
+   "account_last_four": "3306",
+   "timestamp": 1793226142.0
+  },
+  {
+   "transaction_id": "b569f6762dc37a820a8ada5a",
+   "date": "2026-10-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Little Caesars",
+   "amount": -10.83,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1793228276.0
+  },
+  {
+   "transaction_id": "b4751524e50f1c6b993b27a8",
+   "date": "2026-10-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Chipotle",
+   "amount": -24.12,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1793229312.0
+  },
+  {
+   "transaction_id": "f269060acddde889633f94cc",
+   "date": "2026-10-28",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Walmart Supercenter",
+   "amount": -32.96,
+   "category": "shopping",
+   "account_last_four": "3306",
+   "timestamp": 1793229907.0
+  },
+  {
+   "transaction_id": "6490d1add7dcfb20798933f6",
+   "date": "2026-10-30",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Saguaro ATM",
+   "amount": -60.0,
+   "category": "cash",
+   "account_last_four": "4471",
+   "timestamp": 1793409002.0
+  },
+  {
+   "transaction_id": "a35e8305a715b0813e97974a",
+   "date": "2026-10-31",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "Interest Payment",
+   "amount": 3.82,
+   "category": "income",
+   "account_last_four": "4490",
+   "timestamp": 1793491220.0
+  },
+  {
+   "transaction_id": "7adc964a79d58a7a0469e8d0",
+   "date": "2026-10-31",
+   "user_id": "cb3e030aa5c3262e40f13027",
+   "merchant": "In-N-Out",
+   "amount": -26.35,
+   "category": "dining",
+   "account_last_four": "3306",
+   "timestamp": 1793499618.0
+  }
+ ]
+}

@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
-  ArrowUpRight,
   BookOpenCheck,
   CheckCircle2,
   ChevronRight,
@@ -113,7 +112,7 @@ function StepCard({
   );
 }
 
-/** The Universe Viewers, the one card in the hero that leaves the hub. It is
+/** The Universe Viewers, the card that opens the Universes tab. It is
  *  the hero's loudest block on purpose: a filled brand panel where everything
  *  around it is a light card. The CTA is the only link, and its `after:` layer
  *  stretches it over the whole card, so the card is one tap target with one
@@ -151,15 +150,13 @@ function UniverseViewersCard({ className }: { className?: string }) {
       </h2>
       <p className="mt-2 text-[14px] leading-relaxed text-white/85">{universeViewers.body}</p>
       <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
-        <a
-          href={universeViewers.url}
-          target="_blank"
-          rel="noreferrer"
+        <Link
+          to={universeViewers.url}
           className="btn bg-white px-5 py-3 text-[15px] text-brand-700 shadow-soft active:transform-none after:absolute after:inset-0 after:rounded-2xl hover:bg-brand-50 focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-inset focus-visible:after:ring-white"
         >
           {universeViewers.cta}
-          <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-        </a>
+          <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+        </Link>
         <span className="text-[12px] leading-snug text-white/65">{universeViewers.note}</span>
       </div>
     </div>

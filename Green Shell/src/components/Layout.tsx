@@ -7,7 +7,7 @@ import { useTheme } from "../lib/useTheme";
 import CommandPalette from "./CommandPalette";
 
 /**
- * Six tabs, one of them parked, and the number is the point.
+ * Seven tabs, one of them parked, and the number is the point.
  *
  * It was eight. Four of those were things a contributor looks something up in
  * rather than works from — onboarding, what moved from Red Shell, the FAQ, and
@@ -35,15 +35,27 @@ import CommandPalette from "./CommandPalette";
  * Steps 3 and 7 of the method, gate check A5 and the Golden Task's Model A run
  * link into it.
  *
+ * **Universes is a tab of its own, and this is the argument for it.** It is
+ * the data every task is built on, and a contributor works in it rather than
+ * reading it: three complete persona viewers, each with its own navigation,
+ * search and panes, opened again and again from the method's second step on.
+ * A viewer is not a Reference pane, because it is an application, and one
+ * under a bar of four reading panes would nest an app inside a page. It is not
+ * a method step, which is three sentences and a panel, and it is not the
+ * standard. It used to be a separate site the hero linked out to. It sits
+ * second, right after the method, because exploring the universe is the
+ * method's second step.
+ *
  * **Complexity is parked.** The proposals tool is off the site for now, so its
- * entry is out of this list and five tabs show. The page and everything behind
+ * entry is out of this list and six tabs show. The page and everything behind
  * it are still in the source, and CLAUDE.md has the way back.
  *
- * **Anything new goes inside one of these.** A seventh tab needs an argument
+ * **Anything new goes inside one of these.** An eighth tab needs an argument
  * for why it is not a pane of an existing one.
  */
 const links = [
   { to: "/", label: "The Method", end: true },
+  { to: "/universes", label: "Universes" },
   { to: "/golden-tasks", label: "Golden Tasks" },
   { to: "/failure-approach", label: "Failure Approach" },
   { to: "/spec", label: "Spec Doc" },
@@ -159,6 +171,8 @@ export default function Layout({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      // An open universe takes ⌘K for its own search, as its page always did.
+      if (e.defaultPrevented) return;
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
         setSearch((s) => !s);

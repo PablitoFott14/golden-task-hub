@@ -1,0 +1,1098 @@
+{
+ "users": [
+  {
+   "user_id": "e5c2d60d14318442855a8afb",
+   "name": "Elena Marsh",
+   "email": "elena.marsh.avl@gmail.com",
+   "member_since": null,
+   "linked_accounts_count": 3,
+   "status": "Active",
+   "ssn": null,
+   "date_of_birth": "1979-06-15",
+   "mothers_maiden_name": null,
+   "phone": "(828) 555-0142"
+  }
+ ],
+ "accounts": [
+  {
+   "account_id": "acct_bef708df61b356e767c5",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "institution_name": "Mountain Credit Union",
+   "account_type": "checking",
+   "last_four": "1904",
+   "balance": 18612.48,
+   "status": "Active"
+  },
+  {
+   "account_id": "d4a7e19c03b8f562a1c9e07b",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "institution_name": "Mountain Credit Union",
+   "account_type": "savings",
+   "last_four": "1931",
+   "balance": 23480.17,
+   "status": "Active"
+  },
+  {
+   "account_id": "71c3f8a05e2d94b6c0e7a38f",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "institution_name": "Mountain Credit Union",
+   "account_type": "mortgage",
+   "last_four": "7740",
+   "balance": -202391.07,
+   "status": "Active"
+  }
+ ],
+ "subscriptions": [
+  {
+   "subscription_id": "e4f180a22f5b5f59e24d26a9",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "service_name": "Peacock Premium",
+   "amount": 10.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-10-31",
+   "status": "Active"
+  }
+ ],
+ "transactions": [
+  {
+   "transaction_id": "48b9e2d7f05c3a1e8d6b4f90",
+   "date": "2026-04-21",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Ingles Markets",
+   "amount": -112.36,
+   "category": "groceries",
+   "account_last_four": "1904",
+   "timestamp": 1776812317.0
+  },
+  {
+   "transaction_id": "9d55e93a45593b42fb4861f4",
+   "date": "2026-04-27",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Blue Ridge Plumbing",
+   "amount": -100.0,
+   "category": "home",
+   "account_last_four": "1904",
+   "timestamp": 1777304778.0
+  },
+  {
+   "transaction_id": "6c1e9f4b8a3d70e5c2f6b1a8",
+   "date": "2026-04-27",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Ingles Gas Express",
+   "amount": -47.18,
+   "category": "gas",
+   "account_last_four": "1904",
+   "timestamp": 1777311213.0
+  },
+  {
+   "transaction_id": "43870e9f749dde98928633f6",
+   "date": "2026-04-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Peacock",
+   "amount": -10.99,
+   "category": "entertainment",
+   "account_last_four": "1904",
+   "timestamp": 1777541955.0
+  },
+  {
+   "transaction_id": "d5ff45b4068009103c4c7d99",
+   "date": "2026-04-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer to Mountain Credit Union ..1931",
+   "amount": -250.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1777543228.0
+  },
+  {
+   "transaction_id": "de46ff480469f34922e4cbf5",
+   "date": "2026-04-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Interest Payment",
+   "amount": 4.27,
+   "category": "income",
+   "account_last_four": "1931",
+   "timestamp": 1777543255.0
+  },
+  {
+   "transaction_id": "799cac3f728cc353fbc6aa76",
+   "date": "2026-04-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer in from Checking (autosave)",
+   "amount": 250.0,
+   "category": "transfer",
+   "account_last_four": "1931",
+   "timestamp": 1777543256.0
+  },
+  {
+   "transaction_id": "2bccfbd2265a4f08636860de",
+   "date": "2026-05-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "MOUNTAIN CU MORTGAGE ••7740 PMT 050126",
+   "amount": -1524.05,
+   "category": "housing",
+   "account_last_four": "1904",
+   "timestamp": 1777633484.0
+  },
+  {
+   "transaction_id": "71d0e3dbea2013e955c4f896",
+   "date": "2026-05-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Mountain Credit Union - Principal portion of payment",
+   "amount": 419.8,
+   "category": "transfer",
+   "account_last_four": "7740",
+   "timestamp": 1777633487.0
+  },
+  {
+   "transaction_id": "6f0d20260501c01904000002",
+   "date": "2026-05-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1777677386.0
+  },
+  {
+   "transaction_id": "e81c4a6f2b0d95e7c1a4f8b6",
+   "date": "2026-05-10",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Rhubarb",
+   "amount": -108.64,
+   "category": "dining",
+   "account_last_four": "1904",
+   "timestamp": 1778438901.0
+  },
+  {
+   "transaction_id": "f80b2d6e4c9a15f3b7d0e2c9",
+   "date": "2026-05-11",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Shell",
+   "amount": -51.36,
+   "category": "gas",
+   "account_last_four": "1904",
+   "timestamp": 1778546701.0
+  },
+  {
+   "transaction_id": "e3fbbcf05ce1011f94013ec5",
+   "date": "2026-05-12",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Spectrum",
+   "amount": -79.99,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1778584351.0
+  },
+  {
+   "transaction_id": "416b2fa848a75691a8959f42",
+   "date": "2026-05-14",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Duke Energy",
+   "amount": -96.42,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1778782233.0
+  },
+  {
+   "transaction_id": "6f0d20260515c01904000004",
+   "date": "2026-05-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1778886686.0
+  },
+  {
+   "transaction_id": "0b6d8e4a2f9c71b3e5d0a6c8",
+   "date": "2026-05-25",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Trader Joe's",
+   "amount": -131.47,
+   "category": "groceries",
+   "account_last_four": "1904",
+   "timestamp": 1779754276.0
+  },
+  {
+   "transaction_id": "be8748a0e1d937da2d9804d2",
+   "date": "2026-05-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Peacock",
+   "amount": -10.99,
+   "category": "entertainment",
+   "account_last_four": "1904",
+   "timestamp": 1780220535.0
+  },
+  {
+   "transaction_id": "3d66a0dc9386f22a51e5a05d",
+   "date": "2026-05-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer in from Checking (autosave)",
+   "amount": 250.0,
+   "category": "transfer",
+   "account_last_four": "1931",
+   "timestamp": 1780221604.0
+  },
+  {
+   "transaction_id": "10fc07b5e80139b9c8e3664d",
+   "date": "2026-05-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer to Mountain Credit Union ..1931",
+   "amount": -250.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1780221651.0
+  },
+  {
+   "transaction_id": "24d2724383ee8b800b3a4b94",
+   "date": "2026-05-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Interest Payment",
+   "amount": 4.45,
+   "category": "income",
+   "account_last_four": "1931",
+   "timestamp": 1780221656.0
+  },
+  {
+   "transaction_id": "2e3e5f80f83949083c89def3",
+   "date": "2026-06-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "MOUNTAIN CU MORTGAGE ••7740 PMT 060126",
+   "amount": -1524.05,
+   "category": "housing",
+   "account_last_four": "1904",
+   "timestamp": 1780311887.0
+  },
+  {
+   "transaction_id": "7dce1a40ee3714135939da6d",
+   "date": "2026-06-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Mountain Credit Union - Principal portion of payment",
+   "amount": 421.15,
+   "category": "transfer",
+   "account_last_four": "7740",
+   "timestamp": 1780311890.0
+  },
+  {
+   "transaction_id": "6f0d20260601c01904000006",
+   "date": "2026-06-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1780329509.0
+  },
+  {
+   "transaction_id": "c4e81a7f2d095b36e8c4a1d7",
+   "date": "2026-06-02",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "REI Co-op",
+   "amount": -54.52,
+   "category": "shopping",
+   "account_last_four": "1904",
+   "timestamp": 1780441481.0
+  },
+  {
+   "transaction_id": "a85e3f0c6d29b47e1a8f5c03",
+   "date": "2026-06-09",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Westgate Family Dentistry",
+   "amount": -89.0,
+   "category": "health",
+   "account_last_four": "1904",
+   "timestamp": 1781013798.0
+  },
+  {
+   "transaction_id": "0239e84f9440acb89c57e75d",
+   "date": "2026-06-12",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Spectrum",
+   "amount": -79.99,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1781262588.0
+  },
+  {
+   "transaction_id": "c8e13a5f92d07b4ce16a053f",
+   "date": "2026-06-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "IRS USATAXPYMT 279718856033384",
+   "amount": -4800.0,
+   "category": "taxes",
+   "account_last_four": "1904",
+   "timestamp": 1781528438.0
+  },
+  {
+   "transaction_id": "5f40b7e2d18ca93e06b52c71",
+   "date": "2026-06-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "NCDOR EST TAX 9346199242",
+   "amount": -1150.0,
+   "category": "taxes",
+   "account_last_four": "1904",
+   "timestamp": 1781528774.0
+  },
+  {
+   "transaction_id": "4ec9d26556dc77e9df22ef4c",
+   "date": "2026-06-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Duke Energy",
+   "amount": -118.37,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1781533508.0
+  },
+  {
+   "transaction_id": "6f0d20260615c01904000008",
+   "date": "2026-06-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1781533838.0
+  },
+  {
+   "transaction_id": "a8c25f0e7d913b46c0e8f5a2",
+   "date": "2026-06-16",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Ridgeline Home Repair",
+   "amount": -385.0,
+   "category": "home",
+   "account_last_four": "1904",
+   "timestamp": 1781625712.0
+  },
+  {
+   "transaction_id": "1f9b6d3a8e2c0574b1f9d6a3",
+   "date": "2026-06-21",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Nine Mile",
+   "amount": -41.26,
+   "category": "dining",
+   "account_last_four": "1904",
+   "timestamp": 1782081575.0
+  },
+  {
+   "transaction_id": "6a3f9e1c8d07b25e4f6a3d91",
+   "date": "2026-06-22",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "French Broad Food Co-op",
+   "amount": -158.64,
+   "category": "groceries",
+   "account_last_four": "1904",
+   "timestamp": 1782164245.0
+  },
+  {
+   "transaction_id": "2e9c5a7f1d3b84e0c6a9f5d2",
+   "date": "2026-06-29",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Circle K",
+   "amount": -58.04,
+   "category": "gas",
+   "account_last_four": "1904",
+   "timestamp": 1782734755.0
+  },
+  {
+   "transaction_id": "a333c5033b1bd38fb7609f0c",
+   "date": "2026-06-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Peacock",
+   "amount": -10.99,
+   "category": "entertainment",
+   "account_last_four": "1904",
+   "timestamp": 1782810951.0
+  },
+  {
+   "transaction_id": "a84bd432a3447bda0af2ded3",
+   "date": "2026-06-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Interest Payment",
+   "amount": 4.35,
+   "category": "income",
+   "account_last_four": "1931",
+   "timestamp": 1782813606.0
+  },
+  {
+   "transaction_id": "b502f71eab4c82e18f28057a",
+   "date": "2026-06-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer to Mountain Credit Union ..1931",
+   "amount": -250.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1782813615.0
+  },
+  {
+   "transaction_id": "073a6cb7761066f16b5d1141",
+   "date": "2026-06-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer in from Checking (autosave)",
+   "amount": 250.0,
+   "category": "transfer",
+   "account_last_four": "1931",
+   "timestamp": 1782813640.0
+  },
+  {
+   "transaction_id": "0f37d690d49e424bd5dfa7ff",
+   "date": "2026-07-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "MOUNTAIN CU MORTGAGE ••7740 PMT 070126",
+   "amount": -1524.05,
+   "category": "housing",
+   "account_last_four": "1904",
+   "timestamp": 1782903856.0
+  },
+  {
+   "transaction_id": "86687376e2040b55ba6b82de",
+   "date": "2026-07-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Mountain Credit Union - Principal portion of payment",
+   "amount": 422.51,
+   "category": "transfer",
+   "account_last_four": "7740",
+   "timestamp": 1782903859.0
+  },
+  {
+   "transaction_id": "6f0d20260701c01904000010",
+   "date": "2026-07-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1782954104.0
+  },
+  {
+   "transaction_id": "3e1d7b94f6a0c28d5e3b7f41",
+   "date": "2026-07-07",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Firestone Complete Auto Care",
+   "amount": -289.42,
+   "category": "auto",
+   "account_last_four": "1904",
+   "timestamp": 1783448497.0
+  },
+  {
+   "transaction_id": "0f4b8d2e6a9c13f7b0e5d4a2",
+   "date": "2026-07-12",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Sunny Point Café",
+   "amount": -38.74,
+   "category": "dining",
+   "account_last_four": "1904",
+   "timestamp": 1783869522.0
+  },
+  {
+   "transaction_id": "76dd944a70dfae9b39407101",
+   "date": "2026-07-13",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Spectrum",
+   "amount": -79.99,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1783941245.0
+  },
+  {
+   "transaction_id": "e6192f99ddd1708d5e29d432",
+   "date": "2026-07-14",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Biscuit Head",
+   "amount": -40.64,
+   "category": "dining",
+   "account_last_four": "1904",
+   "timestamp": 1784043492.0
+  },
+  {
+   "transaction_id": "f80551c5db7a1d412aef2502",
+   "date": "2026-07-14",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Duke Energy",
+   "amount": -151.26,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1784048746.0
+  },
+  {
+   "transaction_id": "b5d1f7a3e8c62d9b0f4e7a1c",
+   "date": "2026-07-14",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Ingles Gas Express",
+   "amount": -54.77,
+   "category": "gas",
+   "account_last_four": "1904",
+   "timestamp": 1784072574.0
+  },
+  {
+   "transaction_id": "6f0d20260715c01904000012",
+   "date": "2026-07-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1784162655.0
+  },
+  {
+   "transaction_id": "b7c94e2f0a6d18b5c3f7e9a2",
+   "date": "2026-07-27",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Aldi",
+   "amount": -88.92,
+   "category": "groceries",
+   "account_last_four": "1904",
+   "timestamp": 1785195683.0
+  },
+  {
+   "transaction_id": "a3cf765285767008cbc58ae6",
+   "date": "2026-07-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Peacock",
+   "amount": -10.99,
+   "category": "entertainment",
+   "account_last_four": "1904",
+   "timestamp": 1785489327.0
+  },
+  {
+   "transaction_id": "3a1c5f4dcef71af6c6e86fcb",
+   "date": "2026-07-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer in from Checking (autosave)",
+   "amount": 250.0,
+   "category": "transfer",
+   "account_last_four": "1931",
+   "timestamp": 1785492016.0
+  },
+  {
+   "transaction_id": "2b6c1ee65905ad4cb307345d",
+   "date": "2026-07-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer to Mountain Credit Union ..1931",
+   "amount": -250.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1785492046.0
+  },
+  {
+   "transaction_id": "279811d816701110dbbf5a50",
+   "date": "2026-07-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Interest Payment",
+   "amount": 4.54,
+   "category": "income",
+   "account_last_four": "1931",
+   "timestamp": 1785492058.0
+  },
+  {
+   "transaction_id": "2f971e81788df857d04e84a0",
+   "date": "2026-08-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "MOUNTAIN CU MORTGAGE ••7740 PMT 080126",
+   "amount": -1524.05,
+   "category": "housing",
+   "account_last_four": "1904",
+   "timestamp": 1785582288.0
+  },
+  {
+   "transaction_id": "3f16878534f2f122e89af4c9",
+   "date": "2026-08-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Mountain Credit Union - Principal portion of payment",
+   "amount": 423.88,
+   "category": "transfer",
+   "account_last_four": "7740",
+   "timestamp": 1785582291.0
+  },
+  {
+   "transaction_id": "06e31ea57de96dd9f0dec617",
+   "date": "2026-08-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Zelle to Hazel Marsh",
+   "amount": -250.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1785612476.0
+  },
+  {
+   "transaction_id": "6f0d20260801c01904000014",
+   "date": "2026-08-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1785620531.0
+  },
+  {
+   "transaction_id": "5e08a7d3c1f94b62e0a5d8f7",
+   "date": "2026-08-03",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Ingles Markets",
+   "amount": -176.27,
+   "category": "groceries",
+   "account_last_four": "1904",
+   "timestamp": 1785800164.0
+  },
+  {
+   "transaction_id": "4ef5de3ad138f82988964d1e",
+   "date": "2026-08-10",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Biscuit Head",
+   "amount": -27.68,
+   "category": "dining",
+   "account_last_four": "1904",
+   "timestamp": 1786367800.0
+  },
+  {
+   "transaction_id": "47a0e3c9b6f15d82a7e0c4b3",
+   "date": "2026-08-11",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Shell",
+   "amount": -49.95,
+   "category": "gas",
+   "account_last_four": "1904",
+   "timestamp": 1786462908.0
+  },
+  {
+   "transaction_id": "3e8eddfdbd4fd55f3be72399",
+   "date": "2026-08-12",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Spectrum",
+   "amount": -79.99,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1786533086.0
+  },
+  {
+   "transaction_id": "7e0882ff79d36b10829489d8",
+   "date": "2026-08-13",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Mountain Credit Union - Transfer to Checking",
+   "amount": -4000.0,
+   "category": "transfer",
+   "account_last_four": "1931",
+   "timestamp": 1786626524.0
+  },
+  {
+   "transaction_id": "77e03b73508d8c31f3aff28d",
+   "date": "2026-08-13",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Mountain Credit Union - Transfer from Savings",
+   "amount": 4000.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1786639369.0
+  },
+  {
+   "transaction_id": "200b010ad43f8629414f887f",
+   "date": "2026-08-14",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Duke Energy",
+   "amount": -142.68,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1786731817.0
+  },
+  {
+   "transaction_id": "8e41c7a2d09f3b5e6c1a7d42",
+   "date": "2026-08-14",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "UNC-CH Student Accounts",
+   "amount": -4215.0,
+   "category": "education",
+   "account_last_four": "1904",
+   "timestamp": 1786738462.0
+  },
+  {
+   "transaction_id": "6f0d20260815c01904000016",
+   "date": "2026-08-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1786814481.0
+  },
+  {
+   "transaction_id": "c2a6f8e04b9d37c1a5e2f064",
+   "date": "2026-08-16",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "French Broad Food Co-op",
+   "amount": -96.4,
+   "category": "groceries",
+   "account_last_four": "1904",
+   "timestamp": 1786927429.0
+  },
+  {
+   "transaction_id": "dab5f8e4b46892d5d2e54da9",
+   "date": "2026-08-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Peacock",
+   "amount": -10.99,
+   "category": "entertainment",
+   "account_last_four": "1904",
+   "timestamp": 1788168601.0
+  },
+  {
+   "transaction_id": "fa86e120f8d149eacb5200d8",
+   "date": "2026-08-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer in from Checking (autosave)",
+   "amount": 250.0,
+   "category": "transfer",
+   "account_last_four": "1931",
+   "timestamp": 1788170405.0
+  },
+  {
+   "transaction_id": "f8c38c79d9bf879bc7c5875d",
+   "date": "2026-08-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer to Mountain Credit Union ..1931",
+   "amount": -250.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1788170435.0
+  },
+  {
+   "transaction_id": "568865b31651a6036ff236eb",
+   "date": "2026-08-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Interest Payment",
+   "amount": 4.17,
+   "category": "income",
+   "account_last_four": "1931",
+   "timestamp": 1788170446.0
+  },
+  {
+   "transaction_id": "c6f20a8d3e7b15f9c4a6d2e8",
+   "date": "2026-08-31",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "REI Co-op",
+   "amount": -58.84,
+   "category": "shopping",
+   "account_last_four": "1904",
+   "timestamp": 1788223352.0
+  },
+  {
+   "transaction_id": "699838e7d5b30c6ef8437ae7",
+   "date": "2026-09-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "MOUNTAIN CU MORTGAGE ••7740 PMT 090126",
+   "amount": -1524.05,
+   "category": "housing",
+   "account_last_four": "1904",
+   "timestamp": 1788260687.0
+  },
+  {
+   "transaction_id": "ea45d2d018863ee9a117c80a",
+   "date": "2026-09-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Mountain Credit Union - Principal portion of payment",
+   "amount": 425.24,
+   "category": "transfer",
+   "account_last_four": "7740",
+   "timestamp": 1788260690.0
+  },
+  {
+   "transaction_id": "8a6a48ba06adc62b6ee36f13",
+   "date": "2026-09-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Etsy",
+   "amount": -64.8,
+   "category": "shopping",
+   "account_last_four": "1904",
+   "timestamp": 1788284527.0
+  },
+  {
+   "transaction_id": "068637cd3a26b3871093495f",
+   "date": "2026-09-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Zelle to Hazel Marsh",
+   "amount": -250.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1788285685.0
+  },
+  {
+   "transaction_id": "6f0d20260901c01904000018",
+   "date": "2026-09-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1788299677.0
+  },
+  {
+   "transaction_id": "e05a7c2f9b1d4683a0e5c7f2",
+   "date": "2026-09-08",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "REI Co-op",
+   "amount": -139.05,
+   "category": "shopping",
+   "account_last_four": "1904",
+   "timestamp": 1788908977.0
+  },
+  {
+   "transaction_id": "50a8583c0be318bf95ec0229",
+   "date": "2026-09-14",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Spectrum",
+   "amount": -73.59,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1789384432.0
+  },
+  {
+   "transaction_id": "9f8889a369c0c81aacbb2309",
+   "date": "2026-09-14",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Duke Energy",
+   "amount": -127.9,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1789397301.0
+  },
+  {
+   "transaction_id": "e0a62d9b4f71c35e8a0db192",
+   "date": "2026-09-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "IRS USATAXPYMT 275228263132417",
+   "amount": -4800.0,
+   "category": "taxes",
+   "account_last_four": "1904",
+   "timestamp": 1789477271.0
+  },
+  {
+   "transaction_id": "91b3f5c80e2a6d47b9c13ea5",
+   "date": "2026-09-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "NCDOR EST TAX 9604677747",
+   "amount": -1150.0,
+   "category": "taxes",
+   "account_last_four": "1904",
+   "timestamp": 1789477527.0
+  },
+  {
+   "transaction_id": "6f0d20260915c01904000020",
+   "date": "2026-09-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1789488976.0
+  },
+  {
+   "transaction_id": "d6e2b8f4a1c07953e6d2b0a7",
+   "date": "2026-09-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Circle K",
+   "amount": -52.61,
+   "category": "gas",
+   "account_last_four": "1904",
+   "timestamp": 1789502981.0
+  },
+  {
+   "transaction_id": "e4f8c2a6d0b97e13f5c8a2d6",
+   "date": "2026-09-22",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Ingles Markets",
+   "amount": -138.56,
+   "category": "groceries",
+   "account_last_four": "1904",
+   "timestamp": 1790120035.0
+  },
+  {
+   "transaction_id": "73d1e9b4a6f08c25d3e7b1a9",
+   "date": "2026-09-28",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Biscuit Head",
+   "amount": -16.19,
+   "category": "dining",
+   "account_last_four": "1904",
+   "timestamp": 1790601146.0
+  },
+  {
+   "transaction_id": "3b8f4d0a6e2c97b5f1d8a4e0",
+   "date": "2026-09-29",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "PennyCup Coffee Co.",
+   "amount": -5.4,
+   "category": "dining",
+   "account_last_four": "1904",
+   "timestamp": 1790680556.0
+  },
+  {
+   "transaction_id": "1795f52b049459dd9f45dd01",
+   "date": "2026-09-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Peacock",
+   "amount": -10.99,
+   "category": "entertainment",
+   "account_last_four": "1904",
+   "timestamp": 1790760929.0
+  },
+  {
+   "transaction_id": "c9a37ceda1986624653ca5b2",
+   "date": "2026-09-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer to Mountain Credit Union ..1931",
+   "amount": -250.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1790762419.0
+  },
+  {
+   "transaction_id": "345a06e5e0369692a8c0a80a",
+   "date": "2026-09-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Interest Payment",
+   "amount": 3.82,
+   "category": "income",
+   "account_last_four": "1931",
+   "timestamp": 1790762431.0
+  },
+  {
+   "transaction_id": "c589f3bfc9cfa9c2b8f70c4d",
+   "date": "2026-09-30",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Transfer in from Checking (autosave)",
+   "amount": 250.0,
+   "category": "transfer",
+   "account_last_four": "1931",
+   "timestamp": 1790762449.0
+  },
+  {
+   "transaction_id": "819c1683795cbd8f00b262cc",
+   "date": "2026-10-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "MOUNTAIN CU MORTGAGE ••7740 PMT 100126",
+   "amount": -1524.05,
+   "category": "housing",
+   "account_last_four": "1904",
+   "timestamp": 1790852652.0
+  },
+  {
+   "transaction_id": "57bd2a1598e52e49813d8d91",
+   "date": "2026-10-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Mountain Credit Union - Principal portion of payment",
+   "amount": 426.62,
+   "category": "transfer",
+   "account_last_four": "7740",
+   "timestamp": 1790852655.0
+  },
+  {
+   "transaction_id": "7ed27224bbfce8bfcda2dea7",
+   "date": "2026-10-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Zelle to Hazel Marsh",
+   "amount": -250.0,
+   "category": "transfer",
+   "account_last_four": "1904",
+   "timestamp": 1790859856.0
+  },
+  {
+   "transaction_id": "6f0d20261001c01904000022",
+   "date": "2026-10-01",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1790877295.0
+  },
+  {
+   "transaction_id": "0d5a9c3f7e18b4d2a6c0f9e5",
+   "date": "2026-10-05",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Ingles Markets",
+   "amount": -121.71,
+   "category": "groceries",
+   "account_last_four": "1904",
+   "timestamp": 1791244691.0
+  },
+  {
+   "transaction_id": "b5df4fff90d5960d21a1b828",
+   "date": "2026-10-06",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "PAYVERIFY",
+   "amount": -1.0,
+   "category": "shopping",
+   "account_last_four": "1904",
+   "timestamp": 1791270867.0
+  },
+  {
+   "transaction_id": "3d7a0e5c9b14f82a6c0e3b97",
+   "date": "2026-10-11",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Carolina Knife Works",
+   "amount": -186.0,
+   "category": "shopping",
+   "account_last_four": "1904",
+   "timestamp": 1791761029.0
+  },
+  {
+   "transaction_id": "776227ef8e1706e85e0b8a7b",
+   "date": "2026-10-13",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Spectrum",
+   "amount": -79.99,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1791889819.0
+  },
+  {
+   "transaction_id": "93f7c1e5a0d4b86f3c9e1d27",
+   "date": "2026-10-13",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Ingles Gas Express",
+   "amount": -50.28,
+   "category": "gas",
+   "account_last_four": "1904",
+   "timestamp": 1791906425.0
+  },
+  {
+   "transaction_id": "7d8d76eb364bd39782cb7ab4",
+   "date": "2026-10-14",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Duke Energy",
+   "amount": -98.15,
+   "category": "utilities",
+   "account_last_four": "1904",
+   "timestamp": 1792002662.0
+  },
+  {
+   "transaction_id": "134482af22a45ffb5e0fb655",
+   "date": "2026-10-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Mountain Credit Union - Provisional Credit, PAYVERIFY dispute",
+   "amount": 1.0,
+   "category": "shopping",
+   "account_last_four": "1904",
+   "timestamp": 1792058441.0
+  },
+  {
+   "transaction_id": "6f0d20261015c01904000024",
+   "date": "2026-10-15",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "Marsh & Mill Bakehouse LLC - Owner Draw",
+   "amount": 3500.0,
+   "category": "income",
+   "account_last_four": "1904",
+   "timestamp": 1792097408.0
+  },
+  {
+   "transaction_id": "a3b7e5d1f9c0264e8b3a7d5f",
+   "date": "2026-10-19",
+   "user_id": "e5c2d60d14318442855a8afb",
+   "merchant": "French Broad Food Co-op",
+   "amount": -63.38,
+   "category": "groceries",
+   "account_last_four": "1904",
+   "timestamp": 1792445187.0
+  }
+ ]
+}

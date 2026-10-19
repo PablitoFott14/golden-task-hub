@@ -1,0 +1,1431 @@
+{
+ "users": [
+  {
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "name": "Kofi Mensah",
+   "email": "kofi@corktownaudio.com",
+   "member_since": null,
+   "linked_accounts_count": 3,
+   "status": "active",
+   "ssn": null,
+   "date_of_birth": null,
+   "mothers_maiden_name": null,
+   "phone": null
+  }
+ ],
+ "accounts": [
+  {
+   "account_id": "acct_804204ed1d403510c764",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "institution_name": "Motor City Credit Union",
+   "account_type": "checking",
+   "last_four": "8851",
+   "balance": 3920.0,
+   "status": "active",
+   "opening_balance": 3976.59
+  },
+  {
+   "account_id": "43ff7c0c14d71af18d2f60c7",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "institution_name": "Ally",
+   "account_type": "savings",
+   "last_four": "4410",
+   "balance": 9800.0,
+   "status": "active",
+   "opening_balance": 9072.02
+  },
+  {
+   "account_id": "f6fc14e477618d561917d640",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "institution_name": "Fidelity",
+   "account_type": "retirement",
+   "last_four": "7731",
+   "balance": 21300.0,
+   "status": "active",
+   "opening_balance": 21300.0
+  }
+ ],
+ "subscriptions": [],
+ "transactions": [
+  {
+   "transaction_id": "2453bcaebb5d2f71e66680e5",
+   "date": "2026-05-01",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1777636961.0
+  },
+  {
+   "transaction_id": "0d1a20260505000c88510000",
+   "date": "2026-05-05",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1777986072.0
+  },
+  {
+   "transaction_id": "0d1a20260520000c88510000",
+   "date": "2026-05-20",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1779282048.0
+  },
+  {
+   "transaction_id": "0d1a20260605000c88510000",
+   "date": "2026-06-05",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1780664523.0
+  },
+  {
+   "transaction_id": "0d1a20260620000c88510000",
+   "date": "2026-06-20",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1781960489.0
+  },
+  {
+   "transaction_id": "0d1a20260705000c88510000",
+   "date": "2026-07-05",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1783256436.0
+  },
+  {
+   "transaction_id": "0d1a20260720000c88510000",
+   "date": "2026-07-20",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1784552517.0
+  },
+  {
+   "transaction_id": "0d1a20260805000c88510000",
+   "date": "2026-08-05",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1785934941.0
+  },
+  {
+   "transaction_id": "0d1a20260820000c88510000",
+   "date": "2026-08-20",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1787230814.0
+  },
+  {
+   "transaction_id": "0d1a20260905000c88510000",
+   "date": "2026-09-05",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1788613304.0
+  },
+  {
+   "transaction_id": "0d1a20260920000c88510000",
+   "date": "2026-09-20",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1789909231.0
+  },
+  {
+   "transaction_id": "0d1a20261005000c88510000",
+   "date": "2026-10-05",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1791205268.0
+  },
+  {
+   "transaction_id": "0d1a20261020000c88510000",
+   "date": "2026-10-20",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Corktown Audio Works",
+   "amount": 1600.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1792501255.0
+  },
+  {
+   "transaction_id": "3f9c71e2a40b8d56c1e729fa",
+   "date": "2026-05-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -61.27,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1778098868.0
+  },
+  {
+   "transaction_id": "b82e05d49c3af16e7b20d4c9",
+   "date": "2026-05-08",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Buddy's Pizza",
+   "amount": -27.84,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1778277400.0
+  },
+  {
+   "transaction_id": "5d1ae9f32c84b07d6e5fa312",
+   "date": "2026-05-09",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Eastern Market",
+   "amount": -34.5,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1778348535.0
+  },
+  {
+   "transaction_id": "e64b3a90d7c152f80b9e4a6d",
+   "date": "2026-05-12",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Narrow Way Cafe",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1778589412.0
+  },
+  {
+   "transaction_id": "0c7f8b25e1d964a3f2c09e17",
+   "date": "2026-05-13",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Speedway",
+   "amount": -47.62,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1778688870.0
+  },
+  {
+   "transaction_id": "9a3dc6f10e58b4a27d913cf6",
+   "date": "2026-05-15",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1778846561.0
+  },
+  {
+   "transaction_id": "57c4a0f8d96e1b32f7e90d4a",
+   "date": "2026-06-01",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1780315315.0
+  },
+  {
+   "transaction_id": "4c3ef9b107a6d8e2c5f0913b",
+   "date": "2026-06-15",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1781524997.0
+  },
+  {
+   "transaction_id": "c4f6a39e7d02b81cf5a40e69",
+   "date": "2026-07-01",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1782907329.0
+  },
+  {
+   "transaction_id": "b70f2d9c58e3a1b6c9f4e025",
+   "date": "2026-07-15",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1784116908.0
+  },
+  {
+   "transaction_id": "e1f70c3a96d4b25e8a1bc6e0",
+   "date": "2026-08-01",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1785607860.0
+  },
+  {
+   "transaction_id": "b3e6c19a7f05d4b8e26c9a17",
+   "date": "2026-08-15",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1786795353.0
+  },
+  {
+   "transaction_id": "31b8c7e50a6df29be3c48a01",
+   "date": "2026-09-01",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1788264086.0
+  },
+  {
+   "transaction_id": "1a8ef3c6b05d9e247c1fa6b9",
+   "date": "2026-09-15",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1789473778.0
+  },
+  {
+   "transaction_id": "0a72d9c5e3b841f6b0d27e9c",
+   "date": "2026-10-01",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1790856099.0
+  },
+  {
+   "transaction_id": "19e4b7c2f0a8d53e6b1ce7f0",
+   "date": "2026-10-15",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Zelle to Efua Mensah",
+   "amount": -1250.0,
+   "category": "housing",
+   "account_last_four": "8851",
+   "timestamp": 1792065742.0
+  },
+  {
+   "transaction_id": "72e14bd8a95c03f7e6b218d4",
+   "date": "2026-05-17",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Kroger",
+   "amount": -52.18,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1779031907.0
+  },
+  {
+   "transaction_id": "4d8f2a6c1e9b07355b3e9a1d",
+   "date": "2026-05-17",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Bandcamp",
+   "amount": -10.0,
+   "category": "entertainment",
+   "account_last_four": "8851",
+   "timestamp": 1779066960.0
+  },
+  {
+   "transaction_id": "d4b6290ef37ac81d5a0f6e93",
+   "date": "2026-05-19",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Good Cakes and Bakes",
+   "amount": -8.75,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1779194469.0
+  },
+  {
+   "transaction_id": "18f5a7c36d02e9b4c37e0a58",
+   "date": "2026-05-21",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -66.91,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1779395606.0
+  },
+  {
+   "transaction_id": "c9e05f6b21a8d74c0e3bf592",
+   "date": "2026-05-23",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Kuzzo's Chicken & Waffles",
+   "amount": -38.62,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1779554643.0
+  },
+  {
+   "transaction_id": "6b27d0e984f13ac5b9d27e40",
+   "date": "2026-05-26",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Detroit Sip",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1779798578.0
+  },
+  {
+   "transaction_id": "a05e9c13f7b64d28e01ac6b3",
+   "date": "2026-05-27",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Marathon",
+   "amount": -52.36,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1779916314.0
+  },
+  {
+   "transaction_id": "4e8d17b0c2f9a653d84e1b7c",
+   "date": "2026-05-28",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Narrow Way Cafe",
+   "amount": -5.5,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1779971600.0
+  },
+  {
+   "transaction_id": "a7b152d8e0c63f94b16ad07e",
+   "date": "2026-06-17",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Narrow Way Cafe",
+   "amount": -5.5,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1781699171.0
+  },
+  {
+   "transaction_id": "f1c36e7a0b49d2e58f16a9c0",
+   "date": "2026-05-29",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -57.04,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1780085865.0
+  },
+  {
+   "transaction_id": "2a96f4d1e83c7b05c9a24fe8",
+   "date": "2026-05-30",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Eastern Market",
+   "amount": -29.8,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1780161672.0
+  },
+  {
+   "transaction_id": "8d0bc5e23f71a9d604b8e2c5",
+   "date": "2026-05-31",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Detroit Vegan Soul",
+   "amount": -36.4,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1780247791.0
+  },
+  {
+   "transaction_id": "e3a7921d6c0fb58ea4d137b9",
+   "date": "2026-06-03",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Fresh Edge Barbershop",
+   "amount": -35.0,
+   "category": "personal_care",
+   "account_last_four": "8851",
+   "timestamp": 1780506262.0
+  },
+  {
+   "transaction_id": "9e05b3f8d16c7a240c9fe8d3",
+   "date": "2026-07-29",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Fresh Edge Barbershop",
+   "amount": -35.0,
+   "category": "personal_care",
+   "account_last_four": "8851",
+   "timestamp": 1785344775.0
+  },
+  {
+   "transaction_id": "27f6c0b4e9d18a53b6e20c7f",
+   "date": "2026-09-23",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Fresh Edge Barbershop",
+   "amount": -35.0,
+   "category": "personal_care",
+   "account_last_four": "8851",
+   "timestamp": 1790183108.0
+  },
+  {
+   "transaction_id": "0f6ed3b5a1c84729e05bc8f2",
+   "date": "2026-06-04",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -63.58,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1780604390.0
+  },
+  {
+   "transaction_id": "b5d96a2e0f84c3b1d7e652a0",
+   "date": "2026-06-05",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Buddy's Pizza",
+   "amount": -29.16,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1780697073.0
+  },
+  {
+   "transaction_id": "63f0b8c72e4d9a1506fce7b3",
+   "date": "2026-06-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Eastern Market",
+   "amount": -31.25,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1780766937.0
+  },
+  {
+   "transaction_id": "ca18e7d45b09f62a3c8ed1f5",
+   "date": "2026-06-09",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Good Cakes and Bakes",
+   "amount": -7.95,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1781008754.0
+  },
+  {
+   "transaction_id": "a2e5c9f06b3d18a7f4c6e0d2",
+   "date": "2026-10-21",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Good Cakes and Bakes",
+   "amount": -7.95,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1792586413.0
+  },
+  {
+   "transaction_id": "1e4b90a6d5f3c28e7a0db649",
+   "date": "2026-06-10",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "BP",
+   "amount": -49.87,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1781108466.0
+  },
+  {
+   "transaction_id": "9f72c1e84a3b06d5e9c42b8f",
+   "date": "2026-06-12",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Slows Bar BQ",
+   "amount": -31.4,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1781285688.0
+  },
+  {
+   "transaction_id": "d6a03e5cb927f14d8c06a3e1",
+   "date": "2026-06-14",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Kroger",
+   "amount": -48.66,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1781464167.0
+  },
+  {
+   "transaction_id": "3d05e8a2c74f1b960de3f8a7",
+   "date": "2026-06-18",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -71.12,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1781816679.0
+  },
+  {
+   "transaction_id": "e8c21f6d93b0a54e7f2c0b96",
+   "date": "2026-06-26",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Astro Coffee",
+   "amount": -9.25,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1782477475.0
+  },
+  {
+   "transaction_id": "0b9a74c3e2f8d61ba35dc4e0",
+   "date": "2026-06-25",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Speedway",
+   "amount": -51.43,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1782422342.0
+  },
+  {
+   "transaction_id": "76de0a4fb8c1e2975c3a1f08",
+   "date": "2026-06-27",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Kuzzo's Chicken & Waffles",
+   "amount": -39.7,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1782578778.0
+  },
+  {
+   "transaction_id": "f05c8e31d6a92b74e18f6ac3",
+   "date": "2026-06-28",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -54.29,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1782672096.0
+  },
+  {
+   "transaction_id": "29b7d5e01c8af3469e0bd72c",
+   "date": "2026-06-30",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Detroit Sip",
+   "amount": -6.1,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1782822704.0
+  },
+  {
+   "transaction_id": "2e93a6f1c0d84b579e2ad61c",
+   "date": "2026-08-19",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Detroit Sip",
+   "amount": -6.1,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1787142972.0
+  },
+  {
+   "transaction_id": "8a1e3c7bf064d9e52b8ca71f",
+   "date": "2026-07-02",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -76.48,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1783024930.0
+  },
+  {
+   "transaction_id": "c2e7a90d4b6f135e8a2c7d04",
+   "date": "2026-07-03",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Marathon",
+   "amount": -41.27,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1783106820.0
+  },
+  {
+   "transaction_id": "6f0b3e8d2a5c947b1f6e0a39",
+   "date": "2026-07-03",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Sleeping Bear Dunes National Lakeshore",
+   "amount": -25.0,
+   "category": "travel",
+   "account_last_four": "8851",
+   "timestamp": 1783088640.0
+  },
+  {
+   "transaction_id": "a8d51c7f0e3b26a9d4c8f572",
+   "date": "2026-07-03",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "D.H. Day Campground",
+   "amount": -112.0,
+   "category": "travel",
+   "account_last_four": "8851",
+   "timestamp": 1783093620.0
+  },
+  {
+   "transaction_id": "1e9a4f6c8d2b053e7a1f9c48",
+   "date": "2026-07-03",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Anderson's Market",
+   "amount": -38.64,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1783121520.0
+  },
+  {
+   "transaction_id": "d7b30e5a9f1c48d2b6e3a0f7",
+   "date": "2026-07-04",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Cherry Republic",
+   "amount": -27.85,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1783195080.0
+  },
+  {
+   "transaction_id": "4c6e8b2d0a7f39c5e1b4d8a6",
+   "date": "2026-07-05",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Western Avenue Grill",
+   "amount": -68.91,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1783298580.0
+  },
+  {
+   "transaction_id": "b9f2d6a4e8c017b3f5a9e2d0",
+   "date": "2026-07-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "BP",
+   "amount": -46.92,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1783352640.0
+  },
+  {
+   "transaction_id": "5f38b0d6e9a174c2d03e8b5a",
+   "date": "2026-07-08",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Narrow Way Cafe",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1783514067.0
+  },
+  {
+   "transaction_id": "ad4e6b28f0c91e735d6ab8f2",
+   "date": "2026-08-04",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Narrow Way Cafe",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1785846725.0
+  },
+  {
+   "transaction_id": "b9a74e1c30f6d85ba2e9c71d",
+   "date": "2026-09-09",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Narrow Way Cafe",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1788957319.0
+  },
+  {
+   "transaction_id": "b4c17e9a05d3e6f2a8b93c7d",
+   "date": "2026-10-28",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Narrow Way Cafe",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1793190687.0
+  },
+  {
+   "transaction_id": "d29c6f0e3ab8c517e4d09f62",
+   "date": "2026-07-10",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Buddy's Pizza",
+   "amount": -26.93,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1783721391.0
+  },
+  {
+   "transaction_id": "14e0a8b3c6d95f270a1eb3c8",
+   "date": "2026-07-11",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Eastern Market",
+   "amount": -37.2,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1783791364.0
+  },
+  {
+   "transaction_id": "6ec59b140f7ad38eb2c641d9",
+   "date": "2026-07-16",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -62.35,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1784236482.0
+  },
+  {
+   "transaction_id": "a3d8e51f7c092be6d4a7c0f1",
+   "date": "2026-07-19",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Baobab Fare",
+   "amount": -47.85,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1784497579.0
+  },
+  {
+   "transaction_id": "0e27c4a9b6f38d15e70c5a2b",
+   "date": "2026-07-21",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Detroit Sip",
+   "amount": -6.4,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1784637333.0
+  },
+  {
+   "transaction_id": "f8b41d63a0e7c92f36d8b1e4",
+   "date": "2026-07-23",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Westborn Market",
+   "amount": -49.85,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1784839498.0
+  },
+  {
+   "transaction_id": "a3e7c5b90d2f816a0c4d7e2b",
+   "date": "2026-07-24",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Third Man Records",
+   "amount": -26.49,
+   "category": "entertainment",
+   "account_last_four": "8851",
+   "timestamp": 1784930460.0
+  },
+  {
+   "transaction_id": "3b6af02de8c51497a6e3d0f8",
+   "date": "2026-07-26",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -58.12,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1785089947.0
+  },
+  {
+   "transaction_id": "c71d85e62f0ba4c9e13d7b52",
+   "date": "2026-07-28",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Good Cakes and Bakes",
+   "amount": -8.25,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1785242446.0
+  },
+  {
+   "transaction_id": "52a9e7c04b1fd8e6a2c3f594",
+   "date": "2026-07-30",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Marathon",
+   "amount": -49.31,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1785427778.0
+  },
+  {
+   "transaction_id": "07d3b9e1c48f6a0df2b7e593",
+   "date": "2026-08-02",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -64.73,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1785693082.0
+  },
+  {
+   "transaction_id": "48c0f5a3e2b97d16c0e8a43f",
+   "date": "2026-08-07",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Buddy's Pizza",
+   "amount": -31.06,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1786140104.0
+  },
+  {
+   "transaction_id": "0f9b4d6e2a8c537d8e1a6f40",
+   "date": "2026-08-07",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Bandcamp",
+   "amount": -9.0,
+   "category": "entertainment",
+   "account_last_four": "8851",
+   "timestamp": 1786114140.0
+  },
+  {
+   "transaction_id": "f6e92a07b5d1c83e4f9a0d6b",
+   "date": "2026-08-08",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Eastern Market",
+   "amount": -42.6,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1786207950.0
+  },
+  {
+   "transaction_id": "1c5bd8f406e2a97cb3d5e1a0",
+   "date": "2026-08-11",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Speedway",
+   "amount": -50.92,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1786483876.0
+  },
+  {
+   "transaction_id": "8f2d40b7e9a65c13d7f02e8c",
+   "date": "2026-08-13",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -59.38,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1786653409.0
+  },
+  {
+   "transaction_id": "60a4e8d23c9fb17e05a6c4d3",
+   "date": "2026-08-16",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Kuzzo's Chicken & Waffles",
+   "amount": -36.95,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1786894943.0
+  },
+  {
+   "transaction_id": "d7c85e3ba2f08964e1b5f0a9",
+   "date": "2026-08-18",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -68.44,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1787088097.0
+  },
+  {
+   "transaction_id": "95b10d7ef3a4c62b8d09e5f7",
+   "date": "2026-08-23",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Kroger",
+   "amount": -47.19,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1787511718.0
+  },
+  {
+   "transaction_id": "c0e4b6a91d35f78ea5c203b6",
+   "date": "2026-08-25",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Good Cakes and Bakes",
+   "amount": -7.8,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1787661581.0
+  },
+  {
+   "transaction_id": "7f2c0a9e4d61b8e35c07a92d",
+   "date": "2026-08-26",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -81.47,
+   "category": "shopping",
+   "account_last_four": "8851",
+   "timestamp": 1787790660.0
+  },
+  {
+   "transaction_id": "7a6f3c08e5b2d91a4f7cb0e5",
+   "date": "2026-08-27",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "BP",
+   "amount": -53.66,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1787847385.0
+  },
+  {
+   "transaction_id": "e5d09f24b7c3a18e6d502c9f",
+   "date": "2026-08-28",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Buddy's Pizza",
+   "amount": -28.47,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1787955249.0
+  },
+  {
+   "transaction_id": "fa9261d3c8e05b7f2a4ed6c8",
+   "date": "2026-09-03",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -61.92,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1788467463.0
+  },
+  {
+   "transaction_id": "0d4ce2b89f61a73dc50e1f94",
+   "date": "2026-09-05",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Eastern Market",
+   "amount": -33.75,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1788629207.0
+  },
+  {
+   "transaction_id": "86e3a5f0d2c91b48e7a63d0c",
+   "date": "2026-09-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Speedway",
+   "amount": -48.2,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1788727288.0
+  },
+  {
+   "transaction_id": "4f01d6b9e7c2a35e9b8f06a4",
+   "date": "2026-09-11",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Buddy's Pizza",
+   "amount": -30.12,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1789164412.0
+  },
+  {
+   "transaction_id": "e0b58c4a2d97f6e1c3a85b2d",
+   "date": "2026-09-13",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -57.66,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1789323094.0
+  },
+  {
+   "transaction_id": "7f2c9e4a1b86d35f2c7e9a4b",
+   "date": "2026-09-14",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Vintage Parts Depot",
+   "amount": -46.8,
+   "category": "shopping",
+   "account_last_four": "8851",
+   "timestamp": 1789403580.0
+  },
+  {
+   "transaction_id": "c2d607f9a4e8b31c5e60d9f3",
+   "date": "2026-09-16",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Detroit Sip",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1789561857.0
+  },
+  {
+   "transaction_id": "c8a05f3ed2b97c16a0e54b9d",
+   "date": "2026-10-14",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Detroit Sip",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1791981716.0
+  },
+  {
+   "transaction_id": "5e0ab2d7c69f4e13a8b6f02c",
+   "date": "2026-09-17",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Motor City Brewing Works",
+   "amount": -27.6,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1789693722.0
+  },
+  {
+   "transaction_id": "9b4fe6a1d830c25b0f7ea4d6",
+   "date": "2026-09-19",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Trader Joe's",
+   "amount": -44.83,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1789842736.0
+  },
+  {
+   "transaction_id": "d81c3a9e5f26b07ae4c16d38",
+   "date": "2026-09-22",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Good Cakes and Bakes",
+   "amount": -8.4,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1790080889.0
+  },
+  {
+   "transaction_id": "a6c39d5e1b70f48dc2a9e3b1",
+   "date": "2026-09-24",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Marathon",
+   "amount": -55.18,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1790266785.0
+  },
+  {
+   "transaction_id": "3e1d74a8c6f20b95d8c7a26e",
+   "date": "2026-09-25",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -63.07,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1790367871.0
+  },
+  {
+   "transaction_id": "f49ab1e608c3d72f6a5ec9b0",
+   "date": "2026-09-27",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Detroit Vegan Soul",
+   "amount": -35.9,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1790528534.0
+  },
+  {
+   "transaction_id": "e6c2a8f04b9d31712f7b5c9a",
+   "date": "2026-09-27",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Lifetouch",
+   "amount": -32.0,
+   "category": "family",
+   "account_last_four": "8851",
+   "timestamp": 1790556600.0
+  },
+  {
+   "transaction_id": "8c5e2f0ab7d4e96c13a8f5d1",
+   "date": "2026-10-02",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Buddy's Pizza",
+   "amount": -29.48,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1790978557.0
+  },
+  {
+   "transaction_id": "b16de4f97a2c0d83c5b79e4a",
+   "date": "2026-10-03",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Eastern Market",
+   "amount": -36.15,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1791048710.0
+  },
+  {
+   "transaction_id": "5e2b8d4f1a7c9036e5b2d8f4",
+   "date": "2026-10-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Adafruit",
+   "amount": -42.41,
+   "category": "shopping",
+   "account_last_four": "8851",
+   "timestamp": 1791332200.0
+  },
+  {
+   "transaction_id": "6d3a0c8fe15ba9d74e2cb8f6",
+   "date": "2026-10-07",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Narrow Way Cafe",
+   "amount": -6.0,
+   "category": "coffee",
+   "account_last_four": "8851",
+   "timestamp": 1791376448.0
+  },
+  {
+   "transaction_id": "e7f2a5b03d9c6e18f0a4c27b",
+   "date": "2026-10-09",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -66.27,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1791577275.0
+  },
+  {
+   "transaction_id": "43c9e1d7b6a50f2e9c3bd84a",
+   "date": "2026-10-11",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Speedway",
+   "amount": -51.74,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1791746503.0
+  },
+  {
+   "transaction_id": "d5b28e6f4c07a1d9e3f80c5a",
+   "date": "2026-10-17",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Kroger",
+   "amount": -49.92,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1792261269.0
+  },
+  {
+   "transaction_id": "7f8c1a4de9b6c30e52d7b6a1",
+   "date": "2026-10-18",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Kuzzo's Chicken & Waffles",
+   "amount": -42.3,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1792338387.0
+  },
+  {
+   "transaction_id": "0c69e3a2d7f5b84c1e9da5b7",
+   "date": "2026-10-22",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -58.81,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1792701098.0
+  },
+  {
+   "transaction_id": "e9d746b1a2c8f05eb3a61c4f",
+   "date": "2026-10-23",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Buddy's Pizza",
+   "amount": -27.36,
+   "category": "dining",
+   "account_last_four": "8851",
+   "timestamp": 1792793464.0
+  },
+  {
+   "transaction_id": "5a3fd0e8c1b69e724d5ca0f8",
+   "date": "2026-10-24",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "BP",
+   "amount": -50.44,
+   "category": "gas",
+   "account_last_four": "8851",
+   "timestamp": 1792862212.0
+  },
+  {
+   "transaction_id": "38e6f2a9d4c0b17d6e3f9a52",
+   "date": "2026-10-28",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Meijer",
+   "amount": -64.19,
+   "category": "groceries",
+   "account_last_four": "8851",
+   "timestamp": 1793227960.0
+  },
+  {
+   "transaction_id": "3eeb9d9f96f4858ad90f447c",
+   "date": "2026-05-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer to Ally savings",
+   "amount": -100.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1778062360.0
+  },
+  {
+   "transaction_id": "c1e399cbf8949b0a1aea3a8e",
+   "date": "2026-05-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Motor City Credit Union",
+   "amount": 100.0,
+   "category": "transfer",
+   "account_last_four": "4410",
+   "timestamp": 1778062361.0
+  },
+  {
+   "transaction_id": "747aa5aea38d29f6a9a2983e",
+   "date": "2026-06-08",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer to Ally savings",
+   "amount": -100.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1780913560.0
+  },
+  {
+   "transaction_id": "8459da4e30549c89ac8728fb",
+   "date": "2026-06-08",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Motor City Credit Union",
+   "amount": 100.0,
+   "category": "transfer",
+   "account_last_four": "4410",
+   "timestamp": 1780913561.0
+  },
+  {
+   "transaction_id": "e2434da3c8799b206e1036df",
+   "date": "2026-07-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer to Ally savings",
+   "amount": -100.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1783332760.0
+  },
+  {
+   "transaction_id": "c7eed167da5df0e28db0b4c4",
+   "date": "2026-07-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Motor City Credit Union",
+   "amount": 100.0,
+   "category": "transfer",
+   "account_last_four": "4410",
+   "timestamp": 1783332761.0
+  },
+  {
+   "transaction_id": "1a245f36dc06367d823939a1",
+   "date": "2026-08-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer to Ally savings",
+   "amount": -100.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1786011160.0
+  },
+  {
+   "transaction_id": "552afd23565020337cbf24dc",
+   "date": "2026-08-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Motor City Credit Union",
+   "amount": 100.0,
+   "category": "transfer",
+   "account_last_four": "4410",
+   "timestamp": 1786011161.0
+  },
+  {
+   "transaction_id": "7b6e07783fa035359edf488c",
+   "date": "2026-09-08",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer to Ally savings",
+   "amount": -100.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1788862360.0
+  },
+  {
+   "transaction_id": "fd289b55b8f216b0cc27a53a",
+   "date": "2026-09-08",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Motor City Credit Union",
+   "amount": 100.0,
+   "category": "transfer",
+   "account_last_four": "4410",
+   "timestamp": 1788862361.0
+  },
+  {
+   "transaction_id": "f591b7a2ba1d71f4c397984e",
+   "date": "2026-10-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer to Ally savings",
+   "amount": -100.0,
+   "category": "transfer",
+   "account_last_four": "8851",
+   "timestamp": 1791281560.0
+  },
+  {
+   "transaction_id": "11a9a47647f546a63ba5b032",
+   "date": "2026-10-06",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Transfer from Motor City Credit Union",
+   "amount": 100.0,
+   "category": "transfer",
+   "account_last_four": "4410",
+   "timestamp": 1791281561.0
+  },
+  {
+   "transaction_id": "9e39fd98adec273748a90cc8",
+   "date": "2026-05-31",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Ally Bank interest",
+   "amount": 25.25,
+   "category": "income",
+   "account_last_four": "4410",
+   "timestamp": 1780211235.0
+  },
+  {
+   "transaction_id": "da0133594c85c5678519efe1",
+   "date": "2026-06-30",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Ally Bank interest",
+   "amount": 24.75,
+   "category": "income",
+   "account_last_four": "4410",
+   "timestamp": 1782803235.0
+  },
+  {
+   "transaction_id": "846fb678f6e549fea444f185",
+   "date": "2026-07-31",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Ally Bank interest",
+   "amount": 25.94,
+   "category": "income",
+   "account_last_four": "4410",
+   "timestamp": 1785481635.0
+  },
+  {
+   "transaction_id": "ad93da15c3abca298f7c4ab1",
+   "date": "2026-08-31",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Ally Bank interest",
+   "amount": 26.29,
+   "category": "income",
+   "account_last_four": "4410",
+   "timestamp": 1788160035.0
+  },
+  {
+   "transaction_id": "48d4db768760920ffb7f0bd0",
+   "date": "2026-09-30",
+   "user_id": "a8e6222ceb154b73ff74599a",
+   "merchant": "Ally Bank interest",
+   "amount": 25.75,
+   "category": "income",
+   "account_last_four": "4410",
+   "timestamp": 1790752035.0
+  }
+ ]
+}

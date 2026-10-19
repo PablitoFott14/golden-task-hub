@@ -5,14 +5,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 A static React site, the practical reference for contributors (CBs) on the Green Shell / OpenClaw MM
-Rubrics single turn project. **Six tabs**, and the detail of why is in
-[Six tabs, and where everything lives](#six-tabs-and-where-everything-lives). One of them,
+Rubrics single turn project. **Seven tabs**, and the detail of why is in
+[Seven tabs, and where everything lives](#seven-tabs-and-where-everything-lives). One of them,
 Complexity, is [parked](#the-complexity-tab-is-parked): off the site for now, kept in the source,
-so five show.
+so six show.
 
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
 | The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the Universe Viewers, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
+| Universes | `/universes` | [Universes.tsx](src/pages/Universes.tsx) | The three persona universes, run inside the hub: a grid of persona cards, then one persona's own viewer at a time under a bar of persona tabs (`/universes/:slug`), and the viewer alone at `/universes/:slug/full`. See [The Universes tab](#the-universes-tab). |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
 | Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make Model A (Opus 5) fail for real: where the cases come from, then seven failure types as cards, 28 patterns, and the 89 real cases from graded Opus runs behind them, each with why it failed, a filter by what the task has, and a "Model A passed?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
@@ -75,7 +76,7 @@ cat > src/ssr-smoke.tsx <<'EOF'
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import App from "./App";
-const routes = ["/", "/golden-tasks", "/golden-tasks/charge-disputes", "/failure-approach", "/complexity", "/spec", "/reference", "/nope"];
+const routes = ["/", "/universes", "/universes/kofi-mensah", "/golden-tasks", "/golden-tasks/charge-disputes", "/failure-approach", "/complexity", "/spec", "/reference", "/nope"];
 let fail = 0;
 for (const r of routes) {
   try { console.log(`OK   ${r} ${renderToString(<StaticRouter location={r}><App /></StaticRouter>).length}`); }
@@ -112,14 +113,15 @@ checklist persistence and every cross-link were verified that way.
 
 ## Architecture
 
-### Six tabs, and where everything lives
+### Seven tabs, and where everything lives
 
-The hub was eight tabs and it had stopped being navigable. It is now six, one per thing someone is
-actually doing, and one of those is parked, so five show.
+The hub was eight tabs and it had stopped being navigable. It went to six, one per thing someone is
+actually doing, and one of those is parked; Universes made it seven, so six show.
 
 | Tab | Route | Panes inside it | Was |
 | --- | --- | --- | --- |
 | The Method | `/` | one scrolling page: hero with the Universe Viewers card, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
+| Universes | `/universes`, `/universes/:slug`, `/universes/:slug/full` | the persona grid, then one persona's viewer at a time under the persona bar | new, in place of the external Universe Viewers site |
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
 | Failure Approach | `/failure-approach` | **three levels**, all off the hash: the overview (seven type cards and the diagnosis tile, the task filter), a type (`#looking` … `#finishing`), a pattern (`#<pattern-id>`), and `#keeps-passing` | new, in the slot Complexity held; rebuilt from a thirteen pane rail |
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
@@ -163,7 +165,10 @@ rail, and Must Read keeps its change rail and the taxonomy accordion.
 `links` in [Layout.tsx](src/components/Layout.tsx) is the record of that reasoning, and the
 Failure Approach's is there: it is worked from rather than looked up in, so it is not Reference;
 it is seven failure types, twenty eight patterns and the real runs behind them, so it would swallow
-a method step whole; and it is not the standard. A seventh tab makes the same case or goes in a pane.
+a method step whole; and it is not the standard. Universes made the same case and is the seventh:
+three complete applications a contributor works in from the method's second step on, so not a
+Reference pane, not a method step and not the standard. An eighth tab makes the same case or goes in
+a pane.
 
 ### They are onboardings, not courses
 
@@ -199,6 +204,7 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | `task 1/golden_solution.md` | `goldenRun`, one `Steer` per user message after the first |
 | `task 1/OT/trajectory1.json` and `OT/disputes (4).html` | `run`, and `public/tasks/charge-disputes/ot/` |
 | `Evals/Universes/*.zip` on Drive (generated, see below) | [src/data/universes.ts](src/data/universes.ts) + `complexity-api/universes.ts` |
+| The persona viewer pages on <https://universe-viewers.vercel.app/>, and the export ZIPs taken from them (generated, see below) | `public/universes/<slug>/` and [src/data/universeCatalog.ts](src/data/universeCatalog.ts), by [scripts/universes.py](scripts/universes.py). See [The Universes tab](#the-universes-tab) |
 | `single_turn_quick_hits - Tasks.csv`, the claim sheet | [src/data/claimSheet.ts](src/data/claimSheet.ts) |
 
 `[External] OpenClaw MM Rubrics MULTI TURN – Guidelines .md` sits beside this file on Drive
@@ -776,6 +782,115 @@ it survives being rendered anywhere.
 
 `useCaseCount()` and `subcategoryCount()` are read off the data. Never hardcode either.
 
+### The Universes tab
+
+[Universes.tsx](src/pages/Universes.tsx) is the tab and [src/lib/universeHost.ts](src/lib/universeHost.ts)
+runs what it shows. **It replaced the external Universe Viewers site
+(<https://universe-viewers.vercel.app/>) on Oct 19, 2026**, and keeps that site's shape: a grid of
+persona cards, a bar of persona tabs, a stage holding one persona's viewer, and "Open full page".
+Going back to the grid keeps the loaded viewer, so returning to it is instant; another persona
+replaces it. The routes are `/universes`, `/universes/:slug` and `/universes/:slug/full`, all one
+`/universes/*` route so the page stays mounted between them.
+
+**The viewer is the persona's own program, not a rebuild of it.** Each universe on that site was one
+generated page of 29 to 50 MB: a vanilla script of about 6,000 lines with the persona's whole seed
+inline, plus a folder of Files previews. Ray's runs a newer engine than the other two (`#pane=` deep
+links and a set of fixes), so a React port would have been three rewrites, each a source of
+regressions, and every engine update another. Instead the page is taken apart and the same script
+runs here:
+
+| Stored under `public/universes/<slug>/` | What it is |
+| --- | --- |
+| `viewer/engine.js` | the page's script, its data lines (`SEED["x"] = {...}`, `const DATA_NAV = [...]`) replaced by reads of `__UV` |
+| `viewer/style.css`, `viewer/body.html` | the stylesheet and the body markup, verbatim |
+| `viewer/data.json` | the derived constants (nav counts, overview figures, persona header, `VA_RENDERED`) and the app skins |
+| `viewer/page.json` | the page skeleton, the engine's top-level function names, and the SHA-256 of the original page |
+| `seed/<service>.json` | the seed in the export ZIP's own format, blobs as `{"_extracted_to": "files/..."}` |
+| `docs/<doc>.md` | memory, tensions, storylines, npcs |
+| `files/...` | every blob and every Files preview |
+
+**Lossless is checked, not asserted.** The parts reassemble into the original page byte for byte,
+and `python scripts/universes.py verify` proves it against the SHA-256 recorded at import. An export
+ZIP alone cannot rebuild a viewer: it has no engine, and the nav counts and the persona header come
+from the generator rather than the data (messaging counts its messages, one Facebook count includes
+the listing photos). So **a viewer page is the authority, and an export is a cross-check and a source
+of bytes.** The three ZIPs the tab was built from were themselves taken from the site, and matched
+it exactly, except that 33 Files previews the site serves were missing from them; those came from
+the site, each checked against the seed's SHA-256.
+
+**How the engine runs here.** `mountUniverse` puts the stylesheet and the markup in a shadow root, so
+neither page's CSS reaches the other, and calls the engine through `new Function` with five names of
+its own:
+
+- `document`: lookups, `body` and `activeElement` resolve in the shadow root. A document level key
+  listener hears a key only when focus is in the universe or nowhere, which is what an iframe gave it,
+  and sees the real target rather than the shadow host.
+- `window`: the engine's top-level functions are globals in the original page, and its inline
+  `onclick` handlers call them by name, so they go on `window` while it is mounted and come off when
+  it is not. The one inline handler that calls `document.getElementById` is covered by a fallback
+  into the shadow root.
+- `location` and `history`: Ray's engine keeps `#pane=…&tab=…` in the hash. The router owns the hash,
+  so the pane lives in the route's query (`/universes/ray-castillo?pane=email`), written with
+  `history.replaceState` so nothing re-renders, and a reload lands on the same pane.
+- `URL`: object URLs are tracked and revoked when the universe is taken down.
+
+The stylesheet's `:root` becomes `:host`, `html` and `body` become one wrapper, and `vh` and `vw`
+become container units on the stage, in the stylesheet, the engine's inline styles and the skins
+alike; the stage also contains fixed position overlays. So the viewer lays out against the stage
+exactly as it did against its own window. The wrapper carries the page's `lang`, which `all: initial`
+on the host would otherwise drop, and the locale moves glyph fallback by a pixel. `'JetBrains Mono'`
+is aliased to a face that only resolves to an installed copy, because the hub loads that webfont and
+the original page, whose CSP blocks webfonts, never had it. **A fix for a new engine belongs in
+`universeHost.ts`, never in a stored engine.**
+
+Stored blobs are fetched and turned back into the base64 or text the engine expects, by the rule
+`verify` checked against the page: a ref under `content` of a record not marked `encoding: "base64"`
+is text, anything else base64. A Files preview keeps its record's path under `files/filesystem/`, and
+its `viewer_uri` is rebased there at load. URL paths leave commas and ampersands literal, because
+Vite's server decodes with `decodeURI` and misses a `%2C`, and a blob that comes back as an HTML page
+fails loudly rather than being read as data.
+
+⌘K belongs to the open universe, as it did on its own page: the viewer's handler calls
+`preventDefault`, and the palette handler in Layout stands down on a `defaultPrevented` event.
+
+**Keeping them current is the `/openclaw-universe-sync` skill**, in `~/.claude/skills/`, which runs
+[scripts/universes.py](scripts/universes.py):
+
+```bash
+python scripts/universes.py status                # what the hub carries
+python scripts/universes.py check <source>...     # what would change: exit 0 in sync, 1 changes, 2 problems
+python scripts/universes.py apply <source>...     # write it, regenerate the catalog and the ledger, verify
+python scripts/universes.py verify                # every universe reassembles and is complete
+bash scripts/universes_validate.sh                # verify, build in a mirror, SSR every route, parity crawl
+```
+
+A source is the viewer site (`https://universe-viewers.vercel.app/`, every persona on it), one viewer
+page (a URL or a saved `.html`), or an export (a ZIP or folder with `SUMMARY.json`), in any mix and
+several personas to a ZIP. Personas with no source given are still checked against the live site. It
+writes only the files that changed, removes only what a newer complete source no longer references,
+and refuses rather than guesses: a version the ledger already replaced, a source older than the one
+in place, an export that differs from every viewer page and is newer than them (`--data-only`
+applies it over the current build and keeps that build's counts), a missing file, a persona the hub
+does not carry (`--add`). [scripts/universes.lock.json](scripts/universes.lock.json) is the ledger:
+per universe the fingerprint, the page checksum, the source and its date, and the versions it
+replaced. [src/data/universeCatalog.ts](src/data/universeCatalog.ts) is generated: the grid's labels,
+which are the viewer site's own, and what is read off the data, `loadBytes` being what opening a
+universe downloads.
+
+**The parity crawl is the regression test.** [scripts/universes_parity.mjs](scripts/universes_parity.mjs)
+opens each original page (written by `emit-reference`, byte-identical to the imported one, served
+over HTTP) in a window the size of the hub's stage, and the hub's tab beside it. It drives both
+through every nav entry, the tabs inside each pane, a record opened in each pane, three searches, ⌘K,
+`/`, `?`, `g 3` and `g o`, and after every step compares the text, the overlays, the active entry, the
+scroll and every element's box in the open panel. Lazy images are loaded eagerly in both, because a
+pane of previews has one layout only once all of them are in. At import it read 196 of 196 states.
+`universes_validate.sh` serves the hub with Vite's `appType: "mpa"`, as GitHub Pages serves it, so a
+missing file is a 404 rather than the app's own page.
+
+**The repo is public, and so is this data.** The universes are synthetic, as the viewers say, and the
+site they came from was public; they are committed so Pages can serve them. The source ZIPs stay
+outside the repo. Nothing under `public/universes/` is edited by hand, and `verify` fails if it is.
+
 ### The Universe Interaction videos are a strip, not four players
 
 `universeVideos` in [src/data/videos.ts](src/data/videos.ts) is the four recordings, and
@@ -821,9 +936,11 @@ written as `bg-black/…` for that reason.
 
 ### The Universe Viewers card is the hero's loudest block
 
-`universeViewers` in [src/data/universeViewers.ts](src/data/universeViewers.ts) is the link to
-<https://universe-viewers.vercel.app/>, where a contributor opens a universe and explores it in the
-browser, and `UniverseViewersCard` in [Method.tsx](src/pages/Method.tsx) renders it in the hero.
+`universeViewers` in [src/data/universeViewers.ts](src/data/universeViewers.ts) is the link to the
+Universes tab, where a contributor opens a universe and explores it in the browser, and
+`UniverseViewersCard` in [Method.tsx](src/pages/Method.tsx) renders it in the hero. Until Oct 19,
+2026 it left the site for <https://universe-viewers.vercel.app/> in a new tab; it is a router `Link`
+now, and the update notice's Universe Viewers entry follows it, since its `to` is the same `url`.
 **It has to be seen without scrolling, at every width**, so it is the one filled brand panel among
 light cards, and it is placed by width: at the top of the right column beside the headline from
 `lg`, and straight under the lead paragraph below that. Under `lg` the right column stacks below the
@@ -1011,6 +1128,10 @@ for many tasks**: keep it a grid of equal cards, and keep the reference-only dis
   all. A number of older chips still carry `/12` (the ⌘K kind tints, the phase chips on the method
   page, the Must Read impact chip), which is why they show coloured text with no fill. Use `/10` or
   `/15` in anything new, and check the built CSS when a tint does not show.
+
+- **An open universe owns the window under the nav.** Its stage is `fixed` below the 64px header, as
+  the viewer site's stage was below its bar, and while it shows, `html` does not scroll; leaving the
+  tab restores the overflow, the title and the globals the engine put on `window`.
 
 ## Design system
 

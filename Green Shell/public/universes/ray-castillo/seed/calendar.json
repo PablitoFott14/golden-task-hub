@@ -1,0 +1,858 @@
+{
+ "events": [
+  {
+   "event_id": "e6050b5b52cce0f898711936",
+   "title": "Swap meet with Dad",
+   "start_datetime": 1777730400.0,
+   "end_datetime": 1777737600.0,
+   "tag": "personal",
+   "description": "Dad picks me up at 6:15 in the Chevy. Small bills.",
+   "location": "American Park n Swap, 3801 E Washington St",
+   "attendees": [
+    "Ray Castillo",
+    "Rogelio Castillo"
+   ]
+  },
+  {
+   "event_id": "9e0ad382e9b30c1b56226b6c",
+   "title": "Mother's Day",
+   "start_datetime": 1778396400.0,
+   "end_datetime": 1778482740.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "767ccb0afc942e45b39b4bc9",
+   "title": "Mother's Day lunch at Mom's",
+   "start_datetime": 1778441400.0,
+   "end_datetime": 1778450400.0,
+   "tag": "personal",
+   "description": "Costco first. Asked Linda to come too.",
+   "location": "6127 W Maryland Ave, Glendale, AZ 85301",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo",
+    "Teresa Castillo",
+    "Rogelio Castillo",
+    "Linda Ochoa"
+   ]
+  },
+  {
+   "event_id": "ae456390c6538106395a599f",
+   "title": "Cushion pickup, Renee",
+   "start_datetime": 1778949000.0,
+   "end_datetime": 1778950800.0,
+   "tag": "personal",
+   "description": "Patio cushions, $34 cash.",
+   "location": "Maryvale police-station safe exchange",
+   "attendees": [
+    "Ray Castillo",
+    "Renee Pauley"
+   ]
+  },
+  {
+   "event_id": "9d8d8d8615eaf18e0d66a3dc",
+   "title": "Lucía's spring concert",
+   "start_datetime": 1779408000.0,
+   "end_datetime": 1779411600.0,
+   "tag": "personal",
+   "description": "In the gym. Mateo meets me by the gym doors.",
+   "location": "Desert Rose Elementary, 4920 W Osborn Rd",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "a8724fa46c2c3d5feb03408b",
+   "title": "Last day of school, early release",
+   "start_datetime": 1779433200.0,
+   "end_datetime": 1779519540.0,
+   "tag": "personal",
+   "description": "Both schools let out early.",
+   "location": null,
+   "attendees": [
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "854d35689fd650c507513d05",
+   "title": "Summer break",
+   "start_datetime": 1779519600.0,
+   "end_datetime": 1786345140.0,
+   "tag": "personal",
+   "description": "Back to school 8/10.",
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "68f02b510b9ce4549c662572",
+   "title": "Swap the AC filter",
+   "start_datetime": 1779649200.0,
+   "end_datetime": 1779651000.0,
+   "tag": "personal",
+   "description": "Furnace filter from Costco. Write the date on the frame.",
+   "location": "Home",
+   "attendees": [
+    "Ray Castillo"
+   ]
+  },
+  {
+   "event_id": "c750ec6696e03d99e49e9b27",
+   "title": "Memorial Day",
+   "start_datetime": 1779692400.0,
+   "end_datetime": 1779778740.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "2bfaf7158667748b980a8fc6",
+   "title": "Memorial Day carne asada",
+   "start_datetime": 1779739200.0,
+   "end_datetime": 1779751800.0,
+   "tag": "personal",
+   "description": "Mom and Dad at 1. Meat from El Super, marinate it the night before.",
+   "location": "Home",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo",
+    "Teresa Castillo",
+    "Rogelio Castillo"
+   ]
+  },
+  {
+   "event_id": "0f3f761015498b59300e0d20",
+   "title": "Pizza at home",
+   "start_datetime": 1780107300.0,
+   "end_datetime": 1780110000.0,
+   "tag": "personal",
+   "description": "Little Caesars after the walk. Cheese for Lucía, pepperoni for Mateo.",
+   "location": "Home",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "62632adb95b10f1f8c385673",
+   "title": "Swap meet with Dad",
+   "start_datetime": 1780149600.0,
+   "end_datetime": 1780156800.0,
+   "tag": "personal",
+   "description": "Done by 9 before it gets hot.",
+   "location": "American Park n Swap, 3801 E Washington St",
+   "attendees": [
+    "Ray Castillo",
+    "Rogelio Castillo"
+   ]
+  },
+  {
+   "event_id": "e08b499d12900f0548d80ae9",
+   "title": "Strikers summer camp, Mateo",
+   "start_datetime": 1780297200.0,
+   "end_datetime": 1780729140.0,
+   "tag": "personal",
+   "description": "7 to 9:30. Dana drops off on her way to work, Mike picks up Mon to Thu.",
+   "location": "Maryvale Park, N 51st Ave and W Indian School Rd",
+   "attendees": [
+    "Dana Castillo",
+    "Mateo Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "3cdf7de360594db06720c185",
+   "title": "Biscuit vaccines",
+   "start_datetime": 1780761600.0,
+   "end_datetime": 1780765200.0,
+   "tag": "personal",
+   "description": "Yearly shots. Bring last year's record.",
+   "location": "Banfield Pet Hospital (Maryvale)",
+   "attendees": [
+    "Ray Castillo"
+   ]
+  },
+  {
+   "event_id": "1524c7979e7dcb378297d30d",
+   "title": "Saturday overtime",
+   "start_datetime": 1781359200.0,
+   "end_datetime": 1781377200.0,
+   "tag": "work",
+   "description": "Dispatch desk, 7 to noon.",
+   "location": "Desert Air Mechanical, 2215 W McDowell Rd",
+   "attendees": [
+    "Ray Castillo"
+   ]
+  },
+  {
+   "event_id": "014cf9fb146cc45a9a3956df",
+   "title": "Toolbox pickup, Omar",
+   "start_datetime": 1781973000.0,
+   "end_datetime": 1781974800.0,
+   "tag": "personal",
+   "description": "Toolbox, $100 cash.",
+   "location": "Maryvale police-station safe exchange",
+   "attendees": [
+    "Ray Castillo",
+    "Omar Haddad"
+   ]
+  },
+  {
+   "event_id": "6ac3f2124245dbecef0709b9",
+   "title": "Father's Day",
+   "start_datetime": 1782025200.0,
+   "end_datetime": 1782111540.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "5f7b9bdfaa19c4b421197128",
+   "title": "Father's Day lunch at Mom and Dad's",
+   "start_datetime": 1782070200.0,
+   "end_datetime": 1782079200.0,
+   "tag": "personal",
+   "description": "After Costco. Bring Dad's card.",
+   "location": "6127 W Maryland Ave, Glendale, AZ 85301",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo",
+    "Teresa Castillo",
+    "Rogelio Castillo"
+   ]
+  },
+  {
+   "event_id": "085e5704a433357e96184725",
+   "title": "Desert Air closed for the Fourth",
+   "start_datetime": 1783062000.0,
+   "end_datetime": 1783148340.0,
+   "tag": "work",
+   "description": "Shop holiday. Back on 7/6.",
+   "location": null,
+   "attendees": [
+    "Ray Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "97bfe6a91e74447b9d0a1b5f",
+   "title": "Javi, Marisa and Nico in town",
+   "start_datetime": 1783062000.0,
+   "end_datetime": 1783321140.0,
+   "tag": "personal",
+   "description": "Up from Tucson for the long weekend. Lunch at Mom's Friday when they get in, then they stay with us. Mateo and Nico on the air mattress.",
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo",
+    "Javier Castillo",
+    "Marisa Castillo",
+    "Nico Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "7ff45fc51720e6b6e022c1f9",
+   "title": "Fourth of July cookout",
+   "start_datetime": 1783202400.0,
+   "end_datetime": 1783222200.0,
+   "tag": "personal",
+   "description": "Mom and Dad, Carla's family, Gil, and Javi's crew. Keep Biscuit inside once the fireworks start.",
+   "location": "Home",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo",
+    "Teresa Castillo",
+    "Rogelio Castillo",
+    "Carla Gutierrez",
+    "Rudy Gutierrez",
+    "Gilbert Soto",
+    "Javier Castillo",
+    "Marisa Castillo"
+   ]
+  },
+  {
+   "event_id": "9aff7b3f36b72b6d1b4c7147",
+   "title": "Mateo ortho 2:30",
+   "start_datetime": 1783546200.0,
+   "end_datetime": 1783548900.0,
+   "tag": "health",
+   "description": "Braces adjustment. Dana's taking him.",
+   "location": "Valley Smiles Orthodontics",
+   "attendees": [
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "4d747af2a54bccd4ba39fbff",
+   "title": "Saturday overtime",
+   "start_datetime": 1783778400.0,
+   "end_datetime": 1783796400.0,
+   "tag": "work",
+   "description": "Dispatch desk, 7 to noon.",
+   "location": "Desert Air Mechanical, 2215 W McDowell Rd",
+   "attendees": [
+    "Ray Castillo"
+   ]
+  },
+  {
+   "event_id": "5a1091c628afd9d5381df6ad",
+   "title": "Bike pickup, Chris, no-show",
+   "start_datetime": 1784997000.0,
+   "end_datetime": 1784998800.0,
+   "tag": "personal",
+   "description": "$90 cash for Lucía's bike. Waited until 10, he never showed.",
+   "location": "Maryvale police-station safe exchange",
+   "attendees": [
+    "Ray Castillo",
+    "Chris Delgado"
+   ]
+  },
+  {
+   "event_id": "7833d82de3b4e7b321e15423",
+   "title": "Saturday overtime",
+   "start_datetime": 1786197600.0,
+   "end_datetime": 1786215600.0,
+   "tag": "work",
+   "description": "Dispatch desk, 7 to noon.",
+   "location": "Desert Air Mechanical, 2215 W McDowell Rd",
+   "attendees": [
+    "Ray Castillo"
+   ]
+  },
+  {
+   "event_id": "c44e2de63ef1a6e9b491f566",
+   "title": "First day of school",
+   "start_datetime": 1786345200.0,
+   "end_datetime": 1786431540.0,
+   "tag": "personal",
+   "description": "Mateo starts 8th at Granada. Lucía has Mr. Hart at Desert Rose.",
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "88620b3d1550689d673939c5",
+   "title": "Open house at Granada",
+   "start_datetime": 1786577400.0,
+   "end_datetime": 1786580100.0,
+   "tag": "personal",
+   "description": "8th grade. Mateo comes with me to meet all his teachers.",
+   "location": "Granada Middle School, 3022 N 51st Ave",
+   "attendees": [
+    "Ray Castillo",
+    "Mateo Castillo"
+   ]
+  },
+  {
+   "event_id": "2972e99ca4350e0bc6421439",
+   "title": "Fishing at Lake Pleasant with Gil",
+   "start_datetime": 1786884300.0,
+   "end_datetime": 1786896900.0,
+   "tag": "personal",
+   "description": "Gil's driving the F-150. Back before Costco.",
+   "location": "Lake Pleasant Regional Park",
+   "attendees": [
+    "Ray Castillo",
+    "Gilbert Soto"
+   ]
+  },
+  {
+   "event_id": "4cd9dbc05e2c6192dd2f0c96",
+   "title": "Mom's birthday",
+   "start_datetime": 1787382000.0,
+   "end_datetime": 1787468340.0,
+   "tag": "personal",
+   "description": "She's 66.",
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Teresa Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "68ecbe22ca3db39e3362ff44",
+   "title": "Mom's birthday lunch",
+   "start_datetime": 1787427000.0,
+   "end_datetime": 1787437800.0,
+   "tag": "personal",
+   "description": "Lunch at their house. Javi does the carne, we bring drinks, ice and the cake. Card and the orchids.",
+   "location": "6127 W Maryland Ave, Glendale, AZ 85301",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo",
+    "Teresa Castillo",
+    "Rogelio Castillo",
+    "Javier Castillo",
+    "Marisa Castillo"
+   ]
+  },
+  {
+   "event_id": "3cde819e9f54e280bd5aebf3",
+   "title": "Swap meet with Dad",
+   "start_datetime": 1788012000.0,
+   "end_datetime": 1788019200.0,
+   "tag": "personal",
+   "description": "Water and a hat, still triple digits.",
+   "location": "American Park n Swap, 3801 E Washington St",
+   "attendees": [
+    "Ray Castillo",
+    "Rogelio Castillo"
+   ]
+  },
+  {
+   "event_id": "9aea9507e963b28d6afec2ec",
+   "title": "Picture day",
+   "start_datetime": 1788418800.0,
+   "end_datetime": 1788505140.0,
+   "tag": "personal",
+   "description": "Both schools.",
+   "location": null,
+   "attendees": [
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "b484a35d1bac7b1aca733c5c",
+   "title": "Labor Day",
+   "start_datetime": 1788764400.0,
+   "end_datetime": 1788850740.0,
+   "tag": "personal",
+   "description": "No school.",
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "863b5e66b8752ff9cb60d13a",
+   "title": "Labor Day BBQ at Gil's",
+   "start_datetime": 1788807600.0,
+   "end_datetime": 1788822000.0,
+   "tag": "personal",
+   "description": "Bring the big cooler and a case of water.",
+   "location": "Gil's house",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo",
+    "Gilbert Soto"
+   ]
+  },
+  {
+   "event_id": "a0bd3216dd0483e8c00c74c4",
+   "title": "Saturday overtime",
+   "start_datetime": 1789221600.0,
+   "end_datetime": 1789239600.0,
+   "tag": "work",
+   "description": "Dispatch desk, 7 to noon.",
+   "location": "Desert Air Mechanical, 2215 W McDowell Rd",
+   "attendees": [
+    "Ray Castillo"
+   ]
+  },
+  {
+   "event_id": "deb0f2b8d12627dfdb899c1c",
+   "title": "Curriculum night",
+   "start_datetime": 1789689600.0,
+   "end_datetime": 1789692300.0,
+   "tag": "personal",
+   "description": "8th grade. Start in Ms. Nguyen's room. Home in time for the walk.",
+   "location": "Granada Middle School, 3022 N 51st Ave",
+   "attendees": [
+    "Ray Castillo"
+   ]
+  },
+  {
+   "event_id": "b2d1d897531646aa3f034b98",
+   "title": "Strikers vs Glendale Rush",
+   "start_datetime": 1789833600.0,
+   "end_datetime": 1789839000.0,
+   "tag": "personal",
+   "description": "First game of the fall. Arrive 8:30.",
+   "location": "Maryvale Park field 2, N 51st Ave and W Indian School Rd",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "689289f8adea4eade059cdc3",
+   "title": "Strikers at Tolleson Thunder",
+   "start_datetime": 1790438400.0,
+   "end_datetime": 1790443800.0,
+   "tag": "personal",
+   "description": "Arrive 8:30.",
+   "location": "Tolleson Regional Park field 1",
+   "attendees": [
+    "Ray Castillo",
+    "Mateo Castillo"
+   ]
+  },
+  {
+   "event_id": "1d23e457c4e0d2288223c746",
+   "title": "Dana's birthday",
+   "start_datetime": 1790492400.0,
+   "end_datetime": 1790578740.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "d2e2fbf57d7441043f747986",
+   "title": "Dana's birthday, Carla's family over",
+   "start_datetime": 1790539200.0,
+   "end_datetime": 1790553600.0,
+   "tag": "personal",
+   "description": "I'm grilling. Meat from Costco in the morning.",
+   "location": "Home",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo",
+    "Carla Gutierrez",
+    "Rudy Gutierrez",
+    "Linda Ochoa"
+   ]
+  },
+  {
+   "event_id": "6bd3aaba0c85fdf20a423087",
+   "title": "Strikers vs Avondale Fury",
+   "start_datetime": 1791043200.0,
+   "end_datetime": 1791048600.0,
+   "tag": "personal",
+   "description": "Team photo at 8:05 by the ramada, be at field 2 by 8:00 in full uniform. Kickoff 9.",
+   "location": "Maryvale Park field 2, N 51st Ave and W Indian School Rd",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "86afec92076fade6376199fc",
+   "title": "Fall recess",
+   "start_datetime": 1791183600.0,
+   "end_datetime": 1791615540.0,
+   "tag": "personal",
+   "description": "No school all week. Kids at Mom's in Glendale during the day.",
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "2e5a155eb77c9e6d9db53388",
+   "title": "Strikers at Peoria Pumas",
+   "start_datetime": 1791648000.0,
+   "end_datetime": 1791653400.0,
+   "tag": "personal",
+   "description": "Mike takes Mateo at 7:45, he's helping coach with the nets. We go for kickoff at 9.",
+   "location": "Rio Vista Park field 4",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "98fd0fa409dd749c340c030a",
+   "title": "Lucía's field trip",
+   "start_datetime": 1792047600.0,
+   "end_datetime": 1792133940.0,
+   "tag": "personal",
+   "description": "Bus leaves Desert Rose at 8:30, back by 2. Sack lunch.",
+   "location": "Desert Botanical Garden, 1201 N Galvin Pkwy",
+   "attendees": [
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "bcd3c545f974e481d26bd6fd",
+   "title": "Strikers vs West Valley United",
+   "start_datetime": 1792252800.0,
+   "end_datetime": 1792258200.0,
+   "tag": "personal",
+   "description": "Moved from field 2 for irrigation work. Field 3 is the far one past the bathrooms. Arrive 8:30.",
+   "location": "Maryvale Park field 3, N 51st Ave and W Indian School Rd",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "3c1b2f89129e445bdb185969",
+   "title": "Kermés at Mom's church",
+   "start_datetime": 1792267200.0,
+   "end_datetime": 1792276200.0,
+   "tag": "personal",
+   "description": "Mom is running the kitchen. Bring cash for the cake walk.",
+   "location": "Our Lady of Guadalupe Parish, Glendale",
+   "attendees": [
+    "Ray Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "86381b5cd73b83398bccca09",
+   "title": "Accord to Valley Tire",
+   "start_datetime": 1792421100.0,
+   "end_datetime": 1792422000.0,
+   "tag": "personal",
+   "description": "Dana drops it after school drop-off. Brake inspection and tire rotation. Tony takes me there after work to pick it up.",
+   "location": "Valley Tire & Auto",
+   "attendees": [
+    "Dana Castillo"
+   ]
+  },
+  {
+   "event_id": "c9a551e4dd9ce9551c8f7b2b",
+   "title": "Open enrollment closes",
+   "start_datetime": 1792738800.0,
+   "end_datetime": 1792825140.0,
+   "tag": "work",
+   "description": "Last day to pick next year's plans. Guide is in Brianna's email.",
+   "location": null,
+   "attendees": [
+    "Ray Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "5629e069226e758667da0121",
+   "title": "Q1 progress reports",
+   "start_datetime": 1792738800.0,
+   "end_datetime": 1792825140.0,
+   "tag": "personal",
+   "description": "Granada posts Mateo's on the parent portal.",
+   "location": null,
+   "attendees": [
+    "Dana Castillo",
+    "Mateo Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "e6d4fd1510d4f002dd0f87e4",
+   "title": "Strikers at Goodyear Galaxy",
+   "start_datetime": 1792857600.0,
+   "end_datetime": 1792863000.0,
+   "tag": "personal",
+   "description": "Our snack week: orange slices and waters for the team. Taking Diego and Isaac, leave by 7:55. Arrive 8:30.",
+   "location": "Goodyear Recreation Campus field 6",
+   "attendees": [
+    "Ray Castillo",
+    "Mateo Castillo"
+   ]
+  },
+  {
+   "event_id": "85d21a67d855575f1348ef28",
+   "title": "Trunk-or-treat at Desert Rose",
+   "start_datetime": 1793404800.0,
+   "end_datetime": 1793407800.0,
+   "tag": "personal",
+   "description": "Runs 5 to 6:30. I head home at 5:50 for Biscuit, Dana stays with Lucía.",
+   "location": "Desert Rose Elementary, 4920 W Osborn Rd",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "a350999d1de25bb1e0f999af",
+   "title": "Halloween",
+   "start_datetime": 1793430000.0,
+   "end_datetime": 1793516340.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "21ac4a0cf4dea9f33a80af97",
+   "title": "Strikers vs Laveen Lions",
+   "start_datetime": 1793462400.0,
+   "end_datetime": 1793467800.0,
+   "tag": "personal",
+   "description": "Arrive 8:30.",
+   "location": "Maryvale Park field 2, N 51st Ave and W Indian School Rd",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "bf3ac506087600a00975573e",
+   "title": "Trick-or-treating with Lucía",
+   "start_datetime": 1793499300.0,
+   "end_datetime": 1793503800.0,
+   "tag": "personal",
+   "description": "Our street and the next one over.",
+   "location": "Home",
+   "attendees": [
+    "Ray Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "f6c70c486ef1ceae0ac3fe98",
+   "title": "Strikers at Litchfield FC",
+   "start_datetime": 1794067200.0,
+   "end_datetime": 1794072600.0,
+   "tag": "personal",
+   "description": "Last game of the fall. Mateo rides with Mike, we meet them there. Kickoff 9.",
+   "location": "Litchfield Park field 1",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ]
+  },
+  {
+   "event_id": "0821910dd19c6531ec0eb159",
+   "title": "Veterans Day",
+   "start_datetime": 1794380400.0,
+   "end_datetime": 1794466740.0,
+   "tag": "personal",
+   "description": "No school.",
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "08a43c33350198faae998d38",
+   "title": "Mateo turns 14",
+   "start_datetime": 1794466800.0,
+   "end_datetime": 1794553140.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo"
+   ],
+   "all_day": true
+  },
+  {
+   "event_id": "5b6a51ef69196e2a6bbae955",
+   "title": "Mateo's birthday dinner",
+   "start_datetime": 1794536100.0,
+   "end_datetime": 1794542400.0,
+   "tag": "personal",
+   "description": "Mom comes at 4 to make the enchiladas, Dad drops her off and comes back at 7:15. Carla's family after Rudy gets off. Javi FaceTimes around 8. Cake after.",
+   "location": "Home",
+   "attendees": [
+    "Ray Castillo",
+    "Dana Castillo",
+    "Mateo Castillo",
+    "Lucía Castillo",
+    "Teresa Castillo",
+    "Rogelio Castillo",
+    "Carla Gutierrez",
+    "Rudy Gutierrez"
+   ]
+  }
+ ]
+}

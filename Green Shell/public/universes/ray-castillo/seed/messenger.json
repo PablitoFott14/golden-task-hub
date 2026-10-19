@@ -1,0 +1,1398 @@
+{
+ "users": [
+  {
+   "id": "4c417c96373df7f5edc41f79",
+   "email": "ray.castillo.phx@gmail.com",
+   "name": "Ray Castillo"
+  },
+  {
+   "id": "contact_7d70e40f0bedb6145566bc4c",
+   "email": "andre.solis.az@gmail.com",
+   "name": "Andre Solis"
+  },
+  {
+   "id": "contact_624483321982237cde191eea",
+   "email": "luz.mendoza.phx@gmail.com",
+   "name": "Luz Mendoza"
+  },
+  {
+   "id": "contact_97d96f0ae605829fbdfbf3f4",
+   "email": "renee.pauley.az@gmail.com",
+   "name": "Renee Pauley"
+  },
+  {
+   "id": "contact_f69b0da89f3f2a7f1332efc0",
+   "email": "omar.haddad.phx@gmail.com",
+   "name": "Omar Haddad"
+  },
+  {
+   "id": "contact_ab80b2d22efe889631eaef8c",
+   "email": "chris.delgado.az@gmail.com",
+   "name": "Chris Delgado"
+  },
+  {
+   "id": "contact_a581ae168aa72a7c3444abd9",
+   "email": "priya.nandakumar@gmail.com",
+   "name": "Priya Nandakumar"
+  },
+  {
+   "id": "contact_889dd1f80a52b030d9d19a47",
+   "email": "gloria.ruiz.maryvale@gmail.com",
+   "name": "Gloria Ruiz"
+  }
+ ],
+ "contacts": [
+  {
+   "owner_id": "4c417c96373df7f5edc41f79",
+   "contact_id": "contact_7d70e40f0bedb6145566bc4c"
+  },
+  {
+   "owner_id": "4c417c96373df7f5edc41f79",
+   "contact_id": "contact_624483321982237cde191eea"
+  },
+  {
+   "owner_id": "4c417c96373df7f5edc41f79",
+   "contact_id": "contact_97d96f0ae605829fbdfbf3f4"
+  },
+  {
+   "owner_id": "4c417c96373df7f5edc41f79",
+   "contact_id": "contact_f69b0da89f3f2a7f1332efc0"
+  },
+  {
+   "owner_id": "4c417c96373df7f5edc41f79",
+   "contact_id": "contact_ab80b2d22efe889631eaef8c"
+  },
+  {
+   "owner_id": "4c417c96373df7f5edc41f79",
+   "contact_id": "contact_a581ae168aa72a7c3444abd9"
+  },
+  {
+   "owner_id": "4c417c96373df7f5edc41f79",
+   "contact_id": "contact_889dd1f80a52b030d9d19a47"
+  }
+ ],
+ "threads": [
+  {
+   "id": "0752313fff2fdc0315d0cd9c",
+   "title": "Renee Pauley",
+   "created_at": "2026-05-12T19:06:00-07:00",
+   "updated_at": "2026-05-16T12:40:00-07:00",
+   "participant_ids": [
+    "4c417c96373df7f5edc41f79",
+    "contact_97d96f0ae605829fbdfbf3f4"
+   ]
+  },
+  {
+   "id": "bfd97bb6acd3212f42d86b1a",
+   "title": "Omar Haddad",
+   "created_at": "2026-06-18T19:08:00-07:00",
+   "updated_at": "2026-06-20T13:02:00-07:00",
+   "participant_ids": [
+    "4c417c96373df7f5edc41f79",
+    "contact_f69b0da89f3f2a7f1332efc0"
+   ]
+  },
+  {
+   "id": "6a9d3716ee2abb1a135ee26e",
+   "title": "Chris Delgado",
+   "created_at": "2026-07-14T11:44:00-07:00",
+   "updated_at": "2026-07-27T12:04:00-07:00",
+   "participant_ids": [
+    "4c417c96373df7f5edc41f79",
+    "contact_ab80b2d22efe889631eaef8c"
+   ]
+  },
+  {
+   "id": "99b6230e3148efd08065fe4b",
+   "title": "Priya Nandakumar",
+   "created_at": "2026-09-16T18:08:00-07:00",
+   "updated_at": "2026-10-06T19:31:00-07:00",
+   "participant_ids": [
+    "4c417c96373df7f5edc41f79",
+    "contact_a581ae168aa72a7c3444abd9"
+   ]
+  },
+  {
+   "id": "a75ee3dcdadf3591d23f0b07",
+   "title": "Andre Solis",
+   "created_at": "2026-10-25T19:20:00-07:00",
+   "updated_at": "2026-11-02T07:48:00-07:00",
+   "participant_ids": [
+    "4c417c96373df7f5edc41f79",
+    "contact_7d70e40f0bedb6145566bc4c"
+   ]
+  },
+  {
+   "id": "a4ab8d228df2bb6bacf26423",
+   "title": "Luz Mendoza",
+   "created_at": "2026-10-26T11:48:00-07:00",
+   "updated_at": "2026-11-01T18:20:00-07:00",
+   "participant_ids": [
+    "4c417c96373df7f5edc41f79",
+    "contact_624483321982237cde191eea"
+   ]
+  },
+  {
+   "id": "ebad79db9005f821f2ff7d05",
+   "title": "Gloria Ruiz",
+   "created_at": "2026-08-09T19:44:00-07:00",
+   "updated_at": "2026-11-01T11:47:00-07:00",
+   "participant_ids": [
+    "4c417c96373df7f5edc41f79",
+    "contact_889dd1f80a52b030d9d19a47"
+   ]
+  }
+ ],
+ "messages": [
+  {
+   "id": "1c47a5d109adb6950143a404",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Hi Renee. Are the patio cushions still available?",
+   "attachments": [],
+   "created_at": "2026-05-12T19:06:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-12T19:06:00-07:00"
+  },
+  {
+   "id": "ee96165c17d33917bc580b43",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Hi Ray! Yes, all four are still here. They're the tan ones with the ties on the back, and they only spent one summer on a covered patio, so there's no fading. I have them at 45 for the set. Did you want all four?",
+   "attachments": [],
+   "created_at": "2026-05-12T21:37:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-12T21:37:00-07:00"
+  },
+  {
+   "id": "17b867ed96cf8543b567c926",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Yes, all four. Would you take $32 for the set?",
+   "attachments": [],
+   "created_at": "2026-05-13T11:46:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-13T11:46:00-07:00"
+  },
+  {
+   "id": "fe59fe6361ad05e8f566d7f4",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Hmm, could you do 38? I paid almost 90 for them last spring.",
+   "attachments": [],
+   "created_at": "2026-05-13T15:20:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-13T15:20:00-07:00"
+  },
+  {
+   "id": "91e6294c7648ac6d612e826f",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Could you do $34? I can pick them up Saturday at 9:30 at the Maryvale police-station safe exchange.",
+   "attachments": [],
+   "created_at": "2026-05-13T18:14:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-13T18:14:00-07:00"
+  },
+  {
+   "id": "f0783a7438d2d33fcd9ecdc0",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Okay, 34 works! Is that the lot in front of the precinct with the cameras? I've never done one of those before.",
+   "attachments": [],
+   "created_at": "2026-05-13T20:52:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-13T20:52:00-07:00"
+  },
+  {
+   "id": "5c2ce707e069c0f91f4544e2",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Yes, the marked spaces out front. I'll have cash.",
+   "attachments": [],
+   "created_at": "2026-05-14T11:38:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-14T11:38:00-07:00"
+  },
+  {
+   "id": "216efa99324931ce06013919",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Perfect. Do you want them in a bag, or is loose okay? They're a little bulky.",
+   "attachments": [],
+   "created_at": "2026-05-15T18:10:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-15T18:10:00-07:00"
+  },
+  {
+   "id": "06627433b753304d04a60c74",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Loose is fine. See you at 9:30.",
+   "attachments": [],
+   "created_at": "2026-05-15T19:08:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-15T19:08:00-07:00"
+  },
+  {
+   "id": "a7a01a4f6d8c39cb3edcbf03",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Leaving now. Is 9:30 still good for you?",
+   "attachments": [],
+   "created_at": "2026-05-16T09:20:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-16T09:20:00-07:00"
+  },
+  {
+   "id": "355c6f3d8af59f791ee28d31",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Never mind, I see the marked spaces! I'm in the white RAV4.",
+   "attachments": [],
+   "created_at": "2026-05-16T09:27:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-16T09:27:00-07:00"
+  },
+  {
+   "id": "2af44db6a7b3cd17ba72241b",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thanks again, Renee. They fit our chairs well.",
+   "attachments": [],
+   "created_at": "2026-05-16T11:52:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-16T11:52:00-07:00"
+  },
+  {
+   "id": "e30e1817061224857920b6b6",
+   "thread_id": "0752313fff2fdc0315d0cd9c",
+   "sender_id": "contact_97d96f0ae605829fbdfbf3f4",
+   "text": "Yay, I'm so glad! Enjoy them!",
+   "attachments": [],
+   "created_at": "2026-05-16T12:40:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-05-16T12:40:00-07:00"
+  },
+  {
+   "id": "cc8015c6011890291adab5f9",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Hi Omar. Is the rolling toolbox still available? Do all the drawers open and close smoothly?",
+   "attachments": [],
+   "created_at": "2026-06-18T19:08:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-18T19:08:00-07:00"
+  },
+  {
+   "id": "e11ef94d1e19fb5dc3f986b5",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "Yes, it is still available. All eight drawers slide well, and the lock on the top lid works. I have both keys. I would like 135 for it.",
+   "attachments": [],
+   "created_at": "2026-06-18T20:40:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-18T20:40:00-07:00"
+  },
+  {
+   "id": "2711d3f1c2064c71a91cb389",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thanks. How big is it? I want to make sure it fits in my car.",
+   "attachments": [],
+   "created_at": "2026-06-19T11:41:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-19T11:41:00-07:00"
+  },
+  {
+   "id": "0d9fb0ab867c7f3e002ef6be",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "It is 26 inches wide, 18 deep, and about 37 tall with the top chest on. The top chest lifts off, so it will fit in most cars in two pieces.",
+   "attachments": [],
+   "created_at": "2026-06-19T12:30:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-19T12:30:00-07:00"
+  },
+  {
+   "id": "447a9296b2265a317e78c412",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "That works. Would you take $95?",
+   "attachments": [],
+   "created_at": "2026-06-19T18:12:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-19T18:12:00-07:00"
+  },
+  {
+   "id": "12dceea766d3d6cd6b72c30f",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "I can do 115. It was my father's, and it has always been kept inside.",
+   "attachments": [],
+   "created_at": "2026-06-19T18:40:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-19T18:40:00-07:00"
+  },
+  {
+   "id": "30c12abb0a0c441b7eb4a64a",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "I can do $100 cash. Saturday at 9:30 at the Maryvale police-station safe exchange.",
+   "attachments": [],
+   "created_at": "2026-06-19T19:06:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-19T19:06:00-07:00"
+  },
+  {
+   "id": "c6ee7648ff8ff9d190d010bd",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "All right. One hundred is fine. Saturday at 9:30 at the police station works for me.",
+   "attachments": [],
+   "created_at": "2026-06-19T19:31:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-19T19:31:00-07:00"
+  },
+  {
+   "id": "f3fab8c8050ee53e3c327747",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "I am leaving now. See you at the lot.",
+   "attachments": [],
+   "created_at": "2026-06-20T09:10:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-20T09:10:00-07:00"
+  },
+  {
+   "id": "61f23b05870bad4e3ccbbc30",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thanks again, Omar. It's already full of tools.",
+   "attachments": [],
+   "created_at": "2026-06-20T11:48:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-20T11:48:00-07:00"
+  },
+  {
+   "id": "5a7d85ded6ab83d00c75fe24",
+   "thread_id": "bfd97bb6acd3212f42d86b1a",
+   "sender_id": "contact_f69b0da89f3f2a7f1332efc0",
+   "text": "Good to hear. Take care.",
+   "attachments": [],
+   "created_at": "2026-06-20T13:02:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-06-20T13:02:00-07:00"
+  },
+  {
+   "id": "c93d300de67f1b84e71c8d11",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Hi Chris. Is the bike still for sale?",
+   "attachments": [],
+   "created_at": "2026-07-14T11:44:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-14T11:44:00-07:00"
+  },
+  {
+   "id": "3d29b29b2f0e32bfa753101e",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Is it a 24 inch? It would be for my daughter. She's 9.",
+   "attachments": [],
+   "created_at": "2026-07-14T11:45:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-14T11:45:00-07:00"
+  },
+  {
+   "id": "ff633b38760868feb9614896",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Still have it. 24 in.",
+   "attachments": [],
+   "created_at": "2026-07-14T22:58:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-14T22:58:00-07:00"
+  },
+  {
+   "id": "b0ca419a5658c28202703347",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thanks. How are the tires and brakes?",
+   "attachments": [],
+   "created_at": "2026-07-15T11:52:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-15T11:52:00-07:00"
+  },
+  {
+   "id": "623a254ab133b51e05f6604c",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Good.",
+   "attachments": [],
+   "created_at": "2026-07-15T17:26:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-15T17:26:00-07:00"
+  },
+  {
+   "id": "6119a01790f37d417ba51c94",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "New tubes in May.",
+   "attachments": [],
+   "created_at": "2026-07-15T17:27:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-15T17:27:00-07:00"
+  },
+  {
+   "id": "7dde753ef0791d4f55c22a33",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Would you take $90?",
+   "attachments": [],
+   "created_at": "2026-07-16T18:14:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-16T18:14:00-07:00"
+  },
+  {
+   "id": "3d6f24fa750ed64bbd1de583",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "90 ok.",
+   "attachments": [],
+   "created_at": "2026-07-18T11:15:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-18T11:15:00-07:00"
+  },
+  {
+   "id": "0b3149dce4ffb394dd2d622c",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Not this weekend.",
+   "attachments": [],
+   "created_at": "2026-07-18T11:16:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-18T11:16:00-07:00"
+  },
+  {
+   "id": "b4e64e7055ac7d4488175ddb",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Okay, $90. Next Saturday at 9:30 at the Maryvale police-station safe exchange? I'll bring cash.",
+   "attachments": [],
+   "created_at": "2026-07-18T12:05:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-18T12:05:00-07:00"
+  },
+  {
+   "id": "8dc70b95271ee767b9f21a0e",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "contact_ab80b2d22efe889631eaef8c",
+   "text": "Ok. Sat 9:30.",
+   "attachments": [],
+   "created_at": "2026-07-18T12:31:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-18T12:31:00-07:00"
+  },
+  {
+   "id": "7ad3908079a8f1db117ee4cd",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Hi Chris. Still good for tomorrow at 9:30 at the station lot?",
+   "attachments": [],
+   "created_at": "2026-07-24T19:22:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-24T19:22:00-07:00"
+  },
+  {
+   "id": "8f2b36e2d1d9cc38eeefcce0",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "I was at the station lot from 9:30 until almost 10 and didn't see you. Let me know if another Saturday works.",
+   "attachments": [],
+   "created_at": "2026-07-25T11:42:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-25T11:42:00-07:00"
+  },
+  {
+   "id": "93fcfa49cebf3869227ae115",
+   "thread_id": "6a9d3716ee2abb1a135ee26e",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Hi Chris, checking one more time. If the bike sold, no problem. A quick note either way would help.",
+   "attachments": [],
+   "created_at": "2026-07-27T12:04:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-07-27T12:04:00-07:00"
+  },
+  {
+   "id": "b750bf126ebe333f2ef9f219",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Hi Priya. Is the washer still available?",
+   "attachments": [],
+   "created_at": "2026-09-16T18:08:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T18:08:00-07:00"
+  },
+  {
+   "id": "de548d0cf8adc9f126acde6f",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Is it a Whirlpool WTW5000DW? And where is the model plate? Is it in one of the pictures?",
+   "attachments": [],
+   "created_at": "2026-09-16T18:09:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T18:09:00-07:00"
+  },
+  {
+   "id": "6e3620f0dc00d88ef33639e0",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "contact_a581ae168aa72a7c3444abd9",
+   "text": "Hey Ray, yes, it's still available. It's a WTW5000DW, like the listing says.",
+   "attachments": [],
+   "created_at": "2026-09-16T18:21:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T18:21:00-07:00"
+  },
+  {
+   "id": "11b318afc2c09e2abf942917",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "contact_a581ae168aa72a7c3444abd9",
+   "text": "It's in the second photo.",
+   "attachments": [],
+   "created_at": "2026-09-16T18:21:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T18:21:00-07:00"
+  },
+  {
+   "id": "a71c88d6cfca7aacabab5b93",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Got it, thank you. I'll compare it with ours.",
+   "attachments": [],
+   "created_at": "2026-09-16T18:24:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T18:24:00-07:00"
+  },
+  {
+   "id": "83740bb0f3e8ae460eb28a0c",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "How long have you had it, and why are you selling?",
+   "attachments": [],
+   "created_at": "2026-09-16T18:26:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T18:26:00-07:00"
+  },
+  {
+   "id": "b8cda6bb543d333b33565820",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "contact_a581ae168aa72a7c3444abd9",
+   "text": "About five years. We moved into a place with a stacked set, so this one has to go.",
+   "attachments": [],
+   "created_at": "2026-09-16T18:52:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T18:52:00-07:00"
+  },
+  {
+   "id": "94c588f34babb1aab1cd2155",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Does it drain and spin all the way? Any leaks?",
+   "attachments": [],
+   "created_at": "2026-09-16T19:14:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T19:14:00-07:00"
+  },
+  {
+   "id": "40d5237fe8afcb17e38540d8",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "contact_a581ae168aa72a7c3444abd9",
+   "text": "It drains and spins fine. No leaks. It's a little loud on the final spin, but it has always been like that.",
+   "attachments": [],
+   "created_at": "2026-09-16T19:33:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T19:33:00-07:00"
+  },
+  {
+   "id": "f1a0f044a9e866c6225d43df",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thanks, Priya. I'll let you know.",
+   "attachments": [],
+   "created_at": "2026-09-16T19:47:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-16T19:47:00-07:00"
+  },
+  {
+   "id": "08e55d7065991bfc471e8de4",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "contact_a581ae168aa72a7c3444abd9",
+   "text": "Hey Ray, the washer is still available if you're still looking. I can do $165.",
+   "attachments": [],
+   "created_at": "2026-10-06T17:52:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-06T17:52:00-07:00"
+  },
+  {
+   "id": "41f51d713c2d6b1663fde39d",
+   "thread_id": "99b6230e3148efd08065fe4b",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Not right now, thanks. I'll message you if that changes.",
+   "attachments": [],
+   "created_at": "2026-10-06T19:31:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-06T19:31:00-07:00"
+  },
+  {
+   "id": "c9b323df17af5c1afc7790bb",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Hi Andre. Are the four resin chairs still available?",
+   "attachments": [],
+   "created_at": "2026-10-25T19:20:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:20:00-07:00"
+  },
+  {
+   "id": "9ec9b7cc7f088bba062b86ac",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "ya",
+   "attachments": [],
+   "created_at": "2026-10-25T19:21:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:21:00-07:00"
+  },
+  {
+   "id": "12d23d4518ef29a2627d3374",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "80 each",
+   "attachments": [],
+   "created_at": "2026-10-25T19:21:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:21:00-07:00"
+  },
+  {
+   "id": "8629c55bfa2937aa0e989a97",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "firm rn",
+   "attachments": [],
+   "created_at": "2026-10-25T19:22:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:22:00-07:00"
+  },
+  {
+   "id": "9b81df61c1153c1627d0c137",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "pickup tmrw?",
+   "attachments": [],
+   "created_at": "2026-10-25T19:23:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:23:00-07:00"
+  },
+  {
+   "id": "4af9c17fa6694241567949c5",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Mine cracked like this. Are yours the same resin?",
+   "attachments": [
+    {
+     "name": "resin-chair.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-10-25T19:26:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:26:00-07:00"
+  },
+  {
+   "id": "0d3e19503494a23c20a00ad9",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "same kind ya",
+   "attachments": [],
+   "created_at": "2026-10-25T19:27:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:27:00-07:00"
+  },
+  {
+   "id": "286ac6dcd8c9d29b9ea0a497",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "mine dont have cracks tho",
+   "attachments": [],
+   "created_at": "2026-10-25T19:28:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:28:00-07:00"
+  },
+  {
+   "id": "6d71dae1d4e7d7afb0c0ab72",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "been under the patio",
+   "attachments": [],
+   "created_at": "2026-10-25T19:28:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:28:00-07:00"
+  },
+  {
+   "id": "99c79bf4b9b299e09dc4b1d5",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Would you take $56 a chair? Pickup would be at the Maryvale police station, in the safe exchange spaces.",
+   "attachments": [],
+   "created_at": "2026-10-25T19:31:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:31:00-07:00"
+  },
+  {
+   "id": "aa2f76571a0c55cfe26585f4",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "56 is low",
+   "attachments": [],
+   "created_at": "2026-10-25T19:33:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:33:00-07:00"
+  },
+  {
+   "id": "fedcea02f98066ddda74b915",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "i could do 75",
+   "attachments": [],
+   "created_at": "2026-10-25T19:34:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:34:00-07:00"
+  },
+  {
+   "id": "af600271ab01cf32e0c84b05",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "u can come to my place",
+   "attachments": [],
+   "created_at": "2026-10-25T19:35:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:35:00-07:00"
+  },
+  {
+   "id": "0dcec7271332559e2f7a5213",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "its close",
+   "attachments": [],
+   "created_at": "2026-10-25T19:35:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:35:00-07:00"
+  },
+  {
+   "id": "50b2f0ee4170436afc4afec4",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thanks, but the police station is the only place I do pickups. And $75 is still more than I want to spend.",
+   "attachments": [],
+   "created_at": "2026-10-25T19:39:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:39:00-07:00"
+  },
+  {
+   "id": "9a57e95507f9cede0d7c4456",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "It's four chairs, so I need to check with my wife first. I'll get back to you.",
+   "attachments": [],
+   "created_at": "2026-10-25T19:41:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:41:00-07:00"
+  },
+  {
+   "id": "22c5f19b52b53fab33f4b2fa",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "ok lmk 👍",
+   "attachments": [],
+   "created_at": "2026-10-25T19:46:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:46:00-07:00"
+  },
+  {
+   "id": "ff982ca455ad2846f46dc93a",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "u still want them?",
+   "attachments": [],
+   "created_at": "2026-10-26T08:57:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T08:57:00-07:00"
+  },
+  {
+   "id": "04e34f0b68ccee7afce16058",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "got another person asking",
+   "attachments": [],
+   "created_at": "2026-10-26T08:58:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T08:58:00-07:00"
+  },
+  {
+   "id": "ce099b211923760be065cc1e",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Still interested, but I'm not ready to decide yet. I'll let you know this week.",
+   "attachments": [],
+   "created_at": "2026-10-26T11:56:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T11:56:00-07:00"
+  },
+  {
+   "id": "ed8931c5ab0492f5963d6a38",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "station works too if thats ur thing",
+   "attachments": [],
+   "created_at": "2026-10-26T19:58:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T19:58:00-07:00"
+  },
+  {
+   "id": "a6b301a79417acb44d8bcbf2",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "?",
+   "attachments": [],
+   "created_at": "2026-10-28T20:51:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-28T20:51:00-07:00"
+  },
+  {
+   "id": "2623060c4144fd86b93cf5d0",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Still deciding. I'll let you know by the weekend.",
+   "attachments": [],
+   "created_at": "2026-10-29T11:44:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-29T11:44:00-07:00"
+  },
+  {
+   "id": "ee0863fbbe567c1c4a371411",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "75 is the lowest i can go",
+   "attachments": [],
+   "created_at": "2026-10-31T13:12:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-31T13:12:00-07:00"
+  },
+  {
+   "id": "31ba6a5444e2aacf1ecb94ae",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "if u want them this wknd lmk",
+   "attachments": [],
+   "created_at": "2026-10-31T13:13:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-31T13:13:00-07:00"
+  },
+  {
+   "id": "e49a1a7d2e3ea76b2f1da29e",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thanks, Andre. Not this weekend. I'm still talking it over with my wife.",
+   "attachments": [],
+   "created_at": "2026-11-01T18:14:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-11-01T18:14:00-07:00"
+  },
+  {
+   "id": "2d3c03b79345928561b78550",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "ok",
+   "attachments": [],
+   "created_at": "2026-11-01T18:33:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-11-01T18:33:00-07:00"
+  },
+  {
+   "id": "f90233b85f35c8ff0b1f0be8",
+   "thread_id": "a75ee3dcdadf3591d23f0b07",
+   "sender_id": "contact_7d70e40f0bedb6145566bc4c",
+   "text": "still got them if u want",
+   "attachments": [],
+   "created_at": "2026-11-02T07:48:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-11-02T07:48:00-07:00"
+  },
+  {
+   "id": "193a87eefc94a5274e3e7576",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Hi Luz. Are the four resin chairs still available?",
+   "attachments": [],
+   "created_at": "2026-10-26T11:48:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T11:48:00-07:00"
+  },
+  {
+   "id": "ce805a7c1f7f4f5c8e6d4245",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "Hello Mr. Castillo, yes, all four chairs are still available. They are in excellent condition, and I am asking $50 a chair. Kind regards, Luz Mendoza",
+   "attachments": [],
+   "created_at": "2026-10-26T16:10:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T16:10:00-07:00"
+  },
+  {
+   "id": "69cd1805c34d0a711b851411",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "If it is easier for you, my son can bring them to your house in his truck one evening this week. We are only a few minutes away. Kind regards, Luz Mendoza",
+   "attachments": [],
+   "created_at": "2026-10-26T16:13:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T16:13:00-07:00"
+  },
+  {
+   "id": "6ca94d6e1e7e1cd413d37568",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thank you, Luz. That's kind of you, but if we go ahead I'd rather meet at the Maryvale police-station safe exchange.",
+   "attachments": [],
+   "created_at": "2026-10-26T19:12:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T19:12:00-07:00"
+  },
+  {
+   "id": "fbf49374af1ab68481736d07",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "This is one of ours. The seat split and a front leg cracked. Do any of yours have cracks or chalky spots like this?",
+   "attachments": [
+    {
+     "name": "resin-chair.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-10-26T19:15:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T19:15:00-07:00"
+  },
+  {
+   "id": "4ce69d6a4e82028ebbc3bf60",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Are yours the same stacking kind with arms?",
+   "attachments": [],
+   "created_at": "2026-10-26T19:16:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T19:16:00-07:00"
+  },
+  {
+   "id": "4481ce6ac5a1fd0f74b29ef7",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "Hello Mr. Castillo, I am very sorry to see your chair. Yes, ours are the same stacking style with arms, in white. They have always been kept under the patio cover, and they are perfect, with no cracks and no chalky spots. My son is visiting on Saturday, so I will have him carry them out into the light and take more pictures for you this weekend. Kind regards, Luz Mendoza",
+   "attachments": [],
+   "created_at": "2026-10-26T21:26:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-26T21:26:00-07:00"
+  },
+  {
+   "id": "831f50844683413c5f624f42",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thank you. I'll wait for the pictures.",
+   "attachments": [],
+   "created_at": "2026-10-27T11:41:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-27T11:41:00-07:00"
+  },
+  {
+   "id": "1244e3f5d374e19af4bb2d88",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "Hello Mr. Castillo, I wanted to ask whether you need the chairs before the weekend. If so, I can try to take the pictures sooner on my own. Kind regards, Luz Mendoza",
+   "attachments": [],
+   "created_at": "2026-10-29T09:58:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-29T09:58:00-07:00"
+  },
+  {
+   "id": "346fe149e08b9634cd294809",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "No rush. The weekend is fine.",
+   "attachments": [],
+   "created_at": "2026-10-29T11:52:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-29T11:52:00-07:00"
+  },
+  {
+   "id": "e4b19174454e7cc653c9ab63",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "Hello Mr. Castillo, my apologies. My son had to work this weekend, so I was not able to take the pictures yet. I will try one evening this week. The chairs are still here for you. Kind regards, Luz Mendoza",
+   "attachments": [],
+   "created_at": "2026-11-01T17:05:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-11-01T17:05:00-07:00"
+  },
+  {
+   "id": "da4474a897514f9572e98acd",
+   "thread_id": "a4ab8d228df2bb6bacf26423",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "No problem, Luz. Thank you for letting me know.",
+   "attachments": [],
+   "created_at": "2026-11-01T18:20:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-11-01T18:20:00-07:00"
+  },
+  {
+   "id": "97fc897cf28551efc7828357",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Hi Gloria. Thanks for the name in the group. Do you have a number for Hector?",
+   "attachments": [],
+   "created_at": "2026-08-09T19:44:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-08-09T19:44:00-07:00"
+  },
+  {
+   "id": "5f228a3d899a9b355a0caaef",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, of course! His number is on a card on my fridge, I'll bring it by. He fixed the latch on my side gate last spring and patched the stucco by my back door, and he charged me fair. Tell him Gloria sent you.",
+   "attachments": [],
+   "created_at": "2026-08-09T20:02:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-08-09T20:02:00-07:00"
+  },
+  {
+   "id": "473f950c78d122b97f9b3eb3",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thank you. The chairs are holding up for now, but I'll keep his name in mind.",
+   "attachments": [],
+   "created_at": "2026-08-09T20:15:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-08-09T20:15:00-07:00"
+  },
+  {
+   "id": "47985276353ae74134a32c9e",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Keep them out of the afternoon sun if you can. Mine went chalky just like that, and the next summer one gave out right under my nephew!",
+   "attachments": [],
+   "created_at": "2026-08-09T20:21:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-08-09T20:21:00-07:00"
+  },
+  {
+   "id": "cfd71fe6c8021708bd4748e0",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, the house on the corner of my street finally sold! A young couple with a baby. I'm taking them a plate of conchas this weekend, so if you see a stranger pushing a stroller around the block, that's who it is.",
+   "attachments": [],
+   "created_at": "2026-08-20T17:48:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-08-20T17:48:00-07:00"
+  },
+  {
+   "id": "b5a9cb9c0fd682ec245b4012",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Good to hear. That house sat empty a long time.",
+   "attachments": [],
+   "created_at": "2026-08-20T18:06:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-08-20T18:06:00-07:00"
+  },
+  {
+   "id": "0a20471d89495d6635954736",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, is Biscuit okay? I heard him barking at the ice cream truck tonight like it was the end of the world!",
+   "attachments": [],
+   "created_at": "2026-08-27T19:40:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-08-27T19:40:00-07:00"
+  },
+  {
+   "id": "2b74e4881eaf6811cbedf9ff",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "He's fine. He hates that song.",
+   "attachments": [],
+   "created_at": "2026-08-27T19:58:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-08-27T19:58:00-07:00"
+  },
+  {
+   "id": "f97e757a5f14ce1abcb6f5f1",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, they're saying 114 tomorrow. Could you or Dana knock on Frank's door after you get home? He keeps his AC at 84 to save on the bill, and he won't listen to me.",
+   "attachments": [],
+   "created_at": "2026-09-02T16:44:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-02T16:44:00-07:00"
+  },
+  {
+   "id": "4cbc61ee994cf47b30b2c85f",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "I'll go over tomorrow when I get home.",
+   "attachments": [],
+   "created_at": "2026-09-02T18:05:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-02T18:05:00-07:00"
+  },
+  {
+   "id": "9a60703e66e66036864a23a7",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Checked on Frank. He had it at 80 with a fan going, and he says hi.",
+   "attachments": [],
+   "created_at": "2026-09-03T18:20:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-03T18:20:00-07:00"
+  },
+  {
+   "id": "03d73222155c83c52fb63493",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Thank you! 80 I can live with.",
+   "attachments": [],
+   "created_at": "2026-09-03T18:33:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-03T18:33:00-07:00"
+  },
+  {
+   "id": "5ed251fc7c71f19e034550af",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, bulk trash for our area starts this Saturday. I'm finally putting out my old recliner, and you're welcome to put anything next to it. My curb is bigger than yours!",
+   "attachments": [],
+   "created_at": "2026-09-08T07:52:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-08T07:52:00-07:00"
+  },
+  {
+   "id": "157b12674f75c676c23252e5",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thanks, Gloria. We might finally put out the old dog crate.",
+   "attachments": [],
+   "created_at": "2026-09-08T18:12:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-08T18:12:00-07:00"
+  },
+  {
+   "id": "864912ab59eb81aec97ae29b",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, I walked by this morning and could hear your washer from the sidewalk! Is that the one you posted about? Poor thing sounds like a cement mixer.",
+   "attachments": [],
+   "created_at": "2026-09-17T07:31:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-17T07:31:00-07:00"
+  },
+  {
+   "id": "f8fb5ccea5ba36013f5a9c18",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "That's the one. We're doing small loads until we decide what to do with it.",
+   "attachments": [],
+   "created_at": "2026-09-17T18:09:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-17T18:09:00-07:00"
+  },
+  {
+   "id": "5944e2f07bdfb4c37d18fafb",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Smart. Whatever you decide, don't let it walk across the floor on the spin. Mine did that before it died and put a dent in my dryer!",
+   "attachments": [],
+   "created_at": "2026-09-17T18:24:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-17T18:24:00-07:00"
+  },
+  {
+   "id": "adc3d8023fa5a40d9d668f3b",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Good to know. Thanks, Gloria.",
+   "attachments": [],
+   "created_at": "2026-09-17T19:08:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-09-17T19:08:00-07:00"
+  },
+  {
+   "id": "f23ced83425a2d22aa928ba1",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, if you see an orange cat with a white chest by your back wall, it's Mango from 48th Dr. He's been missing since Friday and the family is heartbroken. Maybe Biscuit can sniff him out before we do!",
+   "attachments": [],
+   "created_at": "2026-10-11T18:20:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-11T18:20:00-07:00"
+  },
+  {
+   "id": "1bcd9f99950d1192bbc74d8e",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Will do. We walk the block every evening, so I'll keep an eye out.",
+   "attachments": [],
+   "created_at": "2026-10-11T19:22:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-11T19:22:00-07:00"
+  },
+  {
+   "id": "d76d34ad7a4eccc67f1a59d2",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Good news, Mango came home on his own last night, hungry and very offended. Thank you for looking!",
+   "attachments": [],
+   "created_at": "2026-10-14T08:05:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-14T08:05:00-07:00"
+  },
+  {
+   "id": "87edfe0f5f76c82c3b9be204",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Glad to hear it.",
+   "attachments": [],
+   "created_at": "2026-10-14T11:51:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-14T11:51:00-07:00"
+  },
+  {
+   "id": "5303731f81f8ae2d048b4028",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, they finally fixed the streetlight by the alley on 48th Ave! Only took three months and about twenty of us reporting it.",
+   "attachments": [],
+   "created_at": "2026-10-20T17:15:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-20T17:15:00-07:00"
+  },
+  {
+   "id": "f943a745afce1641fdcedf19",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "About time. Thanks for staying on them.",
+   "attachments": [],
+   "created_at": "2026-10-20T19:02:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-20T19:02:00-07:00"
+  },
+  {
+   "id": "7db49cf3f9faad9edf1e0cb9",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, I meant what I said in the group, I'm so sorry about your chair. I have two folding chairs in my garage you're welcome to borrow until you find a new set, just say the word.",
+   "attachments": [],
+   "created_at": "2026-10-25T18:40:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T18:40:00-07:00"
+  },
+  {
+   "id": "9fc5d7e41dbf8b48afe3d132",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thank you, Gloria. That's kind. We still have the other three, so we're okay for now.",
+   "attachments": [],
+   "created_at": "2026-10-25T19:10:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:10:00-07:00"
+  },
+  {
+   "id": "2b31ef43032e7b90748767cb",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Okay! The offer stands. And don't buy the first set you see. Half the ones out there are as sunburned as yours were.",
+   "attachments": [],
+   "created_at": "2026-10-25T19:14:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-25T19:14:00-07:00"
+  },
+  {
+   "id": "89347e7a03ef50d58ac5dbb1",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, any luck with the chairs?",
+   "attachments": [],
+   "created_at": "2026-10-28T17:02:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-28T17:02:00-07:00"
+  },
+  {
+   "id": "deb1ee5f78d80957c632e6fb",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "A couple of sets. Still looking.",
+   "attachments": [],
+   "created_at": "2026-10-28T18:16:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-28T18:16:00-07:00"
+  },
+  {
+   "id": "83804204257a959279b88176",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Good. Take your time, they always come up.",
+   "attachments": [],
+   "created_at": "2026-10-28T18:25:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-28T18:25:00-07:00"
+  },
+  {
+   "id": "a32bc70f2abec0bca1890d72",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "Hey Ray, are you and Dana handing out candy Saturday or walking with Lucía? I bought way too much again, so if you run out, send someone over!",
+   "attachments": [],
+   "created_at": "2026-10-29T17:36:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-29T17:36:00-07:00"
+  },
+  {
+   "id": "4c0238fdb5fa3e5fb244ae06",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "I'm walking with Lucía this year. Dana is on candy duty. We'll come by.",
+   "attachments": [],
+   "created_at": "2026-10-29T18:15:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-29T18:15:00-07:00"
+  },
+  {
+   "id": "aac07b341783b404fe350c1c",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "contact_889dd1f80a52b030d9d19a47",
+   "text": "It was so good to see Lucía tonight! She said thank you for every single piece. That girl has manners.",
+   "attachments": [],
+   "created_at": "2026-10-31T20:58:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-10-31T20:58:00-07:00"
+  },
+  {
+   "id": "d19ca96a30255e61eb3807cd",
+   "thread_id": "ebad79db9005f821f2ff7d05",
+   "sender_id": "4c417c96373df7f5edc41f79",
+   "text": "Thank you, Gloria. She was very proud of her bag.",
+   "attachments": [],
+   "created_at": "2026-11-01T11:47:00-07:00",
+   "unsent_at": "",
+   "timestamp": "2026-11-01T11:47:00-07:00"
+  }
+ ]
+}

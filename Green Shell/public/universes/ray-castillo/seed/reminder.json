@@ -1,0 +1,434 @@
+{
+ "reminders": [
+  {
+   "reminder_id": "ffc21520dc2e21f9bfd829e9",
+   "title": "Grab flowers for Mom at Costco",
+   "due_datetime": 1778430600.0,
+   "description": "Lunch at her house at 12:30. Get a second bunch in case Linda makes it.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1778430600.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "b147e827388c80457e859e2f",
+   "title": "Cash for Renee",
+   "due_datetime": 1778946300.0,
+   "description": "Patio cushions, $34. Small bills. Police-station lot at 9:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1778946300.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "d22c0ebfb63cc6ac2c69430d",
+   "title": "Lucía's concert at 5",
+   "due_datetime": 1779405300.0,
+   "description": "Desert Rose gym. Mateo meets me by the gym doors.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1779405300.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "c0a588ad3ddc22e52a166faf",
+   "title": "Marinate the carne asada",
+   "due_datetime": 1779676200.0,
+   "description": "Flap meat from El Super is in the fridge. Mom and Dad come at 1 tomorrow.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1779676200.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "a91dd30bbcfeb5005e649232",
+   "title": "Biscuit to Banfield at 9",
+   "due_datetime": 1780758900.0,
+   "description": "Yearly shots. Bring last year's record, it's in the kitchen drawer.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780758900.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "70090b5bf218d82e0bdd5d53",
+   "title": "Cash for Omar, $100",
+   "due_datetime": 1781969400.0,
+   "description": "Toolbox. Police-station lot at 9:30. Check the drawers slide before I pay.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781969400.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "91852335fbe90883d90f8107",
+   "title": "Check the washer hoses",
+   "due_datetime": 1782577200.0,
+   "description": "Pull it out from the wall and look at both hose ends for bulges or drips. Shutoff valves too.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782577200.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "ef095da633c9f179b4f31e4e",
+   "title": "Look at SRP price plans",
+   "due_datetime": 1782700200.0,
+   "description": "June bill came in high. See if EZ-3 makes sense: pre-cool before 3, coast until 6.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782700200.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "065c247944884ba1c07ae680",
+   "title": "Charcoal and ice for the 4th",
+   "due_datetime": 1783117800.0,
+   "description": "Two bags of Kingsford, ice in the morning. Burgers and dogs from Vallarta. Javi and them are here through 7/5.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783117800.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "7c445c042529b47df619f3ff",
+   "title": "Bike pickup, Chris",
+   "due_datetime": 1784994300.0,
+   "description": "$90 cash for Lucía's bike. Police-station lot at 9:30. Message him first, he's been quiet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784994300.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "032b9f9e3a17d2fbf063dab7",
+   "title": "Check the AC unit after the storm",
+   "due_datetime": 1785364200.0,
+   "description": "Clear the leaves off the condenser and make sure it cycles normal after the outage.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785364200.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "c13cba8a756c02a5d94ab897",
+   "title": "Bulk trash week",
+   "due_datetime": 1789221600.0,
+   "description": "Old patio umbrella, the broken hose reel and the old dog crate go out by the curb. Keep it off the sidewalk.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789221600.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "9aec51c35c5ae2cc8d210fcf",
+   "title": "Open house at 4:30",
+   "due_datetime": 1786574400.0,
+   "description": "Granada, 8th grade. Mateo comes with me to meet all his teachers.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786574400.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "b8b6f60e0ea6c567f0608b8f",
+   "title": "Pack for Lake Pleasant",
+   "due_datetime": 1786847400.0,
+   "description": "Two rods, the tackle box, ice in the small cooler. Gil's driving. Check the fishing license in the AZGFD app.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786847400.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "1a3350f9ec6bfbe76d8d00f3",
+   "title": "Mom's birthday gift",
+   "due_datetime": 1787106600.0,
+   "description": "Figure out a gift with Dana. Mom says she doesn't need anything. Lunch at their house 8/22, 12:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787106600.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "8083c741e11a26077e39d069",
+   "title": "Put the Strikers games on the calendar",
+   "due_datetime": 1787625000.0,
+   "description": "Yesenia sent the fall schedule. Eight Saturdays, 9:00 starts, be there by 8:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787625000.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "0aa2ebc45871fb9ddb352b63",
+   "title": "Cooler and chairs for Gil's",
+   "due_datetime": 1788802200.0,
+   "description": "Big cooler with ice and a case of water. Folding chairs are in the garage.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788802200.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "9e45f2d5972edbc50e68a2c4",
+   "title": "Ask Lorena about the State Farm increase",
+   "due_datetime": 1789525800.0,
+   "description": "Renewal says $146.10 a month from 10/1, up from $138.72. Same car, no claims.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789525800.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "0d09d9080edbbb58b2f10791",
+   "title": "Curriculum night at 5",
+   "due_datetime": 1789686600.0,
+   "description": "Granada, 8th grade. Ms. Nguyen has his ELA. Out by 5:45 for the walk.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789686600.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "faeb3fe0f5fe7597c43ea586",
+   "title": "Meat for Dana's birthday",
+   "due_datetime": 1790476200.0,
+   "description": "Costco at 10 tomorrow: carne asada, chicken thighs, tortillas. Carla's family at 1.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790476200.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "a38c0aeb4166029df684f0a3",
+   "title": "Lucía's field trip slip",
+   "due_datetime": 1790600400.0,
+   "description": "Dana signed it. Back in Lucía's folder today. Desert Botanical Garden on 10/15.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790600400.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "efdcbbd3c28b99a1d2a7d89c",
+   "title": "New State Farm cards in the glovebox",
+   "due_datetime": 1790908200.0,
+   "description": "ID cards came by email today. Print two, toss the old ones.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790908200.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "ec3ae07c02f10f84867603e9",
+   "title": "Strikers snacks tomorrow",
+   "due_datetime": 1792795500.0,
+   "description": "Our week, the Goodyear game. Orange slices and two cases of water, cooler's in the garage.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792795500.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "51138d4bc5926f232c1be8f8",
+   "title": "Sack lunch for Lucía's field trip",
+   "due_datetime": 1792031400.0,
+   "description": "Bus leaves at 8:30, back by 2. Everything in a paper bag with her name on it.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792031400.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "3c7e4ea48cba43caf3a6b6e6",
+   "title": "Field 3 tomorrow, not field 2",
+   "due_datetime": 1792204200.0,
+   "description": "Irrigation work on field 2, per Yesenia. Same park, be there 8:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792204200.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "08ce0e382ac256a13ec66e3d",
+   "title": "Accord to Valley Tire tomorrow",
+   "due_datetime": 1792371600.0,
+   "description": "Dana drops it at 7:45 after the kids. Brakes and a rotation. Ask Tony to drop me there after work.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792371600.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "a5e67663a61f7ed206c8c92c",
+   "title": "Open enrollment",
+   "due_datetime": 1792549800.0,
+   "description": "Closes 10/23. Benefits guide is in Brianna's email. Go through the medical options with Dana before picking.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792549800.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "5eb9d309e454f5b01fb0206d",
+   "title": "Email Noel again",
+   "due_datetime": 1792694700.0,
+   "description": "He said on 10/20 he was looking into it. Nothing since.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792694700.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "95056192f71e5caee44d9565",
+   "title": "Change the AC filter",
+   "due_datetime": 1792868400.0,
+   "description": "20x25x1 for the hall return. Costco pack is on the garage shelf. Write the date on the frame.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1792868400.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "37366776fc97b5acfd8326d5",
+   "title": "Go over Mateo's progress report",
+   "due_datetime": 1793068200.0,
+   "description": "Q1 reports went up 10/23. Sit down with him after dinner.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793068200.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "1d12a1da0c0071a84c98a4e8",
+   "title": "Candy for the door",
+   "due_datetime": 1793399400.0,
+   "description": "Walmart bags are on the top pantry shelf. Fill the bowl before Lucía and I head out at 7:15 tomorrow.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793399400.0,
+   "completed": true
+  },
+  {
+   "reminder_id": "3c4b225e709d9b32bb1740a7",
+   "title": "Look over the Visa statement",
+   "due_datetime": 1793673000.0,
+   "description": "Statement closes on the 1st. Go through it before autopay takes it.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "f60c03ecf5b4821677b9b7da",
+   "title": "Check Visa for Valley Tire refund on ticket 4426",
+   "due_datetime": 1793731500.0,
+   "description": "Noel said on 10/23 the office manager would void 4426 and put it back on the card, a few business days. If it's not there, call him.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "e4c8489f2e716287ef23c093",
+   "title": "Strikers practice, my drive",
+   "due_datetime": 1793749200.0,
+   "description": "Maryvale Park, 5 to 6. Dana has Thursdays.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "314a7b8e5dab7373d607d8b7",
+   "title": "Check the dog food before Chewy ships",
+   "due_datetime": 1793759400.0,
+   "description": "Autoship goes out on the 4th. If the bag's more than a third full, push it a week in the app.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "c02dfb96c28db5e5db71db16",
+   "title": "Call Target about shoe refund, case 05741-261028",
+   "due_datetime": 1793817900.0,
+   "description": "Refunds team said 10/30 they're reviewing it. If the $64.18 still isn't back on the Visa, call Guest Relations at lunch. Return receipt is in the receipts folder.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "c5424a695144c32867b8fefb",
+   "title": "Space heater return window closes Thu 11/5",
+   "due_datetime": 1793917800.0,
+   "description": "Label is in the Amazon email from 11/2. Drop it at the UPS on 51st Ave.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "90a9010160083d7c3028c397",
+   "title": "Renew the Accord registration",
+   "due_datetime": 1794004200.0,
+   "description": "Tags expire at the end of the month. Emissions inspection first, then renew on AZ MVD Now.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "0fb6d284eadd56fd135af5bc",
+   "title": "Headphones return window closes Sat 11/7",
+   "due_datetime": 1794061800.0,
+   "description": "Target label came 11/2. Drop the box at UPS after the Litchfield game, or take them back to the store.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "2c04c23f0607067cb17c2be7",
+   "title": "Biscuit's flea and tick chew",
+   "due_datetime": 1794191400.0,
+   "description": "Box is in the cabinet over the washer. Give it with dinner.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "2b341538a0e292203a6ae469",
+   "title": "Order Mateo's cake",
+   "due_datetime": 1794277800.0,
+   "description": "Chocolate, from the El Super bakery. They want two days' notice. Pick up 11/12 when Dana's home with the car. Dinner at 7:15.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "4b488732537a58d97f3a3eac",
+   "title": "Flu shots for the kids",
+   "due_datetime": 1794336300.0,
+   "description": "Call Maryvale Pediatrics at lunch. Dana's off Fridays, ask for one of those.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null,
+   "completed": false
+  },
+  {
+   "reminder_id": "9bec61ac480724d58958cca4",
+   "title": "Mateo turns 14, Thu 11/12",
+   "due_datetime": 1794487500.0,
+   "description": "Birthday breakfast before Tony gets here. Dinner at home at 7:15 with Mom, Dad and Carla's family. Cake pickup after work.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null,
+   "completed": false
+  }
+ ]
+}

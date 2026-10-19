@@ -8,6 +8,7 @@ import { guidelineChanges } from "./changes";
 import { taxonomy } from "./taxonomy";
 import { onboardingItems } from "./onboarding";
 import { universeVideos } from "./videos";
+import { universeCatalog } from "./universeCatalog";
 import { specRevisions } from "./specLog";
 import {
   categoryById,
@@ -111,6 +112,23 @@ export const searchIndex: SearchEntry[] = [
       v.fix,
       "universe interaction recording screencast artifact id snapshot load explore agent database redeploy",
     ].join(" "),
+  })),
+
+  /* The Universes tab: the grid, and one row per persona with its apps in
+     `terms`, so a search for a persona, a city or an app opens the viewer. */
+  {
+    kind: "Universe",
+    title: "Universes",
+    hint: universeCatalog.map((u) => u.name).join(" · "),
+    to: "/universes",
+    terms: "universe viewers persona explore data apps files messages viewer",
+  },
+  ...universeCatalog.map<SearchEntry>((u) => ({
+    kind: "Universe",
+    title: u.name,
+    hint: `${u.role} · ${u.city}`,
+    to: `/universes/${u.slug}`,
+    terms: [u.slug, u.apps.join(" "), "universe viewer persona explore"].join(" "),
   })),
 
   ...tasks.map<SearchEntry>((t) => ({

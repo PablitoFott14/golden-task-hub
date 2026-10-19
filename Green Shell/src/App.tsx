@@ -4,6 +4,7 @@ import Method from "./pages/Method";
 import GoldenTasks from "./pages/GoldenTasks";
 import TaskDetail from "./pages/TaskDetail";
 import FailureApproach from "./pages/FailureApproach";
+import Universes from "./pages/Universes";
 import SpecDoc from "./pages/SpecDoc";
 import Reference from "./pages/Reference";
 import { checklist } from "./data/checklist";
@@ -65,6 +66,10 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Method />} />
+        {/* One route for the grid, a persona and its full page, so the page
+            stays mounted between them and a loaded universe survives a visit
+            to the grid. */}
+        <Route path="/universes/*" element={<Universes />} />
         <Route path="/golden-tasks" element={<GoldenTasks />} />
         {/* The vendor closeout task was replaced wholesale, so an old link
             lands on the index rather than on a task that is not the one it

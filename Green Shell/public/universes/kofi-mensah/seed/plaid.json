@@ -1,0 +1,5259 @@
+{
+ "users": [
+  {
+   "id": "plaid_user_38896ff833182330",
+   "email": "kofi@corktownaudio.com"
+  }
+ ],
+ "items": [
+  {
+   "id": "item_c54dbd2a3d832384",
+   "user_id": "plaid_user_38896ff833182330",
+   "institution_id": "ins_081b4d80",
+   "institution_name": "Motor City Credit Union",
+   "products": [
+    "transactions"
+   ]
+  },
+  {
+   "id": "item_e8232397b5cf8d09",
+   "user_id": "plaid_user_38896ff833182330",
+   "institution_id": "ins_3c5c7d91",
+   "institution_name": "Ally",
+   "products": [
+    "transactions"
+   ]
+  }
+ ],
+ "accounts": [
+  {
+   "id": "4d7a2290c1e8b05f93a6e2d4",
+   "item_id": "item_c54dbd2a3d832384",
+   "name": "MCCU Visa (business use)",
+   "official_name": "Motor City Credit Union Visa",
+   "type": "credit",
+   "subtype": "credit card",
+   "mask": "2290",
+   "balances": {
+    "available": 11643.4,
+    "current": 356.6,
+    "limit": 12000.0,
+    "iso_currency_code": "USD"
+   },
+   "holder_category": "business"
+  },
+  {
+   "id": "acc_98506773808e71d5976d",
+   "item_id": "item_c54dbd2a3d832384",
+   "name": "Checking ..8803",
+   "official_name": "Motor City Credit Union checking",
+   "type": "depository",
+   "subtype": "checking",
+   "mask": "8803",
+   "balances": {
+    "available": 12490.0,
+    "current": 12490.0,
+    "iso_currency_code": "USD"
+   },
+   "holder_category": "business"
+  },
+  {
+   "id": "acc_2ced318075fa1b55180f",
+   "item_id": "item_c54dbd2a3d832384",
+   "name": "Checking ..8851",
+   "official_name": "Motor City Credit Union checking",
+   "type": "depository",
+   "subtype": "checking",
+   "mask": "8851",
+   "balances": {
+    "available": 3920.0,
+    "current": 3920.0,
+    "iso_currency_code": "USD"
+   },
+   "holder_category": "personal"
+  },
+  {
+   "id": "acc_a86b1b17a5d57d6c9b3f",
+   "item_id": "item_e8232397b5cf8d09",
+   "name": "Savings ..4410",
+   "official_name": "Ally savings",
+   "type": "depository",
+   "subtype": "savings",
+   "mask": "4410",
+   "balances": {
+    "available": 9800.0,
+    "current": 9800.0,
+    "iso_currency_code": "USD"
+   },
+   "holder_category": "personal"
+  }
+ ],
+ "transactions": [
+  {
+   "id": "txn_1519c83f67d30e21890f",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-05-01",
+   "name": "ZELLE PMT TO EFUA MENSAH 05/01",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3e91a7c4",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 41.27,
+   "date": "2026-07-03",
+   "name": "POS DEBIT 07/03 POS PURCHASE MARATHON PETRO 4417 GRAYLING MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_b52f08d6",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 25.0,
+   "date": "2026-07-03",
+   "name": "POS DEBIT 07/03 NPS SLBE ENTRANCE FEE EMPIRE MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sleeping Bear Dunes National Lakeshore",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GOVERNMENT_AND_NON_PROFIT",
+    "detailed": "GOVERNMENT_AND_NON_PROFIT_GOVERNMENT_DEPARTMENTS_AND_AGENCIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_7c0e4a19",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 112.0,
+   "date": "2026-07-03",
+   "name": "POS DEBIT 07/03 NPS SLBE DH DAY CAMPGRND GLEN ARBOR MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "D.H. Day Campground",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRAVEL",
+    "detailed": "TRAVEL_LODGING",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e4a6d2b8",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 38.64,
+   "date": "2026-07-03",
+   "name": "POS DEBIT 07/03 POS PURCHASE ANDERSONS MARKET GLEN ARBOR MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "Anderson's Market",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_0f8b3c57",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 27.85,
+   "date": "2026-07-04",
+   "name": "POS DEBIT 07/04 POS PURCHASE CHERRY REPUBLIC GLEN ARBOR MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "Cherry Republic",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_OTHER_FOOD_AND_DRINK",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_9d2e6f04",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 68.91,
+   "date": "2026-07-05",
+   "name": "POS DEBIT 07/05 TST* WESTERN AVENUE GRILL GLEN ARBOR MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "Western Avenue Grill",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_61c7b9ea",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 46.92,
+   "date": "2026-07-06",
+   "name": "POS DEBIT 07/06 POS PURCHASE BP#9431026 WEST BRANCH MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "BP",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "5f2a8d71c0e94b36a7d1e508",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 246.78,
+   "date": "2026-07-14",
+   "name": "ULINE 800-295-5510 WI",
+   "iso_currency_code": "USD",
+   "merchant_name": "Uline",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OFFICE_SUPPLIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_c4e19b07",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 81.47,
+   "date": "2026-08-26",
+   "name": "POS DEBIT MEIJER #294 DETROIT MI 08/26",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4e9b7d21c0a35f86e2d14b07",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 263.94,
+   "date": "2026-06-16",
+   "name": "THE HOME DEPOT #2723 SOUTHFIELD MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "The Home Depot",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "HOME_IMPROVEMENT",
+    "detailed": "HOME_IMPROVEMENT_HARDWARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7f3b9c21d84e0a65b2c19e40",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 300.0,
+   "date": "2026-10-09",
+   "name": "ATM WITHDRAWAL MCCU LIVERNOIS DETROIT MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "Motor City Credit Union",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "atm",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_WITHDRAWAL",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5b1e7c9a40d2f83e6a917c04",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 175.0,
+   "date": "2026-08-18",
+   "name": "SQ *WINDY CITY RECORD FAIR Chicago IL",
+   "iso_currency_code": "USD",
+   "merchant_name": "Windy City Record Fair",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "c84f2a6e19b07d35e2c8a51f",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 186.4,
+   "date": "2026-09-15",
+   "name": "DUFFEL*SOUTHWEST AIR DALLAS TX",
+   "iso_currency_code": "USD",
+   "merchant_name": "Southwest Airlines",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRAVEL",
+    "detailed": "TRAVEL_FLIGHTS",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "e27a90d4c5f3b1866d0e4a72",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 514.21,
+   "date": "2026-09-15",
+   "name": "DUFFEL*THE ASHLAND HOTEL CHICAGO IL",
+   "iso_currency_code": "USD",
+   "merchant_name": "The Ashland Hotel",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRAVEL",
+    "detailed": "TRAVEL_LODGING",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "9d3c61b8f0a2e47c15b8d96e",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 71.25,
+   "date": "2026-09-28",
+   "name": "EASTERN MARKET PRINT CO DETROIT MI",
+   "iso_currency_code": "USD",
+   "merchant_name": "Eastern Market Print Co.",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "b7e20c94d5a13f86e2b07a4d",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 212.6,
+   "date": "2026-05-12",
+   "name": "VINTAGE PARTS DEPOT DAYTON OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Vintage Parts Depot",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_ELECTRONICS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "1d5fa8e36b07c2d940fe8b15",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 186.15,
+   "date": "2026-06-09",
+   "name": "VINTAGE PARTS DEPOT DAYTON OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Vintage Parts Depot",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_ELECTRONICS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "e04a7d2c91b5f63ea8d02c71",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 341.7,
+   "date": "2026-07-07",
+   "name": "VINTAGE PARTS DEPOT DAYTON OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Vintage Parts Depot",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_ELECTRONICS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "6c93b1f8e75d02a4d9c65e3b",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 128.35,
+   "date": "2026-07-28",
+   "name": "VINTAGE PARTS DEPOT DAYTON OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Vintage Parts Depot",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_ELECTRONICS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "a2f59e0b3c78d14a6f2eb809",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 472.9,
+   "date": "2026-08-25",
+   "name": "VINTAGE PARTS DEPOT DAYTON OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Vintage Parts Depot",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_ELECTRONICS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "3b8df4c10e6a97d2c5b3e01f",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 263.45,
+   "date": "2026-09-22",
+   "name": "VINTAGE PARTS DEPOT DAYTON OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Vintage Parts Depot",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_ELECTRONICS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "f9c04b6ea3d815f72e9cd6a0",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 318.2,
+   "date": "2026-10-13",
+   "name": "VINTAGE PARTS DEPOT DAYTON OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Vintage Parts Depot",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_ELECTRONICS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_3c8e1a5f",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 42.41,
+   "date": "2026-10-06",
+   "name": "POS DEBIT 10/06 DBT CRD PURCHASE ADAFRUIT INDUSTRIES NEW YORK NY",
+   "iso_currency_code": "USD",
+   "merchant_name": "Adafruit",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_ELECTRONICS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b47e0c93d2a8f165e3c9a720",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -620.0,
+   "date": "2026-10-20",
+   "name": "ZELLE FROM DEREK H",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": null,
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "d0c58a2e71f9b34a6e0d8c15",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 38.4,
+   "date": "2026-10-21",
+   "name": "PIRATESHIP.COM POSTAGE SEATTLE WA",
+   "iso_currency_code": "USD",
+   "merchant_name": "Pirate Ship",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_POSTAGE_AND_SHIPPING",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_4c81e2a7",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 46.8,
+   "date": "2026-09-14",
+   "name": "POS DEBIT 09/14 DEBIT CARD PURCHASE VINTAGEPARTSDEPOT.COM DAYTON OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Vintage Parts Depot",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_ELECTRONICS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_dc4d4a4844b6c20b0dac",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-05-05",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 05/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_428710e6ed88d2205a68",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-05-20",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 05/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_235680aa1cfa0a988616",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-06-05",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 06/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9441a6e99ddcc9e55518",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-06-20",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 06/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_01edd1d8a66ff5f71e94",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-07-05",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 07/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_35a1fdbdb5376b3b995c",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-07-20",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 07/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c857d1495774c79121f3",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-08-05",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 08/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_63eac67f7498e48cde60",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-08-20",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 08/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8bfda2b9dea26def3777",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-09-05",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 09/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_86c3371b575ef29c01b1",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-09-20",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 09/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_dee99be8e557643e3879",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-10-05",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 10/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5739df86b00ce3b91afb",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": -1600.0,
+   "date": "2026-10-20",
+   "name": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS 10/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8f178cd6c41255093162",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 61.27,
+   "date": "2026-05-06",
+   "name": "POS DEBIT 05/06 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7080ef6063c7c2959ba3",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 27.84,
+   "date": "2026-05-08",
+   "name": "POS DEBIT 05/08 BUDDY'S PIZZA",
+   "iso_currency_code": "USD",
+   "merchant_name": "Buddy's Pizza",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_25aee079783425e80ed5",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 34.5,
+   "date": "2026-05-09",
+   "name": "POS DEBIT 05/09 EASTERN MARKET",
+   "iso_currency_code": "USD",
+   "merchant_name": "Eastern Market",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5210f1d72463282e6e91",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 6.25,
+   "date": "2026-05-12",
+   "name": "POS DEBIT 05/12 NARROW WAY CAFE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Narrow Way Cafe",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e5eb8e48f309f4d49c37",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 47.62,
+   "date": "2026-05-13",
+   "name": "POS DEBIT 05/13 SPEEDWAY",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1bc460a3ceaf10a49638",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-05-15",
+   "name": "ZELLE PMT TO EFUA MENSAH 05/15",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d6e3337af1c993d7db2e",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-06-01",
+   "name": "ZELLE PMT TO EFUA MENSAH 06/01",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ae32ccae6a139ffae623",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-06-15",
+   "name": "ZELLE PMT TO EFUA MENSAH 06/15",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_51f91c4759eaeeccae85",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-07-01",
+   "name": "ZELLE PMT TO EFUA MENSAH 07/01",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6ab395b4e2b1b4740581",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-07-15",
+   "name": "ZELLE PMT TO EFUA MENSAH 07/15",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d39c25e51b986cfef0e1",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-08-01",
+   "name": "ZELLE PMT TO EFUA MENSAH 08/01",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1244b6bef41d44489987",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-08-15",
+   "name": "ZELLE PMT TO EFUA MENSAH 08/15",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6c1cdfe2401c6823673c",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-09-01",
+   "name": "ZELLE PMT TO EFUA MENSAH 09/01",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_fc3df736c796bc89c872",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-09-15",
+   "name": "ZELLE PMT TO EFUA MENSAH 09/15",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ceda34de955632fb451c",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-10-01",
+   "name": "ZELLE PMT TO EFUA MENSAH 10/01",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_0225d229737cb615a072",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 1250.0,
+   "date": "2026-10-15",
+   "name": "ZELLE PMT TO EFUA MENSAH 10/15",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Efua Mensah",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_96aed00eda773ec0b971",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 52.18,
+   "date": "2026-05-17",
+   "name": "POS DEBIT 05/17 KROGER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9e484f4b86044f0054de",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 10.0,
+   "date": "2026-05-17",
+   "name": "POS DEBIT 05/17 BANDCAMP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Bandcamp",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b02924befb1475a70424",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 8.75,
+   "date": "2026-05-19",
+   "name": "POS DEBIT 05/19 GOOD CAKES AND BAKES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Good Cakes and Bakes",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c43b673a560825ab24d1",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 66.91,
+   "date": "2026-05-21",
+   "name": "POS DEBIT 05/21 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5ceb5147e3b135478b08",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 38.62,
+   "date": "2026-05-23",
+   "name": "POS DEBIT 05/23 KUZZO'S CHICKEN & WAFFLES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kuzzo's Chicken & Waffles",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_097f1a73446b66086094",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 5.75,
+   "date": "2026-05-26",
+   "name": "POS DEBIT 05/26 DETROIT SIP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Detroit Sip",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_18634100f71c99f435c5",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 52.36,
+   "date": "2026-05-27",
+   "name": "POS DEBIT 05/27 MARATHON",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_2bbeb9dd4a60f5f76cd8",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 5.5,
+   "date": "2026-05-28",
+   "name": "POS DEBIT 05/28 NARROW WAY CAFE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Narrow Way Cafe",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e35ed6d1987b4c04d49b",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 5.5,
+   "date": "2026-06-17",
+   "name": "POS DEBIT 06/17 NARROW WAY CAFE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Narrow Way Cafe",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4fa980da311d55797276",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 57.04,
+   "date": "2026-05-29",
+   "name": "POS DEBIT 05/29 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ea4d5290d2f36bce3d5b",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 29.8,
+   "date": "2026-05-30",
+   "name": "POS DEBIT 05/30 EASTERN MARKET",
+   "iso_currency_code": "USD",
+   "merchant_name": "Eastern Market",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_46b877003ca57e399177",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 36.4,
+   "date": "2026-05-31",
+   "name": "POS DEBIT 05/31 DETROIT VEGAN SOUL",
+   "iso_currency_code": "USD",
+   "merchant_name": "Detroit Vegan Soul",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_33ccee771846ffa1f279",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 35.0,
+   "date": "2026-06-03",
+   "name": "POS DEBIT 06/03 FRESH EDGE BARBERSHOP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fresh Edge Barbershop",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d70a60ac560df6b9f774",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 35.0,
+   "date": "2026-07-29",
+   "name": "POS DEBIT 07/29 FRESH EDGE BARBERSHOP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fresh Edge Barbershop",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_96ad58ed63358e3f79d0",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 35.0,
+   "date": "2026-09-23",
+   "name": "POS DEBIT 09/23 FRESH EDGE BARBERSHOP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fresh Edge Barbershop",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d2a1b8b50738d4696ad7",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 63.58,
+   "date": "2026-06-04",
+   "name": "POS DEBIT 06/04 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_60a4392da778b2b7f3ae",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 29.16,
+   "date": "2026-06-05",
+   "name": "POS DEBIT 06/05 BUDDY'S PIZZA",
+   "iso_currency_code": "USD",
+   "merchant_name": "Buddy's Pizza",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8a8a54779344308bf2b9",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 31.25,
+   "date": "2026-06-06",
+   "name": "POS DEBIT 06/06 EASTERN MARKET",
+   "iso_currency_code": "USD",
+   "merchant_name": "Eastern Market",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_bee983062278fc055dda",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 7.95,
+   "date": "2026-06-09",
+   "name": "POS DEBIT 06/09 GOOD CAKES AND BAKES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Good Cakes and Bakes",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5c50da789f7d924bafe6",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 7.95,
+   "date": "2026-10-21",
+   "name": "POS DEBIT 10/21 GOOD CAKES AND BAKES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Good Cakes and Bakes",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d18936bc6f218cd7d2fb",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 49.87,
+   "date": "2026-06-10",
+   "name": "POS DEBIT 06/10 BP",
+   "iso_currency_code": "USD",
+   "merchant_name": "BP",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_da70b7be5fb46e642505",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 31.4,
+   "date": "2026-06-12",
+   "name": "POS DEBIT 06/12 SLOWS BAR BQ",
+   "iso_currency_code": "USD",
+   "merchant_name": "Slows Bar BQ",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_fe71e8cecc03a179e195",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 48.66,
+   "date": "2026-06-14",
+   "name": "POS DEBIT 06/14 KROGER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_db4b449802fb96e6bdd8",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 71.12,
+   "date": "2026-06-18",
+   "name": "POS DEBIT 06/18 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5bdbc54044ee01815b70",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 9.25,
+   "date": "2026-06-26",
+   "name": "POS DEBIT 06/26 ASTRO COFFEE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Astro Coffee",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_fb2523df584985c1fcd8",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 51.43,
+   "date": "2026-06-25",
+   "name": "POS DEBIT 06/25 SPEEDWAY",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5a60adf1357d103f5b06",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 39.7,
+   "date": "2026-06-27",
+   "name": "POS DEBIT 06/27 KUZZO'S CHICKEN & WAFFLES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kuzzo's Chicken & Waffles",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_2a3ed5d4b93e55e96128",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 54.29,
+   "date": "2026-06-28",
+   "name": "POS DEBIT 06/28 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6c321da82c9ef8d97ad1",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 6.1,
+   "date": "2026-06-30",
+   "name": "POS DEBIT 06/30 DETROIT SIP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Detroit Sip",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7eebff4b96b338f78a73",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 6.1,
+   "date": "2026-08-19",
+   "name": "POS DEBIT 08/19 DETROIT SIP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Detroit Sip",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b4403975b614f40fb16b",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 76.48,
+   "date": "2026-07-02",
+   "name": "POS DEBIT 07/02 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8c3e4719ea5f6cba8137",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 5.75,
+   "date": "2026-07-08",
+   "name": "POS DEBIT 07/08 NARROW WAY CAFE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Narrow Way Cafe",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_26e084f2177aa5d736c4",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 5.75,
+   "date": "2026-08-04",
+   "name": "POS DEBIT 08/04 NARROW WAY CAFE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Narrow Way Cafe",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_50d5b0fa2f022ae563d2",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 5.75,
+   "date": "2026-09-09",
+   "name": "POS DEBIT 09/09 NARROW WAY CAFE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Narrow Way Cafe",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a04c195afd7484d1299b",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 5.75,
+   "date": "2026-10-28",
+   "name": "POS DEBIT 10/28 NARROW WAY CAFE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Narrow Way Cafe",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_17982c38b42307619453",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 26.93,
+   "date": "2026-07-10",
+   "name": "POS DEBIT 07/10 BUDDY'S PIZZA",
+   "iso_currency_code": "USD",
+   "merchant_name": "Buddy's Pizza",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_876cbe283d25be1b871a",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 37.2,
+   "date": "2026-07-11",
+   "name": "POS DEBIT 07/11 EASTERN MARKET",
+   "iso_currency_code": "USD",
+   "merchant_name": "Eastern Market",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a0912c54756d45caaf37",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 62.35,
+   "date": "2026-07-16",
+   "name": "POS DEBIT 07/16 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_332ac6b79ce52a0ecf8a",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 47.85,
+   "date": "2026-07-19",
+   "name": "POS DEBIT 07/19 BAOBAB FARE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Baobab Fare",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1454eb1ea539c6baf892",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 6.4,
+   "date": "2026-07-21",
+   "name": "POS DEBIT 07/21 DETROIT SIP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Detroit Sip",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d2457bc32a3bf2cf64bd",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 49.85,
+   "date": "2026-07-23",
+   "name": "POS DEBIT 07/23 WESTBORN MARKET",
+   "iso_currency_code": "USD",
+   "merchant_name": "Westborn Market",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_afb79843689dd8b92af6",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 26.49,
+   "date": "2026-07-24",
+   "name": "POS DEBIT 07/24 THIRD MAN RECORDS",
+   "iso_currency_code": "USD",
+   "merchant_name": "Third Man Records",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ff2bcb72f3bb6bba83aa",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 58.12,
+   "date": "2026-07-26",
+   "name": "POS DEBIT 07/26 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_0f26b7dca2e0b9a6e4db",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 8.25,
+   "date": "2026-07-28",
+   "name": "POS DEBIT 07/28 GOOD CAKES AND BAKES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Good Cakes and Bakes",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c1b649d768f741a5464e",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 49.31,
+   "date": "2026-07-30",
+   "name": "POS DEBIT 07/30 MARATHON",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_eb978ec14f933df7add5",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 64.73,
+   "date": "2026-08-02",
+   "name": "POS DEBIT 08/02 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9aa6478e524853ddc9b0",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 31.06,
+   "date": "2026-08-07",
+   "name": "POS DEBIT 08/07 BUDDY'S PIZZA",
+   "iso_currency_code": "USD",
+   "merchant_name": "Buddy's Pizza",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_446398c406e40c519570",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 9.0,
+   "date": "2026-08-07",
+   "name": "POS DEBIT 08/07 BANDCAMP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Bandcamp",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c2df042c02d822a87605",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 42.6,
+   "date": "2026-08-08",
+   "name": "POS DEBIT 08/08 EASTERN MARKET",
+   "iso_currency_code": "USD",
+   "merchant_name": "Eastern Market",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_097daab2c5310b3a3399",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 50.92,
+   "date": "2026-08-11",
+   "name": "POS DEBIT 08/11 SPEEDWAY",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1cabb4f6ecd6625d8d63",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 59.38,
+   "date": "2026-08-13",
+   "name": "POS DEBIT 08/13 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_92424ac861af22388218",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 36.95,
+   "date": "2026-08-16",
+   "name": "POS DEBIT 08/16 KUZZO'S CHICKEN & WAFFLES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kuzzo's Chicken & Waffles",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_24021d3cf76faa11a727",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 68.44,
+   "date": "2026-08-18",
+   "name": "POS DEBIT 08/18 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1197cdc8cf0dd1d682dc",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 47.19,
+   "date": "2026-08-23",
+   "name": "POS DEBIT 08/23 KROGER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9d0dd5c2540fcb83e2ae",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 7.8,
+   "date": "2026-08-25",
+   "name": "POS DEBIT 08/25 GOOD CAKES AND BAKES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Good Cakes and Bakes",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3d9ccc115f54ffee1eb7",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 53.66,
+   "date": "2026-08-27",
+   "name": "POS DEBIT 08/27 BP",
+   "iso_currency_code": "USD",
+   "merchant_name": "BP",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6fc71c5a5c311e263d9a",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 28.47,
+   "date": "2026-08-28",
+   "name": "POS DEBIT 08/28 BUDDY'S PIZZA",
+   "iso_currency_code": "USD",
+   "merchant_name": "Buddy's Pizza",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5f71b5c13b20f770431a",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 61.92,
+   "date": "2026-09-03",
+   "name": "POS DEBIT 09/03 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_93dc6c37f005815477dc",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 33.75,
+   "date": "2026-09-05",
+   "name": "POS DEBIT 09/05 EASTERN MARKET",
+   "iso_currency_code": "USD",
+   "merchant_name": "Eastern Market",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8decf972a4379cf737a9",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 48.2,
+   "date": "2026-09-06",
+   "name": "POS DEBIT 09/06 SPEEDWAY",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c54f4b3f40d08f6a643b",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 30.12,
+   "date": "2026-09-11",
+   "name": "POS DEBIT 09/11 BUDDY'S PIZZA",
+   "iso_currency_code": "USD",
+   "merchant_name": "Buddy's Pizza",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1a0d795d8929010f9eb1",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 57.66,
+   "date": "2026-09-13",
+   "name": "POS DEBIT 09/13 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4263720dc62719517bb6",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 6.25,
+   "date": "2026-09-16",
+   "name": "POS DEBIT 09/16 DETROIT SIP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Detroit Sip",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6ca938776c607fd1ca52",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 6.25,
+   "date": "2026-10-14",
+   "name": "POS DEBIT 10/14 DETROIT SIP",
+   "iso_currency_code": "USD",
+   "merchant_name": "Detroit Sip",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_49fa1d82a0ffb1dad61b",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 27.6,
+   "date": "2026-09-17",
+   "name": "POS DEBIT 09/17 MOTOR CITY BREWING WORKS",
+   "iso_currency_code": "USD",
+   "merchant_name": "Motor City Brewing Works",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_747d4556ba701ce1191a",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 44.83,
+   "date": "2026-09-19",
+   "name": "POS DEBIT 09/19 TRADER JOE'S",
+   "iso_currency_code": "USD",
+   "merchant_name": "Trader Joe's",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_060908e754dacee13a08",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 8.4,
+   "date": "2026-09-22",
+   "name": "POS DEBIT 09/22 GOOD CAKES AND BAKES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Good Cakes and Bakes",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_118c7686db11743de5d7",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 55.18,
+   "date": "2026-09-24",
+   "name": "POS DEBIT 09/24 MARATHON",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_60bbdb9695f45b25efa5",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 63.07,
+   "date": "2026-09-25",
+   "name": "POS DEBIT 09/25 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_cbdd352bc1181b123ffa",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 35.9,
+   "date": "2026-09-27",
+   "name": "POS DEBIT 09/27 DETROIT VEGAN SOUL",
+   "iso_currency_code": "USD",
+   "merchant_name": "Detroit Vegan Soul",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d7673b872d84a3cfba59",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 32.0,
+   "date": "2026-09-27",
+   "name": "POS DEBIT 09/27 LIFETOUCH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lifetouch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1105c588d0d965d77000",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 29.48,
+   "date": "2026-10-02",
+   "name": "POS DEBIT 10/02 BUDDY'S PIZZA",
+   "iso_currency_code": "USD",
+   "merchant_name": "Buddy's Pizza",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_280ee238b70998b3e6fa",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 36.15,
+   "date": "2026-10-03",
+   "name": "POS DEBIT 10/03 EASTERN MARKET",
+   "iso_currency_code": "USD",
+   "merchant_name": "Eastern Market",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_59b2c60fd514b2d782b8",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 6.0,
+   "date": "2026-10-07",
+   "name": "POS DEBIT 10/07 NARROW WAY CAFE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Narrow Way Cafe",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a119bb7b8f1db223e24a",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 66.27,
+   "date": "2026-10-09",
+   "name": "POS DEBIT 10/09 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7cc037a5043e45e58985",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 51.74,
+   "date": "2026-10-11",
+   "name": "POS DEBIT 10/11 SPEEDWAY",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4511e210445a845bda80",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 49.92,
+   "date": "2026-10-17",
+   "name": "POS DEBIT 10/17 KROGER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3c5c77c9c90eb552d097",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 42.3,
+   "date": "2026-10-18",
+   "name": "POS DEBIT 10/18 KUZZO'S CHICKEN & WAFFLES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kuzzo's Chicken & Waffles",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ca854c0d0610d7de1171",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 58.81,
+   "date": "2026-10-22",
+   "name": "POS DEBIT 10/22 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c3de75e9a801ad33bcd0",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 27.36,
+   "date": "2026-10-23",
+   "name": "POS DEBIT 10/23 BUDDY'S PIZZA",
+   "iso_currency_code": "USD",
+   "merchant_name": "Buddy's Pizza",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_461ec4959d87a660002a",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 50.44,
+   "date": "2026-10-24",
+   "name": "POS DEBIT 10/24 BP",
+   "iso_currency_code": "USD",
+   "merchant_name": "BP",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d9252320285b281a1a9a",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 64.19,
+   "date": "2026-10-28",
+   "name": "POS DEBIT 10/28 MEIJER",
+   "iso_currency_code": "USD",
+   "merchant_name": "Meijer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_990761343ef03f811dd6",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": 469.61,
+   "date": "2026-09-01",
+   "name": "POS DEBIT 09/01 SEVEN MILE AUTO & BRAKE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seven Mile Auto & Brake",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f2313e78812cd58d3790",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 38.0,
+   "date": "2026-05-03",
+   "name": "ACH DEBIT 05/03 HISCOX INSURANCE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hiscox Insurance",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9968aec130e51313ed7f",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-05-05",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 05/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_76a9f099fdc7f9b99615",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-05-20",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 05/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f7add937c6d24f68d73a",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 38.0,
+   "date": "2026-06-03",
+   "name": "ACH DEBIT 06/03 HISCOX INSURANCE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hiscox Insurance",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5c6a6ede13c765a79864",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-06-05",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 06/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_daa476d0f4e371d0f424",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 2150.0,
+   "date": "2026-06-15",
+   "name": "ACH DEBIT 06/15 IRS USATAXPYMT",
+   "iso_currency_code": "USD",
+   "merchant_name": "IRS USATAXPYMT",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GOVERNMENT_AND_NON_PROFIT",
+    "detailed": "GOVERNMENT_AND_NON_PROFIT_TAX_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5a39eb2647b8bf71e2f0",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-06-20",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 06/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_950f5239d321edf41d1b",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 38.0,
+   "date": "2026-07-03",
+   "name": "ACH DEBIT 07/03 HISCOX INSURANCE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hiscox Insurance",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4cd2c250b35196abf677",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-07-05",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 07/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6d929f810e8d8351f86f",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-07-20",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 07/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7dc578bd374e4f98fdd7",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 38.0,
+   "date": "2026-08-03",
+   "name": "ACH DEBIT 08/03 HISCOX INSURANCE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hiscox Insurance",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_46ac4de46552d6cd7cd0",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-08-05",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 08/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_19cfc4e9ac37ac31537a",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-08-20",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 08/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_030d88dcb851bb0001b8",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 38.0,
+   "date": "2026-09-03",
+   "name": "ACH DEBIT 09/03 HISCOX INSURANCE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hiscox Insurance",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1692fbf0737cae0e1eca",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-09-05",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 09/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e84bb9b3ed19db18ea3b",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 2150.0,
+   "date": "2026-09-15",
+   "name": "ACH DEBIT 09/15 IRS USATAXPYMT",
+   "iso_currency_code": "USD",
+   "merchant_name": "IRS USATAXPYMT",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GOVERNMENT_AND_NON_PROFIT",
+    "detailed": "GOVERNMENT_AND_NON_PROFIT_TAX_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c4bfd83cd443739db1f3",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-09-20",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 09/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3229015fb4ea3e0595e9",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 38.0,
+   "date": "2026-10-03",
+   "name": "ACH DEBIT 10/03 HISCOX INSURANCE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hiscox Insurance",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6a94ac0a78a487bf1875",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-10-05",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 10/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1f90a05e348630b0706b",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1600.0,
+   "date": "2026-10-20",
+   "name": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851 10/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_18a10e62146bb58033e2",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 228.0,
+   "date": "2026-05-04",
+   "name": "ZELLE PMT TO AMA BOATENG 05/04",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ac460a250b8a9bb989ad",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 304.0,
+   "date": "2026-05-11",
+   "name": "ZELLE PMT TO AMA BOATENG 05/11",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a0ceeee709344db3d689",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-05-18",
+   "name": "ZELLE PMT TO AMA BOATENG 05/18",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ff74777ed47d29e271e2",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-05-25",
+   "name": "ZELLE PMT TO AMA BOATENG 05/25",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_bd8a5aa0abcd1c89350e",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 304.0,
+   "date": "2026-06-01",
+   "name": "ZELLE PMT TO AMA BOATENG 06/01",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_81823d0f442488f2fcfb",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-06-08",
+   "name": "ZELLE PMT TO AMA BOATENG 06/08",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_fbc59deceddfb9ca079b",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-06-15",
+   "name": "ZELLE PMT TO AMA BOATENG 06/15",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b99322bf7abec137d8e3",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-06-22",
+   "name": "ZELLE PMT TO AMA BOATENG 06/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ba6d61dc413def295cf5",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-06-29",
+   "name": "ZELLE PMT TO AMA BOATENG 06/29",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_dcf9e24d832076e3b130",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 228.0,
+   "date": "2026-07-06",
+   "name": "ZELLE PMT TO AMA BOATENG 07/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_153a85ece1387759445c",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-07-13",
+   "name": "ZELLE PMT TO AMA BOATENG 07/13",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3cb1ae3757ad1aeff2ac",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-07-20",
+   "name": "ZELLE PMT TO AMA BOATENG 07/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9e9e05fae977d752394c",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-07-27",
+   "name": "ZELLE PMT TO AMA BOATENG 07/27",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_0e2734dbfb5ea57427c1",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-08-03",
+   "name": "ZELLE PMT TO AMA BOATENG 08/03",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_961b4ebb95f5ed3a9e8e",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-08-10",
+   "name": "ZELLE PMT TO AMA BOATENG 08/10",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_897ab51ded4c411e4a59",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-08-17",
+   "name": "ZELLE PMT TO AMA BOATENG 08/17",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_805bb889b5c385db44f6",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-08-24",
+   "name": "ZELLE PMT TO AMA BOATENG 08/24",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ed8e9b0bc01c24f09268",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-08-31",
+   "name": "ZELLE PMT TO AMA BOATENG 08/31",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b2ffbd05f3275a00e875",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-09-07",
+   "name": "ZELLE PMT TO AMA BOATENG 09/07",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_08de0987c9e96d769996",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-09-14",
+   "name": "ZELLE PMT TO AMA BOATENG 09/14",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6904a551e6e024d9af5c",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-09-21",
+   "name": "ZELLE PMT TO AMA BOATENG 09/21",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_fd5b12242fb4a8c8b145",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-09-28",
+   "name": "ZELLE PMT TO AMA BOATENG 09/28",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9f87c789ccd38120dd43",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-10-05",
+   "name": "ZELLE PMT TO AMA BOATENG 10/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8026f64c98de8b15b17e",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-10-12",
+   "name": "ZELLE PMT TO AMA BOATENG 10/12",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_04f4638b076b25d39f11",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 342.0,
+   "date": "2026-10-19",
+   "name": "ZELLE PMT TO AMA BOATENG 10/19",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d5c691ff1004c1c4eacb",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 418.0,
+   "date": "2026-10-26",
+   "name": "ZELLE PMT TO AMA BOATENG 10/26",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle to Ama Boateng",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7291bde518b68339677b",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 212.6,
+   "date": "2026-06-22",
+   "name": "ACH DEBIT 06/22 PAYMENT TO MOTOR CITY CREDIT UNION ..2290",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Motor City Credit Union ..2290",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8cc11d1ea0f3d8c0bfa5",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": -212.6,
+   "date": "2026-06-22",
+   "name": "ACH DEBIT 06/22 PAYMENT RECEIVED, THANK YOU",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_30f9cf12040793687565",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 450.09,
+   "date": "2026-07-22",
+   "name": "ACH DEBIT 07/22 PAYMENT TO MOTOR CITY CREDIT UNION ..2290",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Motor City Credit Union ..2290",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ae8d7168062015b00279",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": -450.09,
+   "date": "2026-07-22",
+   "name": "ACH DEBIT 07/22 PAYMENT RECEIVED, THANK YOU",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_66a30afb9aed66876874",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 716.83,
+   "date": "2026-08-22",
+   "name": "ACH DEBIT 08/22 PAYMENT TO MOTOR CITY CREDIT UNION ..2290",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Motor City Credit Union ..2290",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f08fdb76f3ee9976e4c8",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": -716.83,
+   "date": "2026-08-22",
+   "name": "ACH DEBIT 08/22 PAYMENT RECEIVED, THANK YOU",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6a61e4233e799bc287c6",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 647.9,
+   "date": "2026-09-22",
+   "name": "ACH DEBIT 09/22 PAYMENT TO MOTOR CITY CREDIT UNION ..2290",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Motor City Credit Union ..2290",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7e911d2198a6929a681b",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": -647.9,
+   "date": "2026-09-22",
+   "name": "ACH DEBIT 09/22 PAYMENT RECEIVED, THANK YOU",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_31fade4dc38416be729a",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": 1504.92,
+   "date": "2026-10-22",
+   "name": "ACH DEBIT 10/22 PAYMENT TO MOTOR CITY CREDIT UNION ..2290",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Motor City Credit Union ..2290",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8a9b898a8ee58e26e8ee",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "amount": -1504.92,
+   "date": "2026-10-22",
+   "name": "ACH DEBIT 10/22 PAYMENT RECEIVED, THANK YOU",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_76d7084c1d5614a6afb6",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -340.0,
+   "date": "2026-05-02",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 05/02",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6b76cd79e4890d7f924b",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1215.0,
+   "date": "2026-05-04",
+   "name": "PAYPAL TRANSFER 05/04",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_dbe18be00bcd50ba5884",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -660.0,
+   "date": "2026-05-09",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 05/09",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_39d4bb472ad0efc5d4ff",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1880.0,
+   "date": "2026-05-11",
+   "name": "PAYPAL TRANSFER 05/11",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f1f7f6e78044da6df4fc",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -450.0,
+   "date": "2026-05-16",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 05/16",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_db42cadd28cc4563b74c",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1420.0,
+   "date": "2026-05-18",
+   "name": "PAYPAL TRANSFER 05/18",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_80ceabcc2c2cb01d03f0",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -440.0,
+   "date": "2026-05-23",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 05/23",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_93fe90dc950684e7e1ec",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1345.0,
+   "date": "2026-05-25",
+   "name": "PAYPAL TRANSFER 05/25",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9af64adb2b716f258c3f",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -760.0,
+   "date": "2026-05-30",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 05/30",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_34767ee72bf6e3648199",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -2210.0,
+   "date": "2026-06-01",
+   "name": "PAYPAL TRANSFER 06/01",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4fff52ece807643570ea",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -470.0,
+   "date": "2026-06-06",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 06/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7d439458602a67c6295f",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1580.0,
+   "date": "2026-06-08",
+   "name": "PAYPAL TRANSFER 06/08",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_0f0c4717b71a5877ddb4",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -910.0,
+   "date": "2026-06-13",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 06/13",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_81465ad2cb0f30ed89b1",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -2045.0,
+   "date": "2026-06-15",
+   "name": "PAYPAL TRANSFER 06/15",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f7fd35a76dba7d8bd1e4",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -480.0,
+   "date": "2026-06-20",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 06/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e335881257ff3b24acff",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -2475.0,
+   "date": "2026-06-22",
+   "name": "PAYPAL TRANSFER 06/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9a2eb409c82c8ea546a6",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -470.0,
+   "date": "2026-06-27",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 06/27",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_56789cb08d77a5f4866b",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -2070.0,
+   "date": "2026-06-29",
+   "name": "PAYPAL TRANSFER 06/29",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ad44b28b6c8bfe57f763",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -60.0,
+   "date": "2026-07-04",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 07/04",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b06d5ee3e50942cf28dc",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -930.0,
+   "date": "2026-07-06",
+   "name": "PAYPAL TRANSFER 07/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_15bc2d5e79c1845fd4d0",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -160.0,
+   "date": "2026-07-11",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 07/11",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9273d30b13d7ee5ce78c",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -820.0,
+   "date": "2026-07-13",
+   "name": "PAYPAL TRANSFER 07/13",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c7352b6bcce84b5bcd28",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -300.0,
+   "date": "2026-07-18",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 07/18",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_860b2f14e0f3af256a32",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -680.0,
+   "date": "2026-07-20",
+   "name": "PAYPAL TRANSFER 07/20",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f3ad2f734c9d75bb5340",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -330.0,
+   "date": "2026-07-25",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 07/25",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6052ef7f6e1e5142adca",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -515.0,
+   "date": "2026-07-27",
+   "name": "PAYPAL TRANSFER 07/27",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_cabe99ee84a13ba2b6cb",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -160.0,
+   "date": "2026-08-01",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 08/01",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7b5cde07fdc499233de7",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1275.0,
+   "date": "2026-08-03",
+   "name": "PAYPAL TRANSFER 08/03",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f3cd248e04fcf9e7d466",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -220.0,
+   "date": "2026-08-08",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 08/08",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_2ea068235bd6c30bf38b",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -650.0,
+   "date": "2026-08-10",
+   "name": "PAYPAL TRANSFER 08/10",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_69ec8d2d321decb7c43a",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -280.0,
+   "date": "2026-08-15",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 08/15",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_01e0a9da114a3ab2b58b",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1215.0,
+   "date": "2026-08-17",
+   "name": "PAYPAL TRANSFER 08/17",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4cc38812ceaba7991eed",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -340.0,
+   "date": "2026-08-22",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 08/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_94a01b76260e878e7e68",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -715.0,
+   "date": "2026-08-24",
+   "name": "PAYPAL TRANSFER 08/24",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6dedc26cb76508d6e98d",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -420.0,
+   "date": "2026-08-29",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 08/29",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9475bb373fcfd7ee77ec",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1000.0,
+   "date": "2026-08-31",
+   "name": "PAYPAL TRANSFER 08/31",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9dca5db63643b73cdca5",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -260.0,
+   "date": "2026-09-05",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 09/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_2d049086d1ff39e3fccb",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -600.0,
+   "date": "2026-09-07",
+   "name": "PAYPAL TRANSFER 09/07",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_67bdc764701de5f9d62e",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -320.0,
+   "date": "2026-09-12",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 09/12",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c610123cff67aab317ae",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -790.0,
+   "date": "2026-09-14",
+   "name": "PAYPAL TRANSFER 09/14",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_cfa2867ad23cb446ef40",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -240.0,
+   "date": "2026-09-19",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 09/19",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ac88e16564413c5db11d",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1235.0,
+   "date": "2026-09-21",
+   "name": "PAYPAL TRANSFER 09/21",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_635e65a4be37522f23fc",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -330.0,
+   "date": "2026-09-26",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 09/26",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_be80c7abddfb8d2b0448",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -790.0,
+   "date": "2026-09-28",
+   "name": "PAYPAL TRANSFER 09/28",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3794f287eeec12f078b0",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -650.0,
+   "date": "2026-10-03",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 10/03",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7c9766effd159f71d3d6",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -750.0,
+   "date": "2026-10-05",
+   "name": "PAYPAL TRANSFER 10/05",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_616d659eb59c0389aa95",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -220.0,
+   "date": "2026-10-10",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 10/10",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_17b32a722ad8c486b959",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1600.0,
+   "date": "2026-10-12",
+   "name": "PAYPAL TRANSFER 10/12",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6e0c02b751e0c39cd5e5",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -160.0,
+   "date": "2026-10-17",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 10/17",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_0a52aaab4b754f0b98ec",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -1830.0,
+   "date": "2026-10-19",
+   "name": "PAYPAL TRANSFER 10/19",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_45db3649001f4a5c3c5f",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -60.0,
+   "date": "2026-10-24",
+   "name": "DEPOSIT, LIVERNOIS BRANCH 10/24",
+   "iso_currency_code": "USD",
+   "merchant_name": "Deposit, Livernois branch",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "in store",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_618c3a36460f8ab0cb91",
+   "account_id": "acc_98506773808e71d5976d",
+   "amount": -590.0,
+   "date": "2026-10-26",
+   "name": "PAYPAL TRANSFER 10/26",
+   "iso_currency_code": "USD",
+   "merchant_name": "PayPal transfer",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_816f4036229ac96f95b1",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 100.0,
+   "date": "2026-05-06",
+   "name": "ACH DEBIT ALLY BANK TRANSFER 05/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_04ab6ccce092fda8205d",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -100.0,
+   "date": "2026-05-06",
+   "name": "REQUESTED TRANSFER FROM MOTOR CITY CU ..8851 05/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Motor City Credit Union",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_260f26af9d410b5e97c0",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 100.0,
+   "date": "2026-06-08",
+   "name": "ACH DEBIT ALLY BANK TRANSFER 06/08",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_636466c95a01c0040b47",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -100.0,
+   "date": "2026-06-08",
+   "name": "REQUESTED TRANSFER FROM MOTOR CITY CU ..8851 06/08",
+   "iso_currency_code": "USD",
+   "merchant_name": "Motor City Credit Union",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_62470d5f224e2a189c4a",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 100.0,
+   "date": "2026-07-06",
+   "name": "ACH DEBIT ALLY BANK TRANSFER 07/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3e419ff954df89f2fa31",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -100.0,
+   "date": "2026-07-06",
+   "name": "REQUESTED TRANSFER FROM MOTOR CITY CU ..8851 07/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Motor City Credit Union",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_bc4b067505d613bb1fc0",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 100.0,
+   "date": "2026-08-06",
+   "name": "ACH DEBIT ALLY BANK TRANSFER 08/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_bf50d89ca780888c0380",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -100.0,
+   "date": "2026-08-06",
+   "name": "REQUESTED TRANSFER FROM MOTOR CITY CU ..8851 08/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Motor City Credit Union",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_10ceb2f72420bb5944c6",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 100.0,
+   "date": "2026-09-08",
+   "name": "ACH DEBIT ALLY BANK TRANSFER 09/08",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_646bceece2a5eabe3425",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -100.0,
+   "date": "2026-09-08",
+   "name": "REQUESTED TRANSFER FROM MOTOR CITY CU ..8851 09/08",
+   "iso_currency_code": "USD",
+   "merchant_name": "Motor City Credit Union",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e2c59944cfb68e62c0f0",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "amount": 100.0,
+   "date": "2026-10-06",
+   "name": "ACH DEBIT ALLY BANK TRANSFER 10/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c33b314538378c1b18b5",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -100.0,
+   "date": "2026-10-06",
+   "name": "REQUESTED TRANSFER FROM MOTOR CITY CU ..8851 10/06",
+   "iso_currency_code": "USD",
+   "merchant_name": "Motor City Credit Union",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_ff05debd48bc5e822140",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -25.25,
+   "date": "2026-05-31",
+   "name": "INTEREST PAID 05/31",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "interest",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_INTEREST_EARNED",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_dd3391fa9fdac13ce7a1",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -24.75,
+   "date": "2026-06-30",
+   "name": "INTEREST PAID 06/30",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "interest",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_INTEREST_EARNED",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d1f01e93ca93c0c876bc",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -25.94,
+   "date": "2026-07-31",
+   "name": "INTEREST PAID 07/31",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "interest",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_INTEREST_EARNED",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_42a31abd5c3a592c988f",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -26.29,
+   "date": "2026-08-31",
+   "name": "INTEREST PAID 08/31",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "interest",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_INTEREST_EARNED",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f250f739f1458e4efeb0",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "amount": -25.75,
+   "date": "2026-09-30",
+   "name": "INTEREST PAID 09/30",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ally Bank",
+   "pending": false,
+   "pending_transaction_id": null,
+   "payment_channel": "other",
+   "transaction_code": "interest",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_INTEREST_EARNED",
+    "confidence_level": "HIGH"
+   }
+  }
+ ],
+ "transaction_changes": [],
+ "recurring_streams": [
+  {
+   "id": "stream_6d0025f0a0124ef22d",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "flow": "inflow",
+   "description": "ONLINE TRANSFER FROM CORKTOWN AUDIO WORKS",
+   "merchant_name": "Transfer from Corktown Audio Works",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-05",
+   "last_date": "2026-10-20",
+   "predicted_next_date": "2026-11-05",
+   "frequency": "SEMI_MONTHLY",
+   "transaction_ids": [
+    "txn_dc4d4a4844b6c20b0dac",
+    "txn_428710e6ed88d2205a68",
+    "txn_235680aa1cfa0a988616",
+    "txn_9441a6e99ddcc9e55518",
+    "txn_01edd1d8a66ff5f71e94",
+    "txn_35a1fdbdb5376b3b995c",
+    "txn_c857d1495774c79121f3",
+    "txn_63eac67f7498e48cde60",
+    "txn_8bfda2b9dea26def3777",
+    "txn_86c3371b575ef29c01b1",
+    "txn_dee99be8e557643e3879",
+    "txn_5739df86b00ce3b91afb"
+   ],
+   "average_amount": -1600.0,
+   "last_amount": -1600.0,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_a3a15c5054005d106f",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "flow": "outflow",
+   "description": "ZELLE PMT TO EFUA MENSAH",
+   "merchant_name": "Zelle to Efua Mensah",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-01",
+   "last_date": "2026-10-15",
+   "predicted_next_date": "2026-11-01",
+   "frequency": "SEMI_MONTHLY",
+   "transaction_ids": [
+    "txn_1519c83f67d30e21890f",
+    "txn_1bc460a3ceaf10a49638",
+    "txn_d6e3337af1c993d7db2e",
+    "txn_ae32ccae6a139ffae623",
+    "txn_51f91c4759eaeeccae85",
+    "txn_6ab395b4e2b1b4740581",
+    "txn_d39c25e51b986cfef0e1",
+    "txn_1244b6bef41d44489987",
+    "txn_6c1cdfe2401c6823673c",
+    "txn_fc3df736c796bc89c872",
+    "txn_ceda34de955632fb451c",
+    "txn_0225d229737cb615a072"
+   ],
+   "average_amount": 1250.0,
+   "last_amount": 1250.0,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_794b9d198e9076b73f",
+   "account_id": "acc_98506773808e71d5976d",
+   "flow": "outflow",
+   "description": "ACH DEBIT HISCOX INSURANCE",
+   "merchant_name": "Hiscox Insurance",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-03",
+   "last_date": "2026-10-03",
+   "predicted_next_date": "2026-11-03",
+   "frequency": "MONTHLY",
+   "transaction_ids": [
+    "txn_f2313e78812cd58d3790",
+    "txn_f7add937c6d24f68d73a",
+    "txn_950f5239d321edf41d1b",
+    "txn_7dc578bd374e4f98fdd7",
+    "txn_030d88dcb851bb0001b8",
+    "txn_3229015fb4ea3e0595e9"
+   ],
+   "average_amount": 38.0,
+   "last_amount": 38.0,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_60b0419ebb510f2294",
+   "account_id": "acc_98506773808e71d5976d",
+   "flow": "outflow",
+   "description": "ONLINE TRANSFER TO PERSONAL CHECKING ..8851",
+   "merchant_name": "Transfer to Personal Checking ..8851",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-05",
+   "last_date": "2026-10-20",
+   "predicted_next_date": "2026-11-05",
+   "frequency": "SEMI_MONTHLY",
+   "transaction_ids": [
+    "txn_9968aec130e51313ed7f",
+    "txn_76a9f099fdc7f9b99615",
+    "txn_5c6a6ede13c765a79864",
+    "txn_5a39eb2647b8bf71e2f0",
+    "txn_4cd2c250b35196abf677",
+    "txn_6d929f810e8d8351f86f",
+    "txn_46ac4de46552d6cd7cd0",
+    "txn_19cfc4e9ac37ac31537a",
+    "txn_1692fbf0737cae0e1eca",
+    "txn_c4bfd83cd443739db1f3",
+    "txn_6a94ac0a78a487bf1875",
+    "txn_1f90a05e348630b0706b"
+   ],
+   "average_amount": 1600.0,
+   "last_amount": 1600.0,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_f1f70cf3cf466297ba",
+   "account_id": "acc_98506773808e71d5976d",
+   "flow": "outflow",
+   "description": "ZELLE PMT TO AMA BOATENG",
+   "merchant_name": "Zelle to Ama Boateng",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-04",
+   "last_date": "2026-10-26",
+   "predicted_next_date": "2026-11-02",
+   "frequency": "WEEKLY",
+   "transaction_ids": [
+    "txn_18a10e62146bb58033e2",
+    "txn_ac460a250b8a9bb989ad",
+    "txn_a0ceeee709344db3d689",
+    "txn_ff74777ed47d29e271e2",
+    "txn_bd8a5aa0abcd1c89350e",
+    "txn_81823d0f442488f2fcfb",
+    "txn_fbc59deceddfb9ca079b",
+    "txn_b99322bf7abec137d8e3",
+    "txn_ba6d61dc413def295cf5",
+    "txn_dcf9e24d832076e3b130",
+    "txn_153a85ece1387759445c",
+    "txn_3cb1ae3757ad1aeff2ac",
+    "txn_9e9e05fae977d752394c",
+    "txn_0e2734dbfb5ea57427c1",
+    "txn_961b4ebb95f5ed3a9e8e",
+    "txn_897ab51ded4c411e4a59",
+    "txn_805bb889b5c385db44f6",
+    "txn_ed8e9b0bc01c24f09268",
+    "txn_b2ffbd05f3275a00e875",
+    "txn_08de0987c9e96d769996",
+    "txn_6904a551e6e024d9af5c",
+    "txn_fd5b12242fb4a8c8b145",
+    "txn_9f87c789ccd38120dd43",
+    "txn_8026f64c98de8b15b17e",
+    "txn_04f4638b076b25d39f11",
+    "txn_d5c691ff1004c1c4eacb"
+   ],
+   "average_amount": 333.23,
+   "last_amount": 418.0,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_c3a0db5191808deb94",
+   "account_id": "acc_98506773808e71d5976d",
+   "flow": "outflow",
+   "description": "ACH DEBIT PAYMENT TO MOTOR CITY CREDIT UNION ..2290",
+   "merchant_name": "Payment to Motor City Credit Union ..2290",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-06-22",
+   "last_date": "2026-10-22",
+   "predicted_next_date": "2026-11-22",
+   "frequency": "MONTHLY",
+   "transaction_ids": [
+    "txn_7291bde518b68339677b",
+    "txn_30f9cf12040793687565",
+    "txn_66a30afb9aed66876874",
+    "txn_6a61e4233e799bc287c6",
+    "txn_31fade4dc38416be729a"
+   ],
+   "average_amount": 706.47,
+   "last_amount": 1504.92,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_603a62dfa1cab3df99",
+   "account_id": "4d7a2290c1e8b05f93a6e2d4",
+   "flow": "inflow",
+   "description": "ACH DEBIT PAYMENT RECEIVED, THANK YOU",
+   "merchant_name": "Payment received, thank you",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-06-22",
+   "last_date": "2026-10-22",
+   "predicted_next_date": "2026-11-22",
+   "frequency": "MONTHLY",
+   "transaction_ids": [
+    "txn_8cc11d1ea0f3d8c0bfa5",
+    "txn_ae8d7168062015b00279",
+    "txn_f08fdb76f3ee9976e4c8",
+    "txn_7e911d2198a6929a681b",
+    "txn_8a9b898a8ee58e26e8ee"
+   ],
+   "average_amount": -706.47,
+   "last_amount": -1504.92,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_de2373910065673577",
+   "account_id": "acc_98506773808e71d5976d",
+   "flow": "inflow",
+   "description": "DEPOSIT, LIVERNOIS BRANCH",
+   "merchant_name": "Deposit, Livernois branch",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-02",
+   "last_date": "2026-10-24",
+   "predicted_next_date": "2026-10-31",
+   "frequency": "WEEKLY",
+   "transaction_ids": [
+    "txn_76d7084c1d5614a6afb6",
+    "txn_dbe18be00bcd50ba5884",
+    "txn_f1f7f6e78044da6df4fc",
+    "txn_80ceabcc2c2cb01d03f0",
+    "txn_9af64adb2b716f258c3f",
+    "txn_4fff52ece807643570ea",
+    "txn_0f0c4717b71a5877ddb4",
+    "txn_f7fd35a76dba7d8bd1e4",
+    "txn_9a2eb409c82c8ea546a6",
+    "txn_ad44b28b6c8bfe57f763",
+    "txn_15bc2d5e79c1845fd4d0",
+    "txn_c7352b6bcce84b5bcd28",
+    "txn_f3ad2f734c9d75bb5340",
+    "txn_cabe99ee84a13ba2b6cb",
+    "txn_f3cd248e04fcf9e7d466",
+    "txn_69ec8d2d321decb7c43a",
+    "txn_4cc38812ceaba7991eed",
+    "txn_6dedc26cb76508d6e98d",
+    "txn_9dca5db63643b73cdca5",
+    "txn_67bdc764701de5f9d62e",
+    "txn_cfa2867ad23cb446ef40",
+    "txn_635e65a4be37522f23fc",
+    "txn_3794f287eeec12f078b0",
+    "txn_616d659eb59c0389aa95",
+    "txn_6e0c02b751e0c39cd5e5",
+    "txn_45db3649001f4a5c3c5f"
+   ],
+   "average_amount": -365.0,
+   "last_amount": -60.0,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_f22f813cfd8cc15d88",
+   "account_id": "acc_98506773808e71d5976d",
+   "flow": "inflow",
+   "description": "PAYPAL TRANSFER",
+   "merchant_name": "PayPal transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-04",
+   "last_date": "2026-10-26",
+   "predicted_next_date": "2026-11-02",
+   "frequency": "WEEKLY",
+   "transaction_ids": [
+    "txn_6b76cd79e4890d7f924b",
+    "txn_39d4bb472ad0efc5d4ff",
+    "txn_db42cadd28cc4563b74c",
+    "txn_93fe90dc950684e7e1ec",
+    "txn_34767ee72bf6e3648199",
+    "txn_7d439458602a67c6295f",
+    "txn_81465ad2cb0f30ed89b1",
+    "txn_e335881257ff3b24acff",
+    "txn_56789cb08d77a5f4866b",
+    "txn_b06d5ee3e50942cf28dc",
+    "txn_9273d30b13d7ee5ce78c",
+    "txn_860b2f14e0f3af256a32",
+    "txn_6052ef7f6e1e5142adca",
+    "txn_7b5cde07fdc499233de7",
+    "txn_2ea068235bd6c30bf38b",
+    "txn_01e0a9da114a3ab2b58b",
+    "txn_94a01b76260e878e7e68",
+    "txn_9475bb373fcfd7ee77ec",
+    "txn_2d049086d1ff39e3fccb",
+    "txn_c610123cff67aab317ae",
+    "txn_ac88e16564413c5db11d",
+    "txn_be80c7abddfb8d2b0448",
+    "txn_7c9766effd159f71d3d6",
+    "txn_17b32a722ad8c486b959",
+    "txn_0a52aaab4b754f0b98ec",
+    "txn_618c3a36460f8ab0cb91"
+   ],
+   "average_amount": -1239.42,
+   "last_amount": -590.0,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_c38f9d1610b63b0f82",
+   "account_id": "acc_2ced318075fa1b55180f",
+   "flow": "outflow",
+   "description": "ACH DEBIT ALLY BANK TRANSFER",
+   "merchant_name": "Ally Bank",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-06",
+   "last_date": "2026-10-06",
+   "predicted_next_date": "2026-11-06",
+   "frequency": "MONTHLY",
+   "transaction_ids": [
+    "txn_816f4036229ac96f95b1",
+    "txn_260f26af9d410b5e97c0",
+    "txn_62470d5f224e2a189c4a",
+    "txn_bc4b067505d613bb1fc0",
+    "txn_10ceb2f72420bb5944c6",
+    "txn_e2c59944cfb68e62c0f0"
+   ],
+   "average_amount": 100.0,
+   "last_amount": 100.0,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_32b6e5538d509cb41d",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "flow": "inflow",
+   "description": "REQUESTED TRANSFER FROM MOTOR CITY CU ..8851",
+   "merchant_name": "Motor City Credit Union",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-06",
+   "last_date": "2026-10-06",
+   "predicted_next_date": "2026-11-06",
+   "frequency": "MONTHLY",
+   "transaction_ids": [
+    "txn_04ab6ccce092fda8205d",
+    "txn_636466c95a01c0040b47",
+    "txn_3e419ff954df89f2fa31",
+    "txn_bf50d89ca780888c0380",
+    "txn_646bceece2a5eabe3425",
+    "txn_c33b314538378c1b18b5"
+   ],
+   "average_amount": -100.0,
+   "last_amount": -100.0,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  },
+  {
+   "id": "stream_561eb196069a95549b",
+   "account_id": "acc_a86b1b17a5d57d6c9b3f",
+   "flow": "inflow",
+   "description": "INTEREST PAID",
+   "merchant_name": "Ally Bank",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_INTEREST_EARNED",
+    "confidence_level": "HIGH"
+   },
+   "first_date": "2026-05-31",
+   "last_date": "2026-09-30",
+   "predicted_next_date": "2026-10-31",
+   "frequency": "MONTHLY",
+   "transaction_ids": [
+    "txn_ff05debd48bc5e822140",
+    "txn_dd3391fa9fdac13ce7a1",
+    "txn_d1f01e93ca93c0c876bc",
+    "txn_42a31abd5c3a592c988f",
+    "txn_f250f739f1458e4efeb0"
+   ],
+   "average_amount": -25.6,
+   "last_amount": -25.75,
+   "iso_currency_code": "USD",
+   "is_active": true,
+   "status": "MATURE"
+  }
+ ],
+ "credit_liabilities": [],
+ "mortgage_liabilities": [],
+ "student_liabilities": [],
+ "securities": [],
+ "holdings": [],
+ "investment_transactions": []
+}

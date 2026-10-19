@@ -1,0 +1,2592 @@
+{
+ "users": [
+  {
+   "id": "fbu_1717",
+   "email": "t.gaines313@gmail.com",
+   "name": "Terrence Gaines",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fbgr_301"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1401",
+   "email": "dwhitfield.audio@gmail.com",
+   "name": "Darius Whitfield",
+   "visibility": "public",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fbgr_301"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1402",
+   "email": "karen.lindgren58@yahoo.com",
+   "name": "Karen Lindgren",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1403",
+   "email": "mszymanski.ro@gmail.com",
+   "name": "Matt Szymanski",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1404",
+   "email": "hbeydoun@outlook.com",
+   "name": "Hassan Beydoun",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1405",
+   "email": "tgaddis313@gmail.com",
+   "name": "Tyrone Gaddis",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1406",
+   "email": "brett.novotny@icloud.com",
+   "name": "Brett Novotny",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1407",
+   "email": "lou.ferraro.warren@gmail.com",
+   "name": "Lou Ferraro",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1408",
+   "email": "dee.carter.det@gmail.com",
+   "name": "Dee Carter",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1409",
+   "email": "robhensley.dj@gmail.com",
+   "name": "Rob Hensley",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1410",
+   "email": "jostrowski419@aol.com",
+   "name": "Jim Ostrowski",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1411",
+   "email": "marcusbell.hvac@gmail.com",
+   "name": "Marcus Bell",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1412",
+   "email": "jalenprice.det@gmail.com",
+   "name": "Jalen Price",
+   "visibility": "public",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1413",
+   "email": "andrewills313@gmail.com",
+   "name": "Andre Wills",
+   "visibility": "public",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1414",
+   "email": "nina.kowalczyk@gmail.com",
+   "name": "Nina Kowalczyk",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1001",
+   "email": "kofi@corktownaudio.com",
+   "name": "Kofi Mensah",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1305",
+    "fb_u_aaron_whitmore58_73f85f",
+    "fb_u_abena_boateng58_6388a1",
+    "fb_u_aboateng32_a4cc8e",
+    "fb_u_adjei_grace_468b6d",
+    "fb_u_ahmedjaber_6c342c",
+    "fb_u_akua_darko_e1ad46",
+    "fb_u_ama_boateng_photo_07e825",
+    "fbu_1413",
+    "fb_u_ankrah_kwesi_f4c0a9",
+    "fb_u_ansah_kojo_73bdff",
+    "fb_u_arusso87_d0eb1c",
+    "fb_u_asaleh12_9b46c8",
+    "fb_u_asante_yaa_9cec64",
+    "fb_u_benofori_758d03",
+    "fb_u_bernardellis_c8538d",
+    "fb_u_brenda_cole_fc64ec",
+    "fbu_1406",
+    "fbu_1003",
+    "fb_u_brzezinski_tom_aacf87",
+    "fb_u_btate87_f9f7bf",
+    "fb_u_calvin_brooks_188312",
+    "fb_u_carl_dombrowski58_a25d59",
+    "fb_u_cibarra22_208083",
+    "fb_u_comfort_mensah88_89df8e",
+    "fb_u_curtis_bland_98e527",
+    "fb_u_danielle_brooks_f290ca",
+    "fb_u_darko_afua_5e4b2a",
+    "fb_u_darnell_rucker_b5b88e",
+    "fb_u_deborah_asamoah78_442c15",
+    "fbu_1408",
+    "fbu_1124",
+    "fb_u_dfontaine27_043669",
+    "fb_u_dgrant27_798494",
+    "fb_u_doristhompson_16f405",
+    "fb_u_dpruitt_rides_2a8f22",
+    "fbu_1401",
+    "fb_u_eagyeman27_8b70fd",
+    "fb_u_earl_thompson_74d020",
+    "fb_u_efuamensah91_807cee",
+    "fb_u_ellis_vernon_2b22b1",
+    "fb_u_esanders57_985669",
+    "fb_u_felix_amoah33_87264f",
+    "fb_u_frank_wisniewski73_cf2393",
+    "fb_u_frank_zielinski88_09f0f3",
+    "fb_u_gary_lutz_beaa00",
+    "fb_u_gary_pawlak23_e13d50",
+    "fb_u_gary_fb3e4c",
+    "fb_u_gloria_mathis43_f7fb04",
+    "fb_u_gmendez42_15d8c6",
+    "fb_u_gmitchell32_f9a413",
+    "fb_u_gpearson17_7fcf60",
+    "fb_u_grace_owusu53_8b53c7",
+    "fb_u_gregwisniewski_fe8e81",
+    "fb_u_haroldjenkins_c620f0",
+    "fb_u_haroldsimms_6cbaf3",
+    "fbu_1404",
+    "fb_u_hpettway12_354c2d",
+    "fb_u_itetteh72_f4943c",
+    "fb_u_ivory_pamela_d71608",
+    "fbu_1412",
+    "fb_u_joe_kaminski_72c0a8",
+    "fb_u_rutledge_lamar_5980cf",
+    "fb_u_patriciadunlap_46e4ee"
+   ],
+   "group_ids": [
+    "fbgr_301",
+    "fb_group_detroit_monday_rollers",
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [
+    "fbpg_201"
+   ],
+   "followed_page_ids": [
+    "fbpg_201"
+   ]
+  },
+  {
+   "id": "fbu_1002",
+   "email": "rayortiz.detroit@gmail.com",
+   "name": "Ray Ortiz",
+   "visibility": "public",
+   "friend_ids": [],
+   "group_ids": [
+    "fbgr_301"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1003",
+   "email": "brian.kessler.audio@gmail.com",
+   "name": "Brian Kessler",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fbgr_301"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": [
+    "fbpg_201"
+   ]
+  },
+  {
+   "id": "user_9cd1eda59676140326c18ce5",
+   "email": "sam.novak.makes@gmail.com",
+   "name": "Sam Novak",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1124",
+   "email": "derek.hollis.oh@gmail.com",
+   "name": "Derek Hollis",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1305",
+   "email": "walt.jefferson.det@gmail.com",
+   "name": "Walt Jefferson",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fbgr_301",
+    "fb_group_detroit_monday_rollers"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_whitaker_lorraine_e0a3a6",
+   "email": "whitaker.lorraine@outlook.com",
+   "name": "Lorraine Whitaker",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_pruitt_gerald_55987c",
+   "email": "pruitt.gerald@gmail.com",
+   "name": "Gerald Pruitt",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_tasha_monroe73_3174e2",
+   "email": "tasha.monroe73@gmail.com",
+   "name": "Tasha Monroe",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_asante_yaa_9cec64",
+   "email": "asante.yaa@icloud.com",
+   "name": "Yaa Asante",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_kwabenaowusu_c6ead6",
+   "email": "kwabenaowusu@gmail.com",
+   "name": "Kwabena Owusu",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_darnell_rucker_b5b88e",
+   "email": "darnell.rucker@gmail.com",
+   "name": "Darnell Rucker",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_detroit_monday_rollers"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_samuel_adjei_6f4752",
+   "email": "samuel.adjei@icloud.com",
+   "name": "Samuel Adjei",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_brenda_cole_fc64ec",
+   "email": "brenda.cole@outlook.com",
+   "name": "Brenda Cole",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_dgrant27_798494",
+   "email": "dgrant27@gmail.com",
+   "name": "Denise Grant",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_mueller_tom_8564bd",
+   "email": "mueller.tom@icloud.com",
+   "name": "Tom Mueller",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_akua_darko_e1ad46",
+   "email": "akua.darko@gmail.com",
+   "name": "Akua Darko",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ellis_vernon_2b22b1",
+   "email": "ellis.vernon@gmail.com",
+   "name": "Vernon Ellis",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gloria_mathis43_f7fb04",
+   "email": "gloria.mathis43@yahoo.com",
+   "name": "Gloria Mathis",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_curtis_bland_98e527",
+   "email": "curtis.bland@outlook.com",
+   "name": "Curtis Bland",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_aaron_whitmore58_73f85f",
+   "email": "aaron.whitmore58@gmail.com",
+   "name": "Aaron Whitmore",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_keisha_whitmore23_a56812",
+   "email": "keisha.whitmore23@gmail.com",
+   "name": "Keisha Whitmore",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ansah_kojo_73bdff",
+   "email": "ansah.kojo@icloud.com",
+   "name": "Kojo Ansah",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_btate87_f9f7bf",
+   "email": "btate87@gmail.com",
+   "name": "Bernard Tate",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_luisherrera_cc8421",
+   "email": "luisherrera@gmail.com",
+   "name": "Luis Herrera",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_detroit_monday_rollers"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ivory_pamela_d71608",
+   "email": "ivory.pamela@outlook.com",
+   "name": "Pamela Ivory",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_wsharpe67_397327",
+   "email": "wsharpe67@outlook.com",
+   "name": "Wendell Sharpe",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_omalley_erin_582080",
+   "email": "omalley.erin@gmail.com",
+   "name": "Erin O'Malley",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_reginaldmoore_98f4d2",
+   "email": "reginaldmoore@gmail.com",
+   "name": "Reginald Moore",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_haroldsimms_6cbaf3",
+   "email": "haroldsimms@gmail.com",
+   "name": "Harold Simms",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_eagyeman27_8b70fd",
+   "email": "eagyeman27@outlook.com",
+   "name": "Esther Agyeman",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gmitchell32_f9a413",
+   "email": "gmitchell32@icloud.com",
+   "name": "Gloria Mitchell",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_pdombrowski97_053952",
+   "email": "pdombrowski97@gmail.com",
+   "name": "Patrick Dombrowski",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_trhodes97_873b19",
+   "email": "trhodes97@outlook.com",
+   "name": "Tamika Rhodes",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gregwisniewski_fe8e81",
+   "email": "gregwisniewski@icloud.com",
+   "name": "Greg Wisniewski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_dfontaine27_043669",
+   "email": "dfontaine27@yahoo.com",
+   "name": "Derrick Fontaine",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_megan_orourke_653cdd",
+   "email": "megan.orourke@gmail.com",
+   "name": "Megan O'Rourke",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_detroit_monday_rollers"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_calvin_brooks_188312",
+   "email": "calvin.brooks@gmail.com",
+   "name": "Calvin Brooks",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_tomkaczmarek_073d56",
+   "email": "tomkaczmarek@icloud.com",
+   "name": "Tom Kaczmarek",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_bernardellis_c8538d",
+   "email": "bernardellis@gmail.com",
+   "name": "Bernard Ellis",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_vaughn_courtney_96d6a2",
+   "email": "vaughn.courtney@outlook.com",
+   "name": "Courtney Vaughn",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_hpettway12_354c2d",
+   "email": "hpettway12@gmail.com",
+   "name": "Harold Pettway",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_sharon_pulaski78_0823b3",
+   "email": "sharon.pulaski78@outlook.com",
+   "name": "Sharon Pulaski",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_moniquedupree_0171a4",
+   "email": "moniquedupree@yahoo.com",
+   "name": "Monique Dupree",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_frank_zielinski88_09f0f3",
+   "email": "frank.zielinski88@icloud.com",
+   "name": "Frank Zielinski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_keisha_lambert_3551cb",
+   "email": "keisha.lambert@icloud.com",
+   "name": "Keisha Lambert",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_cibarra22_208083",
+   "email": "cibarra22@yahoo.com",
+   "name": "Carlos Ibarra",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_lorraine_givens53_9fdcee",
+   "email": "lorraine.givens53@icloud.com",
+   "name": "Lorraine Givens",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_deborah_asamoah78_442c15",
+   "email": "deborah.asamoah78@gmail.com",
+   "name": "Deborah Asamoah",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_tate_marvin_52959c",
+   "email": "tate.marvin@yahoo.com",
+   "name": "Marvin Tate",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_reggie_thornton83_9ca479",
+   "email": "reggie.thornton83@icloud.com",
+   "name": "Reggie Thornton",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gpearson17_7fcf60",
+   "email": "gpearson17@gmail.com",
+   "name": "Gary Pearson",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rutledge_lamar_5980cf",
+   "email": "rutledge.lamar@yahoo.com",
+   "name": "Lamar Rutledge",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gmendez42_15d8c6",
+   "email": "gmendez42@gmail.com",
+   "name": "Gloria Mendez",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_zielinski_piotr_0526f4",
+   "email": "zielinski.piotr@gmail.com",
+   "name": "Piotr Zielinski",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_yaw_asante_5e2428",
+   "email": "yaw.asante@icloud.com",
+   "name": "Yaw Asante",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_pawlak_greg_0cf370",
+   "email": "pawlak.greg@yahoo.com",
+   "name": "Greg Pawlak",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_samirahaddad_78b966",
+   "email": "samirahaddad@gmail.com",
+   "name": "Samira Haddad",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_marisol_trevino48_9343b6",
+   "email": "marisol.trevino48@gmail.com",
+   "name": "Marisol Trevino",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_detroit_monday_rollers"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_frank_wisniewski73_cf2393",
+   "email": "frank.wisniewski73@gmail.com",
+   "name": "Frank Wisniewski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_asaleh12_9b46c8",
+   "email": "asaleh12@gmail.com",
+   "name": "Abdul Saleh",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_russkaminski_eb9198",
+   "email": "russkaminski@gmail.com",
+   "name": "Russ Kaminski",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_klattimore67_283fbd",
+   "email": "klattimore67@gmail.com",
+   "name": "Keisha Lattimore",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_carl_dombrowski58_a25d59",
+   "email": "carl.dombrowski58@yahoo.com",
+   "name": "Carl Dombrowski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_kwesi_ofori88_f5048b",
+   "email": "kwesi.ofori88@icloud.com",
+   "name": "Kwesi Ofori",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_trish_mcallister48_ca6b34",
+   "email": "trish.mcallister48@outlook.com",
+   "name": "Trish McAllister",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rpemberton37_2ab26c",
+   "email": "rpemberton37@icloud.com",
+   "name": "Rashad Pemberton",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_wharrington37_64d6a5",
+   "email": "wharrington37@icloud.com",
+   "name": "Wendell Harrington",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_brzezinski_tom_aacf87",
+   "email": "brzezinski.tom@gmail.com",
+   "name": "Tom Brzezinski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gary_lutz_beaa00",
+   "email": "gary.lutz@gmail.com",
+   "name": "Gary Lutz",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_stanley_hutchins_6aa6df",
+   "email": "stanley.hutchins@icloud.com",
+   "name": "Stanley Hutchins",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_whitaker_jamal_b8e9d0",
+   "email": "whitaker.jamal@yahoo.com",
+   "name": "Jamal Whitaker",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_lindapruitt_9c9a2b",
+   "email": "lindapruitt@gmail.com",
+   "name": "Linda Pruitt",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ahmedjaber_6c342c",
+   "email": "ahmedjaber@gmail.com",
+   "name": "Ahmed Jaber",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_esanders57_985669",
+   "email": "esanders57@outlook.com",
+   "name": "Ebony Sanders",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_leon_gibbs_56caca",
+   "email": "leon.gibbs@gmail.com",
+   "name": "Leon Gibbs",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_kwabena_asante23_27f49a",
+   "email": "kwabena.asante23@gmail.com",
+   "name": "Kwabena Asante",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_mensah_akosua_53699e",
+   "email": "mensah.akosua@yahoo.com",
+   "name": "Akosua Mensah",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ymensah32_487874",
+   "email": "ymensah32@yahoo.com",
+   "name": "Yaw Mensah",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_grace_owusu53_8b53c7",
+   "email": "grace.owusu53@gmail.com",
+   "name": "Grace Owusu",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_nana_agyeman_4e2706",
+   "email": "nana.agyeman@gmail.com",
+   "name": "Nana Agyeman",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_aboateng32_a4cc8e",
+   "email": "aboateng32@icloud.com",
+   "name": "Adwoa Boateng",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ankrah_kwesi_f4c0a9",
+   "email": "ankrah.kwesi@gmail.com",
+   "name": "Kwesi Ankrah",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_joe_kaminski_72c0a8",
+   "email": "joe.kaminski@gmail.com",
+   "name": "Joe Kaminski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_danielle_brooks_f290ca",
+   "email": "danielle.brooks@gmail.com",
+   "name": "Danielle Brooks",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_pete_duchene48_dfdf0d",
+   "email": "pete.duchene48@yahoo.com",
+   "name": "Pete Duchene",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [
+    "fb_group_detroit_monday_rollers"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_earl_thompson_74d020",
+   "email": "earl.thompson@gmail.com",
+   "name": "Earl Thompson",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_doristhompson_16f405",
+   "email": "doristhompson@gmail.com",
+   "name": "Doris Thompson",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_comfort_mensah88_89df8e",
+   "email": "comfort.mensah88@gmail.com",
+   "name": "Comfort Mensah",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_darko_afua_5e4b2a",
+   "email": "darko.afua@gmail.com",
+   "name": "Afua Darko",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_benofori_758d03",
+   "email": "benofori@icloud.com",
+   "name": "Ben Ofori",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_arusso87_d0eb1c",
+   "email": "arusso87@yahoo.com",
+   "name": "Anthony Russo",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gary_pawlak23_e13d50",
+   "email": "gary.pawlak23@yahoo.com",
+   "name": "Gary Pawlak",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_itetteh72_f4943c",
+   "email": "itetteh72@icloud.com",
+   "name": "Isaac Tetteh",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_philip_osei_490fa2",
+   "email": "philip.osei@gmail.com",
+   "name": "Philip Osei",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rcoleman92_7ab790",
+   "email": "rcoleman92@gmail.com",
+   "name": "Reggie Coleman",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_haroldjenkins_c620f0",
+   "email": "haroldjenkins@gmail.com",
+   "name": "Harold Jenkins",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_samuel_antwi_e080cf",
+   "email": "samuel.antwi@outlook.com",
+   "name": "Samuel Antwi",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_felix_amoah33_87264f",
+   "email": "felix.amoah33@icloud.com",
+   "name": "Felix Amoah",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ruth_addo_8e50e8",
+   "email": "ruth.addo@gmail.com",
+   "name": "Ruth Addo",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_yoforiatta82_bd82c0",
+   "email": "yoforiatta82@gmail.com",
+   "name": "Yaw Ofori-Atta",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_lena_kraus_370b2c",
+   "email": "lena.kraus@outlook.com",
+   "name": "Lena Kraus",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_adjei_grace_468b6d",
+   "email": "adjei.grace@outlook.com",
+   "name": "Grace Adjei",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_patriciadunlap_46e4ee",
+   "email": "patriciadunlap@yahoo.com",
+   "name": "Patricia Dunlap",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_abena_boateng58_6388a1",
+   "email": "abena.boateng58@yahoo.com",
+   "name": "Abena Boateng",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ama_boateng_photo_07e825",
+   "email": "ama.boateng.photo@gmail.com",
+   "name": "Ama Boateng",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_dpruitt_rides_2a8f22",
+   "email": "dpruitt.rides@gmail.com",
+   "name": "Denise Pruitt",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_detroit_monday_rollers"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_efuamensah91_807cee",
+   "email": "efuamensah91@gmail.com",
+   "name": "Efua Mensah",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_bagley_block_club_prairie_st_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gary_fb3e4c",
+   "email": "gary@vintagepartsdepot.com",
+   "name": "Gary Lindqvist",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  }
+ ],
+ "pages": [
+  {
+   "id": "fbpg_201",
+   "name": "Corktown Audio Works",
+   "admin_ids": [
+    "fbu_1001"
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "fbgr_301",
+   "name": "Detroit Vintage Audio",
+   "visibility": "private",
+   "member_ids": [
+    "fbu_1001",
+    "fbu_1002",
+    "fbu_1003",
+    "fbu_1717",
+    "fbu_1305",
+    "fbu_1401"
+   ]
+  },
+  {
+   "id": "fb_group_detroit_monday_rollers",
+   "name": "Detroit Monday Rollers",
+   "visibility": "public",
+   "member_ids": [
+    "fbu_1001",
+    "fb_u_luisherrera_cc8421",
+    "fb_u_darnell_rucker_b5b88e",
+    "fb_u_marisol_trevino48_9343b6",
+    "fb_u_pete_duchene48_dfdf0d",
+    "fb_u_megan_orourke_653cdd",
+    "fbu_1305",
+    "fb_u_dpruitt_rides_2a8f22"
+   ]
+  },
+  {
+   "id": "fb_group_bagley_block_club_prairie_st_neighbors",
+   "name": "Bagley Block Club (Prairie St & neighbors)",
+   "visibility": "private",
+   "member_ids": [
+    "fbu_1001",
+    "fb_u_efuamensah91_807cee",
+    "fb_u_tasha_monroe73_3174e2",
+    "fb_u_whitaker_lorraine_e0a3a6",
+    "fb_u_reginaldmoore_98f4d2",
+    "fb_u_doristhompson_16f405",
+    "fb_u_earl_thompson_74d020",
+    "fb_u_pruitt_gerald_55987c",
+    "fb_u_aaron_whitmore58_73f85f",
+    "fb_u_keisha_whitmore23_a56812",
+    "fb_u_dgrant27_798494",
+    "fb_u_calvin_brooks_188312",
+    "fb_u_ellis_vernon_2b22b1",
+    "fb_u_brenda_cole_fc64ec",
+    "fb_u_wsharpe67_397327"
+   ]
+  }
+ ],
+ "posts": [
+  {
+   "id": "fbp_4717",
+   "author_id": "fbu_1717",
+   "message": "Sansui AU-555A owners, I need a sanity check. Finished my first full recap on one over the weekend (power supply, both amp boards, plus the big filter caps) and now there's a hum in both channels that was NOT there before. It's there with the volume all the way down and nothing plugged in, and it doesn't change when I turn the knob. Nothing's getting hot, no smell. Did I screw something up or do new caps need to break in? Where would you start?",
+   "created_at": "2026-06-24T00:10:37Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_301"
+  },
+  {
+   "id": "fbp_4718",
+   "author_id": "fbu_1001",
+   "message": "Terrence, on your AU-555A: a hum that showed up right after the recap, with nothing plugged in and no change on the volume knob, is nearly always on the power supply or ground side, not the preamp. New caps don't need to break in. I'd check these in order:\n\n1. The ground lug at the main filter caps. On a lot of Sansuis from this era the ground return lands on a lug under the cap bracket, and the old cans are part of what holds it tight. Once they're out, that lug can end up loose or grounding through paint. Take it apart, clean it to bare metal, add a star washer and snug it down.\n2. Filter cap polarity and values. Go through every new electrolytic against the service manual, the big ones especially. A reversed or undersized filter cap gives you a buzzy 120 Hz hum and runs warm.\n3. Whatever you change, bring it back up on a dim-bulb tester: a 60 to 100 W incandescent bulb in series with the mains. It should flash and settle to a faint glow. If it stays bright, switch off and look for a short or a reversed cap before you go any further.\n\nIf it turns out to be a smooth, low 60 Hz hum rather than a buzz, look at grounding and lead dress around the power transformer instead.",
+   "created_at": "2026-06-24T01:00:52Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_301"
+  },
+  {
+   "id": "fbp_4719",
+   "author_id": "fbu_1717",
+   "message": "Update on my AU-555A hum, for anyone who searches this later: FIXED. Kofi called it, it was the ground lug under the filter cap bracket. Turns out the old cans were what kept that lug clamped, and once they came out the nut worked loose and the ground ended up running through the paint. Bare metal, star washer, tightened down, and now it's dead quiet. Next one goes up on a dim-bulb tester like Kofi said. Every one of you should have one on the bench.",
+   "created_at": "2026-07-01T00:16:29Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_301"
+  },
+  {
+   "id": "fbp_4417",
+   "author_id": "fbu_1401",
+   "message": "Anyone know if Windy City is doing early-bird entry again this year? Thinking about driving over Saturday.",
+   "created_at": "2026-10-25T19:42:10Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_301"
+  },
+  {
+   "id": "fbp_4001",
+   "author_id": "fbu_1002",
+   "message": "heard Lena Marsh is spinning at Windy City?? anyone vending?",
+   "created_at": "2026-10-25T18:10:23Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_301"
+  },
+  {
+   "id": "fbp_4002",
+   "author_id": "fbu_1003",
+   "message": "VPD raised list prices again 😤 where's everyone buying dial lamps and belts?",
+   "created_at": "2026-10-27T23:40:52Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_301"
+  },
+  {
+   "id": "fbp_4305",
+   "author_id": "fbu_1305",
+   "message": "Palmer Woods estate sale Saturday. 19340 Strathcona Dr. Opens 8:00. Marantz receiver stack, a Sansui amp, about 400 LPs. Pictures from the preview below.",
+   "created_at": "2026-10-28T22:20:37Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_301"
+  },
+  {
+   "id": "fb_post_580982a56c",
+   "author_id": "fbu_1001",
+   "message": "Saturday pick-ups done. Ama shot six pieces today and every one of them looks better in her photos than it does on my bench. Pizza for the crew tonight.",
+   "created_at": "2026-05-02T23:40:12Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_00acdd9d9c",
+   "author_id": "fb_u_luisherrera_cc8421",
+   "message": "Rollers tonight, 6:30 from Roosevelt Park. No-drop pace, about 25 miles, lights for the way back. Wind's out of the west so the return leg should feel nice for once.",
+   "created_at": "2026-05-04T21:30:34Z",
+   "visibility": "group",
+   "group_id": "fb_group_detroit_monday_rollers"
+  },
+  {
+   "id": "fb_post_635b22e307",
+   "author_id": "fbu_1001",
+   "message": "First Monday Rollers of the season on the Trek. My legs are reporting a winter spent hunched over a bench. Thank you Luis for waiting at every light.",
+   "created_at": "2026-05-05T01:15:35Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_23caef50ce",
+   "author_id": "fbu_1001",
+   "message": "Starting something new on Wednesdays. Every week we'll share one habit from the bench that keeps old gear alive, no fluff. This week: if a receiver crackles when you turn a knob, that's usually dirty controls, not a dying amp. Work every pot and switch twenty or thirty times before you judge it. Follow along here or on Instagram under #BenchNotes.",
+   "created_at": "2026-05-06T16:25:13Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_a607ef7b9f",
+   "author_id": "fbu_1001",
+   "message": "Kwame helped Ama photograph a turntable today. His job was holding the reflector. He held it very, very seriously.",
+   "created_at": "2026-05-10T00:10:41Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_14f924bd54",
+   "author_id": "fbu_1001",
+   "message": "Bench Notes, week two. Anything we bring home from an estate sale meets the dim-bulb tester before it ever sees a wall outlet. A 60 W bulb wired in series limits the current, so if a filter cap or transformer is shorted, the bulb glows bright instead of something inside letting out smoke. Cheap to build, and it saves a lot of heartbreak.",
+   "created_at": "2026-05-13T16:45:27Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_b123d5a49f",
+   "author_id": "fbu_1001",
+   "message": "Estate-sale ride through University District this morning. Panniers came home with a Sansui tuner, two boxes of tubes and a very heavy spool of speaker wire. The bike handled it. My back has questions.",
+   "created_at": "2026-05-16T17:10:43Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_826b8ea882",
+   "author_id": "fbu_1001",
+   "message": "Electrician came by this afternoon to quote a dedicated 20 amp circuit for the garage. Running a variac, a scope and a heat gun off one tired outlet was never a long-term plan. Efua says she'll believe it when the kitchen lights stop dimming.",
+   "created_at": "2026-05-18T23:45:32Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_794458ac09",
+   "author_id": "fbu_1001",
+   "message": "Small detail, big difference. Plenty of receivers reach us with cold-white LEDs someone dropped into the dial. We put them back to warm incandescent, or an LED color-matched to the original. Your dial should look like 1976 at night, not a parking garage.",
+   "created_at": "2026-05-20T16:30:55Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_468d1d2e5a",
+   "author_id": "fbu_1001",
+   "message": "Bench Notes: after any recap, and before the speakers go back on, the meter goes on the speaker terminals. We want DC offset sitting in the low millivolts, and that reading goes on the bench report for the unit. If it's high, something is wrong and the receiver doesn't leave the bench.",
+   "created_at": "2026-06-03T16:35:36Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_9c5362ea21",
+   "author_id": "fbu_1001",
+   "message": "Grandmont-Rosedale this morning. The lady running the sale had a Thorens in her late husband's den and wanted to know it was going to someone who'd keep it playing. I promised her a photo once it's spinning again. That's the part of this work nobody puts in a business plan.",
+   "created_at": "2026-06-06T16:40:37Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_1756d08467",
+   "author_id": "fb_u_luisherrera_cc8421",
+   "message": "Ride's on tonight. 6:30 from Roosevelt Park. Storms looked iffy this morning but radar is clear after 5. Bring a rear light, we'll be rolling in close to sunset.",
+   "created_at": "2026-06-08T16:00:09Z",
+   "visibility": "group",
+   "group_id": "fb_group_detroit_monday_rollers"
+  },
+  {
+   "id": "fb_post_2a368c84c2",
+   "author_id": "fb_u_darnell_rucker_b5b88e",
+   "message": "good crowd tonight!! shoutout to Kofi for fixing my rear derailleur at Michigan and Trumbull with a multitool and pure stubbornness",
+   "created_at": "2026-06-09T02:00:14Z",
+   "visibility": "group",
+   "group_id": "fb_group_detroit_monday_rollers"
+  },
+  {
+   "id": "fb_post_f456751094",
+   "author_id": "fbu_1001",
+   "message": "Field Day at Greenlawn. Kwame took the sack race very seriously and finished third, which he has explained to me is \"basically first.\" Sunscreen was applied. Some of it stayed on.",
+   "created_at": "2026-06-09T21:30:52Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_be1945757d",
+   "author_id": "fb_u_grace_owusu53_8b53c7",
+   "message": "Efua sent me the video of our Kwame walking across the gym at his moving-up and I have watched it ten times. First grade! God is good.",
+   "created_at": "2026-06-11T19:00:40Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_5fda68294a",
+   "author_id": "fbu_1001",
+   "message": "Kwame moved up to first grade this morning. Walked across that gym like he was collecting a Grammy. Proud of you, little man.",
+   "created_at": "2026-06-12T00:15:36Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_22d1539fe7",
+   "author_id": "fbu_1001",
+   "message": "If your speaker surrounds crumble when you press them gently, they need a refoam, simple as that. Foam from the 70s and 80s breaks down no matter how carefully it was stored. We don't do speaker work in-house, but we're glad to point you to a good speaker shop.",
+   "created_at": "2026-06-17T16:50:06Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_856a394433",
+   "author_id": "fb_u_efuamensah91_807cee",
+   "message": "Kwame's last day of school today and he already has a summer list: bike, library, and \"help Daddy fix the radios.\" ❤️",
+   "created_at": "2026-06-17T23:20:40Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_9d622fa9e5",
+   "author_id": "fb_u_ahmedjaber_6c342c",
+   "message": "Refoam season apparently. Six pairs of woofers on my shelf this week. If your surrounds look like old bread, bring them in. Dearborn Heights, Mon to Sat.",
+   "created_at": "2026-06-18T15:00:05Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_42c5b3dc74",
+   "author_id": "fbu_1001",
+   "message": "Coffee at Astro with Sam this morning. He's just getting into fixing up receivers and asked more good questions in an hour than I asked my whole first year. Michigan Ave was already busy at 8:30.",
+   "created_at": "2026-06-26T14:30:19Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_5190af5fac",
+   "author_id": "fbu_1001",
+   "message": "Here's how a receiver leaves our shop. Knobs come off and get bagged, the unit goes into an inner box, then two inches of foam on every side inside an outer box. Ama photographs every piece before the tape goes on, so you and we both know exactly how it left Detroit.",
+   "created_at": "2026-06-24T16:20:22Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_ab0122119e",
+   "author_id": "fbu_1001",
+   "message": "Heads up: we're away from the shop starting today for the holiday weekend. Messages will still get answered, just slower, and pick-ups resume next week. Happy Fourth, Detroit.",
+   "created_at": "2026-07-03T11:15:18Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_d9d19dd8c9",
+   "author_id": "fb_u_efuamensah91_807cee",
+   "message": "Day two at Sleeping Bear. Kwame climbed the Dune Climb twice and made it to the fourth firework before he fell asleep. Kofi has not mentioned a capacitor once, which might be a record ❤️",
+   "created_at": "2026-07-05T02:50:09Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_7f22c36546",
+   "author_id": "fb_u_comfort_mensah88_89df8e",
+   "message": "Thank you Jesus for travelling mercies for my children on their camping trip. Efua sent pictures of Kwame on the big sand hill. My grandson is growing too fast.",
+   "created_at": "2026-07-05T18:00:35Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_183d647cff",
+   "author_id": "fbu_1001",
+   "message": "Rollers took the long way out toward Belle Isle tonight. Detroit in July from a bike seat is hard to beat.",
+   "created_at": "2026-07-14T01:20:28Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_00bf3b74fc",
+   "author_id": "fb_u_rutledge_lamar_5980cf",
+   "message": "Finished a 2A3 single-ended build for a customer in Grosse Pointe. Point to point, cathode bias, and I did not wind my own transformers because I'm not crazy. Ferndale bench is officially too small.",
+   "created_at": "2026-07-29T00:00:11Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_9394f110e9",
+   "author_id": "fb_u_tasha_monroe73_3174e2",
+   "message": "Prairie St block party is THIS Saturday from 3 o'clock! Bring a dish, bring a chair. Gerald is on the grill again. We still need someone with a sound system, any volunteers?",
+   "created_at": "2026-08-03T22:00:57Z",
+   "visibility": "group",
+   "group_id": "fb_group_bagley_block_club_prairie_st_neighbors"
+  },
+  {
+   "id": "fb_post_718a9bf423",
+   "author_id": "fbu_1001",
+   "message": "Tasha, I can bring a receiver and a pair of speakers for Saturday and be set up by 2:30. Just need an outdoor outlet and somebody to keep the little ones away from the cords.",
+   "created_at": "2026-08-04T00:40:15Z",
+   "visibility": "group",
+   "group_id": "fb_group_bagley_block_club_prairie_st_neighbors"
+  },
+  {
+   "id": "fb_post_9dddcdb6b6",
+   "author_id": "fbu_1001",
+   "message": "Turntable humming? Work through it in order: ground wire to the GND post on your amp, then swap the RCA cables, then try a different outlet. Most of the time it's the ground wire, and that takes thirty seconds to fix.",
+   "created_at": "2026-08-05T16:35:17Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_24d8fb0b21",
+   "author_id": "fbu_1001",
+   "message": "Prairie St block party tonight. Ran a 1970s Marantz and a pair of Advents off an extension cord for six hours and nothing caught fire. Kwame was asleep on Lorraine's porch swing by nine.",
+   "created_at": "2026-08-09T02:30:14Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_9816514a1a",
+   "author_id": "fb_u_whitaker_lorraine_e0a3a6",
+   "message": "What a block party. Thank you to everyone who cooked, cleaned and carried tables. Special thanks to Kofi for the music, Earl and Doris danced to every Motown song he played.",
+   "created_at": "2026-08-09T14:15:25Z",
+   "visibility": "group",
+   "group_id": "fb_group_bagley_block_club_prairie_st_neighbors"
+  },
+  {
+   "id": "fb_post_a667500c3e",
+   "author_id": "fbu_1001",
+   "message": "Thirteen weeks of Bench Notes, cut down to one minute. The video is up on our Instagram and we'd love to know which tip deserves its own longer version. Tell us in the comments here, we read every one.",
+   "created_at": "2026-08-12T16:25:21Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_6fadea355e",
+   "author_id": "fbu_1001",
+   "message": "Rode up to Ferndale and Royal Oak for the sales this morning. Long way to haul a turntable in panniers but the Surly didn't complain. Stopped for coffee on Woodward on the way back and a guy asked if the dust cover was for sale.",
+   "created_at": "2026-08-15T17:30:06Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_5704413047",
+   "author_id": "fbu_1001",
+   "message": "That warm meter glow is half the reason people fall for vintage receivers. When a meter lamp burns out, we match the color as well as the voltage, so both meters glow the same.",
+   "created_at": "2026-08-19T16:45:21Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_e2e78d303a",
+   "author_id": "fbu_1001",
+   "message": "Back in Grandmont-Rosedale this morning. Patricia beat me to the record room again. One of these Saturdays I'll get there before her.",
+   "created_at": "2026-08-22T18:00:30Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_6bc519c13b",
+   "author_id": "fb_u_patriciadunlap_46e4ee",
+   "message": "Saturday finds: a stack of Blue Note reissues, Pyrex in Butterprint and a lamp I absolutely did not need. The receiver man from Bagley was out on his bike again. I'll beat him to the records every time 😉",
+   "created_at": "2026-08-22T19:30:17Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_b71955fc49",
+   "author_id": "fbu_1001",
+   "message": "Arden Park this morning. Those houses are something else. Came home with nothing but a box of service manuals, which honestly is sometimes the best find of the day.",
+   "created_at": "2026-08-29T16:50:07Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_30b5eb775e",
+   "author_id": "fbu_1001",
+   "message": "Dropped the Transit Connect at Seven Mile Auto & Brake this morning. Ten years fixing cars and I still pay someone to do my brakes. Bench time is worth more than my knuckles now.",
+   "created_at": "2026-09-01T22:30:49Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_283b17288b",
+   "author_id": "fbu_1001",
+   "message": "Fresh off the bench, a receiver's first power-up goes into a dummy load, never into speakers. Ours is a bank of 8 ohm resistors that can take whatever a fault throws at them. Your speakers deserve better than being our test subject.",
+   "created_at": "2026-09-02T16:35:54Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_e0e7e17ca4",
+   "author_id": "fb_u_efuamensah91_807cee",
+   "message": "Back to school tomorrow for both of us. Kwame's first grade backpack has been packed since Thursday. Honestly I'm the nervous one ❤️",
+   "created_at": "2026-09-08T00:30:06Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_c4012f9bb0",
+   "author_id": "fbu_1001",
+   "message": "First day of first grade. Kwame came out of Greenlawn this afternoon and told me his teacher is \"nice but strict,\" which sounds about right.",
+   "created_at": "2026-09-08T19:50:21Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_e0c19935cf",
+   "author_id": "fbu_1001",
+   "message": "Curriculum Night at Greenlawn. First grade is reading, writing, and the class fish Kwame campaigned to name Sparky.",
+   "created_at": "2026-09-18T01:15:09Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_3dd4eea53c",
+   "author_id": "fbu_1001",
+   "message": "Blown fuse? Replace it with the exact same rating and type. If it called for slow-blow, it gets slow-blow. A bigger fuse doesn't solve anything, it just lets the real fault cook something that costs a lot more than a fuse.",
+   "created_at": "2026-09-23T16:05:03Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_e180a3de67",
+   "author_id": "fbu_1001",
+   "message": "Reggie at Fresh Edge fixed what the summer did to my hairline. Twenty minutes in the chair and an hour of Pistons opinions.",
+   "created_at": "2026-09-23T17:30:58Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_0d57f0e1df",
+   "author_id": "fbu_1001",
+   "message": "Church this morning, then jollof at Auntie Abena's. Kwame is on his third plate and I'm not far behind him.",
+   "created_at": "2026-09-27T20:00:14Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_1e3e350ab5",
+   "author_id": "fb_u_darnell_rucker_b5b88e",
+   "message": "heads up, it's dark by 7:45 now. front AND rear lights or you're not rolling",
+   "created_at": "2026-09-28T21:00:25Z",
+   "visibility": "group",
+   "group_id": "fb_group_detroit_monday_rollers"
+  },
+  {
+   "id": "fb_post_ada7870445",
+   "author_id": "fbu_1001",
+   "message": "Pioneer SX-780 is back from the bench and ready for a new home. Power supply recapped, new dial lamps, every function checked against spec. We grade it Very Good, and the full photo set and bench report are on our Instagram shop. Local pick-up in Bagley or shipped UPS Ground, message us with questions.",
+   "created_at": "2026-09-30T17:00:25Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_2768ec3218",
+   "author_id": "fbu_1001",
+   "message": "Same bench, new colors. Our look is now VU Amber, the glow of a meter on a receiver that's been warming up for ten minutes. We've also moved to corktownaudio.com, so update your bookmarks. Inventory, our grading guide and how to reach us are all there.",
+   "created_at": "2026-10-06T14:30:32Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_0b27e6590f",
+   "author_id": "fb_u_esanders57_985669",
+   "message": "Love the new look over at Corktown Audio Works. That amber is exactly the color of a meter when the needle drops. Avenue of Fashion folks, go check out corktownaudio.com.",
+   "created_at": "2026-10-06T19:00:32Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_c308b3c716",
+   "author_id": "fbu_1001",
+   "message": "Ten years ago this fall I was swapping instrument clusters in Dearborn. Today I spent the afternoon packing receivers with Ama, and she called my box job \"acceptable.\" High praise from the shipping department.",
+   "created_at": "2026-10-10T22:30:11Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_0f7e59ba5f",
+   "author_id": "fb_u_tasha_monroe73_3174e2",
+   "message": "Block club meets Tuesday at 7pm at Lorraine Pettiford's on Prairie. Agenda: snow shoveling list for our seniors, the vacant lot on the corner, and Halloween plans. Coffee and pound cake provided!",
+   "created_at": "2026-10-11T21:00:42Z",
+   "visibility": "group",
+   "group_id": "fb_group_bagley_block_club_prairie_st_neighbors"
+  },
+  {
+   "id": "fb_post_c837e3f0c1",
+   "author_id": "fbu_1001",
+   "message": "Block club at Lorraine's tonight. Signed up for the snow shoveling list again. Somebody has to keep Doris and Earl's walk clear, and Kwame loves the shovel more than the sled.",
+   "created_at": "2026-10-14T01:30:01Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_1539877bd9",
+   "author_id": "fbu_1001",
+   "message": "Spot the difference: a cold solder joint looks dull and grainy, sometimes with a ring around the lead. A good one is smooth and shiny. When we find a cold joint we clean it, add fresh solder and reflow, because old solder on its own won't flow right.",
+   "created_at": "2026-10-14T16:25:10Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_59aed84655",
+   "author_id": "fb_u_luisherrera_cc8421",
+   "message": "Ride's at 6:00 tonight. Roosevelt Park as usual. Usual loop, about 25 miles, and lights are not optional.",
+   "created_at": "2026-10-19T17:00:33Z",
+   "visibility": "group",
+   "group_id": "fb_group_detroit_monday_rollers"
+  },
+  {
+   "id": "fb_post_801c98f9ae",
+   "author_id": "fbu_1001",
+   "message": "Cold one at Rollers tonight. Full gloves came out for the first time. Darnell showed up in shorts like it's July.",
+   "created_at": "2026-10-20T01:40:51Z",
+   "visibility": "friends"
+  },
+  {
+   "id": "fb_post_c1944f7abf",
+   "author_id": "fbu_1001",
+   "message": "No-tools speed check for your turntable: print a strobe disc, set it on the platter, and light it with an incandescent bulb, which flickers at 60 Hz here. If the dots drift, your speed is off. Most cheap LEDs won't work for this because they don't flicker the same way.",
+   "created_at": "2026-10-21T16:50:34Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_99d976e4bb",
+   "author_id": "fbu_1001",
+   "message": "Coming soon to the shop: a silver Technics SL-1200MK2, freshly serviced and locked on the strobe at 33 and 45. Full photos and the grade are on the way. Questions are welcome in the meantime.",
+   "created_at": "2026-10-23T16:25:54Z",
+   "visibility": "public",
+   "page_id": "fbpg_201"
+  },
+  {
+   "id": "fb_post_af1155e4cb",
+   "author_id": "fbu_1001",
+   "message": "Halloween is a week from today. The robot costume passed its last fitting, lights and all, and Kwame now answers questions in beeps.",
+   "created_at": "2026-10-24T22:00:24Z",
+   "visibility": "friends"
+  }
+ ],
+ "marketplace_listings": [
+  {
+   "id": "fbml_5401",
+   "seller_id": "fbu_1001",
+   "title": "Pioneer SX-780 stereo receiver, serviced, graded Very Good",
+   "price": 425.0,
+   "created_at": "2026-09-30T16:02:37Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "CAW-1129. Serviced on my bench: power supply recapped, new dial lamps, every pot and switch cleaned, bias and DC offset set to spec. 45 W per channel, phono, tuner and both speaker pairs tested. Graded Very Good under our written guide: light scuffs on the top cover visible at arm's length, faceplate and dial glass clean. Pick-up near Livernois & 7 Mile, or UPS Ground, double-boxed.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5402",
+   "seller_id": "fbu_1401",
+   "title": "Technics SL-1200MK2 silver w/ dust cover + Ortofon cartridge",
+   "price": 650.0,
+   "created_at": "2026-10-16T23:22:41Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Bought new in 1992, played at home, never gigged. Dust cover with both hinges, original headshell with an Ortofon 2M Red. Both speeds steady, pitch slider smooth, a little wear on the plinth edge. Ferndale, near 9 Mile & Woodward. Cash only.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5403",
+   "seller_id": "fbu_1402",
+   "title": "SL-1200MK2 turntable (silver), dust cover included",
+   "price": 625.0,
+   "created_at": "2026-10-21T12:52:19Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Clean MK2 from my DJ days, my son doesn't want it. Dust cover has a couple of light scratches, otherwise nice. Headshell but no cartridge. Tested on 33 and 45. Livonia, Six Mile & Newburgh area, no shipping.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5404",
+   "seller_id": "fbu_1403",
+   "title": "Technics SL 1200 MK2, silver, cover and cartridge",
+   "price": 700.0,
+   "created_at": "2026-10-09T22:11:06Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Very nice silver MK2, serviced in 2025. Comes with dust cover, headshell and a Shure M44-7. Speeds lock on the strobe. Pickup in downtown Royal Oak, Main & 11 Mile.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5405",
+   "seller_id": "fbu_1404",
+   "title": "technics 1200 mk2 no dust cover",
+   "price": 520.0,
+   "created_at": "2026-10-11T18:36:52Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "works good, cue lever sticks sometimes. no dust cover. 520 obo, Dearborn by Michigan Ave and Greenfield",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5406",
+   "seller_id": "fbu_1405",
+   "title": "Technics SL-1210MK2 black, excellent condition",
+   "price": 640.0,
+   "created_at": "2026-10-07T00:04:15Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Black 1210 MK2 with dust cover and headshell. Pitch fader is clean and the strobe works. Southfield, Telegraph & 12 Mile. Serious buyers only please.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5407",
+   "seller_id": "fbu_1406",
+   "title": "Technics SL-1200MK3D silver, barely used",
+   "price": 760.0,
+   "created_at": "2026-10-04T15:48:33Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "MK3D, light home use, dust cover, no cartridge. Pitch reset button and all functions work. $760 firm. Troy, Big Beaver & Rochester Rd.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5408",
+   "seller_id": "fbu_1407",
+   "title": "Technics SL-1200MK2 silver turntable",
+   "price": 690.0,
+   "created_at": "2026-10-18T20:27:44Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Great shape, dust cover included. Pitch reset button next to the slider works, quartz lock is solid. Warren near 12 Mile & Van Dyke. $690.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5409",
+   "seller_id": "fbu_1408",
+   "title": "Technics SL-1200 MK2 FOR PARTS (bent tonearm)",
+   "price": 300.0,
+   "created_at": "2026-10-20T16:19:58Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Got dropped in a move. Tonearm is bent and won't track, platter spins and motor runs on both speeds. As is, for parts or repair. Near Grand River & Lahser.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5410",
+   "seller_id": "fbu_1409",
+   "title": "Audio-Technica AT-LP1240 direct drive turntable, 1200 style",
+   "price": 280.0,
+   "created_at": "2026-10-13T23:51:21Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "AT-LP1240-USB in silver. Same layout as a 1200, plus USB out. Dust cover and stock cartridge included. Detroit, Midtown near Cass & Warren.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5411",
+   "seller_id": "fbu_1410",
+   "title": "Technics SL1200MK2 silver with dust cover (Toledo)",
+   "price": 600.0,
+   "created_at": "2026-09-14T22:33:09Z",
+   "status": "removed",
+   "visibility": "public",
+   "description": "Silver MK2 with dust cover, works as it should. Moving out of state, has to go by October 2. Pickup in Sylvania only, no shipping.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_276dc0b52753ee71dac2c4d0",
+   "seller_id": "fbu_1001",
+   "title": "Sony TC-K61 cassette deck, serviced",
+   "price": 195.0,
+   "created_at": "2026-09-10T17:07:51Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "New belts, heads cleaned and demagnetized, speed set against a 3 kHz test tape. Graded Excellent, silver faceplate. SKU CAW-1068, 4 photos. Pickup in Bagley near Livernois & 7 Mile, or UPS Ground at cost.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_a1cbefe4afa67af671e9a99b",
+   "seller_id": "fbu_1001",
+   "title": "KLH Model Six speakers (pair), teak",
+   "price": 450.0,
+   "created_at": "2026-09-10T17:15:19Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Acoustic suspension two-ways, both drivers swept clean on the bench. Teak cabinets, graded Very Good. CAW-1072. Local pickup only, they're heavy.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_a7d9399ac1420ec780c91dc7",
+   "seller_id": "fbu_1001",
+   "title": "Pioneer SX-650 receiver",
+   "price": 295.0,
+   "created_at": "2026-09-10T17:17:57Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "35 watts a channel on our bench, all dial lamps working. Very Good: light wear on the top cover you can see at arm's length, photo 3. Silver. SKU CAW-1074.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_ff21c19f16bf4cca589e2027",
+   "seller_id": "fbu_1001",
+   "title": "Dynaco A-25 bookshelf speakers, walnut",
+   "price": 240.0,
+   "created_at": "2026-09-10T17:22:38Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Original drivers, level controls cleaned and quiet. Walnut veneer, Very Good. CAW-1077, pickup or ship.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_dab78b34d66569f22f8363ed",
+   "seller_id": "fbu_1001",
+   "title": "B&O Beogram 3000 turntable",
+   "price": 380.0,
+   "created_at": "2026-09-10T17:27:29Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Belt drive with a new belt, both speeds dead on the strobe. Teak plinth, graded Very Good. SKU CAW-1081. Ships double-boxed or pick up in Bagley.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_7a3ba85c1fd00142e6fec92e",
+   "seller_id": "fbu_1001",
+   "title": "Kenwood KR-4070 stereo receiver",
+   "price": 285.0,
+   "created_at": "2026-09-10T17:34:39Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "40 W/ch at under 0.1% THD on the bench, fresh dial lamps, controls cleaned. Silver face. Excellent per our guide. CAW-1086, photos 1 to 4.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_391378b1ff16b31430fe3531",
+   "seller_id": "fbu_1001",
+   "title": "Pioneer CT-F1000 three-head deck",
+   "price": 260.0,
+   "created_at": "2026-09-10T17:36:53Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Belts done and azimuth checked. Silver, Very Good. CAW-1087.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_11c1b745ded91bbb4ca1c301",
+   "seller_id": "fbu_1001",
+   "title": "Marantz 2220B, a clean one",
+   "price": 425.0,
+   "created_at": "2026-09-10T17:39:28Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Lamps, controls and bias all done. There's one hairline on the faceplate you'll only find up close. Excellent, silver. SKU CAW-1090, UPS Ground at cost or local pickup.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_1c067a8921fb8db82e20b985",
+   "seller_id": "fbu_1001",
+   "title": "Dual 1219 changer turntable",
+   "price": 210.0,
+   "created_at": "2026-09-10T17:53:45Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Idler refreshed and the mode selector re-greased, so it cycles clean. Walnut base, dust cover included. Very Good. CAW-1099, photos 1 to 5.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_b9140e8b8cc28f672d8201bc",
+   "seller_id": "fbu_1001",
+   "title": "Large Advent loudspeakers, walnut (pair)",
+   "price": 375.0,
+   "created_at": "2026-09-10T17:58:36Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Fresh foam on both woofers and the crossovers checked. Walnut cabinets, Very Good. These are big, pickup preferred. SKU CAW-1103.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "marketplace_listing_cc564bc9dffae03b147d9b1d",
+   "seller_id": "fbu_1001",
+   "title": "Marantz 2238B receiver",
+   "price": 520.0,
+   "created_at": "2026-09-10T18:01:09Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "38 watts per channel, new lamps, both channels scope-checked. Silver, Very Good. CAW-1104.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5412",
+   "seller_id": "fbu_1001",
+   "title": "Pioneer PL-12D, for parts",
+   "price": 60.0,
+   "created_at": "2026-09-10T18:13:03Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Motor won't hold speed even after a new belt and adjustment. Plinth and tonearm are nice. For Parts, sold as-is. CAW-1115.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5413",
+   "seller_id": "fbu_1001",
+   "title": "Kenwood KR-6160 receiver, silver",
+   "price": 300.0,
+   "created_at": "2026-09-10T18:15:17Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Serviced and graded Very Good. CAW-1116.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5414",
+   "seller_id": "fbu_1001",
+   "title": "Yamaha CR-620 receiver (one of two)",
+   "price": 210.0,
+   "created_at": "2026-09-10T18:20:08Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Plays and tunes perfectly. Graded Good: scuffs on the top cover and a ding on the right side panel, all shown in photos 2 to 4. Silver. SKU CAW-1120.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5415",
+   "seller_id": "fbu_1001",
+   "title": "Yamaha CR-620 stereo receiver",
+   "price": 265.0,
+   "created_at": "2026-09-10T18:22:39Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Bench tested to spec, bias and offset set, both meters accurate. Silver, graded Good. CAW-1121, five photos.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5724",
+   "seller_id": "fbu_1001",
+   "title": "Marantz 2230 receiver in walnut case, fully serviced",
+   "price": 575.0,
+   "created_at": "2026-10-08T16:00:37Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Serviced Marantz 2230 in its walnut case: power supply recapped, 30 W per channel at under 0.1% THD on both channels, all functions to spec and every lamp lit. Graded Excellent, one ~2 cm hairline on the walnut case top, rear left, see photo 5. Ships double-boxed by UPS Ground for $45, or pick up in northwest Detroit. SKU CAW-1124.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5029",
+   "seller_id": "fbu_1001",
+   "title": "Fisher 500-C tube receiver, recapped",
+   "price": 785.0,
+   "created_at": "2026-05-08T16:41:17Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Full restoration on the bench: new filter and coupling capacitors, output tubes tested strong and bias set, dial lamps replaced. FM pulls in cleanly in stereo. Champagne faceplate, graded Very Good under my written guide for one light scuff left of the tuning knob that shows at arm's length (photo 2). Ships double-boxed by UPS Ground, or pick up in Bagley.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5030",
+   "seller_id": "fbu_1001",
+   "title": "AR XA turntable, walnut base, new belt",
+   "price": 285.0,
+   "created_at": "2026-05-20T00:53:08Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "New belt, motor cleaned and re-oiled, speed checked against a strobe at 33 1/3. The arm carries a Shure M91ED with a fresh stylus. The walnut base is clean and the dust cover shows hairlines only under raking light (photo 5), so it grades Excellent. For shipping the platter comes off and the arm is tied down.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5031",
+   "seller_id": "fbu_1001",
+   "title": "NAD 3020 integrated amplifier",
+   "price": 245.0,
+   "created_at": "2026-06-03T16:34:51Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Bench-tested at its rated 20 W/ch into 8 ohms on both channels; controls cleaned and the phono stage is quiet. Excellent by my guide, with faint hairlines on the top cover that you only see up close. Pick-up in Bagley or shipped UPS Ground.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5032",
+   "seller_id": "fbu_1001",
+   "title": "JBL L100 Century speakers (pair), orange Quadrex grilles",
+   "price": 1050.0,
+   "created_at": "2026-06-20T19:22:46Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Both woofers have new foam surrounds, and the L-pads are cleaned and smooth through their full travel. Original orange Quadrex grilles with no tears. Walnut veneer graded Very Good because of one chip of about 0.5 cm² on the top rear corner of the right cabinet (photo 4). Local pick-up only, Bagley near Livernois and McNichols.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5033",
+   "seller_id": "fbu_1001",
+   "title": "Akai GX-635D auto-reverse reel to reel",
+   "price": 735.0,
+   "created_at": "2026-07-10T01:07:33Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Serviced 4-track deck: new pinch roller and belts, heads cleaned and demagnetized, and it plays and records in both directions with auto-reverse working. Brushed silver face. Light scuffing on the right wood side panel is visible at arm's length (photo 3), so I have it at Very Good. Includes a metal take-up reel.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5034",
+   "seller_id": "fbu_1001",
+   "title": "Acoustic Research AR-2ax pair, pick-up only",
+   "price": 365.0,
+   "created_at": "2026-07-26T23:48:12Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Pair of AR-2ax in walnut, level controls cleaned and every driver tested working. The pair grades Good: a veneer chip of about 1.5 cm² sits on the bottom front edge of the left cabinet (photo 4), and the grille cloth has faded on both. Zelle or cash at pick-up in Bagley.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5035",
+   "seller_id": "fbu_1001",
+   "title": "Heathkit AR-15 stereo receiver in walnut",
+   "price": 335.0,
+   "created_at": "2026-08-11T16:16:39Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Kit-built in the late 1960s and now properly sorted: recapped power supply, switches and pots cleaned, new dial lamps. The walnut cabinet has veneer lifting along the left side (photo 4), which puts it at Good. One quirk to disclose: the stereo indicator lamp is dim. Plays well on FM and phono.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5036",
+   "seller_id": "fbu_1001",
+   "title": "Harman Kardon 330B receiver, for parts or repair",
+   "price": 65.0,
+   "created_at": "2026-08-28T17:02:55Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Failed my bench test: the left channel is dead, and I have not serviced it. Graded For Parts and sold as-is.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5037",
+   "seller_id": "fbu_1001",
+   "title": "Nakamichi BX-300 three-head cassette deck",
+   "price": 465.0,
+   "created_at": "2026-09-17T00:19:24Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Three-head design with new belts, cleaned and demagnetized heads, and azimuth checked; it records and plays to spec on Type I and Type II tape. Black finish. Cosmetically Excellent: a couple of hairlines on the cassette door that only show up close. Ships UPS Ground, double-boxed.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5038",
+   "seller_id": "fbu_1001",
+   "title": "Sansui 7070 receiver, serviced",
+   "price": 545.0,
+   "created_at": "2026-09-24T16:48:06Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Lamps replaced, controls cleaned, DC offset and bias set to spec on both channels. Silver faceplate in a wood-grain vinyl case, with a rub mark on the left side of the case you can see at arm's length (photo 3), so it is graded Very Good. Zelle, PayPal or cash at pick-up. Price is firm.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5039",
+   "seller_id": "fbu_1001",
+   "title": "Thorens TD-160 turntable with TP-16 arm",
+   "price": 435.0,
+   "created_at": "2026-10-05T00:36:41Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Belt-drive Thorens on a teak plinth, set up with a new belt, adjusted suspension and a Grado Prestige cartridge. 33 1/3 and 45 both check out on the strobe. Very Good overall: two fine scratches on the dust cover are visible at arm's length (photo 5), and the plinth veneer has no chips.",
+   "category": "Electronics",
+   "currency": "USD"
+  },
+  {
+   "id": "fbml_5040",
+   "seller_id": "fbu_1001",
+   "title": "Polk Audio Monitor 7 speakers",
+   "price": 195.0,
+   "created_at": "2026-10-16T16:09:58Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Matched pair with original surrounds intact and every driver working. Wood-grain vinyl cabinets, Very Good for one scuff on the top corner of the right cabinet (photo 3). Pick-up in Bagley only.",
+   "category": "Electronics",
+   "currency": "USD"
+  }
+ ],
+ "saved_items": [
+  {
+   "id": "fbsv_6717",
+   "user_id": "fbu_1717",
+   "item_type": "post",
+   "item_id": "fbp_4719",
+   "created_at": "2026-07-01T00:31:07Z"
+  },
+  {
+   "id": "fbsv_6001",
+   "user_id": "fbu_1001",
+   "item_type": "post",
+   "item_id": "fbp_4001",
+   "created_at": "2026-10-26T00:52:14Z"
+  },
+  {
+   "id": "fbsv_6002",
+   "user_id": "fbu_1001",
+   "item_type": "post",
+   "item_id": "fbp_4002",
+   "created_at": "2026-10-28T01:18:09Z"
+  },
+  {
+   "id": "fbsv_6124",
+   "user_id": "fbu_1124",
+   "item_type": "marketplace_listing",
+   "item_id": "fbml_5724",
+   "created_at": "2026-10-18T22:41:09Z"
+  },
+  {
+   "id": "fbsv_6305",
+   "user_id": "fbu_1305",
+   "item_type": "post",
+   "item_id": "fbp_4305",
+   "created_at": "2026-10-28T22:28:10Z"
+  },
+  {
+   "id": "fb_saved_0aa1bb29ea",
+   "user_id": "fbu_1001",
+   "item_type": "post",
+   "item_id": "fb_post_00bf3b74fc",
+   "created_at": "2026-07-29T20:43:11Z"
+  },
+  {
+   "id": "fb_saved_17b3db65cf",
+   "user_id": "fbu_1001",
+   "item_type": "post",
+   "item_id": "fb_post_856a394433",
+   "created_at": "2026-06-18T01:51:40Z"
+  },
+  {
+   "id": "fb_saved_2daeb25fd6",
+   "user_id": "fbu_1001",
+   "item_type": "post",
+   "item_id": "fb_post_be1945757d",
+   "created_at": "2026-06-11T21:22:40Z"
+  },
+  {
+   "id": "fbsv_6009",
+   "user_id": "fbu_1001",
+   "item_type": "marketplace_listing",
+   "item_id": "fbml_5404",
+   "created_at": "2026-10-14T00:15:00Z"
+  }
+ ],
+ "current_user_id": "fbu_1001"
+}
