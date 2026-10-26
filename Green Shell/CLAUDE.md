@@ -324,8 +324,9 @@ regeneration.
 What moved between revisions lives in [src/data/specLog.ts](src/data/specLog.ts), hand-authored by
 diffing the new export against the one the hub was carrying, and renders in two places. The
 **Change Log** pane is a third rail group under Dimensions and Appendix, built the same way as the
-rest of the page: one rail entry with a count, one pane at a time, cards grouped under the revision
-date, and its entries fold into the page search with everything else.
+rest of the page: one rail entry with a count, one pane at a time, each revision a boxed batch
+headed by its `version` and date, and its entries fold into the page search with everything else.
+**Only the five newest revisions are kept**: when a sixth lands, delete the oldest.
 
 **Green Shell's log starts at one entry with nothing under it**, because the first Green Shell
 export had no earlier Green Shell revision to diff against and its `changes` is empty. Three guards

@@ -11,6 +11,9 @@
  * hub was carrying, with an entry per dimension that actually changed. A
  * revision that moves nothing earns no entry at all.
  *
+ * **Only the five newest revisions are kept.** When a sixth lands, delete the
+ * oldest: the log is for what moved recently, not the full history.
+ *
  * Red Shell's log is a separate file inside its own project and keeps its own
  * history. Nothing here touches it, and the two never merge: this is the Green
  * Shell spec's history, not the multi-turn spec's.
@@ -45,6 +48,8 @@ export interface SpecChange {
 
 export interface SpecRevision {
   id: string;
+  /** The revision as the export names it, e.g. "V6". Heads its batch in the log. */
+  version: string;
   /** The date the export carries. */
   date: string;
   /** The revision named in one line, the way the banner heads it. */
@@ -62,6 +67,7 @@ export const specLogNote =
 export const specRevisions: SpecRevision[] = [
   {
     id: "green-shell-v6",
+    version: "V6",
     date: "Oct 26, 2026",
     title: "Five dimensions leave the spec, and the parameter checks read the fields in the task",
     note: "The spec drops from 33 dimensions to 28, still across 7 groups, and this entry covers everything between V4 and V6. Expertise, Existence Check, Rubric Spot Checks, Architectural Depth & Friction Exposure and Genuine Media Inspection are no longer scored, and Domain Relevance is renamed Subcategory Relevance. Five parameter checks now read the fields assigned in the task instead of columns of the parameter sheet. Reasoning Requirement loses its middle band, Valid Model Failure is judged against corrected criteria, and the three rubric quality bands put flagged missing criteria in the denominator. Constraints, Hint Leak (Leg B), All Criteria Scoring, the 80/20 split and Single-Turn Structure are reworded without changing what they score, so they carry no entry.",
@@ -238,6 +244,7 @@ export const specRevisions: SpecRevision[] = [
   },
   {
     id: "green-shell-v4",
+    version: "V4",
     date: "Oct 12, 2026",
     title: "Scenario Adherence stops asking for the scenario and asks whether you are on topic",
     note: "One dimension moved and the spec is still 33 dimensions across 7 groups. Scenario Adherence is now a topicality check: it reads the prompt against the assigned scenario and fails only where the two share nothing at all. Both of its error categories are renamed, and the note about adjusting a scenario the tools cannot perform is gone with the wording that needed it.",
@@ -264,6 +271,7 @@ export const specRevisions: SpecRevision[] = [
   },
   {
     id: "green-shell-v3",
+    version: "V3",
     date: "Oct 5, 2026",
     title: "The three rubric quality bands now stand alone, and Scenario Adherence is scoped",
     note: "Five dimensions moved and nothing was added or dropped, so the spec is still 33 dimensions across 7 groups. The three Overall Rubric Quality bands each now judge only the severity they are named for, and the way to tally them moved out of the Fail option and into the question. Scenario Adherence is pinned to the prompt and its input files, and it bends where the tools cannot do what the scenario asks. Feasibility With Tools finally says what a primary request is.",
@@ -323,6 +331,7 @@ export const specRevisions: SpecRevision[] = [
   },
   {
     id: "green-shell-v2",
+    version: "V2",
     date: "Oct 3, 2026",
     title: "Initial version",
     note: "The first Green Shell spec the hub has carried, transcribed from the V2 trivial task threshold export and its appendix. It scores 33 dimensions across 7 groups. There is no earlier Green Shell revision to compare it against, so nothing is logged as changed; the next export will be diffed against this one.",

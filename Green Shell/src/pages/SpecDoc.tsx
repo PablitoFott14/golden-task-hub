@@ -761,7 +761,8 @@ function ChangeCard({ ch, query }: { ch: SpecChange; query?: string }) {
   );
 }
 
-/* One pane per revision, grouped the way Rubric Quality groups by severity. */
+/* Each revision is its own boxed batch, headed by its version and date, so
+   where one ends and the next begins is never in doubt. */
 function ChangeLogSection() {
   return (
     <section>
@@ -780,21 +781,29 @@ function ChangeLogSection() {
         }
       />
       <p className="mb-5 text-[13px] leading-relaxed text-ink-500">{specLogNote}</p>
-      <div className="space-y-6">
+      <div className="space-y-8">
         {specRevisions.map((rev) => (
-          <div key={rev.id}>
-            <div className="mb-2 flex items-center gap-2">
+          <div key={rev.id} className="rounded-2xl border border-ink-200/70 bg-ink-50/60 p-4 sm:p-5">
+            <div className="mb-3 flex flex-wrap items-center gap-2 border-b border-ink-200/70 pb-3">
+              <span className="rounded-md bg-brand-600 px-2 py-0.5 font-mono text-[12px] font-bold text-white">
+                {rev.version}
+              </span>
               <span className="chip bg-brand-100 text-brand-700 dark:bg-brand-500/20 dark:text-brand-200">
                 {rev.date}
               </span>
-              <span className="text-xs font-semibold text-ink-400">{rev.changes.length}</span>
+              <span className="text-xs font-semibold text-ink-400">
+                {rev.changes.length} change{rev.changes.length === 1 ? "" : "s"}
+              </span>
             </div>
-            <p className="mb-3 text-[13px] leading-relaxed text-ink-600">{rev.note}</p>
-            <div className="space-y-3">
-              {rev.changes.map((ch) => (
-                <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} />
-              ))}
-            </div>
+            <h3 className="text-[15.5px] font-bold leading-snug text-ink-900">{rev.title}</h3>
+            <p className="mt-1 text-[13px] leading-relaxed text-ink-600">{rev.note}</p>
+            {rev.changes.length > 0 && (
+              <div className="mt-4 space-y-3">
+                {rev.changes.map((ch) => (
+                  <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} />
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
