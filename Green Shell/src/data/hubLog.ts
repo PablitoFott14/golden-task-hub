@@ -59,7 +59,7 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 export const hubUpdates: HubUpdate[] = [
   {
     id: "spec-v6",
-    date: "Oct 22, 2026",
+    date: "Oct 26, 2026",
     kind: "guidelines",
     what: "The V6 rubric drops five dimensions and renames one",
     where: "Spec Doc → Change Log",
