@@ -31,6 +31,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "src" / "data" / "checklist.ts"
 OUT = ROOT / "public" / "docs" / "presubmit-gate.pdf"
+# Where the hub offers this PDF: the Pre-Submit pane of Reference.
+HUB = "https://pablitofott14.github.io/golden-task-hub/#/reference#pre-submit"
 
 CHROME_CANDIDATES = [
     os.environ.get("CHROME", ""),
@@ -184,6 +186,7 @@ h2 .n {{ color: {NAVY}; font-weight: 700; font-size: {13.4 * s}px; min-width: {8
 .foot {{ display: flex; justify-content: space-between; align-items: baseline; margin-top: {7 * s}px;
   padding-top: {6 * s}px; border-top: 1.4px solid {NAVY}; font-size: {10 * s}px; color: {MUTED}; }}
 .foot .mono {{ color: {NAVY}; font-weight: 700; font-size: {10.4 * s}px; }}
+.foot .hub {{ color: {REF}; font-weight: 700; text-decoration: underline; }}
 </style></head>
 <body><div class="sheet">
 <header class="mast">
@@ -202,6 +205,7 @@ h2 .n {{ color: {NAVY}; font-weight: 700; font-size: {13.4 * s}px; min-width: {8
   <div class="verdict no"><span class="box"></span><div><h3>{esc(meta["fix"]["title"])}</h3><p>{esc(meta["fix"]["body"])}</p></div></div>
 </div>
 <footer class="foot"><span>{esc(meta["title"])} · OpenClaw MM Rubrics SINGLE TURN · Green Shell</span>
+  <a class="hub" href="{HUB}">Open in the Golden Task Hub: Reference › Pre-Submit ↗</a>
   <span class="mono">Page 1 of 1 · sections 1 to {last}</span></footer>
 </div></body></html>"""
 
