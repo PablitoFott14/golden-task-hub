@@ -62,7 +62,7 @@ export const specLogNote =
 export const specRevisions: SpecRevision[] = [
   {
     id: "green-shell-v6",
-    date: "Oct 22, 2026",
+    date: "Oct 26, 2026",
     title: "Five dimensions leave the spec, and the parameter checks read the fields in the task",
     note: "The spec drops from 33 dimensions to 28, still across 7 groups, and this entry covers everything between V4 and V6. Expertise, Existence Check, Rubric Spot Checks, Architectural Depth & Friction Exposure and Genuine Media Inspection are no longer scored, and Domain Relevance is renamed Subcategory Relevance. Five parameter checks now read the fields assigned in the task instead of columns of the parameter sheet. Reasoning Requirement loses its middle band, Valid Model Failure is judged against corrected criteria, and the three rubric quality bands put flagged missing criteria in the denominator. Constraints, Hint Leak (Leg B), All Criteria Scoring, the 80/20 split and Single-Turn Structure are reworded without changing what they score, so they carry no entry.",
     changes: [
