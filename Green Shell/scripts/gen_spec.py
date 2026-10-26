@@ -242,7 +242,7 @@ DIMENSION_LINKS = """export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#parameters", tag: "M1", label: "Judged on the user's intent, not the files" },
     { to: "/reference#use-case-and-tools", tag: "WN", label: "Eleven use cases, sixty-eight subcategories" },
   ],
-  "Domain Relevance": [
+  "Subcategory Relevance": [
     { to: "/#universe", tag: "M2", label: "Grounded in what the universe actually holds" },
   ],
   "Overall Rubric Quality - 10%": [
@@ -258,17 +258,11 @@ DIMENSION_LINKS = """export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/reference#outcome-over-process", tag: "WN", label: "Eighty per cent outcome, and the cap that bites" },
     { to: "/#rubrics", tag: "M8", label: "Where the split is decided" },
   ],
-  "Existence Check": [
-    { to: "/reference#no-existence-checks", tag: "WN", label: "An existence check is an automatic fail" },
-  ],
   "All Criteria Scoring": [
     { to: "/reference#literal-matching", tag: "WN", label: "Literal matching, and what it costs" },
   ],
   "Rubric Structure": [
     { to: "/#rubrics", tag: "M8", label: "One criterion, one observable outcome" },
-  ],
-  "Rubric Spot Checks": [
-    { to: "/#rubrics", tag: "M8", label: "Spot checks, and the volume check beside them" },
   ],
   "Subjective Block Scope": [
     { to: "/#subjective", tag: "M10", label: "Presentation only, graded on the render" },
@@ -285,12 +279,6 @@ DIMENSION_LINKS = """export const dimensionLinks: Record<string, XLink[]> = {
   "Feasibility With Tools": [
     { to: "/reference#s1", tag: "A2", label: "Confirm the loadout before you design" },
     { to: "/reference#assigned-tools", tag: "WN", label: "Assigned tools have to be named in the scenario" },
-  ],
-  "Architectural Depth & Friction Exposure": [
-    { to: "/#failure", tag: "M7", label: "Designed friction, not artificial friction" },
-  ],
-  "Genuine Media Inspection": [
-    { to: "/#inputs", tag: "M4", label: "Evidence the model has to actually read" },
   ],
   Completeness: [
     { to: "/reference#s6", tag: "F3", label: "Download the trajectories, star the preferred run" },

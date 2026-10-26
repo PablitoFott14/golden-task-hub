@@ -93,7 +93,6 @@ export const faq: FaqItem[] = [
     ],
     links: [
       { to: "/reference#s2", tag: "B1", label: "One fact that lives only in a connected service" },
-      { to: "/spec#trajectory", tag: "QC", label: "Architectural Depth and Friction Exposure" },
     ],
   },
   {

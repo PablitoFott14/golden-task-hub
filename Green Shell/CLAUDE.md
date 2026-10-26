@@ -307,7 +307,7 @@ check that line when a regeneration produces no diff.
 multi-turn viewer at <https://qc-spec-mt-rubrics.vercel.app/>. That viewer serves the multi-turn
 spec and says nothing about Green Shell. The two projects therefore keep **separate specs,
 separate change logs and separate generators**, and neither can write over the other: Green Shell's
-spec is 33 dimensions in 7 groups built for single turn, Red Shell's is 22 in 8 built for
+spec is 28 dimensions in 7 groups built for single turn, Red Shell's is 22 in 8 built for
 multi-turn. A Green Shell re-export never touches `Red Shell/src/data/`.
 
 The appendix carries four sections and all four are transcribed. One of them is a **superseded
@@ -345,7 +345,9 @@ anchor, `dimensionHome` in [SpecDoc.tsx](src/pages/SpecDoc.tsx) maps that anchor
 holding it, and the hash effect opens that pane so `/spec#dim-realism` works cold as well as from
 inside the page. The anchor is derived from `SpecChange.dimension`, which has to match the name in
 `specDoc.ts` character for character: **a renamed dimension silently turns every log link at it
-into a dead one**, and nothing validates that, so rename in both files together.
+into a dead one**, and nothing validates that, so rename in both files together. The one exception
+is a `removed` entry (first used in V6): the dimension is gone, so the card names it as it was and
+renders no link.
 
 ### The method is the spine
 

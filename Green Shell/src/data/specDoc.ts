@@ -104,7 +104,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Assigned Universe",
         "question": "Rate the Assigned Universe of the Task Parameters dimension.",
-        "description": "Check against the universe assigned to your task in column F of the task parameter sheet.",
+        "description": "Check against the \"Universe\" field assigned in-task.",
         "errorTags": [
           {
             "label": "Fail - Universe Mismatch",
@@ -127,7 +127,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "MM Inputs",
         "question": "Rate the MM Inputs of the Task Parameters dimension.",
-        "description": "Check against the MM inputs assigned to your task in column H of the task parameter sheet.",
+        "description": "Check against the \"Input Modalities\" field assigned in-task.\nNote: Some older tasks may be missing this field - in these cases, use the scenario in the in-task task parameters to determine the input types, not the task json.",
         "errorTags": [
           {
             "label": "Fail - MM Input Mismatch",
@@ -150,7 +150,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Output Artifact",
         "question": "Rate the Output Artifact of the Task Parameters dimension.",
-        "description": "Check against the output artifact assigned to your task in column I of the task parameter sheet.",
+        "description": "Check against the \"Output Modalities\" field assigned in-task.",
         "errorTags": [
           {
             "label": "Fail - Output Artifact Mismatch",
@@ -178,7 +178,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Minimum Multimodal Inputs",
         "question": "Rate the Minimum Multimodal Inputs of the Input Artifacts dimension.",
-        "description": "Minimum 3 multimodal inputs in the Model A conversation. Three is the minimum, not the target; intentional distractors count.  For all options except the last, apply the error category.",
+        "description": "Minimum 3 multimodal inputs in the Model A conversation. Intentional distractors count.  For all options except the last, apply the error category.",
         "errorTags": [
           {
             "label": "Fail - Below Minimum Multimodal Inputs",
@@ -192,7 +192,7 @@ export const specGroups: SpecGroup[] = [
             "justify": true
           },
           {
-            "text": "The Model A conversation has 3 or more multimodal input files, each with a purpose (required signal or intentional distractor).",
+            "text": "The Model A conversation has 3 or more multimodal input files. (5)",
             "score": 5,
             "justify": false
           }
@@ -264,10 +264,6 @@ export const specGroups: SpecGroup[] = [
         "description": "For all options except the last, apply an error category.",
         "errorTags": [
           {
-            "label": "Non-Fail - Reasoning Requirement Prompt",
-            "type": "non-fail"
-          },
-          {
             "label": "Fail - Reasoning Requirement Prompt",
             "type": "fail"
           }
@@ -279,12 +275,7 @@ export const specGroups: SpecGroup[] = [
             "justify": true
           },
           {
-            "text": "[Non-Fail - Reasoning Requirement Prompt]\nThe prompt loosely or trivially includes the skills and/or reasoning of the assigned domain/level of expertise.",
-            "score": 3,
-            "justify": true
-          },
-          {
-            "text": "The prompt requires reasoning in-line with the assigned domain/expertise level, beyond just simple recall",
+            "text": "The prompt necessitates reasoning beyond simple factual lookup/definition.",
             "score": 5,
             "justify": false
           }
@@ -306,12 +297,12 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - Bad Constraints]\nConstraints feel clearly unrealistic or contrived based on the provided context, do not believe that a real user would add these constraints (e.g., sort these books by alphabetical order according to the 2nd letter of the title)\n\nConstraints are clearly unrealistically stacked (e.g., 3 or more formatting constraints)",
+            "text": "[Fail - Bad Constraints]\nConstraints feel clearly unrealistic or contrived based on the provided context, do not believe that a real user would add these constraints (e.g., sort these books by alphabetical order according to the 2nd letter of the title)\n -OR-\nConstraints are clearly unrealistically stacked (e.g., 3 or more formatting constraints)",
             "score": 2,
             "justify": true
           },
           {
-            "text": "[Non-Fail - Basic Constraints]\nConstraints are pretty basic or may be overused (e.g., keep it brief / I’m in a hurry, explain it to a child, formatting based constraints)\n\nSubjective constraints, where it’s believable that somebody in this situation of the prompt may find the constraint useful.",
+            "text": "[Non-Fail - Basic Constraints]\nConstraints are pretty basic or may be overused (e.g., keep it brief / I’m in a hurry, explain it to a child, formatting based constraints)\n -OR-\nSubjective constraints, where it’s believable that somebody in this situation of the prompt may find the constraint useful.",
             "score": 3,
             "justify": true
           },
@@ -325,7 +316,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Valid Model Failure",
         "question": "Rate the Valid Model Failure of the Prompt dimension.",
-        "description": "Applies to: Model A (unhinted) trajectory.\n\nThis is based on a \"true\" evaluation of the criteria against the response, not necessarily the included evaluations (if they are incorrect).  For all options except the last, apply the error category.",
+        "description": "Applies to: Model A (unhinted) trajectory.\nEvaluate Model A against the true intent of each criterion, not the included evaluations. For an incorrect criterion, judge Model A against the corrected version (what the criterion should have checked). A valid model failure exists if Model A fails at least one correct criterion, or fails the corrected version of an incorrect criterion. If an incorrect criterion can’t be meaningfully corrected (irrelevant, out of scope), ignore it for this dimension.",
         "errorTags": [
           {
             "label": "Fail - No Model Failure",
@@ -334,7 +325,7 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - No Model Failure]\nThe prompt does not cause at least one model to fail in any criterion (implicit/explicit)\n\nThe model failure, if present, is really weak (not pronounced)\n\nThe model response failure is based on an ambiguous interpretation of the prompt (i.e., the request can be reasonably interpreted in multiple ways and the model picked one of the valid interpretations)",
+            "text": "[Fail - No Model Failure] The prompt does not cause at least one model to fail one or more criteria, OR the only criterion failed is incorrect, and the model response would fulfil a correctly written version.",
             "score": 2,
             "justify": true
           },
@@ -357,21 +348,21 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - Not Professional Prompt]\nThe prompt does not sound like a question asked for work / business purposes in the given domain",
+            "text": "[Fail - Not Professional Prompt] The prompt does not sound like a question asked for work / business purposes in the given L1 category",
             "score": 2,
             "justify": true
           },
           {
-            "text": "The prompt is clearly designed by a professional in the chosen domain",
+            "text": "The prompt is clearly designed by a professional in the assigned L1 category",
             "score": 5,
             "justify": false
           }
         ]
       },
       {
-        "name": "Domain Relevance",
-        "question": "Rate the Domain Relevance of the Prompt dimension.",
-        "description": "Check against the subcategory assigned to your task in column E of the task parameter sheet.",
+        "name": "Subcategory Relevance",
+        "question": "Rate the Subcategory Relevance of the Prompt dimension.",
+        "description": "Check against the \"Subcategory (L2)\" field assigned in-task.",
         "errorTags": [
           {
             "label": "Fail - Subcategory Relevance",
@@ -403,7 +394,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Category Relevance",
         "question": "Rate the Category Relevance of the Prompt dimension.",
-        "description": "Check against the category assigned to your task in column D of the task parameter sheet.  For all options except the last, apply an error category.",
+        "description": "Check against the \"Use Case (L1)\" field assigned in-task. For all options except the last, apply an error category.",
         "errorTags": [
           {
             "label": "Non-Fail - Category Relevance Prompt",
@@ -427,38 +418,6 @@ export const specGroups: SpecGroup[] = [
           },
           {
             "text": "The Prompt clearly fits the assigned category and showcases subject expertise",
-            "score": 5,
-            "justify": false
-          }
-        ]
-      },
-      {
-        "name": "Expertise",
-        "question": "Rate the Expertise of the Prompt dimension.",
-        "description": "For all options except the last, apply an error category.",
-        "errorTags": [
-          {
-            "label": "Fail - No Expertise Needed Prompt",
-            "type": "fail"
-          },
-          {
-            "label": "Non-Fail - No Expertise Needed",
-            "type": "non-fail"
-          }
-        ],
-        "options": [
-          {
-            "text": "[Fail - No Expertise Needed Prompt]\nThe prompt could be reasonably answered by the general population without the need for specific domain knowledge OR background research (research needed to understand the prompt before answering)",
-            "score": 2,
-            "justify": true
-          },
-          {
-            "text": "[Non-Fail - No Expertise Needed]\nIt is debateable whether expert knowledge in the domain is required to answer the prompt",
-            "score": 3,
-            "justify": true
-          },
-          {
-            "text": "The prompt would need some level of professional experience/domain knowledge to answer successfully",
             "score": 5,
             "justify": false
           }
@@ -508,7 +467,7 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - Missing Artifacts]\nOne or more files named in the prompt are missing.",
+            "text": "[Fail - Missing Artifacts] One or more files named in the prompt are missing. This does not include when a requested file is named in the prompt is mislabeled in the golden response (in those cases, determine which request the file aligns with based on its content instead).",
             "score": 2,
             "justify": true
           },
@@ -544,7 +503,7 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - Hint Leaked Ground Truth]\nOne or more Leg B follow-ups supply a concrete value the agent was supposed to derive from the multimodal inputs and/or environment (e.g., 'the total is 412.75', 'it's the third image') AND the model uses it without consulting the input file or environment source. A leak preceded by a demonstrably failed non-leaking hint is scored as Unavoidable Leakage instead.",
+            "text": "[Fail - Hint Leaked Ground Truth] One or more Leg B follow-ups supply a concrete value the agent was supposed to derive from the multimodal inputs and/or environment (e.g., 'the total is 412.75', 'it's the third image') AND the model uses it without consulting the input file or environment source.",
             "score": 2,
             "justify": true
           },
@@ -573,7 +532,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Overall Rubric Quality - 10%",
         "question": "Rate the Overall Rubric Quality - 10% of the Rubric Criteria dimension.",
-        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; each missing criterion counts as one issue and is added to the numerator only. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
+        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, plus any missing criteria flagged as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
         "errorTags": [
           {
             "label": "Fail - 10%+ Major Rubric Errors",
@@ -605,7 +564,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Overall Rubric Quality - 15%",
         "question": "Rate the Overall Rubric Quality - 15% of the Rubric Criteria dimension.",
-        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; each missing criterion counts as one issue and is added to the numerator only; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
+        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, plus any missing criteria flagged as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
         "errorTags": [
           {
             "label": "Fail - 15%+ Moderate Rubric Errors",
@@ -637,7 +596,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Overall Rubric Quality - 20%",
         "question": "Rate the Overall Rubric Quality - 20% of the Rubric Criteria dimension.",
-        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; each missing criterion counts as one issue and is added to the numerator only; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
+        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, plus any missing criteria flagged as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
         "errorTags": [
           {
             "label": "Fail - 20%+ Minor Rubric Errors",
@@ -678,7 +637,7 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - Trivial Task]\nThe rubric score for Model A's response is greater than to 70%.",
+            "text": "[Fail - Trivial Task] The rubric score for Model A's response is strictly greater than 70%.",
             "score": 2,
             "justify": true
           },
@@ -692,7 +651,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "80/20 Outcome Split (Process Over Cap)",
         "question": "Rate the 80/20 Outcome Split (Process Over Cap) of the Rubric Criteria dimension.",
-        "description": "Count objective criteria only (positive and negative), excluding the subjective block; the cap is rounded down (12 criteria -> max 2 process; 14 -> max 2).\nCOMPLETION: Task Completion / Instruction Following on Final Answer Artifact, State Change or User-Facing Message; Safety criteria that grade the final state.\nPROCESS: Tool Use, Agent Behavior, any Trajectory target, messages narrating the agent's own work, Safety criteria about asking/confirming before acting.\nTest: could the deliverable be perfect and this criterion still fail? If yes, it is process.  For all options except the last, apply an error category.",
+        "description": "Applies to: Criteria in the Objective block only\nWhen calculating the proportion of objective criteria that evaluate processes instead of outcomes, round the proportion down to the nearest 1%, e.g.:\nIf there are 14 criteria in the objective block, at most 2 can be process (as 3/14=21%)\n\nCOMPLETION: Task Completion / Instruction Following on Final Answer Artifact, State Change or User-Facing Message; Safety criteria that grade the final state.\nPROCESS: Tool Use, Agent Behavior, any Trajectory target, messages narrating the agent's own work, Safety criteria about asking/confirming before acting.\n\nCould the deliverable be perfect and this criterion still fail? If yes, it is process.\nFor all options except the last, apply an error category.",
         "errorTags": [
           {
             "label": "Non-Fail - Avoidable Process Criteria",
@@ -710,35 +669,12 @@ export const specGroups: SpecGroup[] = [
             "justify": true
           },
           {
-            "text": "[Non-Fail - Avoidable Process Criteria]\nProcess criteria are within the cap, but at least one could have been written as a completion criterion (the value it protects can be graded where it lands in the deliverable).",
+            "text": "[Non-Fail - Avoidable Process Criteria] <=20% of the objective criteria (by count, rounded down) grade process rather than outcomes, but at least one could have been written as a completion criterion (the value it protects can be graded where it lands in the deliverable).",
             "score": 3,
             "justify": true
           },
           {
             "text": "Zero process criteria, or every process criterion grades a failure no deliverable can show (e.g., a live value the model could fake without calling the tool).",
-            "score": 5,
-            "justify": false
-          }
-        ]
-      },
-      {
-        "name": "Existence Check",
-        "question": "Rate the Existence Check of the Rubric Criteria dimension.",
-        "description": "Automatic fail, in either block. Disguised forms: 'includes a section titled X', 'contains the columns A, B, C', 'produced a chart', 'the email was sent' with no content. Test: could the criterion pass on a file full of wrong content?  For all options except the last, apply the error category.",
-        "errorTags": [
-          {
-            "label": "Fail - Existence Check",
-            "type": "fail"
-          }
-        ],
-        "options": [
-          {
-            "text": "[Fail - Existence Check]\nAt least one criterion only verifies that a file, section, column or record exists, rather than its substantive content or correctness.",
-            "score": 2,
-            "justify": true
-          },
-          {
-            "text": "Every criterion grades content; existence is only ever implied.",
             "score": 5,
             "justify": false
           }
@@ -768,32 +704,9 @@ export const specGroups: SpecGroup[] = [
         ]
       },
       {
-        "name": "Rubric Spot Checks",
-        "question": "Rate the Rubric Spot Checks of the Rubric Criteria dimension.",
-        "description": "For more than 8 similar outcomes: 1 completeness (volume) criterion + up to 5 spot checks on the strongest-signal cases. Never one criterion per item.  For all options except the last, apply the error category.",
-        "errorTags": [
-          {
-            "label": "Non-Fail - Too Many Spot Checks",
-            "type": "non-fail"
-          }
-        ],
-        "options": [
-          {
-            "text": "[Non-Fail - Too Many Spot Checks]\nThere are more than 5 spot checks for any group of outcomes.",
-            "score": 3,
-            "justify": true
-          },
-          {
-            "text": "Every group of outcomes has up to 5 spot checks.",
-            "score": 5,
-            "justify": false
-          }
-        ]
-      },
-      {
         "name": "Subjective Block Scope",
         "question": "Rate the Subjective Block Scope of the Rubric Criteria dimension.",
-        "description": "Tasks producing decks, HTML, PDFs, catalogs or video carry a subjective block: presentation only (layout, legibility, hierarchy, structure, cross-artifact consistency, register), one observable property per criterion, rated for Model A and Model B side by side, positives only. Outside the 80/20 count. A deterministic value check must mandate which content appears, not how it is presented, how much a field carries, or where it sits.  For all options except the last, apply an error category.",
+        "description": "Tasks producing decks, HTML, PDFs, catalogs or video carry a subjective block: presentation only (layout, legibility, hierarchy, structure, cross-artifact consistency, register), one observable property per criterion, rated for Model A and Model B side by side. A deterministic value check must mandate which content appears, not how it is presented, how much a field carries, or where it sits.  For all options except the last, apply an error category.",
         "errorTags": [
           {
             "label": "Non-Fail - Minor Scope Bleed",
@@ -862,7 +775,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Single-Turn Structure",
         "question": "Rate the Single-Turn Structure of the Task Type dimension.",
-        "description": "Trajectory A is one prompt with no follow-ups. Trajectory B (golden) may use follow-ups; that is judged under Golden Solution - Hint Leak.  For all options except the last, apply an error category.",
+        "description": "Applies to: Trajectory A only\nTrajectory A is one prompt with no follow-ups. Trajectory B (golden) may use follow-ups; that is judged under Golden Solution - Hint Leak.  For all options except the last, apply an error category.",
         "errorTags": [
           {
             "label": "Non-Fail - Unnamed Deliverables",
@@ -899,7 +812,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Feasibility With Tools",
         "question": "Rate the Feasibility With Tools of the Trajectory dimension.",
-        "description": "This is based on the evaluations present in-task for Model A & B.  For all options except the last, apply an error category.\nThe primary request is the deliverable the scenario's goal depends on; other asks are secondary.",
+        "description": "Applies to: Requests in Trajectory A or B\nThe primary request is the deliverable the scenario's goal depends on (or the one the prompt depends on, in the case the assigned scenario was infeasible); other asks are secondary.\nFor all options except the last, apply an error category.",
         "errorTags": [
           {
             "label": "Fail - Feasibility with Tools",
@@ -923,70 +836,6 @@ export const specGroups: SpecGroup[] = [
           },
           {
             "text": "The requests are completely actionable by the tool framework.",
-            "score": 5,
-            "justify": false
-          }
-        ]
-      },
-      {
-        "name": "Architectural Depth & Friction Exposure",
-        "question": "Rate the Architectural Depth & Friction Exposure of the Trajectory dimension.",
-        "description": "For all options except the last, apply an error category.",
-        "errorTags": [
-          {
-            "label": "Fail - Major Depth Issues",
-            "type": "fail"
-          },
-          {
-            "label": "Non-Fail - Minor Depth Issues",
-            "type": "non-fail"
-          }
-        ],
-        "options": [
-          {
-            "text": "[Fail - Major Depth Issues]\nNo meaningful tool dependency.\nAll models would perform nearly identically due to low complexity.",
-            "score": 2,
-            "justify": true
-          },
-          {
-            "text": "[Non-Fail - Minor Depth Issues]\nTool use is present but not deeply integrated into the reasoning.\nThe task meets minimum requirements but lacks strong differentiation power.",
-            "score": 3,
-            "justify": true
-          },
-          {
-            "text": "The task requires multi-stage planning across the inputs and the universe, includes real friction (conflicting data, missing fields, normalization issues, constraint conflicts) and meaningfully differentiates model capability.",
-            "score": 5,
-            "justify": false
-          }
-        ]
-      },
-      {
-        "name": "Genuine Media Inspection",
-        "question": "Rate the Genuine Media Inspection of the Trajectory dimension.",
-        "description": "This is a QC check on the trajectory, not a rubric criterion.  For all options except the last, apply an error category.",
-        "errorTags": [
-          {
-            "label": "Non-Fail - Partial Inspection",
-            "type": "non-fail"
-          },
-          {
-            "label": "Fail - Media Not Inspected",
-            "type": "fail"
-          }
-        ],
-        "options": [
-          {
-            "text": "[Fail - Media Not Inspected]\nThe agent produced values attributed to the multimodal inputs with no trajectory evidence of opening, reading or processing them (inferred from filenames, the prompt's wording, or guessed).",
-            "score": 2,
-            "justify": true
-          },
-          {
-            "text": "[Non-Fail - Partial Inspection]\nThe agent inspected some inputs but sourced at least one reported value from a filename or the user's phrasing rather than the media itself.",
-            "score": 3,
-            "justify": true
-          },
-          {
-            "text": "Every value attributed to a multimodal input is traceable to a trajectory step where that input was opened and processed.",
             "score": 5,
             "justify": false
           }
@@ -1303,7 +1152,7 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#parameters", tag: "M1", label: "Judged on the user's intent, not the files" },
     { to: "/reference#use-case-and-tools", tag: "WN", label: "Eleven use cases, sixty-eight subcategories" },
   ],
-  "Domain Relevance": [
+  "Subcategory Relevance": [
     { to: "/#universe", tag: "M2", label: "Grounded in what the universe actually holds" },
   ],
   "Overall Rubric Quality - 10%": [
@@ -1319,17 +1168,11 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/reference#outcome-over-process", tag: "WN", label: "Eighty per cent outcome, and the cap that bites" },
     { to: "/#rubrics", tag: "M8", label: "Where the split is decided" },
   ],
-  "Existence Check": [
-    { to: "/reference#no-existence-checks", tag: "WN", label: "An existence check is an automatic fail" },
-  ],
   "All Criteria Scoring": [
     { to: "/reference#literal-matching", tag: "WN", label: "Literal matching, and what it costs" },
   ],
   "Rubric Structure": [
     { to: "/#rubrics", tag: "M8", label: "One criterion, one observable outcome" },
-  ],
-  "Rubric Spot Checks": [
-    { to: "/#rubrics", tag: "M8", label: "Spot checks, and the volume check beside them" },
   ],
   "Subjective Block Scope": [
     { to: "/#subjective", tag: "M10", label: "Presentation only, graded on the render" },
@@ -1346,12 +1189,6 @@ export const dimensionLinks: Record<string, XLink[]> = {
   "Feasibility With Tools": [
     { to: "/reference#s1", tag: "A2", label: "Confirm the loadout before you design" },
     { to: "/reference#assigned-tools", tag: "WN", label: "Assigned tools have to be named in the scenario" },
-  ],
-  "Architectural Depth & Friction Exposure": [
-    { to: "/#failure", tag: "M7", label: "Designed friction, not artificial friction" },
-  ],
-  "Genuine Media Inspection": [
-    { to: "/#inputs", tag: "M4", label: "Evidence the model has to actually read" },
   ],
   Completeness: [
     { to: "/reference#s6", tag: "F3", label: "Download the trajectories, star the preferred run" },

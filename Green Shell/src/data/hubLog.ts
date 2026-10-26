@@ -58,6 +58,15 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "spec-v6",
+    date: "Oct 22, 2026",
+    kind: "guidelines",
+    what: "The V6 rubric drops five dimensions and renames one",
+    where: "Spec Doc → Change Log",
+    why: "Expertise, Existence Check, Rubric Spot Checks, Architectural Depth & Friction Exposure and Genuine Media Inspection are no longer scored, and Domain Relevance is now Subcategory Relevance. Reasoning Requirement scores 2 or 5, Valid Model Failure is judged against corrected criteria, and flagged missing criteria join the rubric quality denominator. The Guidelines' rules on existence checks and spot checks still apply.",
+    to: "/spec#log",
+  },
+  {
     id: "universe-viewers",
     date: "Oct 18, 2026",
     kind: "resource",

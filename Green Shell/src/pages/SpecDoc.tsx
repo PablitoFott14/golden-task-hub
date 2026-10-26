@@ -706,6 +706,7 @@ const changeKindLabel: Record<SpecChangeKind, string> = {
   options: "Scored options",
   guidance: "Guidance",
   wording: "Wording",
+  removed: "Removed",
 };
 
 const changeKindTone: Record<SpecChangeKind, string> = {
@@ -713,6 +714,8 @@ const changeKindTone: Record<SpecChangeKind, string> = {
   options: "bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-200",
   guidance: "bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-200",
   wording: "bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-200",
+  // Muted, the way the deprecated weight scale is: nothing left to grade against.
+  removed: "bg-ink-200/70 text-ink-600",
 };
 
 const changeKindBorder: Record<SpecChangeKind, string> = {
@@ -720,6 +723,7 @@ const changeKindBorder: Record<SpecChangeKind, string> = {
   options: "border-l-rose-400 dark:border-l-rose-500/60",
   guidance: "border-l-sky-400 dark:border-l-sky-500/60",
   wording: "border-l-amber-400 dark:border-l-amber-500/60",
+  removed: "border-l-ink-300",
 };
 
 function ChangeCard({ ch, query }: { ch: SpecChange; query?: string }) {
@@ -740,16 +744,19 @@ function ChangeCard({ ch, query }: { ch: SpecChange; query?: string }) {
       <p className="mt-1.5 text-[13px] leading-relaxed text-ink-600">
         <Highlight text={ch.detail} query={query} />
       </p>
-      <Crosslinks
-        links={[
-          {
-            to: `/spec#${dimSlug(ch.dimension)}`,
-            tag: ch.group,
-            label: `Read ${ch.dimension} as it stands now`,
-          },
-        ]}
-        className="mt-3"
-      />
+      {/* A removed dimension has no card left to open, so its entry links nowhere. */}
+      {ch.kind !== "removed" && (
+        <Crosslinks
+          links={[
+            {
+              to: `/spec#${dimSlug(ch.dimension)}`,
+              tag: ch.group,
+              label: `Read ${ch.dimension} as it stands now`,
+            },
+          ]}
+          className="mt-3"
+        />
+      )}
     </div>
   );
 }
