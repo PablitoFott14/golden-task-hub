@@ -84,10 +84,15 @@ FORMAT = 1
 
 # The external Files previews sit under this folder beside each viewer page.
 RENDERED_DIR = "seed_data_files_rendered/"
+# Newer builds also keep media beside the page under this one (Instagram
+# photos, PDF pages and image previews), each named by a literal path in the
+# data. They are stored under files/ with the same name below it.
+MEDIA_DIR = "viewer_previews/"
 
 # How the viewer site's home grid names each app. Everything not listed keeps
 # its DATA_NAV label. Checked against the site's own list on every sync.
-APP_LABELS = {"filesystem": "Files", "messaging": "Messages", "reminder": "Reminders"}
+APP_LABELS = {"filesystem": "Files", "messaging": "Messages", "reminder": "Reminders",
+              "blackline": "BlackLine", "oracle_gl": "Oracle GL", "sap_subledger": "SAP Subledger"}
 
 # GitHub refuses a file over 100 MB and warns over 50 MB.
 MAX_FILE = 95 * 1024 * 1024
@@ -181,13 +186,23 @@ DATA_MIN = 64
 RESERVED = ("__UV", "document", "window", "location", "history", "URL")
 
 
-def json_slot(rhs: str) -> tuple[bool, Any]:
-    """A data line is one whose right side is JSON that serialises back exactly."""
+def dumps_slot(v: Any, compact: bool) -> str:
+    """A data line's right side: Python's default form, or the compact one with
+    literal Unicode that newer viewer builds write for some of their lines."""
+    return json.dumps(v, ensure_ascii=False, separators=(",", ":")) if compact else json.dumps(v)
+
+
+def json_slot(rhs: str) -> tuple[bool, Any, bool]:
+    """A data line is one whose right side is JSON that serialises back exactly,
+    in either form. The third value says which."""
     try:
         v = json.loads(rhs)
     except Exception:
-        return False, None
-    return json.dumps(v) == rhs, v
+        return False, None, False
+    for compact in (False, True):
+        if dumps_slot(v, compact) == rhs:
+            return True, v, compact
+    return False, None, False
 
 
 @dataclass
@@ -208,6 +223,8 @@ class Page:
     title: str
     sha256: str
     size: int
+    # The slots written in the compact form ("seed:<name>", "c:<name>", "markdown").
+    compact: list[str] = field(default_factory=list)
 
     @property
     def engine(self) -> str:
@@ -243,22 +260,27 @@ def split_page(text: str) -> Page:
     skin: dict[str, Any] = {}
     consts: dict[str, Any] = {}
     markdown: Optional[dict[str, str]] = None
+    compact: list[str] = []
     out: list[str] = []
     for line in lines:
         m = SEED_LINE.match(line)
         if m:
-            ok, v = json_slot(m.group(3))
+            ok, v, cp = json_slot(m.group(3))
             if ok:
                 name = json.loads(m.group(2))
                 seed[name] = v
+                if cp:
+                    compact.append(f"seed:{name}")
                 out.append(f"{m.group(1)}__UV.seed[{json.dumps(name)}];")
                 continue
         m = SKIN_LINE.match(line)
         if m:
-            ok, v = json_slot(m.group(3))
+            ok, v, cp = json_slot(m.group(3))
             if ok:
                 name = json.loads(m.group(2))
                 skin[name] = v
+                if cp:
+                    compact.append(f"skin:{name}")
                 out.append(f"{m.group(1)}__UV.skin[{json.dumps(name)}];")
                 continue
         m = DECL_LINE.match(line)
@@ -266,20 +288,24 @@ def split_page(text: str) -> Page:
         # `const TZ = "America/Detroit";`) are the engine's own state and stay
         # in the engine, which is just as lossless and keeps state out of data.
         if m and line.rstrip() == line and len(m.group(3)) >= DATA_MIN:
-            ok, v = json_slot(m.group(3))
+            ok, v, cp = json_slot(m.group(3))
             if ok:
                 name = m.group(2)
                 if name == "MARKDOWN" and isinstance(v, dict) and all(isinstance(x, str) for x in v.values()):
                     markdown = v
+                    if cp:
+                        compact.append("markdown")
                     out.append(f"{m.group(1)}__UV.markdown;")
                 else:
                     consts[name] = v
+                    if cp:
+                        compact.append(f"c:{name}")
                     out.append(f"{m.group(1)}__UV.c[{json.dumps(name)}];")
                 continue
         out.append(line)
     raw = text.encode()
     page = Page(pre, css, mid, body, script_open, tail, out, seed, skin, consts, markdown,
-                (tm.group(1).strip() if tm else ""), sha(raw), len(raw))
+                (tm.group(1).strip() if tm else ""), sha(raw), len(raw), compact)
     if assemble(page) != text:
         raise ValueError("the page does not reassemble from its parts")
     return page
@@ -292,11 +318,11 @@ def assemble(page: Page) -> str:
         if not m:
             lines.append(line)
         elif m.group(2) is None:
-            lines.append(f"{m.group(4)}{json.dumps(page.markdown)};")
+            lines.append(f"{m.group(4)}{dumps_slot(page.markdown, 'markdown' in page.compact)};")
         else:
             bucket, name = m.group(2), json.loads(m.group(3))
             src = {"seed": page.seed, "skin": page.skin, "c": page.consts}[bucket]
-            lines.append(f"{m.group(1)}{json.dumps(src[name])};")
+            lines.append(f"{m.group(1)}{dumps_slot(src[name], f'{bucket}:{name}' in page.compact)};")
     return page.pre + page.css + page.mid + page.body + page.script_open + "\n".join(lines) + page.tail
 
 
@@ -427,6 +453,26 @@ def externalize(service: str, value: Any, prior: dict[str, str], prior_bytes: Ca
     return walk(value, service, None, None), files
 
 
+def media_paths(page: Page) -> list[str]:
+    """The files under viewer_previews/ that the page's seed and constants name."""
+    out: dict[str, None] = {}
+
+    def walk(v: Any) -> None:
+        if isinstance(v, str):
+            if v.startswith(MEDIA_DIR):
+                out[v[len(MEDIA_DIR):]] = None
+        elif isinstance(v, dict):
+            for x in v.values():
+                walk(x)
+        elif isinstance(v, list):
+            for x in v:
+                walk(x)
+
+    walk(page.seed)
+    walk(page.consts)
+    return list(out)
+
+
 def ref_positions(v: Any, jpath: str, out: dict[str, str]) -> dict[str, str]:
     if is_ref(v):
         out[jpath] = v["_extracted_to"]
@@ -465,6 +511,10 @@ class Universe:
     def needed_externals(self) -> list[dict[str, Any]]:
         r = self.rendered()
         return [f for f in self.externals() if r is None or r.get(str(f.get("path") or ""))]
+
+    def media(self) -> list[str]:
+        """The viewer_previews/ files the page needs, as stored paths."""
+        return ["files/" + MEDIA_DIR + p for p in media_paths(self.page)]
 
     def asset_digest(self) -> str:
         items = sorted((p, sha(b)) for p, b in self.files.items())
@@ -507,6 +557,7 @@ class Universe:
             "seed": list(p.seed.keys()),
             "skin": list(p.skin.keys()),
             "markdown": md_files if p.markdown is not None else None,
+            **({"compact": p.compact} if p.compact else {}),
             "exports": p.exports(),
             "externals": ext_paths,
             "renderedPrefix": RENDERED_DIR,
@@ -548,7 +599,8 @@ def load_current(slug: str) -> Optional[Universe]:
     engine = read_bytes(d / "viewer" / "engine.js").decode("utf-8")
     page = Page(meta["pre"], read_bytes(d / "viewer" / "style.css").decode("utf-8"), meta["mid"],
                 read_bytes(d / "viewer" / "body.html").decode("utf-8"), meta["scriptOpen"], meta["tail"],
-                engine.split("\n"), seed, data["skin"], data["c"], md, meta.get("title", ""), "", 0)
+                engine.split("\n"), seed, data["skin"], data["c"], md, meta.get("title", ""), "", 0,
+                list(meta.get("compact") or []))
     text = assemble(page).encode()
     page.sha256, page.size = sha(text), len(text)
     u = Universe(slug, page, stored, files)
@@ -893,6 +945,41 @@ def build_from_page(src: PageSource, export: Optional[Export], current: Optional
     if missing:
         raise Problem(f"{len(missing)} Files previews the page needs could not be found or failed their checksum: "
                       + ", ".join(missing[:5]) + (" ..." if len(missing) > 5 else ""))
+    # The media beside the page. The data names them but gives no checksum, so
+    # the live site is read again rather than trusting a copy already here.
+    media_missing: list[str] = []
+    pending_media: list[tuple[str, str]] = []
+    for rest in media_paths(page):
+        path = "files/" + MEDIA_DIR + rest
+        local = src.base_dir / MEDIA_DIR / rest if src.base_dir else None
+        got = (export.files.get(path) if export else None) or (
+            read_bytes(local) if local and os.path.exists(long_path(local)) else None)
+        if got is None and not (src.base_url and fetch_assets) and current is not None:
+            got = current.files.get(path)
+        if got is not None:
+            files[path] = got
+        elif src.base_url and fetch_assets:
+            pending_media.append((rest, path))
+        else:
+            media_missing.append(rest)
+    if pending_media:
+        def pull_media(item: tuple[str, str]) -> tuple[str, str, Optional[bytes]]:
+            rest, path = item
+            try:
+                b, _, ct = http_get(urllib.parse.urljoin(src.base_url or "", quote_path(MEDIA_DIR + rest)))
+            except Exception:
+                return rest, path, None
+            return rest, path, (None if "text/html" in ct else b)
+
+        with cf.ThreadPoolExecutor(12) as ex:
+            for rest, path, b in ex.map(pull_media, pending_media):
+                if b is not None:
+                    files[path] = b
+                else:
+                    media_missing.append(rest)
+    if media_missing:
+        raise Problem(f"{len(media_missing)} files the page names under {MEDIA_DIR} could not be found: "
+                      + ", ".join(media_missing[:5]) + (" ..." if len(media_missing) > 5 else ""))
     u = Universe(src.slug, page, stored, files)
     u.source = {"kind": "viewer page", "origin": src.origin, "time": src.time}
     if export is not None:
@@ -949,7 +1036,8 @@ def build_data_only(export: Export, current: Universe) -> Universe:
         raise Problem("the viewer in place has no seed slots to fill")
     slots = [f'SEED[{json.dumps(s)}] = __UV.seed[{json.dumps(s)}];' for s in seed]
     lines = cp.lines[:first] + slots + [ln for ln in cp.lines[first:] if not (SLOT_LINE.match(ln) and SLOT_LINE.match(ln).group(2) == "seed")]
-    page = Page(cp.pre, cp.css, cp.mid, cp.body, cp.script_open, cp.tail, lines, seed, cp.skin, consts, md, cp.title, "", 0)
+    page = Page(cp.pre, cp.css, cp.mid, cp.body, cp.script_open, cp.tail, lines, seed, cp.skin, consts, md, cp.title, "", 0,
+                cp.compact)
     text = assemble(page).encode()
     page.sha256, page.size = sha(text), len(text)
     u = Universe(export.slug, page, {s: export.seed[s] for s in order}, files)
@@ -1247,6 +1335,9 @@ def problems_for(u: Universe) -> list[str]:
             out.append(f"Files preview {f['path']} is missing")
         elif f.get("sha256") and sha(b) != f["sha256"]:
             out.append(f"Files preview {f['path']} fails its checksum")
+    for p in u.media():
+        if p not in u.files:
+            out.append(f"{p[len('files/'):]} is named by the page and missing")
     # The hub runs the engine with these as parameters, so a top-level
     # declaration of one would be a syntax error there.
     declared = set(re.findall(r"^(?:async\s+)?(?:function\s*\*?|class|const|let|var)\s+([A-Za-z_$][\w$]*)", u.page.engine, re.M))
@@ -1589,7 +1680,9 @@ def main() -> int:
             for f in u.needed_externals():
                 b = u.files["files/filesystem/" + str(f["path"]).lstrip("/")]
                 write_bytes(out / d.name / RENDERED_DIR.rstrip("/") / Path(str(f["path"])), b)
-            print(f"wrote {d.name}: page {u.page.sha256[:12]}, {len(u.needed_externals())} previews")
+            for p in u.media():
+                write_bytes(out / d.name / p[len("files/"):], u.files[p])
+            print(f"wrote {d.name}: page {u.page.sha256[:12]}, {len(u.needed_externals())} previews, {len(u.media())} media")
         return 0
 
     if not UNIV.exists() and not args.sources:

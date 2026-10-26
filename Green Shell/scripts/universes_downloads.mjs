@@ -27,6 +27,7 @@
 import { chromium } from "playwright-core";
 import { createHash } from "node:crypto";
 import fs from "node:fs";
+import http from "node:http";
 import path from "node:path";
 
 const argv = process.argv.slice(2);
@@ -42,7 +43,7 @@ const STORE = opt("--store", "public/universes");
 const ZIPS = opt("--zips", "universe-zips");
 const LIVE = argv.includes("--live");
 if (LIVE) argv.splice(argv.indexOf("--live"), 1);
-const slugs = argv.length ? argv : ["kofi-mensah", "elena-marsh", "ray-castillo"];
+const slugs = argv.length ? argv : fs.readdirSync(STORE).filter((d) => fs.existsSync(path.join(STORE, d, "viewer", "page.json")));
 const RELEASE = /^https:\/\/github\.com\/[^/]+\/[^/]+\/releases\/download\/universes\/([a-z0-9-]+\.zip)$/;
 
 const sha = (b) => createHash("sha256").update(b).digest("hex");
@@ -61,6 +62,21 @@ function stored(slug) {
   walk("");
   return out;
 }
+
+// A response handed to the browser through the route travels base64 in one
+// protocol message, and Chrome closes the page on a message over 100 MB, which
+// a ZIP over about 78 MB already makes. So the release URL is redirected to
+// this server, which sends the build's ZIP as GitHub does, as an attachment.
+const zipServer = LIVE
+  ? null
+  : http.createServer((req, res) => {
+      const name = path.basename(decodeURIComponent(req.url ?? ""));
+      const file = path.join(ZIPS, name);
+      if (!name.endsWith(".zip") || !fs.existsSync(file)) return res.writeHead(404).end("Not Found");
+      res.writeHead(200, { "content-type": "application/octet-stream", "content-disposition": `attachment; filename=${name}`, "content-length": fs.statSync(file).size });
+      fs.createReadStream(file).pipe(res);
+    });
+if (zipServer) await new Promise((resolve) => zipServer.listen(0, "127.0.0.1", resolve));
 
 const browser = await chromium.launch({ channel: "chrome" });
 let failed = 0;
@@ -96,13 +112,7 @@ for (const slug of slugs) {
   if (!LIVE) {
     await page.route(RELEASE, (route) => {
       const name = RELEASE.exec(route.request().url())[1];
-      const file = path.join(ZIPS, name);
-      if (!fs.existsSync(file)) return route.fulfill({ status: 404, body: "Not Found" });
-      return route.fulfill({
-        status: 200,
-        headers: { "content-type": "application/octet-stream", "content-disposition": `attachment; filename=${name}` },
-        body: fs.readFileSync(file),
-      });
+      return route.fulfill({ status: 302, headers: { location: `http://127.0.0.1:${zipServer.address().port}/${name}` } });
     });
   }
 
@@ -142,22 +152,35 @@ for (const slug of slugs) {
   await page
     .waitForFunction((s) => [...document.querySelector(`[data-universe="${s}"]`).shadowRoot.querySelectorAll(".panel.active img")].every((i) => i.complete), slug, { timeout: 90000 })
     .catch(() => {});
-  const links = await inRoot(`
-    const out = [];
-    R.querySelectorAll('.panel.active a[download]').forEach((a, i) => {
+  const info = `
+    const info = (a, i, row) => {
       const cs = getComputedStyle(a), before = getComputedStyle(a, '::before'), r = a.getBoundingClientRect();
-      out.push({
-        i, row: a.closest('.gen-rec')?.querySelector('b')?.textContent ?? '',
-        name: a.getAttribute('download'), href: a.getAttribute('href'), off: a.classList.contains('uv-dl-off'),
+      return {
+        i, row, name: a.getAttribute('download'), href: a.getAttribute('href'), off: a.classList.contains('uv-dl-off'),
         disabled: a.getAttribute('aria-disabled'), text: a.textContent.trim(), title: a.title,
         display: cs.display, color: cs.color, border: cs.borderTopWidth, mask: before.maskImage || before.webkitMaskImage || '',
         w: Math.round(r.width), h: Math.round(r.height),
-      });
-    });
-    return out;
-  `);
+      };
+    };`;
+  // The older Files app lists every file with a Download of its own. The newer
+  // one lists the files and shows one at a time, its Download in the preview,
+  // so each file is opened from its row first.
+  const rows = await inRoot(`return [...R.querySelectorAll('.panel.active #fs-list .fs-item')].map((el) => el.dataset.filePath.replace(/^\\/+/, ''))`);
+  const links = rows.length
+    ? rows.map((row, k) => ({ row, k }))
+    : await inRoot(info + `return [...R.querySelectorAll('.panel.active a[download]')].map((a, i) => info(a, i, a.closest('.gen-rec')?.querySelector('b')?.textContent ?? ''))`);
   if (!links.length) problems.push("the Files app shows no downloads");
-  for (const l of links) {
+  for (const entry of links) {
+    let l = entry;
+    if (rows.length) {
+      await $(".panel.active #fs-list .fs-item").nth(entry.k).click();
+      await page.waitForTimeout(250);
+      l = await inRoot(info + `const el = R.querySelector('.panel.active #fs-preview a[download]'); return el ? info(el, 0, a) : null`, entry.row);
+      if (!l) {
+        problems.push(`Files: ${entry.row}: no Download in the preview`);
+        continue;
+      }
+    }
     const where = `Files: ${l.row}`;
     if (!/flex/.test(l.display) || !/svg/.test(l.mask) || l.border !== "1px" || l.h < 20) {
       problems.push(`${where}: not drawn as the download button (${l.display}, mask ${l.mask.slice(0, 20)}, ${l.w}x${l.h})`);
@@ -173,7 +196,7 @@ for (const slug of slugs) {
     if (!files.has(`files/filesystem/${l.row}`)) counts.viaCopy++;
     if (l.href?.startsWith("data:")) counts.inline++;
     try {
-      const got = await save(page, () => $(".panel.active a[download]").nth(l.i).click());
+      const got = await save(page, () => (rows.length ? $(".panel.active #fs-preview a[download]") : $(".panel.active a[download]").nth(l.i)).click());
       counts.files++;
       if (got.name !== l.row.split("/").pop()) problems.push(`${where}: saves as ${got.name}`);
       if (got.sha !== expect) problems.push(`${where}: the saved bytes are not the file (${got.bytes} bytes)`);
@@ -185,7 +208,14 @@ for (const slug of slugs) {
   // 3. Attachments, in every email thread that has them.
   await inRoot(`R.querySelector('.nav-item[data-nav="email"]').click()`);
   await page.waitForTimeout(400);
-  const threads = await inRoot(`return [...R.querySelectorAll('.panel.active .em-thread-item')].map((el, i) => el.querySelector('.em-thread-clip') ? i : -1).filter(i => i >= 0)`);
+  // The threads marked with a paperclip. The newer engine draws no paperclip
+  // and names an attachment under its message without offering it (its file
+  // is in the Files app), so an engine with no paperclips is not held to any.
+  const { clip, threads } = await inRoot(`
+    const items = [...R.querySelectorAll('.panel.active .em-thread-item')];
+    const clip = items.some((el) => el.querySelector('.em-thread-clip'));
+    return { clip, threads: items.map((el, i) => (el.querySelector('.em-thread-clip') ? i : -1)).filter(i => i >= 0) };
+  `);
   let lightboxDone = false;
   for (const t of threads) {
     await inRoot(`R.querySelectorAll('.panel.active .em-thread-item')[a].click()`, t);
@@ -235,7 +265,7 @@ for (const slug of slugs) {
       await inRoot(`window.vaLightboxClose?.()`);
     }
   }
-  if (!counts.attachments) problems.push("no attachment downloads were found in the email app");
+  if (clip && !counts.attachments) problems.push("no attachment downloads were found in the email app");
 
   // The previews the original never had are 404s in both; anything else is new.
   const extra = errors.filter((e) => !/status of 404/.test(e));
@@ -252,4 +282,5 @@ for (const slug of slugs) {
   await ctx.close();
 }
 await browser.close();
+zipServer?.close();
 process.exit(failed ? 1 : 0);

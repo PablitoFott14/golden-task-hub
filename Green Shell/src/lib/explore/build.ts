@@ -7,7 +7,8 @@ import { email, hourBucket, messaging, messenger, slack } from "./servers/comms"
 import { duffel, fintrack, generic, linkLedgers, plaid } from "./servers/money";
 import { airtable, calendar, contacts, filesystem, reminder } from "./servers/records";
 import { facebook, instagram } from "./servers/social";
-import { apple_health, fitbit, strava } from "./servers/health";
+import { apple_health, fitbit, garmin_health, strava } from "./servers/health";
+import { blackline, linear, oracle_gl, sap_subledger } from "./servers/work";
 
 /**
  * Builds a universe's `ExploreIndex` from its stored seed, in five passes:
@@ -46,7 +47,12 @@ const SERVERS: Record<string, ServerDef> = {
   facebook,
   apple_health,
   fitbit,
+  garmin_health,
   strava,
+  oracle_gl,
+  sap_subledger,
+  blackline,
+  linear,
 };
 
 const DOC_LABELS: Record<string, string> = { memory: "Memory", tensions: "Tensions", storylines: "Storylines", npcs: "Relationships" };
@@ -308,6 +314,10 @@ export function buildIndex(src: ExploreSource): ExploreIndex {
       .join("\n")
       .toLowerCase();
   }
+
+  // A dataset with no records cannot be opened (a server lists only the ones
+  // that have some), so the index does not carry it either.
+  for (const [k, d] of datasets) if (!d.items.length) datasets.delete(k);
 
   const dayKeys = [...days.keys()].sort();
   const range = src.persona.range;

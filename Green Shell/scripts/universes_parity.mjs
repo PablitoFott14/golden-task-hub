@@ -25,6 +25,8 @@
  * tests it.
  */
 import { chromium } from "playwright-core";
+import { existsSync, readdirSync } from "node:fs";
+import { join } from "node:path";
 
 const argv = process.argv.slice(2);
 const opt = (k, d) => {
@@ -39,7 +41,8 @@ const REF = opt("--ref", "http://localhost:8765/");
 const WIDTH = Number(opt("--width", "1440"));
 const HEIGHT = Number(opt("--height", "900"));
 const MAX_TABS = Number(opt("--tabs", "6"));
-const slugs = argv.length ? argv : ["kofi-mensah", "elena-marsh", "ray-castillo"];
+const STORE = opt("--store", "public/universes");
+const slugs = argv.length ? argv : readdirSync(STORE).filter((d) => existsSync(join(STORE, d, "viewer", "page.json")));
 
 /* Both pages get the same helpers. `R()` is the viewer's root: the document in
    the original, the shadow root in the hub. */

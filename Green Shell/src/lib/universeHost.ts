@@ -160,6 +160,9 @@ async function pool<T>(items: T[], limit: number, job: (t: T) => Promise<void>) 
   await Promise.all(Array.from({ length: Math.min(limit, items.length) }, run));
 }
 
+/** Where a newer build keeps media beside its page. */
+const MEDIA_DIR = "viewer_previews/";
+
 export function universeBase(slug: string): string {
   return asset(`universes/${slug}`) + "/";
 }
@@ -278,11 +281,31 @@ export async function loadUniverse(
     }
   }
 
+  // A newer build also keeps media beside its page under `viewer_previews/`,
+  // named by path in the seed and the constants, and its engine writes both
+  // folders' names into URLs itself. Here both sit in this universe's files/,
+  // so the names in the data and the engine's own literals are rebased alike,
+  // which keeps the engine's prefix checks matching. The older engines have
+  // neither literal and no such names, and run as they were.
+  const rebaseMedia = (v: unknown): unknown => {
+    if (typeof v === "string") return v.startsWith(MEDIA_DIR) ? base + "files/" + MEDIA_DIR + urlPath(v.slice(MEDIA_DIR.length)) : v;
+    if (Array.isArray(v)) v.forEach((x, i) => (v[i] = rebaseMedia(x)));
+    else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) (v as Record<string, unknown>)[k] = rebaseMedia(x);
+    return v;
+  };
+  rebaseMedia(seed);
+  rebaseMedia(data.c);
+  const folders: Record<string, string> = { [MEDIA_DIR]: MEDIA_DIR, [page.renderedPrefix]: "filesystem/" };
+  const rebasedEngine = engine.replace(
+    /(['"])(viewer_previews\/|seed_data_files_rendered\/)/g,
+    (m, q: string, dir: string) => (folders[dir] ? q + base + "files/" + folders[dir] : m)
+  );
+
   const markdown: Record<string, string> = {};
   let di = 0;
   for (const [k, p] of Object.entries(page.markdown ?? {})) markdown[k] = p ? mdTexts[di++] : "";
 
-  return { slug, page, engine, css, body, data: { seed, skin: data.skin, c: data.c, markdown }, downloads };
+  return { slug, page, engine: rebasedEngine, css, body, data: { seed, skin: data.skin, c: data.c, markdown }, downloads };
 }
 
 async function sha256Hex(b: Blob): Promise<string> {

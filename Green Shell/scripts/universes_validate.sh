@@ -99,9 +99,22 @@ echo "== 5/7 parity with the original pages"
 (cd "$REF" && exec python -m http.server "$REF_PORT" >/dev/null 2>&1) & PIDS+=($!)
 # Served as GitHub Pages serves it: a missing file is a 404, never the app's
 # index.html, which Vite's default SPA fallback would hand to a broken preview.
+# Pages also decodes every escape in a path, where Vite leaves the reserved
+# ones encoded (an engine that writes "A%26P II" would miss "A&P II"), so
+# those are decoded before Vite looks the file up.
 cat > "$BUILD/vite.preview.config.ts" <<'EOF'
 import base from "./vite.config";
-export default { ...base, appType: "mpa" as const };
+const pagesPaths = {
+  name: "pages-paths",
+  configurePreviewServer(server: { middlewares: { use(fn: (req: { url?: string }, res: unknown, next: () => void) => void): void } }) {
+    server.middlewares.use((req, _res, next) => {
+      const [p, q] = (req.url ?? "").split(/(?=\?)/);
+      req.url = p.replace(/%(26|2C|3B|3A|40|3D|2B|24)/gi, (m) => decodeURIComponent(m)) + (q ?? "");
+      next();
+    });
+  },
+};
+export default { ...base, appType: "mpa" as const, plugins: [...(base.plugins ?? []), pagesPaths] };
 EOF
 (cd "$BUILD" && exec node node_modules/vite/bin/vite.js preview --config vite.preview.config.ts --port "$HUB_PORT" --strictPort >/dev/null 2>&1) & PIDS+=($!)
 for _ in $(seq 1 60); do

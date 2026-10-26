@@ -371,6 +371,120 @@ export const fitbit: ServerDef = {
   },
 };
 
+/* ----------------------------------------------------------- garmin health */
+
+export const garmin_health: ServerDef = {
+  claims(seed, reg) {
+    for (const u of arr(seed.users)) if (u.is_user !== false) reg.claim({ self: true, emails: [str(u.email)], phones: [str(u.phone)] });
+  },
+  build(seed, ctx, server) {
+    const acc = days();
+    // One record per metric per day in practice; more in a day are averaged.
+    const each = (coll: string, fields: [string, string][]) => {
+      for (const r of arr(seed[coll])) {
+        const day = str(r.date).slice(0, 10);
+        if (!day) continue;
+        const d = acc.at(day);
+        keep(d, coll, r);
+        const n = d.recs[coll].length;
+        for (const [k, f] of fields) {
+          const v = num(r[f]);
+          if (v !== null) d.n[k] = n > 1 && d.n[k] !== undefined ? (d.n[k] * (n - 1) + v) / n : v;
+        }
+      }
+    };
+    each("daily_stats", [["steps", "steps"], ["meters", "distance_meters"], ["kcal", "calories_total"], ["active", "calories_active"], ["floors", "floors_climbed"], ["intensity", "intensity_minutes"]]);
+    for (const d of acc.values()) if (d.n.meters !== undefined) d.n.km = d.n.meters / 1000;
+    each("heart_rate", [["rhr", "resting_hr"], ["maxHr", "max_hr"]]);
+    each("hrv", [["hrv", "hrv_last_night"]]);
+    each("sleep", [["asleep", "total_sleep_minutes"], ["deep", "deep_sleep_minutes"], ["light", "light_sleep_minutes"], ["rem", "rem_sleep_minutes"], ["awakeMin", "awake_minutes"], ["sleepScore", "sleep_score"]]);
+    each("stress", [["stress", "avg_stress"]]);
+    each("body_battery", [["battery", "morning_value"], ["batteryHigh", "high_value"], ["batteryLow", "low_value"]]);
+    each("training_readiness", [["readiness", "readiness_score"]]);
+    each("respiration", [["resp", "avg_waking_respiration"]]);
+    each("spo2", [["spo2", "avg_spo2"]]);
+    each("body_composition", [["weight", "weight_kg"]]);
+    for (const d of acc.values()) {
+      const s = d.recs.sleep?.[0];
+      const a = ctx.clock.parse(s?.sleep_start)?.ms;
+      const b = ctx.clock.parse(s?.sleep_end)?.ms;
+      if (a !== undefined && b !== undefined) setSleep(ctx, d, a, b);
+    }
+    const acts = arr(seed.activities);
+    for (const a of acts) {
+      const at = ctx.clock.parse(a.start_time)?.ms;
+      if (at === undefined) continue;
+      const d = acc.at(ctx.clock.day(at));
+      keep(d, "activities", a);
+      d.workouts.push(pretty(a.activity_type) || "Activity");
+      add(d, "workoutMin", (num(a.duration_seconds) ?? 0) / 60);
+    }
+    const first = (d: DayAcc, coll: string, f: string) => str(d.recs[coll]?.[0]?.[f]);
+    const types = [...new Set([...acc.values()].flatMap((d) => d.workouts))];
+    dayItems(
+      ctx,
+      server,
+      acc,
+      [
+        numCol("steps", "Steps"),
+        numCol("km", "Distance km"),
+        numCol("kcal", "Calories"),
+        numCol("rhr", "Resting HR"),
+        numCol("hrv", "HRV ms"),
+        { id: "asleep", label: "Asleep", get: (it) => hm(it.n.asleep) },
+        numCol("sleepScore", "Sleep score"),
+        numCol("stress", "Stress"),
+        numCol("battery", "Body battery"),
+        numCol("readiness", "Readiness"),
+        { id: "bed", label: "Bedtime", get: (it) => clockOf(ctx, it.n.bedAt) },
+        { id: "wake", label: "Woke", get: (it) => clockOf(ctx, it.n.wakeAt) },
+        { id: "workout", label: "Activity", get: (it) => ((it.f.workout as string[]) ?? []).filter((w) => w !== "No activity").join(", ") || null },
+      ],
+      [sortNum("steps", "Most steps", "steps"), sortNum("asleep", "Most sleep", "asleep"), sortNum("asleep_low", "Least sleep", "asleep", 1), sortNum("rhr", "Highest resting HR", "rhr"), sortNum("hrv", "Highest HRV", "hrv"), sortNum("stress", "Most stress", "stress"), sortNum("battery_low", "Lowest body battery", "battery", 1), sortNum("bedMin", "Latest bedtime", "bedMin")],
+      [
+        ...(types.length ? [{ id: "workout", label: "Activity", order: "given" as const, given: [...types, "No activity"], primary: true }] : []),
+        { id: "hrvStatus", label: "HRV status" },
+        { id: "stressLevel", label: "Stress level" },
+        { id: "readinessLevel", label: "Readiness" },
+      ],
+      (d) => [d.n.steps !== undefined ? `${Math.round(d.n.steps).toLocaleString("en-US")} steps` : "", d.n.asleep !== undefined ? `${hm(d.n.asleep)} asleep` : "", d.n.rhr !== undefined ? `resting ${Math.round(d.n.rhr)} bpm` : "", d.workouts.length ? d.workouts.join(", ") : ""].filter(Boolean).join(" · "),
+      (d) => ({
+        workout: d.workouts.length ? [...new Set(d.workouts)] : ["No activity"],
+        ...(first(d, "hrv", "hrv_status") ? { hrvStatus: pretty(first(d, "hrv", "hrv_status")) } : {}),
+        ...(first(d, "stress", "stress_qualifier") ? { stressLevel: pretty(first(d, "stress", "stress_qualifier")) } : {}),
+        ...(first(d, "training_readiness", "readiness_level") ? { readinessLevel: pretty(first(d, "training_readiness", "readiness_level")) } : {}),
+      })
+    );
+
+    if (acts.length) {
+      const ds = ctx.dataset(server, {
+        id: "activities",
+        label: "Activities",
+        noun: "activities",
+        row: "activity",
+        facets: [{ id: "type", label: "Activity", primary: true }, { id: "hour", label: "Time of day", order: "given", given: HOUR_BUCKETS, primary: true }, WEEKDAY_FACET, MONTH_FACET],
+        sorts: [SORT_NEW, SORT_OLD, sortNum("km", "Longest distance", "km"), sortNum("min", "Longest time", "min"), sortNum("hr", "Highest average HR", "hr"), { id: "pace", label: "Fastest pace", key: (it) => it.n.pace ?? null, dir: 1 }, sortNum("elev", "Most climbing", "elev")],
+        groups: [GROUP_MONTH, GROUP_WEEK, groupFacet("type", "Activity")],
+        defaultSort: "new",
+      });
+      for (const a of acts) {
+        const min = (num(a.duration_seconds) ?? NaN) / 60;
+        const km = (num(a.distance_meters) ?? NaN) / 1000;
+        ctx.add(ds, {
+          id: str(a.activity_id),
+          title: str(a.activity_name) || pretty(a.activity_type) || "Activity",
+          sub: [Number.isFinite(min) ? `${Math.round(min)} min` : "", Number.isFinite(km) && km > 0 ? `${km.toFixed(1)} km` : "", num(a.avg_hr) !== null ? `avg ${str(a.avg_hr)} bpm` : "", num(a.calories) !== null ? `${str(a.calories)} kcal` : ""].filter(Boolean).join(" · "),
+          when: a.start_time,
+          f: { type: pretty(a.activity_type) || "Activity" },
+          n: { km, min, hr: num(a.avg_hr) ?? NaN, pace: num(a.avg_pace_seconds_per_km) ?? NaN, kcal: num(a.calories) ?? NaN, elev: num(a.elevation_gain_meters) ?? NaN },
+          raw: a,
+        });
+      }
+    }
+    generic(ctx, server, seed, ["users", "daily_stats", "heart_rate", "hrv", "sleep", "stress", "body_battery", "training_readiness", "respiration", "spo2", "body_composition", "activities", "devices"]);
+  },
+};
+
 /* ------------------------------------------------------------------ strava */
 
 export const strava: ServerDef = {

@@ -7,7 +7,7 @@ import { loadUniverse, mountUniverse, type LoadedUniverse, type MountedUniverse 
 import { cx } from "../lib/util";
 
 /**
- * The Universes tab: the three persona universes, run inside the hub.
+ * The Universes tab: the persona universes, run inside the hub.
  *
  * It replaces the external Universe Viewers site and keeps its shape: a home
  * grid of persona cards, a bar of persona tabs, and a stage that holds one
@@ -183,6 +183,18 @@ function UniversesHome() {
 function PersonaBar({ u: staged, fullHref, mode }: { u: UniverseEntry; fullHref: string; mode: Mode }) {
   const current = staged.slug;
   const tail = mode === "explore" ? "/explore" : "";
+  // The tabs scroll sideways when they outrun the bar, and keep the open one in view.
+  const navRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const nav = navRef.current;
+    const on = nav?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (!nav || !on || nav.scrollWidth <= nav.clientWidth) return;
+    const left = on.offsetLeft;
+    const right = left + on.offsetWidth;
+    if (left < nav.scrollLeft || right > nav.scrollLeft + nav.clientWidth) {
+      nav.scrollTo({ left: left - (nav.clientWidth - on.offsetWidth) / 2, behavior: "smooth" });
+    }
+  }, [current]);
   return (
     <div className="flex h-[52px] shrink-0 items-center gap-3 border-b border-ink-200/70 bg-surface px-3 sm:gap-[18px] sm:px-[18px]">
       <Link
@@ -192,7 +204,7 @@ function PersonaBar({ u: staged, fullHref, mode }: { u: UniverseEntry; fullHref:
         <Orbit size={16} className="text-brand-600 dark:text-brand-300" aria-hidden />
         <span className="hidden sm:inline">Universes</span>
       </Link>
-      <nav className="flex min-w-0 gap-1 overflow-x-auto [scrollbar-width:none]" aria-label="Personas">
+      <nav ref={navRef} className="relative flex min-w-0 gap-1 overflow-x-auto [scrollbar-width:none]" aria-label="Personas">
         {universeCatalog.map((u) => {
           const on = u.slug === current;
           return (
