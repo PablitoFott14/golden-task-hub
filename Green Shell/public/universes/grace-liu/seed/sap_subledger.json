@@ -1,0 +1,1182 @@
+{
+ "ap_invoices": [
+  {
+   "id": "apinv-5105614760",
+   "entity_id": "LFL",
+   "sap_document_number": "5105614760",
+   "vendor_id": "100231",
+   "vendor_name": "Great Lakes Terminal Equipment Inc.",
+   "invoice_number": "GLTE-20817",
+   "invoice_date": "2026-05-28",
+   "posting_date": "2026-05-29",
+   "gl_account_number": "2010-000",
+   "cost_center": "320",
+   "product_code": null,
+   "amount": 148800.0,
+   "currency": "USD",
+   "status": "paid",
+   "document_id": null,
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-05-28T15:42:00-05:00",
+   "processing_date": "2026-05-29",
+   "due_date": "2026-06-27",
+   "payment_date": "2026-06-25",
+   "payment_method": "ACH",
+   "payment_reference": "1784018287",
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [
+    "PO-4500179102"
+   ],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "1620-000",
+     "amount": 148800.0,
+     "cost_center": "320",
+     "product_code": null,
+     "memo": "2026 Kalmar Ottawa T2 yard tractor, unit YT-061 (asset 310061)"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105616321",
+   "entity_id": "LFL",
+   "sap_document_number": "5105616321",
+   "vendor_id": "100155",
+   "vendor_name": "Northfield Transport Underwriters, Inc.",
+   "invoice_number": "NTU-26-04417",
+   "invoice_date": "2026-06-12",
+   "posting_date": "2026-06-15",
+   "gl_account_number": "2010-000",
+   "cost_center": "100",
+   "product_code": null,
+   "amount": 612000.0,
+   "currency": "USD",
+   "status": "paid",
+   "document_id": null,
+   "approver": "mkeane",
+   "void_reason": null,
+   "time_received": "2026-06-15T09:20:00-05:00",
+   "processing_date": "2026-06-15",
+   "due_date": "2026-07-01",
+   "payment_date": "2026-06-30",
+   "payment_method": "Wire",
+   "payment_reference": "1784018702",
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [
+    "NTU-PCG-26-55310",
+    "PP-INS-2026"
+   ],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "1410-000",
+     "amount": 612000.0,
+     "cost_center": "100",
+     "product_code": null,
+     "memo": "Annual premium, property/cargo/GL program, term 07/01/2026-06/30/2027 (PP-INS-2026)"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105620587",
+   "entity_id": "LFL",
+   "sap_document_number": "5105620587",
+   "vendor_id": "100318",
+   "vendor_name": "Prairie State Lift Truck Co.",
+   "invoice_number": "PSLT-77314",
+   "invoice_date": "2026-07-24",
+   "posting_date": "2026-07-27",
+   "gl_account_number": "2010-000",
+   "cost_center": "320",
+   "product_code": null,
+   "amount": 46800.0,
+   "currency": "USD",
+   "status": "paid",
+   "document_id": null,
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-07-27T08:52:00-05:00",
+   "processing_date": "2026-07-27",
+   "due_date": "2026-08-23",
+   "payment_date": "2026-08-20",
+   "payment_method": "ACH",
+   "payment_reference": "1784023533",
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [
+    "PO-4500181456"
+   ],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "1630-000",
+     "amount": 46800.0,
+     "cost_center": "320",
+     "product_code": null,
+     "memo": "Toyota 8FBCU25 electric forklift with Li-ion battery, unit FL-142 (asset 320142)"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105622690",
+   "entity_id": "LFL",
+   "sap_document_number": "5105622690",
+   "vendor_id": "100277",
+   "vendor_name": "Calumet Tire & Fleet Service Inc.",
+   "invoice_number": "CT-118402",
+   "invoice_date": "2026-08-14",
+   "posting_date": "2026-08-17",
+   "gl_account_number": "2010-000",
+   "cost_center": "330",
+   "product_code": null,
+   "amount": 7412.6,
+   "currency": "USD",
+   "status": "paid",
+   "document_id": null,
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-08-17T09:41:00-05:00",
+   "processing_date": "2026-08-17",
+   "due_date": "2026-09-13",
+   "payment_date": "2026-09-10",
+   "payment_method": "ACH",
+   "payment_reference": "1784025615",
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "5420-000",
+     "amount": 6980.0,
+     "cost_center": "330",
+     "product_code": null,
+     "memo": "10 x 295/75R22.5 trailer tires, mounted and balanced"
+    },
+    {
+     "line_number": 2,
+     "gl_account_number": "5410-000",
+     "amount": 432.6,
+     "cost_center": "330",
+     "product_code": null,
+     "memo": "Road service call, trailer LT-5318"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105627255",
+   "entity_id": "LFL",
+   "sap_document_number": "5105627255",
+   "vendor_id": "100512",
+   "vendor_name": "Ironbridge Logistics Brokerage LLC",
+   "invoice_number": "IBL-260913",
+   "invoice_date": "2026-09-30",
+   "posting_date": "2026-10-02",
+   "gl_account_number": "2010-000",
+   "cost_center": "330",
+   "product_code": null,
+   "amount": 23615.0,
+   "currency": "USD",
+   "status": "paid",
+   "document_id": null,
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-10-01T09:14:00-05:00",
+   "processing_date": "2026-10-02",
+   "due_date": "2026-10-30",
+   "payment_date": "2026-10-29",
+   "payment_method": "ACH",
+   "payment_reference": "1784030260",
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "5120-000",
+     "amount": 23615.0,
+     "cost_center": "330",
+     "product_code": null,
+     "memo": "Brokered loads delivered Sep 2026 (11 loads), matched to TMS"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105628240",
+   "entity_id": "LFL",
+   "sap_document_number": "5105628240",
+   "vendor_id": "100318",
+   "vendor_name": "Prairie State Lift Truck Co.",
+   "invoice_number": "PSLT-79022",
+   "invoice_date": "2026-10-03",
+   "posting_date": "2026-10-06",
+   "gl_account_number": "2010-000",
+   "cost_center": "320",
+   "product_code": null,
+   "amount": 2846.35,
+   "currency": "USD",
+   "status": "open",
+   "document_id": null,
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-10-05T09:12:00-05:00",
+   "processing_date": "2026-10-06",
+   "due_date": "2026-11-02",
+   "payment_date": null,
+   "payment_method": null,
+   "payment_reference": null,
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [
+    "PO-4500185210"
+   ],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "5410-000",
+     "amount": 2846.35,
+     "cost_center": "320",
+     "product_code": null,
+     "memo": "Quarterly PM service, 6 forklifts incl. FL-107 and FL-142, Gary XD"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105628371",
+   "entity_id": "LFL",
+   "sap_document_number": "5105628371",
+   "vendor_id": "100409",
+   "vendor_name": "Bluff City Staffing LLC",
+   "invoice_number": "BCS-10422",
+   "invoice_date": "2026-10-09",
+   "posting_date": "2026-10-13",
+   "gl_account_number": "2010-000",
+   "cost_center": "410",
+   "product_code": null,
+   "amount": 18436.5,
+   "currency": "USD",
+   "status": "paid",
+   "document_id": null,
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-10-12T08:21:00-05:00",
+   "processing_date": "2026-10-13",
+   "due_date": "2026-10-24",
+   "payment_date": "2026-10-22",
+   "payment_method": "ACH",
+   "payment_reference": "1784029541",
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "5610-000",
+     "amount": 18436.5,
+     "cost_center": "410",
+     "product_code": null,
+     "memo": "Temp warehouse associates, w/e 10/04/2026, Memphis Hub"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105628652",
+   "entity_id": "LFL",
+   "sap_document_number": "5105628652",
+   "vendor_id": "100482",
+   "vendor_name": "Midwest Fuel Partners LLC",
+   "invoice_number": "MFP-260698",
+   "invoice_date": "2026-10-16",
+   "posting_date": "2026-10-16",
+   "gl_account_number": "2010-000",
+   "cost_center": "320",
+   "product_code": "FUEL-ULSD",
+   "amount": 41870.0,
+   "currency": "USD",
+   "status": "open",
+   "document_id": "/Users/grace/Documents/Finance/Close/2026-10/Evidence/AP/Midwest_Fuel/MFP-260698_scan.pdf",
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-10-16T08:47:00-05:00",
+   "processing_date": "2026-10-16",
+   "due_date": "2026-11-15",
+   "payment_date": null,
+   "payment_method": null,
+   "payment_reference": null,
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [
+    "PO-4500187412"
+   ],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "5310-000",
+     "amount": 41870.0,
+     "cost_center": "320",
+     "product_code": "FUEL-ULSD",
+     "memo": "ULSD bulk delivery, Gary XD fuel island, incl. delivery/env fee"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105629436",
+   "entity_id": "LFL",
+   "sap_document_number": "5105629436",
+   "vendor_id": "100436",
+   "vendor_name": "Memphis Light, Gas and Water Division",
+   "invoice_number": "MLGW-2610-55120934",
+   "invoice_date": "2026-10-21",
+   "posting_date": "2026-10-23",
+   "gl_account_number": "2010-000",
+   "cost_center": "410",
+   "product_code": null,
+   "amount": 14286.92,
+   "currency": "USD",
+   "status": "open",
+   "document_id": null,
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-10-22T10:02:00-05:00",
+   "processing_date": "2026-10-23",
+   "due_date": "2026-11-10",
+   "payment_date": null,
+   "payment_method": null,
+   "payment_reference": null,
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "6210-000",
+     "amount": 14286.92,
+     "cost_center": "410",
+     "product_code": null,
+     "memo": "Electric, gas and water, svc 09/18-10/19/2026, 4250 Airways Blvd"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105629914",
+   "entity_id": "LFL",
+   "sap_document_number": "5105629914",
+   "vendor_id": "100482",
+   "vendor_name": "Midwest Fuel Partners LLC",
+   "invoice_number": "MFP-260871",
+   "invoice_date": "2026-10-27",
+   "posting_date": "2026-10-28",
+   "gl_account_number": "2010-000",
+   "cost_center": "320",
+   "product_code": "FUEL-ULSD",
+   "amount": 49820.0,
+   "currency": "USD",
+   "status": "open",
+   "document_id": "/Users/grace/Documents/Finance/Close/2026-10/Evidence/AP/Midwest_Fuel/MFP-260871_scan.pdf",
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-10-28T09:30:00-05:00",
+   "processing_date": "2026-10-28",
+   "due_date": "2026-11-26",
+   "payment_date": null,
+   "payment_method": null,
+   "payment_reference": null,
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [
+    "PO-4500187733"
+   ],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "5310-000",
+     "amount": 49820.0,
+     "cost_center": "320",
+     "product_code": "FUEL-ULSD",
+     "memo": "ULSD 15,200 GAL, Gary XD fuel island, incl. delivery/env fee"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105630049",
+   "entity_id": "LFL",
+   "sap_document_number": "5105630049",
+   "vendor_id": "100409",
+   "vendor_name": "Bluff City Staffing LLC",
+   "invoice_number": "BCS-10587",
+   "invoice_date": "2026-10-27",
+   "posting_date": "2026-10-30",
+   "gl_account_number": "2010-000",
+   "cost_center": "410",
+   "product_code": null,
+   "amount": 21904.75,
+   "currency": "USD",
+   "status": "open",
+   "document_id": null,
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-10-30T07:58:00-05:00",
+   "processing_date": "2026-10-30",
+   "due_date": "2026-11-11",
+   "payment_date": null,
+   "payment_method": null,
+   "payment_reference": null,
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "5610-000",
+     "amount": 21904.75,
+     "cost_center": "410",
+     "product_code": null,
+     "memo": "Temp warehouse associates, w/e 10/25/2026, Memphis Hub"
+    }
+   ]
+  },
+  {
+   "id": "apinv-5105630127",
+   "entity_id": "LFL",
+   "sap_document_number": "5105630127",
+   "vendor_id": "100482",
+   "vendor_name": "Midwest Fuel Partners LLC",
+   "invoice_number": "MFP-260944",
+   "invoice_date": "2026-10-30",
+   "posting_date": "2026-10-30",
+   "gl_account_number": "2010-000",
+   "cost_center": "320",
+   "product_code": "FUEL-ULSD",
+   "amount": 35650.0,
+   "currency": "USD",
+   "status": "open",
+   "document_id": "/Users/grace/Documents/Finance/Close/2026-10/Evidence/AP/Midwest_Fuel/MFP-260944_scan.pdf",
+   "approver": null,
+   "void_reason": null,
+   "time_received": "2026-10-30T10:15:00-05:00",
+   "processing_date": "2026-10-30",
+   "due_date": "2026-11-29",
+   "payment_date": null,
+   "payment_method": null,
+   "payment_reference": null,
+   "bank_reconciliation_id": null,
+   "source_doc_ids": [
+    "PO-4500188019"
+   ],
+   "lines": [
+    {
+     "line_number": 1,
+     "gl_account_number": "5310-000",
+     "amount": 35650.0,
+     "cost_center": "320",
+     "product_code": "FUEL-ULSD",
+     "memo": "ULSD bulk delivery, Gary XD fuel island, incl. delivery/env fee"
+    }
+   ]
+  }
+ ],
+ "fixed_assets": [
+  {
+   "id": "fa-300218",
+   "entity_id": "LFL",
+   "sap_asset_number": "300218",
+   "description": "2023 Wabash 53 ft DuraPlate dry van trailer, unit LT-5318, linehaul pool",
+   "cost_center": "330",
+   "in_service_date": "2023-04-01",
+   "cost": 48600.0,
+   "accumulated_depreciation": 17415.0,
+   "net_book_value": 31185.0,
+   "useful_life_months": 120,
+   "depreciation_method": "straight_line",
+   "depreciation_schedule": [
+    {
+     "period_id": "MAY-26",
+     "depreciation_amount": 405.0,
+     "accumulated_to_date": 15390.0
+    },
+    {
+     "period_id": "JUN-26",
+     "depreciation_amount": 405.0,
+     "accumulated_to_date": 15795.0
+    },
+    {
+     "period_id": "JUL-26",
+     "depreciation_amount": 405.0,
+     "accumulated_to_date": 16200.0
+    },
+    {
+     "period_id": "AUG-26",
+     "depreciation_amount": 405.0,
+     "accumulated_to_date": 16605.0
+    },
+    {
+     "period_id": "SEP-26",
+     "depreciation_amount": 405.0,
+     "accumulated_to_date": 17010.0
+    },
+    {
+     "period_id": "OCT-26",
+     "depreciation_amount": 405.0,
+     "accumulated_to_date": 17415.0
+    }
+   ],
+   "status": "active",
+   "document_id": null,
+   "gl_account_number": "1610-000",
+   "accum_dep_account_number": "1615-000",
+   "lease_start": null,
+   "lease_end": null,
+   "lease_term_months": null
+  },
+  {
+   "id": "fa-300262",
+   "entity_id": "LFL",
+   "sap_asset_number": "300262",
+   "description": "2024 Wabash 53 ft DuraPlate dry van trailer, unit LT-5362, linehaul pool",
+   "cost_center": "330",
+   "in_service_date": "2024-09-01",
+   "cost": 51000.0,
+   "accumulated_depreciation": 11050.0,
+   "net_book_value": 39950.0,
+   "useful_life_months": 120,
+   "depreciation_method": "straight_line",
+   "depreciation_schedule": [
+    {
+     "period_id": "MAY-26",
+     "depreciation_amount": 425.0,
+     "accumulated_to_date": 8925.0
+    },
+    {
+     "period_id": "JUN-26",
+     "depreciation_amount": 425.0,
+     "accumulated_to_date": 9350.0
+    },
+    {
+     "period_id": "JUL-26",
+     "depreciation_amount": 425.0,
+     "accumulated_to_date": 9775.0
+    },
+    {
+     "period_id": "AUG-26",
+     "depreciation_amount": 425.0,
+     "accumulated_to_date": 10200.0
+    },
+    {
+     "period_id": "SEP-26",
+     "depreciation_amount": 425.0,
+     "accumulated_to_date": 10625.0
+    },
+    {
+     "period_id": "OCT-26",
+     "depreciation_amount": 425.0,
+     "accumulated_to_date": 11050.0
+    }
+   ],
+   "status": "active",
+   "document_id": null,
+   "gl_account_number": "1610-000",
+   "accum_dep_account_number": "1615-000",
+   "lease_start": null,
+   "lease_end": null,
+   "lease_term_months": null
+  },
+  {
+   "id": "fa-300291",
+   "entity_id": "LFL",
+   "sap_asset_number": "300291",
+   "description": "2025 Great Dane Champion 53 ft dry van trailer, unit LT-5391, linehaul pool",
+   "cost_center": "330",
+   "in_service_date": "2025-11-01",
+   "cost": 52800.0,
+   "accumulated_depreciation": 5280.0,
+   "net_book_value": 47520.0,
+   "useful_life_months": 120,
+   "depreciation_method": "straight_line",
+   "depreciation_schedule": [
+    {
+     "period_id": "MAY-26",
+     "depreciation_amount": 440.0,
+     "accumulated_to_date": 3080.0
+    },
+    {
+     "period_id": "JUN-26",
+     "depreciation_amount": 440.0,
+     "accumulated_to_date": 3520.0
+    },
+    {
+     "period_id": "JUL-26",
+     "depreciation_amount": 440.0,
+     "accumulated_to_date": 3960.0
+    },
+    {
+     "period_id": "AUG-26",
+     "depreciation_amount": 440.0,
+     "accumulated_to_date": 4400.0
+    },
+    {
+     "period_id": "SEP-26",
+     "depreciation_amount": 440.0,
+     "accumulated_to_date": 4840.0
+    },
+    {
+     "period_id": "OCT-26",
+     "depreciation_amount": 440.0,
+     "accumulated_to_date": 5280.0
+    }
+   ],
+   "status": "active",
+   "document_id": null,
+   "gl_account_number": "1610-000",
+   "accum_dep_account_number": "1615-000",
+   "lease_start": null,
+   "lease_end": null,
+   "lease_term_months": null
+  },
+  {
+   "id": "fa-310044",
+   "entity_id": "LFL",
+   "sap_asset_number": "310044",
+   "description": "2022 Kalmar Ottawa T2 yard tractor, unit YT-044, Gary XD",
+   "cost_center": "320",
+   "in_service_date": "2022-07-01",
+   "cost": 132000.0,
+   "accumulated_depreciation": 71500.0,
+   "net_book_value": 60500.0,
+   "useful_life_months": 96,
+   "depreciation_method": "straight_line",
+   "depreciation_schedule": [
+    {
+     "period_id": "MAY-26",
+     "depreciation_amount": 1375.0,
+     "accumulated_to_date": 64625.0
+    },
+    {
+     "period_id": "JUN-26",
+     "depreciation_amount": 1375.0,
+     "accumulated_to_date": 66000.0
+    },
+    {
+     "period_id": "JUL-26",
+     "depreciation_amount": 1375.0,
+     "accumulated_to_date": 67375.0
+    },
+    {
+     "period_id": "AUG-26",
+     "depreciation_amount": 1375.0,
+     "accumulated_to_date": 68750.0
+    },
+    {
+     "period_id": "SEP-26",
+     "depreciation_amount": 1375.0,
+     "accumulated_to_date": 70125.0
+    },
+    {
+     "period_id": "OCT-26",
+     "depreciation_amount": 1375.0,
+     "accumulated_to_date": 71500.0
+    }
+   ],
+   "status": "active",
+   "document_id": null,
+   "gl_account_number": "1620-000",
+   "accum_dep_account_number": "1625-000",
+   "lease_start": null,
+   "lease_end": null,
+   "lease_term_months": null
+  },
+  {
+   "id": "fa-310061",
+   "entity_id": "LFL",
+   "sap_asset_number": "310061",
+   "description": "2026 Kalmar Ottawa T2 yard tractor, unit YT-061, Gary XD",
+   "cost_center": "320",
+   "in_service_date": "2026-06-01",
+   "cost": 148800.0,
+   "accumulated_depreciation": 7750.0,
+   "net_book_value": 141050.0,
+   "useful_life_months": 96,
+   "depreciation_method": "straight_line",
+   "depreciation_schedule": [
+    {
+     "period_id": "JUN-26",
+     "depreciation_amount": 1550.0,
+     "accumulated_to_date": 1550.0
+    },
+    {
+     "period_id": "JUL-26",
+     "depreciation_amount": 1550.0,
+     "accumulated_to_date": 3100.0
+    },
+    {
+     "period_id": "AUG-26",
+     "depreciation_amount": 1550.0,
+     "accumulated_to_date": 4650.0
+    },
+    {
+     "period_id": "SEP-26",
+     "depreciation_amount": 1550.0,
+     "accumulated_to_date": 6200.0
+    },
+    {
+     "period_id": "OCT-26",
+     "depreciation_amount": 1550.0,
+     "accumulated_to_date": 7750.0
+    }
+   ],
+   "status": "active",
+   "document_id": "5105614760",
+   "gl_account_number": "1620-000",
+   "accum_dep_account_number": "1625-000",
+   "lease_start": null,
+   "lease_end": null,
+   "lease_term_months": null
+  },
+  {
+   "id": "fa-320107",
+   "entity_id": "LFL",
+   "sap_asset_number": "320107",
+   "description": "2022 Toyota 8FGU25 LP forklift, unit FL-107, Gary XD",
+   "cost_center": "320",
+   "in_service_date": "2022-03-01",
+   "cost": 34200.0,
+   "accumulated_depreciation": 31920.0,
+   "net_book_value": 2280.0,
+   "useful_life_months": 60,
+   "depreciation_method": "straight_line",
+   "depreciation_schedule": [
+    {
+     "period_id": "MAY-26",
+     "depreciation_amount": 570.0,
+     "accumulated_to_date": 29070.0
+    },
+    {
+     "period_id": "JUN-26",
+     "depreciation_amount": 570.0,
+     "accumulated_to_date": 29640.0
+    },
+    {
+     "period_id": "JUL-26",
+     "depreciation_amount": 570.0,
+     "accumulated_to_date": 30210.0
+    },
+    {
+     "period_id": "AUG-26",
+     "depreciation_amount": 570.0,
+     "accumulated_to_date": 30780.0
+    },
+    {
+     "period_id": "SEP-26",
+     "depreciation_amount": 570.0,
+     "accumulated_to_date": 31350.0
+    },
+    {
+     "period_id": "OCT-26",
+     "depreciation_amount": 570.0,
+     "accumulated_to_date": 31920.0
+    }
+   ],
+   "status": "active",
+   "document_id": null,
+   "gl_account_number": "1630-000",
+   "accum_dep_account_number": "1635-000",
+   "lease_start": null,
+   "lease_end": null,
+   "lease_term_months": null
+  },
+  {
+   "id": "fa-320142",
+   "entity_id": "LFL",
+   "sap_asset_number": "320142",
+   "description": "2026 Toyota 8FBCU25 electric forklift with Li-ion battery, unit FL-142, Gary XD",
+   "cost_center": "320",
+   "in_service_date": "2026-08-01",
+   "cost": 46800.0,
+   "accumulated_depreciation": 1950.0,
+   "net_book_value": 44850.0,
+   "useful_life_months": 72,
+   "depreciation_method": "straight_line",
+   "depreciation_schedule": [
+    {
+     "period_id": "AUG-26",
+     "depreciation_amount": 650.0,
+     "accumulated_to_date": 650.0
+    },
+    {
+     "period_id": "SEP-26",
+     "depreciation_amount": 650.0,
+     "accumulated_to_date": 1300.0
+    },
+    {
+     "period_id": "OCT-26",
+     "depreciation_amount": 650.0,
+     "accumulated_to_date": 1950.0
+    }
+   ],
+   "status": "active",
+   "document_id": "5105620587",
+   "gl_account_number": "1630-000",
+   "accum_dep_account_number": "1635-000",
+   "lease_start": null,
+   "lease_end": null,
+   "lease_term_months": null
+  }
+ ],
+ "prepaid_amortization_schedules": [
+  {
+   "id": "PP-INS-2026",
+   "entity_id": "LFL",
+   "account_number": "1410-000",
+   "contract_reference": "Northfield Transport Underwriters policy NTU-PCG-26-55310, inv NTU-26-04417 (AP doc 5105616321)",
+   "original_amount": 612000.0,
+   "start_date": "2026-07-01",
+   "end_date": "2027-06-30",
+   "amortization_method": "straight_line",
+   "periods": [
+    {
+     "period_id": "JUL-26",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 561000.0
+    },
+    {
+     "period_id": "AUG-26",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 510000.0
+    },
+    {
+     "period_id": "SEP-26",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 459000.0
+    },
+    {
+     "period_id": "OCT-26",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 408000.0
+    },
+    {
+     "period_id": "NOV-26",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 357000.0
+    },
+    {
+     "period_id": "DEC-26",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 306000.0
+    },
+    {
+     "period_id": "JAN-27",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 255000.0
+    },
+    {
+     "period_id": "FEB-27",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 204000.0
+    },
+    {
+     "period_id": "MAR-27",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 153000.0
+    },
+    {
+     "period_id": "APR-27",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 102000.0
+    },
+    {
+     "period_id": "MAY-27",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 51000.0
+    },
+    {
+     "period_id": "JUN-27",
+     "amortization_amount": 51000.0,
+     "remaining_balance": 0.0
+    }
+   ]
+  },
+  {
+   "id": "PP-SW-2026",
+   "entity_id": "LFL",
+   "account_number": "1420-000",
+   "contract_reference": "TMS/WMS subscriptions, term 01/01/2026-12/31/2026",
+   "original_amount": 174000.0,
+   "start_date": "2026-01-01",
+   "end_date": "2026-12-31",
+   "amortization_method": "straight_line",
+   "periods": [
+    {
+     "period_id": "JAN-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 159500.0
+    },
+    {
+     "period_id": "FEB-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 145000.0
+    },
+    {
+     "period_id": "MAR-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 130500.0
+    },
+    {
+     "period_id": "APR-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 116000.0
+    },
+    {
+     "period_id": "MAY-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 101500.0
+    },
+    {
+     "period_id": "JUN-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 87000.0
+    },
+    {
+     "period_id": "JUL-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 72500.0
+    },
+    {
+     "period_id": "AUG-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 58000.0
+    },
+    {
+     "period_id": "SEP-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 43500.0
+    },
+    {
+     "period_id": "OCT-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 29000.0
+    },
+    {
+     "period_id": "NOV-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 14500.0
+    },
+    {
+     "period_id": "DEC-26",
+     "amortization_amount": 14500.0,
+     "remaining_balance": 0.0
+    }
+   ]
+  },
+  {
+   "id": "PP-SW-2025",
+   "entity_id": "LFL",
+   "account_number": "1420-000",
+   "contract_reference": "TMS/WMS subscriptions, term 01/01/2025-12/31/2025 (fully amortized)",
+   "original_amount": 162000.0,
+   "start_date": "2025-01-01",
+   "end_date": "2025-12-31",
+   "amortization_method": "straight_line",
+   "periods": [
+    {
+     "period_id": "JAN-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 148500.0
+    },
+    {
+     "period_id": "FEB-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 135000.0
+    },
+    {
+     "period_id": "MAR-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 121500.0
+    },
+    {
+     "period_id": "APR-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 108000.0
+    },
+    {
+     "period_id": "MAY-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 94500.0
+    },
+    {
+     "period_id": "JUN-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 81000.0
+    },
+    {
+     "period_id": "JUL-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 67500.0
+    },
+    {
+     "period_id": "AUG-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 54000.0
+    },
+    {
+     "period_id": "SEP-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 40500.0
+    },
+    {
+     "period_id": "OCT-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 27000.0
+    },
+    {
+     "period_id": "NOV-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 13500.0
+    },
+    {
+     "period_id": "DEC-25",
+     "amortization_amount": 13500.0,
+     "remaining_balance": 0.0
+    }
+   ]
+  }
+ ],
+ "lease_schedules": [],
+ "subledger_transactions": [
+  {
+   "id": "slt-1000381507-1",
+   "entity_id": "LFL",
+   "sap_module": "prepaid",
+   "sap_document_number": "1000381507",
+   "posting_date": "2026-09-30",
+   "gl_account_number": "6410-000",
+   "debit": 51000.0,
+   "credit": 0.0,
+   "description": "PP-INS-2026 amortization SEP-26 (prepaid run 10/01)",
+   "related_oracle_je_line_id": "JE-26-09-0301"
+  },
+  {
+   "id": "slt-1000381507-2",
+   "entity_id": "LFL",
+   "sap_module": "prepaid",
+   "sap_document_number": "1000381507",
+   "posting_date": "2026-09-30",
+   "gl_account_number": "1410-000",
+   "debit": 0.0,
+   "credit": 51000.0,
+   "description": "PP-INS-2026 amortization SEP-26 (prepaid run 10/01)",
+   "related_oracle_je_line_id": "JE-26-09-0301"
+  },
+  {
+   "id": "slt-1000381508-1",
+   "entity_id": "LFL",
+   "sap_module": "prepaid",
+   "sap_document_number": "1000381508",
+   "posting_date": "2026-09-30",
+   "gl_account_number": "6520-000",
+   "debit": 14500.0,
+   "credit": 0.0,
+   "description": "PP-SW-2026 amortization SEP-26 (prepaid run 10/01)",
+   "related_oracle_je_line_id": "JE-26-09-0302"
+  },
+  {
+   "id": "slt-1000381508-2",
+   "entity_id": "LFL",
+   "sap_module": "prepaid",
+   "sap_document_number": "1000381508",
+   "posting_date": "2026-09-30",
+   "gl_account_number": "1420-000",
+   "debit": 0.0,
+   "credit": 14500.0,
+   "description": "PP-SW-2026 amortization SEP-26 (prepaid run 10/01)",
+   "related_oracle_je_line_id": "JE-26-09-0302"
+  },
+  {
+   "id": "slt-5105629914-1",
+   "entity_id": "LFL",
+   "sap_module": "AP",
+   "sap_document_number": "5105629914",
+   "posting_date": "2026-10-28",
+   "gl_account_number": "5310-000",
+   "debit": 49820.0,
+   "credit": 0.0,
+   "description": "MFP-260871 Midwest Fuel Partners LLC, vendor 100482, PO 4500187733, CC 320, entered by dclarke",
+   "related_oracle_je_line_id": null
+  },
+  {
+   "id": "slt-5105629914-2",
+   "entity_id": "LFL",
+   "sap_module": "AP",
+   "sap_document_number": "5105629914",
+   "posting_date": "2026-10-28",
+   "gl_account_number": "2010-000",
+   "debit": 0.0,
+   "credit": 49820.0,
+   "description": "MFP-260871 Midwest Fuel Partners LLC, vendor 100482, PO 4500187733, CC 320, entered by dclarke",
+   "related_oracle_je_line_id": null
+  },
+  {
+   "id": "slt-5105630049-1",
+   "entity_id": "LFL",
+   "sap_module": "AP",
+   "sap_document_number": "5105630049",
+   "posting_date": "2026-10-30",
+   "gl_account_number": "5610-000",
+   "debit": 21904.75,
+   "credit": 0.0,
+   "description": "BCS-10587 Bluff City Staffing LLC, vendor 100409, w/e 10/25/2026, CC 410 Memphis Hub",
+   "related_oracle_je_line_id": null
+  },
+  {
+   "id": "slt-5105630049-2",
+   "entity_id": "LFL",
+   "sap_module": "AP",
+   "sap_document_number": "5105630049",
+   "posting_date": "2026-10-30",
+   "gl_account_number": "2010-000",
+   "debit": 0.0,
+   "credit": 21904.75,
+   "description": "BCS-10587 Bluff City Staffing LLC, vendor 100409, w/e 10/25/2026, CC 410 Memphis Hub",
+   "related_oracle_je_line_id": null
+  },
+  {
+   "id": "slt-1000389964-1",
+   "entity_id": "LFL",
+   "sap_module": "prepaid",
+   "sap_document_number": "1000389964",
+   "posting_date": "2026-10-31",
+   "gl_account_number": "6410-000",
+   "debit": 51000.0,
+   "credit": 0.0,
+   "description": "PP-INS-2026 amortization OCT-26 (BD1 prepaid run 11/02)",
+   "related_oracle_je_line_id": "JE-26-10-0341"
+  },
+  {
+   "id": "slt-1000389964-2",
+   "entity_id": "LFL",
+   "sap_module": "prepaid",
+   "sap_document_number": "1000389964",
+   "posting_date": "2026-10-31",
+   "gl_account_number": "1410-000",
+   "debit": 0.0,
+   "credit": 51000.0,
+   "description": "PP-INS-2026 amortization OCT-26 (BD1 prepaid run 11/02)",
+   "related_oracle_je_line_id": "JE-26-10-0341"
+  },
+  {
+   "id": "slt-1000389965-1",
+   "entity_id": "LFL",
+   "sap_module": "prepaid",
+   "sap_document_number": "1000389965",
+   "posting_date": "2026-10-31",
+   "gl_account_number": "6520-000",
+   "debit": 14500.0,
+   "credit": 0.0,
+   "description": "PP-SW-2026 amortization OCT-26 (BD1 prepaid run 11/02)",
+   "related_oracle_je_line_id": "JE-26-10-0339"
+  },
+  {
+   "id": "slt-1000389965-2",
+   "entity_id": "LFL",
+   "sap_module": "prepaid",
+   "sap_document_number": "1000389965",
+   "posting_date": "2026-10-31",
+   "gl_account_number": "1420-000",
+   "debit": 0.0,
+   "credit": 14500.0,
+   "description": "PP-SW-2026 amortization OCT-26 (BD1 prepaid run 11/02)",
+   "related_oracle_je_line_id": "JE-26-10-0339"
+  }
+ ]
+}

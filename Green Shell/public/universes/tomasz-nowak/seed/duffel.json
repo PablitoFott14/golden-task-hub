@@ -1,0 +1,462 @@
+{
+ "users": [
+  {
+   "id": "usr_0000Tn7vQ2xM",
+   "email": "tomasz.nowak.cbus@gmail.com"
+  }
+ ],
+ "offers": [
+  {
+   "id": "off_0000Ua36L9bR",
+   "owner": {
+    "name": "United Airlines",
+    "iata_code": "UA",
+    "id": "arl_0000Ua7Cx2Lm"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Ua36S1cH",
+     "origin": {
+      "iata_code": "CMH",
+      "type": "airport",
+      "name": "John Glenn Columbus International Airport",
+      "city_name": "Columbus",
+      "time_zone": "America/New_York"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H22M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Ua36G7pN",
+       "origin": {
+        "iata_code": "CMH",
+        "type": "airport",
+        "name": "John Glenn Columbus International Airport",
+        "city_name": "Columbus",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-12-19T11:40:00-05:00",
+       "arriving_at": "2026-12-19T12:02:00-06:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "marketing_carrier_flight_number": "3619",
+       "duration": "PT1H22M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Tn7vP3wE",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Ua45S2dK",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "CMH",
+      "type": "airport",
+      "name": "John Glenn Columbus International Airport",
+      "city_name": "Columbus",
+      "time_zone": "America/New_York"
+     },
+     "duration": "PT1H35M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Ua45G8qT",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "CMH",
+        "type": "airport",
+        "name": "John Glenn Columbus International Airport",
+        "city_name": "Columbus",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2026-12-23T15:10:00-06:00",
+       "arriving_at": "2026-12-23T17:45:00-05:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "marketing_carrier_flight_number": "4512",
+       "duration": "PT1H35M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Tn7vP3wE",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Tn7vP3wE",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "238.40",
+   "total_currency": "USD",
+   "base_amount": "193.30",
+   "base_currency": "USD",
+   "tax_amount": "45.10",
+   "tax_currency": "USD",
+   "conditions": {
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "expires_at": "2026-10-24T13:09:18Z",
+   "created_at": "2026-10-02T13:09:18Z"
+  }
+ ],
+ "seat_map_elements": [
+  {
+   "id": "sea_0000Ua36s14A",
+   "offer_id": "off_0000Ua36L9bR",
+   "segment_id": "seg_0000Ua36G7pN",
+   "type": "seat",
+   "designator": "14A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ua36s14C",
+   "offer_id": "off_0000Ua36L9bR",
+   "segment_id": "seg_0000Ua36G7pN",
+   "type": "seat",
+   "designator": "14C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Ua36s17D",
+   "offer_id": "off_0000Ua36L9bR",
+   "segment_id": "seg_0000Ua36G7pN",
+   "type": "seat",
+   "designator": "17D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ua36s17F",
+   "offer_id": "off_0000Ua36L9bR",
+   "segment_id": "seg_0000Ua36G7pN",
+   "type": "seat",
+   "designator": "17F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ua45s11A",
+   "offer_id": "off_0000Ua36L9bR",
+   "segment_id": "seg_0000Ua45G8qT",
+   "type": "seat",
+   "designator": "11A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Ua45s11C",
+   "offer_id": "off_0000Ua36L9bR",
+   "segment_id": "seg_0000Ua45G8qT",
+   "type": "seat",
+   "designator": "11C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ua45s20D",
+   "offer_id": "off_0000Ua36L9bR",
+   "segment_id": "seg_0000Ua45G8qT",
+   "type": "seat",
+   "designator": "20D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 20,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ua45s20F",
+   "offer_id": "off_0000Ua36L9bR",
+   "segment_id": "seg_0000Ua45G8qT",
+   "type": "seat",
+   "designator": "20F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 20,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  }
+ ],
+ "orders": [
+  {
+   "id": "ord_0000Hj4K9tRb",
+   "user_id": "usr_0000Tn7vQ2xM",
+   "offer_id": "off_0000Ua36L9bR",
+   "booking_reference": "HJ4K9T",
+   "owner": {
+    "name": "United Airlines",
+    "iata_code": "UA",
+    "id": "arl_0000Ua7Cx2Lm"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Ua36S1cH",
+     "origin": {
+      "iata_code": "CMH",
+      "type": "airport",
+      "name": "John Glenn Columbus International Airport",
+      "city_name": "Columbus",
+      "time_zone": "America/New_York"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H22M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Ua36G7pN",
+       "origin": {
+        "iata_code": "CMH",
+        "type": "airport",
+        "name": "John Glenn Columbus International Airport",
+        "city_name": "Columbus",
+        "time_zone": "America/New_York"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-12-19T11:40:00-05:00",
+       "arriving_at": "2026-12-19T12:02:00-06:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "marketing_carrier_flight_number": "3619",
+       "duration": "PT1H22M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Tn7vP3wE",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Ua45S2dK",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "CMH",
+      "type": "airport",
+      "name": "John Glenn Columbus International Airport",
+      "city_name": "Columbus",
+      "time_zone": "America/New_York"
+     },
+     "duration": "PT1H35M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000Ua45G8qT",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "CMH",
+        "type": "airport",
+        "name": "John Glenn Columbus International Airport",
+        "city_name": "Columbus",
+        "time_zone": "America/New_York"
+       },
+       "departing_at": "2026-12-23T15:10:00-06:00",
+       "arriving_at": "2026-12-23T17:45:00-05:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "marketing_carrier_flight_number": "4512",
+       "duration": "PT1H35M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Tn7vP3wE",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Tn7vP3wE",
+     "type": "adult",
+     "given_name": "Tomasz",
+     "family_name": "Nowak",
+     "born_on": "1997-06-14",
+     "email": "tomasz.nowak.cbus@gmail.com",
+     "phone_number": "+16145550186",
+     "title": "mr",
+     "gender": "m"
+    }
+   ],
+   "services": [],
+   "total_amount": "238.40",
+   "total_currency": "USD",
+   "created_at": "2026-10-02T13:15:04Z",
+   "cancelled_at": ""
+  }
+ ],
+ "order_cancellations": [],
+ "accommodations": [],
+ "rooms": [],
+ "rates": [],
+ "quotes": [],
+ "bookings": []
+}

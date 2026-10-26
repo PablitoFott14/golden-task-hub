@@ -1,0 +1,787 @@
+{
+ "reminders": [
+  {
+   "reminder_id": "4c1e9a07d3b652f8e0a71b9d",
+   "title": "Pump + pinnies for pickup",
+   "due_datetime": 1777205700.0,
+   "description": "Told Diego I'd bring the pump and the pinnies. Kickoff 9:00 at Whetstone.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1777205700.0
+  },
+  {
+   "reminder_id": "a6d2f81c0e47b93d5c1e08af",
+   "title": "Brachial plexus cards from slide 17",
+   "due_datetime": 1777725000.0,
+   "description": "Told Dr. Silva I'd make them this weekend. Item 18 is only the five terminal branches on the Lecture 22 diagram and the muscle group for each. Roots, trunks and divisions not in detail.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1777725000.0
+  },
+  {
+   "reminder_id": "b7f20d64a91c38e5f2b06c4a",
+   "title": "Register for Fall 2026 classes",
+   "due_datetime": 1777899600.0,
+   "description": "Registration opened at 8:00 in MyScioto. Check for holds first. BIO 2122 Mon/Wed evenings and CHEM 1211 with the Tuesday night lab.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1777899600.0
+  },
+  {
+   "reminder_id": "5f0c9e3a7b12d846e0a9c3d7",
+   "title": "Download L18 to L24 slides from Scioto Learn",
+   "due_datetime": 1778943600.0,
+   "description": "BIO 2121 nervous system lectures, before the spring course closes. Her unit exams carry forward, so A&P I material comes back in the fall.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1778943600.0
+  },
+  {
+   "reminder_id": "0e83c5a1f7d9246b3e8c0a5f",
+   "title": "ArdentLearn compliance modules due Fri 5/29",
+   "due_datetime": 1779897600.0,
+   "description": "Conduct and anti-harassment, HazCom, PIT refresher. About 75 min total, the break room kiosk works.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1779897600.0
+  },
+  {
+   "reminder_id": "62f9b1d40c7ae85f293bd6e0",
+   "title": "Renew Civic registration (expires 6/14)",
+   "due_datetime": 1780158600.0,
+   "description": "bmv.ohio.gov. Plate ending 2187, have the last 4 of the VIN ready.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780158600.0
+  },
+  {
+   "reminder_id": "9d5a7e2c14b8f06ea3d1c7b2",
+   "title": "Call Mama",
+   "due_datetime": 1780261200.0,
+   "description": "Told her I'd call Sunday. She offered to help with anatomy questions.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780261200.0
+  },
+  {
+   "reminder_id": "a4e06f3b8d21c97e5b0a4f68",
+   "title": "Confirm crew compliance training with Dale",
+   "due_datetime": 1780491600.0,
+   "description": "HR wants shift leads to confirm by today that the whole crew finished the three ArdentLearn modules.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780491600.0
+  },
+  {
+   "reminder_id": "1f7cd82a5e04b93f6a1de2c5",
+   "title": "Buy Crew tickets for the 4th",
+   "due_datetime": 1781964000.0,
+   "description": "Sat 7/4, 7:30 kickoff. Two seats together for me and Marek, he's covering beers.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781964000.0
+  },
+  {
+   "reminder_id": "e3b549f0c26d8a1e07c3b9f4",
+   "title": "Mid-year self-review due Fri 6/26",
+   "due_datetime": 1782316800.0,
+   "description": "ArdentLearn, Performance > Mid-Year 2026. Safety, crew development, UPH vs target and one goal for the second half.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782316800.0
+  },
+  {
+   "reminder_id": "7a0d2e96b4c8f15a3d7e0b62",
+   "title": "Safety recert due Tue 6/30",
+   "due_datetime": 1782748800.0,
+   "description": "Ardent Learn: PIT refresher, HazCom update, dock safety and trailer restraints. About 50 min, ok to do on shift time.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782748800.0
+  },
+  {
+   "reminder_id": "f4b72e098c1a5d63b0e47c2f",
+   "title": "Civic tires tomorrow 10:30 am, Clintonville Tire & Auto",
+   "due_datetime": 1784325600.0,
+   "description": "Two new front tires, takes about an hour.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784293200.0
+  },
+  {
+   "reminder_id": "a2d96e4b18f07c35d9a4e0b7",
+   "title": "Activate new Buckeye debit card",
+   "due_datetime": 1784908800.0,
+   "description": "Replacement card for checking 6120. Activate it in the Buckeye Mobile app under Card Controls before the old one stops working 7/31. Same number, new expiration date and security code.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784908800.0
+  },
+  {
+   "reminder_id": "c81e4b07d9a35f62e8b1d04c",
+   "title": "Big cooler + extra water for pickup",
+   "due_datetime": 1785068100.0,
+   "description": "Told Diego I'd bring the big cooler. Forecast says 91, so water breaks every 20 min. First game in the new cleats.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785068100.0
+  },
+  {
+   "reminder_id": "c8f413a7e60b9d25f8a4c13e",
+   "title": "Weber maintenance request: dishwasher",
+   "due_datetime": 1785268800.0,
+   "description": "Not draining, about an inch of water sits in the bottom after every cycle. Resident portal, say yes to permission to enter.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785268800.0
+  },
+  {
+   "reminder_id": "35d1e8b07f4ca26e9c3b5d80",
+   "title": "Clear out under the kitchen sink",
+   "due_datetime": 1785873600.0,
+   "description": "Weber's tech comes Wed between 9 and 12 and needs to reach the drain line. Jake's home to let them in.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785873600.0
+  },
+  {
+   "reminder_id": "8e6d2b05f9c3a17e4d0b63f9",
+   "title": "Bookstore pickup: rental, lab manual, goggles",
+   "due_datetime": 1787409000.0,
+   "description": "Order SCC-208416 is on the hold shelf. Ask for the Fall 2026 CHEM 1211 lab manual and the indirect-vent splash goggles. Bring student ID, they open at 10.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787409000.0
+  },
+  {
+   "reminder_id": "2e9a6d4f1c08b37a5e2d96f0",
+   "title": "Ask at lab if anyone wants Priya's lab coat",
+   "due_datetime": 1787693400.0,
+   "description": "Size M, barely worn, $15. Told her I'd ask around once CHEM 1211 lab started.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787693400.0
+  },
+  {
+   "reminder_id": "f06a9c3e2b75d48f1a6ce93b",
+   "title": "Get North Campus parking permit",
+   "due_datetime": 1787859900.0,
+   "description": "MyScioto. Permits are required in all North Campus lots starting Mon 8/31.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787859900.0
+  },
+  {
+   "reminder_id": "8b2e5f19a07dc63e4b8f21a6",
+   "title": "Drinks for the pickup cookout",
+   "due_datetime": 1788018300.0,
+   "description": "I'm on drinks for Sunday after the 9:00 game, Diego's bringing the grill. Kroger run plus ice for the cooler.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788018300.0
+  },
+  {
+   "reminder_id": "d49c0a6f3e82b71d5f0ca83e",
+   "title": "Grey A&P I cards back to Box 1",
+   "due_datetime": 1788109200.0,
+   "description": "A&P II has started and her unit exams carry forward, so A&P I comes back. Reset the grey review cards.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788109200.0
+  },
+  {
+   "reminder_id": "b3e8d1f6a9c24705e3b8d1f6",
+   "title": "Post AP2 Crew deck link in #general",
+   "due_datetime": 1788703200.0,
+   "description": "Set the Shared view to read-only first, then post the link with the colour key.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788703200.0
+  },
+  {
+   "reminder_id": "2a6fc0e94d1387b5e2a0f64d",
+   "title": "Old scanner serials on the dock office clipboard by 3:30",
+   "due_datetime": 1789063200.0,
+   "description": "IT needs serials for all 14 outbound units before Monday's swap. #8 has a cracked screen but still scans.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789063200.0
+  },
+  {
+   "reminder_id": "7d3b0f5e9c26a14d8f0e3b61",
+   "title": "Unit 1 review 9:00: bring the coag cascade",
+   "due_datetime": 1789215300.0,
+   "description": "Whetstone Library, study room 2. Told Mei I'd walk her through my redrawn coagulation cascade step by step, in Dr. Silva's L05 terms.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789215300.0
+  },
+  {
+   "reminder_id": "2d0f7c94b6e1a58d03f7c2b9",
+   "title": "Add L05 cards to the shared deck",
+   "due_datetime": 1789216200.0,
+   "description": "Told the crew L05 would be up by Saturday. Purple cards, Source gets the lecture and slide number.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789216200.0
+  },
+  {
+   "reminder_id": "97c3e51b0f8a6d24c9e73a1f",
+   "title": "Scanner go-live: pairing sheet for Rob, tag #8",
+   "due_datetime": 1789374600.0,
+   "description": "Come in a few minutes early and pull ours off the chargers, outbound bin is on the left. Pairing sheet copy at the dock 6 desk for Rob. Old units go in the return tote by end of shift with the count on the lid, #8 tagged for IT.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789373700.0
+  },
+  {
+   "reminder_id": "e4a17c2d5b90f36e1c8a4d09",
+   "title": "Heart models at 5: Kayla's checklist",
+   "due_datetime": 1790019900.0,
+   "description": "S-214 with Kayla and Devon before lecture. Valves and chambers first, add anything missing to her checklist doc.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790019900.0
+  },
+  {
+   "reminder_id": "3a7e5c9d04b2f816e7d3a05c",
+   "title": "Set up MyScioto MFA",
+   "due_datetime": 1790352000.0,
+   "description": "Scioto CC is making it required for student accounts. Set it up from the IT Help Desk page, about 5 minutes with my phone and student ID number.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790352000.0
+  },
+  {
+   "reminder_id": "5a2f7c9e1d4b86035a2f7c9e",
+   "title": "L08 cards + redraw conduction diagram",
+   "due_datetime": 1790429400.0,
+   "description": "Start from the whiteboard photo (IMG_5102). Slide 9 pathway and slide 11 rates, her terms: AV bundle, subendocardial conducting network.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790429400.0
+  },
+  {
+   "reminder_id": "5e0b8d47a2f6c91e03b8d74a",
+   "title": "Heart models at 5: bring redrawn conduction diagram",
+   "due_datetime": 1790624700.0,
+   "description": "S-214 with Kayla and Devon before lecture. Conduction system on the model this time.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790624700.0
+  },
+  {
+   "reminder_id": "b1a8f36d9e052c7ba4f186e3",
+   "title": "Group review 9:00: conduction walk-through + notes for Andre",
+   "due_datetime": 1791029700.0,
+   "description": "Whetstone Library, study room 2. Brianna asked for 15 min on my conduction diagram, keep it in the L08 terms. Bring Wednesday's notes for Andre (the two MAP examples).",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791029700.0
+  },
+  {
+   "reminder_id": "9e2c7a14f05d68b3a1e9c47f",
+   "title": "Tuition plan draft Mon 10/5: $412",
+   "due_datetime": 1791129600.0,
+   "description": "Installment 3 of 5 from checking 6120. Keep it covered, a returned draft is a $30 fee.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791129600.0
+  },
+  {
+   "reminder_id": "d61b0f8c3e5a92470f6c1d8e",
+   "title": "Winter hi-vis jacket + gloves from the safety desk",
+   "due_datetime": 1791205200.0,
+   "description": "Jackets and insulated gloves are in, pick up this week with my badge. Grab mine on first break and tell the crew.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791205200.0
+  },
+  {
+   "reminder_id": "0c95a2e7f4b1d8603e9a5c27",
+   "title": "Clear my stuff out of the furnace closet",
+   "due_datetime": 1791417600.0,
+   "description": "Inspection is tomorrow 9 to 1 and Jake's letting them in. He's moving his sheet pans and the stockpot.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791378000.0
+  },
+  {
+   "reminder_id": "e72d4b0fc9a318e67d5ba02f",
+   "title": "Ask Jake if Marek can take the couch Dec 23",
+   "due_datetime": 1791488400.0,
+   "description": "Told Marek I'd ask. He's booking the same flight back as me.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791488400.0
+  },
+  {
+   "reminder_id": "91b4e6d03f72a8c5e46b1d07",
+   "title": "Book flu shot before peak",
+   "due_datetime": 1791642600.0,
+   "description": "Kroger pharmacy on N High takes online appointments. Get it done before Thanksgiving week.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791642600.0
+  },
+  {
+   "reminder_id": "4f8b1c6e0a93d75fb2e8c41a",
+   "title": "Send Andre the relabeled nephron drawing",
+   "due_datetime": 1791646200.0,
+   "description": "Promised him in September I'd redo it with Dr. Silva's labels once we got to renal and send him the new one.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791645300.0
+  },
+  {
+   "reminder_id": "a63e9f205d8cb14a7e06f39d",
+   "title": "Print new car insurance ID card",
+   "due_datetime": 1791751500.0,
+   "description": "Ohio Valley Mutual policy renews 10/15. New ID card is in the online account, swap it into the Civic's glove box.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791751500.0
+  },
+  {
+   "reminder_id": "18d7b5c0e2f94a6bd0318ec5",
+   "title": "Kidney models at 5: bring nephron drawing",
+   "due_datetime": 1791834300.0,
+   "description": "S-214 with Kayla and Devon before lecture. Devon made a label sheet for the kidney model.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791834300.0
+  },
+  {
+   "reminder_id": "c2b97e4a01d6f83c5a9e2b70",
+   "title": "Work Problem Set 5 before the checkpoint",
+   "due_datetime": 1792153800.0,
+   "description": "Ungraded glomerular filtration review from Wednesday. Work it in Dr. Silva's notation before the checkpoint opens.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792153800.0
+  },
+  {
+   "reminder_id": "f2a07c5e18b3d94c6a2e0f71",
+   "title": "Flu shot tomorrow 11:45 - bring insurance card",
+   "due_datetime": 1792188000.0,
+   "description": "Kroger pharmacy, N High St. Right after Sat study block. Insurance card and ID are in the wallet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792155600.0
+  },
+  {
+   "reminder_id": "e29c40b7f15a8d63c2071e4f",
+   "title": "Do Practice Quiz 6 (closes Mon 11:59 pm)",
+   "due_datetime": 1792240200.0,
+   "description": "L12 and L13 renal. Ungraded self-check on Scioto Learn.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792240200.0
+  },
+  {
+   "reminder_id": "0b6f3e8a2d5c94b7e1f06a3c",
+   "title": "Practice ECG strips at 5:30 outside S-214",
+   "due_datetime": 1792439100.0,
+   "description": "Before lecture with Brianna and Mei. Luis is bringing practice strips from his EMT refresher.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792439100.0
+  },
+  {
+   "reminder_id": "05f7d3b8e2a14c69f0b8d2e3",
+   "title": "Show Andre my TEAS plan after lecture",
+   "due_datetime": 1792453800.0,
+   "description": "Told him Saturday I'd walk him through it after class. About 7 weeks starting 10/24, short sessions, A&P stays first until Unit 3. TEAS manual from the library reserve, Khan Academy for math.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792414800.0
+  },
+  {
+   "reminder_id": "0e5a9b3cd74f1268e9a0b5d4",
+   "title": "Book oil change + tire rotation for the Civic",
+   "due_datetime": 1792512000.0,
+   "description": "Maintenance Minder showing A1, oil life 15%.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792512000.0
+  },
+  {
+   "reminder_id": "e9c4a6f2d8b13570e9c4a6f2",
+   "title": "Orange cards: L14 fluids, L15 acid-base",
+   "due_datetime": 1792627200.0,
+   "description": "L14 cards are done. Add L15 after lecture, before bed.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792587600.0
+  },
+  {
+   "reminder_id": "6e9b2f5c8a1d4076e2b9f5c8",
+   "title": "Flashcard review (Sat)",
+   "due_datetime": 1792845000.0,
+   "description": "Leitner boxes before the Saturday study block. Due cards first, then box 1.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "3d7a0e5c9b2f46a1d8e3c7b0",
+   "title": "Finish Lab 3 calcs",
+   "due_datetime": 1792845000.0,
+   "description": "Table 3.1 volumes, M(HCl) for each trial and the mean to 4 sig figs, one sample calc. Check transcription, data sheet → report.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6d04f1a8b37e2c95e0d4a6b1",
+   "title": "Answer Mama about a package for Marek",
+   "due_datetime": 1792855800.0,
+   "description": "She asked on 10/21 and again 10/22. She wants to mail it by mid-November.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f2a5d8c1e4b7093f2d5a8c1e",
+   "title": "Flashcard review (Sun)",
+   "due_datetime": 1792947600.0,
+   "description": "Sunday Leitner pass. Promote what I get right, missed cards go back to box 1.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "7a1d3e95b06c2f48d9e0b5a3",
+   "title": "Checkpoint quiz closes Sun 11:59 pm",
+   "due_datetime": 1792972800.0,
+   "description": "BIO 2122 Unit 3 checkpoint on Scioto Learn. Graded, individual.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f5a23c8e7b109d6fa4c2e85b",
+   "title": "Benefits open enrollment closes Fri 10/30",
+   "due_datetime": 1793116800.0,
+   "description": "ArdentBenefits. Medical stays the same, dental goes from $9.40 to $11.20 a paycheck. FSA has to be re-elected if I want one.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b8e4c2a6f0d13e9b7a5c1f48",
+   "title": "Lab 3 report due 6 pm",
+   "due_datetime": 1793131200.0,
+   "description": "Print before leaving. Hand in at start of lab, S-118, with a copy of the data sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c64e0a3b1f97d8c2b5e07f39",
+   "title": "Get back to Dale about AMDP",
+   "due_datetime": 1793216700.0,
+   "description": "Told him on 10/22 I'd answer this week. Internal app due Fri 11/20.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "e8b14f06a3c9d27e50fb9a14",
+   "title": "Reply to Dale: peak Fridays",
+   "due_datetime": 1793304000.0,
+   "description": "His 10/21 email asks about 11/27, 12/4, 12/11 and 12/18. Answer due Fri 10/30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "0a3c6e9b2d5f8140a6c3e9b2",
+   "title": "Flashcard review (Fri)",
+   "due_datetime": 1793363400.0,
+   "description": "Friday Leitner review. Add cards from this week's lectures first.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "4b9f2e60a1d83c75e2b04f9a",
+   "title": "Use Kroger fuel points by 10/31",
+   "due_datetime": 1793376000.0,
+   "description": "286 points expire Saturday. Fill up at a Kroger fuel center, 200 points takes 20 cents a gallon off.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "39e6d0b4a7f21c8d6b3af05e",
+   "title": "Pick Scioto CC as TEAS score recipient",
+   "due_datetime": 1793461500.0,
+   "description": "In my ATI account. Nursing says the report then goes straight to them, usually within 48 hours of the test.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b8c052e7f9a16d3ec0b57a94",
+   "title": "Rent to Weber, $725",
+   "due_datetime": 1793552400.0,
+   "description": "My half of $1,450, paid on the Weber resident portal from checking 6120.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "2f7d1b5e9a3c68042f7d1b5e",
+   "title": "Deck cleanup before Unit 3",
+   "due_datetime": 1793558700.0,
+   "description": "Merge duplicate cardio cards and make sure every card has a slide number in Source.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "9c2d7e05a3f14b68d0e9c25a",
+   "title": "Lattice Mobile autopay, $40",
+   "due_datetime": 1793725200.0,
+   "description": "Phone bill autopays from checking 6120 on the 3rd. The bill email comes about a week before.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "07f3a9d6c4e2b81f5d703a6c",
+   "title": "Spring 2027 registration window opens",
+   "due_datetime": 1793800800.0,
+   "description": "Window opened at 7:00, no holds. Build the cart in the student portal ahead of time, then register on first break.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "4e8f1a3c6b07d25e9f4a1c80",
+   "title": "Tuition plan draft Thu 11/5: $412",
+   "due_datetime": 1793825100.0,
+   "description": "Installment 4 of 5 from checking 6120. Make sure it's covered: a returned draft is a $30 fee and can mean a registration hold.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "d2a5e8f13b9c064da7e2f13b",
+   "title": "Nursing info session at 5 (Zoom)",
+   "due_datetime": 1793911500.0,
+   "description": "Online, 5 to 6. Link and passcode are in the Scioto CC Nursing email. Bring questions about prereqs that are still in progress.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "e8a05c3d7f19b6420c7ead91",
+   "title": "Payday: $150 to savings",
+   "due_datetime": 1793984400.0,
+   "description": "Nursing school fund. Move it to savings 6157 once the Ardent deposit posts, every other Friday.",
+   "repetition_unit": "week",
+   "repetition_value": 2,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "92c6d0f84b17ae35c6d28f01",
+   "title": "Oil change tomorrow 9 am, Clintonville Tire & Auto",
+   "due_datetime": 1794006000.0,
+   "description": "Civic oil change + rotation. Rotation is free since the front tires came from there in July. About 45 min to an hour.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c3f81a5e09d7b2648e1f0a6d",
+   "title": "Spotify Premium, $11.99",
+   "due_datetime": 1794243600.0,
+   "description": "Renews on the 9th, charged to the Visa ending 0912.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "d17b5c9e0f2a4863b7d1e5c2",
+   "title": "Car insurance autopay, $112",
+   "due_datetime": 1794762000.0,
+   "description": "Ohio Valley Mutual, the Civic policy. Autopays from checking 6120 on the 15th.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "0d5a92ef7c18b4e3a61df290",
+   "title": "Ask Dr. Silva re: letter",
+   "due_datetime": 1794949200.0,
+   "description": "Second ADN recommendation letter. Email her, or catch her at office hours Wed 11/18, 4:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "5b970e3ac6d8f24b1e05a9c7",
+   "title": "Return Luis's practice strips",
+   "due_datetime": 1795034700.0,
+   "description": "Blue folder. He said keep them till after Unit 3. Bring it to lecture.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "e0c47a1f92b6d5e83f0ac64d",
+   "title": "Line up PTO coverage with Tasha and Rob",
+   "due_datetime": 1795107600.0,
+   "description": "Out Mon 12/21 to Thu 12/24. Told Dale I'd line up coverage with the other leads before peak starts.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "81e5c3b9f60a4d27b8e10c5f",
+   "title": "Zelle Jake: half of electric + internet",
+   "due_datetime": 1795208400.0,
+   "description": "Jake texts the bill amounts around the 18th. Send my half from checking.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a9f02d6be47c15a3c9d06e2b",
+   "title": "Buy TEAS Practice Assessment A",
+   "due_datetime": 1795278600.0,
+   "description": "ATI online store. Full timed run goes in the Sunday block, 13:00 to 16:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "71d4e9b02c8af5360d9e2b4c",
+   "title": "Lake Erie Visa autopay",
+   "due_datetime": 1795366800.0,
+   "description": "Statement balance on the Visa ending 0912 pays from checking 6120 on the 22nd. Look over the statement first and make sure checking covers it.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b3f71d8c64a0e59b2c7f0e8a",
+   "title": "Send Paul resume + draft",
+   "due_datetime": 1795975200.0,
+   "description": "Resume, personal statement draft and the letter submission link. He needs them by 12/1.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "7a9ce204bf613d859e1ac4b7",
+   "title": "Request transcripts",
+   "due_datetime": 1796158800.0,
+   "description": "Official Scioto CC transcript for the ADN application. Check the guide about the high school one.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6a0e2c7f4d91b35a8e6c0f17",
+   "title": "Last tuition plan draft Sat 12/5: $412",
+   "due_datetime": 1796403600.0,
+   "description": "Installment 5 of 5 from checking 6120. After this one the fall plan is paid off.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b35c8f1e7a04d692c3b5e8f0",
+   "title": "Buy TEAS Practice Assessment B",
+   "due_datetime": 1796488200.0,
+   "description": "ATI online store. Timed run goes in the Sunday 12/6 block, 13:00 to 16:30, then go through the misses.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "3c7df84e0b19a62ce5f3d08a",
+   "title": "TEAS tomorrow, check in 8:30",
+   "due_datetime": 1797030000.0,
+   "description": "Building T, Room 104. Photo ID and ATI login. Park in Lot C. Phone and Fitbit go in the lockers, calculator is on screen. Normal bedtime, leave by 8:10.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f41b6e09d2a7c83f0b5e97d4",
+   "title": "Dock assignments + scanner notes for PTO cover",
+   "due_datetime": 1797534000.0,
+   "description": "Whoever has outbound 12/21 to 12/24 gets my dock assignments and the scanner notes before I'm out. Dale asked for this when he approved the PTO.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6a2eb7d305f8e94c1a6bd30f",
+   "title": "Return A&P textbook rental (due 12/18)",
+   "due_datetime": 1797541200.0,
+   "description": "Bookstore order SCC-208416, North Campus. If it's not back by 12/18 they charge the rest of the purchase price to the Visa.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "3d8f1b6a0e5c47d2f9a3b8e1",
+   "title": "Check in for UA 3619",
+   "due_datetime": 1797612300.0,
+   "description": "Confirmation HJ4K9T, check-in opens 24 hours before the 11:40 departure.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a5c0e8f3b6d29a14e7c5f0b8",
+   "title": "Ask Jake to set up couch bedding for Marek",
+   "due_datetime": 1797634800.0,
+   "description": "Spare comforter is in the hall closet. Marek crashes here the 23rd.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c05d9b8a3e7f0d42f6c9a1e8",
+   "title": "Check in for UA 4512",
+   "due_datetime": 1797974100.0,
+   "description": "Confirmation HJ4K9T, check-in opens 24 hours before the 3:10 pm departure from O'Hare.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f09c4d27b6e1a8530c4f9b2e",
+   "title": "Leave for Parma by 1:00 with Marek",
+   "due_datetime": 1798131600.0,
+   "description": "Wigilia at Mama's, 7314 Stafford Dr. Fill the tank and load Marek's makowiec, out the door by 1:00 so we're there before the first star.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "29b0f5d6e7a3c01e84d9b62f",
+   "title": "ADN application due Fri 1/15",
+   "due_datetime": 1799604000.0,
+   "description": "Transcripts, personal statement, both letters, TEAS score.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6c8e1f3a9d5b07e24a6f8c1d",
+   "title": "Check 401(k) at Harbor Point",
+   "due_datetime": 1800118800.0,
+   "description": "Twice-a-year check: balance, 4% contribution and the 3% match. Harbor Point says the beneficiary hasn't been reviewed in over three years, so update it while I'm in there.",
+   "repetition_unit": "month",
+   "repetition_value": 6,
+   "time_notified": null
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+SEJ members' webinar: Records Requests That Get Answered
+Wed 2026-06-24, 12:00-13:30 CT, online
+Panel: media-law attorney (open-records appeals), investigative reporter (300+ state and local requests), SEJ FOI Task Force member. SEJ staff moderating. Slides and sample letters to come by email.
+
+GENERAL
+- Write it so a clerk can't misread it. One subject per request. Name the record type, the office that keeps it and the date range.
+- Call the records officer before filing. Ask what the system is called and what fields it holds, then request the fields by name.
+- Ask for records in the format they're kept in. A spreadsheet beats a PDF of a spreadsheet.
+- Keep a log: date sent, who acknowledged, promised date, every follow-up. Appeals go better with a paper trail.
+- Narrowing isn't losing. Offer a smaller first batch to get something moving.
+
+FEDERAL FOIA
+- 20 working days to decide, plus up to 10 more for "unusual circumstances." Real life runs longer. Ask for an estimated completion date in writing.
+- Fee category and fee waiver are separate asks. News media: no search or review fees, duplication only, first 100 pages free. Claim the category and ask for the waiver anyway.
+- Agency has to provide records in the form or format requested if readily reproducible (E-FOIA, 1996). Cite it.
+- Missed deadline generally means no search fees (2007 law, revised 2016). Exceptions for unusual circumstances. Worth one line in the request.
+- Expedited processing needs "urgency to inform the public." Rarely granted for environment stories, panel said, but asking costs nothing.
+
+MINNESOTA (Data Practices Act, Minn. Stat. ch. 13)
+- Government data presumed public unless a statute classifies them otherwise.
+- Can't be required to identify ourselves or give a reason for public data (13.05, subd. 12).
+- No fixed deadline for public data. "Appropriate and prompt manner," "reasonable time." Data about yourself: 10 business days.
+- Inspection is free. B&W copies, 100 pages or fewer: max 25 cents a page. Beyond that, actual cost of search, retrieval and copying, staff time included. No charge for separating public from not-public data.
+- Electronic data: they have to give an electronic copy if they reasonably can, but they don't have to convert formats. Ask for what they already use.
+- Denials must cite the specific statute. Get it in writing.
+- Cities, counties, school districts and watershed districts are all covered. Each keeps a data access policy naming a responsible authority. Get that name before filing.
+
+MY QUESTION (MN deadlines), answered near the end
+- Treat 10 business days as the first follow-up and ask for a completion date in writing.
+- After two missed dates, ask the Data Practices Office (Dept. of Administration) for an advisory opinion. Attorney said asking for one often moves things on its own.
+
+WISCONSIN AND ILLINOIS, for comparison
+- WI: "as soon as practicable and without delay." Location fees only if $50 or more.
+- IL: 5 business days, one extension of up to 5 more. AG's Public Access Counselor reviews denials.
+
+FOR THE COLUMN
+- When a viral claim cites an agency, ask the agency for the data behind it, not the press release.
+- Keep column requests short and specific. A quick partial answer beats a complete late one.
+
+TO DO
+- Adapt SEJ's state sample letter for Minnesota when the materials arrive.
+- Ask Hana whether request fees can go on the Visa and be billed with the column.
+- Start a request log.

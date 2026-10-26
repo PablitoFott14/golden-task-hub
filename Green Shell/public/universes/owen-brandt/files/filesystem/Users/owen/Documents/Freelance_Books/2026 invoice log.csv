@@ -1,0 +1,19 @@
+invoice,issued,outlet,description,amount,status,paid
+INV-2026-029,2026-04-29,North Current,Fact-check retainer May 2026,1500.00,paid,2026-05-01
+INV-2026-030,2026-05-15,North Current,Feature fee: The Buckthorn Line,3200.00,paid,2026-06-19
+INV-2026-031,2026-05-20,Prairie Wire,April short pieces (3),1150.00,paid,2026-06-30
+INV-2026-032,2026-05-26,North Current,Fact-check retainer June 2026,1500.00,paid,2026-06-01
+INV-2026-033,2026-06-05,Prairie Wire,May short pieces (4),1400.00,paid,2026-07-15
+INV-2026-034,2026-06-09,Great Lakes Dispatch,Ice-out on the Big Lake,3400.00,paid,2026-07-22
+INV-2026-035,2026-06-25,North Current,Fact-check retainer July 2026,1500.00,paid,2026-07-01
+INV-2026-036,2026-07-06,Prairie Wire,June short pieces (2),850.00,paid,2026-08-12
+INV-2026-037,2026-07-24,Field & Flow,Canoe Country's Quiet Lakes,6500.00,paid,2026-08-27
+INV-2026-038,2026-07-27,North Current,Fact-check retainer August 2026,1500.00,paid,2026-08-03
+INV-2026-039,2026-08-03,Prairie Wire,July short pieces (3),1300.00,paid,2026-09-09
+INV-2026-040,2026-08-04,Great Lakes Dispatch,Who pays for beach closures,2600.00,paid,2026-09-16
+INV-2026-041,2026-08-25,North Current,Fact-check retainer September 2026,1500.00,paid,2026-09-01
+INV-2026-042,2026-08-28,Prairie Wire,August short pieces (3),1200.00,paid,2026-10-06
+INV-2026-043,2026-09-21,North Current,Salt in the Lakes advance (half of 4500.00 fee),2250.00,paid,2026-09-25
+INV-2026-044,2026-09-24,North Current,Fact-check retainer October 2026,1500.00,paid,2026-10-01
+INV-2026-045,2026-10-05,Prairie Wire,September short pieces (3),1050.00,sent,
+INV-2026-046,2026-10-26,North Current,Fact-check retainer November 2026,1500.00,sent,

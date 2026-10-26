@@ -1,0 +1,4531 @@
+{
+ "users": [
+  {
+   "id": "plaid_user_231740db42c8b0ec",
+   "email": "tomasz.nowak.cbus@gmail.com"
+  }
+ ],
+ "items": [
+  {
+   "id": "item_9593a03abc052f8d",
+   "user_id": "plaid_user_231740db42c8b0ec",
+   "institution_id": "ins_9df19a8b",
+   "institution_name": "Buckeye Community Bank",
+   "products": [
+    "transactions"
+   ]
+  },
+  {
+   "id": "item_29dc9c096aedfc4d",
+   "user_id": "plaid_user_231740db42c8b0ec",
+   "institution_id": "ins_9b8caf48",
+   "institution_name": "Lake Erie Card (Visa)",
+   "products": [
+    "transactions"
+   ]
+  }
+ ],
+ "accounts": [
+  {
+   "id": "acc_27183062c795ee349f87",
+   "item_id": "item_9593a03abc052f8d",
+   "name": "Buckeye Community Bank checking",
+   "official_name": "Buckeye Community Bank checking",
+   "type": "depository",
+   "subtype": "checking",
+   "mask": "6120",
+   "balances": {
+    "current": 2850.0,
+    "iso_currency_code": "USD",
+    "available": 2850.0
+   },
+   "holder_category": "personal"
+  },
+  {
+   "id": "acc_b55dfa882dce2003a96f",
+   "item_id": "item_9593a03abc052f8d",
+   "name": "Buckeye Community Bank savings",
+   "official_name": "Buckeye Community Bank savings",
+   "type": "depository",
+   "subtype": "savings",
+   "mask": "6157",
+   "balances": {
+    "current": 6420.0,
+    "iso_currency_code": "USD",
+    "available": 6420.0
+   },
+   "holder_category": "personal"
+  },
+  {
+   "id": "acc_7a97f4dafab4b7adeaa5",
+   "item_id": "item_29dc9c096aedfc4d",
+   "name": "Lake Erie Card (Visa) credit card",
+   "official_name": "Lake Erie Card (Visa) credit card",
+   "type": "credit",
+   "subtype": "credit card",
+   "mask": "0912",
+   "balances": {
+    "current": 610.0,
+    "iso_currency_code": "USD",
+    "limit": 4000.0
+   },
+   "holder_category": "personal"
+  }
+ ],
+ "transactions": [
+  {
+   "id": "txn_5e1a9c3f",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 84.0,
+   "date": "2026-06-20",
+   "name": "COLUMBUS CREW TICKETS COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Columbus Crew",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_SPORTING_EVENTS_AMUSEMENT_PARKS_AND_MUSEUMS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b84d20e7",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 34.62,
+   "date": "2026-07-03",
+   "name": "TST* HOUND DOGS THREE DEGREE COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hound Dog's Three Degree Pizza",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_0f6c7a92",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 46.18,
+   "date": "2026-07-05",
+   "name": "SQ *KATALINAS COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Katalina's",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5b1e9c3a",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 236.8,
+   "date": "2026-07-18",
+   "name": "CLINTONVILLE TIRE & AUTO COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Clintonville Tire & Auto",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_AUTOMOTIVE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3fa80c52",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 64.2,
+   "date": "2026-06-13",
+   "name": "TST* BABCIA'S KITCHEN COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Babcia's Kitchen",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4e7a1c90",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 3.29,
+   "date": "2026-04-23",
+   "name": "SPEEDWAY 03157 GROVEPORT OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_CONVENIENCE_STORES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_b25d8f13",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 6.58,
+   "date": "2026-04-25",
+   "name": "SPEEDWAY 09213 COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_CONVENIENCE_STORES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_0f9c3e6a",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 3.99,
+   "date": "2026-04-28",
+   "name": "SPEEDWAY 03157 GROVEPORT OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_CONVENIENCE_STORES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_d71a5b28",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 3.29,
+   "date": "2026-04-30",
+   "name": "SPEEDWAY 03157 GROVEPORT OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_CONVENIENCE_STORES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_83e6c0f4",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 5.78,
+   "date": "2026-05-02",
+   "name": "SPEEDWAY 09213 COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_CONVENIENCE_STORES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_5ca29d71",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 4.58,
+   "date": "2026-05-04",
+   "name": "SPEEDWAY 03157 GROVEPORT OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_CONVENIENCE_STORES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_e0b47a3c",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 6.58,
+   "date": "2026-05-06",
+   "name": "SPEEDWAY 03157 GROVEPORT OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_CONVENIENCE_STORES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_2d8f6e15",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 4.99,
+   "date": "2026-05-09",
+   "name": "SPEEDWAY 09213 COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_CONVENIENCE_STORES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_9a3c7b02",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 5.98,
+   "date": "2026-05-10",
+   "name": "SPEEDWAY 09213 COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_CONVENIENCE_STORES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_c6f1e8a9",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 75.0,
+   "date": "2026-05-10",
+   "name": "NORTHSIDE URGENT CARE COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Northside Urgent Care",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "MEDICAL",
+    "detailed": "MEDICAL_OTHER_MEDICAL",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_17b4d5ce",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 30.0,
+   "date": "2026-05-19",
+   "name": "CLINTONVILLE FAMILY MED COLUMBUS OH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Clintonville Family Medicine",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "MEDICAL",
+    "detailed": "MEDICAL_PRIMARY_CARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4b8e2f17",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 238.4,
+   "date": "2026-10-02",
+   "name": "UNITED AIRLINES 0162418839562 HOUSTON TX",
+   "iso_currency_code": "USD",
+   "merchant_name": "United Airlines",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRAVEL",
+    "detailed": "TRAVEL_FLIGHTS",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_c81f4a2e",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 115.0,
+   "date": "2026-10-09",
+   "name": "ATI TESTING LEAWOOD KS",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATI Testing",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_EDUCATION",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8e3a1f6c",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 725.0,
+   "date": "2026-05-01",
+   "name": "WEBER PROPERTY MGT WEB PMTS 050126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Weber Property Management",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_RENT",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_3b7e5c08",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 58.1,
+   "date": "2026-05-20",
+   "name": "ZELLE PAYMENT TO JAKE B CONF# R7KD2QXM",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c47b20d9",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 725.0,
+   "date": "2026-06-01",
+   "name": "WEBER PROPERTY MGT WEB PMTS 060126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Weber Property Management",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_RENT",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_f04a8d6b",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 61.47,
+   "date": "2026-06-19",
+   "name": "ZELLE PAYMENT TO JAKE B CONF# H3WP9TLC",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1f9d6e84",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 725.0,
+   "date": "2026-07-01",
+   "name": "WEBER PROPERTY MGT WEB PMTS 070126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Weber Property Management",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_RENT",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_9c61e2f7",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 70.86,
+   "date": "2026-07-20",
+   "name": "ZELLE PAYMENT TO JAKE B CONF# B8NV4KZR",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a5c3e07b",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 725.0,
+   "date": "2026-08-01",
+   "name": "WEBER PROPERTY MGT WEB PMTS 080126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Weber Property Management",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_RENT",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_47d8b3a0",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 74.3,
+   "date": "2026-08-19",
+   "name": "ZELLE PAYMENT TO JAKE B CONF# M2QX7DJF",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6d0b9f2e",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 725.0,
+   "date": "2026-09-01",
+   "name": "WEBER PROPERTY MGT WEB PMTS 090126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Weber Property Management",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_RENT",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_b2e0c95d",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 69.84,
+   "date": "2026-09-20",
+   "name": "ZELLE PAYMENT TO JAKE B CONF# T9LC3WHB",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e92f4a31",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 725.0,
+   "date": "2026-10-01",
+   "name": "WEBER PROPERTY MGT WEB PMTS 100126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Weber Property Management",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_RENT",
+    "confidence_level": "VERY_HIGH"
+   }
+  },
+  {
+   "id": "txn_5a9f17e4",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 62.63,
+   "date": "2026-10-20",
+   "name": "ZELLE PAYMENT TO JAKE B CONF# K4ZR8PNV",
+   "iso_currency_code": "USD",
+   "merchant_name": "Zelle",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f8b2745f65d358fcd251d34d",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 112.0,
+   "date": "2026-06-15",
+   "name": "OHIO VALLEY MUTUAL 061526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ohio Valley Mutual",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "9a05a334095fd39a9136b547",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": -209.5,
+   "date": "2026-05-22",
+   "name": "PAYMENT RECEIVED, THANK YOU 05/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5016c844aa4247eab670ea0d",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 209.5,
+   "date": "2026-05-22",
+   "name": "ACH DEBIT PAYMENT TO LAKE ERIE CARD (VISA) ..0912 05/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Lake Erie Card (Visa) ..0912",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "39b87c68a4a7d58853e338d4",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": -653.89,
+   "date": "2026-06-22",
+   "name": "PAYMENT RECEIVED, THANK YOU 06/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4112b8471fb7fbbbdda554be",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 653.89,
+   "date": "2026-06-22",
+   "name": "ACH DEBIT PAYMENT TO LAKE ERIE CARD (VISA) ..0912 06/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Lake Erie Card (Visa) ..0912",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7593a8b53d3c39ef3c13c6c3",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": -895.76,
+   "date": "2026-07-22",
+   "name": "PAYMENT RECEIVED, THANK YOU 07/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4c9ad4377f3d3ee1fec3d44c",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 895.76,
+   "date": "2026-07-22",
+   "name": "ACH DEBIT PAYMENT TO LAKE ERIE CARD (VISA) ..0912 07/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Lake Erie Card (Visa) ..0912",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8f3bf03a4ec23feeef665895",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": -947.67,
+   "date": "2026-08-22",
+   "name": "PAYMENT RECEIVED, THANK YOU 08/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "889985bb821ed3e0d45a56cf",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 947.67,
+   "date": "2026-08-22",
+   "name": "ACH DEBIT PAYMENT TO LAKE ERIE CARD (VISA) ..0912 08/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Lake Erie Card (Visa) ..0912",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "eac409e639ab94078c962af4",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": -738.67,
+   "date": "2026-09-22",
+   "name": "PAYMENT RECEIVED, THANK YOU 09/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8d35b8b04e456f4d46d05de1",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 738.67,
+   "date": "2026-09-22",
+   "name": "ACH DEBIT PAYMENT TO LAKE ERIE CARD (VISA) ..0912 09/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Lake Erie Card (Visa) ..0912",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "2870b99dd51a44cf2d0e75f8",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": -743.41,
+   "date": "2026-10-22",
+   "name": "PAYMENT RECEIVED, THANK YOU 10/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment received, thank you",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a5fa7141fbeb15729bef1ee7",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 743.41,
+   "date": "2026-10-22",
+   "name": "ACH DEBIT PAYMENT TO LAKE ERIE CARD (VISA) ..0912 10/22",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Lake Erie Card (Visa) ..0912",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "bill payment",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "53a2169db8fde4901e78b67a",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 52.38,
+   "date": "2026-04-24",
+   "name": "ALDI 042426",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f6124f8cfc52534ee16bc2a7",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 41.36,
+   "date": "2026-04-27",
+   "name": "MARATHON 042726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7b0d9bfdc3590a22233bfa63",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 81.46,
+   "date": "2026-04-30",
+   "name": "KROGER 043026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "32c7408d7e40a8a02453e728",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 39.4,
+   "date": "2026-05-02",
+   "name": "AMAZON.COM 050226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Amazon.com",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a703635c38f8ca42ca12dd35",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 39.82,
+   "date": "2026-05-04",
+   "name": "SUNOCO 050426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "67e44cbc800725812da92617",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 11.99,
+   "date": "2026-05-09",
+   "name": "SPOTIFY 050926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Spotify",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_MUSIC_AND_AUDIO",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7f21be4be81f43b6c09e230c",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 11.99,
+   "date": "2026-06-09",
+   "name": "SPOTIFY 060926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Spotify",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_MUSIC_AND_AUDIO",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "72b8e43327d0bc4a63209c36",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 11.99,
+   "date": "2026-07-09",
+   "name": "SPOTIFY 070926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Spotify",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_MUSIC_AND_AUDIO",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "21a7878531d5c84fc4a6acf1",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 11.99,
+   "date": "2026-08-09",
+   "name": "SPOTIFY 080926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Spotify",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_MUSIC_AND_AUDIO",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3cbdb81bdf656826efd29901",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 11.99,
+   "date": "2026-09-09",
+   "name": "SPOTIFY 090926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Spotify",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_MUSIC_AND_AUDIO",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "210b8ae5907892b453527cb0",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 11.99,
+   "date": "2026-10-09",
+   "name": "SPOTIFY 100926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Spotify",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_MUSIC_AND_AUDIO",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "78530c2869ff57a9ab741991",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 41.27,
+   "date": "2026-05-09",
+   "name": "ALDI 050926",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8fba867a1caffb7c5aca862a",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 43.15,
+   "date": "2026-05-12",
+   "name": "MARATHON 051226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "fbd671f8afbd3cb287b55557",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 18.47,
+   "date": "2026-05-16",
+   "name": "LAVASH CAFÉ 051626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lavash Café",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "dfd35cf4a9f7363ad6d8ebec",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 94.13,
+   "date": "2026-05-16",
+   "name": "KROGER 051626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "94473d1517da337c5d982861",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 42.07,
+   "date": "2026-05-18",
+   "name": "SUNOCO 051826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "24715239bc6b38ff74c0b07b",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 18.9,
+   "date": "2026-05-21",
+   "name": "ENA'S CARIBBEAN KITCHEN 052126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ena's Caribbean Kitchen",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "095577fbdc104ae005d56191",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 5.5,
+   "date": "2026-05-22",
+   "name": "COLIN'S COFFEE 052226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Colin's Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "031bb19339a25b158b4c3b4d",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 5.5,
+   "date": "2026-08-21",
+   "name": "COLIN'S COFFEE 082126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Colin's Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4e1f4ffba02c5651cf35685c",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 56.84,
+   "date": "2026-05-23",
+   "name": "ALDI 052326",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f41e1b1c180b22c5a232cddc",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 59.99,
+   "date": "2026-05-24",
+   "name": "1-800-FLOWERS.COM 052426",
+   "iso_currency_code": "USD",
+   "merchant_name": "1-800-FLOWERS.COM",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_GIFTS_AND_NOVELTIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "74bb26d491dd92660a65f6af",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 44.61,
+   "date": "2026-05-26",
+   "name": "MARATHON 052626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0d82bd07bb13461edb9ec2a2",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 16.85,
+   "date": "2026-05-29",
+   "name": "DIRTY FRANK'S HOT DOG PALACE 052926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Dirty Frank's Hot Dog Palace",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "b35ee0ff3448c79156507494",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 77.92,
+   "date": "2026-05-29",
+   "name": "KROGER 052926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8a6b2853c8091ac03c450e59",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 60.25,
+   "date": "2026-05-30",
+   "name": "OHIO BMV 053026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ohio BMV",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "54394290df3b5f63fac898aa",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 40.93,
+   "date": "2026-06-01",
+   "name": "SUNOCO 060126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d772e25f30041c1f7ae00d4e",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 9.99,
+   "date": "2026-06-03",
+   "name": "FITBIT 060326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fitbit",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "e29b26f6899bb82e679fe40c",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 19.75,
+   "date": "2026-06-05",
+   "name": "ENA'S CARIBBEAN KITCHEN 060526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ena's Caribbean Kitchen",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c6c78bd803c34fde9c3ea9a1",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 49.65,
+   "date": "2026-06-06",
+   "name": "ALDI 060626",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7aca71489e7a378bc965884c",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 6.25,
+   "date": "2026-06-06",
+   "name": "STAUF'S COFFEE ROASTERS 060626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Stauf's Coffee Roasters",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8e4d9eef1cbee6f359f2876a",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 45.28,
+   "date": "2026-06-09",
+   "name": "MARATHON 060926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "43e41cb28c0ffffe258233a8",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 38.42,
+   "date": "2026-06-11",
+   "name": "WEILAND'S MARKET 061126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Weiland's Market",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7600ea07a64eae8fa6235408",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 43.7,
+   "date": "2026-06-15",
+   "name": "SUNOCO 061526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d70b85321db1567981652a51",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 53.17,
+   "date": "2026-06-19",
+   "name": "ALDI 061926",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5aa75784f615d50160ac7145",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 46.12,
+   "date": "2026-06-23",
+   "name": "MARATHON 062326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d7b3afe0e837544be46e1348",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 21.3,
+   "date": "2026-06-26",
+   "name": "ENA'S CARIBBEAN KITCHEN 062626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ena's Caribbean Kitchen",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "694a68021622bc75c52668bb",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 7.4,
+   "date": "2026-06-26",
+   "name": "FOX IN THE SNOW CAFE 062626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fox in the Snow Cafe",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0c339786182432e2977c464c",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 86.59,
+   "date": "2026-06-27",
+   "name": "KROGER 062726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c91584e7fc3c5a64309160a8",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 44.37,
+   "date": "2026-06-29",
+   "name": "SUNOCO 062926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "288f5bc0dcea25b229c196ce",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 103.74,
+   "date": "2026-07-02",
+   "name": "KROGER 070226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "379fe0088c8b39c4a1b3e1df",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 47.05,
+   "date": "2026-07-07",
+   "name": "MARATHON 070726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ccb96f395a3015d8bc9313dc",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 47.92,
+   "date": "2026-07-11",
+   "name": "ALDI 071126",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "18c4923fbc4471970bf9f3e6",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 5.75,
+   "date": "2026-07-11",
+   "name": "COLIN'S COFFEE 071126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Colin's Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "82fc5ff2b9c3ec7899f7aa3a",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 5.75,
+   "date": "2026-09-26",
+   "name": "COLIN'S COFFEE 092626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Colin's Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0b44ccc754b4ac7be1b5bd07",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 5.75,
+   "date": "2026-10-16",
+   "name": "COLIN'S COFFEE 101626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Colin's Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "631695928aed78507f30a9f1",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 45.83,
+   "date": "2026-07-13",
+   "name": "SUNOCO 071326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d722ed13b7318c49f6ef4c06",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 74.06,
+   "date": "2026-07-16",
+   "name": "KROGER 071626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "38eab6da741121029f1f542b",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 19.62,
+   "date": "2026-07-17",
+   "name": "LAVASH CAFÉ 071726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lavash Café",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4a0c02529da201db289ed526",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 46.58,
+   "date": "2026-07-21",
+   "name": "MARATHON 072126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "bf29451da42264a2a6308b64",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 58.31,
+   "date": "2026-07-24",
+   "name": "ALDI 072426",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d5599a9e740eec47ab5ec410",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 4.9,
+   "date": "2026-07-24",
+   "name": "KAFE KEROUAC 072426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kafe Kerouac",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "af4d062f5aa220c842147095",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 74.99,
+   "date": "2026-07-25",
+   "name": "DICK'S SPORTING GOODS 072526",
+   "iso_currency_code": "USD",
+   "merchant_name": "DICK'S SPORTING GOODS",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "9f33dc0106e1f5a417551741",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 44.96,
+   "date": "2026-07-27",
+   "name": "SUNOCO 072726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "306acf28bb01ad9213c910bc",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 82.65,
+   "date": "2026-07-31",
+   "name": "KROGER 073126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7ef6a0af6ac632bff7343083",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 45.41,
+   "date": "2026-08-04",
+   "name": "MARATHON 080426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c1edcfda18102682fa5a79a6",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 14.95,
+   "date": "2026-08-07",
+   "name": "DIRTY FRANK'S HOT DOG PALACE 080726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Dirty Frank's Hot Dog Palace",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "dc417a5ea3e088fc6d3def02",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 6.45,
+   "date": "2026-08-08",
+   "name": "STAUF'S COFFEE ROASTERS 080826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Stauf's Coffee Roasters",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "1cc0c5afd092b3f3369335bc",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 46.28,
+   "date": "2026-08-08",
+   "name": "TRADER JOE'S 080826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Trader Joe's",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "fc468c78d31eb7cb19a6ef6c",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 43.88,
+   "date": "2026-08-10",
+   "name": "SUNOCO 081026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "6ec610c9f8573fd327b8b2c5",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 79.84,
+   "date": "2026-08-13",
+   "name": "KROGER 081326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d817182ed7513ea6dd4f759b",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 89.99,
+   "date": "2026-08-15",
+   "name": "SCIOTO CC BOOKSTORE 081526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Scioto CC Bookstore",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "bddf47b0fcff9c313a5979a8",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 44.25,
+   "date": "2026-08-18",
+   "name": "MARATHON 081826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c098ff23b3011930cca9d4b5",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 50.7,
+   "date": "2026-08-18",
+   "name": "AMAZON.COM 081826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Amazon.com",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f5eb8ad489aa56ec82cdae6d",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 51.09,
+   "date": "2026-08-19",
+   "name": "ALDI 081926",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "99920c297c9d623a87822d15",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 28.5,
+   "date": "2026-08-21",
+   "name": "EMBER & RYE 082126",
+   "iso_currency_code": "USD",
+   "merchant_name": "EMBER & RYE",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "afcb4c28946f7a4adc49b62b",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 54.5,
+   "date": "2026-08-22",
+   "name": "SCIOTO CC BOOKSTORE 082226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Scioto CC Bookstore",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "99b46bf1b6ff1075f418bea0",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 47.36,
+   "date": "2026-08-23",
+   "name": "ALDI 082326",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d1a9bb454f06d2f5a0d3ebb2",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 42.69,
+   "date": "2026-08-24",
+   "name": "SUNOCO 082426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0ee84a186b45470dfc77652c",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 22.4,
+   "date": "2026-08-28",
+   "name": "HOUND DOG'S THREE DEGREE PIZZA 082826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hound Dog's Three Degree Pizza",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a944be8b13cdd7c3a9f75eda",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 92.47,
+   "date": "2026-08-29",
+   "name": "KROGER 082926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "875a778c2d0fc7a4abe0320c",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 41.97,
+   "date": "2026-09-01",
+   "name": "MARATHON 090126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ba2fdd87d78c73152a093b6a",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 55.63,
+   "date": "2026-09-04",
+   "name": "ALDI 090426",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0bc7df4632e11ac24f4efc16",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 7.65,
+   "date": "2026-09-05",
+   "name": "FOX IN THE SNOW CAFE 090526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fox in the Snow Cafe",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "bda420b5c6b93d6945ff0fb0",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 43.12,
+   "date": "2026-09-08",
+   "name": "SUNOCO 090826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "06861f1750caf590840316a5",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 71.28,
+   "date": "2026-09-10",
+   "name": "KROGER 091026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "757a6316e7fc7ff3a69ca511",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 5.1,
+   "date": "2026-09-11",
+   "name": "KAFE KEROUAC 091126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kafe Kerouac",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "606fb30002832d02038e4310",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 40.84,
+   "date": "2026-09-14",
+   "name": "MARATHON 091426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8365cc8df9102764ca4ef3ae",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 49.76,
+   "date": "2026-09-18",
+   "name": "ALDI 091826",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "56d5db0a41a5e2cd228b2674",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 46.41,
+   "date": "2026-09-19",
+   "name": "AMAZON.COM 091926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Amazon.com",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "1547ac802b30f41d131d233d",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 24.86,
+   "date": "2026-09-19",
+   "name": "KATALINA'S 091926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Katalina's",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "f5147c9b3a19417e804c98b1",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 42.33,
+   "date": "2026-09-22",
+   "name": "SUNOCO 092226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "e8062fa6bfa89c356587b876",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 17.94,
+   "date": "2026-09-25",
+   "name": "LAVASH CAFÉ 092526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lavash Café",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "6b14de926cfb343ec435d33d",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 39.76,
+   "date": "2026-09-26",
+   "name": "MARATHON 092626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "104c06ace9ef7707f82c22b6",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 84.15,
+   "date": "2026-09-26",
+   "name": "KROGER 092626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "e8b691aaac883a0463fcd18f",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 38.62,
+   "date": "2026-10-01",
+   "name": "ALDI 100126",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "17722ee71a48e96e198ce5e3",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 68.47,
+   "date": "2026-10-03",
+   "name": "KROGER 100326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5d10d6b0c41b689bb744b1f8",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 36.9,
+   "date": "2026-10-05",
+   "name": "SUNOCO 100526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "193b678f3ac1f5378c9b2a64",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 23.15,
+   "date": "2026-10-08",
+   "name": "HOUND DOG'S THREE DEGREE PIZZA 100826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hound Dog's Three Degree Pizza",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8002bdb0333ea74d36a918bc",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 5.85,
+   "date": "2026-10-09",
+   "name": "STAUF'S COFFEE ROASTERS 100926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Stauf's Coffee Roasters",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3e835281c7e25312dddcec1d",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 49.18,
+   "date": "2026-10-10",
+   "name": "KROGER 101026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3f18acf96d9cbf3e09ac4415",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 37.48,
+   "date": "2026-10-13",
+   "name": "MARATHON 101326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Marathon",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "abe6e5f6c2051c71d87f6ab4",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 13.85,
+   "date": "2026-10-16",
+   "name": "DIRTY FRANK'S HOT DOG PALACE 101626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Dirty Frank's Hot Dog Palace",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "274507aa71dd2e58614f21b0",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 44.35,
+   "date": "2026-10-17",
+   "name": "KROGER 101726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Kroger",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "db3b4fb6aa20a26a12a16e0e",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 35.12,
+   "date": "2026-10-19",
+   "name": "SUNOCO 101926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sunoco",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "449c0ed6c22469c4d830c922",
+   "account_id": "acc_7a97f4dafab4b7adeaa5",
+   "amount": 52.86,
+   "date": "2026-10-21",
+   "name": "ALDI 102126",
+   "iso_currency_code": "USD",
+   "merchant_name": "ALDI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4ac8765454eb41154eac78d2",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-04-24",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 042426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "e47d36afb45d47e16a82913c",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-05-08",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 050826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a6a8697f107cde5f804ce386",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-05-22",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 052226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "9c32ef0337a0b01eaf5b311b",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-06-05",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 060526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a2ee0baf0eb032c47b00e146",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-06-19",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 061926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c8ae132b919cf64753986cc1",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-07-03",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 070326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3388390f23d0a2ddebe84ee6",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-07-17",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 071726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "98aa55e4a092d72995522fab",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-07-31",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 073126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d053fc1ce35a9d5269be0286",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-08-14",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 081426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "cb97290cc473f2103e833ceb",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-08-28",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 082826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "eef7eb44f3add566ee546b3d",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-09-11",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 091126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "34622c73a9f9d12307e601eb",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-09-25",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 092526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7255774a678d3d3e01496afd",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-10-09",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 100926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "be2579a876b67ea05a248005",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1468.32,
+   "date": "2026-04-24",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 042426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "20fdf11d56a1e49fe6d1c83f",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 6.75,
+   "date": "2026-04-24",
+   "name": "SQ *GLOBAL GALLERY COFFEE 042426",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *GLOBAL GALLERY COFFEE",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3fb63334ccd130118fadb330",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 13.85,
+   "date": "2026-04-25",
+   "name": "CHIPOTLE 2214 COLUMBUS OH 042526",
+   "iso_currency_code": "USD",
+   "merchant_name": "CHIPOTLE 2214 COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "56a20065bdee2b6680e221b6",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 200.0,
+   "date": "2026-04-26",
+   "name": "BUCKEYE CMTY BK ATM N HIGH ST 042626",
+   "iso_currency_code": "USD",
+   "merchant_name": "BUCKEYE CMTY BK ATM N HIGH ST",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "0641bc5cd88991c4c2b8f462",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 200.0,
+   "date": "2026-06-26",
+   "name": "BUCKEYE CMTY BK ATM N HIGH ST 062626",
+   "iso_currency_code": "USD",
+   "merchant_name": "BUCKEYE CMTY BK ATM N HIGH ST",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "d1303900ece1aae0a6fc01bd",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 40.0,
+   "date": "2026-05-03",
+   "name": "LATTICE MOBILE 050326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lattice Mobile",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_GAS_AND_ELECTRICITY",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "4383ec9c4fe190431c34571f",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 40.0,
+   "date": "2026-06-03",
+   "name": "LATTICE MOBILE 060326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lattice Mobile",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_GAS_AND_ELECTRICITY",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "c4719ec443f1f68531206b67",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 40.0,
+   "date": "2026-07-03",
+   "name": "LATTICE MOBILE 070326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lattice Mobile",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_GAS_AND_ELECTRICITY",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "4a17bff5f2c4c8ef86266645",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 40.0,
+   "date": "2026-08-03",
+   "name": "LATTICE MOBILE 080326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lattice Mobile",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_GAS_AND_ELECTRICITY",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "f403ffb0a9b2c44161efdfb0",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 40.0,
+   "date": "2026-09-03",
+   "name": "LATTICE MOBILE 090326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lattice Mobile",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_GAS_AND_ELECTRICITY",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "29627ce3eddcda5e1675270a",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 40.0,
+   "date": "2026-10-03",
+   "name": "LATTICE MOBILE 100326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lattice Mobile",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "RENT_AND_UTILITIES",
+    "detailed": "RENT_AND_UTILITIES_GAS_AND_ELECTRICITY",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "50f1972ee27e65004c37e1c5",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 412.0,
+   "date": "2026-08-05",
+   "name": "SCIOTO CC TUITION PAYMENT PLAN 080526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Scioto CC Tuition Payment Plan",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "bc720acb99e845ef0cbad8ad",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 412.0,
+   "date": "2026-09-05",
+   "name": "SCIOTO CC TUITION PAYMENT PLAN 090526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Scioto CC Tuition Payment Plan",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "798ab5daa3daa5e59c4c223c",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 412.0,
+   "date": "2026-10-05",
+   "name": "SCIOTO CC TUITION PAYMENT PLAN 100526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Scioto CC Tuition Payment Plan",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "a935a057aab95c3e52d4f4cb",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1471.15,
+   "date": "2026-05-08",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 050826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5184c538e5380f0d3bf5b63c",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 112.0,
+   "date": "2026-05-15",
+   "name": "OHIO VALLEY MUTUAL 051526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ohio Valley Mutual",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "170cde7636ac0b63c4728c42",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 112.0,
+   "date": "2026-07-15",
+   "name": "OHIO VALLEY MUTUAL 071526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ohio Valley Mutual",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "358226130cb0676df861822e",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 112.0,
+   "date": "2026-08-15",
+   "name": "OHIO VALLEY MUTUAL 081526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ohio Valley Mutual",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "0d8f37bcfec84ed0ba252a74",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 112.0,
+   "date": "2026-09-15",
+   "name": "OHIO VALLEY MUTUAL 091526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ohio Valley Mutual",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "28b69201291551da53387873",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 112.0,
+   "date": "2026-10-15",
+   "name": "OHIO VALLEY MUTUAL 101526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ohio Valley Mutual",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_INSURANCE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "a3dfcee4365f0ecac7686d33",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1474.86,
+   "date": "2026-05-22",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 052226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d9eac7dbda966cfbe52bddc0",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1553.27,
+   "date": "2026-06-05",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 060526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7ff502f1b898faf8c774d0ed",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1612.44,
+   "date": "2026-06-19",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 061926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "df69ba62a12ff84140e50b41",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1588.2,
+   "date": "2026-07-03",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 070326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ca04f89b4d0bed4a790b955a",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1671.35,
+   "date": "2026-07-17",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 071726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "64e39399047320d4a13bac82",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1694.08,
+   "date": "2026-07-31",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 073126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5008c9fb97718a2581687901",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1623.57,
+   "date": "2026-08-14",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 081426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "1459dd9aaadbbe14f4bb5a71",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1546.9,
+   "date": "2026-08-28",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 082826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "51192152237ed359c91888a8",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1479.63,
+   "date": "2026-09-11",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 091126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f0d200ccdc1b7d29bf925568",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1532.47,
+   "date": "2026-09-25",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 092526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a77c0ae33981a7de5470d28f",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": -1469.88,
+   "date": "2026-10-09",
+   "name": "ARDENT PARCEL LOGISTICS PAYROLL 100926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Ardent Parcel Logistics Payroll",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_WAGES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "e84e24c549471a951b1b73ca",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 6.45,
+   "date": "2026-04-24",
+   "name": "STAUFS COFFEE ROASTERS COLUMBUS OH 042426",
+   "iso_currency_code": "USD",
+   "merchant_name": "STAUFS COFFEE ROASTERS COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "512c6f49d88a560b926387e1",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 31.4,
+   "date": "2026-04-25",
+   "name": "TST* HOUND DOGS THREE DEGREE COLUMBUS OH 042526",
+   "iso_currency_code": "USD",
+   "merchant_name": "TST* HOUND DOGS THREE DEGREE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "4658acac11719f523eebabaf",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 5.75,
+   "date": "2026-04-26",
+   "name": "SQ *KAFE KEROUAC COLUMBUS OH 042626",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *KAFE KEROUAC COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "2285098d79051c6bfd3a45a8",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 18.25,
+   "date": "2026-04-30",
+   "name": "DIRTY FRANKS HOT DOG PALACE COLUMBUS OH 043026",
+   "iso_currency_code": "USD",
+   "merchant_name": "DIRTY FRANKS HOT DOG PALACE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "5c7704a697ba78d178020b5b",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 200.0,
+   "date": "2026-05-02",
+   "name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH 050226",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "b3611e2f743ba4ba034c23aa",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 200.0,
+   "date": "2026-06-14",
+   "name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH 061426",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "54c19752e2a12ee3797c24ab",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 200.0,
+   "date": "2026-08-29",
+   "name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH 082926",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "4823cb497b51e127fb0cc059",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 200.0,
+   "date": "2026-09-19",
+   "name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH 091926",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "d27944dd589eb6ae5439042d",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 200.0,
+   "date": "2026-10-17",
+   "name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH 101726",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "53d9ca5f5947e988840465c3",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 7.2,
+   "date": "2026-05-08",
+   "name": "SQ *COLINS COFFEE COLUMBUS OH 050826",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *COLINS COFFEE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0a6dfe61406dc11efa484fb1",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 109.99,
+   "date": "2026-05-16",
+   "name": "DICK'S SPORTING GOODS #1102 COLUMBUS OH 051626",
+   "iso_currency_code": "USD",
+   "merchant_name": "DICK'S SPORTING GOODS #1102 COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "22091bc6ec2106e44b563da6",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 32.0,
+   "date": "2026-05-22",
+   "name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH 052226",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "9dc585bc1dcc800db287cc2f",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 32.0,
+   "date": "2026-06-26",
+   "name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH 062626",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "987d0447a36b8f542b52db19",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 32.0,
+   "date": "2026-07-31",
+   "name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH 073126",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b229d73478f0e55265250884",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 32.0,
+   "date": "2026-09-04",
+   "name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH 090426",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "45b8e87cca5dd5b90778feb1",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 32.0,
+   "date": "2026-10-09",
+   "name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH 100926",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "37fbb117b0290f55567abee3",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 67.8,
+   "date": "2026-05-23",
+   "name": "EMBER & RYE COLUMBUS OH 052326",
+   "iso_currency_code": "USD",
+   "merchant_name": "EMBER & RYE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "e3042c8536598d51f0271295",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 47.36,
+   "date": "2026-05-29",
+   "name": "TARGET T-1885 COLUMBUS OH 052926",
+   "iso_currency_code": "USD",
+   "merchant_name": "TARGET T-1885 COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "52dd8959b310a83c8037b624",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 22.15,
+   "date": "2026-05-30",
+   "name": "LAVASH CAFE COLUMBUS OH 053026",
+   "iso_currency_code": "USD",
+   "merchant_name": "LAVASH CAFE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d7b2643d8583c9303e75dfc8",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 9.85,
+   "date": "2026-06-05",
+   "name": "SQ *FOX IN THE SNOW CAFE COLUMBUS OH 060526",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *FOX IN THE SNOW CAFE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ccfd49b852c740a533222b93",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 67.71,
+   "date": "2026-06-06",
+   "name": "COLUMBUS CLIPPERS HUNTINGTON PARK COLUMBUS OH 060626",
+   "iso_currency_code": "USD",
+   "merchant_name": "COLUMBUS CLIPPERS HUNTINGTON PARK COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_OTHER_ENTERTAINMENT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "5588810d0f60f9c8402332ca",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 21.4,
+   "date": "2026-06-13",
+   "name": "KATALINAS CAFE COLUMBUS OH 061326",
+   "iso_currency_code": "USD",
+   "merchant_name": "KATALINAS CAFE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "2de2044288e5a1deff5db6cc",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 42.14,
+   "date": "2026-06-19",
+   "name": "THE HOME DEPOT #3803 COLUMBUS OH 061926",
+   "iso_currency_code": "USD",
+   "merchant_name": "THE HOME DEPOT #3803 COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "HOME_IMPROVEMENT",
+    "detailed": "HOME_IMPROVEMENT_HARDWARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a3c9d0d0c1d5c50116fc6272",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 27.9,
+   "date": "2026-06-27",
+   "name": "ENAS CARIBBEAN KITCHEN COLUMBUS OH 062726",
+   "iso_currency_code": "USD",
+   "merchant_name": "ENAS CARIBBEAN KITCHEN COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0f249b2396018731ac02dfc1",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 6.95,
+   "date": "2026-07-03",
+   "name": "STAUFS COFFEE ROASTERS COLUMBUS OH 070326",
+   "iso_currency_code": "USD",
+   "merchant_name": "STAUFS COFFEE ROASTERS COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ec644dcca0954319b752c8b7",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 240.0,
+   "date": "2026-07-11",
+   "name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH 071126",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "16478268a28027103c01df56",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 32.98,
+   "date": "2026-07-17",
+   "name": "AMC LENNOX TOWN CENTER 24 COLUMBUS OH 071726",
+   "iso_currency_code": "USD",
+   "merchant_name": "AMC LENNOX TOWN CENTER 24 COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_TV_AND_MOVIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "701288347283c44be5e1b703",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 36.75,
+   "date": "2026-07-18",
+   "name": "BABCIAS KITCHEN COLUMBUS OH 071826",
+   "iso_currency_code": "USD",
+   "merchant_name": "BABCIAS KITCHEN COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "06148b86f6e5dbc90ea377c0",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 19.6,
+   "date": "2026-07-24",
+   "name": "DIRTY FRANKS HOT DOG PALACE COLUMBUS OH 072426",
+   "iso_currency_code": "USD",
+   "merchant_name": "DIRTY FRANKS HOT DOG PALACE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "4988cce73b334824950c9a3b",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 124.0,
+   "date": "2026-07-25",
+   "name": "COLUMBUS CREW LOWER.COM FIELD COLUMBUS OH 072526",
+   "iso_currency_code": "USD",
+   "merchant_name": "COLUMBUS CREW LOWER.COM FIELD COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_OTHER_ENTERTAINMENT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "03b14d2f8052430d3498568e",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 6.25,
+   "date": "2026-07-26",
+   "name": "SQ *KAFE KEROUAC COLUMBUS OH 072626",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *KAFE KEROUAC COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "9a85983849e9ecc64914fde4",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 167.12,
+   "date": "2026-08-01",
+   "name": "IKEA COLUMBUS OH 080126",
+   "iso_currency_code": "USD",
+   "merchant_name": "IKEA COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "HOME_IMPROVEMENT",
+    "detailed": "HOME_IMPROVEMENT_OTHER_HOME_IMPROVEMENT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "a6818ff7287efd8573bd657f",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 11.4,
+   "date": "2026-08-07",
+   "name": "SQ *FOX IN THE SNOW CAFE COLUMBUS OH 080726",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *FOX IN THE SNOW CAFE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "1d4321515b1517d84ee8419f",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 116.43,
+   "date": "2026-08-08",
+   "name": "TARGET T-1885 COLUMBUS OH 080826",
+   "iso_currency_code": "USD",
+   "merchant_name": "TARGET T-1885 COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "6f60f808aec45da79311c0ff",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 28.1,
+   "date": "2026-08-15",
+   "name": "TST* HOUND DOGS THREE DEGREE COLUMBUS OH 081526",
+   "iso_currency_code": "USD",
+   "merchant_name": "TST* HOUND DOGS THREE DEGREE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "ddffe6aa52cb6c1db1ca02c1",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 19.85,
+   "date": "2026-08-21",
+   "name": "KATALINAS CAFE COLUMBUS OH 082126",
+   "iso_currency_code": "USD",
+   "merchant_name": "KATALINAS CAFE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ddc296a79037fb65c2aef80e",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 18.48,
+   "date": "2026-08-22",
+   "name": "CVS/PHARMACY #06118 COLUMBUS OH 082226",
+   "iso_currency_code": "USD",
+   "merchant_name": "CVS/PHARMACY #06118 COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "MEDICAL",
+    "detailed": "MEDICAL_PHARMACIES_AND_SUPPLEMENTS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5a53b1e508d18af8f1d9dfad",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 24.3,
+   "date": "2026-08-30",
+   "name": "LAVASH CAFE COLUMBUS OH 083026",
+   "iso_currency_code": "USD",
+   "merchant_name": "LAVASH CAFE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0484898f0e9bfa725a76556b",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 6.8,
+   "date": "2026-09-05",
+   "name": "SQ *COLINS COFFEE COLUMBUS OH 090526",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *COLINS COFFEE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "aeb4102fe66d54a8677e5d78",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 129.0,
+   "date": "2026-09-12",
+   "name": "COLUMBUS CREW LOWER.COM FIELD COLUMBUS OH 091226",
+   "iso_currency_code": "USD",
+   "merchant_name": "COLUMBUS CREW LOWER.COM FIELD COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_OTHER_ENTERTAINMENT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "1a80c6c0683037a63f57952b",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 26.75,
+   "date": "2026-09-18",
+   "name": "ENAS CARIBBEAN KITCHEN COLUMBUS OH 091826",
+   "iso_currency_code": "USD",
+   "merchant_name": "ENAS CARIBBEAN KITCHEN COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f3c9132b8e1a9e44f7fd5190",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 34.99,
+   "date": "2026-09-25",
+   "name": "DICK'S SPORTING GOODS #1102 COLUMBUS OH 092526",
+   "iso_currency_code": "USD",
+   "merchant_name": "DICK'S SPORTING GOODS #1102 COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "84ba184c4c888d646bb93a18",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 7.15,
+   "date": "2026-09-26",
+   "name": "STAUFS COFFEE ROASTERS COLUMBUS OH 092626",
+   "iso_currency_code": "USD",
+   "merchant_name": "STAUFS COFFEE ROASTERS COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "37e2729bce5e786b144d515b",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 6.4,
+   "date": "2026-10-02",
+   "name": "SQ *KAFE KEROUAC COLUMBUS OH 100226",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *KAFE KEROUAC COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "13915553fc8aee4fb9a8bc9c",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 82.3,
+   "date": "2026-10-03",
+   "name": "EMBER & RYE COLUMBUS OH 100326",
+   "iso_currency_code": "USD",
+   "merchant_name": "EMBER & RYE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "85c0a5eac9e32340113212d3",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 29.45,
+   "date": "2026-10-10",
+   "name": "BABCIAS KITCHEN COLUMBUS OH 101026",
+   "iso_currency_code": "USD",
+   "merchant_name": "BABCIAS KITCHEN COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5a040ae7ff54e6d6e76735f7",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 10.25,
+   "date": "2026-10-16",
+   "name": "SQ *FOX IN THE SNOW CAFE COLUMBUS OH 101626",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *FOX IN THE SNOW CAFE COLUMBUS OH",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "90134b9d322b189d0e24390a",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-10-18",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 101826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c480a38fb8a2b745c31f0c0d",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-04-24",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 042426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d598346ca5b080074c4b6a32",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-05-08",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 050826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "695feaf208b91265ed4b8897",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-05-22",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 052226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7aa2eeded2277198d2d00bf1",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-06-05",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 060526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0cb12b6073aca17abaf857a4",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-06-19",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 061926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ce63e21f20ff4a73253de229",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-07-03",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 070326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4e6f6d366303c3c103fbd4ee",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-07-17",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 071726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "03c26b6cb038568f5dcfb72a",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-07-31",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 073126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b9addde8a75b3e01920e6506",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-08-14",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 081426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c02d438a8ee208982c40874d",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-08-28",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 082826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f73def038d4f4f662e3b95a3",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-09-11",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 091126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "653fb8d084693694b943faf8",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-09-25",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 092526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4e7be4e51057df637d4d838f",
+   "account_id": "acc_b55dfa882dce2003a96f",
+   "amount": -150.0,
+   "date": "2026-10-09",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 100926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a4c0e91b7d35f6820c1e6a48",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 150.0,
+   "date": "2026-10-18",
+   "name": "ONLINE TRANSFER TO SAVINGS ..6157 101826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Online Transfer to Savings ..6157",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d990dd984ee1bc292cc86cd4",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 412.0,
+   "date": "2026-05-05",
+   "name": "SCIOTO CC SPRING 2026 PAYMENT PLAN 050526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Scioto CC Spring 2026 Payment Plan",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "b6e8cd67b5b50c33d6b8d9db",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 412.0,
+   "date": "2026-06-05",
+   "name": "SCIOTO CC SPRING 2026 PAYMENT PLAN 060526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Scioto CC Spring 2026 Payment Plan",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "987b4c48bef22fd47302c956",
+   "account_id": "acc_27183062c795ee349f87",
+   "amount": 412.0,
+   "date": "2026-07-06",
+   "name": "SCIOTO CC SPRING 2026 PAYMENT PLAN 070626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Scioto CC Spring 2026 Payment Plan",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  }
+ ],
+ "transaction_changes": [],
+ "recurring_streams": [],
+ "credit_liabilities": [],
+ "mortgage_liabilities": [],
+ "student_liabilities": [],
+ "securities": [],
+ "holdings": [],
+ "investment_transactions": []
+}

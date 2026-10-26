@@ -1,0 +1,1694 @@
+{
+ "users": [
+  {
+   "id": "fbu_1201",
+   "email": "kliu.oakpark@gmail.com",
+   "name": "Kevin Liu",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1202",
+    "fbu_1203",
+    "fbu_1205",
+    "fbu_1206",
+    "fbu_1207",
+    "fbu_1208",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1202",
+   "email": "rliu.pe@comcast.net",
+   "name": "Richard Liu",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1201",
+    "fbu_1203",
+    "fbu_1206",
+    "fbu_1215",
+    "fbu_1220",
+    "fbu_1222",
+    "fbu_1225",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1203",
+   "email": "lily.wong.sj@gmail.com",
+   "name": "Lily Wong",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1201",
+    "fbu_1202",
+    "fbu_1204",
+    "fbu_1205",
+    "fbu_1219",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1204",
+   "email": "dwong.sanjose@gmail.com",
+   "name": "David Wong",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1203",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1205",
+   "email": "emwong.sea@gmail.com",
+   "name": "Emily Wong",
+   "visibility": "public",
+   "friend_ids": [
+    "fbu_1201",
+    "fbu_1203",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1206",
+   "email": "mike.liu.dg@gmail.com",
+   "name": "Michael Liu",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1201",
+    "fbu_1202",
+    "fbu_1207",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1207",
+   "email": "susan.liu.dg@gmail.com",
+   "name": "Susan Liu",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1201",
+    "fbu_1206",
+    "fbu_1208",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1208",
+   "email": "drew.liu312@gmail.com",
+   "name": "Andrew Liu",
+   "visibility": "public",
+   "friend_ids": [
+    "fbu_1201",
+    "fbu_1207",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1209",
+   "email": "denise.harmon.rph@gmail.com",
+   "name": "Denise Harmon",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1210",
+    "fbu_1211",
+    "fbu_1212",
+    "fbu_1213",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1210",
+   "email": "anita.desai.pharmd@gmail.com",
+   "name": "Anita Desai",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1209",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1211",
+   "email": "gloria.ramos63@yahoo.com",
+   "name": "Gloria Ramos",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1209",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1212",
+   "email": "tbrennan.retired@comcast.net",
+   "name": "Tom Brennan",
+   "visibility": "public",
+   "friend_ids": [
+    "fbu_1209",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1213",
+   "email": "rachel.ostrowski@outlook.com",
+   "name": "Rachel Ostrowski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1209",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1214",
+   "email": "barb.hendricks@comcast.net",
+   "name": "Barb Hendricks",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1215",
+    "fbu_1216",
+    "fbu_1224",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1215",
+   "email": "jhendricks.npv@comcast.net",
+   "name": "Jim Hendricks",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1202",
+    "fbu_1214",
+    "fbu_1225",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1216",
+   "email": "carol.yee.npv@gmail.com",
+   "name": "Carol Yee",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1214",
+    "fbu_1217",
+    "fbu_1218",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1217",
+   "email": "lindapark55@yahoo.com",
+   "name": "Linda Park",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1216",
+    "fbu_1218",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1218",
+   "email": "maychow.il@gmail.com",
+   "name": "May Chow",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1216",
+    "fbu_1217",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1219",
+   "email": "patty.sullivan.mke@gmail.com",
+   "name": "Patty Sullivan",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1203",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1220",
+   "email": "ray.mazur.pe@gmail.com",
+   "name": "Ray Mazur",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1202",
+    "fbu_1221",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1221",
+   "email": "joanne.mazur@att.net",
+   "name": "Joanne Mazur",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1220",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1222",
+   "email": "stevekim.npv@gmail.com",
+   "name": "Steve Kim",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1202",
+    "fbu_1223",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1223",
+   "email": "dianekim.npv@gmail.com",
+   "name": "Diane Kim",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1222",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1224",
+   "email": "peggy.lund@comcast.net",
+   "name": "Peggy Lund",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1214",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1225",
+   "email": "ken.yamada.golf@gmail.com",
+   "name": "Ken Yamada",
+   "visibility": "public",
+   "friend_ids": [
+    "fbu_1202",
+    "fbu_1215",
+    "fbu_1001",
+    "fb_u_helenliu_naperville_086f91"
+   ],
+   "group_ids": [
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1001",
+   "email": "grace.liu@lakeshorefreight.com",
+   "name": "Grace Liu",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1210",
+    "fbu_1214",
+    "fb_u_brian_omalley28_c73dc8",
+    "fbu_1216",
+    "fbu_1209",
+    "fb_u_devon_clarke_a17eb6",
+    "fbu_1223",
+    "fbu_1208",
+    "fbu_1204",
+    "fbu_1205",
+    "fb_u_events_da618b",
+    "fb_u_frank_kowalczyk43_c97eac",
+    "fbu_1211",
+    "fb_u_gusantonopoulos_87ba8b",
+    "fb_u_hannah_becker58_785472",
+    "fb_u_helenliu_naperville_086f91",
+    "fb_u_jess_moreno_design_51d9ac",
+    "fbu_1215",
+    "fbu_1221",
+    "fbu_1225",
+    "fbu_1201",
+    "fb_u_larsen_ingrid_137e01",
+    "fbu_1203",
+    "fbu_1217",
+    "fb_u_marisol_ortega48_6d813c",
+    "fb_u_martin_keane_2d17e4",
+    "fbu_1218",
+    "fb_u_mhuang27_a888f5",
+    "fbu_1206",
+    "fb_u_nokafor_4e7660",
+    "fbu_1219",
+    "fbu_1224",
+    "fb_u_priya_raman_a27e22",
+    "fbu_1213",
+    "fbu_1220",
+    "fbu_1202",
+    "fb_u_rpierce_fe6ebd",
+    "fb_u_ruth_abrams_8da7a4",
+    "fb_u_sam_whitfield_72df86",
+    "fbu_1222",
+    "fbu_1207",
+    "fbu_1212",
+    "fb_u_walterschmid_22b9c0"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors",
+    "fb_group_leavitt_court_condo_owners_4815_n_leavit",
+    "fbgr_351"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_hannah_becker58_785472",
+   "email": "hannah.becker58@yahoo.com",
+   "name": "Hannah Becker",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors",
+    "fb_group_leavitt_court_condo_owners_4815_n_leavit"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_walterschmid_22b9c0",
+   "email": "walterschmid@gmail.com",
+   "name": "Walter Schmid",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_marisol_ortega48_6d813c",
+   "email": "marisol.ortega48@gmail.com",
+   "name": "Marisol Ortega",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors",
+    "fb_group_leavitt_court_condo_owners_4815_n_leavit"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_frank_kowalczyk43_c97eac",
+   "email": "frank.kowalczyk43@gmail.com",
+   "name": "Frank Kowalczyk",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_brian_omalley28_c73dc8",
+   "email": "brian.omalley28@icloud.com",
+   "name": "Brian O'Malley",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_larsen_ingrid_137e01",
+   "email": "larsen.ingrid@outlook.com",
+   "name": "Ingrid Larsen",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors",
+    "fb_group_leavitt_court_condo_owners_4815_n_leavit"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_mhuang27_a888f5",
+   "email": "mhuang27@gmail.com",
+   "name": "Mei Huang",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gusantonopoulos_87ba8b",
+   "email": "gusantonopoulos@yahoo.com",
+   "name": "Gus Antonopoulos",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ruth_abrams_8da7a4",
+   "email": "ruth.abrams@gmail.com",
+   "name": "Ruth Abrams",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_lincoln_square_ravenswood_neighbors",
+    "fb_group_leavitt_court_condo_owners_4815_n_leavit"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_devon_clarke_a17eb6",
+   "email": "devon.clarke@lakeshorefreight.com",
+   "name": "Devon Clarke",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_events_da618b",
+   "email": "nora.becker@bellwethertavern.com",
+   "name": "Nora Becker",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_helenliu_naperville_086f91",
+   "email": "helenliu.naperville@gmail.com",
+   "name": "Helen Liu",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001",
+    "fbu_1201",
+    "fbu_1202",
+    "fbu_1203",
+    "fbu_1204",
+    "fbu_1205",
+    "fbu_1206",
+    "fbu_1207",
+    "fbu_1208",
+    "fbu_1209",
+    "fbu_1210",
+    "fbu_1211",
+    "fbu_1212",
+    "fbu_1213",
+    "fbu_1214",
+    "fbu_1215",
+    "fbu_1216",
+    "fbu_1217",
+    "fbu_1218",
+    "fbu_1219",
+    "fbu_1220",
+    "fbu_1221",
+    "fbu_1222",
+    "fbu_1223",
+    "fbu_1224",
+    "fbu_1225"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_jess_moreno_design_51d9ac",
+   "email": "jess.moreno.design@gmail.com",
+   "name": "Jess Moreno",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_martin_keane_2d17e4",
+   "email": "martin.keane@lakeshorefreight.com",
+   "name": "Martin Keane",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_nokafor_4e7660",
+   "email": "nokafor@hollinsgrant.com",
+   "name": "Nadia Okafor",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_priya_raman_a27e22",
+   "email": "priya.raman@lakeshorefreight.com",
+   "name": "Priya Raman",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rpierce_fe6ebd",
+   "email": "rpierce@midwestfuelpartners.com",
+   "name": "Rhonda Pierce",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_sam_whitfield_72df86",
+   "email": "sam.whitfield@lakeshorefreight.com",
+   "name": "Sam Whitfield",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_margaret_sokol73_73c6ce",
+   "email": "margaret.sokol73@outlook.com",
+   "name": "Margaret Sokol",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_hart_olivia_7c74aa",
+   "email": "hart.olivia@gmail.com",
+   "name": "Olivia Hart",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_bridget_kelleher_f3cf3e",
+   "email": "bridget.kelleher@icloud.com",
+   "name": "Bridget Kelleher",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_wisniewski_tomasz_51fda5",
+   "email": "wisniewski.tomasz@outlook.com",
+   "name": "Tomasz Wisniewski",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_clairedubois_26c7aa",
+   "email": "clairedubois@gmail.com",
+   "name": "Claire Dubois",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_arthurbauer_e1b3b0",
+   "email": "arthurbauer@gmail.com",
+   "name": "Arthur Bauer",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_fatima_qureshi28_735022",
+   "email": "fatima.qureshi28@icloud.com",
+   "name": "Fatima Qureshi",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_marcusbell_da4892",
+   "email": "marcusbell@icloud.com",
+   "name": "Marcus Bell",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rosadelgado_24acf7",
+   "email": "rosadelgado@yahoo.com",
+   "name": "Rosa Delgado",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_greg_halvorsen88_dd3d31",
+   "email": "greg.halvorsen88@yahoo.com",
+   "name": "Greg Halvorsen",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_raj_malhotra_153767",
+   "email": "raj.malhotra@gmail.com",
+   "name": "Raj Malhotra",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_dorothyengel_497242",
+   "email": "dorothyengel@icloud.com",
+   "name": "Dorothy Engel",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_lau_henry_ce9851",
+   "email": "lau.henry@gmail.com",
+   "name": "Henry Lau",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_afitzgerald27_5d8dce",
+   "email": "afitzgerald27@gmail.com",
+   "name": "Amelia Fitzgerald",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_benedetti_lucia_0336be",
+   "email": "benedetti.lucia@gmail.com",
+   "name": "Lucia Benedetti",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_megan_schultz18_6e513d",
+   "email": "megan.schultz18@icloud.com",
+   "name": "Megan Schultz",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_paulrichter_c49687",
+   "email": "paulrichter@outlook.com",
+   "name": "Paul Richter",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_wen_zhao93_4f7027",
+   "email": "wen.zhao93@yahoo.com",
+   "name": "Wen Zhao",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_stanleynowak_7fcfb6",
+   "email": "stanleynowak@gmail.com",
+   "name": "Stanley Nowak",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_iromero67_33deee",
+   "email": "iromero67@gmail.com",
+   "name": "Isabel Romero",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_lorraine_keller_a82973",
+   "email": "lorraine.keller@gmail.com",
+   "name": "Lorraine Keller",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_shaunariley_4745cc",
+   "email": "shaunariley@yahoo.com",
+   "name": "Shauna Riley",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_haroldjensen_ffff65",
+   "email": "haroldjensen@gmail.com",
+   "name": "Harold Jensen",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_sunitabhatt_3555f0",
+   "email": "sunitabhatt@outlook.com",
+   "name": "Sunita Bhatt",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_teresagallardo_6cd6a6",
+   "email": "teresagallardo@gmail.com",
+   "name": "Teresa Gallardo",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_marguerite_olsen93_cd2cda",
+   "email": "marguerite.olsen93@gmail.com",
+   "name": "Marguerite Olsen",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_kallas_dimitri_03e6f7",
+   "email": "kallas.dimitri@gmail.com",
+   "name": "Dimitri Kallas",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_klaus_weber98_35d982",
+   "email": "klaus.weber98@icloud.com",
+   "name": "Klaus Weber",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rosalindtate_81ba57",
+   "email": "rosalindtate@icloud.com",
+   "name": "Rosalind Tate",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_duszynski_hank_2c876e",
+   "email": "duszynski.hank@gmail.com",
+   "name": "Hank Duszynski",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_siddiqui_farah_c91e03",
+   "email": "siddiqui.farah@yahoo.com",
+   "name": "Farah Siddiqui",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gfitch47_8fd1c8",
+   "email": "gfitch47@gmail.com",
+   "name": "Gerald Fitch",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_viktor_horvath_9db47c",
+   "email": "viktor.horvath@outlook.com",
+   "name": "Viktor Horvath",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_sun_li38_7bb093",
+   "email": "sun.li38@outlook.com",
+   "name": "Sun Li",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_colleen_murtagh_3b8cdd",
+   "email": "colleen.murtagh@gmail.com",
+   "name": "Colleen Murtagh",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rebecca_szymanski78_9f36a6",
+   "email": "rebecca.szymanski78@gmail.com",
+   "name": "Rebecca Szymanski",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_meganthrockmorton_f9537d",
+   "email": "meganthrockmorton@yahoo.com",
+   "name": "Megan Throckmorton",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_billgorski_576bb7",
+   "email": "billgorski@gmail.com",
+   "name": "Bill Gorski",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_tomaszwierzbicki_e2984d",
+   "email": "tomaszwierzbicki@outlook.com",
+   "name": "Tomasz Wierzbicki",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_clundgren52_54369d",
+   "email": "clundgren52@icloud.com",
+   "name": "Craig Lundgren",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_paul_ostrander_d193b0",
+   "email": "paul.ostrander@icloud.com",
+   "name": "Paul Ostrander",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gretchen_albers73_45cce9",
+   "email": "gretchen.albers73@gmail.com",
+   "name": "Gretchen Albers",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_russo_antonio_349e65",
+   "email": "russo.antonio@gmail.com",
+   "name": "Antonio Russo",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_irene_kowal48_9db3d0",
+   "email": "irene.kowal48@gmail.com",
+   "name": "Irene Kowal",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_wendell_harris_763451",
+   "email": "wendell.harris@gmail.com",
+   "name": "Wendell Harris",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_bettina_lauer_2c1494",
+   "email": "bettina.lauer@gmail.com",
+   "name": "Bettina Lauer",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_nakamura_priscilla_785101",
+   "email": "nakamura.priscilla@icloud.com",
+   "name": "Priscilla Nakamura",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_whitcomb_lorraine_95d55f",
+   "email": "whitcomb.lorraine@outlook.com",
+   "name": "Lorraine Whitcomb",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_tanya_rasmussen58_46ce82",
+   "email": "tanya.rasmussen58@gmail.com",
+   "name": "Tanya Rasmussen",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  }
+ ],
+ "pages": [],
+ "groups": [
+  {
+   "id": "fbgr_351",
+   "name": "Helen's Retirement Surprise 🎉",
+   "visibility": "private",
+   "member_ids": [
+    "fbu_1001",
+    "fbu_1201",
+    "fbu_1202",
+    "fbu_1203",
+    "fbu_1204",
+    "fbu_1205",
+    "fbu_1206",
+    "fbu_1207",
+    "fbu_1208",
+    "fbu_1209",
+    "fbu_1210",
+    "fbu_1211",
+    "fbu_1212",
+    "fbu_1213",
+    "fbu_1214",
+    "fbu_1215",
+    "fbu_1216",
+    "fbu_1217",
+    "fbu_1218",
+    "fbu_1219",
+    "fbu_1222",
+    "fbu_1223",
+    "fbu_1224",
+    "fbu_1225"
+   ]
+  },
+  {
+   "id": "fb_group_lincoln_square_ravenswood_neighbors",
+   "name": "Lincoln Square & Ravenswood Neighbors",
+   "visibility": "public",
+   "member_ids": [
+    "fbu_1001",
+    "fb_u_brian_omalley28_c73dc8",
+    "fb_u_frank_kowalczyk43_c97eac",
+    "fb_u_gusantonopoulos_87ba8b",
+    "fb_u_hannah_becker58_785472",
+    "fb_u_larsen_ingrid_137e01",
+    "fb_u_marisol_ortega48_6d813c",
+    "fb_u_mhuang27_a888f5",
+    "fb_u_ruth_abrams_8da7a4",
+    "fb_u_walterschmid_22b9c0"
+   ]
+  },
+  {
+   "id": "fb_group_leavitt_court_condo_owners_4815_n_leavit",
+   "name": "Leavitt Court Condo Owners (4815 N. Leavitt)",
+   "visibility": "private",
+   "member_ids": [
+    "fbu_1001",
+    "fb_u_hannah_becker58_785472",
+    "fb_u_larsen_ingrid_137e01",
+    "fb_u_marisol_ortega48_6d813c",
+    "fb_u_ruth_abrams_8da7a4"
+   ]
+  }
+ ],
+ "posts": [
+  {
+   "id": "fbp_4161",
+   "author_id": "fb_u_helenliu_naperville_086f91",
+   "message": "My last two weeks at DuPage Riverside start Monday! I cleaned out my top drawer today and found the name badge from my very first week. 31 years of wonderful patients and the best outpatient pharmacy team anyone could ask for. I am going to miss you all 😊❤️",
+   "created_at": "2026-10-30T23:45:37Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fbp_4162",
+   "author_id": "fbu_1201",
+   "message": "heads up fam 🙃 mom just posted about her last 2 weeks at work. go ahead and congratulate her on it but nothing about the 12th, the tavern or aunt lily flying in. she reads every single comment lol",
+   "created_at": "2026-10-31T00:12:48Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4351",
+   "author_id": "fbu_1201",
+   "message": "ok everyone welcome!! this group is hidden so mom cant see it. her last day at dupage riverside is thurs 11/12 and we're surprising her that night at bellwether tavern in naperville, 7:30. she thinks its a quiet dinner w dad, gracie and me lol. please dont post about it on her page. grace and i are the admins, message either of us",
+   "created_at": "2026-09-29T01:04:37Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4352",
+   "author_id": "fbu_1203",
+   "message": "Count me in! Booking my flight from San Jose this week. My big sister is going to cry and I cannot wait.",
+   "created_at": "2026-09-30T02:12:51Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4353",
+   "author_id": "fbu_1209",
+   "message": "The outpatient pharmacy crew is in. Anita, Gloria, Rachel and I will be there, and we'll make sure she actually leaves on time that day.",
+   "created_at": "2026-10-01T18:22:09Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4354",
+   "author_id": "fbu_1201",
+   "message": "photo request!! im making a memory board for the party. send me any old pics of mom, work, trips, the 80s, anything lol. message me or post here by 10/25. thank u!!",
+   "created_at": "2026-10-11T01:30:44Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4355",
+   "author_id": "fbu_1214",
+   "message": "Kevin, I just messaged you the one from the 2009 block party when Helen's apple pie beat everyone on the street 😄",
+   "created_at": "2026-10-11T15:05:38Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4356",
+   "author_id": "fbu_1216",
+   "message": "Tuesday mahjong is coming! Linda, May and I promise not to say a word at the table this week.",
+   "created_at": "2026-10-15T00:40:17Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4357",
+   "author_id": "fbu_1001",
+   "message": "Sent Kevin the first batch of scans from my box of old prints. If anyone has photos from Mom's early years at the hospital, those would be wonderful for the board 😊",
+   "created_at": "2026-10-18T17:10:26Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4358",
+   "author_id": "fbu_1212",
+   "message": "Wouldn't miss it. I hired Helen in 1995 and she ran a tighter pharmacy than I ever did. My wife and I will both be there.",
+   "created_at": "2026-10-20T21:48:55Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4359",
+   "author_id": "fbu_1207",
+   "message": "Mike and I will be there, and Lily is staying with us that week. We'll bring her over together.",
+   "created_at": "2026-10-28T01:15:32Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fbp_4360",
+   "author_id": "fbu_1201",
+   "message": "rsvp count is at 26!! if u havent replied pls do by sun 11/8. grace is giving the restaurant our final number mon 11/9",
+   "created_at": "2026-10-30T11:14:16Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fbgr_351"
+  },
+  {
+   "id": "fb_post_85906c2863",
+   "author_id": "fbu_1001",
+   "message": "Book club tonight was a few doors up Leavitt, and somehow we spent more time on the lemon bars than on the book. Next month I promise to actually finish it before Tuesday 😊",
+   "created_at": "2026-05-27T02:40:52Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_41bf35a2fd",
+   "author_id": "fbu_1001",
+   "message": "Father's Day brunch out in Naperville at Mom and Dad's. Ken kept Dad on the golf course all morning, so he walked in to quiche, scallion pancakes and the whole family. Kevin and I were assigned dishes, as usual. Happy Father's Day, Dad ❤️",
+   "created_at": "2026-06-22T00:15:18Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_1c25cf94fd",
+   "author_id": "fbu_1223",
+   "message": "Thank you to everyone who stopped by for our Memorial Day BBQ! Steve made way too many ribs, so neighbors, come get leftovers tomorrow. 🇺🇸",
+   "created_at": "2026-05-26T02:40:22Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_05458dca07",
+   "author_id": "fbu_1207",
+   "message": "Still finding paper plates in the hedges this morning. What a fun afternoon yesterday with the whole family in our backyard. Mike says next year he's buying a bigger grill.",
+   "created_at": "2026-07-05T15:30:32Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_0de7b9e6e8",
+   "author_id": "fbu_1001",
+   "message": "Ten miles along the lakefront this morning, then iced coffee with Bri at The Coffee Studio on Clark. My legs are officially done for the day 😊",
+   "created_at": "2026-07-11T17:40:36Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_4e6b1f3fce",
+   "author_id": "fbu_1201",
+   "message": "spent my saturday at ikea schaumburg carrying a bookcase for my sister. payment was swedish meatballs. worth it honestly",
+   "created_at": "2026-07-18T22:45:19Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_fd90b148e9",
+   "author_id": "fbu_1001",
+   "message": "New bookcase is up! Kevin drove out to IKEA with me and carried the heavy box, and I did the allen key work. Only one leftover screw, which I am choosing not to think about.",
+   "created_at": "2026-07-19T01:10:49Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_040cc1b5d8",
+   "author_id": "fbu_1221",
+   "message": "So glad so many of you made it to our cookout today! Ray's ribs were gone in twenty minutes. Thanks for coming, everybody, and Grace, thank you for the wine 😊",
+   "created_at": "2026-07-20T01:30:08Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_285d900eb6",
+   "author_id": "fbu_1217",
+   "message": "Mahjong night at my place. Helen won three rounds in a row and May accused her of counting tiles. We will get her next Tuesday.",
+   "created_at": "2026-08-12T02:15:09Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_d28d1099b5",
+   "author_id": "fb_u_brian_omalley28_c73dc8",
+   "message": "Fall youth soccer at Welles Park: registration is open through the end of the month. Ages 6 to 12, practices on weekday evenings. I still need two more volunteer coaches, so message me if you can help!",
+   "created_at": "2026-08-15T14:00:44Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_lincoln_square_ravenswood_neighbors"
+  },
+  {
+   "id": "fb_post_aa9a449048",
+   "author_id": "fb_u_gusantonopoulos_87ba8b",
+   "message": "Too many tomatoes again this year. There's a box on my front steps on Leavitt, take what you want, no need to ask. Bring the box back if you can.",
+   "created_at": "2026-08-23T13:30:48Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_lincoln_square_ravenswood_neighbors"
+  },
+  {
+   "id": "fb_post_61988df79b",
+   "author_id": "fbu_1001",
+   "message": "Does anyone have a shoe repair place nearby they trust? My good work boots need new heels and I would rather stay in the neighborhood than go downtown. Thank you!",
+   "created_at": "2026-08-30T15:05:24Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_lincoln_square_ravenswood_neighbors"
+  },
+  {
+   "id": "fb_post_a5e45beca5",
+   "author_id": "fbu_1220",
+   "message": "Labor Day weekend means the smoker is running. Pork shoulder went on at 6 am. Joanne says I talk to it.",
+   "created_at": "2026-09-05T21:00:31Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_3ecb18f737",
+   "author_id": "fb_u_mhuang27_a888f5",
+   "message": "Picked up the last good peaches of the season at the farmers market this morning. The apple stand at the far end is starting to fill up too. fall is here!",
+   "created_at": "2026-09-15T19:00:56Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_lincoln_square_ravenswood_neighbors"
+  },
+  {
+   "id": "fb_post_d4f4ff0380",
+   "author_id": "fbu_1203",
+   "message": "Sunday afternoon phone call with my niece Grace, with David on the other line. That girl works too hard, but she still remembers every birthday in the family. Proud auntie ❤️",
+   "created_at": "2026-09-28T00:00:28Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_9aa3b330cc",
+   "author_id": "fb_u_larsen_ingrid_137e01",
+   "message": "Reminder: window washers will be at 4815 on Wednesday, October 14, starting at 8 am. Please close blinds and move anything off your sills and balconies. They will need access to the back stairwell all day.",
+   "created_at": "2026-10-13T00:00:55Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_leavitt_court_condo_owners_4815_n_leavit"
+  },
+  {
+   "id": "fb_post_668f5d85f1",
+   "author_id": "fbu_1001",
+   "message": "Came home to clean windows for the first time in a year. Thank you Ingrid for setting it up ✅",
+   "created_at": "2026-10-14T23:30:49Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_leavitt_court_condo_owners_4815_n_leavit"
+  },
+  {
+   "id": "fb_post_5f62c5a7c0",
+   "author_id": "fbu_1001",
+   "message": "Spent the day at our Gary, Indiana cross-dock for work. Hard hat, safety vest, and a lot of forklifts. Very different from my usual view of the Loop from the 9th floor, and I loved it.",
+   "created_at": "2026-10-16T00:30:38Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_546eddc481",
+   "author_id": "fb_u_marisol_ortega48_6d813c",
+   "message": "The draft 2027 budget is ready for owners to review. Ingrid will send the PDF by email this week. Please hold your questions for the annual meeting, and we'll announce the date soon.",
+   "created_at": "2026-10-21T00:30:11Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_leavitt_court_condo_owners_4815_n_leavit"
+  },
+  {
+   "id": "fb_post_b88f8748f7",
+   "author_id": "fb_u_walterschmid_22b9c0",
+   "message": "Leaves are coming down fast on the east side of Leavitt. If you rake into the street, please keep the storm drains clear. Mine backed up last fall and it was a mess.",
+   "created_at": "2026-10-22T22:30:37Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_lincoln_square_ravenswood_neighbors"
+  },
+  {
+   "id": "fb_post_26d42e0a4e",
+   "author_id": "fb_u_ruth_abrams_8da7a4",
+   "message": "Whoever carried my grocery bags up to 4B on Wednesday evening, thank you. My knees thank you too.",
+   "created_at": "2026-10-23T16:15:03Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_leavitt_court_condo_owners_4815_n_leavit"
+  },
+  {
+   "id": "fb_post_c6357456d9",
+   "author_id": "fb_u_frank_kowalczyk43_c97eac",
+   "message": "Put my old electric snow thrower up on Marketplace. Works fine, I just don't need it now that my son set me up with a plowing service. Neighbors get first dibs.",
+   "created_at": "2026-10-24T15:30:08Z",
+   "visibility": "group",
+   "page_id": null,
+   "group_id": "fb_group_lincoln_square_ravenswood_neighbors"
+  },
+  {
+   "id": "fb_post_9306faa6d1",
+   "author_id": "fbu_1214",
+   "message": "Trick-or-treaters are already out on our street in Naperville! Jim is on candy duty and has eaten half the peanut butter cups himself. 🎃",
+   "created_at": "2026-10-31T22:30:28Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_a32409cdfe",
+   "author_id": "fbu_1001",
+   "message": "Clocks went back last night, so I used the extra hour for a slow loop around Welles Park. Month-end close starts tomorrow, so this is my quiet morning for the week ☕",
+   "created_at": "2026-11-01T17:20:07Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  },
+  {
+   "id": "fb_post_702a0d8b2d",
+   "author_id": "fbu_1210",
+   "message": "First day of Helen Liu's last two weeks at DuPage Riverside. I have worked next to her at the outpatient counter for years, and I still don't know how she remembers every patient's name. We are going to miss you, Helen.",
+   "created_at": "2026-11-03T01:30:34Z",
+   "visibility": "friends",
+   "page_id": null,
+   "group_id": null
+  }
+ ],
+ "marketplace_listings": [
+  {
+   "id": "fb_listing_f638adda76",
+   "seller_id": "fbu_1001",
+   "title": "Solid wood 5-shelf bookcase, walnut finish",
+   "price": 40.0,
+   "created_at": "2026-07-19T14:45:38Z",
+   "status": "sold",
+   "visibility": "public",
+   "description": "Replaced it with a bigger one, so this needs a new home. About 30 inches wide and 6 feet tall. A few small scuffs on one side, shelves are sturdy. Pickup in Lincoln Square near Leavitt and Lawrence. You'll need two people and a car it fits in.",
+   "category": "Furniture",
+   "currency": "USD"
+  },
+  {
+   "id": "fb_listing_508fb29e78",
+   "seller_id": "fb_u_frank_kowalczyk43_c97eac",
+   "title": "Electric snow thrower, corded, 18 inch",
+   "price": 75.0,
+   "created_at": "2026-10-24T15:05:29Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Used about four winters, starts every time. Clears sidewalks and short driveways fine, not great on heavy wet snow. Comes with a 50 ft outdoor extension cord. Cash only, pickup on Leavitt.",
+   "category": "Garden & Outdoor",
+   "currency": "USD"
+  }
+ ],
+ "saved_items": [
+  {
+   "id": "fbsv_6162",
+   "user_id": "fbu_1001",
+   "item_type": "post",
+   "item_id": "fbp_4161",
+   "created_at": "2026-10-31T02:17:09Z"
+  },
+  {
+   "id": "fbsv_6351",
+   "user_id": "fbu_1225",
+   "item_type": "post",
+   "item_id": "fbp_4354",
+   "created_at": "2026-10-11T02:02:13Z"
+  },
+  {
+   "id": "fbsv_6352",
+   "user_id": "fbu_1217",
+   "item_type": "post",
+   "item_id": "fbp_4360",
+   "created_at": "2026-10-30T11:41:58Z"
+  }
+ ],
+ "current_user_id": "fbu_1001"
+}

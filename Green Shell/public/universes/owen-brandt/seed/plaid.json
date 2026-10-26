@@ -1,0 +1,5007 @@
+{
+ "users": [
+  {
+   "id": "plaid_user_4d8db731863a46aa",
+   "email": "owen.brandt.writes@gmail.com"
+  }
+ ],
+ "items": [
+  {
+   "id": "item_7af7fd71922187cb",
+   "user_id": "plaid_user_4d8db731863a46aa",
+   "institution_id": "ins_23e35df6",
+   "institution_name": "Nicollet Federal Credit Union",
+   "products": [
+    "transactions"
+   ]
+  },
+  {
+   "id": "item_86d6a2f57504647e",
+   "user_id": "plaid_user_4d8db731863a46aa",
+   "institution_id": "ins_8932d772",
+   "institution_name": "Fidelity Investments",
+   "products": [
+    "transactions"
+   ]
+  }
+ ],
+ "accounts": [
+  {
+   "id": "acc_b0273207578ddc9df93b",
+   "item_id": "item_7af7fd71922187cb",
+   "name": "Nicollet Federal Credit Union checking",
+   "official_name": "Nicollet Federal Credit Union checking",
+   "type": "depository",
+   "subtype": "checking",
+   "mask": "5512",
+   "balances": {
+    "current": 9412.36,
+    "iso_currency_code": "USD",
+    "available": 9412.36
+   },
+   "holder_category": "personal"
+  },
+  {
+   "id": "acc_a387e28e973b5c819c30",
+   "item_id": "item_7af7fd71922187cb",
+   "name": "Nicollet Federal Credit Union savings",
+   "official_name": "Nicollet Federal Credit Union savings",
+   "type": "depository",
+   "subtype": "savings",
+   "mask": "5530",
+   "balances": {
+    "current": 24860.15,
+    "iso_currency_code": "USD",
+    "available": 24860.15
+   },
+   "holder_category": "personal"
+  },
+  {
+   "id": "acc_52d76428f8838d397880",
+   "item_id": "item_7af7fd71922187cb",
+   "name": "Nicollet Federal Credit Union credit card",
+   "official_name": "Nicollet Federal Credit Union credit card",
+   "type": "credit",
+   "subtype": "credit card",
+   "mask": "0047",
+   "balances": {
+    "current": 2396.18,
+    "iso_currency_code": "USD"
+   },
+   "holder_category": "personal"
+  },
+  {
+   "id": "acc_b4a47645bc0a1832b04b",
+   "item_id": "item_86d6a2f57504647e",
+   "name": "Fidelity Investments ira",
+   "official_name": "Fidelity Investments ira",
+   "type": "investment",
+   "subtype": "ira",
+   "mask": "4419",
+   "balances": {
+    "current": 214850.0,
+    "iso_currency_code": "USD"
+   },
+   "holder_category": "personal"
+  }
+ ],
+ "transactions": [
+  {
+   "id": "txn_f05b3d68",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1500.0,
+   "date": "2026-05-01",
+   "name": "NORTH CURRENT MEDIA LLC ACH",
+   "iso_currency_code": "",
+   "merchant_name": "North Current Media",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_6b24d857",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 375.0,
+   "date": "2026-05-01",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_12c94f6e",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -375.0,
+   "date": "2026-05-01",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9f1372b5",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 2400.0,
+   "date": "2026-05-01",
+   "name": "EXT TRANSFER TO JOINT HOUSEHOLD ACCT",
+   "iso_currency_code": "",
+   "merchant_name": "Joint household account (Ingrid's credit union)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c3a1d86e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -2800.0,
+   "date": "2026-05-14",
+   "name": "GREAT LAKES DISPATCH ACH PMT",
+   "iso_currency_code": "",
+   "merchant_name": "Great Lakes Dispatch",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_903f6b8a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 700.0,
+   "date": "2026-05-14",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4e58c271",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -700.0,
+   "date": "2026-05-14",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_2d07b95e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -900.0,
+   "date": "2026-05-28",
+   "name": "PRAIRIE WIRE ACH PAYMENT",
+   "iso_currency_code": "",
+   "merchant_name": "Prairie Wire",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_7f62d093",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 225.0,
+   "date": "2026-05-28",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b3e17c5a",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -225.0,
+   "date": "2026-05-28",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_0b7f4316",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1500.0,
+   "date": "2026-06-01",
+   "name": "NORTH CURRENT MEDIA LLC ACH",
+   "iso_currency_code": "",
+   "merchant_name": "North Current Media",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_a8d2961e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 375.0,
+   "date": "2026-06-01",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_7a03c58e",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -375.0,
+   "date": "2026-06-01",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1d95b07a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 2400.0,
+   "date": "2026-06-01",
+   "name": "EXT TRANSFER TO JOINT HOUSEHOLD ACCT",
+   "iso_currency_code": "",
+   "merchant_name": "Joint household account (Ingrid's credit union)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c4f70358",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 60.0,
+   "date": "2026-06-08",
+   "name": "SEJ MEMBERSHIP DUES",
+   "iso_currency_code": "",
+   "merchant_name": "Society of Environmental Journalists",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_3b62d08f",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": 3050.0,
+   "date": "2026-06-15",
+   "name": "IRS USATAXPYMT",
+   "iso_currency_code": "",
+   "merchant_name": "IRS",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "GOVERNMENT_AND_NON_PROFIT",
+    "detailed": "GOVERNMENT_AND_NON_PROFIT_TAX_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f0b9137d",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": 780.0,
+   "date": "2026-06-15",
+   "name": "MN DEPT OF REVENUE EST TAX",
+   "iso_currency_code": "",
+   "merchant_name": "Minnesota Department of Revenue",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "GOVERNMENT_AND_NON_PROFIT",
+    "detailed": "GOVERNMENT_AND_NON_PROFIT_TAX_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_2c6d903b",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -3200.0,
+   "date": "2026-06-19",
+   "name": "NORTH CURRENT MEDIA LLC ACH",
+   "iso_currency_code": "",
+   "merchant_name": "North Current Media",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_e0b1845c",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 800.0,
+   "date": "2026-06-19",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a4d6f029",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -800.0,
+   "date": "2026-06-19",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e5b1069a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1150.0,
+   "date": "2026-06-30",
+   "name": "PRAIRIE WIRE ACH PAYMENT",
+   "iso_currency_code": "",
+   "merchant_name": "Prairie Wire",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_6c9f207e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 287.5,
+   "date": "2026-06-30",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d4a6183b",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -287.5,
+   "date": "2026-06-30",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4a7d906c",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1500.0,
+   "date": "2026-07-01",
+   "name": "NORTH CURRENT MEDIA LLC ACH",
+   "iso_currency_code": "",
+   "merchant_name": "North Current Media",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_2f5c193a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 375.0,
+   "date": "2026-07-01",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d6e8b25f",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -375.0,
+   "date": "2026-07-01",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b8d2715e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 2400.0,
+   "date": "2026-07-01",
+   "name": "EXT TRANSFER TO JOINT HOUSEHOLD ACCT",
+   "iso_currency_code": "",
+   "merchant_name": "Joint household account (Ingrid's credit union)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c1f6308d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1400.0,
+   "date": "2026-07-15",
+   "name": "PRAIRIE WIRE ACH PAYMENT",
+   "iso_currency_code": "",
+   "merchant_name": "Prairie Wire",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_9e3b647c",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 350.0,
+   "date": "2026-07-15",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a5d0927b",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -350.0,
+   "date": "2026-07-15",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8b1d649a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 850.0,
+   "date": "2026-07-22",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f4b7316e",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -850.0,
+   "date": "2026-07-22",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e2b5093d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1500.0,
+   "date": "2026-08-03",
+   "name": "NORTH CURRENT MEDIA LLC ACH",
+   "iso_currency_code": "",
+   "merchant_name": "North Current Media",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_a1f4c78e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 375.0,
+   "date": "2026-08-03",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_e9d6215c",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -375.0,
+   "date": "2026-08-03",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1c8a473e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 2400.0,
+   "date": "2026-08-03",
+   "name": "EXT TRANSFER TO JOINT HOUSEHOLD ACCT",
+   "iso_currency_code": "",
+   "merchant_name": "Joint household account (Ingrid's credit union)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b6d9304f",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -850.0,
+   "date": "2026-08-12",
+   "name": "PRAIRIE WIRE ACH PAYMENT",
+   "iso_currency_code": "",
+   "merchant_name": "Prairie Wire",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_4a7d521c",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 212.5,
+   "date": "2026-08-12",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8f1c906d",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -212.5,
+   "date": "2026-08-12",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d5b8147a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -6500.0,
+   "date": "2026-08-27",
+   "name": "FIELD AND FLOW ACH CREDIT",
+   "iso_currency_code": "",
+   "merchant_name": "Field & Flow",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_6e3b729c",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 1625.0,
+   "date": "2026-08-27",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a2d6083e",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -1625.0,
+   "date": "2026-08-27",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f0b4527c",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1500.0,
+   "date": "2026-09-01",
+   "name": "NORTH CURRENT MEDIA LLC ACH",
+   "iso_currency_code": "",
+   "merchant_name": "North Current Media",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_7a2c835d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 375.0,
+   "date": "2026-09-01",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f3d7961b",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -375.0,
+   "date": "2026-09-01",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_1b4d208f",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 2400.0,
+   "date": "2026-09-01",
+   "name": "EXT TRANSFER TO JOINT HOUSEHOLD ACCT",
+   "iso_currency_code": "",
+   "merchant_name": "Joint household account (Ingrid's credit union)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a6c9357e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1300.0,
+   "date": "2026-09-09",
+   "name": "PRAIRIE WIRE ACH PAYMENT",
+   "iso_currency_code": "",
+   "merchant_name": "Prairie Wire",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_8d3f702a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 325.0,
+   "date": "2026-09-09",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_5e8c194f",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -325.0,
+   "date": "2026-09-09",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_f1b6480d",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": 3050.0,
+   "date": "2026-09-15",
+   "name": "IRS USATAXPYMT",
+   "iso_currency_code": "",
+   "merchant_name": "IRS",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "GOVERNMENT_AND_NON_PROFIT",
+    "detailed": "GOVERNMENT_AND_NON_PROFIT_TAX_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_2e5c613b",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": 780.0,
+   "date": "2026-09-15",
+   "name": "MN DEPT OF REVENUE EST TAX",
+   "iso_currency_code": "",
+   "merchant_name": "Minnesota Department of Revenue",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "GOVERNMENT_AND_NON_PROFIT",
+    "detailed": "GOVERNMENT_AND_NON_PROFIT_TAX_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b0d3795a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -2600.0,
+   "date": "2026-09-16",
+   "name": "GREAT LAKES DISPATCH ACH PMT",
+   "iso_currency_code": "",
+   "merchant_name": "Great Lakes Dispatch",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_9f3b846c",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 650.0,
+   "date": "2026-09-16",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c2e7193f",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -650.0,
+   "date": "2026-09-16",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3f7b024d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -2250.0,
+   "date": "2026-09-25",
+   "name": "NORTH CURRENT MEDIA LLC ACH",
+   "iso_currency_code": "",
+   "merchant_name": "North Current Media",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_1a5d860e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 562.5,
+   "date": "2026-09-25",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_d5f8314a",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -562.5,
+   "date": "2026-09-25",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a0f4268e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1500.0,
+   "date": "2026-10-01",
+   "name": "NORTH CURRENT MEDIA LLC ACH",
+   "iso_currency_code": "",
+   "merchant_name": "North Current Media",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_4b8d952f",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 375.0,
+   "date": "2026-10-01",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_a8d1735b",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -375.0,
+   "date": "2026-10-01",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_0e3b481c",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 2400.0,
+   "date": "2026-10-01",
+   "name": "EXT TRANSFER TO JOINT HOUSEHOLD ACCT",
+   "iso_currency_code": "",
+   "merchant_name": "Joint household account (Ingrid's credit union)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_ACCOUNT_TRANSFER",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_9e2c608a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -1200.0,
+   "date": "2026-10-06",
+   "name": "PRAIRIE WIRE ACH PAYMENT",
+   "iso_currency_code": "",
+   "merchant_name": "Prairie Wire",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_c4f7193d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 300.0,
+   "date": "2026-10-06",
+   "name": "ONLINE TRANSFER TO SAV ...5530",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3a6d024e",
+   "account_id": "acc_a387e28e973b5c819c30",
+   "amount": -300.0,
+   "date": "2026-10-06",
+   "name": "ONLINE TRANSFER FROM CHK ...5512",
+   "iso_currency_code": "",
+   "merchant_name": "Nicollet Federal Credit Union",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "",
+   "transaction_code": "",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_SAVINGS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_c7e2a94f",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": -3400.0,
+   "date": "2026-07-22",
+   "name": "GREAT LAKES DISPATCH ACH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Great Lakes Dispatch",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_OTHER_INCOME",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4e8b1c7a",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 78.6,
+   "date": "2026-08-15",
+   "name": "GANDHI MAHAL MINNEAPOLIS MN",
+   "iso_currency_code": "USD",
+   "merchant_name": "Gandhi Mahal",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6e2b9f0a",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 68.5,
+   "date": "2026-06-12",
+   "name": "NORTHWOODS PADDLE REPAIR",
+   "iso_currency_code": "USD",
+   "merchant_name": "Northwoods Paddle Repair",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_6b2e9f14",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 84.89,
+   "date": "2026-06-27",
+   "name": "REI.COM 800-426-4840 WA",
+   "iso_currency_code": "USD",
+   "merchant_name": "REI",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SPORTING_GOODS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8d3f1a6c",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 145.0,
+   "date": "2026-08-18",
+   "name": "RIVERVIEW EYE CARE MINNEAPOLIS MN",
+   "iso_currency_code": "USD",
+   "merchant_name": "Riverview Eye Care",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "MEDICAL",
+    "detailed": "MEDICAL_EYE_CARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b3e95a07",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 95.0,
+   "date": "2026-08-06",
+   "name": "ANGRY CATFISH BICYCLE",
+   "iso_currency_code": "USD",
+   "merchant_name": "Angry Catfish Bicycle",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SPORTING_GOODS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6d1f9a3c",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 64.99,
+   "date": "2026-09-18",
+   "name": "TIRES PLUS #241 MINNEAPOLIS MN",
+   "iso_currency_code": "USD",
+   "merchant_name": "Tires Plus",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_AUTOMOTIVE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_4e7a1c9d",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 62.4,
+   "date": "2026-09-17",
+   "name": "MERLINS REST MINNEAPOLIS MN",
+   "iso_currency_code": "USD",
+   "merchant_name": "Merlins Rest",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_3e9c71b4",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 384.0,
+   "date": "2026-10-20",
+   "name": "RIVERSIDE ANALYTICAL COON RAPIDS",
+   "iso_currency_code": "USD",
+   "merchant_name": "Riverside Analytical",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_a07f52d8",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 260.0,
+   "date": "2026-10-22",
+   "name": "NORTHSTAR ENVIRONMENTAL BLOOMINGTON",
+   "iso_currency_code": "USD",
+   "merchant_name": "Northstar Environmental",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_5d2a9c81",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 289.4,
+   "date": "2026-10-14",
+   "name": "DUFFEL*DELTA AIR LINES",
+   "iso_currency_code": "USD",
+   "merchant_name": "Delta Air Lines",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRAVEL",
+    "detailed": "TRAVEL_FLIGHTS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b03e7f46",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 371.88,
+   "date": "2026-10-14",
+   "name": "DUFFEL*LAKEWALK INN DULUTH",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lakewalk Inn",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRAVEL",
+    "detailed": "TRAVEL_LODGING",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_6c1e9a4f",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 100.0,
+   "date": "2026-10-09",
+   "name": "LAKEHEAD BOOKS DULUTH MN",
+   "iso_currency_code": "USD",
+   "merchant_name": "Lakehead Books",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_BOOKSTORES_AND_NEWSSTANDS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_b3f70d58",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 424.3,
+   "date": "2026-10-12",
+   "name": "DUFFEL*HARBOR LIGHT CABINS",
+   "iso_currency_code": "USD",
+   "merchant_name": "Harbor Light Cabins",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRAVEL",
+    "detailed": "TRAVEL_LODGING",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_8d3a61f0",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 89.0,
+   "date": "2026-06-02",
+   "name": "MN DNR RESERVATIONS",
+   "iso_currency_code": "USD",
+   "merchant_name": "MN DNR Reservations",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRAVEL",
+    "detailed": "TRAVEL_LODGING",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "txn_b5e4092c",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 48.71,
+   "date": "2026-07-10",
+   "name": "HOLIDAY STNSTORE 0241 HINCKLEY MN",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "txn_2f7c9e1d",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 34.18,
+   "date": "2026-07-12",
+   "name": "BETTYS PIES TWO HARBORS MN",
+   "iso_currency_code": "USD",
+   "merchant_name": "Betty's Pies",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "9fd0ec9b354315830f505a17",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 5.4,
+   "date": "2026-04-29",
+   "name": "ANGRY CATFISH BICYCLE + COFFEE BAR 042926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Angry Catfish Bicycle + Coffee Bar",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4dc06b9d2dd43317865b9700",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 31.47,
+   "date": "2026-04-30",
+   "name": "SEWARD COMMUNITY CO-OP (FRIENDSHIP STORE) 043026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Friendship Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "ecd763ebc07352c93839a65d",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 41.86,
+   "date": "2026-05-02",
+   "name": "CUB (LAKE STREET) 050226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Cub (Lake Street)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "9ca610cbab408d3801d29834",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 24.0,
+   "date": "2026-05-03",
+   "name": "AIRTABLE 050326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Airtable",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "d1e2cda6d544cf4f7f853b04",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 24.0,
+   "date": "2026-06-03",
+   "name": "AIRTABLE 060326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Airtable",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "23e28e0f2c6f61cfb54e21b7",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 24.0,
+   "date": "2026-07-03",
+   "name": "AIRTABLE 070326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Airtable",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "221c8440d9b4d626dcaad828",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 24.0,
+   "date": "2026-09-03",
+   "name": "AIRTABLE 090326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Airtable",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "85a30a1257e6bfac595a01a8",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 24.0,
+   "date": "2026-10-03",
+   "name": "AIRTABLE 100326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Airtable",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "a5536506d7c12b5b32912d19",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 5.75,
+   "date": "2026-05-05",
+   "name": "PEACE COFFEE (WONDERLAND PARK, MINNEHAHA AVE) 050526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7960bc772acbf5403a0de7a3",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 44.12,
+   "date": "2026-05-08",
+   "name": "HOLIDAY 050826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "3db22d7997320faa069102e2",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 21.6,
+   "date": "2026-05-09",
+   "name": "AL'S BREAKFAST 050926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Al's Breakfast",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "4a1a5bc214b271b8d862ef24",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 19.99,
+   "date": "2026-05-11",
+   "name": "ADOBE 051126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Adobe",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "20359a401f105fd85eeb86df",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 19.99,
+   "date": "2026-06-11",
+   "name": "ADOBE 061126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Adobe",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7f12c98a6a8d8760c9ffb37e",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 19.99,
+   "date": "2026-07-11",
+   "name": "ADOBE 071126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Adobe",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d610dbb2fe74e81c80f6bace",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 19.99,
+   "date": "2026-08-11",
+   "name": "ADOBE 081126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Adobe",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "7e6b5b8c2be6f23b3a953afe",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 19.99,
+   "date": "2026-09-11",
+   "name": "ADOBE 091126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Adobe",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "16b3a0478f894055aeeff2c5",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 19.99,
+   "date": "2026-10-11",
+   "name": "ADOBE 101126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Adobe",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "43bb13edfb03fbb576a7febb",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 19.45,
+   "date": "2026-05-13",
+   "name": "PEACE COFFEE (WONDERLAND PARK, MINNEHAHA AVE) 051326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "82e87dfbd1e2470f154c2669",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 38.29,
+   "date": "2026-05-14",
+   "name": "SEWARD COMMUNITY CO-OP (FRANKLIN STORE) 051426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Franklin Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "d20a7c50dbfd0282f736d834",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 16.99,
+   "date": "2026-05-17",
+   "name": "OTTER.AI 051726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Otter.ai",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "68c6a2f660b889e0fc4535d4",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 16.99,
+   "date": "2026-06-17",
+   "name": "OTTER.AI 061726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Otter.ai",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "dc1c598fb28ea1768c2e6d39",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 16.99,
+   "date": "2026-08-17",
+   "name": "OTTER.AI 081726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Otter.ai",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "564c49fcb0f32c434bbd3f9c",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 16.99,
+   "date": "2026-09-17",
+   "name": "OTTER.AI 091726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Otter.ai",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "dd51ff4a63c2c819518360cb",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 16.99,
+   "date": "2026-10-17",
+   "name": "OTTER.AI 101726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Otter.ai",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "10cdce63bd28752753b24666",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.4,
+   "date": "2026-05-19",
+   "name": "ANGRY CATFISH BICYCLE + COFFEE BAR 051926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Angry Catfish Bicycle + Coffee Bar",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "522fd797d8568ba3f26b9ba2",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.4,
+   "date": "2026-09-10",
+   "name": "ANGRY CATFISH BICYCLE + COFFEE BAR 091026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Angry Catfish Bicycle + Coffee Bar",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5693f16c4553f16058ed1221",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 52.73,
+   "date": "2026-05-21",
+   "name": "LONGFELLOW GRILL 052126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Longfellow Grill",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "fde630239f5a15537989e168",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 39.48,
+   "date": "2026-05-22",
+   "name": "SPEEDWAY 052226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a217ab3ddb73e45818cdedc4",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 9.99,
+   "date": "2026-05-26",
+   "name": "GOOGLE PLAY 052626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Google Play",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "0b81cdb111fa44a4ddab0d43",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 9.99,
+   "date": "2026-06-26",
+   "name": "GOOGLE PLAY 062626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Google Play",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "0ffbfe1973aa96423f48c4a7",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 9.99,
+   "date": "2026-07-26",
+   "name": "GOOGLE PLAY 072626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Google Play",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "e6c12c8c4471f7297e80cd6b",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 9.99,
+   "date": "2026-09-26",
+   "name": "GOOGLE PLAY 092626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Google Play",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "b2718b8c9b4a06916ffd0f33",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 9.99,
+   "date": "2026-10-26",
+   "name": "GOOGLE PLAY 102626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Google Play",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "d494d36fb7fa396d0053f4bb",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.85,
+   "date": "2026-05-27",
+   "name": "FIVE WATT COFFEE 052726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Five Watt Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "420bc4f5176a04d82a8da356",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 46.57,
+   "date": "2026-05-29",
+   "name": "SEWARD COMMUNITY CO-OP (FRIENDSHIP STORE) 052926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Friendship Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "dda9fa514d0274ba1fe8ff3a",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 34.92,
+   "date": "2026-05-30",
+   "name": "HI-LO DINER 053026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hi-Lo Diner",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4ff06ee1d20d5fc7ef2ae3d2",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 33.18,
+   "date": "2026-06-03",
+   "name": "TARGET (LAKE STREET) 060326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Target (Lake Street)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "56004110262d97e57dc299bf",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.25,
+   "date": "2026-06-04",
+   "name": "ANGRY CATFISH BICYCLE + COFFEE BAR 060426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Angry Catfish Bicycle + Coffee Bar",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "93286215b03938525dd987e1",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 42.37,
+   "date": "2026-06-06",
+   "name": "HOLIDAY 060626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "1c7efe9cf236e5d727af9f8c",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 18.95,
+   "date": "2026-06-09",
+   "name": "PEACE COFFEE (WONDERLAND PARK, MINNEHAHA AVE) 060926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d6f71751c98319785e8f504e",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 44.62,
+   "date": "2026-06-11",
+   "name": "SEWARD COMMUNITY CO-OP (FRIENDSHIP STORE) 061126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Friendship Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "1c4e94e3ee56c88c43a143e7",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 7.15,
+   "date": "2026-06-16",
+   "name": "FIVE WATT COFFEE 061626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Five Watt Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b67a81da9ef82e6a164d1d83",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 47.36,
+   "date": "2026-06-19",
+   "name": "SEA SALT EATERY 061926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sea Salt Eatery",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "5f0f27b83dfb2b8893c66aac",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 40.84,
+   "date": "2026-06-22",
+   "name": "SPEEDWAY 062226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a12cd275ba151f7a5a8a0088",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 38.71,
+   "date": "2026-06-25",
+   "name": "CUB (LAKE STREET) 062526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Cub (Lake Street)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "908360e736928b3422f54481",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 38.4,
+   "date": "2026-06-27",
+   "name": "TOWN HALL LANES 062726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Town Hall Lanes",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "737a597e294ae3ca25f4d9fd",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.6,
+   "date": "2026-06-30",
+   "name": "SPYHOUSE COFFEE 063026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Spyhouse Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "928daa4128f705cdb95d0476",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 39.84,
+   "date": "2026-07-02",
+   "name": "SEWARD COMMUNITY CO-OP (FRANKLIN STORE) 070226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Franklin Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "7547271cbe4d9bcbf2ffd02e",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 5.6,
+   "date": "2026-07-07",
+   "name": "PEACE COFFEE (WONDERLAND PARK, MINNEHAHA AVE) 070726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "910e6d2f363bd190d135f619",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 52.36,
+   "date": "2026-07-09",
+   "name": "CUB (LAKE STREET) 070926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Cub (Lake Street)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "a8450e2472253d5ddc268703",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 35.0,
+   "date": "2026-07-10",
+   "name": "MN DNR STATE PARKS 071026",
+   "iso_currency_code": "USD",
+   "merchant_name": "MN DNR State Parks",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRAVEL",
+    "detailed": "TRAVEL_OTHER_TRAVEL",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "99937107634ddc006c32120d",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.1,
+   "date": "2026-07-14",
+   "name": "ANGRY CATFISH BICYCLE + COFFEE BAR 071426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Angry Catfish Bicycle + Coffee Bar",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a1a2436107613432fe0caae2",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.1,
+   "date": "2026-10-28",
+   "name": "ANGRY CATFISH BICYCLE + COFFEE BAR 102826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Angry Catfish Bicycle + Coffee Bar",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5ed3cd061e4e70160108dde1",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 19.9,
+   "date": "2026-07-16",
+   "name": "NEWSPAPERS.COM 071626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Newspapers.com",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "5c5de27bbff10a2966bc95c0",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 39.25,
+   "date": "2026-07-18",
+   "name": "HOLIDAY 071826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "f74e9900736fc026014ab759",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 17.85,
+   "date": "2026-07-21",
+   "name": "FIVE WATT COFFEE 072126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Five Watt Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ba6e44f03715d16ca692c7d5",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 23.18,
+   "date": "2026-07-23",
+   "name": "LONGFELLOW GRILL 072326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Longfellow Grill",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3bdff34e9bfe269910663aeb",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 31.62,
+   "date": "2026-07-28",
+   "name": "TARGET (LAKE STREET) 072826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Target (Lake Street)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a93a59cd874a12f8a55f5da7",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.75,
+   "date": "2026-07-30",
+   "name": "SPYHOUSE COFFEE 073026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Spyhouse Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "294cfb20d1396c1faddaabe2",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 41.8,
+   "date": "2026-07-31",
+   "name": "HI-LO DINER 073126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hi-Lo Diner",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8f1d6d6eaa25a6e2d9b82c2e",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 34.27,
+   "date": "2026-08-04",
+   "name": "SEWARD COMMUNITY CO-OP (FRIENDSHIP STORE) 080426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Friendship Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "196509de096866311dee3ab9",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 5.85,
+   "date": "2026-08-07",
+   "name": "ANGRY CATFISH BICYCLE + COFFEE BAR 080726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Angry Catfish Bicycle + Coffee Bar",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "03a0abc4b3e0340298578da3",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 41.08,
+   "date": "2026-08-12",
+   "name": "HOLIDAY 081226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "a8aa624bbcd8e0b3b4cb958c",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 48.93,
+   "date": "2026-08-14",
+   "name": "CUB (LAKE STREET) 081426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Cub (Lake Street)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "b59a6368eed3c4e819d212d2",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 11.4,
+   "date": "2026-08-20",
+   "name": "PEACE COFFEE (WONDERLAND PARK, MINNEHAHA AVE) 082026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "327d14ec93c0fb850a5c4fe4",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 47.86,
+   "date": "2026-08-22",
+   "name": "HOLIDAY 082226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "63c4d649781a0aa5313ff8fa",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.95,
+   "date": "2026-08-25",
+   "name": "FIVE WATT COFFEE 082526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Five Watt Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "09beed8cd6ea662ce5f3b2cf",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": -36.87,
+   "date": "2026-05-22",
+   "name": "PAYMENT - THANK YOU 052226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment - Thank You",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "16132eccfb3ce550accc2219",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": -428.99,
+   "date": "2026-06-22",
+   "name": "PAYMENT - THANK YOU 062226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment - Thank You",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3b65c6e2cb8a2c9a5b9ccb35",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": -697.79,
+   "date": "2026-07-22",
+   "name": "PAYMENT - THANK YOU 072226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment - Thank You",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "20c936972805a608db8bd71d",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": -473.11,
+   "date": "2026-08-24",
+   "name": "PAYMENT - THANK YOU 082426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment - Thank You",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4f3718d813274412ced1c451",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": -585.91,
+   "date": "2026-09-22",
+   "name": "PAYMENT - THANK YOU 092226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment - Thank You",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "4c545a2602ee39bc5f94d81e",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": -204.76,
+   "date": "2026-10-22",
+   "name": "PAYMENT - THANK YOU 102226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment - Thank You",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8adc4b9b554ba66913891910",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "amount": -17.42,
+   "date": "2026-05-29",
+   "name": "FIDELITY GOVERNMENT MONEY MARKET (SPAXX) DIVIDEND 052926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fidelity Government Money Market (SPAXX) dividend",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_DIVIDENDS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b8f6d8c1752362fd178dd109",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "amount": -3000.0,
+   "date": "2026-06-30",
+   "name": "FIDELITY SEP-IRA CONTRIBUTION 063026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fidelity SEP-IRA contribution",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSFER_IN",
+    "detailed": "TRANSFER_IN_INVESTMENT_AND_RETIREMENT_FUNDS",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "90c7ec0cbb7e8ceb4c0dcfb8",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "amount": -17.86,
+   "date": "2026-06-30",
+   "name": "FIDELITY GOVERNMENT MONEY MARKET (SPAXX) DIVIDEND 063026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fidelity Government Money Market (SPAXX) dividend",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_DIVIDENDS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "e8e9d50ba879969e3fd2d2d3",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "amount": -27.71,
+   "date": "2026-07-31",
+   "name": "FIDELITY GOVERNMENT MONEY MARKET (SPAXX) DIVIDEND 073126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fidelity Government Money Market (SPAXX) dividend",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_DIVIDENDS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ad28a2de1df051b79e21d52a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 5.75,
+   "date": "2026-04-29",
+   "name": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN 042926",
+   "iso_currency_code": "USD",
+   "merchant_name": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "2860bf4e6275163d393b1acb",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 5.75,
+   "date": "2026-08-04",
+   "name": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN 080426",
+   "iso_currency_code": "USD",
+   "merchant_name": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5fc9d102a86b3734789fc8b1",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 5.75,
+   "date": "2026-10-20",
+   "name": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN 102026",
+   "iso_currency_code": "USD",
+   "merchant_name": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0986035293e58a2f5a002263",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 42.9,
+   "date": "2026-04-30",
+   "name": "MOON PALACE BOOKS MINNEAPOLIS MN 043026",
+   "iso_currency_code": "USD",
+   "merchant_name": "MOON PALACE BOOKS MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "6b32b07af1f12192dde23707",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 38.0,
+   "date": "2026-05-02",
+   "name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN 050226",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "1884dcfbf8c87524ef65c82f",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 24.0,
+   "date": "2026-08-03",
+   "name": "AIRTABLE 080326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Airtable",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "7c233430463daedcd3dedf0a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 168.34,
+   "date": "2026-05-03",
+   "name": "BACHMAN'S LYNDALE MINNEAPOLIS MN 050326",
+   "iso_currency_code": "USD",
+   "merchant_name": "BACHMAN'S LYNDALE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "HOME_IMPROVEMENT",
+    "detailed": "HOME_IMPROVEMENT_OTHER_HOME_IMPROVEMENT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "c254a6400ee28adf96dd8aa3",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.25,
+   "date": "2026-05-06",
+   "name": "FIVE WATT COFFEE MINNEAPOLIS MN 050626",
+   "iso_currency_code": "USD",
+   "merchant_name": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c0dedb1172574a76a6a94436",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.25,
+   "date": "2026-06-18",
+   "name": "FIVE WATT COFFEE MINNEAPOLIS MN 061826",
+   "iso_currency_code": "USD",
+   "merchant_name": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "610fd250507752b8d808c09b",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.25,
+   "date": "2026-09-02",
+   "name": "FIVE WATT COFFEE MINNEAPOLIS MN 090226",
+   "iso_currency_code": "USD",
+   "merchant_name": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "9b602d5f51bedd5942f53083",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.25,
+   "date": "2026-10-13",
+   "name": "FIVE WATT COFFEE MINNEAPOLIS MN 101326",
+   "iso_currency_code": "USD",
+   "merchant_name": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8408c943cbc86ebcec0f90c9",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 72.4,
+   "date": "2026-05-08",
+   "name": "GANDHI MAHAL MINNEAPOLIS MN 050826",
+   "iso_currency_code": "USD",
+   "merchant_name": "GANDHI MAHAL MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "ae6d5208ef7401a6edf370ba",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 23.18,
+   "date": "2026-05-09",
+   "name": "ACE HARDWARE LONGFELLOW MINNEAPOLIS MN 050926",
+   "iso_currency_code": "USD",
+   "merchant_name": "ACE HARDWARE LONGFELLOW MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "HOME_IMPROVEMENT",
+    "detailed": "HOME_IMPROVEMENT_HARDWARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a0eae4bda842e55d1424eeaf",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 78.0,
+   "date": "2026-05-09",
+   "name": "SQ *LONGFELLOW FLORIST MINNEAPOLIS MN 050926",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *LONGFELLOW FLORIST MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_GIFTS_AND_NOVELTIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "27cce6951b8c3544300542c1",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 14.0,
+   "date": "2026-05-12",
+   "name": "PARKMOBILE MINNEAPOLIS MN 051226",
+   "iso_currency_code": "USD",
+   "merchant_name": "PARKMOBILE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_PUBLIC_TRANSIT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "195078240e29afd15ab5bbbc",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 14.0,
+   "date": "2026-06-09",
+   "name": "PARKMOBILE MINNEAPOLIS MN 060926",
+   "iso_currency_code": "USD",
+   "merchant_name": "PARKMOBILE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_PUBLIC_TRANSIT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "edd3dfd130a802edcd9ab46f",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 14.0,
+   "date": "2026-07-07",
+   "name": "PARKMOBILE MINNEAPOLIS MN 070726",
+   "iso_currency_code": "USD",
+   "merchant_name": "PARKMOBILE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_PUBLIC_TRANSIT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "1af514992e199211cfdd5022",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 14.0,
+   "date": "2026-08-06",
+   "name": "PARKMOBILE MINNEAPOLIS MN 080626",
+   "iso_currency_code": "USD",
+   "merchant_name": "PARKMOBILE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_PUBLIC_TRANSIT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "7bf2dad8e0a3e33c5aa0adb8",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 14.0,
+   "date": "2026-09-10",
+   "name": "PARKMOBILE MINNEAPOLIS MN 091026",
+   "iso_currency_code": "USD",
+   "merchant_name": "PARKMOBILE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_PUBLIC_TRANSIT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "aeabff78e03f7b9516287626",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 14.0,
+   "date": "2026-10-07",
+   "name": "PARKMOBILE MINNEAPOLIS MN 100726",
+   "iso_currency_code": "USD",
+   "merchant_name": "PARKMOBILE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_PUBLIC_TRANSIT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "76b46b0d1c8a4201e9988fb5",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 12.0,
+   "date": "2026-05-14",
+   "name": "CVS/PHARMACY #08712 MINNEAPOLIS MN 051426",
+   "iso_currency_code": "USD",
+   "merchant_name": "CVS/PHARMACY #08712 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "MEDICAL",
+    "detailed": "MEDICAL_PHARMACIES_AND_SUPPLEMENTS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f742745e611d9678a49c911d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 200.0,
+   "date": "2026-05-16",
+   "name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN 051626",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "409fb1f9996d205050368631",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 200.0,
+   "date": "2026-06-13",
+   "name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN 061326",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "b4115d30c04882723a812b0d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 200.0,
+   "date": "2026-08-28",
+   "name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN 082826",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "459db0925b41c5a748c4bec0",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 200.0,
+   "date": "2026-10-16",
+   "name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN 101626",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "7ffed2c2f237b4954cbd9396",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 16.99,
+   "date": "2026-07-17",
+   "name": "OTTER.AI 071726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Otter.ai",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "99730ad8514ba5234e9b30c3",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 5.9,
+   "date": "2026-05-19",
+   "name": "SPYHOUSE COFFEE MINNEAPOLIS MN 051926",
+   "iso_currency_code": "USD",
+   "merchant_name": "SPYHOUSE COFFEE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "32c247bb1b59ac6cc8cbe530",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 41.3,
+   "date": "2026-05-22",
+   "name": "HI-LO DINER MINNEAPOLIS MN 052226",
+   "iso_currency_code": "USD",
+   "merchant_name": "HI-LO DINER MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "74386b7157d934d03d2f68b2",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 40.0,
+   "date": "2026-05-24",
+   "name": "THREE RIVERS PARK DISTRICT PLYMOUTH MN 052426",
+   "iso_currency_code": "USD",
+   "merchant_name": "THREE RIVERS PARK DISTRICT PLYMOUTH MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "1f62dd5765554cf28962d9ee",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 9.99,
+   "date": "2026-08-26",
+   "name": "GOOGLE PLAY 082626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Google Play",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "953340ea14153f9b94d006bd",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 68.42,
+   "date": "2026-05-29",
+   "name": "TARGET T-2766 MINNEAPOLIS MN 052926",
+   "iso_currency_code": "USD",
+   "merchant_name": "TARGET T-2766 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b8247762fe4cfaa664619a32",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 63.85,
+   "date": "2026-05-30",
+   "name": "MERLINS REST MINNEAPOLIS MN 053026",
+   "iso_currency_code": "USD",
+   "merchant_name": "MERLINS REST MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "650ffca2d8677c1ea8e496ec",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 11.4,
+   "date": "2026-06-02",
+   "name": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN 060226",
+   "iso_currency_code": "USD",
+   "merchant_name": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b32282ffd68a1105cde1d460",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 52.1,
+   "date": "2026-06-05",
+   "name": "LONGFELLOW GRILL MINNEAPOLIS MN 060526",
+   "iso_currency_code": "USD",
+   "merchant_name": "LONGFELLOW GRILL MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "bdcc94a7548b9eaf6603633e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 44.0,
+   "date": "2026-06-06",
+   "name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN 060626",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b6a311ffa7c9ba095baa1a5e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 26.0,
+   "date": "2026-06-11",
+   "name": "GREAT CLIPS #2214 MINNEAPOLIS MN 061126",
+   "iso_currency_code": "USD",
+   "merchant_name": "GREAT CLIPS #2214 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "35f9d4b2450bafadbc9f670a",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 26.0,
+   "date": "2026-08-12",
+   "name": "GREAT CLIPS #2214 MINNEAPOLIS MN 081226",
+   "iso_currency_code": "USD",
+   "merchant_name": "GREAT CLIPS #2214 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "6b670ab64047d047fce936ce",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 26.0,
+   "date": "2026-10-14",
+   "name": "GREAT CLIPS #2214 MINNEAPOLIS MN 101426",
+   "iso_currency_code": "USD",
+   "merchant_name": "GREAT CLIPS #2214 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "PERSONAL_CARE",
+    "detailed": "PERSONAL_CARE_HAIR_AND_BEAUTY",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "4bc7f5b4a03277c7dc42ae63",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 348.0,
+   "date": "2026-06-16",
+   "name": "LONGFELLOW FAMILY DENTAL MINNEAPOLIS MN 061626",
+   "iso_currency_code": "USD",
+   "merchant_name": "LONGFELLOW FAMILY DENTAL MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "MEDICAL",
+    "detailed": "MEDICAL_PRIMARY_CARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "91743836165b683cde381fb4",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 58.4,
+   "date": "2026-06-20",
+   "name": "TOWN HALL LANES MINNEAPOLIS MN 062026",
+   "iso_currency_code": "USD",
+   "merchant_name": "TOWN HALL LANES MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_OTHER_ENTERTAINMENT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "d8573d0265a1d3000bc5386e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 179.95,
+   "date": "2026-06-23",
+   "name": "MIDWEST MOUNTAINEERING MINNEAPOLIS MN 062326",
+   "iso_currency_code": "USD",
+   "merchant_name": "MIDWEST MOUNTAINEERING MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "4d1d6fe41343503ea8b973b7",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 241.62,
+   "date": "2026-06-25",
+   "name": "THE HOME DEPOT #2801 MINNEAPOLIS MN 062526",
+   "iso_currency_code": "USD",
+   "merchant_name": "THE HOME DEPOT #2801 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "HOME_IMPROVEMENT",
+    "detailed": "HOME_IMPROVEMENT_HARDWARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "e67ab6fafb2f496d8bc5f10e",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 78.6,
+   "date": "2026-06-26",
+   "name": "GANDHI MAHAL MINNEAPOLIS MN 062626",
+   "iso_currency_code": "USD",
+   "merchant_name": "GANDHI MAHAL MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "8e7c821362a1aca2ec6fed0d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 186.25,
+   "date": "2026-06-28",
+   "name": "MN DVS ONLINE TAB RENEWAL ST PAUL MN 062826",
+   "iso_currency_code": "USD",
+   "merchant_name": "MN DVS ONLINE TAB RENEWAL ST PAUL MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "6984a53e0fa676cbe902171d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 14.85,
+   "date": "2026-06-30",
+   "name": "USPS PO 2645880406 MINNEAPOLIS MN 063026",
+   "iso_currency_code": "USD",
+   "merchant_name": "USPS PO 2645880406 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_SERVICES",
+    "detailed": "GENERAL_SERVICES_POSTAGE_AND_SHIPPING",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "dd577f183e046fc4ce94ce20",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.4,
+   "date": "2026-07-02",
+   "name": "SPYHOUSE COFFEE MINNEAPOLIS MN 070226",
+   "iso_currency_code": "USD",
+   "merchant_name": "SPYHOUSE COFFEE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "725b8b71b836b6e751dac8d4",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.4,
+   "date": "2026-10-02",
+   "name": "SPYHOUSE COFFEE MINNEAPOLIS MN 100226",
+   "iso_currency_code": "USD",
+   "merchant_name": "SPYHOUSE COFFEE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "923aa920dd3b2e89424f2238",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.4,
+   "date": "2026-10-27",
+   "name": "SPYHOUSE COFFEE MINNEAPOLIS MN 102726",
+   "iso_currency_code": "USD",
+   "merchant_name": "SPYHOUSE COFFEE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "645514f3b9a23596ce42dae2",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 74.8,
+   "date": "2026-07-03",
+   "name": "TARGET T-2766 MINNEAPOLIS MN 070326",
+   "iso_currency_code": "USD",
+   "merchant_name": "TARGET T-2766 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "80d3ff8c1d2737fa4e8a4d03",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 36.0,
+   "date": "2026-07-04",
+   "name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN 070426",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "46dcb5b0b83d0a86d4887f10",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 21.33,
+   "date": "2026-07-09",
+   "name": "CVS/PHARMACY #08712 MINNEAPOLIS MN 070926",
+   "iso_currency_code": "USD",
+   "merchant_name": "CVS/PHARMACY #08712 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "MEDICAL",
+    "detailed": "MEDICAL_PHARMACIES_AND_SUPPLEMENTS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b415d4e7fabcd80404ec6ac0",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 14.62,
+   "date": "2026-07-10",
+   "name": "HOLIDAY STATIONSTORE TWO HARBORS MN 071026",
+   "iso_currency_code": "USD",
+   "merchant_name": "HOLIDAY STATIONSTORE TWO HARBORS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "c786e565f4cdebd3e55d2bf8",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 19.4,
+   "date": "2026-07-11",
+   "name": "SQ *SILVER BAY CAFE SILVER BAY MN 071126",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *SILVER BAY CAFE SILVER BAY MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3e4baf20534d685889000486",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.48,
+   "date": "2026-07-12",
+   "name": "HOLIDAY STATIONSTORE HINCKLEY MN 071226",
+   "iso_currency_code": "USD",
+   "merchant_name": "HOLIDAY STATIONSTORE HINCKLEY MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "198659d3c73dc85e4937843f",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 56.75,
+   "date": "2026-07-15",
+   "name": "LONGFELLOW GRILL MINNEAPOLIS MN 071526",
+   "iso_currency_code": "USD",
+   "merchant_name": "LONGFELLOW GRILL MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "6172499169984213772578c2",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 140.0,
+   "date": "2026-07-17",
+   "name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN 071726",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "283ff7c0b6bb4da7f4ac04d0",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 34.27,
+   "date": "2026-07-18",
+   "name": "ACE HARDWARE LONGFELLOW MINNEAPOLIS MN 071826",
+   "iso_currency_code": "USD",
+   "merchant_name": "ACE HARDWARE LONGFELLOW MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "HOME_IMPROVEMENT",
+    "detailed": "HOME_IMPROVEMENT_HARDWARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "df55beca86918f700e5ddcbb",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 12.5,
+   "date": "2026-07-21",
+   "name": "FIVE WATT COFFEE MINNEAPOLIS MN 072126",
+   "iso_currency_code": "USD",
+   "merchant_name": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "54e9371b2bea064782a87172",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 22.0,
+   "date": "2026-07-24",
+   "name": "RIVERVIEW THEATER MINNEAPOLIS MN 072426",
+   "iso_currency_code": "USD",
+   "merchant_name": "RIVERVIEW THEATER MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_TV_AND_MOVIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "88f6cb570e47ff2ac7c14037",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 22.0,
+   "date": "2026-10-25",
+   "name": "RIVERVIEW THEATER MINNEAPOLIS MN 102526",
+   "iso_currency_code": "USD",
+   "merchant_name": "RIVERVIEW THEATER MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_TV_AND_MOVIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c0b3f42fb1d630e25d5cfbce",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 47.2,
+   "date": "2026-07-26",
+   "name": "SEA SALT EATERY MINNEAPOLIS MN 072626",
+   "iso_currency_code": "USD",
+   "merchant_name": "SEA SALT EATERY MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "391d6e344f67010a23048d63",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 40.0,
+   "date": "2026-07-29",
+   "name": "M HEALTH FAIRVIEW CLINICS MINNEAPOLIS MN 072926",
+   "iso_currency_code": "USD",
+   "merchant_name": "M HEALTH FAIRVIEW CLINICS MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "MEDICAL",
+    "detailed": "MEDICAL_OTHER_MEDICAL",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "7217c7ad91fc8a3d14f19d13",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 112.0,
+   "date": "2026-07-31",
+   "name": "MINNESOTA TWINS TICKETS MINNEAPOLIS MN 073126",
+   "iso_currency_code": "USD",
+   "merchant_name": "MINNESOTA TWINS TICKETS MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "ENTERTAINMENT",
+    "detailed": "ENTERTAINMENT_OTHER_ENTERTAINMENT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "4f8c2687e7a9328c542f043d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 41.0,
+   "date": "2026-08-01",
+   "name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN 080126",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "0796a4e151e08adaa82f25f1",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 38.9,
+   "date": "2026-08-07",
+   "name": "HI-LO DINER MINNEAPOLIS MN 080726",
+   "iso_currency_code": "USD",
+   "merchant_name": "HI-LO DINER MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "a3fe89135ad8f35da0d1a3a4",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 62.18,
+   "date": "2026-08-10",
+   "name": "TARGET T-2766 MINNEAPOLIS MN 081026",
+   "iso_currency_code": "USD",
+   "merchant_name": "TARGET T-2766 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "bffb73523b7813f3fdfa47d3",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 68.4,
+   "date": "2026-08-14",
+   "name": "MERLINS REST MINNEAPOLIS MN 081426",
+   "iso_currency_code": "USD",
+   "merchant_name": "MERLINS REST MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "bf5c8c087af678d9a48963fa",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 160.0,
+   "date": "2026-08-15",
+   "name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN 081526",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "3b5e4d68f03c36ccb63be70c",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 160.0,
+   "date": "2026-09-18",
+   "name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN 091826",
+   "iso_currency_code": "USD",
+   "merchant_name": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "0757a8331d512ea7e411f634",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 164.29,
+   "date": "2026-08-20",
+   "name": "THE HOME DEPOT #2801 MINNEAPOLIS MN 082026",
+   "iso_currency_code": "USD",
+   "merchant_name": "THE HOME DEPOT #2801 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "HOME_IMPROVEMENT",
+    "detailed": "HOME_IMPROVEMENT_HARDWARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "afcd766744e642a723bc8358",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 32.0,
+   "date": "2026-08-22",
+   "name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN 082226",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "2434b4cb04d375ce796fc786",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 24.99,
+   "date": "2026-08-25",
+   "name": "CVS/PHARMACY #08712 MINNEAPOLIS MN 082526",
+   "iso_currency_code": "USD",
+   "merchant_name": "CVS/PHARMACY #08712 MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "MEDICAL",
+    "detailed": "MEDICAL_PHARMACIES_AND_SUPPLEMENTS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "da8e1581d0135c038520a650",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 7.15,
+   "date": "2026-10-15",
+   "name": "FIVE WATT COFFEE 101526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Five Watt Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "46672f3d77417a27751bb2a6",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 36.92,
+   "date": "2026-10-03",
+   "name": "SEWARD COMMUNITY CO-OP (FRANKLIN STORE) 100326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Franklin Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "01c5b3819196a7cadb66c210",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 24.8,
+   "date": "2026-10-03",
+   "name": "AL'S BREAKFAST 100326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Al's Breakfast",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "e8e018382872dbc84f4942b6",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 6.85,
+   "date": "2026-10-08",
+   "name": "PEACE COFFEE (WONDERLAND PARK, MINNEHAHA AVE) 100826",
+   "iso_currency_code": "USD",
+   "merchant_name": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f7c72cfc87471d7feaae85b8",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 44.31,
+   "date": "2026-10-09",
+   "name": "HOLIDAY 100926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "fd08bb0bf768b43075653484",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 29.47,
+   "date": "2026-10-09",
+   "name": "TARGET (LAKE STREET) 100926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Target (Lake Street)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "db19fa17bb6989bb6025bb9c",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 27.46,
+   "date": "2026-10-10",
+   "name": "PANERA BREAD 101026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Panera Bread",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "d55a177cc0350c98d80e28fe",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 8.58,
+   "date": "2026-10-10",
+   "name": "HOLIDAY 101026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "cc2359551395db55400bbf03",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 4.29,
+   "date": "2026-10-10",
+   "name": "HOLIDAY 101026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+    "confidence_level": "LOW"
+   }
+  },
+  {
+   "id": "5b40989ca19107bbc1e452b4",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 38.56,
+   "date": "2026-10-13",
+   "name": "CUB (LAKE STREET) 101326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Cub (Lake Street)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "638762d6e3526bbd8bced6dd",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 66.4,
+   "date": "2026-10-17",
+   "name": "GANDHI MAHAL 101726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Gandhi Mahal",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "636615f5a9acfd075d3ebf25",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 33.26,
+   "date": "2026-10-21",
+   "name": "SEWARD COMMUNITY CO-OP (FRIENDSHIP STORE) 102126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Friendship Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "37af763ed73ed762b4de66c4",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 54.36,
+   "date": "2026-10-23",
+   "name": "LONGFELLOW GRILL 102326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Longfellow Grill",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d0db67dd50a53d7e360ea84c",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 39.86,
+   "date": "2026-10-24",
+   "name": "COSTCO GASOLINE 102426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Costco Gasoline",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "8395f80c82e5fe798c0035f6",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 49.42,
+   "date": "2026-10-25",
+   "name": "HI-LO DINER 102526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Hi-Lo Diner",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "51b9ace603f9f6d66554b6b7",
+   "account_id": "acc_52d76428f8838d397880",
+   "amount": 17.84,
+   "date": "2026-10-27",
+   "name": "OXENDALE'S MARKET 102726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Oxendale's Market",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "ad5d20e5397b6a684cc2da59",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "amount": -27.94,
+   "date": "2026-08-31",
+   "name": "FIDELITY GOVERNMENT MONEY MARKET (SPAXX) DIVIDEND 083126",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fidelity Government Money Market (SPAXX) dividend",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_DIVIDENDS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "19a433e6b10594a873621193",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "amount": -26.88,
+   "date": "2026-09-30",
+   "name": "FIDELITY GOVERNMENT MONEY MARKET (SPAXX) DIVIDEND 093026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fidelity Government Money Market (SPAXX) dividend",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "INCOME",
+    "detailed": "INCOME_DIVIDENDS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5cf6cfc4e80368e05c2346b0",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 36.87,
+   "date": "2026-05-22",
+   "name": "PAYMENT TO NICOLLET FEDERAL CREDIT UNION ..0047 052226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Nicollet Federal Credit Union ..0047",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3be2a66cceb9666a226e6a24",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 428.99,
+   "date": "2026-06-22",
+   "name": "PAYMENT TO NICOLLET FEDERAL CREDIT UNION ..0047 062226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Nicollet Federal Credit Union ..0047",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c84572d99c2c1bd9e9bbf2be",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.6,
+   "date": "2026-09-16",
+   "name": "SPYHOUSE COFFEE 091626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Spyhouse Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c70c58d0d0eecfc540f08dde",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 5.6,
+   "date": "2026-09-09",
+   "name": "PEACE COFFEE (WONDERLAND PARK, MINNEHAHA AVE) 090926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "d8877741bd7303f269054678",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 697.79,
+   "date": "2026-07-22",
+   "name": "PAYMENT TO NICOLLET FEDERAL CREDIT UNION ..0047 072226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Nicollet Federal Credit Union ..0047",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "c5d2da17a40588b13f3191c0",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 5.85,
+   "date": "2026-09-29",
+   "name": "ANGRY CATFISH BICYCLE + COFFEE BAR 092926",
+   "iso_currency_code": "USD",
+   "merchant_name": "Angry Catfish Bicycle + Coffee Bar",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "1a21ee33455a6f0d49ea83d3",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 473.11,
+   "date": "2026-08-24",
+   "name": "PAYMENT TO NICOLLET FEDERAL CREDIT UNION ..0047 082426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Nicollet Federal Credit Union ..0047",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3ee34fcc8b217a3e7bac2ff0",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 6.95,
+   "date": "2026-09-23",
+   "name": "FIVE WATT COFFEE 092326",
+   "iso_currency_code": "USD",
+   "merchant_name": "Five Watt Coffee",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_COFFEE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f367e1e93d11b429134348c6",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 29.0,
+   "date": "2026-09-05",
+   "name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN 090526",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "3bd720252124b4d80ba7a0ff",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 42.16,
+   "date": "2026-09-07",
+   "name": "HOLIDAY 090726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Holiday",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "8a3caae9c22bed21a9074d9b",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 37.48,
+   "date": "2026-09-14",
+   "name": "SEWARD COMMUNITY CO-OP (FRIENDSHIP STORE) 091426",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Friendship Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "c56d11a7b0eaa9dd6ef0403b",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 12.49,
+   "date": "2026-09-19",
+   "name": "ACE HARDWARE LONGFELLOW MINNEAPOLIS MN 091926",
+   "iso_currency_code": "USD",
+   "merchant_name": "ACE HARDWARE LONGFELLOW MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "HOME_IMPROVEMENT",
+    "detailed": "HOME_IMPROVEMENT_HARDWARE",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "f781fa985c70e24a02f29235",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 585.91,
+   "date": "2026-09-22",
+   "name": "PAYMENT TO NICOLLET FEDERAL CREDIT UNION ..0047 092226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Nicollet Federal Credit Union ..0047",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "b47e24ff2c512426ab0ddd72",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 33.71,
+   "date": "2026-09-25",
+   "name": "TARGET (LAKE STREET) 092526",
+   "iso_currency_code": "USD",
+   "merchant_name": "Target (Lake Street)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "GENERAL_MERCHANDISE",
+    "detailed": "GENERAL_MERCHANDISE_SUPERSTORES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "cc241476420fcbf5b5de736d",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 46.85,
+   "date": "2026-09-26",
+   "name": "SEA SALT EATERY 092626",
+   "iso_currency_code": "USD",
+   "merchant_name": "Sea Salt Eatery",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_RESTAURANT",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "848252221dc480b6b4c43069",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 38.27,
+   "date": "2026-09-27",
+   "name": "SPEEDWAY 092726",
+   "iso_currency_code": "USD",
+   "merchant_name": "Speedway",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "TRANSPORTATION",
+    "detailed": "TRANSPORTATION_GAS",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "64a84319f7b44264bd4c747b",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 28.36,
+   "date": "2026-09-30",
+   "name": "SEWARD COMMUNITY CO-OP (FRANKLIN STORE) 093026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Seward Community Co-op (Franklin Store)",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "MEDIUM"
+   }
+  },
+  {
+   "id": "1529e3a09785297d3a4c12a5",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 204.76,
+   "date": "2026-10-22",
+   "name": "PAYMENT TO NICOLLET FEDERAL CREDIT UNION ..0047 102226",
+   "iso_currency_code": "USD",
+   "merchant_name": "Payment to Nicollet Federal Credit Union ..0047",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "other",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "LOAN_PAYMENTS",
+    "detailed": "LOAN_PAYMENTS_CREDIT_CARD_PAYMENT",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "5f761789172f37a4b72cf127",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 26.0,
+   "date": "2026-10-24",
+   "name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN 102426",
+   "iso_currency_code": "USD",
+   "merchant_name": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "in store",
+   "transaction_code": "purchase",
+   "personal_finance_category": {
+    "primary": "FOOD_AND_DRINK",
+    "detailed": "FOOD_AND_DRINK_GROCERIES",
+    "confidence_level": "HIGH"
+   }
+  },
+  {
+   "id": "1717cd54e329ff82689e7122",
+   "account_id": "acc_b0273207578ddc9df93b",
+   "amount": 3000.0,
+   "date": "2026-06-30",
+   "name": "ONLINE TRANSFER TO FIDELITY INVESTMENTS ..4419 063026",
+   "iso_currency_code": "USD",
+   "merchant_name": "Fidelity Investments",
+   "pending": false,
+   "pending_transaction_id": "",
+   "payment_channel": "online",
+   "transaction_code": "transfer",
+   "personal_finance_category": {
+    "primary": "TRANSFER_OUT",
+    "detailed": "TRANSFER_OUT_INVESTMENT_AND_RETIREMENT_FUNDS",
+    "confidence_level": "HIGH"
+   }
+  }
+ ],
+ "transaction_changes": [],
+ "recurring_streams": [],
+ "credit_liabilities": [],
+ "mortgage_liabilities": [],
+ "student_liabilities": [],
+ "securities": [],
+ "holdings": [],
+ "investment_transactions": [
+  {
+   "id": "inv_2d5f1386",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "security_id": "",
+   "date": "2026-05-29",
+   "name": "DIVIDEND RECEIVED FIDELITY GOVERNMENT MONEY MARKET",
+   "type": "cash",
+   "subtype": "dividend",
+   "quantity": 0.0,
+   "price": 0.0,
+   "amount": -17.42,
+   "fees": 0.0,
+   "iso_currency_code": "USD"
+  },
+  {
+   "id": "inv_8e2b471d",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "security_id": "",
+   "date": "2026-06-30",
+   "name": "SEP CONTRIBUTION TAX YEAR 2026",
+   "type": "cash",
+   "subtype": "contribution",
+   "quantity": 0.0,
+   "price": 0.0,
+   "amount": -3000.0,
+   "fees": 0.0,
+   "iso_currency_code": "USD"
+  },
+  {
+   "id": "inv_a3c7584f",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "security_id": "",
+   "date": "2026-06-30",
+   "name": "DIVIDEND RECEIVED FIDELITY GOVERNMENT MONEY MARKET",
+   "type": "cash",
+   "subtype": "dividend",
+   "quantity": 0.0,
+   "price": 0.0,
+   "amount": -17.86,
+   "fees": 0.0,
+   "iso_currency_code": "USD"
+  },
+  {
+   "id": "inv_7c4f852b",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "security_id": "",
+   "date": "2026-07-31",
+   "name": "DIVIDEND RECEIVED FIDELITY GOVERNMENT MONEY MARKET",
+   "type": "cash",
+   "subtype": "dividend",
+   "quantity": 0.0,
+   "price": 0.0,
+   "amount": -27.71,
+   "fees": 0.0,
+   "iso_currency_code": "USD"
+  },
+  {
+   "id": "inv_3f7b140a",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "security_id": "",
+   "date": "2026-08-31",
+   "name": "DIVIDEND RECEIVED FIDELITY GOVERNMENT MONEY MARKET",
+   "type": "cash",
+   "subtype": "dividend",
+   "quantity": 0.0,
+   "price": 0.0,
+   "amount": -27.94,
+   "fees": 0.0,
+   "iso_currency_code": "USD"
+  },
+  {
+   "id": "inv_6c9d507b",
+   "account_id": "acc_b4a47645bc0a1832b04b",
+   "security_id": "",
+   "date": "2026-09-30",
+   "name": "DIVIDEND RECEIVED FIDELITY GOVERNMENT MONEY MARKET",
+   "type": "cash",
+   "subtype": "dividend",
+   "quantity": 0.0,
+   "price": 0.0,
+   "amount": -26.88,
+   "fees": 0.0,
+   "iso_currency_code": "USD"
+  }
+ ]
+}

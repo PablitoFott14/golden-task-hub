@@ -1,0 +1,1138 @@
+{
+ "reminders": [
+  {
+   "reminder_id": "3b9e71c4a0d258f6e1c7b04a",
+   "title": "Invoice North Current: May retainer",
+   "due_datetime": 1777471200.0,
+   "description": "INV-2026-029, $1,500.00 for the May fact-check column, to ap@northcurrentmag.com. Log it in the 2026 invoice sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1777471200.0
+  },
+  {
+   "reminder_id": "8f3c0a61d94e27b5c1e06a7d",
+   "title": "Move the car: spring street sweeping",
+   "due_datetime": 1778031000.0,
+   "description": "City text says our block of 34th Ave S, E 41st St to E 42nd St, gets swept Wednesday, May 6. Cars left on posted streets get ticketed and towed.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1777989600.0
+  },
+  {
+   "reminder_id": "2b97e4d0c6a15f38e02d9c41",
+   "title": "May fact-check column to Hana",
+   "due_datetime": 1779285600.0,
+   "description": "'Mississippi is America's dirtiest river.' Copy to Hana by Wednesday, May 20, with the sources listed at the bottom.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1779285600.0
+  },
+  {
+   "reminder_id": "c62f0a8d3e5b17947a2d6e0f",
+   "title": "Invoice North Current: June retainer",
+   "due_datetime": 1779804000.0,
+   "description": "INV-2026-032, $1,500.00 for the June fact-check column, to ap@northcurrentmag.com. Log it in the 2026 invoice sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1779804000.0
+  },
+  {
+   "reminder_id": "d5a1e870f3b26c49a8d07e13",
+   "title": "File Ice-out on the Big Lake for the Dispatch",
+   "due_datetime": 1780063200.0,
+   "description": "About 1,800 words to Marcus by Friday, May 29, in a Google Doc shared to his Dispatch address. Keep the GLERL ice-chart dates in the margin comments for the copy desk.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780063200.0
+  },
+  {
+   "reminder_id": "41c6f92b08e7d3a5f61b9e20",
+   "title": "Stain the back steps",
+   "due_datetime": 1780149600.0,
+   "description": "Leif replaced two treads and a stringer on May 12 and said to give the new wood a couple of weeks to dry before staining.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780149600.0
+  },
+  {
+   "reminder_id": "a0e57d3c19b84f62d7a3c05e",
+   "title": "Pick up the hold at Nokomis Library",
+   "due_datetime": 1780434000.0,
+   "description": "One item on the hold shelf. The library's text says the hold expires Wednesday, June 3.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780434000.0
+  },
+  {
+   "reminder_id": "7e04b9a1c58d23f6b0e9c7d2",
+   "title": "Invoice the Dispatch: Ice-out on the Big Lake",
+   "due_datetime": 1781013600.0,
+   "description": "INV-2026-034, $3,400.00. Marcus said invoice on acceptance, and his edits are done. To finance@greatlakesdispatch.org.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781013600.0
+  },
+  {
+   "reminder_id": "6d2f81b4e09a73c5b8e14f6a",
+   "title": "Pick up the kayak at Northwoods Paddle Repair",
+   "due_datetime": 1781296200.0,
+   "description": "Ticket 2241: new stainless skeg cable, sleeve and set screw, $68.50 with tax. Told them around 4 p.m. I want it back for Saturday's paddle.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781296260.0
+  },
+  {
+   "reminder_id": "c93b05e7a2f164d8e3c70b19",
+   "title": "Q2 estimated taxes: IRS and Minnesota",
+   "due_datetime": 1781532000.0,
+   "description": "From savings 5530: $3,050.00 federal through IRS Direct Pay and $780.00 through Minnesota e-Services. Log both in the 2026 tax reserve sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781532000.0
+  },
+  {
+   "reminder_id": "0f7a4c2e96d153b8a40e7d62",
+   "title": "June fact-check column to Hana",
+   "due_datetime": 1781704800.0,
+   "description": "'Ice-out came a month early on every Minnesota lake.' Copy by Wednesday, June 17. Cite the DNR ice-out page and the pull date.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781704800.0
+  },
+  {
+   "reminder_id": "e2d8b16f4a07c95e1b3d8a04",
+   "title": "Pick up The Great Lakes Water Wars at Roosevelt Library",
+   "due_datetime": 1782162000.0,
+   "description": "Peter Annin's book is on the self-service hold shelf. The library's email says to pick it up by Tuesday, June 23. Bring the library card.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782162000.0
+  },
+  {
+   "reminder_id": "57b0c3a9e1d48f26c05a9e7b",
+   "title": "Adapt SEJ's state records letter for Minnesota",
+   "due_datetime": 1782396000.0,
+   "description": "SEJ's sample letters came after the webinar. Hana wants a Minnesota version in the freelancer folder so other writers aren't starting from scratch.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782396000.0
+  },
+  {
+   "reminder_id": "a15d8c3f7e2b0964f19b2e70",
+   "title": "Invoice North Current: July retainer",
+   "due_datetime": 1782399600.0,
+   "description": "INV-2026-035, $1,500.00 for the July fact-check column, to ap@northcurrentmag.com. Log it in the 2026 invoice sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782399600.0
+  },
+  {
+   "reminder_id": "b4e6a29d0f73c18e5a62d9f0",
+   "title": "Order Toby's dry bag from REI",
+   "due_datetime": 1782568800.0,
+   "description": "SealLine roll-top, 20 liters, orange. Ship it straight to Bozeman as a gift so it gets there before the 8th.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782568800.0
+  },
+  {
+   "reminder_id": "e8a27f5b0c94d316b5d0193c",
+   "title": "Renew the car tabs",
+   "due_datetime": 1782655200.0,
+   "description": "Driver and Vehicle Services renewal, $186.25 online. The current sticker runs out at the end of June.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782655200.0
+  },
+  {
+   "reminder_id": "3c81e5f7a06b92d4e1f85c3a",
+   "title": "SEP-IRA contribution before the end of June",
+   "due_datetime": 1782828000.0,
+   "description": "$3,000.00 into the Fidelity SEP-IRA ending 4419, tax year 2026.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782828000.0
+  },
+  {
+   "reminder_id": "b7d42e9a10c6f3858e2a71d4",
+   "title": "Tag Q2 business charges for Ingrid",
+   "due_datetime": 1783432800.0,
+   "description": "Go through the Visa for April to June and tag the business charges. She wants totals by category for the tax sheet, not every receipt.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783432800.0
+  },
+  {
+   "reminder_id": "4d7c1e9a03b6f58270fa86e3",
+   "title": "Call Toby for his birthday",
+   "due_datetime": 1783557000.0,
+   "description": "7:30 our time, once he's home. He's off at 6 Bozeman time. Ingrid has it on the fridge.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783519200.0
+  },
+  {
+   "reminder_id": "f60d2a8c4b19e37d0a6c52e8",
+   "title": "Return or renew the two Great Lakes books",
+   "due_datetime": 1783605600.0,
+   "description": "The Great Lakes Water Wars and The Living Great Lakes are due Thursday, July 9. Renew in the HCL app unless someone has a hold. We leave for Tettegouche Friday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783605660.0
+  },
+  {
+   "reminder_id": "9a4e17c3d82f05b6e9d41a7c",
+   "title": "Vehicle permit at Tettegouche",
+   "due_datetime": 1783688400.0,
+   "description": "The DNR confirmation for reservation 1-28817406 says a vehicle permit isn't included. Buy the annual one at the park office when we check in, $35.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783688400.0
+  },
+  {
+   "reminder_id": "9f2b6e0d4a8c1375e4c61a08",
+   "title": "Electrician: Nate Okafor at 8",
+   "due_datetime": 1784205900.0,
+   "description": "He's looking at the office circuit, which trips every time the window AC kicks on. Figures about an hour.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784205900.0
+  },
+  {
+   "reminder_id": "1a6e3d8f5c02b947b38f0d25",
+   "title": "Lisa's shoulder talk at club night",
+   "due_datetime": 1784676600.0,
+   "description": "Minnesota Paddlers club night, Nokomis Community Center at 7. Told her I'd be there.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784642400.0
+  },
+  {
+   "reminder_id": "1e5c9b02f8d64a37c1e09b5d",
+   "title": "July fact-check column to Hana",
+   "due_datetime": 1784728800.0,
+   "description": "'Minnesota lost half its wetlands since 2000.' Due Wednesday, July 22. Put the historic loss up top so it doesn't read like the wetlands are fine.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784728800.0
+  },
+  {
+   "reminder_id": "d3c5a0e7b9f146827e21c4fd",
+   "title": "Lunch with Joel at Longfellow Grill",
+   "due_datetime": 1784825100.0,
+   "description": "Noon Thursday. Joel asked about lunch this week and I suggested the Grill.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784825100.0
+  },
+  {
+   "reminder_id": "d07b3e8a52c1f946b0d27e5a",
+   "title": "Final of Canoe Country's Quiet Lakes to Field & Flow",
+   "due_datetime": 1784901600.0,
+   "description": "Clean final in the shared Google Doc with the second-round comments resolved, plus the source list for the fact-checker.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784901600.0
+  },
+  {
+   "reminder_id": "74f2a0c6e3b958d1f47a2c0e",
+   "title": "Haugens' mail and tomatoes",
+   "due_datetime": 1784932200.0,
+   "description": "Tom and Kari are up north Friday to Sunday. Grab their mail and water the tomatoes. Key is under the frog.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784932200.0
+  },
+  {
+   "reminder_id": "6b8f2d4e1a7c095bc0e4973a",
+   "title": "Send INV-2026-037 to Field & Flow",
+   "due_datetime": 1785160800.0,
+   "description": "Canoe Country's Quiet Lakes, $6,500.00, dated July 24. Told the features desk it would go to accounts payable Monday. To ap@fieldandflowmag.com.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785160800.0
+  },
+  {
+   "reminder_id": "f04e9c7b2d5a8136e8a17d52",
+   "title": "Invoice North Current: August retainer",
+   "due_datetime": 1785162600.0,
+   "description": "INV-2026-038, $1,500.00 for the August fact-check column, to ap@northcurrentmag.com. Log it in the 2026 invoice sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785162600.0
+  },
+  {
+   "reminder_id": "c1a68e40d5f27b93a6e15d08",
+   "title": "File Who pays for beach closures for the Dispatch",
+   "due_datetime": 1785506400.0,
+   "description": "About 1,500 words to Marcus by Friday, July 31, moved from July 24 so it wouldn't land on the Field & Flow final. Page references for the money figures go in the margin comments.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785506400.0
+  },
+  {
+   "reminder_id": "2f9d63b1a07e4c58d2f96b13",
+   "title": "Pick up two holds at Nokomis Library",
+   "due_datetime": 1785790800.0,
+   "description": "Two items on the hold shelf. The library's text says the holds expire Tuesday, Aug. 4.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785790800.0
+  },
+  {
+   "reminder_id": "28c1f6a9e3d70b5c4f2a8e16",
+   "title": "Invoice the Dispatch: Who pays for beach closures",
+   "due_datetime": 1785852000.0,
+   "description": "INV-2026-040, $2,600.00, on acceptance like the ice-out piece. Marcus's edits are in. To finance@greatlakesdispatch.org.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785852000.0
+  },
+  {
+   "reminder_id": "8b03e7c5f1a92d64b8e0c7a5",
+   "title": "National Night Out: grill, table and extension cord",
+   "due_datetime": 1785879000.0,
+   "description": "Street closes at 5 on 34th Ave S. Bring the grill, the folding table and the long extension cord for the speaker.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785879000.0
+  },
+  {
+   "reminder_id": "b7d3e05a8f2c61942f6c8b31",
+   "title": "Pick up Maren at MSP",
+   "due_datetime": 1786745700.0,
+   "description": "Her flight lands at 6:10. Wait at arrivals; she'll text when she has her bag.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786745760.0
+  },
+  {
+   "reminder_id": "e7c42a19b6d03f85e7a1d4c2",
+   "title": "Eye exam at Riverview, 3 p.m.",
+   "due_datetime": 1787080500.0,
+   "description": "Walk over, not the bike: they dilate at a first exam. Bring the +1.25 readers so the doctor can compare. Self-pay exam is $95.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787080560.0
+  },
+  {
+   "reminder_id": "05d8f6b3c2e9147a0d5b8f6e",
+   "title": "August fact-check column to Hana",
+   "due_datetime": 1787148000.0,
+   "description": "'Downtown nights are 15°F hotter.' Copy by Wednesday, Aug. 19. Lena is holding a half page for the heat map.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787148000.0
+  },
+  {
+   "reminder_id": "5e9a4c2f8b1d0736c7f2e05a",
+   "title": "Ben's Ledger years show opening",
+   "due_datetime": 1787350500.0,
+   "description": "Northrup King Building, 6 to 8. Told Ben that Ingrid and I would be there.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787350500.0
+  },
+  {
+   "reminder_id": "0c7b5e3a9d4f28169a3d07be",
+   "title": "Invoice North Current: September retainer",
+   "due_datetime": 1787666400.0,
+   "description": "INV-2026-041, $1,500.00 for the September fact-check column, to ap@northcurrentmag.com. Log it in the 2026 invoice sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787666400.0
+  },
+  {
+   "reminder_id": "0d4c7b9e2f61a8e3b05dc7f2",
+   "title": "Ask Marcus about a Hollis reference",
+   "due_datetime": 1788357600.0,
+   "description": "Two references needed. Deadline Sept. 15.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788357600.0
+  },
+  {
+   "reminder_id": "a9f17e2d40c63b58f1a9e2d7",
+   "title": "Send Hana the road-salt pitch",
+   "due_datetime": 1788876000.0,
+   "description": "A few paragraphs in writing, per the Sept. 1 edit meeting. She's holding the November feature slot for a couple of weeks. Read the district's June report properly first.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788876000.0
+  },
+  {
+   "reminder_id": "a9e6d2b0c7f53e185c18f4a7",
+   "title": "Send Sharon the records-request letter",
+   "due_datetime": 1789311600.0,
+   "description": "The Minnesota data practices template adapted from SEJ's sample, for her reporting class at the U. Promised it this weekend. It's in the Reference folder.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789311600.0
+  },
+  {
+   "reminder_id": "71f8c3e6a0b9d425b96e2d03",
+   "title": "Denise's 70th open house",
+   "due_datetime": 1789324200.0,
+   "description": "Her daughter is hosting, 2 to 5. Both of us are going. She said no gifts.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789324200.0
+  },
+  {
+   "reminder_id": "6f1ea3d0c87b52f91e4a0d6b",
+   "title": "Submit Hollis application",
+   "due_datetime": 1789394400.0,
+   "description": "Portal closes Tues., Sept. 15, at 11:59 p.m. CT. Proposal, three clips, budget.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789394400.0
+  },
+  {
+   "reminder_id": "63e0b5a8d1c7f294e6b03a5c",
+   "title": "Q3 estimated taxes: IRS and Minnesota",
+   "due_datetime": 1789480800.0,
+   "description": "From savings 5530: $3,050.00 federal through IRS Direct Pay and $780.00 through Minnesota e-Services, same as June.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789480800.0
+  },
+  {
+   "reminder_id": "c4b0a7e2f9d613850d7a3fc9",
+   "title": "Help Bev move her window AC",
+   "due_datetime": 1789509600.0,
+   "description": "Down to her basement, Tuesday after five. Bring the dolly.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789509600.0
+  },
+  {
+   "reminder_id": "e2d9f5a1b6c3087ea1f40c68",
+   "title": "Ledger dinner at Merlins, 6:30",
+   "due_datetime": 1789686000.0,
+   "description": "Joel booked a table in the back under Ostrander. Early night: the car goes in at Tires Plus at 8 tomorrow.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789653600.0
+  },
+  {
+   "reminder_id": "36a7c0e4d8b2f915c8d0b7e4",
+   "title": "Oil change at Tires Plus, 8 a.m.",
+   "due_datetime": 1789733400.0,
+   "description": "Leave at 7:25 and drop Ingrid at school on the way. Full synthetic, about 45 minutes.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789732500.0
+  },
+  {
+   "reminder_id": "8d1e5b7c3a9f064271b5ce9a",
+   "title": "New latch for the side gate",
+   "due_datetime": 1789830000.0,
+   "description": "The catch let go and the gate banged half the night. A bungee is holding it for now. Told Bev I'd put a new one on this weekend.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789830060.0
+  },
+  {
+   "reminder_id": "bd2a94e06f1c38d7a5b29e40",
+   "title": "Invoice North Current: Salt in the Lakes advance",
+   "due_datetime": 1790020800.0,
+   "description": "INV-2026-043, $2,250.00, half of the $4,500 fee per Hana's assignment letter. To ap@northcurrentmag.com with Hana copied.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790020800.0
+  },
+  {
+   "reminder_id": "3e91c5a07f2d84b6c1e09a53",
+   "title": "Pick up reading glasses from Ben",
+   "due_datetime": 1790026200.0,
+   "description": "Left them by the bread basket at Merlins on Thursday. Ben has them. Told Joel I'd get them this week.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790026260.0
+  },
+  {
+   "reminder_id": "4a7e1c83f05d92b6e4a71c38",
+   "title": "September fact-check column to Hana",
+   "due_datetime": 1790172000.0,
+   "description": "'Superior is warming faster than any lake on Earth.' Due Wednesday, Sept. 23. Spell out what each study measured, and keep the brewery out of it.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790172000.0
+  },
+  {
+   "reminder_id": "f1b85d27e9a04c63b1f58d2a",
+   "title": "Send R. the draft site list",
+   "due_datetime": 1790208000.0,
+   "description": "Promised on Messenger this week. Corliss for its long record, at least one of the new inlet or outlet stations, and a backup in case a site is blocked.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790172000.0
+  },
+  {
+   "reminder_id": "b0f3a8d6e2c715946e0a2c4b",
+   "title": "Invoice North Current: October retainer",
+   "due_datetime": 1790258400.0,
+   "description": "INV-2026-044, $1,500.00 for the October fact-check column, to ap@northcurrentmag.com. Log it in the 2026 invoice sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790258400.0
+  },
+  {
+   "reminder_id": "4a2c9e7f1d5b38e6f7c3b051",
+   "title": "Creek cleanup at the falls pavilion",
+   "due_datetime": 1790428500.0,
+   "description": "Longfellow Neighbors, 9 to noon in Minnehaha Park. Work gloves, boots and water. Ingrid is coming too.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790428500.0
+  },
+  {
+   "reminder_id": "0c6e3a95b72d14f8c0e6a39b",
+   "title": "Library book due Friday",
+   "due_datetime": 1790863200.0,
+   "description": "The library's text says one item is due Friday, Oct. 2. Renew it in the HCL app if I'm not finished with it.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790863200.0
+  },
+  {
+   "reminder_id": "7b2f94c1e06d3a58f1c4e09b",
+   "title": "Check site access with the district before Saturday",
+   "due_datetime": 1791208800.0,
+   "description": "Ask Luis Ferreira whether the Penner outlet and the Lake Odegaard north inlet can be reached from public land without a district escort, and whether either station has equipment we should stay clear of.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791208800.0
+  },
+  {
+   "reminder_id": "9e28d7f1c4b05a63e9d28f7c",
+   "title": "Look over the 2027 production calendar",
+   "due_datetime": 1791210600.0,
+   "description": "Hana wants it read before Tuesday's edit meeting, Oct. 6 at 10. Lena's link is in #salt-story with the November layout schedule.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791210600.0
+  },
+  {
+   "reminder_id": "e3a8d05f7c1b49e26a0d8f53",
+   "title": "Pick up Salt: A World History at Roosevelt Library",
+   "due_datetime": 1791232200.0,
+   "description": "Kurlansky's salt history, on the self-service hold shelf. The library's email says to pick it up by Tues., Oct. 6. Bring the library card.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791232200.0
+  },
+  {
+   "reminder_id": "f7e1b4c9d03a65823b9e0d6a",
+   "title": "Lab quotes and Duluth numbers for the edit meeting",
+   "due_datetime": 1791293400.0,
+   "description": "Edit meeting at 10. Bring both lab quotes, Riverside $384.00 and Northstar $260.00, and a rough Duluth number: airfare plus two hotel nights.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791293400.0
+  },
+  {
+   "reminder_id": "5b1f0c48a3e6d927b5f10c4a",
+   "title": "Send Lena the district's station map",
+   "due_datetime": 1791381600.0,
+   "description": "For the quarter-page site map in the salt package. Lake names on the map, site codes in a small key.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791381660.0
+  },
+  {
+   "reminder_id": "19d6a3f0e8c4b725e0a79c3f",
+   "title": "Brine truck at Longfellow Park, 3:30 to 5",
+   "due_datetime": 1791403200.0,
+   "description": "Public Works is showing one of its brine trucks, per the Longfellow Neighbors post. Ask how far ahead of a storm they spray and how much rock salt it saves. Go straight there from Riverside.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791403200.0
+  },
+  {
+   "reminder_id": "c8d43b7e1f02a96d8c4b37e1",
+   "title": "Call Lakehead Books with the deposit",
+   "due_datetime": 1791571500.0,
+   "description": "$100 by card over the phone holds the Olson through Friday, Nov. 6. Arne won't take card numbers by email. In from 10 to 5, (218) 555-0190.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791571500.0
+  },
+  {
+   "reminder_id": "2d9f6b0e48c13a752d9f6b1c",
+   "title": "Cooler and ice for Saturday",
+   "due_datetime": 1791585000.0,
+   "description": "Big cooler from the basement. Two bags of ice Saturday morning, plus labels and a marker.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791585000.0
+  },
+  {
+   "reminder_id": "e04a7c19b3f5d826e04a7c2b",
+   "title": "Ice samples; labs Monday",
+   "due_datetime": 1791661200.0,
+   "description": "Fresh ice tonight and Sunday night. Monday: Riverside in Coon Rapids first, then Northstar in Bloomington. COC forms are in the cooler lid.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791661200.0
+  },
+  {
+   "reminder_id": "1a95e2c0d76f43b81a9e5c2d",
+   "title": "Ask both labs for their QC with the results",
+   "due_datetime": 1791811800.0,
+   "description": "At drop-off: ask Riverside and Northstar to send their batch QC along with the chloride results.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791811800.0
+  },
+  {
+   "reminder_id": "4c91f3e0b7a2d658e1f04c3b",
+   "title": "Go through MLWD v2 line by line",
+   "due_datetime": 1791900000.0,
+   "description": "v1 vs v2: Table 3 and the p. 3 errata. Both PDFs are in Agency_Reports.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791899100.0
+  },
+  {
+   "reminder_id": "9b5e2d7f0c83a46e1f0a8c37",
+   "title": "Call Toby about the anniversary",
+   "due_datetime": 1791937800.0,
+   "description": "Grand Marais, Nov. 20 to 22. Maren wants him collecting notes from family and friends for the back of her book.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791900000.0
+  },
+  {
+   "reminder_id": "e40b7d1f9a3c25e84b0d7f19",
+   "title": "Book Duluth: flights and the Lakewalk Inn",
+   "due_datetime": 1792024200.0,
+   "description": "Up Wednesday, Nov. 4, home Friday, Nov. 6, for the Marchand interview Thursday morning. Hana approved travel up to $800. Put it on the Visa and keep the receipts for North Current.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791986400.0
+  },
+  {
+   "reminder_id": "71f3d8b46e0c2a95f17d3b8e",
+   "title": "Call Priya at Riverside re COC line 2",
+   "due_datetime": 1792162800.0,
+   "description": "WO-26-10418. (763) 555-0114.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792162860.0
+  },
+  {
+   "reminder_id": "7d6a28c5e0b1f493d7a62c8e",
+   "title": "Answer Hana's two open questions in the tracker",
+   "due_datetime": 1792164600.0,
+   "description": "She left three on Oct. 13 and the p. 14 one is answered. Still open: what the budget increase pays for, and whether Lena could chart the snowmelt numbers.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792163700.0
+  },
+  {
+   "reminder_id": "b29e05f3c8d74a16b2e95f0c",
+   "title": "Storm windows at Denise's: bring the ladder",
+   "due_datetime": 1792248300.0,
+   "description": "Saturday at 10, about an hour. Swap the storm windows in for winter; her knees are done with ladders.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792248300.0
+  },
+  {
+   "reminder_id": "a6f08d3c52e19b74d0c38e61",
+   "title": "Scan the shoebox photos for Maren",
+   "due_datetime": 1792263600.0,
+   "description": "Hall closet shoebox, the wedding through 2005. Best-guess dates in the file names. First batch goes to her email.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792263600.0
+  },
+  {
+   "reminder_id": "3f74c1a6e2d09b58f3c71a6e",
+   "title": "October fact-check column to Hana",
+   "due_datetime": 1792504800.0,
+   "description": "'Monarchs crashed 90% this year.' Lena needs final copy by Tuesday, Oct. 20 for layout. Draft to Hana Friday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792504800.0
+  },
+  {
+   "reminder_id": "d8e15b92a0f63c47d8e1b5a9",
+   "title": "Move the car: street sweeping Wednesday",
+   "due_datetime": 1792546200.0,
+   "description": "City text says our block of 34th Ave S gets its fall sweeping Wednesday, Oct. 21. Cars left on posted streets get ticketed and towed.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792504800.0
+  },
+  {
+   "reminder_id": "d5b8e2c6f1a9037b84c1e6d0",
+   "title": "Send Lena the Odegaard north inlet table",
+   "due_datetime": 1792591200.0,
+   "description": "For the small spike chart under the sidebar. It's one winter of inlet data, so the caption has to say so, and it gets its own axis starting at zero. Told her the table would follow the monarch draft.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792590300.0
+  },
+  {
+   "reminder_id": "5c2e7a91f04db836a9e5170c",
+   "title": "Hollis: send interview slot choice",
+   "due_datetime": 1792677600.0,
+   "description": "New message to Celeste Odum with my name and the slot number in the subject line. Due by Friday, Oct. 23; slots go in the order received.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792677600.0
+  },
+  {
+   "reminder_id": "60a3f8d24c9e1b75a0f38d2c",
+   "title": "Text Neil back about a beer at Merlins",
+   "due_datetime": 1792854000.0,
+   "description": "He's in town Thanksgiving week to see his mom. Maren and Toby land Wednesday the 25th, so Monday or Tuesday night works better.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792853100.0
+  },
+  {
+   "reminder_id": "4f0c7e2a9b13d85e6c2f0a71",
+   "title": "Pick up the hold at East Lake Library",
+   "due_datetime": 1792857600.0,
+   "description": "One item waiting on the hold shelf. The library's text says the hold expires Tues., Oct. 27.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792857600.0
+  },
+  {
+   "reminder_id": "e0a6c3f8d2b5719e0c4a6d28",
+   "title": "Scan the basement album for Maren",
+   "due_datetime": 1792870200.0,
+   "description": "2006 on. Second batch goes to her Sunday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792870200.0
+  },
+  {
+   "reminder_id": "a5c92e07b4d18f63c5a2e9b1",
+   "title": "Invoice North Current: November retainer",
+   "due_datetime": 1793023200.0,
+   "description": "INV-2026-046, $1,500.00 for the November fact-check column, to ap@northcurrentmag.com. Log it in the 2026 invoice sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793023200.0
+  },
+  {
+   "reminder_id": "d18b4f6e0a73c925b4e86f02",
+   "title": "Call Lakehead Books about the pickup",
+   "due_datetime": 1793026800.0,
+   "description": "Arne Halvorsen, (218) 555-0190, in from 10 to 5. Set the pickup for Thursday, Nov. 5, at 3 p.m.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793026860.0
+  },
+  {
+   "reminder_id": "2e0d6b4f91a7c35e8d0b6f4a",
+   "title": "Move the car: street sweeping Tuesday",
+   "due_datetime": 1793064600.0,
+   "description": "Public Works email has 4127 34th Ave S down for Tuesday, Oct. 27, 7 a.m. to 4:30 p.m. The city's text said the 21st, so the car stays off the street again.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793023200.0
+  },
+  {
+   "reminder_id": "f2c6e9a4d1b7385cf2e6a9d4",
+   "title": "Get back to Hana on edit-meeting times, week of Nov 9",
+   "due_datetime": 1793307600.0,
+   "description": "In person at the office, about 90 minutes.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793307600.0
+  },
+  {
+   "reminder_id": "a6d1f8e3c05b47920e8b3d6c",
+   "title": "Shoulder: wall slides and band pull-aparts",
+   "due_datetime": 1793362500.0,
+   "description": "Two sets of 15 of each, every morning. Lisa Moberg's advice for the right shoulder after the St. Croix trip in June.",
+   "repetition_unit": "day",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "7a3d9e05c1b64f28e0d7a3b9",
+   "title": "Send Ingrid the Duluth flight times and hotel",
+   "due_datetime": 1793363400.0,
+   "description": "She wants them in the family calendar entry in case she needs to reach me.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "e0a95b3c7d28f41e6a0c95b7",
+   "title": "Return Riverside cooler",
+   "due_datetime": 1793368800.0,
+   "description": "Loaner cooler and ice packs back to Riverside Analytical in Coon Rapids.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "5e1a8d3f6b9c2e47a5d1f8b3",
+   "title": "Send Hana top 5",
+   "due_datetime": 1793368800.0,
+   "description": "Re-rank the Claims table for the cleanup-cost angle, then send her the top five.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "e4b2071f8c9d36a5f1c4e870",
+   "title": "Riverside QA close-out: WO-26-10418",
+   "due_datetime": 1793370600.0,
+   "description": "Priya needs COC line 2 settled before QA closes October work orders on Friday, Oct. 30. (763) 555-0114.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "9e4b2c07f3a1d68e5b0c9f24",
+   "title": "Get back to Dr. Marchand about her two requests",
+   "due_datetime": 1793372400.0,
+   "description": "Her Oct. 26 email asks for the Oct. 10 field photos and copies of both labs' COC forms before the interview on Thursday, Nov. 5. She'd like them by the end of this week.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "d27f5a0e8c3b16f49a2e7c05",
+   "title": "Halloween candy for Saturday",
+   "due_datetime": 1793394000.0,
+   "description": "Lorraine says the block had over 200 trick-or-treaters last year. Porch light on Saturday evening.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "0f6c93a2d58e1b47c3a9f0e6",
+   "title": "Send Ingrid October business expenses",
+   "due_datetime": 1793395800.0,
+   "description": "Totals by category for the tax sheet, like the Q2 list in July. She wants October closed out by the weekend.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "92e1d7b40a5c3f68d2e47b1a",
+   "title": "Answer Ingrid about dinner with Kari and Tom",
+   "due_datetime": 1793455200.0,
+   "description": "Kari and Tom asked about Saturday, Nov. 21. She asked whether to say yes.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "1c8e6b3f0a92d47c5e1b8f36",
+   "title": "Household transfer: $2,400 to the joint account",
+   "due_datetime": 1793629800.0,
+   "description": "Recurring transfer from checking 5512 to the joint household account at Ingrid's credit union, for the mortgage and bills. It goes out on the first business day of the month, so make sure checking can cover it.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c5a80e3f7d21b964a0f5c38d",
+   "title": "Tax reserve: 25% of the retainer to savings",
+   "due_datetime": 1793631600.0,
+   "description": "$375.00 from checking 5512 to savings 5530 once the North Current retainer posts. Log it in the 2026 tax reserve sheet.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f9a3c58e2d06b17a4f9c3e85",
+   "title": "MLWD 2027 budget: check the board's November agenda",
+   "due_datetime": 1793633400.0,
+   "description": "Public comment on the draft budget closed Friday, Oct. 30. The Board of Managers takes up the final budget at its November meeting. Agendas post at metrolakeswd.org/board.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "4c8e2b17f9a03d6e5b1c7a24",
+   "title": "Print Marchand questions",
+   "due_datetime": 1793718000.0,
+   "description": "Question list for Thursday in Duluth. Bring the Sept. 30 transcript and spare recorder batteries.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a71d5f3e0c9b28e4f6d1b83c",
+   "title": "Check in for DL 3614",
+   "due_datetime": 1793720700.0,
+   "description": "Delta app, booking QK4T7B. Departs MSP 9:40 a.m. Wednesday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b58e2d0f9c4a13e76f2b0d8c",
+   "title": "Print both lab reports for Duluth",
+   "due_datetime": 1793736000.0,
+   "description": "Results pages from Riverside WO-26-10418 and Northstar NS-4471 for Thursday's interview. Told Dr. Marchand on Oct. 19 that I'd bring the Oct. 10 results.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "8d4f1b6e3a9c27d05e8b4f13",
+   "title": "Lakehead balance $325",
+   "due_datetime": 1793904300.0,
+   "description": "Pickup 3 p.m. at Lakehead Books. $100 deposit paid Oct 9.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "4d7f1b2e96c0a385e7b1d4f9",
+   "title": "Check in for DL 3627",
+   "due_datetime": 1793920800.0,
+   "description": "Delta app, booking QK4T7B. Departs DLH 5:15 p.m. Friday. The Lakewalk desk will hold my bag after checkout.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "1e5a9d3c7f0b2648a1e5d9c3",
+   "title": "Follow up: Prairie Wire INV-2026-045",
+   "due_datetime": 1794236400.0,
+   "description": "Invoiced Oct. 5 for September short pieces, $1,050.00. They usually pay in five to six weeks. Email accounts@prairiewire.com if it hasn't landed.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "d2f6b09a8e4c17359c0a6e7f",
+   "title": "Bill North Current for Duluth travel",
+   "due_datetime": 1794240000.0,
+   "description": "Flight $289.40 and Lakewalk Inn $371.88, both on the Visa. Add cab fares and meals from the trip.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c7b1e5f9a3d6082c7e1b5f9a",
+   "title": "Expense invoice to North Current: labs + Duluth",
+   "due_datetime": 1794241800.0,
+   "description": "Riverside $384.00, Northstar $260.00, Delta $289.40, Lakewalk Inn $371.88. Lab invoices are in Labs, travel receipts in the Duffel emails.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f5a03d9c2e7b18640d3f6a8e",
+   "title": "Find the original source for the 40 percent applicator figure",
+   "due_datetime": 1794243600.0,
+   "description": "Tracker claim C11. The Salt Watch blog puts applicators at about 40 percent of metro salt, from something heard at a winter maintenance expo. Look for the survey or agency estimate behind it.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f3c69a0d2e84b157c6f29e3a",
+   "title": "Book a dental cleaning",
+   "due_datetime": 1794252600.0,
+   "description": "Nokomis Dental Care says I'm overdue for the six-month cleaning. They have November openings.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a9f61e3cd58b07a4c2e96b1f",
+   "title": "Hollis prep: 3 clips + budget answer",
+   "due_datetime": 1794322800.0,
+   "description": "Reread the three clips. Short answer on the reporting budget: lab fees, travel, records.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "18e5b7c3a0f94d62b8e1c7a5",
+   "title": "Hollis interview: on Zoom by 12:50",
+   "due_datetime": 1794508800.0,
+   "description": "Sound check at 12:50, interview 1 to 2 p.m. Meeting ID 841 5062 7193; the link is in Celeste's Oct. 22 email. Have the three clips and the reporting budget open.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6b04f9d2e3a1c87b5d0e2f46",
+   "title": "Tell Marcus how the Hollis interview went",
+   "due_datetime": 1794517200.0,
+   "description": "Said I'd let him know how it goes.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a29d5e8c17f03b46e9a2d0c7",
+   "title": "Art list and photo selects to Lena",
+   "due_datetime": 1794582000.0,
+   "description": "Salt package, per Lena's November schedule. Chart sidebar, the district's site map for the quarter-page map (lake names, site codes in a key) and the cost graphic.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "0b5d8a2f7e4c1b69d0a5f8e2",
+   "title": "Answer Hana on the spring Pepin series",
+   "due_datetime": 1794585600.0,
+   "description": "Feb to May, three or four parts.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "2c7e5a9f1b3d08e64a7c2f95",
+   "title": "Tell Ingrid to pack",
+   "due_datetime": 1795181400.0,
+   "description": "When she's home from school. Warm layers, boots, the good wool socks. Leave by 4:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "4c18b7e3a95d02f6c1b8e7a4",
+   "title": "Visa autopay on the 22nd",
+   "due_datetime": 1795183200.0,
+   "description": "Nicollet FCU pays the full Visa 0047 statement balance from checking 5512 on the 22nd. Make sure checking covers it.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6b9d1e4a7f20c35e8b4d1a97",
+   "title": "File Salt in the Lakes to Hana",
+   "due_datetime": 1795186800.0,
+   "description": "About 3,000 words, per the Sept. 21 assignment letter. File it in the morning to keep the afternoon clear.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "e7c1a4f90b6d2358f4c7e1b2",
+   "title": "Send Hana winter and spring bandwidth",
+   "due_datetime": 1795446000.0,
+   "description": "January through May, plus anything I'd want to pitch. Told her after the Oct. 6 edit meeting that I'd come back to her once the salt story was filed.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "e2a7c5091fd84b36c0a9e715",
+   "title": "Call Dana about the chart",
+   "due_datetime": 1795449600.0,
+   "description": "Phone her, not Messenger. Talk it through before the story runs.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "5d9a3e7c1f4b6082d5a9e3c7",
+   "title": "Invoice North Current: December retainer",
+   "due_datetime": 1795532400.0,
+   "description": "$1,500.00 to ap@northcurrentmag.com, same as the November one sent Oct. 26.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "3a8e6d0f5c92b17ad4e3f86c",
+   "title": "Invoice North Current: Salt in the Lakes balance",
+   "due_datetime": 1795536000.0,
+   "description": "$2,250.00, the second half of the $4,500 fee, due on acceptance per the Sept. 21 assignment letter. To ap@northcurrentmag.com with Hana copied.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "d06b2f7e9a4c158e3b6d0a29",
+   "title": "Cranberries for Thanksgiving",
+   "due_datetime": 1795554000.0,
+   "description": "Fresh cranberries and an orange from the co-op. Real cream for Toby's whipped cream.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "5f9c3e1a7d0b8264e5f1c9a3",
+   "title": "Airport runs: Maren 2:05, Toby 4:40",
+   "due_datetime": 1795634100.0,
+   "description": "Maren first, then the cell phone lot with her until Toby lands. Bring a book.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b4e07d2c6a95f13e8d4b2c70",
+   "title": "Fact read on salt first pages",
+   "due_datetime": 1796050800.0,
+   "description": "Lena sends first pages for the fact read Monday, Nov. 30. Final proofs Thursday, Dec. 3; off to the printer Tuesday, Dec. 8.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "81d3f6a9e2c05b74a1d8e3f6",
+   "title": "Send R. the link to the salt story",
+   "due_datetime": 1796745600.0,
+   "description": "Promised on Messenger. The package goes to the printer today; send the link once it's live.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "2c6f8a1e4d93b07c5e2a6d18",
+   "title": "Book an oil change at Tires Plus",
+   "due_datetime": 1799074800.0,
+   "description": "The sticker says the next one is due in January. Tires Plus on E Lake St; drop Ingrid at school on the way.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "9f3e7b1d5a0c4826e9f3b7d1",
+   "title": "Estimated taxes (federal + MN)",
+   "due_datetime": 1800025200.0,
+   "description": "Q4 2026 estimates from savings 5530, IRS Direct Pay and MN e-Services. Sept. 15 payments were $3,050.00 federal and $780.00 state. Check the year's deposits before deciding whether to raise them.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6e3f0b9d2a7c48e1a29d5f73",
+   "title": "Gather the 2026 1099-NECs for the tax sheet",
+   "due_datetime": 1801494000.0,
+   "description": "Field & Flow mails theirs by Jan. 31. Look for the ones from North Current, the Dispatch and Prairie Wire too, then hand them to Ingrid for the tax sheet.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "8e57d0a2c6f39b14e5d7a0c2",
+   "title": "New chain for the bike",
+   "due_datetime": 1806764400.0,
+   "description": "At the August tune-up Angry Catfish said the chain read about 0.5 on the checker. Fine for this season, new one in the spring.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a3c8d1f6b4e902e75b0c4e19",
+   "title": "Renew SEJ membership",
+   "due_datetime": 1811858400.0,
+   "description": "Freelance membership runs through June 7, 2027. Last year's dues were $60.00 on the Visa.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  }
+ ]
+}

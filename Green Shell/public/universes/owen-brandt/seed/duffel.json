@@ -1,0 +1,1054 @@
+{
+ "users": [
+  {
+   "id": "usr_0000Kp7tWq2M",
+   "email": "owen.brandt.writes@gmail.com"
+  }
+ ],
+ "offers": [
+  {
+   "id": "off_0000Rk4vN9Ls",
+   "owner": {
+    "name": "Delta Air Lines",
+    "iata_code": "DL",
+    "id": "arl_0000Dq8LmT3v"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Tc5jW8Ye",
+     "origin": {
+      "iata_code": "MSP",
+      "type": "airport",
+      "name": "Minneapolis-Saint Paul International Airport",
+      "city_name": "Minneapolis",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "DLH",
+      "type": "airport",
+      "name": "Duluth International Airport",
+      "city_name": "Duluth",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT58M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000Lw7rB2Qx",
+       "origin": {
+        "iata_code": "MSP",
+        "type": "airport",
+        "name": "Minneapolis-Saint Paul International Airport",
+        "city_name": "Minneapolis",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "DLH",
+        "type": "airport",
+        "name": "Duluth International Airport",
+        "city_name": "Duluth",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-04T09:40:00",
+       "arriving_at": "2026-11-04T10:38:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Endeavor Air",
+        "iata_code": "9E"
+       },
+       "marketing_carrier_flight_number": "3614",
+       "duration": "PT58M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Nv6kS3Jr",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Gp3nV6Ku",
+     "origin": {
+      "iata_code": "DLH",
+      "type": "airport",
+      "name": "Duluth International Airport",
+      "city_name": "Duluth",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "MSP",
+      "type": "airport",
+      "name": "Minneapolis-Saint Paul International Airport",
+      "city_name": "Minneapolis",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT57M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000Fz9dM4Hc",
+       "origin": {
+        "iata_code": "DLH",
+        "type": "airport",
+        "name": "Duluth International Airport",
+        "city_name": "Duluth",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "MSP",
+        "type": "airport",
+        "name": "Minneapolis-Saint Paul International Airport",
+        "city_name": "Minneapolis",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-06T17:15:00",
+       "arriving_at": "2026-11-06T18:12:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Endeavor Air",
+        "iata_code": "9E"
+       },
+       "marketing_carrier_flight_number": "3627",
+       "duration": "PT57M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Nv6kS3Jr",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Nv6kS3Jr",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "289.40",
+   "total_currency": "USD",
+   "base_amount": "240.74",
+   "base_currency": "USD",
+   "tax_amount": "48.66",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "expires_at": "2026-10-15T01:38:04Z",
+   "created_at": "2026-10-15T01:08:04Z"
+  },
+  {
+   "id": "off_0000Hm2qX7Bd",
+   "owner": {
+    "name": "Delta Air Lines",
+    "iata_code": "DL",
+    "id": "arl_0000Dq8LmT3v"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Yb2fQ8Wm",
+     "origin": {
+      "iata_code": "MSP",
+      "type": "airport",
+      "name": "Minneapolis-Saint Paul International Airport",
+      "city_name": "Minneapolis",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "DLH",
+      "type": "airport",
+      "name": "Duluth International Airport",
+      "city_name": "Duluth",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT56M",
+     "fare_brand_name": "Basic Economy",
+     "segments": [
+      {
+       "id": "seg_0000Cx4tR7Vg",
+       "origin": {
+        "iata_code": "MSP",
+        "type": "airport",
+        "name": "Minneapolis-Saint Paul International Airport",
+        "city_name": "Minneapolis",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "DLH",
+        "type": "airport",
+        "name": "Duluth International Airport",
+        "city_name": "Duluth",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-04T07:05:00",
+       "arriving_at": "2026-11-04T08:01:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Endeavor Air",
+        "iata_code": "9E"
+       },
+       "marketing_carrier_flight_number": "3608",
+       "duration": "PT56M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ao9pZ5Tk",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Basic Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Ue5hK1Pn",
+     "origin": {
+      "iata_code": "DLH",
+      "type": "airport",
+      "name": "Duluth International Airport",
+      "city_name": "Duluth",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "MSP",
+      "type": "airport",
+      "name": "Minneapolis-Saint Paul International Airport",
+      "city_name": "Minneapolis",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT56M",
+     "fare_brand_name": "Basic Economy",
+     "segments": [
+      {
+       "id": "seg_0000Jd8wE3Ls",
+       "origin": {
+        "iata_code": "DLH",
+        "type": "airport",
+        "name": "Duluth International Airport",
+        "city_name": "Duluth",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "MSP",
+        "type": "airport",
+        "name": "Minneapolis-Saint Paul International Airport",
+        "city_name": "Minneapolis",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-06T19:48:00",
+       "arriving_at": "2026-11-06T20:44:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Endeavor Air",
+        "iata_code": "9E"
+       },
+       "marketing_carrier_flight_number": "3631",
+       "duration": "PT56M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Ao9pZ5Tk",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Basic Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Ao9pZ5Tk",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "226.40",
+   "total_currency": "USD",
+   "base_amount": "182.14",
+   "base_currency": "USD",
+   "tax_amount": "44.26",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    }
+   },
+   "expires_at": "2026-10-15T01:38:05Z",
+   "created_at": "2026-10-15T01:08:05+00:00"
+  }
+ ],
+ "seat_map_elements": [
+  {
+   "id": "sea_0000Mx3kT8Bq",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Lw7rB2Qx",
+   "type": "seat",
+   "designator": "12A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Rf6wJ2Zn",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Lw7rB2Qx",
+   "type": "seat",
+   "designator": "12B",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Vd9hP4Lc",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Lw7rB2Qx",
+   "type": "seat",
+   "designator": "14A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Gs2yN7Xe",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Lw7rB2Qx",
+   "type": "seat",
+   "designator": "14C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Kb5tQ1Wr",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Lw7rB2Qx",
+   "type": "seat",
+   "designator": "17D",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Yh8mC3Fd",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Fz9dM4Hc",
+   "type": "seat",
+   "designator": "11A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Ep4vL6Sj",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Fz9dM4Hc",
+   "type": "seat",
+   "designator": "11B",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Tn7bW9Hg",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Fz9dM4Hc",
+   "type": "seat",
+   "designator": "15C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 15,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Qc1xR5Mk",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Fz9dM4Hc",
+   "type": "seat",
+   "designator": "15D",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 15,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Uw6fD2Pz",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "segment_id": "seg_0000Fz9dM4Hc",
+   "type": "seat",
+   "designator": "19A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 19,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Zj3gH8Nt",
+   "offer_id": "off_0000Hm2qX7Bd",
+   "segment_id": "seg_0000Cx4tR7Vg",
+   "type": "seat",
+   "designator": "18A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 18,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Ld7sK4Vb",
+   "offer_id": "off_0000Hm2qX7Bd",
+   "segment_id": "seg_0000Cx4tR7Vg",
+   "type": "seat",
+   "designator": "18B",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 18,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Ix9qF2Cm",
+   "offer_id": "off_0000Hm2qX7Bd",
+   "segment_id": "seg_0000Cx4tR7Vg",
+   "type": "seat",
+   "designator": "20C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 20,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Oe5rY6Jw",
+   "offer_id": "off_0000Hm2qX7Bd",
+   "segment_id": "seg_0000Cx4tR7Vg",
+   "type": "seat",
+   "designator": "20D",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 20,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Sm8uA3Gx",
+   "offer_id": "off_0000Hm2qX7Bd",
+   "segment_id": "seg_0000Jd8wE3Ls",
+   "type": "seat",
+   "designator": "16A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 16,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Wk2pT7Re",
+   "offer_id": "off_0000Hm2qX7Bd",
+   "segment_id": "seg_0000Jd8wE3Ls",
+   "type": "seat",
+   "designator": "16B",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 16,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Bn6dV1Hy",
+   "offer_id": "off_0000Hm2qX7Bd",
+   "segment_id": "seg_0000Jd8wE3Ls",
+   "type": "seat",
+   "designator": "21C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 21,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Fq4jM9Ls",
+   "offer_id": "off_0000Hm2qX7Bd",
+   "segment_id": "seg_0000Jd8wE3Ls",
+   "type": "seat",
+   "designator": "21D",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 21,
+   "section": 219053329131031,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  }
+ ],
+ "orders": [
+  {
+   "id": "ord_0000Qm6sW2Xa",
+   "user_id": "usr_0000Kp7tWq2M",
+   "offer_id": "off_0000Rk4vN9Ls",
+   "booking_reference": "QK4T7B",
+   "owner": {
+    "name": "Delta Air Lines",
+    "iata_code": "DL",
+    "id": "arl_0000Dq8LmT3v"
+   },
+   "slices": [
+    {
+     "id": "sli_0000Tc5jW8Ye",
+     "origin": {
+      "iata_code": "MSP",
+      "type": "airport",
+      "name": "Minneapolis-Saint Paul International Airport",
+      "city_name": "Minneapolis",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "DLH",
+      "type": "airport",
+      "name": "Duluth International Airport",
+      "city_name": "Duluth",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT58M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000Lw7rB2Qx",
+       "origin": {
+        "iata_code": "MSP",
+        "type": "airport",
+        "name": "Minneapolis-Saint Paul International Airport",
+        "city_name": "Minneapolis",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "DLH",
+        "type": "airport",
+        "name": "Duluth International Airport",
+        "city_name": "Duluth",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-04T09:40:00",
+       "arriving_at": "2026-11-04T10:38:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Endeavor Air",
+        "iata_code": "9E"
+       },
+       "marketing_carrier_flight_number": "3614",
+       "duration": "PT58M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Nv6kS3Jr",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sli_0000Gp3nV6Ku",
+     "origin": {
+      "iata_code": "DLH",
+      "type": "airport",
+      "name": "Duluth International Airport",
+      "city_name": "Duluth",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "MSP",
+      "type": "airport",
+      "name": "Minneapolis-Saint Paul International Airport",
+      "city_name": "Minneapolis",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT57M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000Fz9dM4Hc",
+       "origin": {
+        "iata_code": "DLH",
+        "type": "airport",
+        "name": "Duluth International Airport",
+        "city_name": "Duluth",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "MSP",
+        "type": "airport",
+        "name": "Minneapolis-Saint Paul International Airport",
+        "city_name": "Minneapolis",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-06T17:15:00",
+       "arriving_at": "2026-11-06T18:12:00",
+       "marketing_carrier": {
+        "name": "Delta Air Lines",
+        "iata_code": "DL"
+       },
+       "operating_carrier": {
+        "name": "Endeavor Air",
+        "iata_code": "9E"
+       },
+       "marketing_carrier_flight_number": "3627",
+       "duration": "PT57M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000Nv6kS3Jr",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000Nv6kS3Jr",
+     "type": "adult",
+     "given_name": "Owen",
+     "family_name": "Brandt",
+     "title": "mr",
+     "gender": "m",
+     "born_on": "1974-02-18",
+     "email": "owen.brandt.writes@gmail.com",
+     "phone_number": "+16125550183"
+    }
+   ],
+   "services": [],
+   "total_amount": "289.40",
+   "total_currency": "USD",
+   "created_at": "2026-10-15T01:15:31Z",
+   "cancelled_at": ""
+  }
+ ],
+ "order_cancellations": [],
+ "accommodations": [
+  {
+   "id": "acc_0000Lk3vR8Nd",
+   "name": "Lakewalk Inn",
+   "location": {
+    "address": {
+     "line_one": "Canal Park",
+     "city_name": "Duluth",
+     "country_code": "US",
+     "region": "MN",
+     "postal_code": "55802"
+    },
+    "geographic_coordinates": {
+     "latitude": 46.7812,
+     "longitude": -92.0931
+    }
+   },
+   "description": "Independent 40-room hotel in Canal Park, steps from the Lakewalk. Some rooms face the lake.",
+   "rating": 3,
+   "review_score": 8.6,
+   "amenities": [
+    {
+     "type": "wifi",
+     "description": "Free Wi-Fi"
+    },
+    {
+     "type": "parking",
+     "description": "Hotel lot, $14.00 per night"
+    },
+    {
+     "type": "24_hour_front_desk",
+     "description": "Front desk open 24 hours"
+    }
+   ],
+   "check_in_information": {
+    "check_in_after_time": "15:00",
+    "check_out_before_time": "11:00"
+   }
+  },
+  {
+   "id": "acc_0000HrbL1t7s",
+   "name": "Harbor Light Cabins",
+   "location": {
+    "address": {
+     "line_one": "711 W Highway 61",
+     "city_name": "Grand Marais",
+     "country_code": "US",
+     "region": "MN",
+     "postal_code": "55604"
+    },
+    "geographic_coordinates": {
+     "latitude": 47.7488,
+     "longitude": -90.3392
+    }
+   },
+   "description": "Six wood-heated cabins above the Grand Marais harbor, a short walk from the lighthouse breakwall and the shops on Wisconsin Street.",
+   "rating": 3,
+   "review_score": 9.2,
+   "amenities": [
+    {
+     "type": "parking",
+     "description": "Free parking beside each cabin"
+    },
+    {
+     "type": "wifi",
+     "description": "Free Wi-Fi"
+    }
+   ],
+   "check_in_information": {
+    "check_in_after_time": "16:00",
+    "check_out_before_time": "11:00"
+   }
+  }
+ ],
+ "rooms": [
+  {
+   "id": "rom_0000Bt7qH2Mz",
+   "accommodation_id": "acc_0000Lk3vR8Nd",
+   "name": "King Room",
+   "beds": [
+    {
+     "type": "king",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "rom_0000Wf4nC9Ry",
+   "accommodation_id": "acc_0000Lk3vR8Nd",
+   "name": "King Room, Lake View",
+   "beds": [
+    {
+     "type": "king",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "rom_0000Wd5tVq2k",
+   "accommodation_id": "acc_0000HrbL1t7s",
+   "name": "Harbor View Cabin",
+   "beds": [
+    {
+     "type": "queen",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "rates": [
+  {
+   "id": "rat_0000Sx5dJ8Ge",
+   "room_id": "rom_0000Bt7qH2Mz",
+   "check_in_date": "2026-11-04",
+   "check_out_date": "2026-11-06",
+   "total_amount": "371.88",
+   "total_currency": "USD",
+   "base_amount": "318.00",
+   "tax_amount": "53.88",
+   "board_type": "room_only",
+   "payment_type": "pay_now",
+   "cancellation_timeline": [
+    {
+     "before": "2026-11-02T23:00:00Z",
+     "refund_amount": "371.88",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 3
+  },
+  {
+   "id": "rat_0000Pk2mV6Tu",
+   "room_id": "rom_0000Wf4nC9Ry",
+   "check_in_date": "2026-11-04",
+   "check_out_date": "2026-11-06",
+   "total_amount": "465.43",
+   "total_currency": "USD",
+   "base_amount": "398.00",
+   "tax_amount": "67.43",
+   "board_type": "room_only",
+   "payment_type": "pay_now",
+   "cancellation_timeline": [
+    {
+     "before": "2026-11-02T23:00:00Z",
+     "refund_amount": "465.43",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 1
+  },
+  {
+   "id": "rat_0000Gm8rKx4p",
+   "room_id": "rom_0000Wd5tVq2k",
+   "check_in_date": "2026-11-20",
+   "check_out_date": "2026-11-22",
+   "total_amount": "424.30",
+   "total_currency": "USD",
+   "base_amount": "378.00",
+   "tax_amount": "46.30",
+   "board_type": "room_only",
+   "payment_type": "pay_now",
+   "cancellation_timeline": [
+    {
+     "before": "2026-11-13T06:00:00Z",
+     "refund_amount": "424.30",
+     "currency": "USD"
+    },
+    {
+     "before": "2026-11-19T06:00:00Z",
+     "refund_amount": "212.15",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 1
+  }
+ ],
+ "quotes": [
+  {
+   "id": "quo_0000Hn8rB3Wd",
+   "user_id": "usr_0000Kp7tWq2M",
+   "rate_id": "rat_0000Sx5dJ8Ge",
+   "check_in_date": "2026-11-04",
+   "check_out_date": "2026-11-06",
+   "rooms": 1,
+   "guests": [
+    {
+     "type": "adult"
+    }
+   ],
+   "total_amount": "371.88",
+   "total_currency": "USD",
+   "expires_at": "2026-10-15T01:52:46Z",
+   "created_at": "2026-10-15T01:22:46Z"
+  },
+  {
+   "id": "quo_0000Nc3sJb9w",
+   "user_id": "usr_0000Kp7tWq2M",
+   "rate_id": "rat_0000Gm8rKx4p",
+   "check_in_date": "2026-11-20",
+   "check_out_date": "2026-11-22",
+   "rooms": 1,
+   "guests": [
+    {
+     "type": "adult",
+     "age": 52
+    },
+    {
+     "type": "adult",
+     "age": 53
+    }
+   ],
+   "total_amount": "424.30",
+   "total_currency": "USD",
+   "expires_at": "2026-10-13T02:08:44Z",
+   "created_at": "2026-10-13T01:38:44Z"
+  }
+ ],
+ "bookings": [
+  {
+   "id": "bok_0000Ez6tL4Qj",
+   "user_id": "usr_0000Kp7tWq2M",
+   "quote_id": "quo_0000Hn8rB3Wd",
+   "rate_id": "rat_0000Sx5dJ8Ge",
+   "reference": "LWI-58217",
+   "status": "confirmed",
+   "confirmed_at": "2026-10-15T01:25:09Z",
+   "cancelled_at": "",
+   "check_in_date": "2026-11-04",
+   "check_out_date": "2026-11-06",
+   "rooms": 1,
+   "guests": [
+    {
+     "type": "adult"
+    }
+   ],
+   "email": "owen.brandt.writes@gmail.com",
+   "phone_number": "+16125550183",
+   "total_amount": "371.88",
+   "total_currency": "USD",
+   "cancellation_timeline": []
+  },
+  {
+   "id": "bok_0000Tq6hZr1m",
+   "user_id": "usr_0000Kp7tWq2M",
+   "quote_id": "quo_0000Nc3sJb9w",
+   "rate_id": "rat_0000Gm8rKx4p",
+   "reference": "HL-1120-BR",
+   "status": "confirmed",
+   "confirmed_at": "2026-10-13T01:40:27Z",
+   "cancelled_at": "",
+   "check_in_date": "2026-11-20",
+   "check_out_date": "2026-11-22",
+   "rooms": 1,
+   "guests": [
+    {
+     "type": "adult",
+     "age": 52
+    },
+    {
+     "type": "adult",
+     "age": 53
+    }
+   ],
+   "email": "owen.brandt.writes@gmail.com",
+   "phone_number": "+16125550183",
+   "total_amount": "424.30",
+   "total_currency": "USD",
+   "cancellation_timeline": []
+  }
+ ]
+}

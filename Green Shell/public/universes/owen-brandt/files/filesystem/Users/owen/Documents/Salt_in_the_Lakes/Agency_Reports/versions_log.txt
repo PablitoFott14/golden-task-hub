@@ -1,0 +1,15 @@
+MLWD 2025 Water Quality Report, versions on file
+
+v1  posted 2026-06-11
+    MLWD_2025_Water_Quality_Report_v1_2026-06-11.pdf
+    Table 3 is an image-only page. Saved it as MLWD_2025_v1_Table3_scan.jpg on 2026-09-24.
+
+v2  posted 2026-10-08 (revised)
+    MLWD_2025_Water_Quality_Report_v2_revised_2026-10-08.pdf
+    Errata on p. 3. District also posted the errata as a scanned table: MLWD_2025_errata_table_scan.jpg
+    Table 3 saved as MLWD_2025_v2_Table3_scan.jpg
+
+District notice 2026-10-08 13:30: dilution-factor error in contract-lab batch 25-0217 (samples collected Feb 3 to Apr 28, 2025). COR-1, PEN-1 and ODG-1 revised.
+Source page: metrolakeswd.org/reports/2025-water-quality
+
+Keep both versions. Haven't compared them line by line yet.

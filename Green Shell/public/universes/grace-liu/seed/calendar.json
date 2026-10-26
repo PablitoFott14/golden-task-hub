@@ -1,0 +1,1545 @@
+{
+ "events": [
+  {
+   "event_id": "c3a71e5f09d2b84e6f1a7c30",
+   "title": "BD3 - Accrual JEs submitted",
+   "start_datetime": 1777957200.0,
+   "end_datetime": 1778043600.0,
+   "tag": "work",
+   "description": "April close (APR-26), BD3 Tue 5/5. Accrual JEs submitted in Oracle by 5:00 pm.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "4e92a0d6c1b78f35e2a9c041",
+   "title": "BD4 - AP subledger cutoff",
+   "start_datetime": 1778043600.0,
+   "end_datetime": 1778130000.0,
+   "tag": "work",
+   "description": "April close (APR-26). AP subledger cutoff in SAP.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "d07c5e1f9a3b26e84c7f0b15",
+   "title": "BD5 - Soft close",
+   "start_datetime": 1778130000.0,
+   "end_datetime": 1778216400.0,
+   "tag": "work",
+   "description": "April close (APR-26). Soft close. BlackLine recs due for review.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "c7d2a94e1f063b58e9a4d17c",
+   "title": "Martin 1:1",
+   "start_datetime": 1778166000.0,
+   "end_datetime": 1778167800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "8a5e2b0c4f71d963a0e5b7c2",
+   "title": "BD7 - Hard close; Martin certifies",
+   "start_datetime": 1778475600.0,
+   "end_datetime": 1778562000.0,
+   "tag": "work",
+   "description": "April close (APR-26). Hard close. Martin certifies.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "5e81b3f0c92a7d46b1e8c035",
+   "title": "Martin 1:1",
+   "start_datetime": 1778770800.0,
+   "end_datetime": 1778772600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "7e2b94c0d18a5f36b1e0c4a9",
+   "title": "Luis: bathroom fan install",
+   "start_datetime": 1778943600.0,
+   "end_datetime": 1778950800.0,
+   "tag": "personal",
+   "description": "Luis installing the new bathroom fan. Home from 9:30, he'll buzz 3B.",
+   "location": "Home",
+   "attendees": [
+    "Grace Liu",
+    "Luis Ortega"
+   ]
+  },
+  {
+   "event_id": "a3f6094dc8e1b27f5d0c9a84",
+   "title": "Martin 1:1",
+   "start_datetime": 1779375600.0,
+   "end_datetime": 1779377400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "5d2a8f61c0e93b47a2d86f15",
+   "title": "Book club",
+   "start_datetime": 1779840000.0,
+   "end_datetime": 1779847200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "4852 N. Leavitt St",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "1b9e4c7a2f58d03e6c1ab947",
+   "title": "Martin 1:1",
+   "start_datetime": 1779980400.0,
+   "end_datetime": 1779982200.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "c3f81a6e0b49d27c5e8a1f30",
+   "title": "Leavitt Ct spring cleanup",
+   "start_datetime": 1780149600.0,
+   "end_datetime": 1780156800.0,
+   "tag": "personal",
+   "description": "Owners spring cleanup. Mulch dropped by the gate Friday, gloves and coffee provided.",
+   "location": "4815 N. Leavitt St, Chicago, IL 60625",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "f2c90a6e3d1b7458c9e2f06a",
+   "title": "BD1 - Subledger feeds run",
+   "start_datetime": 1780290000.0,
+   "end_datetime": 1780376400.0,
+   "tag": "work",
+   "description": "May close (MAY-26). SAP AP, fixed asset and prepaid feeds run at 06:15.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "8e2f4b06d9c1a73e5b8d0f14",
+   "title": "BD3 - Accrual JEs submitted",
+   "start_datetime": 1780462800.0,
+   "end_datetime": 1780549200.0,
+   "tag": "work",
+   "description": "May close (MAY-26), BD3 Wed 6/3. Accrual JEs submitted in Oracle by 5:00 pm.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "c5a3f7e90b2d64a1e8c5f392",
+   "title": "BD4 - AP subledger cutoff",
+   "start_datetime": 1780549200.0,
+   "end_datetime": 1780635600.0,
+   "tag": "work",
+   "description": "May close (MAY-26). AP subledger cutoff in SAP.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "e40d8b26f7c193a5d8e2b6f1",
+   "title": "Martin 1:1",
+   "start_datetime": 1780585200.0,
+   "end_datetime": 1780587000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "0e8b6d1c5a4f293e7b0d4c6a",
+   "title": "BD5 - Soft close",
+   "start_datetime": 1780635600.0,
+   "end_datetime": 1780722000.0,
+   "tag": "work",
+   "description": "May close (MAY-26). Soft close. BlackLine recs due for review.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "9d2f4a7c1e6b08d3f5a9c2e7",
+   "title": "BD7 - Hard close; Martin certifies",
+   "start_datetime": 1780981200.0,
+   "end_datetime": 1781067600.0,
+   "tag": "work",
+   "description": "May close (MAY-26). Hard close. Martin certifies.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "73ca5f09e1b84d2c6a7f30e8",
+   "title": "Martin 1:1",
+   "start_datetime": 1781190000.0,
+   "end_datetime": 1781191800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "b4e07a19c35d82f6a1c0e93d",
+   "title": "Run w/ Jess",
+   "start_datetime": 1781608500.0,
+   "end_datetime": 1781611500.0,
+   "tag": "personal",
+   "description": "Tuesday lakefront loop. Bringing her a box of strawberries, she's bringing the coffee.",
+   "location": "Montrose Harbor, Chicago",
+   "attendees": [
+    "Grace Liu",
+    "Jess Moreno"
+   ]
+  },
+  {
+   "event_id": "d95b2e7c40a1f86b3e9d5c12",
+   "title": "Martin 1:1",
+   "start_datetime": 1781794800.0,
+   "end_datetime": 1781796600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "a8f21c7d6e09b3a45d81f2c6",
+   "title": "Father's Day brunch, Naperville",
+   "start_datetime": 1782059400.0,
+   "end_datetime": 1782068400.0,
+   "tag": "personal",
+   "description": "Ken Yamada has Dad at Springbrook until about 11. Bring the quiche.",
+   "location": "Mom and Dad's, Naperville",
+   "attendees": [
+    "Helen Liu",
+    "Richard Liu",
+    "Kevin Liu",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "2f6a8d13b5c7e049f1a6d83b",
+   "title": "Martin 1:1",
+   "start_datetime": 1782399600.0,
+   "end_datetime": 1782401400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "6e3a9f1c5d7b02e8a4f6c3d9",
+   "title": "Call Aunt Lily re 401(k) funds",
+   "start_datetime": 1782680400.0,
+   "end_datetime": 1782683100.0,
+   "tag": "personal",
+   "description": "Pacific. Look over her fund lineup first.",
+   "location": null,
+   "attendees": [
+    "Lily Wong",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "c38f0b74e1a69d523c8bf047",
+   "title": "Book club",
+   "start_datetime": 1782864000.0,
+   "end_datetime": 1782871200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "2219 W. Ainslie St",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "a7c1e5b93f0d48a2c6e1b9d0",
+   "title": "BD1 - Subledger feeds run",
+   "start_datetime": 1782882000.0,
+   "end_datetime": 1782968400.0,
+   "tag": "work",
+   "description": "June close (JUN-26). SAP AP, fixed asset and prepaid feeds run at 06:15.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "b81c4f6e93d02a7e5c8b1f49",
+   "title": "Martin 1:1",
+   "start_datetime": 1783004400.0,
+   "end_datetime": 1783006200.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "d6a3b80e17f4c259a03e6d1b",
+   "title": "BBQ at Uncle Mike & Aunt Sue's",
+   "start_datetime": 1783195200.0,
+   "end_datetime": 1783209600.0,
+   "tag": "personal",
+   "description": "Aunt Sue's 4th of July BBQ. Bring fruit salad.",
+   "location": "Uncle Mike & Aunt Sue's",
+   "attendees": [
+    "Susan Liu",
+    "Michael Liu",
+    "Andrew Liu",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "3c6e8a0fd4b12e97c05a7f3b",
+   "title": "Kims' Memorial Day BBQ",
+   "start_datetime": 1779742800.0,
+   "end_datetime": 1779757200.0,
+   "tag": "personal",
+   "description": "Corn salad, double batch.",
+   "location": "Steve and Diane Kim's, Naperville",
+   "attendees": [
+    "Steve Kim",
+    "Diane Kim",
+    "Helen Liu",
+    "Richard Liu",
+    "Kevin Liu",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "5b9d1e7a3f40c26e8a1d4b97",
+   "title": "BD3 - Accrual JEs submitted",
+   "start_datetime": 1783314000.0,
+   "end_datetime": 1783400400.0,
+   "tag": "work",
+   "description": "June close (JUN-26), BD3 Mon 7/6 since Fri 7/3 is the observed holiday. Accrual JEs submitted in Oracle by 5:00 pm.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "e3b9d71c4a06f25e8c1d7a94",
+   "title": "Tara: Trek hybrid pickup",
+   "start_datetime": 1783377000.0,
+   "end_datetime": 1783378800.0,
+   "tag": "personal",
+   "description": "Marketplace, Trek hybrid, small frame. $175, Venmo when I get there. Test ride around the block first. She'll have it out front by the steps, ring the bell.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "e6d29c4a0b7f15e8d3c7a0f1",
+   "title": "BD4 - AP subledger cutoff",
+   "start_datetime": 1783400400.0,
+   "end_datetime": 1783486800.0,
+   "tag": "work",
+   "description": "June close (JUN-26). AP subledger cutoff in SAP.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "52f0b8e1d4c7a96f2e0b5d8c",
+   "title": "BD5 - Soft close",
+   "start_datetime": 1783486800.0,
+   "end_datetime": 1783573200.0,
+   "tag": "work",
+   "description": "June close (JUN-26). Soft close. BlackLine recs due for review.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "4ad7e0b259f3c816d4a2e07f",
+   "title": "Martin 1:1",
+   "start_datetime": 1783609200.0,
+   "end_datetime": 1783611000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "c9a64e0d2f8b13c7a5e9d046",
+   "title": "BD7 - Hard close; Martin certifies",
+   "start_datetime": 1783659600.0,
+   "end_datetime": 1783746000.0,
+   "tag": "work",
+   "description": "June close (JUN-26). Hard close. Martin certifies.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "8f3a6d1e5c9b204f7a8e3d61",
+   "title": "Coffee w/ Bri",
+   "start_datetime": 1783780200.0,
+   "end_datetime": 1783783800.0,
+   "tag": "personal",
+   "description": "After the Saturday long run.",
+   "location": "The Coffee Studio, 5628 N. Clark St",
+   "attendees": [
+    "Grace Liu",
+    "Bri Novak"
+   ]
+  },
+  {
+   "event_id": "a2d7e61f0c94b38e5a1c7f20",
+   "title": "FYI: water off at Leavitt Ct",
+   "start_datetime": 1784210400.0,
+   "end_datetime": 1784224800.0,
+   "tag": "personal",
+   "description": "Plumber replacing the riser valve, 9 to 1. Whole building, laundry room included. Run laundry Wednesday night.",
+   "location": "4815 N. Leavitt St, Chicago, IL 60625",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "4e8b2c7a19f0d36e8a5c1b72",
+   "title": "Lunch w/ Dana Whitcomb",
+   "start_datetime": 1784224800.0,
+   "end_datetime": 1784228400.0,
+   "tag": "personal",
+   "description": "Ask for her CPE webinar list",
+   "location": "Revival Food Hall, 125 S. Clark St",
+   "attendees": [
+    "Grace Liu",
+    "Dana Whitcomb"
+   ]
+  },
+  {
+   "event_id": "f3e5c9a1d6b0482e7f3c9b65",
+   "title": "Martin 1:1",
+   "start_datetime": 1784214000.0,
+   "end_datetime": 1784215800.0,
+   "tag": "work",
+   "description": "Skipped this week, nothing open. June wrap-up moved to 7/23.",
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "b9d4e0a7c2f618b3d9e5a0c4",
+   "title": "IKEA run w/ Kevin",
+   "start_datetime": 1784390400.0,
+   "end_datetime": 1784399400.0,
+   "tag": "personal",
+   "description": "Bookshelf. Taking the CX-5.",
+   "location": "IKEA Schaumburg, 1800 E McConnor Pkwy, Schaumburg, IL 60173",
+   "attendees": [
+    "Kevin Liu",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "d17c4a9e3b602f8d5e1c7a40",
+   "title": "FaceTime w/ Hannah",
+   "start_datetime": 1784487600.0,
+   "end_datetime": 1784491200.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Grace Liu",
+    "Hannah Cho"
+   ]
+  },
+  {
+   "event_id": "f19b5d3a0c8e7a26b4d19e05",
+   "title": "Mazurs' cookout",
+   "start_datetime": 1784491200.0,
+   "end_datetime": 1784505600.0,
+   "tag": "personal",
+   "description": "Ray and Joanne Mazur's. Bring a bottle of wine.",
+   "location": "Naperville",
+   "attendees": [
+    "Ray Mazur",
+    "Joanne Mazur",
+    "Helen Liu",
+    "Richard Liu",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "690b1d8e4c2fa57b0e6d3a91",
+   "title": "Martin 1:1",
+   "start_datetime": 1784818800.0,
+   "end_datetime": 1784820600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "91e6d4c27a0b58f3e91c2d6a",
+   "title": "Book club",
+   "start_datetime": 1785283200.0,
+   "end_datetime": 1785290400.0,
+   "tag": "personal",
+   "description": null,
+   "location": "4815 N. Leavitt St, Unit 1B",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "8c3f7a2e05d9b14c6e8a0f53",
+   "title": "Martin 1:1",
+   "start_datetime": 1785423600.0,
+   "end_datetime": 1785425400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "5b2f9d0e8a3c71b6f5d2e04a",
+   "title": "Long run w/ Bri",
+   "start_datetime": 1785585600.0,
+   "end_datetime": 1785590100.0,
+   "tag": "personal",
+   "description": "Montrose Harbor to Hollywood Beach and back, about 8 miles at 9:30 pace. Bring water, the harbor fountain was off last week.",
+   "location": "Montrose Harbor, Chicago",
+   "attendees": [
+    "Grace Liu",
+    "Bri Novak"
+   ]
+  },
+  {
+   "event_id": "17e3c9a5f2d06b84e1c7a3f9",
+   "title": "BD1 - Subledger feeds run",
+   "start_datetime": 1785733200.0,
+   "end_datetime": 1785819600.0,
+   "tag": "work",
+   "description": "July close (JUL-26). SAP AP, fixed asset and prepaid feeds run at 06:15.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "f07c3a5e9d1b48e26c0f7a83",
+   "title": "BD3 - Accrual JEs submitted",
+   "start_datetime": 1785906000.0,
+   "end_datetime": 1785992400.0,
+   "tag": "work",
+   "description": "July close (JUL-26), BD3 Wed 8/5. Accrual JEs submitted in Oracle by 5:00 pm.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "8f6c2e4b0a1d97f3c8e6b2a5",
+   "title": "BD4 - AP subledger cutoff",
+   "start_datetime": 1785992400.0,
+   "end_datetime": 1786078800.0,
+   "tag": "work",
+   "description": "July close (JUL-26). AP subledger cutoff in SAP.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "0e9d5b4a17c3f62d8b0e5a76",
+   "title": "Martin 1:1",
+   "start_datetime": 1786028400.0,
+   "end_datetime": 1786030200.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "2a9e7d3c5b0f64a8e2d9c7b1",
+   "title": "BD5 - Soft close",
+   "start_datetime": 1786078800.0,
+   "end_datetime": 1786165200.0,
+   "tag": "work",
+   "description": "July close (JUL-26). Soft close. BlackLine recs due for review.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "7f2d91c4e06b3a58d7e1f0b2",
+   "title": "Xfinity tech visit",
+   "start_datetime": 1786201200.0,
+   "end_datetime": 1786208400.0,
+   "tag": "personal",
+   "description": "Arrival window 10 to 12. Weak signal to the gateway after the outage. Tech texts when on the way, and the outage credit shows on the next bill.",
+   "location": "Home",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "e0c4f1a8d6b23e95c0a4f7d8",
+   "title": "BD7 - Hard close; Martin certifies",
+   "start_datetime": 1786424400.0,
+   "end_datetime": 1786510800.0,
+   "tag": "work",
+   "description": "July close (JUL-26). Hard close. Martin certifies.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "8a1e5d3c7f0b92e4a6d1c3f8",
+   "title": "Personal appt",
+   "start_datetime": 1786539600.0,
+   "end_datetime": 1786543200.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "c26a0f8d3e7b195c4a2f6e08",
+   "title": "Martin 1:1",
+   "start_datetime": 1786633200.0,
+   "end_datetime": 1786635000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "f4b2c8e6a0d37159b8e2f4a6",
+   "title": "Personal appt",
+   "start_datetime": 1787056200.0,
+   "end_datetime": 1787059800.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "57d4e1c9b0a63f28e5d7c1b4",
+   "title": "Martin 1:1",
+   "start_datetime": 1787238000.0,
+   "end_datetime": 1787239800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "e19c6a3f05d74b28c9a2e6f1",
+   "title": "Nicole: bookcase pickup",
+   "start_datetime": 1787270400.0,
+   "end_datetime": 1787275800.0,
+   "tag": "personal",
+   "description": "Marketplace sale, walnut bookcase, $40 cash. Anytime after 7. She'll text from out front, buzz her in.",
+   "location": "Home",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "0f7b3e95a4d1c682b7ae5b3d",
+   "title": "Book club",
+   "start_datetime": 1787702400.0,
+   "end_datetime": 1787709600.0,
+   "tag": "personal",
+   "description": "The Great Believers",
+   "location": "4731 N. Leavitt St, 2nd floor",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "ab08f3d6e2c517a9f4b0d832",
+   "title": "Martin 1:1",
+   "start_datetime": 1787842800.0,
+   "end_datetime": 1787844600.0,
+   "tag": "work",
+   "description": "Skipped this week, quiet week. Flag anything before BD1 (Tue 9/1).",
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "6b1d9e5f3a07c2e8b6d1f4a0",
+   "title": "BD1 - Subledger feeds run",
+   "start_datetime": 1788238800.0,
+   "end_datetime": 1788325200.0,
+   "tag": "work",
+   "description": "August close (AUG-26). SAP AP, fixed asset and prepaid feeds run at 06:15.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "2d6e9b0f4a17c85e3d9b6a20",
+   "title": "AP accrual tie-out w/ Devon (Aug close)",
+   "start_datetime": 1788375600.0,
+   "end_datetime": 1788377400.0,
+   "tag": "work",
+   "description": "Mark up Devon's August GRNI list (SAP, POs over $5,000.00) before the BD3 accrual JE. Bring July's accrual lines to see what rolled forward.",
+   "location": "HQ 9th Fl, Huddle Rm 9D",
+   "attendees": [
+    "Grace Liu",
+    "Devon Clarke"
+   ]
+  },
+  {
+   "event_id": "a94f2c7e1b05d36f8e2c4b19",
+   "title": "BD3 - Accrual JEs submitted",
+   "start_datetime": 1788411600.0,
+   "end_datetime": 1788498000.0,
+   "tag": "work",
+   "description": "August close (AUG-26), BD3 Thu 9/3. Accrual JEs submitted in Oracle by 5:00 pm.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "3d7c2b9f6a04e81d5c3b7e20",
+   "title": "Martin 1:1",
+   "start_datetime": 1788447600.0,
+   "end_datetime": 1788449400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "4c7e3a9f1d5b08e2c7f3a6b9",
+   "title": "BD4 - AP subledger cutoff",
+   "start_datetime": 1788498000.0,
+   "end_datetime": 1788584400.0,
+   "tag": "work",
+   "description": "August close (AUG-26). AP subledger cutoff in SAP.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "a1f5d0b7e3c94a6f1d5b8e2c",
+   "title": "BD5 - Soft close",
+   "start_datetime": 1788843600.0,
+   "end_datetime": 1788930000.0,
+   "tag": "work",
+   "description": "August close (AUG-26). Soft close. BlackLine recs due for review.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "7d3b8f2a6e0c51d4b9f7a3e0",
+   "title": "BD7 - Hard close; Martin certifies",
+   "start_datetime": 1789016400.0,
+   "end_datetime": 1789102800.0,
+   "tag": "work",
+   "description": "August close (AUG-26). Hard close. Martin certifies.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "e6b1a85d0f4c37e2b9a6d14f",
+   "title": "Martin 1:1",
+   "start_datetime": 1789052400.0,
+   "end_datetime": 1789054200.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "6d0ae4b729c1f58e03a6d7b2",
+   "title": "Sunday dinner, Naperville",
+   "start_datetime": 1789336800.0,
+   "end_datetime": 1789347600.0,
+   "tag": "personal",
+   "description": "Bring the two boxes of books for Peggy Lund's library sale.",
+   "location": "Mom and Dad's, Naperville",
+   "attendees": [
+    "Helen Liu",
+    "Richard Liu",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "92f0c6e3a8d15b74f2e0c967",
+   "title": "Martin 1:1",
+   "start_datetime": 1789657200.0,
+   "end_datetime": 1789659000.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "5a9d0e3c7b62f14e8d0a3b76",
+   "title": "Q3 Town Hall",
+   "start_datetime": 1789660800.0,
+   "end_datetime": 1789664400.0,
+   "tag": "work",
+   "description": "First-half results and Q3 outlook, network update including the Memphis Hub, safety recognition, open Q&A. Stream link on the intranet Town Hall page.",
+   "location": "HQ 2nd floor training center",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "a62f1e9c04d8b37e5c2a9f14",
+   "title": "Coffee w/ Marcy",
+   "start_datetime": 1789916400.0,
+   "end_datetime": 1789920000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Café Selmarie, 4729 N. Lincoln Ave",
+   "attendees": [
+    "Grace Liu",
+    "Marcy Kowalski"
+   ]
+  },
+  {
+   "event_id": "1c5e8a0b7d39f26c4e1b8a53",
+   "title": "Martin 1:1",
+   "start_datetime": 1790262000.0,
+   "end_datetime": 1790263800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "1b9e5f3a7d2c860e4b7f1a93",
+   "title": "Call Aunt Lily + Uncle David",
+   "start_datetime": 1790541000.0,
+   "end_datetime": 1790542800.0,
+   "tag": "personal",
+   "description": "Tell them about 11/12 before Kevin sends the FB group invite",
+   "location": null,
+   "attendees": [
+    "Grace Liu",
+    "Lily Wong",
+    "David Wong"
+   ]
+  },
+  {
+   "event_id": "e4a16c3f82b90d7e5f1ca940",
+   "title": "Book club",
+   "start_datetime": 1790726400.0,
+   "end_datetime": 1790733600.0,
+   "tag": "personal",
+   "description": "Hosting at mine. Intermezzo",
+   "location": "Home",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "e0b47c2a9f15d83e6c2b0a94",
+   "title": "BD1 - Subledger feeds run",
+   "start_datetime": 1790830800.0,
+   "end_datetime": 1790917200.0,
+   "tag": "work",
+   "description": "September close (SEP-26). SAP AP, fixed asset and prepaid feeds run at 06:15.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "2c9e7a5f1b3d08e6c4a29f71",
+   "title": "Personal appt",
+   "start_datetime": 1790858700.0,
+   "end_datetime": 1790862300.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "d8a3f61c2e95b07d3f8a6c24",
+   "title": "Martin 1:1",
+   "start_datetime": 1790866800.0,
+   "end_datetime": 1790868600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "3ca85e07f2b14d96e0b7a4c5",
+   "title": "Tacos w/ Jess",
+   "start_datetime": 1791068400.0,
+   "end_datetime": 1791073800.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Big Star",
+   "attendees": [
+    "Grace Liu",
+    "Jess Moreno"
+   ]
+  },
+  {
+   "event_id": "6c1b8e3d5f92a07c4e6b1d58",
+   "title": "BD3 - Accrual JEs submitted",
+   "start_datetime": 1791176400.0,
+   "end_datetime": 1791262800.0,
+   "tag": "work",
+   "description": "September close (SEP-26), BD3 Mon 10/5. Accrual JEs submitted in Oracle by 5:00 pm.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "e5a0d7c2b9f4136e0a8c5d72",
+   "title": "AP accrual tie-out w/ Devon (Sep close)",
+   "start_datetime": 1791210600.0,
+   "end_datetime": 1791212400.0,
+   "tag": "work",
+   "description": "Walk through Devon's September GRNI list (14 lines, POs over $5,000.00) before the BD3 accrual JEs go in.",
+   "location": "HQ 9th Fl, Huddle Rm 9D",
+   "attendees": [
+    "Grace Liu",
+    "Devon Clarke"
+   ]
+  },
+  {
+   "event_id": "9b3e0d6a2c84f15e7a0d9c36",
+   "title": "BD4 - AP subledger cutoff",
+   "start_datetime": 1791262800.0,
+   "end_datetime": 1791349200.0,
+   "tag": "work",
+   "description": "September close (SEP-26). AP subledger cutoff in SAP.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "b5e37f10a96d4c28e1b03d7a",
+   "title": "Call w/ Dad + Kevin",
+   "start_datetime": 1791333000.0,
+   "end_datetime": 1791335700.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Richard Liu",
+    "Kevin Liu",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "4f7a1c9e3b06d82e5c1f7a08",
+   "title": "BD5 - Soft close",
+   "start_datetime": 1791349200.0,
+   "end_datetime": 1791435600.0,
+   "tag": "work",
+   "description": "September close (SEP-26). Soft close. BlackLine recs due for review.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "64e2b07f9c1d5a38e6b2f0d1",
+   "title": "Martin 1:1",
+   "start_datetime": 1791471600.0,
+   "end_datetime": 1791473400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "d25e8b0f4a73c19e6b2d0f58",
+   "title": "CPE webinar: ASC 842 in Practice",
+   "start_datetime": 1791482400.0,
+   "end_datetime": 1791488400.0,
+   "tag": "work",
+   "description": "Ledgerline CPE live webinar on lease modifications, remeasurements and embedded leases. 2.0 CPE hours, Accounting. Order LCP-2026-48317. Answer every poll for credit.",
+   "location": "Online (Ledgerline CPE)",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "80c6d3a1f9e24b75d0a8c6e2",
+   "title": "BD7 - Hard close; Martin certifies",
+   "start_datetime": 1791522000.0,
+   "end_datetime": 1791608400.0,
+   "tag": "work",
+   "description": "September close (SEP-26). Hard close. Martin certifies.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "b6a02e9d5c18f73a4e9b0d27",
+   "title": "Flu shot - Walgreens",
+   "start_datetime": 1791649800.0,
+   "end_datetime": 1791650700.0,
+   "tag": "personal",
+   "description": "Flu vaccine. Bring insurance card.",
+   "location": "Walgreens",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "6d4a0c8e2f7b19d5a3e6c08b",
+   "title": "FaceTime w/ Aunt Lily + Uncle David",
+   "start_datetime": 1791752400.0,
+   "end_datetime": 1791754200.0,
+   "tag": "personal",
+   "description": "David has the old albums. Scans for Kevin's board.",
+   "location": null,
+   "attendees": [
+    "Grace Liu",
+    "Lily Wong",
+    "David Wong"
+   ]
+  },
+  {
+   "event_id": "a8e15c3f7d29b06e4f1a9c5d",
+   "title": "FYI: window washing at Leavitt Ct",
+   "start_datetime": 1791982800.0,
+   "end_datetime": 1792011600.0,
+   "tag": "personal",
+   "description": "Board lets crew into 3B with master key",
+   "location": "4815 N. Leavitt St, Chicago, IL 60625",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "a6f03d1e9b7c4285e2d0f9b1",
+   "title": "Drive to Gary",
+   "start_datetime": 1792068300.0,
+   "end_datetime": 1792071900.0,
+   "tag": "work",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "4e1b9c07d3a85f26e0c7b492",
+   "title": "Gary cross-dock visit",
+   "start_datetime": 1792072800.0,
+   "end_datetime": 1792090800.0,
+   "tag": "work",
+   "description": "Driving. Keep receipts, log mileage.",
+   "location": "Lakeshore Freight cross-dock, Gary, IN",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "5c2e8b07f4d19a63c8e1b7d0",
+   "title": "Drive back from Gary",
+   "start_datetime": 1792090800.0,
+   "end_datetime": 1792094400.0,
+   "tag": "work",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "fa71d3c85e0b26a9d7f1c348",
+   "title": "Martin 1:1",
+   "start_datetime": 1792076400.0,
+   "end_datetime": 1792078200.0,
+   "tag": "work",
+   "description": "Declined: at the Gary cross-dock visit 9:00 to 2:00. Recap at the 10/22 1:1.",
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "0b6c9e2d4a81f57c3b6e9d05",
+   "title": "Martin 1:1",
+   "start_datetime": 1792681200.0,
+   "end_datetime": 1792683000.0,
+   "tag": "work",
+   "description": "Gary cross-dock recap from 10/15.",
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "a6d39f0e4b28c71de5f0a3b9",
+   "title": "H&G planning meeting",
+   "start_datetime": 1792695600.0,
+   "end_datetime": 1792700100.0,
+   "tag": "work",
+   "description": null,
+   "location": "Hollins & Grant LLP offices",
+   "attendees": [
+    "Grace Liu",
+    "Nadia Okafor"
+   ]
+  },
+  {
+   "event_id": "7a9c2e5bf0d341a8c7e29b06",
+   "title": "Book club",
+   "start_datetime": 1793145600.0,
+   "end_datetime": 1793152800.0,
+   "tag": "personal",
+   "description": null,
+   "location": "2219 W. Ainslie St",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "7e3a0d5f1b96c48e2a7d0f69",
+   "title": "Martin 1:1",
+   "start_datetime": 1793286000.0,
+   "end_datetime": 1793287800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "3d9f6a0c2e85b14d7f3a9e60",
+   "title": "BD1 - Subledger feeds run",
+   "start_datetime": 1793599200.0,
+   "end_datetime": 1793685600.0,
+   "tag": "work",
+   "description": "October close (OCT-26). SAP AP, fixed asset and prepaid feeds run at 06:15.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "1f8c6a4e2d0b93f7c5a1e6d4",
+   "title": "BD3 - Accrual JEs submitted",
+   "start_datetime": 1793772000.0,
+   "end_datetime": 1793858400.0,
+   "tag": "work",
+   "description": "October close (OCT-26), BD3 Wed 11/4. Accrual JEs submitted in Oracle by 5:00 pm.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "6e0a3d8c1f57b29e4a6d0c83",
+   "title": "BD4 - AP subledger cutoff",
+   "start_datetime": 1793858400.0,
+   "end_datetime": 1793944800.0,
+   "tag": "work",
+   "description": "October close (OCT-26). AP subledger cutoff in SAP.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "a9c5e17b3d02f84c6e9a1d5b",
+   "title": "Martin 1:1",
+   "start_datetime": 1793894400.0,
+   "end_datetime": 1793896200.0,
+   "tag": "work",
+   "description": "Also covers the 11/12 slot (declined for the Memphis count).",
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "2b7d0f4e9a63c18b5d2f7e09",
+   "title": "BD5 - Soft close",
+   "start_datetime": 1793944800.0,
+   "end_datetime": 1794031200.0,
+   "tag": "work",
+   "description": "October close (OCT-26). Soft close. BlackLine recs due for review.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "b7d3f1a9c5e20847d6b3e9a1",
+   "title": "Bib pickup w/ Jess",
+   "start_datetime": 1794007800.0,
+   "end_datetime": 1794009600.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Lakefront Runner's Shop, 4740 N. Lincoln Ave",
+   "attendees": [
+    "Grace Liu",
+    "Jess Moreno"
+   ]
+  },
+  {
+   "event_id": "6e0a4c8b2d9f17a3e5c06b8d",
+   "title": "Lakefront 15K",
+   "start_datetime": 1794058200.0,
+   "end_datetime": 1794065400.0,
+   "tag": "personal",
+   "description": "Corrals open 6:45. Goal under 1:20.",
+   "location": "Montrose Harbor, Chicago",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "91f5b7d3e0a2c68b4f1e7d25",
+   "title": "Brunch w/ Jess",
+   "start_datetime": 1794069000.0,
+   "end_datetime": 1794072600.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Café Selmarie, Lincoln Square",
+   "attendees": [
+    "Grace Liu",
+    "Jess Moreno"
+   ]
+  },
+  {
+   "event_id": "18e5c7d2fa9306b4e1c7a58d",
+   "title": "Call Tom Brennan",
+   "start_datetime": 1794168000.0,
+   "end_datetime": 1794169200.0,
+   "tag": "personal",
+   "description": "Go over the 12th. His few words, 2 or 3 min. Outpatient staff coming after the pharmacy closes. Call his cell.",
+   "location": "Phone",
+   "attendees": [
+    "Tom Brennan",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "b72e05d9a3c6f18e4d2b7a96",
+   "title": "Call Bellwether: final headcount",
+   "start_datetime": 1794236400.0,
+   "end_datetime": 1794237300.0,
+   "tag": "personal",
+   "description": "Final count for the Library Room, Thu 11/12. RSVPs closed Sunday, so get the latest number from Kevin first. Events line (630) 555-0190.",
+   "location": "Phone",
+   "attendees": [
+    "Grace Liu",
+    "Nora Becker"
+   ]
+  },
+  {
+   "event_id": "c81e5a3f0d94b67e2a8c5f13",
+   "title": "BD7 - Hard close; Martin certifies",
+   "start_datetime": 1794290400.0,
+   "end_datetime": 1794376800.0,
+   "tag": "work",
+   "description": "October close (OCT-26). Hard close. Martin certifies.",
+   "location": null,
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "5e2b8d0f3a71c946b8e2d5a0",
+   "title": "HOLD - travel to MEM (not booked)",
+   "start_datetime": 1794436200.0,
+   "end_datetime": 1794456000.0,
+   "tag": "work",
+   "description": "Outbound to Memphis after work. Book through Duffel.",
+   "location": "O'Hare (ORD)",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "a08f4c6e2d93b17e5c0a4f28",
+   "title": "Memphis count",
+   "start_datetime": 1794488400.0,
+   "end_datetime": 1794510000.0,
+   "tag": "work",
+   "description": "Finance observer. Test counts, cutoff docs, signed sheets.",
+   "location": "Lakeshore Freight Memphis Hub, 4250 Airways Blvd, Memphis, TN 38116",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "c7e1906b4a2d58f3e1c7b04d",
+   "title": "Martin 1:1",
+   "start_datetime": 1794499200.0,
+   "end_datetime": 1794501000.0,
+   "tag": "work",
+   "description": "Declined: at the Memphis count. Covered at the 11/5 1:1.",
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "5d8ae3f10b6c94d2c7a53e08",
+   "title": "Dinner - Naperville",
+   "start_datetime": 1794533400.0,
+   "end_datetime": 1794544200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Bellwether Tavern, 115 W. Jefferson Ave, Naperville",
+   "attendees": [
+    "Grace Liu",
+    "Richard Liu",
+    "Kevin Liu"
+   ]
+  },
+  {
+   "event_id": "f5c81e2a609d3b47a2e6d18c",
+   "title": "H&G walkthrough prep",
+   "start_datetime": 1794864600.0,
+   "end_datetime": 1794867300.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th Fl",
+   "attendees": [
+    "Martin Keane",
+    "Grace Liu",
+    "Priya Raman"
+   ]
+  },
+  {
+   "event_id": "0e7b4c95d2f61a38c9a5e07f",
+   "title": "H&G interim walkthrough (AP and accruals)",
+   "start_datetime": 1794931200.0,
+   "end_datetime": 1794938400.0,
+   "tag": "work",
+   "description": "Organizer: Martin Keane",
+   "location": "HQ Conf Rm 9B",
+   "attendees": [
+    "Martin Keane",
+    "Grace Liu",
+    "Priya Raman",
+    "Nadia Okafor"
+   ]
+  },
+  {
+   "event_id": "0f6b2d9e4c71a38f5b0e2d96",
+   "title": "Martin 1:1",
+   "start_datetime": 1795104000.0,
+   "end_datetime": 1795105800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Martin's office, 9th floor",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane"
+   ]
+  },
+  {
+   "event_id": "9e2c5a7f0b4d81e3c6a9f025",
+   "title": "October close retro + lunch",
+   "start_datetime": 1795111200.0,
+   "end_datetime": 1795116600.0,
+   "tag": "work",
+   "description": "Quick look back at the October close, then lunch.",
+   "location": "HQ Conf Rm 9A",
+   "attendees": [
+    "Grace Liu",
+    "Martin Keane",
+    "Priya Raman",
+    "Devon Clarke",
+    "Sam Whitfield",
+    "Ana Castellanos",
+    "Marcus Bellamy",
+    "Jenna Sato",
+    "Omar Haddad",
+    "Kristen Dowd"
+   ]
+  },
+  {
+   "event_id": "e17b6c3a0f9d48e2b5c7a316",
+   "title": "Lunch w/ Dana Whitcomb",
+   "start_datetime": 1795197600.0,
+   "end_datetime": 1795201200.0,
+   "tag": "personal",
+   "description": "My treat for the ASC 842 webinar tip. She's bringing her webinar list so I can plan next year's CPE hours.",
+   "location": "Revival Food Hall, 125 S. Clark St",
+   "attendees": [
+    "Grace Liu",
+    "Dana Whitcomb"
+   ]
+  },
+  {
+   "event_id": "b26df8a03c94e17b6d05a3f8",
+   "title": "Book club",
+   "start_datetime": 1795568400.0,
+   "end_datetime": 1795575600.0,
+   "tag": "personal",
+   "description": "Small Things Like These",
+   "location": "4815 N. Leavitt St, Unit 1B",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "e7a3c05f8b2d49e6c1a7f034",
+   "title": "Thanksgiving, Naperville",
+   "start_datetime": 1795672800.0,
+   "end_datetime": 1795759200.0,
+   "tag": "personal",
+   "description": "Bringing pumpkin and pecan pies and two dozen rolls from Café Selmarie. Kevin has the folding chairs and card table.",
+   "location": "Mom and Dad's, Naperville",
+   "attendees": [
+    "Helen Liu",
+    "Richard Liu",
+    "Kevin Liu",
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "3f8d1a6c9e27b05f4d8c3e71",
+   "title": "Dentist cleaning",
+   "start_datetime": 1796043600.0,
+   "end_datetime": 1796047200.0,
+   "tag": "personal",
+   "description": "6-month cleaning. (773) 555-0190. They text a reminder 2 days before.",
+   "location": "Leland Avenue Dental",
+   "attendees": [
+    "Grace Liu"
+   ]
+  },
+  {
+   "event_id": "d6f3b0a92e7c41580f4ad2b9",
+   "title": "CPE webinar: Ethics (4.0 hrs)",
+   "start_datetime": 1796324400.0,
+   "end_datetime": 1796338800.0,
+   "tag": "work",
+   "description": "Case-based ethics session Dana recommended. Covers the 4 ethics hours still due by Dec 31.",
+   "location": "Online",
+   "attendees": [
+    "Grace Liu"
+   ]
+  }
+ ]
+}

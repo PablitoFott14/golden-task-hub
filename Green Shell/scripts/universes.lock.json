@@ -51,6 +51,46 @@
    "synced_at": "2026-10-19T11:17:43+00:00",
    "notes": [],
    "history": []
+  },
+  "owen-brandt": {
+   "fingerprint": "c6bbc2dca6b1a6a167b0d65d5e4757dee4530ddfdacab3c2357592f983999cda",
+   "page_sha256": "b8b16d704e4ba64ad4d9a062c0431a5d85ac67b8ae148d078348cb4e22aaf8eb",
+   "source": {
+    "kind": "viewer page",
+    "origin": "https://universe-viewers.vercel.app/owen-brandt/",
+    "time": "2026-10-26T19:55:51+00:00"
+   },
+   "synced_at": "2026-10-26T21:41:38+00:00",
+   "notes": [],
+   "history": []
+  },
+  "tomasz-nowak": {
+   "fingerprint": "94111771a3ffffde1a59461d0d725f3386ee3790659103f5d88fa0869572fbf5",
+   "page_sha256": "20689520c286045cd687efe988bf79c9667e38e492f98e4fadff93c78337401e",
+   "source": {
+    "kind": "viewer page",
+    "origin": "https://universe-viewers.vercel.app/tomasz-nowak/",
+    "time": "2026-10-26T19:55:57+00:00"
+   },
+   "synced_at": "2026-10-26T21:41:43+00:00",
+   "notes": [],
+   "history": []
+  },
+  "grace-liu": {
+   "fingerprint": "418259f0cf53de40534c8b1a37029489c18a3e3603cb3bb47bd5c326ec3ce631",
+   "page_sha256": "7b68ac7495e18dd1734516a6206d3c4ee25b4ca49316dcf42c23732a9bd4f299",
+   "source": {
+    "kind": "viewer page",
+    "origin": "grace-liu.html",
+    "time": "2026-10-26T21:40:06.384586+00:00"
+   },
+   "synced_at": "2026-10-26T21:41:45+00:00",
+   "notes": [
+    "Built from the live viewer page's program (engine, stylesheet, persona header, docs) with the data of openclaw-grace_liu_20261020-universe.zip, which matches the in-task database export record for record. The live page carries another generation of the data, so it was not used as the data source.",
+    "Nav counts recomputed by the page's own rule. Files keeps the page's listing with the previews the site serves; 28 records take the served file's sha256 and size, and 3 the site does not serve are marked not rendered.",
+    "Do not sync Grace from the live page until it is rebuilt from that export."
+   ],
+   "history": []
   }
  }
 }

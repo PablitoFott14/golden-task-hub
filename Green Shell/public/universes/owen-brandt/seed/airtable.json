@@ -1,0 +1,797 @@
+{
+ "bases": [
+  {
+   "id": "app7c3e91f04d2b58",
+   "name": "Salt in the Lakes"
+  }
+ ],
+ "tables": [
+  {
+   "id": "tbl2a9f4e7c10d6b3",
+   "name": "Claims",
+   "base_id": "app7c3e91f04d2b58",
+   "description": null,
+   "fields": [
+    {
+     "id": "fld1b7e40c9a2f63d",
+     "name": "ID",
+     "type": "singleLineText"
+    },
+    {
+     "id": "fld5d92a8e1f03c47",
+     "name": "Claim",
+     "type": "multilineText"
+    },
+    {
+     "id": "fld8a3c6f20e94b1d",
+     "name": "Source",
+     "type": "singleLineText"
+    },
+    {
+     "id": "fldc41e9b07d58a26",
+     "name": "Primary",
+     "type": "singleSelect"
+    },
+    {
+     "id": "fld06f8d3a92c1e75",
+     "name": "Status",
+     "type": "singleSelect"
+    },
+    {
+     "id": "fld9e27b5c03a84f1",
+     "name": "Salt-use",
+     "type": "singleSelect"
+    },
+    {
+     "id": "fld3c50e8f71b2d94",
+     "name": "Cleanup cost",
+     "type": "singleSelect"
+    },
+    {
+     "id": "flde84a1d6c935f02",
+     "name": "Priority",
+     "type": "number"
+    },
+    {
+     "id": "fld72d9f0b4e16a38",
+     "name": "Notes",
+     "type": "multilineText"
+    },
+    {
+     "id": "fldb5a0c37e8d2914",
+     "name": "Last checked",
+     "type": "date"
+    }
+   ],
+   "views": [
+    {
+     "id": "viw4f1d8e26a9c07b",
+     "name": "Grid view",
+     "type": "grid"
+    }
+   ]
+  },
+  {
+   "id": "tbl8e05b3d9a7c241",
+   "name": "Sources",
+   "base_id": "app7c3e91f04d2b58",
+   "description": null,
+   "fields": [
+    {
+     "id": "fld2e6c90a7f4b18d",
+     "name": "ID",
+     "type": "singleLineText"
+    },
+    {
+     "id": "fld9b13f5d0c2e874",
+     "name": "Source",
+     "type": "singleLineText"
+    },
+    {
+     "id": "fld4a87e2c19d06fb",
+     "name": "Type",
+     "type": "singleSelect"
+    },
+    {
+     "id": "fldd05b6f83a1c972",
+     "name": "Primary",
+     "type": "singleSelect"
+    },
+    {
+     "id": "fld61e3a9d7b0f45c",
+     "name": "Date",
+     "type": "date"
+    },
+    {
+     "id": "fldf7c28b41e5a093",
+     "name": "File",
+     "type": "singleLineText"
+    },
+    {
+     "id": "fld0d94c1e6b38a72",
+     "name": "Notes",
+     "type": "multilineText"
+    },
+    {
+     "id": "fld4f67820bf0c004",
+     "name": "Contact",
+     "type": "singleLineText"
+    }
+   ],
+   "views": [
+    {
+     "id": "viw8b2e05f4c3a19d",
+     "name": "Grid view",
+     "type": "grid"
+    }
+   ]
+  },
+  {
+   "id": "9d14c7a3e62f05b8d1a93c6e",
+   "name": "Sites",
+   "base_id": "app7c3e91f04d2b58",
+   "description": null,
+   "fields": [
+    {
+     "id": "e1a6c03f94b2d7580c3e9f16",
+     "name": "Site ID",
+     "type": "singleLineText"
+    },
+    {
+     "id": "58d2b7e0a4c91f63b8e05d2a",
+     "name": "Water body",
+     "type": "singleLineText"
+    },
+    {
+     "id": "0f7c3e9a25d84b16c0a7e3f9",
+     "name": "Phase",
+     "type": "singleSelect"
+    },
+    {
+     "id": "b3e95a1d07c26f48e93b1c05",
+     "name": "Station type",
+     "type": "singleSelect"
+    },
+    {
+     "id": "4a07d9e2c16b83f50d4a9e7c",
+     "name": "Latitude",
+     "type": "number"
+    },
+    {
+     "id": "d96b2f04e8a13c75b6d02e91",
+     "name": "Longitude",
+     "type": "number"
+    },
+    {
+     "id": "71c0e5b8a3d94f26e17c0b5a",
+     "name": "Sampled Oct 10",
+     "type": "singleSelect"
+    },
+    {
+     "id": "8e3a5d1f06b72c49a8e31d70",
+     "name": "Notes",
+     "type": "multilineText"
+    }
+   ],
+   "views": [
+    {
+     "id": "a5f2c9e07d31b84e6c5f20a9",
+     "name": "Grid view",
+     "type": "grid"
+    }
+   ]
+  }
+ ],
+ "records": [
+  {
+   "id": "b64bbd722c5a32babad4502d",
+   "fields": {
+    "ID": "C03",
+    "Claim": "Chloride in our lakes has \"doubled since 2020\"",
+    "Source": "Viral Facebook chart (S10)",
+    "Primary": "N",
+    "Status": "Checking",
+    "Salt-use": "M",
+    "Cleanup cost": "L",
+    "Priority": 6,
+    "Notes": "Needs primary source. Chart footer cites \"MLWD 2025 report\". Not yet checked against the report.",
+    "Last checked": "2026-10-16"
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1792166442",
+   "modified_time": "1792186215"
+  },
+  {
+   "id": "03fc70278ed88ff2e89a60ff",
+   "fields": {
+    "ID": "S10",
+    "Source": "Viral \"doubled\" chart, Facebook post (shared in Salt Watch Twin Cities group)",
+    "Type": "Social media",
+    "Primary": "N",
+    "Date": "2026-10-15",
+    "File": "/Salt_in_the_Lakes/Viral_Chart/viral_chart_screenshot_2026-10-16.png",
+    "Notes": "Secondary. Needs primary source. Reposted by @saltwatchtc on Instagram 2026-10-19."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1792166597",
+   "modified_time": "1792429844"
+  },
+  {
+   "id": "0b4e8c2a7f19d356e0b48c27",
+   "fields": {
+    "Site ID": "ARD-1",
+    "Water body": "Lake Ardell",
+    "Phase": "Phase 1 (2019)",
+    "Station type": "Open water",
+    "Latitude": 45.0187,
+    "Longitude": -93.1642,
+    "Sampled Oct 10": "N",
+    "Notes": ""
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790104868",
+   "modified_time": "1791735380"
+  },
+  {
+   "id": "c92f5a0e3d71b846c92f5a1d",
+   "fields": {
+    "Site ID": "COR-1",
+    "Water body": "Corliss Lake, boat launch",
+    "Phase": "Phase 1 (2019)",
+    "Station type": "Open water",
+    "Latitude": 45.0412,
+    "Longitude": -93.1287,
+    "Sampled Oct 10": "Y",
+    "Notes": "Public launch. Meeting point on Oct 10."
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790104912",
+   "modified_time": "1791735312"
+  },
+  {
+   "id": "7e05b3d9a2c68f147e05b3e8",
+   "fields": {
+    "Site ID": "PEN-1",
+    "Water body": "Penner Lake",
+    "Phase": "Phase 1 (2019)",
+    "Station type": "Open water",
+    "Latitude": 45.0563,
+    "Longitude": -93.1519,
+    "Sampled Oct 10": "N",
+    "Notes": ""
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790104957",
+   "modified_time": "1791735382"
+  },
+  {
+   "id": "1d6a9f3c04e7b2851d6a9f40",
+   "fields": {
+    "Site ID": "ODG-1",
+    "Water body": "Lake Odegaard",
+    "Phase": "Phase 1 (2019)",
+    "Station type": "Open water",
+    "Latitude": 45.0734,
+    "Longitude": -93.1196,
+    "Sampled Oct 10": "N",
+    "Notes": ""
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790104999",
+   "modified_time": "1791735385"
+  },
+  {
+   "id": "a40c7e5b91d32f68a40c7e6f",
+   "fields": {
+    "Site ID": "HSK-1",
+    "Water body": "Haskell Pond",
+    "Phase": "Phase 1 (2019)",
+    "Station type": "Open water",
+    "Latitude": 45.0291,
+    "Longitude": -93.1083,
+    "Sampled Oct 10": "N",
+    "Notes": ""
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790105042",
+   "modified_time": "1791735387"
+  },
+  {
+   "id": "e85b1d07c3a96f24e85b1d18",
+   "fields": {
+    "Site ID": "SUM-1",
+    "Water body": "Sumac Lake, fishing pier",
+    "Phase": "Phase 2 (2022)",
+    "Station type": "Open water",
+    "Latitude": 45.0645,
+    "Longitude": -93.1768,
+    "Sampled Oct 10": "Y",
+    "Notes": "Sample from the end of the pier."
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790105091",
+   "modified_time": "1791735358"
+  },
+  {
+   "id": "39f7a2c6e05d18b439f7a2d5",
+   "fields": {
+    "Site ID": "KET-1",
+    "Water body": "Kettle Lake",
+    "Phase": "Phase 2 (2022)",
+    "Station type": "Open water",
+    "Latitude": 45.0886,
+    "Longitude": -93.1405,
+    "Sampled Oct 10": "N",
+    "Notes": ""
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790105133",
+   "modified_time": "1791735390"
+  },
+  {
+   "id": "b6d08e4f2a17c953b6d08e50",
+   "fields": {
+    "Site ID": "LTM-1",
+    "Water body": "Little Tamarack Lake",
+    "Phase": "Phase 2 (2022)",
+    "Station type": "Open water",
+    "Latitude": 45.0953,
+    "Longitude": -93.1652,
+    "Sampled Oct 10": "N",
+    "Notes": "Backup for Oct 10. Not used."
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790105178",
+   "modified_time": "1791735393"
+  },
+  {
+   "id": "4f2c9b6e81a05d374f2c9b7d",
+   "fields": {
+    "Site ID": "ODG-IN",
+    "Water body": "Lake Odegaard north inlet (storm sewer)",
+    "Phase": "Phase 3 (2025)",
+    "Station type": "Inlet",
+    "Latitude": 45.0792,
+    "Longitude": -93.1224,
+    "Sampled Oct 10": "Y",
+    "Notes": "Storm sewer outfall off the trail spur. Pole sampler needed. Grate and flow sensor are district equipment, leave alone."
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790105224",
+   "modified_time": "1791735341"
+  },
+  {
+   "id": "d71e3a0c5f94b268d71e3a1b",
+   "fields": {
+    "Site ID": "PEN-OUT",
+    "Water body": "Penner Lake outlet culvert",
+    "Phase": "Phase 3 (2025)",
+    "Station type": "Outlet",
+    "Latitude": 45.0528,
+    "Longitude": -93.1461,
+    "Sampled Oct 10": "Y",
+    "Notes": "Reach from the trail-side bank by the Penner Trail footbridge. Stay out of the culvert."
+   },
+   "table_id": "9d14c7a3e62f05b8d1a93c6e",
+   "created_time": "1790105269",
+   "modified_time": "1791735329"
+  },
+  {
+   "id": "8c50f2b7e3a19d648c50f2c6",
+   "fields": {
+    "ID": "S07",
+    "Source": "Field technician (anonymous)",
+    "Type": "Field",
+    "Primary": "Y",
+    "Date": "2026-10-10",
+    "File": "/Salt_in_the_Lakes/Field/2026-10-10/",
+    "Notes": "Second sampler on Oct 10, all four sites. Photos R_photo_01 to R_photo_10 and the custody record are in the field folder. Identity held by O. Brandt."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1791735524",
+   "modified_time": "1791735524"
+  },
+  {
+   "id": "5b8e2d07f4a13c96e5b8d2f0",
+   "fields": {
+    "ID": "C14",
+    "Claim": "Owen's Riverside results match the v2 means within 3%",
+    "Source": "Riverside WO-26-10418",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Salt-use": "L",
+    "Cleanup cost": "L",
+    "Priority": 14,
+    "Notes": "Oct 10 samples, report dated Oct 20."
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1792704011",
+   "modified_time": "1792704390"
+  },
+  {
+   "id": "c09f6a3e1d75b28c09f4e6a3",
+   "fields": {
+    "ID": "C15",
+    "Claim": "Northstar runs 16-19% above Riverside",
+    "Source": "Both lab reports (WO-26-10418, NS-4471)",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Salt-use": "L",
+    "Cleanup cost": "L",
+    "Priority": 15,
+    "Notes": "Same split samples, all four sites."
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1792704107",
+   "modified_time": "1792704402"
+  },
+  {
+   "id": "4a7d1c9e82b05f36a4d7c1e9",
+   "fields": {
+    "ID": "S08",
+    "Source": "Riverside Analytical, report WO-26-10418",
+    "Type": "Lab report",
+    "Primary": "Y",
+    "Contact": "Priya Raman, project manager",
+    "Notes": "Chloride by EPA 300.0 (ion chromatography). Report, method summary, COC scan and invoice in /Salt_in_the_Lakes/Labs/."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1792704185",
+   "modified_time": "1792704185"
+  },
+  {
+   "id": "e36b0f8a5c294d71e3b6f0a8",
+   "fields": {
+    "ID": "S09",
+    "Source": "Northstar Environmental, report NS-4471",
+    "Type": "Lab report",
+    "Primary": "Y",
+    "Contact": "Gary Lindqvist, lab director",
+    "Notes": "Chloride by ion-selective electrode. Report, method sheet, COC scan and invoice in /Salt_in_the_Lakes/Labs/."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1792704232",
+   "modified_time": "1792704232"
+  },
+  {
+   "id": "3e7a1f9c5b2d8e4a6c0f1b93",
+   "fields": {
+    "ID": "C01",
+    "Claim": "City road-salt use rose 9% between the 2023-24 and 2024-25 winters",
+    "Source": "Report v2, ch. 2 survey",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-10-09",
+    "Salt-use": "H",
+    "Cleanup cost": "L",
+    "Priority": 1,
+    "Notes": ""
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1790103852",
+   "modified_time": "1792186224"
+  },
+  {
+   "id": "8b2d6f1a9e4c3a7d5f0b2e86",
+   "fields": {
+    "ID": "C02",
+    "Claim": "Corliss and Penner exceed the 230 standard",
+    "Source": "Report v1, Table 3",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-09-24",
+    "Salt-use": "H",
+    "Cleanup cost": "M",
+    "Priority": 4,
+    "Notes": ""
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1790104007",
+   "modified_time": "1792186302"
+  },
+  {
+   "id": "f4a9c2e7b1d5063e8a4f9c21",
+   "fields": {
+    "ID": "C04",
+    "Claim": "Odegaard and Haskell exceed the 230 standard",
+    "Source": "Report v2, Table 3",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-10-09",
+    "Salt-use": "M",
+    "Cleanup cost": "H",
+    "Priority": 8,
+    "Notes": ""
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1791579669",
+   "modified_time": "1792186407"
+  },
+  {
+   "id": "1d6e8b3f5a2c9d47e1b6f8a3",
+   "fields": {
+    "ID": "C05",
+    "Claim": "Chloride can't practically be removed from a lake; money goes to prevention and monitoring",
+    "Source": "Marchand preliminary transcript, Sep 30",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-09-30",
+    "Salt-use": "L",
+    "Cleanup cost": "H",
+    "Priority": 10,
+    "Notes": "Ask her to expand on this in Duluth."
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1790803367",
+   "modified_time": "1792186460"
+  },
+  {
+   "id": "6c1f4a8d2e9b5c73f6a1d4e8",
+   "fields": {
+    "ID": "C06",
+    "Claim": "District spent $1.84M on chloride work 2021-25",
+    "Source": "2027 Draft Budget p. 14 (scanned table)",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-10-09",
+    "Salt-use": "L",
+    "Cleanup cost": "H",
+    "Priority": 11,
+    "Notes": "HS: chloride only, or all water-quality work?\nOB: chloride line only, per the p. 14 table."
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1791579832",
+   "modified_time": "1792186486"
+  },
+  {
+   "id": "a2e5d9b4c8f1a6370d2e5b9c",
+   "fields": {
+    "ID": "C07",
+    "Claim": "2027 draft proposes $612,000 for chloride, up from $410,000",
+    "Source": "2027 Draft Budget p. 9 (scanned table)",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-10-09",
+    "Salt-use": "L",
+    "Cleanup cost": "H",
+    "Priority": 13,
+    "Notes": "HS: what does the increase pay for?"
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1791579920",
+   "modified_time": "1792186539"
+  },
+  {
+   "id": "d7b3f6a1e4c9285b7d3a6f1e",
+   "fields": {
+    "ID": "C08",
+    "Claim": "Monitoring costs about $7,400 per lake per year",
+    "Source": "MLWD media call transcript, Oct 9",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-10-09",
+    "Salt-use": "L",
+    "Cleanup cost": "H",
+    "Priority": 12,
+    "Notes": "Luis confirmed by email Oct 9: includes contract-lab fees, not equipment."
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1791580064",
+   "modified_time": "1792186513"
+  },
+  {
+   "id": "4f8c2a6e9d1b7f350c4e8a2d",
+   "fields": {
+    "ID": "C09",
+    "Claim": "Smart-salting training cut participants' salt use 22%",
+    "Source": "Smart Salting Summary 2025",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-10-09",
+    "Salt-use": "H",
+    "Cleanup cost": "M",
+    "Priority": 2,
+    "Notes": ""
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1791580203",
+   "modified_time": "1792186251"
+  },
+  {
+   "id": "9a1e7c4b3f8d2a65e9c1b7f4",
+   "fields": {
+    "ID": "C10",
+    "Claim": "Brine pretreatment rigs cost about $14,000 per truck",
+    "Source": "Trade-magazine article",
+    "Primary": "N",
+    "Status": "Needs primary",
+    "Salt-use": "M",
+    "Cleanup cost": "M",
+    "Priority": 9,
+    "Notes": "Look for a city or district purchase record."
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1792183458",
+   "modified_time": "1792186435"
+  },
+  {
+   "id": "2b6d9f3e8a5c1b74d2f6e9a3",
+   "fields": {
+    "ID": "C11",
+    "Claim": "Private applicators lay down about 40% of metro salt",
+    "Source": "Salt Watch blog",
+    "Primary": "N",
+    "Status": "Needs primary",
+    "Salt-use": "H",
+    "Cleanup cost": "L",
+    "Priority": 5,
+    "Notes": "No data source cited in the post."
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1792183656",
+   "modified_time": "1792186329"
+  },
+  {
+   "id": "e3c8a5f1d7b2946ae3d8c5b1",
+   "fields": {
+    "ID": "C12",
+    "Claim": "Snowmelt pulses at inlets run several times lake means",
+    "Source": "Report v2, Phase 3 appendix",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-10-09",
+    "Salt-use": "H",
+    "Cleanup cost": "L",
+    "Priority": 3,
+    "Notes": "HS: could Lena chart this?"
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1790104265",
+   "modified_time": "1792186275"
+  },
+  {
+   "id": "7f4b1d8e2c6a9f53b7e4a1d6",
+   "fields": {
+    "ID": "C13",
+    "Claim": "Chloride stored in groundwater will feed lakes for decades",
+    "Source": "Marchand preliminary transcript, Sep 30",
+    "Primary": "Y",
+    "Status": "Verified",
+    "Last checked": "2026-09-30",
+    "Salt-use": "M",
+    "Cleanup cost": "M",
+    "Priority": 7,
+    "Notes": ""
+   },
+   "table_id": "tbl2a9f4e7c10d6b3",
+   "created_time": "1790803531",
+   "modified_time": "1792186382"
+  },
+  {
+   "id": "5a9e3c7f1b4d8e26a5c9f3b7",
+   "fields": {
+    "ID": "S01",
+    "Source": "MLWD 2025 Water-Quality Report v1 (Jun 11)",
+    "Type": "Agency report",
+    "Primary": "Y",
+    "Contact": "Luis Ferreira",
+    "File": "/Salt_in_the_Lakes/Agency_Reports/",
+    "Date": "2026-06-11",
+    "Notes": "Table 3 is a scanned page."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1790103753",
+   "modified_time": "1790103753"
+  },
+  {
+   "id": "b1f6d2a8e5c3974fb1a6e2d8",
+   "fields": {
+    "ID": "S02",
+    "Source": "MLWD 2025 Water-Quality Report v2 (Oct 8)",
+    "Type": "Agency report",
+    "Primary": "Y",
+    "Contact": "Luis Ferreira",
+    "File": "/Salt_in_the_Lakes/Agency_Reports/",
+    "Date": "2026-10-08",
+    "Notes": "Errata on p. 3, plus a separate errata scan. Table 3 is a scanned page."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1791490876",
+   "modified_time": "1791490876"
+  },
+  {
+   "id": "0e4b8f2d6a9c1e57b0f4d8a2",
+   "fields": {
+    "ID": "S03",
+    "Source": "MLWD 2027 Draft Budget",
+    "Type": "Budget document",
+    "Primary": "Y",
+    "Contact": "Luis Ferreira",
+    "File": "/Users/Shared/attachments/MLWD_2027_Draft_Budget.pdf",
+    "Date": "2026-10-09",
+    "Notes": "Chloride tables on pp. 9 and 14 are scans. Preliminary until board adoption."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1791579403",
+   "modified_time": "1791579403"
+  },
+  {
+   "id": "c6d1a7e3f9b5208dc6e1b7a3",
+   "fields": {
+    "ID": "S04",
+    "Source": "Smart Salting Summary 2025",
+    "Type": "Agency report",
+    "Primary": "Y",
+    "Contact": "Luis Ferreira",
+    "File": "/Users/Shared/attachments/Smart_Salting_Summary_2025.pdf",
+    "Date": "2026-10-09",
+    "Notes": ""
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1791579478",
+   "modified_time": "1791579478"
+  },
+  {
+   "id": "3b8f5e1c9a4d7b62f3e8a5c1",
+   "fields": {
+    "ID": "S05",
+    "Source": "MLWD media call, Oct 9 (transcript)",
+    "Type": "Transcript",
+    "Primary": "Y",
+    "Contact": "Luis Ferreira",
+    "File": "/Salt_in_the_Lakes/Interviews/2026-10-09_MLWD_media_call_transcript.txt",
+    "Date": "2026-10-09",
+    "Notes": "On the record. Luis and the district's water resources manager."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1791568329",
+   "modified_time": "1791568329"
+  },
+  {
+   "id": "8e2a6c4f1d9b3e75a8c2f6d4",
+   "fields": {
+    "ID": "S06",
+    "Source": "Dr. Elise Marchand, Lake Superior Freshwater Institute",
+    "Type": "Interview",
+    "Primary": "Y",
+    "Contact": "Dr. Elise Marchand",
+    "File": "/Salt_in_the_Lakes/Interviews/",
+    "Date": "2026-09-30",
+    "Notes": "Preliminary call Sep 30. In-person interview in Duluth Nov 5."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1790799524",
+   "modified_time": "1790799524"
+  },
+  {
+   "id": "f9c5b1e8a3d6247cf9b5e1a8",
+   "fields": {
+    "ID": "S11",
+    "Source": "Winter Roads Quarterly, September issue (brine pretreatment)",
+    "Type": "Trade press",
+    "Primary": "N",
+    "Contact": "",
+    "File": "",
+    "Notes": "Per-truck rig cost with no source given."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1792183287",
+   "modified_time": "1792183287"
+  },
+  {
+   "id": "1a7d4f9b6e2c8a53d1f7b4e9",
+   "fields": {
+    "ID": "S12",
+    "Source": "Salt Watch Twin Cities blog post (private applicators)",
+    "Type": "Blog",
+    "Primary": "N",
+    "Contact": "",
+    "File": "",
+    "Notes": "40% figure, no data source cited."
+   },
+   "table_id": "tbl8e05b3d9a7c241",
+   "created_time": "1792183382",
+   "modified_time": "1792183382"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+MINNESOTA DATA PRACTICES REQUEST (template)
+Adapted from SEJ's sample state letter, June 2026. Replace everything in parentheses.
+
+---
+
+Date:
+
+To: (responsible authority or data practices compliance official, by name if the agency's data access policy lists one)
+(Agency name, mailing address or email)
+
+Re: Request for public government data
+
+This is a request under the Minnesota Government Data Practices Act, Minn. Stat. ch. 13, for copies of the following public government data:
+
+(Describe the records: what they are, the office that keeps them, the date range. One subject per request.)
+
+Please provide the data electronically, in the format in which they are maintained. For spreadsheets and databases, I request the native file or an export (.xlsx or .csv) rather than a PDF.
+
+If there will be a charge, please send me a written estimate before doing any work that would cost more than $25. I understand that inspection of public data is free and that the agency may not charge for time spent separating public from not-public data.
+
+If any data are withheld or redacted, please identify them and cite the specific statute or classification that applies, as Minn. Stat. 13.03 requires.
+
+I'm glad to narrow this request if that would speed things up. Please call or email with any questions.
+
+Thank you,
+
+(Name)
+(Outlet, or freelance)
+(Phone and email)
+
+---
+
+Notes for writers (not part of the letter)
+- Minn. Stat. 13.05, subd. 12: an agency can't require you to identify yourself or explain why you want public data. Contact details are there only so they can send the records.
+- No fixed deadline for public data. Log the date sent. First follow-up at 10 business days, and ask for a completion date in writing.
+- After two missed dates, ask the Data Practices Office (Dept. of Administration) for an advisory opinion.
+- Partial releases are fine. Ask for what's ready now and the rest on a rolling basis.
+- Inspection is free. If an estimate is high, offer to inspect in person and copy only what you need.

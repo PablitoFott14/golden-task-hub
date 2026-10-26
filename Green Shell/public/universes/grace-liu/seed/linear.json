@@ -1,0 +1,329 @@
+{
+ "users": [
+  {
+   "id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "email": "sam.whitfield@lakeshorefreight.com",
+   "name": "Sam Whitfield",
+   "display_name": "sam",
+   "avatar_url": null,
+   "is_active": true,
+   "created_at": "2026-01-12T09:42:18-06:00",
+   "updated_at": "2026-01-12T09:42:18-06:00"
+  },
+  {
+   "id": "user_3e7b0a5d9c2f81e46b0c7d3a5f9e12b8",
+   "email": "martin.keane@lakeshorefreight.com",
+   "name": "Martin Keane",
+   "display_name": "martin",
+   "avatar_url": null,
+   "is_active": true,
+   "created_at": "2026-01-12T09:47:03-06:00",
+   "updated_at": "2026-01-12T09:47:03-06:00"
+  },
+  {
+   "id": "user_b76a403397bd4b1510804f850d8fd560",
+   "email": "grace.liu@lakeshorefreight.com",
+   "name": "Grace Liu",
+   "display_name": "grace",
+   "avatar_url": null,
+   "is_active": true,
+   "created_at": "2026-01-12T09:51:36-06:00",
+   "updated_at": "2026-01-12T09:51:36-06:00"
+  }
+ ],
+ "teams": [
+  {
+   "id": "team_001",
+   "name": "Finance Systems",
+   "key": "FIN",
+   "description": "Oracle GL, SAP interface and BlackLine admin work, plus finance system access requests. Close task status lives in the Close Tracker base in Airtable, not here.",
+   "is_archived": false,
+   "created_at": "2026-01-12T09:42:18-06:00",
+   "updated_at": "2026-01-12T09:42:18-06:00"
+  }
+ ],
+ "projects": [],
+ "workflow_states": [
+  {
+   "id": "state_FIN_0",
+   "team_id": "team_001",
+   "name": "Backlog",
+   "type": "backlog",
+   "position": 0.0,
+   "color": "#bec2c8",
+   "description": null,
+   "created_at": "2026-01-12T09:42:18-06:00",
+   "updated_at": "2026-01-12T09:42:18-06:00"
+  },
+  {
+   "id": "state_FIN_1",
+   "team_id": "team_001",
+   "name": "Todo",
+   "type": "unstarted",
+   "position": 1.0,
+   "color": "#e2e2e2",
+   "description": null,
+   "created_at": "2026-01-12T09:42:19-06:00",
+   "updated_at": "2026-01-12T09:42:19-06:00"
+  },
+  {
+   "id": "state_FIN_2",
+   "team_id": "team_001",
+   "name": "In Progress",
+   "type": "started",
+   "position": 2.0,
+   "color": "#f2c94c",
+   "description": null,
+   "created_at": "2026-01-12T09:42:20-06:00",
+   "updated_at": "2026-01-12T09:42:20-06:00"
+  },
+  {
+   "id": "state_FIN_3",
+   "team_id": "team_001",
+   "name": "In Review",
+   "type": "started",
+   "position": 3.0,
+   "color": "#26b5ce",
+   "description": null,
+   "created_at": "2026-01-12T09:42:21-06:00",
+   "updated_at": "2026-01-12T09:42:21-06:00"
+  },
+  {
+   "id": "state_FIN_4",
+   "team_id": "team_001",
+   "name": "Done",
+   "type": "completed",
+   "position": 4.0,
+   "color": "#5e6ad2",
+   "description": null,
+   "created_at": "2026-01-12T09:42:22-06:00",
+   "updated_at": "2026-01-12T09:42:22-06:00"
+  },
+  {
+   "id": "state_FIN_5",
+   "team_id": "team_001",
+   "name": "Canceled",
+   "type": "canceled",
+   "position": 5.0,
+   "color": "#95a2b3",
+   "description": null,
+   "created_at": "2026-01-12T09:42:23-06:00",
+   "updated_at": "2026-01-12T09:42:23-06:00"
+  }
+ ],
+ "issues": [
+  {
+   "id": "FIN-209",
+   "project_id": null,
+   "team_id": "team_001",
+   "parent_id": null,
+   "assignee_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "state_id": "state_FIN_0",
+   "cycle_id": null,
+   "number": 209,
+   "title": "Remove legacy Period Manager role from GL-upgrade users (incl. gliu)",
+   "description": "Found in the Q3 user access review on 10/13. The GL upgrade project role is still assigned in PROD.\n\nRole: `Period Manager (legacy - GL Upgrade 2025)`\n\n| user | type | status |\n|---|---|---|\n| gliu | employee, Senior Accountant | active, role not used |\n| glupg_cons01 | consultant | login end-dated 2025-06-30 |\n| glupg_cons02 | consultant | login end-dated 2025-06-30 |\n\nThe role can open, soft-lock and close GL periods. Under GL-09 that sits with the Controller and Systems Admin roles only.\n\n**To do**\n1. End-date the role assignment for all three users in PROD.\n2. Check these users for any other GL-upgrade roles.\n3. Attach the before/after role report for the Q4 access review.",
+   "priority": 3,
+   "estimate": 1,
+   "due_date": null,
+   "labels": [],
+   "links": [],
+   "is_archived": false,
+   "created_at": "2026-10-14T13:26:41-05:00",
+   "updated_at": "2026-10-15T09:20:55-05:00"
+  },
+  {
+   "id": "FIN-198",
+   "project_id": null,
+   "team_id": "team_001",
+   "parent_id": null,
+   "assignee_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "state_id": "state_FIN_4",
+   "cycle_id": null,
+   "number": 198,
+   "title": "sep TB load to blackline dropped accounts with no activity",
+   "description": "BD1 trial balance load for SEP-26 came into BlackLine with 412 accounts. Oracle TB has 449 with a balance. The 37 missing all carry a balance but had no September activity, so their recs show a zero GL balance and can't be certified.\n\nExpected: every account with an ending balance loads, activity or not.\n\nNeeded before rec approvals on BD5 (Wed 10/7).",
+   "priority": 2,
+   "estimate": 2,
+   "due_date": "2026-10-07",
+   "labels": [],
+   "links": [],
+   "is_archived": false,
+   "created_at": "2026-10-01T09:47:26-05:00",
+   "updated_at": "2026-10-05T11:00:34-05:00"
+  },
+  {
+   "id": "FIN-205",
+   "project_id": null,
+   "team_id": "team_001",
+   "parent_id": null,
+   "assignee_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "state_id": "state_FIN_4",
+   "cycle_id": null,
+   "number": 205,
+   "title": "Add gliu to SAP_AP_DAILY failure alerts",
+   "description": "Grace Liu (Corporate Accounting) asked by Slack on 10/6 to be added to the failure and partial-post notices for `SAP_AP_DAILY` and the BD1 AP run. Today they go only to the finsys alerts list, so during close she finds out a run failed only when the AP rec stops tying.\n\nAdd grace.liu@lakeshorefreight.com to the alert group. No change to who can rerun.",
+   "priority": 3,
+   "estimate": 1,
+   "due_date": null,
+   "labels": [],
+   "links": [],
+   "is_archived": false,
+   "created_at": "2026-10-06T09:12:51-05:00",
+   "updated_at": "2026-10-08T15:00:19-05:00"
+  },
+  {
+   "id": "FIN-212",
+   "project_id": null,
+   "team_id": "team_001",
+   "parent_id": null,
+   "assignee_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "state_id": "state_FIN_2",
+   "cycle_id": null,
+   "number": 212,
+   "title": "AP BD1 feed run failed: GL-INT-4471",
+   "description": "BD1 run `SAPAP-20261102-01` (SAP_AP_DAILY, 06:15) failed in PROD and rolled back.\n\n```\nGL-INT-4471 Invalid code combination 2010-000-410-0000 - cost center 410 end-dated 10/31/2026. Batch rolled back: 0 of 1,284 lines posted ($612,384.27).\n```\n\n- 0 of 1,284 lines posted, $612,384.27 not in GL 2010-000\n- SAP_FA and SAP_PREPAID BD1 runs completed normally\n- AP subledger cutoff is BD4, Thu 11-05\n\nScreenshot saved to `/Finance/Close/2026-10/Evidence/Systems/AP_feed_error_2026-11-02.png`\n\nNeed the batch reposted before BD4 so REC-AP-2010 ties out.",
+   "priority": 1,
+   "estimate": 3,
+   "due_date": "2026-11-05",
+   "labels": [],
+   "links": [],
+   "is_archived": false,
+   "created_at": "2026-11-02T07:03:00-06:00",
+   "updated_at": "2026-11-03T17:55:44-06:00"
+  }
+ ],
+ "comments": [
+  {
+   "id": "comment_e6a1d4b8c0f2937e5a1c6d08",
+   "issue_id": "FIN-209",
+   "author_id": "user_3e7b0a5d9c2f81e46b0c7d3a5f9e12b8",
+   "parent_id": null,
+   "body": "Hold until October is closed. No role changes during close week. Pick it up after BD7 on 11/10.",
+   "is_edited": false,
+   "created_at": "2026-10-15T08:52:13-05:00",
+   "updated_at": "2026-10-15T08:52:13-05:00"
+  },
+  {
+   "id": "comment_0b5f8e3a7c1d42b9e6f0a3c5",
+   "issue_id": "FIN-209",
+   "author_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "parent_id": "comment_e6a1d4b8c0f2937e5a1c6d08",
+   "body": "Parking in Backlog until after BD7 👀\n- 11/11: rerun `GL_USER_ROLE_ASSIGNMENTS` in PROD to confirm the list\n- end-date `Period Manager (legacy - GL Upgrade 2025)` for gliu, glupg_cons01, glupg_cons02\n- attach the before/after export here for the Q4 access review",
+   "is_edited": false,
+   "created_at": "2026-10-15T09:20:55-05:00",
+   "updated_at": "2026-10-15T09:20:55-05:00"
+  },
+  {
+   "id": "comment_e7a24c910d6bf3582a9ec1d4",
+   "issue_id": "FIN-198",
+   "author_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "parent_id": null,
+   "body": "Morning,\n- repro: run `GL_TB_EXPORT` for SEP-26, compare row count to Oracle TB (412 vs 449)\n- cause: export filter is `period_activity <> 0`\n- fix: `ending_balance <> 0 OR period_activity <> 0`\nPatching in TEST today.",
+   "is_edited": false,
+   "created_at": "2026-10-01T10:23:47-05:00",
+   "updated_at": "2026-10-01T10:23:47-05:00"
+  },
+  {
+   "id": "comment_4b0f9d27e6c318a5f72d0b96",
+   "issue_id": "FIN-198",
+   "author_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "parent_id": null,
+   "body": "Fix promoted to PROD. Reloaded SEP-26: 449 of 449 accounts in BlackLine. 👀 on the nightly load before I close this.",
+   "is_edited": false,
+   "created_at": "2026-10-02T16:41:09-05:00",
+   "updated_at": "2026-10-02T16:41:09-05:00"
+  },
+  {
+   "id": "comment_91d63e0ab5f827c46d1ea83b",
+   "issue_id": "FIN-198",
+   "author_id": "user_b76a403397bd4b1510804f850d8fd560",
+   "parent_id": null,
+   "body": "Monday's load looks right. Spot-checked 6 of the 37 against Oracle, all tie ✅",
+   "is_edited": false,
+   "created_at": "2026-10-05T08:17:32-05:00",
+   "updated_at": "2026-10-05T08:17:32-05:00"
+  },
+  {
+   "id": "comment_c3e876b204fad9158c3a5e27",
+   "issue_id": "FIN-198",
+   "author_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "parent_id": null,
+   "body": "Nightly ran clean Saturday and Sunday, 449 both nights. Closing.",
+   "is_edited": false,
+   "created_at": "2026-10-05T10:56:48-05:00",
+   "updated_at": "2026-10-05T10:56:48-05:00"
+  },
+  {
+   "id": "comment_0a5de1f793c26b48d0e5f29a",
+   "issue_id": "FIN-205",
+   "author_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "parent_id": null,
+   "body": "Added you to the alert group for `SAP_AP_DAILY` and the BD1 `SAPAP` run. Takes effect with tonight's 23:00 run.",
+   "is_edited": false,
+   "created_at": "2026-10-08T14:47:15-05:00",
+   "updated_at": "2026-10-08T14:47:15-05:00"
+  },
+  {
+   "id": "comment_f81b2c6e5a09d437b2f86c1e",
+   "issue_id": "FIN-205",
+   "author_id": "user_b76a403397bd4b1510804f850d8fd560",
+   "parent_id": null,
+   "body": "Thanks. That covers BD1 on 11/2 for the October close too.",
+   "is_edited": false,
+   "created_at": "2026-10-08T14:58:02-05:00",
+   "updated_at": "2026-10-08T14:58:02-05:00"
+  },
+  {
+   "id": "comment_e4b71a0c8f25d39e6c41b0a8",
+   "issue_id": "FIN-212",
+   "author_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "parent_id": null,
+   "body": "Found the cause. Cost center 410 was end-dated by the Memphis re-org hierarchy load. Fixing the mapping.\n\nRepro:\n1. Run `XXGL_COA_VALIDATE` on batch `SAPAP-20261102-01` (1,284 lines, $612,384.27)\n2. Lines coded to `2010-000-410-0000` fail validation, so the whole batch rolls back\n3. The CC 410 end date (10/31/2026) came in with the 10/30 hierarchy load\n\nPlan: remap 410 to 415 in the SAP-to-GL crosswalk, rerun in TEST, then PROD.",
+   "is_edited": false,
+   "created_at": "2026-11-02T09:15:06-06:00",
+   "updated_at": "2026-11-02T09:15:06-06:00"
+  },
+  {
+   "id": "comment_5a2dc8f603b1e97a4d6c1f30",
+   "issue_id": "FIN-212",
+   "author_id": "user_b76a403397bd4b1510804f850d8fd560",
+   "parent_id": null,
+   "body": "Thanks Sam. REC-AP-2010 is carrying the $612,384.27 as a timing item tagged FIN-212 until the batch reposts. BD4 cutoff is Thu 11-05.",
+   "is_edited": false,
+   "created_at": "2026-11-02T10:03:41-06:00",
+   "updated_at": "2026-11-02T10:03:41-06:00"
+  },
+  {
+   "id": "comment_c93e07b5d6a14f289e0b7c54",
+   "issue_id": "FIN-212",
+   "author_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "parent_id": null,
+   "body": "Running the rerun script in TEST tonight.\n\n- Crosswalk change for CC 410 -> 415 is in\n- `XXGL_SAPAP_RERUN` is pointed at batch `SAPAP-20261102-01`\n- I'll post results here in the morning; PROD rerun after that if TEST is clean",
+   "is_edited": false,
+   "created_at": "2026-11-03T17:55:44-06:00",
+   "updated_at": "2026-11-03T17:55:44-06:00"
+  }
+ ],
+ "team_memberships": [
+  {
+   "id": "tm_b7c2e9a40d1f5e83a6c0b924",
+   "team_id": "team_001",
+   "user_id": "user_9f2c4e7a1b0d36e8c5f3a2d71e0b48c6",
+   "created_at": "2026-01-12T09:42:18-06:00"
+  },
+  {
+   "id": "tm_4d0e8b2f6a3c91d7e5b0a8f3",
+   "team_id": "team_001",
+   "user_id": "user_3e7b0a5d9c2f81e46b0c7d3a5f9e12b8",
+   "created_at": "2026-01-12T09:47:03-06:00"
+  },
+  {
+   "id": "tm_8c514e294cfa9ff6335f9d60",
+   "team_id": "team_001",
+   "user_id": "user_b76a403397bd4b1510804f850d8fd560",
+   "created_at": "2026-01-12T09:51:36-06:00"
+  }
+ ],
+ "current_user_id": "user_b76a403397bd4b1510804f850d8fd560"
+}

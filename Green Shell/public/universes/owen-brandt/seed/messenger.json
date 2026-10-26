@@ -1,0 +1,1155 @@
+{
+ "users": [
+  {
+   "id": "contact_9bc5252d5b4502a5ab351791",
+   "email": "dana.kowalczyk@gmail.com",
+   "name": "Dana Kowalczyk"
+  },
+  {
+   "id": "ms_user_luis",
+   "email": "luis.ferreira@metrolakeswd.org",
+   "name": "Luis Ferreira"
+  },
+  {
+   "id": "contact_624483321982237cde191eea",
+   "email": "-",
+   "name": "R."
+  },
+  {
+   "id": "ms_user_owen",
+   "email": "owen.brandt.writes@gmail.com",
+   "name": "Owen Brandt"
+  },
+  {
+   "id": "u_solberg_gretchen_f4065a",
+   "email": "solberg.gretchen@icloud.com",
+   "name": "Gretchen Solberg"
+  },
+  {
+   "id": "u_patduffy_95416e",
+   "email": "patduffy@gmail.com",
+   "name": "Pat Duffy"
+  },
+  {
+   "id": "u_rengstrom87_174ce3",
+   "email": "rengstrom87@outlook.com",
+   "name": "Ruth Engstrom"
+  },
+  {
+   "id": "u_tombergquist_51e277",
+   "email": "tombergquist@gmail.com",
+   "name": "Tom Bergquist"
+  },
+  {
+   "id": "u_doug_reinholt78_65748f",
+   "email": "doug.reinholt78@gmail.com",
+   "name": "Doug Reinholt"
+  },
+  {
+   "id": "u_bethany_kraus_add043",
+   "email": "bethany.kraus@yahoo.com",
+   "name": "Bethany Kraus"
+  },
+  {
+   "id": "u_fisher_darnell_145c5c",
+   "email": "fisher.darnell@yahoo.com",
+   "name": "Darnell Fisher"
+  },
+  {
+   "id": "u_maggieorourke_6bd62f",
+   "email": "maggieorourke@icloud.com",
+   "name": "Maggie O'Rourke"
+  },
+  {
+   "id": "u_waltjohansen_b9db7d",
+   "email": "waltjohansen@gmail.com",
+   "name": "Walt Johansen"
+  },
+  {
+   "id": "u_susan_albrecht_5ef2e0",
+   "email": "susan.albrecht@gmail.com",
+   "name": "Susan Albrecht"
+  },
+  {
+   "id": "u_joan_fitzgerald63_6d02e3",
+   "email": "joan.fitzgerald63@gmail.com",
+   "name": "Joan Fitzgerald"
+  },
+  {
+   "id": "u_larsen_mitch_cc807e",
+   "email": "larsen.mitch@outlook.com",
+   "name": "Mitch Larsen"
+  },
+  {
+   "id": "u_garylindahl_909898",
+   "email": "garylindahl@gmail.com",
+   "name": "Gary Lindahl"
+  },
+  {
+   "id": "u_haugen_kristin_1dee33",
+   "email": "haugen.kristin@gmail.com",
+   "name": "Kristin Haugen"
+  },
+  {
+   "id": "u_robschmitt_e37be4",
+   "email": "robschmitt@gmail.com",
+   "name": "Rob Schmitt"
+  },
+  {
+   "id": "u_yolanda_brooks23_8043c5",
+   "email": "yolanda.brooks23@yahoo.com",
+   "name": "Yolanda Brooks"
+  },
+  {
+   "id": "u_pgrinde37_b7f739",
+   "email": "pgrinde37@gmail.com",
+   "name": "Paul Grinde"
+  },
+  {
+   "id": "u_blund47_0d6af5",
+   "email": "blund47@outlook.com",
+   "name": "Becky Lund"
+  },
+  {
+   "id": "u_harold_swenson33_13622e",
+   "email": "harold.swenson33@gmail.com",
+   "name": "Harold Swenson"
+  },
+  {
+   "id": "u_dolmstead27_28a921",
+   "email": "dolmstead27@outlook.com",
+   "name": "Dennis Olmstead"
+  },
+  {
+   "id": "u_chrisahlberg_b1d89d",
+   "email": "chrisahlberg@gmail.com",
+   "name": "Chris Ahlberg"
+  },
+  {
+   "id": "u_lindgren_kurt_ec83ad",
+   "email": "lindgren.kurt@outlook.com",
+   "name": "Kurt Lindgren"
+  },
+  {
+   "id": "u_psorensen37_95ed49",
+   "email": "psorensen37@outlook.com",
+   "name": "Peg Sorensen"
+  },
+  {
+   "id": "u_eklund_diane_8dacd2",
+   "email": "eklund.diane@gmail.com",
+   "name": "Diane Eklund"
+  },
+  {
+   "id": "u_rasmussen_steve_86549f",
+   "email": "rasmussen.steve@gmail.com",
+   "name": "Steve Rasmussen"
+  },
+  {
+   "id": "u_callie_ostrowski98_c959f0",
+   "email": "callie.ostrowski98@gmail.com",
+   "name": "Callie Ostrowski"
+  },
+  {
+   "id": "u_solberg_margit_f08729",
+   "email": "solberg.margit@outlook.com",
+   "name": "Margit Solberg"
+  },
+  {
+   "id": "u_walt_gutierrez_f08121",
+   "email": "walt.gutierrez@outlook.com",
+   "name": "Walt Gutierrez"
+  },
+  {
+   "id": "u_jerome_whitfield_693aec",
+   "email": "jerome.whitfield@gmail.com",
+   "name": "Jerome Whitfield"
+  },
+  {
+   "id": "u_bethlundgren_456470",
+   "email": "bethlundgren@outlook.com",
+   "name": "Beth Lundgren"
+  },
+  {
+   "id": "u_helen_tran58_febc30",
+   "email": "helen.tran58@icloud.com",
+   "name": "Helen Tran"
+  },
+  {
+   "id": "u_ellenfairbanks_d88f23",
+   "email": "ellenfairbanks@outlook.com",
+   "name": "Ellen Fairbanks"
+  },
+  {
+   "id": "u_leifthorsen_abc610",
+   "email": "leifthorsen@yahoo.com",
+   "name": "Leif Thorsen"
+  },
+  {
+   "id": "u_pat_hennessey53_acfdfe",
+   "email": "pat.hennessey53@gmail.com",
+   "name": "Pat Hennessey"
+  },
+  {
+   "id": "u_bergstrom_lucy_40e847",
+   "email": "bergstrom.lucy@outlook.com",
+   "name": "Lucy Bergstrom"
+  },
+  {
+   "id": "u_fredamundsen_57561e",
+   "email": "fredamundsen@outlook.com",
+   "name": "Fred Amundsen"
+  },
+  {
+   "id": "u_bill_sorensen53_26adb8",
+   "email": "bill.sorensen53@outlook.com",
+   "name": "Bill Sorensen"
+  },
+  {
+   "id": "u_marty_hagen_91b72b",
+   "email": "marty.hagen@gmail.com",
+   "name": "Marty Hagen"
+  },
+  {
+   "id": "u_henry_oduya98_97a6de",
+   "email": "henry.oduya98@icloud.com",
+   "name": "Henry Oduya"
+  },
+  {
+   "id": "u_dale_erickson_9e84c5",
+   "email": "dale.erickson@outlook.com",
+   "name": "Dale Erickson"
+  },
+  {
+   "id": "u_joyce_albrecht_4b19cc",
+   "email": "joyce.albrecht@gmail.com",
+   "name": "Joyce Albrecht"
+  },
+  {
+   "id": "u_cdubois82_199155",
+   "email": "cdubois82@yahoo.com",
+   "name": "Claire Dubois"
+  },
+  {
+   "id": "u_nilsengstrom_4d8173",
+   "email": "nilsengstrom@gmail.com",
+   "name": "Nils Engstrom"
+  },
+  {
+   "id": "u_paula_riedel_61a05f",
+   "email": "paula.riedel@gmail.com",
+   "name": "Paula Riedel"
+  },
+  {
+   "id": "u_dprice82_62eaf3",
+   "email": "dprice82@icloud.com",
+   "name": "Darnell Price"
+  },
+  {
+   "id": "u_carlson_wes_999cdc",
+   "email": "carlson.wes@gmail.com",
+   "name": "Wes Carlson"
+  },
+  {
+   "id": "u_kline_howard_da5d27",
+   "email": "kline.howard@outlook.com",
+   "name": "Howard Kline"
+  },
+  {
+   "id": "u_takahashi_ken_804485",
+   "email": "takahashi.ken@icloud.com",
+   "name": "Ken Takahashi"
+  },
+  {
+   "id": "u_lornafitzgerald_a6675f",
+   "email": "lornafitzgerald@yahoo.com",
+   "name": "Lorna Fitzgerald"
+  },
+  {
+   "id": "u_hana_sato18_79bcd1",
+   "email": "hana.sato18@gmail.com",
+   "name": "Hana Sato"
+  },
+  {
+   "id": "u_marcus_webb_076a42",
+   "email": "marcus.webb@gmail.com",
+   "name": "Marcus Webb"
+  },
+  {
+   "id": "u_gary_lindqvist98_4fa9dd",
+   "email": "gary.lindqvist98@gmail.com",
+   "name": "Gary Lindqvist"
+  },
+  {
+   "id": "u_beth_aronson_171a57",
+   "email": "beth.aronson@outlook.com",
+   "name": "Beth Aronson"
+  },
+  {
+   "id": "u_kolafson87_35bc00",
+   "email": "kolafson87@gmail.com",
+   "name": "Kristin Olafson"
+  },
+  {
+   "id": "u_raydombrowski_33b796",
+   "email": "raydombrowski@outlook.com",
+   "name": "Ray Dombrowski"
+  },
+  {
+   "id": "u_lpettigrew17_8f17a7",
+   "email": "lpettigrew17@gmail.com",
+   "name": "Laura Pettigrew"
+  },
+  {
+   "id": "u_carol_whitcomb_c78808",
+   "email": "carol.whitcomb@icloud.com",
+   "name": "Carol Whitcomb"
+  },
+  {
+   "id": "u_tollefson_grace_e3599b",
+   "email": "tollefson.grace@yahoo.com",
+   "name": "Grace Tollefson"
+  },
+  {
+   "id": "u_phaugland72_24a7e4",
+   "email": "phaugland72@outlook.com",
+   "name": "Peter Haugland"
+  },
+  {
+   "id": "u_thorsen_will_28d7db",
+   "email": "thorsen.will@outlook.com",
+   "name": "Will Thorsen"
+  },
+  {
+   "id": "u_dkessler52_d1ccbf",
+   "email": "dkessler52@icloud.com",
+   "name": "Diane Kessler"
+  },
+  {
+   "id": "u_tomvang_2ca5a9",
+   "email": "tomvang@yahoo.com",
+   "name": "Tom Vang"
+  },
+  {
+   "id": "u_leah_sorensen_ff0ff9",
+   "email": "leah.sorensen@icloud.com",
+   "name": "Leah Sorensen"
+  },
+  {
+   "id": "u_marty_oshea_bdf35a",
+   "email": "marty.oshea@gmail.com",
+   "name": "Marty O'Shea"
+  },
+  {
+   "id": "u_andre_baptiste_796bac",
+   "email": "andre.baptiste@icloud.com",
+   "name": "Andre Baptiste"
+  },
+  {
+   "id": "u_dahl_oscar_f879fd",
+   "email": "dahl.oscar@icloud.com",
+   "name": "Oscar Dahl"
+  },
+  {
+   "id": "u_dwight_carlson_b0d6dc",
+   "email": "dwight.carlson@gmail.com",
+   "name": "Dwight Carlson"
+  },
+  {
+   "id": "u_raj_malhotra_069ba0",
+   "email": "raj.malhotra@yahoo.com",
+   "name": "Raj Malhotra"
+  },
+  {
+   "id": "u_ostrowski_helen_c9f30d",
+   "email": "ostrowski.helen@gmail.com",
+   "name": "Helen Ostrowski"
+  },
+  {
+   "id": "u_gretchen_albers63_e1e775",
+   "email": "gretchen.albers63@outlook.com",
+   "name": "Gretchen Albers"
+  },
+  {
+   "id": "u_larspedersen_6e52d9",
+   "email": "larspedersen@gmail.com",
+   "name": "Lars Pedersen"
+  },
+  {
+   "id": "u_karl_brandt_86add1",
+   "email": "karl.brandt@gmail.com",
+   "name": "Karl Brandt"
+  },
+  {
+   "id": "u_sigridlund_206607",
+   "email": "sigridlund@outlook.com",
+   "name": "Sigrid Lund"
+  },
+  {
+   "id": "u_astrid_nygaard_b7f685",
+   "email": "astrid.nygaard@gmail.com",
+   "name": "Astrid Nygaard"
+  },
+  {
+   "id": "u_golson42_846108",
+   "email": "golson42@gmail.com",
+   "name": "Gary Olson"
+  },
+  {
+   "id": "u_jpietrowski47_448fad",
+   "email": "jpietrowski47@gmail.com",
+   "name": "Joanne Pietrowski"
+  },
+  {
+   "id": "u_marlys_brandt13_34730a",
+   "email": "marlys.brandt13@gmail.com",
+   "name": "Marlys Brandt"
+  },
+  {
+   "id": "u_ruthekdahl_baf2ed",
+   "email": "ruthekdahl@yahoo.com",
+   "name": "Ruth Ekdahl"
+  },
+  {
+   "id": "u_thalloran72_9eb781",
+   "email": "thaugen72@gmail.com",
+   "name": "Tom Haugen"
+  },
+  {
+   "id": "u_mike_szymanski_b46f4f",
+   "email": "mike.szymanski@yahoo.com",
+   "name": "Mike Szymanski"
+  },
+  {
+   "id": "u_mehta_sanjay_d1cb28",
+   "email": "mehta.sanjay@outlook.com",
+   "name": "Sanjay Mehta"
+  },
+  {
+   "id": "u_fossum_diane_971218",
+   "email": "fossum.diane@yahoo.com",
+   "name": "Diane Fossum"
+  },
+  {
+   "id": "u_brandt_walt_60cc4a",
+   "email": "brandt.walt@gmail.com",
+   "name": "Walt Brandt"
+  },
+  {
+   "id": "u_pedermoen_1becfd",
+   "email": "pedermoen@yahoo.com",
+   "name": "Peder Moen"
+  },
+  {
+   "id": "u_larry_bjork83_ec4eea",
+   "email": "larry.bjork83@gmail.com",
+   "name": "Larry Bjork"
+  },
+  {
+   "id": "u_gene_paulsen_4a2b48",
+   "email": "gene.paulsen@gmail.com",
+   "name": "Gene Paulsen"
+  },
+  {
+   "id": "u_chrisrademacher_4dcebf",
+   "email": "chrisrademacher@gmail.com",
+   "name": "Chris Rademacher"
+  },
+  {
+   "id": "u_stacy_bergquist_386568",
+   "email": "stacy.bergquist@icloud.com",
+   "name": "Stacy Bergquist"
+  }
+ ],
+ "contacts": [
+  {
+   "owner_id": "ms_user_owen",
+   "contact_id": "contact_9bc5252d5b4502a5ab351791"
+  },
+  {
+   "owner_id": "ms_user_owen",
+   "contact_id": "contact_624483321982237cde191eea"
+  }
+ ],
+ "threads": [
+  {
+   "id": "ms_thread_6d2e8b1f",
+   "title": "Dana Kowalczyk",
+   "created_at": "2026-05-08T01:18:42.517000Z",
+   "updated_at": "2026-10-27T01:05:38.611000Z",
+   "participant_ids": [
+    "ms_user_owen",
+    "contact_9bc5252d5b4502a5ab351791"
+   ]
+  },
+  {
+   "id": "ms_thread_4b7e09d2",
+   "title": "R.",
+   "created_at": "2026-09-20T00:40:12.318402Z",
+   "updated_at": "2026-10-28T01:26:31.157869Z",
+   "participant_ids": [
+    "ms_user_owen",
+    "contact_624483321982237cde191eea"
+   ]
+  }
+ ],
+ "messages": [
+  {
+   "id": "ms_msg_4be19a07",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Owen!! Hope spring is treating you well 🌱 Quick lead for you: the lot behind the hardware store on 38th St had a salt pile sitting UNCOVERED all winter, and now every time it rains it washes straight into the storm drain 😩 Is that something anyone would want to write about?? 🧂💧 - D",
+   "attachments": [],
+   "created_at": "2026-05-08T01:18:42.517000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_d3027c5e",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "ms_user_owen",
+   "text": "Thanks, Dana. It's a good detail. I don't have a salt story going right now, but I keep a file. If you take photos, note the date on each one.",
+   "attachments": [],
+   "created_at": "2026-05-08T13:41:15.204000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_8f6a41b2",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Will do!!! I already have a few from March 💪 Our spring sweep-up is next Saturday, we'll be collecting leftover salt all over Longfellow if you want to see it in action!! #SaltSmart - D",
+   "attachments": [],
+   "created_at": "2026-05-08T17:07:33.869000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_1c95e7d0",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Did you see the district's 2025 water quality report came out yesterday?? Corliss AND Penner are now OVER the state chloride standard 😬😬 This is what we've been saying for YEARS!!! Our sweep-up crew collected 11 buckets of leftover salt in May, imagine how much is going into the lakes 💧🧂 - D",
+   "attachments": [],
+   "created_at": "2026-06-13T00:55:06.731000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_a7403f6b",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "ms_user_owen",
+   "text": "I saw the notice, but I haven't been through the report yet. Eleven buckets is a lot of salt for one neighborhood.",
+   "attachments": [],
+   "created_at": "2026-06-13T14:12:27.390000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_5e2bd918",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "SO much!!! This winter we're doing sidewalk audits too, you should tag along sometime 😉 - D",
+   "attachments": [],
+   "created_at": "2026-06-13T15:30:51.112000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_c06f3a84",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Owen!! Would you ever come talk at a Salt Watch meetup this fall?? Like 20 minutes on how to read a water quality report?? People would LOVE it 🙌💧 - D",
+   "attachments": [],
+   "created_at": "2026-07-22T01:26:19.645000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_92d17e5c",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "ms_user_owen",
+   "text": "Thanks for asking. I'm going to pass. I may end up writing about salt, and Salt Watch with it, so I try to keep some distance from groups I could cover.",
+   "attachments": [],
+   "created_at": "2026-07-22T13:58:44.083000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_3b8c06fa",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Totally get it, journalist rules 😂 Do you know anyone who could do it instead?? - D",
+   "attachments": [],
+   "created_at": "2026-07-22T17:40:02.958000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_e41a92d7",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "ms_user_owen",
+   "text": "The watershed district does public talks. Their press office can set one up.",
+   "attachments": [],
+   "created_at": "2026-07-22T22:15:37.426000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_7d5f20c3",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Random question!! Do you know if Prairie Wire runs community items?? Our fall smart salting trainings are FREE this year for HOA boards and property managers 🙌🧂 - D",
+   "attachments": [],
+   "created_at": "2026-08-20T01:02:55.307000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_0a96bd41",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "ms_user_owen",
+   "text": "They do, through their community calendar rather than through me. Send it to their news desk with the dates and who can sign up.",
+   "attachments": [],
+   "created_at": "2026-08-20T14:05:18.776000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_f2c74e19",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Perfect, THANK YOU!!! 💧 - D",
+   "attachments": [],
+   "created_at": "2026-08-20T17:31:40.251000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_6b31a5e8",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "ms_user_owen",
+   "text": "Dana, I'm reporting a piece on road salt and Twin Cities lakes for North Current, due in November. If you hear of anyone tracking how much salt cities or HOAs actually use, I'd like to know.",
+   "attachments": [],
+   "created_at": "2026-09-24T00:20:09.684000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_b8e2079d",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "OMG YES!!! FINALLY someone is covering this!!! 🙌🙌 I have SO many people for you. Remember our blog post on applicators, the one I emailed you? They put down something like 40% of the salt in the metro!! Let me dig up the link 🧂💧 - D",
+   "attachments": [],
+   "created_at": "2026-09-24T00:34:47.139000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_5f08d2b7",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "",
+   "attachments": [],
+   "created_at": "2026-09-24T01:58:12.833000Z",
+   "unsent_at": "2026-09-24T01:58:40.207000Z"
+  },
+  {
+   "id": "ms_msg_29f4c6a1",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Found it!! Same one I emailed you, in case it's buried in your inbox (wrong link before, oops) saltwatchtc.org/blog/who-salts-the-metro 💧",
+   "attachments": [],
+   "created_at": "2026-09-24T02:02:30.522000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_d7a85b30",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "ms_user_owen",
+   "text": "Thanks. I still need the original source for the 40 percent figure before I can use it. Did you ever find out who gave it at the expo?",
+   "attachments": [],
+   "created_at": "2026-09-24T13:52:13.901000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_4103e9cf",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Still digging 🤔 It was one of the speakers at the winter maintenance expo, I just can't remember which one!! I'll check my notes and get back to you!! - D",
+   "attachments": [],
+   "created_at": "2026-09-24T17:15:58.364000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_8c2d7f16",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Owen!!! did you see my chart blow up?? 😱 I made it from the district's 2025 report and now people are sharing it EVERYWHERE!!! Salt Watch got 60 new members since last night 🙌🙌 #SaltSmart - D",
+   "attachments": [],
+   "created_at": "2026-10-17T00:30:14.382000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_e5b9341a",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "ms_user_owen",
+   "text": "I saw it this morning. It's getting a lot of attention.",
+   "attachments": [],
+   "created_at": "2026-10-17T01:41:09.617000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_17ac60e4",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "RIGHT??? People CARE about our lakes!!! I've been answering comments all night 😅 If any reporters call me I'm sending them your way, you're the expert 😂💧 - D",
+   "attachments": [],
+   "created_at": "2026-10-17T01:49:51.045000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_a39f852b",
+   "thread_id": "ms_thread_6d2e8b1f",
+   "sender_id": "contact_9bc5252d5b4502a5ab351791",
+   "text": "Owen!! Any chance you could use my chart in your salt story?? The district STILL hasn't said a word 🙄 4K shares!!! People CARE 💧🧂🙌 - D",
+   "attachments": [],
+   "created_at": "2026-10-27T01:05:38.611000Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_1f8a3c62",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "saw you're looking into road salt and the lakes.",
+   "attachments": [],
+   "created_at": "2026-09-20T00:40:12.318402Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_8d40e7b1",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "i do water sampling for work. could help you on a weekend. my own time.",
+   "attachments": [],
+   "created_at": "2026-09-20T00:40:51.904117Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_c25f9a04",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "no names.",
+   "attachments": [],
+   "created_at": "2026-09-20T00:41:37.226845Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_6e1b38d9",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "rather work didn't know i spend saturdays with a reporter.",
+   "attachments": [],
+   "created_at": "2026-09-20T00:42:09.671530Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_a37d5f20",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Thanks for writing. I'd welcome the help. You have my word: no names. You'll be R. in my notes and \"a field technician\" in anything I publish.",
+   "attachments": [],
+   "created_at": "2026-09-20T02:05:26.140973Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_0c94e2b8",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "What I have in mind is one Saturday in early October, four or five sites in the Metro Lakes district, with split samples going to two labs. Would that work for you?",
+   "attachments": [],
+   "created_at": "2026-09-20T02:06:48.587201Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_e5a1076c",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "early oct works.",
+   "attachments": [],
+   "created_at": "2026-09-20T02:29:15.033698Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_49f3b8d5",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "which sites.",
+   "attachments": [],
+   "created_at": "2026-09-20T02:29:40.812264Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_b81c6e47",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Still narrowing it down. Corliss for its long record, and at least one of the new inlet or outlet stations. I'll send a list this week.",
+   "attachments": [],
+   "created_at": "2026-09-20T02:41:02.459187Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_2a6d9f13",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "inlets are where it gets interesting. they spike in snowmelt.",
+   "attachments": [],
+   "created_at": "2026-09-20T02:47:33.910542Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_d07e45a8",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "fall numbers will be lower. still worth having.",
+   "attachments": [],
+   "created_at": "2026-09-20T02:48:10.275816Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_75b2c0e9",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Understood. Talk this week.",
+   "attachments": [],
+   "created_at": "2026-09-20T02:55:44.698330Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_f3c8174d",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Draft list: Corliss boat launch, Penner outlet culvert, Odegaard north inlet, Sumac fishing pier. Little Tamarack as a backup if one is blocked.",
+   "attachments": [],
+   "created_at": "2026-09-24T00:18:27.512094Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_1b5e92a6",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "good list. odegaard inlet is a storm sewer outfall. you'll want a pole sampler. i have one.",
+   "attachments": [],
+   "created_at": "2026-09-24T01:02:51.384710Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_9e07d3c4",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "penner outlet you can reach from the trail side. don't go in the culvert.",
+   "attachments": [],
+   "created_at": "2026-09-24T01:03:30.947265Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_64a1f8b2",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Noted on both. I'll check access with the district before we go.",
+   "attachments": [],
+   "created_at": "2026-09-24T01:15:09.120358Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_c8d26e50",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "rinse each bottle 3x with site water. fill, cap, straight on ice.",
+   "attachments": [],
+   "created_at": "2026-09-24T01:21:44.603871Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_3f71a9e5",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "get coc forms from both labs. they ask for collector names.",
+   "attachments": [],
+   "created_at": "2026-09-24T01:22:20.158442Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_a50b4d17",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "I'll put you down as R. on the forms.",
+   "attachments": [],
+   "created_at": "2026-09-24T01:30:02.774519Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_e92c07f3",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "fine.",
+   "attachments": [],
+   "created_at": "2026-09-24T01:41:17.299036Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_57d8e1a0",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Can you do Saturday, Oct. 10? The long-range forecast looks dry.",
+   "attachments": [],
+   "created_at": "2026-10-01T23:52:36.835127Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_0e3b6c94",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "probably. will confirm next week.",
+   "attachments": [],
+   "created_at": "2026-10-02T02:10:05.461980Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_b4f90a2e",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "can do sat. 830 at the first one. bring the cooler.",
+   "attachments": [],
+   "created_at": "2026-10-07T01:10:14.902653Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_6a2d5e81",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "corliss launch. https://maps.google.com/?q=45.0412,-93.1287",
+   "attachments": [],
+   "created_at": "2026-10-07T01:10:47.318209Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_d1c7f43b",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Perfect. I'll be there at 8:30 with the cooler and ice. I pick up bottle kits from both labs this week.",
+   "attachments": [],
+   "created_at": "2026-10-07T01:24:51.067344Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_8f05a2c7",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "",
+   "attachments": [],
+   "created_at": "2026-10-07T01:24:53.519820Z",
+   "unsent_at": "2026-10-07T01:25:06.284175Z"
+  },
+  {
+   "id": "ms_msg_2c9e7b16",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "order: corliss, penner outlet, odegaard inlet, sumac. lunch in there somewhere.",
+   "attachments": [],
+   "created_at": "2026-10-07T01:38:02.736491Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_f74a10d9",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Works for me. Lunch is on me.",
+   "attachments": [],
+   "created_at": "2026-10-07T01:41:19.882506Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_43e6c8a5",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "deal.",
+   "attachments": [],
+   "created_at": "2026-10-07T01:49:55.140277Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_9a1f5d02",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Still dry for tomorrow. See you at the launch at 8:30.",
+   "attachments": [],
+   "created_at": "2026-10-10T00:33:40.605918Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_e06b93c8",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "see you there.",
+   "attachments": [],
+   "created_at": "2026-10-10T01:05:12.927384Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_5d38a7f1",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "here. north end of the lot.",
+   "attachments": [],
+   "created_at": "2026-10-10T13:24:51.443162Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_b2e04c69",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Pulling in now.",
+   "attachments": [],
+   "created_at": "2026-10-10T13:27:13.091735Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_71f9d2a3",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "site 1. 9ish.",
+   "attachments": [
+    {
+     "name": "R_photo_01.jpg",
+     "mime_type": "image/jpeg"
+    },
+    {
+     "name": "R_photo_02.jpg",
+     "mime_type": "image/jpeg"
+    },
+    {
+     "name": "R_photo_03.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-10-11T00:12:03.512807Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_c6a83e0d",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "site 2. 10:30.",
+   "attachments": [
+    {
+     "name": "R_photo_04.jpg",
+     "mime_type": "image/jpeg"
+    },
+    {
+     "name": "R_photo_05.jpg",
+     "mime_type": "image/jpeg"
+    },
+    {
+     "name": "R_photo_06.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-10-11T00:12:21.876341Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_0d5c71b8",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "site 3. 11:50.",
+   "attachments": [
+    {
+     "name": "R_photo_07.jpg",
+     "mime_type": "image/jpeg"
+    },
+    {
+     "name": "R_photo_08.jpg",
+     "mime_type": "image/jpeg"
+    },
+    {
+     "name": "R_photo_09.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-10-11T00:12:40.209558Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_a8e26f94",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "last one. 1:45.",
+   "attachments": [
+    {
+     "name": "R_photo_10.jpg",
+     "mime_type": "image/jpeg"
+    }
+   ],
+   "created_at": "2026-10-11T00:12:57.644019Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_3b70d4e2",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Got all ten. Thank you for giving up your Saturday.",
+   "attachments": [],
+   "created_at": "2026-10-11T00:31:26.318472Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_f19c8a56",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "samples cold?",
+   "attachments": [],
+   "created_at": "2026-10-11T00:40:48.765103Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_64e2b0d7",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "In the cooler on fresh ice. Riverside and Northstar first thing Monday.",
+   "attachments": [],
+   "created_at": "2026-10-11T00:42:15.230986Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_d8a3f915",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "good. ask both labs for their qc with the results.",
+   "attachments": [],
+   "created_at": "2026-10-11T00:51:33.598724Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_27c5e0b4",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Will do. Thanks again.",
+   "attachments": [],
+   "created_at": "2026-10-11T01:03:07.452390Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_8b1d6a3f",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "story still on for nov?",
+   "attachments": [],
+   "created_at": "2026-10-28T00:30:22.381547Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_e47f2c90",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "ms_user_owen",
+   "text": "Still on. I file Nov. 20, and you're \"a field technician\" in every draft. I'll send you the link when it runs.",
+   "attachments": [],
+   "created_at": "2026-10-28T01:12:48.904213Z",
+   "unsent_at": ""
+  },
+  {
+   "id": "ms_msg_5a0c9d61",
+   "thread_id": "ms_thread_4b7e09d2",
+   "sender_id": "contact_624483321982237cde191eea",
+   "text": "good.",
+   "attachments": [],
+   "created_at": "2026-10-28T01:26:31.157869Z",
+   "unsent_at": ""
+  }
+ ],
+ "current_user_email": "owen.brandt.writes@gmail.com"
+}

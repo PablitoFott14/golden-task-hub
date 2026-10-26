@@ -1,0 +1,1345 @@
+{
+ "reminders": [
+  {
+   "reminder_id": "5f3c9a0e71b4d28e6c0a93f1",
+   "title": "HOA dues, Leavitt Court",
+   "due_datetime": 1777982400.0,
+   "description": "$345.00 to Leavitt Court Condo Association from checking 4402.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1777981500.0
+  },
+  {
+   "reminder_id": "3c8e0a5f71d29b46e0c3f7a2",
+   "title": "Submit April AP rec (REC-AP-2010) in BlackLine",
+   "due_datetime": 1778158800.0,
+   "description": "Devon's April cutoff is keyed in SAP. Tie GL 2010-000 to the SAP aging and get it submitted first thing, before soft close (BD5).",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1778158800.0
+  },
+  {
+   "reminder_id": "b94d27e0f5a13c68d2e9f0b7",
+   "title": "Send Martin the agenda for our 10:00",
+   "due_datetime": 1778162400.0,
+   "description": "Short numbered list by DM before the Thursday 1:1 in his office: close status, anything open and what's coming up that week.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": 1778162400.0
+  },
+  {
+   "reminder_id": "a82d4f6c1e09b37d5f2c8e40",
+   "title": "Sunday call with Mom and Dad",
+   "due_datetime": 1778457600.0,
+   "description": "Naperville, most Sunday evenings.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": 1778421600.0
+  },
+  {
+   "reminder_id": "3f81c6d0a92e4b75e1d07c3a",
+   "title": "Peoples Gas autopay",
+   "due_datetime": 1778504400.0,
+   "description": "Gas bill drafts from checking 4402 around the 11th. Usually $32 to $42.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1778504400.0
+  },
+  {
+   "reminder_id": "e0a6f3c91b57d84e2c0f6a3d",
+   "title": "April certification packet to Martin (BD7)",
+   "due_datetime": 1778504400.0,
+   "description": "Hard close for APR-26. All April recs approved and JEs posted before the packet goes in the BlackLine close checklist for his sign-off.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1778504400.0
+  },
+  {
+   "reminder_id": "6f2b9d04e8a1c73f5b6d0e19",
+   "title": "Savings auto-transfer, $400 to 4419",
+   "due_datetime": 1778936400.0,
+   "description": "$400.00 moves from checking 4402 to savings 4419 on the 16th, or the next business day when the 16th lands on a weekend.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1778936400.0
+  },
+  {
+   "reminder_id": "c41e7b2a9d05f86e3b1d7a2c",
+   "title": "Luis installing the bathroom fan",
+   "due_datetime": 1778940900.0,
+   "description": "Around 10. Be home from 9:30, he'll buzz 3B.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1778940900.0
+  },
+  {
+   "reminder_id": "e7092b5d3f8a14c6e9d0b27f",
+   "title": "Visa Signature autopay",
+   "due_datetime": 1779022800.0,
+   "description": "Card 7781 pays the statement balance in full from checking 4402.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1779022800.0
+  },
+  {
+   "reminder_id": "b26e0f4a7d13c958a6e2f041",
+   "title": "Xfinity autopay",
+   "due_datetime": 1779368400.0,
+   "description": "$75.00 for internet from checking 4402 on the 21st.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1779368400.0
+  },
+  {
+   "reminder_id": "3b6e8d1f0c49a72e5d3f8b06",
+   "title": "Pick up The Covenant of Water",
+   "due_datetime": 1779548400.0,
+   "description": "Hold shelf at Sulzer Regional, held until 5/28.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1779548400.0
+  },
+  {
+   "reminder_id": "e9a4d27b10f6c38e5b9d4a62",
+   "title": "T-Mobile autopay",
+   "due_datetime": 1779627600.0,
+   "description": "$65.00 phone bill from checking 4402 on the 24th, or the next business day.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1779627600.0
+  },
+  {
+   "reminder_id": "9d2a5c7e04f1b68a3c9e1d75",
+   "title": "Finish North Woods",
+   "due_datetime": 1779667200.0,
+   "description": "Book club Tuesday at Ruth's. About two thirds through.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1779631200.0
+  },
+  {
+   "reminder_id": "07c5f1e83b9a26d4c0e7b519",
+   "title": "ComEd autopay",
+   "due_datetime": 1780059600.0,
+   "description": "Electric bill drafts from checking 4402 around the 29th. Runs higher in the AC months.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1780059600.0
+  },
+  {
+   "reminder_id": "b7e2c94f0a61d38e5c27f4a9",
+   "title": "Leavitt Ct spring cleanup at 9:00",
+   "due_datetime": 1780147800.0,
+   "description": "Owners cleanup out front, 9 to 11. Mulch gets dropped by the gate Friday, and gloves and coffee are provided.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780147800.0
+  },
+  {
+   "reminder_id": "06f8b3e2d9c14a7f0e5b2d83",
+   "title": "Mortgage autopay, Northpoint Home Loans",
+   "due_datetime": 1780315200.0,
+   "description": "$1,640.18 drafts from checking 4402 on the 1st.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1780314300.0
+  },
+  {
+   "reminder_id": "d51c8a3e0f7b29e4c6a1d9f3",
+   "title": "Set up asset 310061 for YT-061 in SAP",
+   "due_datetime": 1780326000.0,
+   "description": "Great Lakes Terminal yard tractor invoice, $148,800.00 to 1620-000, cost center 320. In service 6/1, 8-year life, $1,550.00 a month starting with June.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780326000.0
+  },
+  {
+   "reminder_id": "8a3f6e1d2c90b57e4d8a0c62",
+   "title": "Tie Midwest Fuel statement to SAP (REC-AP-2010-MFP)",
+   "due_datetime": 1780497000.0,
+   "description": "Rhonda Pierce sends the month-end statement to ap@ around the 3rd. Tie it to SAP vendor 100482 the same day.",
+   "repetition_unit": "month",
+   "repetition_value": 1,
+   "time_notified": 1780497000.0
+  },
+  {
+   "reminder_id": "4e9b1d7c0a36f82e5c1b9d47",
+   "title": "Pick up Endure at Sulzer Regional",
+   "due_datetime": 1780613100.0,
+   "description": "Endure by Alex Hutchinson is on the hold shelf at Sulzer Regional, 4455 N. Lincoln Ave. Pick up by 6/11.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780613100.0
+  },
+  {
+   "reminder_id": "a7c25e9f3b0d16e8f4a2c05b",
+   "title": "Tie out May AP rec (REC-AP-2010)",
+   "due_datetime": 1780664400.0,
+   "description": "Devon's May cutoff is done. Tie GL 2010-000 to the SAP AP subledger at 5/31 and submit in BlackLine ahead of soft close (BD5).",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780664400.0
+  },
+  {
+   "reminder_id": "f85b2d0c9e63a74f18d6c02e",
+   "title": "Pick up library hold",
+   "due_datetime": 1780763400.0,
+   "description": "Heaven and Earth Grocery Store for June book club. On the hold shelf.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1780763400.0
+  },
+  {
+   "reminder_id": "1f6d0b8e4c27a95d3e0f7b2c",
+   "title": "May certification packet to Martin (BD7)",
+   "due_datetime": 1781010000.0,
+   "description": "Hard close for MAY-26. All May recs were approved at soft close on 6/5. Packet goes in the BlackLine close checklist for his sign-off.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781010000.0
+  },
+  {
+   "reminder_id": "b5c1e9a37f02d64b8e1a0c9d",
+   "title": "Change network password (expires 6/16)",
+   "due_datetime": 1781530200.0,
+   "description": "Ctrl+Alt+Del and Change a password, or mypassword.lakeshorefreight.com.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781530200.0
+  },
+  {
+   "reminder_id": "d4e71b09a3c58f62e1b7d0a4",
+   "title": "Check the Northfield renewal invoice is in",
+   "due_datetime": 1781532000.0,
+   "description": "Martin wants a flag today if it isn't in SAP yet. The 07/01 premium is confirmed at $612,000.00, so $51,000.00 a month from July.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781532000.0
+  },
+  {
+   "reminder_id": "71e4d0b8a6c35f92d7b4e0a1",
+   "title": "Strawberries for Jess",
+   "due_datetime": 1781575200.0,
+   "description": "Promised her a box for Tuesday's run. She's bringing the coffee.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781532000.0
+  },
+  {
+   "reminder_id": "c4d8e02f6a17b39e5c8d1f70",
+   "title": "Build the PP-INS-2026 prepaid schedule in SAP",
+   "due_datetime": 1781703000.0,
+   "description": "Northfield invoice NTU-26-04417 posted 6/15. $612,000.00 for 07/01/2026 to 06/30/2027, $51,000.00 a month starting July. Send Martin the schedule once it's built.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781703000.0
+  },
+  {
+   "reminder_id": "58b1f9a3e06d27c4b8f2e95d",
+   "title": "Bake the quiche for Father's Day brunch",
+   "due_datetime": 1781992800.0,
+   "description": "Bacon and gruyere from Gene's first, then bake tonight. Brunch at Mom and Dad's tomorrow at 11:30, and Ken is keeping Dad on the course until about 11.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1781992800.0
+  },
+  {
+   "reminder_id": "7e3a9c51f08b2d64a9c3e7f1",
+   "title": "Return The Heaven and Earth Grocery Store",
+   "due_datetime": 1782594000.0,
+   "description": "Due today and CPL won't renew it, other patrons are waiting. The Sulzer book drop works after hours. Good to Go is on the hold shelf there through 7/5.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782594000.0
+  },
+  {
+   "reminder_id": "a6f30c8d5e14b97a2d6c0e83",
+   "title": "Go over Aunt Lily's 401(k) fund list",
+   "due_datetime": 1782675000.0,
+   "description": "Before the 4:00 call, 2:00 her time. Look at the target date options and expense ratios, ideally under 0.20%.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782675000.0
+  },
+  {
+   "reminder_id": "c3e8a0d5f19b72c6e4b0d8a1",
+   "title": "Send Martin the Northfield wire confirmation",
+   "due_datetime": 1782835200.0,
+   "description": "$612,000.00 for the PP-INS-2026 renewal (NTU-26-04417) wires today, a day ahead of the 7/1 due date. He wants the bank confirmation once it releases.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1782835200.0
+  },
+  {
+   "reminder_id": "d3a96f1c2e8b04d7a5f3c6e9",
+   "title": "Fruit salad for the 4th",
+   "due_datetime": 1783177200.0,
+   "description": "Fruit salad for Aunt Sue's BBQ at 3:00.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783177200.0
+  },
+  {
+   "reminder_id": "4d91a6e3f08c2b75e1d6a3c8",
+   "title": "Pick up the Trek hybrid from Tara",
+   "due_datetime": 1783375200.0,
+   "description": "Marketplace bike, small frame. Around 5:30, and she'll have it out front by the steps, so ring the bell. Test ride around the block, then Venmo her the $175.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783375200.0
+  },
+  {
+   "reminder_id": "5b0e7f2a9d4c18e3b6f1a0d8",
+   "title": "Tie SAP AP subledger to Oracle GL (June close)",
+   "due_datetime": 1783515600.0,
+   "description": "Devon keyed all the June invoices. Tie the subledger to GL 2010-000 at 6/30 for REC-AP-2010 first thing, before soft close (BD5).",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783515600.0
+  },
+  {
+   "reminder_id": "2c8f61d4b9e07a35c2f8d1b6",
+   "title": "Look over Dad's SERS statement",
+   "due_datetime": 1783553400.0,
+   "description": "He emailed the annual statement and wants to know if it looks right. Check the monthly amount against last year plus the January increase, and that Mom is still listed as his survivor.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783524000.0
+  },
+  {
+   "reminder_id": "f2d94c6b1e08a37f5d2c9e40",
+   "title": "June certification packet to Martin (BD7)",
+   "due_datetime": 1783688400.0,
+   "description": "Hard close for JUN-26. Martin was clearing the last three June recs yesterday, so check they're approved before the packet goes in the BlackLine close checklist.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1783688400.0
+  },
+  {
+   "reminder_id": "2e7b0c4f9a61d38e7c2b5f04",
+   "title": "Check 401(k) deduction on the 7/15 pay statement",
+   "due_datetime": 1784135700.0,
+   "description": "First pay date at 8%. Benefits confirmed the 6/30 check stays at 6%.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784135700.0
+  },
+  {
+   "reminder_id": "f0c5a2e8d71b49c3e6a0d8b5",
+   "title": "Drop The God of the Woods at Marcy's",
+   "due_datetime": 1784156400.0,
+   "description": "Colleen is borrowing it for the July book.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784124000.0
+  },
+  {
+   "reminder_id": "84b1f6d3e0a27c95b8d4f1e6",
+   "title": "Run laundry tonight",
+   "due_datetime": 1784161800.0,
+   "description": "Water is off Thursday 7/16 from 9 to 1 while the plumber replaces the riser valve, laundry room included.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784124000.0
+  },
+  {
+   "reminder_id": "c9e3a7b05d1f68e2a4c7b93d",
+   "title": "Return Endure to Sulzer",
+   "due_datetime": 1784329200.0,
+   "description": "Renewed once already, due 7/18.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784296800.0
+  },
+  {
+   "reminder_id": "6a9d3f27e1c84b05d7a2e9c6",
+   "title": "IKEA Schaumburg with Kevin at 11",
+   "due_datetime": 1784386800.0,
+   "description": "Bookcase run after the long run. Take the CX-5 so the box fits. Kevin does the heavy lifting, I buy the meatballs.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784386800.0
+  },
+  {
+   "reminder_id": "e8c27b4d0f9a13e6c5b8d2f0",
+   "title": "FaceTime Hannah at 2",
+   "due_datetime": 1784486700.0,
+   "description": "Way overdue catch-up. The Mazurs' cookout in Naperville starts at 3, so put the bottle of wine in the car before the call.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784486700.0
+  },
+  {
+   "reminder_id": "9c4a1f7e3d05b86a2e9c4f13",
+   "title": "ComEd Peak Time Savings, 2 to 5 pm",
+   "due_datetime": 1784809800.0,
+   "description": "Thermostat up before leaving for work. Using less from 2 to 5 earns a bill credit.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784809800.0
+  },
+  {
+   "reminder_id": "2e7b5c0f8a14d93e6b0c7f5a",
+   "title": "Label anything I'm keeping in the 9th floor fridge",
+   "due_datetime": 1784917800.0,
+   "description": "Facilities cleans out the kitchen fridge at 2:00. Name and date on anything I want to keep, and no dishes left in the sink.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784917800.0
+  },
+  {
+   "reminder_id": "4d8f2b6e9c03a175d0e8b4f2",
+   "title": "Michigan peaches for Joanne's cobbler",
+   "due_datetime": 1784986200.0,
+   "description": "Lincoln Square market this morning. Ray says Michigan, not Georgia.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784986200.0
+  },
+  {
+   "reminder_id": "b1f05e8c3a7d29e46b0c5f83",
+   "title": "Renew my library card",
+   "due_datetime": 1784991600.0,
+   "description": "CPL card expires 7/27. Stop at Sulzer after the market with a photo ID and something showing the Leavitt address.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1784991600.0
+  },
+  {
+   "reminder_id": "e6a0c4d8b2f95e17a3c6d0b9",
+   "title": "Set up asset 320142 for FL-142 in SAP",
+   "due_datetime": 1785337200.0,
+   "description": "Prairie State invoice for the new Gary electric forklift, $46,800.00 to 1630-000, cost center 320. In service 8/1, six-year life, $650.00 a month starting August.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785337200.0
+  },
+  {
+   "reminder_id": "a1f6c3d8e5b29074c6e1f3a8",
+   "title": "Security Awareness Training",
+   "due_datetime": 1785346200.0,
+   "description": "Due 7/31. About 25 minutes in the Learning Hub under My Assignments.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785346200.0
+  },
+  {
+   "reminder_id": "e2b9d4f07a3c16e8b5d2a9c0",
+   "title": "Book CX-5 service at Foster Ave Mazda",
+   "due_datetime": 1785596400.0,
+   "description": "Oil and filter, tire rotation and inspection. Reply YES to their text to book.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785595500.0
+  },
+  {
+   "reminder_id": "57a0e3c9b1d84f62a7c0e5b3",
+   "title": "Return Tom Lake to the library",
+   "due_datetime": 1785798000.0,
+   "description": "Due 8/4.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1785765600.0
+  },
+  {
+   "reminder_id": "e3a07c5d9b24f16e8a3c0d72",
+   "title": "Xfinity tech visit tomorrow, 10 to 12",
+   "due_datetime": 1786154400.0,
+   "description": "Weak signal to the gateway since Monday's outage. The tech texts when on the way, and the outage credit shows on the next bill.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786111200.0
+  },
+  {
+   "reminder_id": "4f1b8e6d2a07c93e5f1d8b4a",
+   "title": "Call for a personal appt this week",
+   "due_datetime": 1786366800.0,
+   "description": "First opening they have, early enough that I'm in the office by 10.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786366800.0
+  },
+  {
+   "reminder_id": "0d8f3b6e1a72c49d5f0e8b26",
+   "title": "July certification packet to Martin (BD7)",
+   "due_datetime": 1786453200.0,
+   "description": "Hard close for JUL-26. All July recs were approved 8/7 and the JEs are posted. Packet goes in the BlackLine close checklist for his sign-off.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786453200.0
+  },
+  {
+   "reminder_id": "9c6f2b1e4a87d30c5f9e2b16",
+   "title": "Tomorrow's 8:00 personal appt",
+   "due_datetime": 1786496400.0,
+   "description": "Check in by 7:45 with the insurance card and a photo ID. Told Martin I'll be in by 10.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786456800.0
+  },
+  {
+   "reminder_id": "93d6a0f5c2e8b147d3a9e6c2",
+   "title": "Forms for tomorrow's 7:30 appt",
+   "due_datetime": 1787014800.0,
+   "description": "Check in at 7:15. Fill out the intake form tonight and leave the watch and jewelry at home. In the office by 9:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1786975200.0
+  },
+  {
+   "reminder_id": "c6b4e1a8d05f72c9e4b1a7d3",
+   "title": "Nicole picking up the walnut bookcase",
+   "due_datetime": 1787269500.0,
+   "description": "Marketplace sale, $40 cash. She and her boyfriend are coming anytime after 7. Empty the shelves first and buzz them up to 3B.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787234400.0
+  },
+  {
+   "reminder_id": "5c9e2a7d0b43f816c5e9a2d7",
+   "title": "Finish The Great Believers",
+   "due_datetime": 1787511600.0,
+   "description": "Book club Tuesday at 7 at Colleen's, 4731 N. Leavitt, 2nd floor. Long one, so give it the whole afternoon.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787511600.0
+  },
+  {
+   "reminder_id": "1d97e4b2c60a8f35d1e9b2a7",
+   "title": "ComEd Peak Time Savings, 3 to 6 pm",
+   "due_datetime": 1787747400.0,
+   "description": "Thermostat up to 80 before leaving for work. Using less during peak hours earns a bill credit.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1787747400.0
+  },
+  {
+   "reminder_id": "71d4e8a2c3f09b65d7a1e4c3",
+   "title": "Bring July's accrual lines to the 2:00 with Devon",
+   "due_datetime": 1788373800.0,
+   "description": "Huddle Rm 9D. Marking up his August GRNI list (open POs over $5,000.00) to see what rolled forward before the BD3 AP accrual JE.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788373800.0
+  },
+  {
+   "reminder_id": "f4b0a7e9c2d518e6b04a7c1d",
+   "title": "Send Devon the final GRNI accrual lines",
+   "due_datetime": 1788467400.0,
+   "description": "August AP accrual. Once the BD3 JE is in, send him the lines as we marked them up on Wednesday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788467400.0
+  },
+  {
+   "reminder_id": "b8d3f1a6c4e07259d1b8f3a6",
+   "title": "Pick up Dessert Person at The Book Cellar",
+   "due_datetime": 1788624000.0,
+   "description": "Order BC-118204, held at the register for 14 days.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788624000.0
+  },
+  {
+   "reminder_id": "f2c6a0e84b1d97f3c5a2e608",
+   "title": "Foot + calf exercises (Wed)",
+   "due_datetime": 1788957900.0,
+   "description": "Calf raises 3x15 each side, towel scrunches, marble pickups, single-leg balance 3x30s, banded ankle circles. About 15 min.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": 1788957900.0
+  },
+  {
+   "reminder_id": "7a1e9c3f5b06d28e4a7c1f90",
+   "title": "Tie out the August vendor statements",
+   "due_datetime": 1788872400.0,
+   "description": "Devon closed August cutoff Friday. Tie the vendor statements to SAP open items before soft close (BD5). Midwest Fuel already tied on 9/2 at $124,815.00.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788872400.0
+  },
+  {
+   "reminder_id": "b3f7d1a9e5c02684b1d7f3e8",
+   "title": "Get back to Foster Ave Mazda about the CX-5",
+   "due_datetime": 1788974100.0,
+   "description": "Told the service desk I'd get back to them. First openings are Sat 9/19 at 9:00 or Tue 9/22 at 7:30, and the $79.95 oil change and tire rotation special runs through 9/30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1788973200.0
+  },
+  {
+   "reminder_id": "4c0a8e2d6f91b35c7e0a4d1b",
+   "title": "August certification packet to Martin (BD7)",
+   "due_datetime": 1789045200.0,
+   "description": "Hard close for AUG-26. All August recs are approved in BlackLine. Packet goes in the close checklist before our 10:00.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789045200.0
+  },
+  {
+   "reminder_id": "0c7e4a9d2b56f13e8a0c7d4b",
+   "title": "Change network password (expires 9/14)",
+   "due_datetime": 1789133400.0,
+   "description": "Ctrl+Alt+Del and Change a password, or mypassword.lakeshorefreight.com.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789133400.0
+  },
+  {
+   "reminder_id": "8e25c1f07b4da963e8c2f15b",
+   "title": "Book boxes for Peggy's library sale",
+   "due_datetime": 1789331400.0,
+   "description": "Two boxes for the Friends of the Library fall sale, mostly this year's book club picks. In the car before Sunday dinner in Naperville at 5.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789331400.0
+  },
+  {
+   "reminder_id": "2b6d9f3e81c07a4f5b2e8d96",
+   "title": "Get the UPS box from Marcy",
+   "due_datetime": 1789687500.0,
+   "description": "Driver left it at her door. Knock around 6:30, she's home all night.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1789685700.0
+  },
+  {
+   "reminder_id": "6e1b8d5f3a90c47b2e6d1f8a",
+   "title": "Pick up shoes at Lakefront Runner's Shop",
+   "due_datetime": 1790436600.0,
+   "description": "Order is in. They hold it at the register for 7 days.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790436600.0
+  },
+  {
+   "reminder_id": "c2b85f0e7d136a49e2c8b5f0",
+   "title": "Call Aunt Lily and Uncle David at 3:30",
+   "due_datetime": 1790540100.0,
+   "description": "1:30 their time. Tell them about 11/12 before Kevin sends the Facebook group invite.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790540100.0
+  },
+  {
+   "reminder_id": "d03a8c5f2e97b16d4a0c9e38",
+   "title": "Set up the Sep 2026 Close table in Airtable",
+   "due_datetime": 1790602200.0,
+   "description": "Close Tracker base. Owners and BD dates for SEP-26: BD1 Thu 10/1, BD3 Mon 10/5, BD5 Wed 10/7, BD7 Fri 10/9.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790602200.0
+  },
+  {
+   "reminder_id": "39f5b0e7c2d18a46f9b3e0c5",
+   "title": "Call Bellwether about the Library Room",
+   "due_datetime": 1790615700.0,
+   "description": "Thu 11/12 at 7:30, room for about 30. Deposit goes on my Visa.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790615700.0
+  },
+  {
+   "reminder_id": "d70a2c6e8f14b39d5c2a7e01",
+   "title": "Bake ginger cookies for book club",
+   "due_datetime": 1790640000.0,
+   "description": "Hosting Tuesday at 7, Intermezzo. Ruth is bringing a cheese plate.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790604000.0
+  },
+  {
+   "reminder_id": "6e04b9a7c1f52d83e60a4b9c",
+   "title": "Bring folding chairs up from storage",
+   "due_datetime": 1790721900.0,
+   "description": "Book club at my place at 7. Need two more seats.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790721900.0
+  },
+  {
+   "reminder_id": "6c1e7b4a09f3d25c8e1b7a40",
+   "title": "Add Mom's pharmacy friends to Kevin's group",
+   "due_datetime": 1790814600.0,
+   "description": "Denise Harmon is sending names from the outpatient pharmacy. Invite them to the Facebook group once they come in.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790776800.0
+  },
+  {
+   "reminder_id": "5a3e9d7c1f42b08e6d3a9c74",
+   "title": "Tomorrow's 7:45 personal appt",
+   "due_datetime": 1790816400.0,
+   "description": "Arrive 10 minutes early with the insurance card. In by 9:30, then bring the BD1 feed status to the 10:00 with Martin. Sam has the feeds.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1790776800.0
+  },
+  {
+   "reminder_id": "9a5f2d8e3c71b0a6f9d4e2c5",
+   "title": "Spot-check the 37 reloaded accounts (FIN-198)",
+   "due_datetime": 1791204300.0,
+   "description": "SEP-26 TB reload, 449 of 449 in BlackLine. Tie a sample of the 37 back to the Oracle TB and note it on FIN-198.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791204300.0
+  },
+  {
+   "reminder_id": "f06c4a2e8b91d37c0e5f2a68",
+   "title": "Go through Devon's Sep GRNI list before 9:30",
+   "due_datetime": 1791207000.0,
+   "description": "14 lines through 9/30, open POs over $5,000.00. Walking it with him in 9D at 9:30, before the BD3 accrual JEs go in.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791207000.0
+  },
+  {
+   "reminder_id": "d8e2b6f0a4c93d71e5b8f2a6",
+   "title": "Swap support on REC-ACR-2150 and REC-AP-2010-MFP",
+   "due_datetime": 1791311400.0,
+   "description": "Martin's notes: 2150 should use the 9/30 TMS unbilled-loads export, not the 10/1 run, and the MFP rec should carry the statement from the Evidence folder, not an emailed copy. Resubmit both this afternoon.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791311400.0
+  },
+  {
+   "reminder_id": "1a9c5e3b7d02f84e6c1a9b3d",
+   "title": "Call Leland Avenue Dental to book a cleaning",
+   "due_datetime": 1791480600.0,
+   "description": "6-month cleaning, (773) 555-0190. Early morning slots are open the weeks of 11/16 and 11/30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791479700.0
+  },
+  {
+   "reminder_id": "a0c94e7f2b6d18e53f9c07b4",
+   "title": "Join Ledgerline webinar at 1:00 (ASC 842)",
+   "due_datetime": 1791482100.0,
+   "description": "Join link comes by email 30 min before. Answer every poll or no credit.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791482100.0
+  },
+  {
+   "reminder_id": "5d17b0e9c3a2f84d6e0b7a19",
+   "title": "Log 2.0 CPE hours from 10/8 webinar",
+   "due_datetime": 1791548100.0,
+   "description": "Ledgerline cert email from 10/8 (LCP-C-261008-31744). Download the PDF, add 2.0 hrs, Accounting, Group Internet Based, to the CPE log.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791547200.0
+  },
+  {
+   "reminder_id": "e17c4a9b6d0f38e2c7a15b9f",
+   "title": "September certification packet to Martin (BD7)",
+   "due_datetime": 1791550800.0,
+   "description": "All SEP-26 recs approved 10/7 and JEs posted. Packet goes in the BlackLine close checklist for his sign-off.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791550800.0
+  },
+  {
+   "reminder_id": "f6d2e8a14c7b05d93e6f2a8c",
+   "title": "Flu shot at Walgreens, 11:30",
+   "due_datetime": 1791647100.0,
+   "description": "Bring insurance card.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791647100.0
+  },
+  {
+   "reminder_id": "2e8b7d4f6c03a19e5b7d2c40",
+   "title": "FaceTime Aunt Lily and Uncle David at 4",
+   "due_datetime": 1791751500.0,
+   "description": "2:00 their time. Uncle David has the old family albums, so ask him to scan the good ones. Kevin needs everything for the board by 10/25.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791751500.0
+  },
+  {
+   "reminder_id": "4f8d0b3a7e26c91f5d8b3e04",
+   "title": "Text Dana back about lunch",
+   "due_datetime": 1791825300.0,
+   "description": "She asked about any Friday in November. Lunch is on me for the CPE webinar tip.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791824400.0
+  },
+  {
+   "reminder_id": "7b3d9f0e2a6c41d85e0b7c2f",
+   "title": "Clear windowsills before window washing",
+   "due_datetime": 1791943200.0,
+   "description": "Plants, the desk fan and the photo frames off the sills. Pull the desk and reading chair about three feet back from the windows.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791900000.0
+  },
+  {
+   "reminder_id": "f2a6c8e1d4b07395c1e8a6d0",
+   "title": "Blinds up before leaving for work",
+   "due_datetime": 1791979500.0,
+   "description": "Window crew starts at 8:00. The board is letting them into 3B with the master key.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791978600.0
+  },
+  {
+   "reminder_id": "1b7e3d9a6c42f08e5b7d1c94",
+   "title": "Send Nora the Library Room menu pick",
+   "due_datetime": 1791997200.0,
+   "description": "Family-style at $58.00 a person, or passed appetizers and a carving station at $46.00. Bellwether needs the choice by Fri 10/30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791997200.0
+  },
+  {
+   "reminder_id": "8c3f6a0d5e91b27c4f8a3e6d",
+   "title": "Check CX-5 tire pressure",
+   "due_datetime": 1792020600.0,
+   "description": "Dad's cold snap tip. Driving to the Gary cross-dock Thursday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1791986400.0
+  },
+  {
+   "reminder_id": "0d7a3e95c2b8164f9ea53c60",
+   "title": "Add Gary mileage to expense log",
+   "due_datetime": 1792110600.0,
+   "description": "Google Maps, home to the cross-dock and back.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792072800.0
+  },
+  {
+   "reminder_id": "1e4bd82a6f0c37e9a5b1d06c",
+   "title": "Scan old family prints for Kevin's board",
+   "due_datetime": 1792249200.0,
+   "description": "Box of prints in the hall closet. Send the scans in the party thread.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792249200.0
+  },
+  {
+   "reminder_id": "b3e96a1d4c08f72b9e6a1d58",
+   "title": "Gary cross-dock recap for Martin's 1:1",
+   "due_datetime": 1792677600.0,
+   "description": "Missed last week's 1:1 for the site visit. Bring the recap to today's 10:00, before H&G planning at 2:00.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792677600.0
+  },
+  {
+   "reminder_id": "e4a1d7c39b06f52a8d4e1c7b",
+   "title": "Send the October close retro + lunch invite",
+   "due_datetime": 1792762200.0,
+   "description": "Thu 11/19, 12:00 to 1:30, Conf Rm 9A. Add the whole team.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792762200.0
+  },
+  {
+   "reminder_id": "27d9b4e1f6c03a85e2d9b6f1",
+   "title": "Send Kevin the photos people texted me",
+   "due_datetime": 1792854000.0,
+   "description": "May, Linda, Peggy and Emily, plus Ray's prints once they come in. Kevin's cutoff for the board is 10/25.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792854000.0
+  },
+  {
+   "reminder_id": "9f4c2a7ed15b80c3e6a947d2",
+   "title": "Grace: 2 pies (pumpkin, pecan) + rolls",
+   "due_datetime": 1792978200.0,
+   "description": "Thanksgiving Thu 11/26. Two dozen rolls from Café Selmarie. Baking Wednesday night.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1792978200.0
+  },
+  {
+   "reminder_id": "75a2c8f0e4b19d63a5c7f2e1",
+   "title": "Set up the Oct 2026 Close table in Airtable",
+   "due_datetime": 1793019600.0,
+   "description": "Close Tracker base. Owners and BD dates from BD1 Mon 11/2 to BD7 Tue 11/10, then post the link in #close-oct.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793019600.0
+  },
+  {
+   "reminder_id": "bc60e2f8a5d14937c0b6e3a2",
+   "title": "Pull Priya's registry options for the group DM",
+   "due_datetime": 1793023200.0,
+   "description": "For Martin, Devon and Sam. Under $500 total, one bigger item.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793023200.0
+  },
+  {
+   "reminder_id": "1e7bc8d05f3a92e6b4c10a8f",
+   "title": "kevin: 6 folding chairs + card table",
+   "due_datetime": 1793059500.0,
+   "description": "chairs from my garage, card table from the basement, dropping off wed night",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793059500.0
+  },
+  {
+   "reminder_id": "3c7ea19f0b48d25c6e3af9b1",
+   "title": "Finish the book club book",
+   "due_datetime": 1793066400.0,
+   "description": "Emperor of Gladness, about 120 pages to go. Tuesday 7pm at Owen's.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793023200.0
+  },
+  {
+   "reminder_id": "5e8c1a4f7b20d96e3a5c8f17",
+   "title": "Order the stroller from Priya's registry",
+   "due_datetime": 1793143800.0,
+   "description": "Voyager Compact Stroller in Slate from Little Harbor Baby Co., $439.90 with tax. Ship to the HQ mailroom.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793109600.0
+  },
+  {
+   "reminder_id": "c5a06d2fe93b4c781f0ea5b6",
+   "title": "Turkey order: Casey's Foods, 18 lb fresh",
+   "due_datetime": 1793199600.0,
+   "description": "Ordered by phone this morning. Pick up Wednesday, November 25 after 10:00 at the meat counter.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793199600.0
+  },
+  {
+   "reminder_id": "f9a2c7e40b6d18f3a2e9c5b7",
+   "title": "ASC 842 lease election memo to Martin",
+   "due_datetime": 1793379600.0,
+   "description": "Write up the short-term lease exemption election for the trailer lease schedule, per Dana's tip. Martin reviews it before H&G fieldwork, ideally before the PBC list comes in early November.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793378700.0
+  },
+  {
+   "reminder_id": "5d0e8b3f1c97a24e6d0b8f35",
+   "title": "Change the smoke detector batteries",
+   "due_datetime": 1793566800.0,
+   "description": "Clocks went back last night, Dad's yearly nudge. Fresh batteries in every detector in 3B, then hold the test button on each one.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793566800.0
+  },
+  {
+   "reminder_id": "a39f7d2e0c84b16f5a3d9e28",
+   "title": "Resubmit JE-26-10-0339 with the 2026 schedule",
+   "due_datetime": 1793716200.0,
+   "description": "Priya sent it back with the FY25 schedule attached. Attach PP-SW-2026 ($174,000.00, $14,500.00 a month) and resubmit.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793716200.0
+  },
+  {
+   "reminder_id": "f81b3e6c9a5d02e7b4f1c6a9",
+   "title": "Confirm PBC timing with Nadia",
+   "due_datetime": 1793718000.0,
+   "description": "Her 11/2 request: Oct AP rec, broker accrual support, Oct bank recs, due in HG_PBC_2026 by Fri 11/13. Tell her if any item will be later.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793717100.0
+  },
+  {
+   "reminder_id": "6b1d5f9c3e07a82d4b6f0c95",
+   "title": "Prepaid insurance rec to Martin for review",
+   "due_datetime": 1793734200.0,
+   "description": "JE-26-10-0341 ($51,000.00) posted this morning. Tie 1410-000 to the PP-INS-2026 schedule at $408,000.00 and submit in BlackLine this afternoon.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793734200.0
+  },
+  {
+   "reminder_id": "0d4e9b2f6a17c38d5e0b4a7c",
+   "title": "Tell Kevin about Barb's garage",
+   "due_datetime": 1793754000.0,
+   "description": "Barb and Jim offered their garage if he needs somewhere to keep the board and the cake.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793718000.0
+  },
+  {
+   "reminder_id": "96c2f5a8e3b01d74c9a6e2f5",
+   "title": "Reply to Mom about Thursday dinner",
+   "due_datetime": 1793797200.0,
+   "description": "She asked on Messenger about moving it to Saturday because of Memphis. Dad says Thursday is fine, so keep the 12th at 7:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793796300.0
+  },
+  {
+   "reminder_id": "a94c1e6b3d70f25a8c4e1b97",
+   "title": "Reply to Nadia's PBC request, Martin cc'd",
+   "due_datetime": 1793802600.0,
+   "description": "Slipped from Tuesday. Confirm timing on the three items due Fri 11/13 in HG_PBC_2026, and give a date for anything that will land later. The AP rec depends on the FIN-212 rerun.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793802600.0
+  },
+  {
+   "reminder_id": "d18b6f03e5a29c4d7e3b915a",
+   "title": "October close status to Martin",
+   "due_datetime": 1793813400.0,
+   "description": "Recs by status, open variances with amounts, JE status, blockers with owner and ETA. Due noon Wed.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793813400.0
+  },
+  {
+   "reminder_id": "6b2e9f4a1d8c07e3b5f2a9d6",
+   "title": "Book Memphis flights and hotel in Duffel",
+   "due_datetime": 1793816100.0,
+   "description": "Nonstop, aisle seat. Need to be back at ORD by 6 pm Thu.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793816100.0
+  },
+  {
+   "reminder_id": "4b7a0d3e8c62f95b1d4a7e30",
+   "title": "Send Kevin the flight and terminal",
+   "due_datetime": 1793817000.0,
+   "description": "Right after Memphis is booked. United is Terminal 1, American is Terminal 3.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793817000.0
+  },
+  {
+   "reminder_id": "d1e5b8f2a49c06e3b7d1f5a4",
+   "title": "Submit JE-26-10-0347 broker accrual (BD3)",
+   "due_datetime": 1793826000.0,
+   "description": "Update the amount and tie it to the TMS report in Evidence/Accruals before submitting. Accrual JEs are due in Oracle by 5:00 pm. Priya approves if Martin is tied up.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1793826000.0
+  },
+  {
+   "reminder_id": "7f2c6e9a1d35b08f4e7c2a6d",
+   "title": "Check FIN-212 rerun before BD4 cutoff",
+   "due_datetime": 1793887200.0,
+   "description": "Sam was testing the rerun in TEST Tuesday night. Once SAPAP-20261102-01 reposts, clear the $612,384.27 timing item on REC-AP-2010.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c05a8d3f6e29b71c4a0d8e3f",
+   "title": "Tie out REC-AP-2010-MFP from the evidence scans",
+   "due_datetime": 1793905200.0,
+   "description": "SAP $127,340.00 vs Rhonda's statement $126,440.00. Tie each invoice to the scans in Evidence/AP/Midwest_Fuel and DM Devon if anything comes up.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a3e6f0c9d2b85e17c4f9a0d8",
+   "title": "Finish my other October recs before soft close",
+   "due_datetime": 1793912400.0,
+   "description": "REC-AP-2030 isn't started. REC-ACR-2160, 2170 and 2180 are still in progress. REC-AP-2020 waits on the FIN-212 rerun, and REC-PPD-1420 goes in once JE-26-10-0339 posts.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c8f1d6e3a59b02c7f4d8e6a9",
+   "title": "October recs submitted for review (BD5)",
+   "due_datetime": 1793973600.0,
+   "description": "Soft close. REC-AP-2010, REC-AP-2010-MFP and REC-ACR-2150 into Martin's queue with evidence attached. Priya is backup reviewer.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "8d4b2f9e1c7a05d3b8f6e2c4",
+   "title": "Pick up race bib",
+   "due_datetime": 1794006000.0,
+   "description": "Lakefront Runner's Shop, 4740 N. Lincoln Ave, open until 7. Bring photo ID. Meeting Jess there.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "0b9e5c3a7d1f84b2e6c09a5d",
+   "title": "Lay out race kit, charge Garmin",
+   "due_datetime": 1794020400.0,
+   "description": "Bib and pins, gloves, throwaway layer for the start, 2 gels. Alarm 5:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "38e6a1c4f9d07b52e8a3c6f1",
+   "title": "Race morning: gear check by 7:10",
+   "due_datetime": 1794053700.0,
+   "description": "Corral C at Montrose Harbor, corrals open 6:45. Meeting Jess at gear check, brunch at Selmarie at 10:30.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "eb4d7f0a2c95e16b3d8f4a07",
+   "title": "Send Mom a photo from the finish",
+   "due_datetime": 1794067200.0,
+   "description": "Promised her one on Messenger. Tell Jess hello from her.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "0e4b7d2f9a63c18e0b5d7f3a",
+   "title": "Call Tom Brennan at 2:00",
+   "due_datetime": 1794167100.0,
+   "description": "His cell. Go over the 12th: his few words, 2 or 3 minutes, and the outpatient staff coming over after the pharmacy closes.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "0f7c4a2e9d61b38f5c7e0a26",
+   "title": "Help Dad trim his toast for the 12th",
+   "due_datetime": 1794171600.0,
+   "description": "Ken says it runs four minutes on the Route 59 widening and one line about Mom. Kevin and I trade some of that for stories about her. Sort it out with Kevin in the party thread, then call Dad.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a0e4c8f2d6b39e15c0a4f8d2",
+   "title": "Memphis Duffel offers expire tonight",
+   "due_datetime": 1794186000.0,
+   "description": "Flight and hotel offers for trip TR-26-0417 run out at 11:59 pm. Book through the Duffel portal before then.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a7c03e5bf9216d4e0b8ac3f7",
+   "title": "Call Bellwether with final headcount",
+   "due_datetime": 1794236400.0,
+   "description": "Final count due today for the Library Room, Thu 11/12. Get the latest RSVP number from Kevin first.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "3f9b7e1c5a08d46f2b9e7c13",
+   "title": "Check whether Devon's $50 came in",
+   "due_datetime": 1794248100.0,
+   "description": "He said he'd Zelle his share of Priya's gift on Friday. Martin's $150 and Sam's $75 are already in, and I told him there's no rush.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a92d5e0c7f14b83a6d9c2e05",
+   "title": "October certification packet to Martin (BD7)",
+   "due_datetime": 1794319200.0,
+   "description": "Hard close. All OCT-26 recs approved and JEs posted before the packet goes in the BlackLine close checklist.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "6f1d3a8c5e27b94f0d6a3e15",
+   "title": "Bring the Memphis bag to work",
+   "due_datetime": 1794400200.0,
+   "description": "Flying down after work, Blue Line straight from the office to O'Hare. On site at the hub by 7:00 Thursday.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "d8b52e0a7f4c61e3b9d05a2c",
+   "title": "Finish the ASC 842 lease election memo for Martin",
+   "due_datetime": 1794409200.0,
+   "description": "Short-term lease exemption election for the trailer lease schedule, per Dana's tip. Martin OK'd pushing it to after hard close, still well ahead of H&G fieldwork.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "3e8f1b6d0a4c95e2f8b3d1a6",
+   "title": "Text Kevin the landing time",
+   "due_datetime": 1794510000.0,
+   "description": "He'll be at arrivals. Send flight number and terminal.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "4a9e2d7c1f63b08ed5c7a42f",
+   "title": "H&G PBC items",
+   "due_datetime": 1794580200.0,
+   "description": "Oct AP rec, broker accrual support, Oct bank recs for 0917 and 0925. Into Finance/Audit/HG_PBC_2026 once reviewed in BlackLine.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "b85d2f0e6c13a974d7e2081f",
+   "title": "Submit October expense report",
+   "due_datetime": 1794582000.0,
+   "description": "Include Gary mileage. Receipts and log are in Personal/Expenses/2026-10.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "61c9e3b7a04d28f5c1e9b6a3",
+   "title": "Scan Memphis count sheets and cutoff docs",
+   "due_datetime": 1794585600.0,
+   "description": "Signed count sheets and the 11/11 receiving and shipping cutoff copies go in the November evidence folder.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a7d0f4c8e2b63195d7a0c4e8",
+   "title": "Benefits open enrollment closes at 5:00",
+   "due_datetime": 1794592800.0,
+   "description": "Confirm 2027 elections in the benefits portal. Medical, dental and vision roll over. An FSA needs a new election.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "2f5b9e1d7c40a68e3f5b1d9c",
+   "title": "Send Uncle David photos from the 12th",
+   "due_datetime": 1794618000.0,
+   "description": "He couldn't make it. Emily wants to hear everything too.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a4c9e2f7b0d36a81c4e9f2b5",
+   "title": "Memphis count summary to Martin",
+   "due_datetime": 1794841200.0,
+   "description": "Test count exceptions with amounts, plus any cutoff issues.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "7c50e3a8b96f2d140a8c5e6b",
+   "title": "Walkthrough binder for Conf Rm 9B",
+   "due_datetime": 1794859200.0,
+   "description": "Printouts of REC-AP-2010 and REC-ACR-2150, TMS unbilled-loads report, JE support.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "9a4e2c7f0b18d53a6e9c2f74",
+   "title": "Follow up with Sam on FIN-209",
+   "due_datetime": 1795017600.0,
+   "description": "Legacy Period Manager role from the GL upgrade. Held until after BD7, and Sam planned the removal for the week after hard close.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "f3a8c1e60d7b2954a1e8c3b7",
+   "title": "Wrap Priya's gift",
+   "due_datetime": 1795046400.0,
+   "description": "Wrap the stroller in the file room after Priya heads out. Get the card signed by Martin, Devon and Sam before Thursday's lunch.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "ce8b1f5a3d07e29c6b8f1a54",
+   "title": "Memphis trip expense report",
+   "due_datetime": 1795186800.0,
+   "description": "Trip TR-26-0417. Air, hotel folio and itemized receipts, due within 30 days of getting back.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "c71e5a3d9f02b68e4c1a7d95",
+   "title": "Lunch with Dana at Revival",
+   "due_datetime": 1795195800.0,
+   "description": "Noon at Revival Food Hall, 125 S. Clark. Lunch is on me for the ASC 842 webinar tip, and she's bringing her webinar list so I can plan next year's CPE hours.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "13d7a5e9c2f04b86d3a7e1c9",
+   "title": "Look over the Thanksgiving list",
+   "due_datetime": 1795276800.0,
+   "description": "Pies and rolls, Kevin's chairs and card table, Mom's turkey pickup at Casey's on Wed 11/25.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "a2d95e1b7f06c3a892e4d71f",
+   "title": "Read Small Things Like These",
+   "due_datetime": 1795377600.0,
+   "description": "Book club Tuesday the 24th at Marcy's.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "85f0c3a7e1d92b46f0c8e3a5",
+   "title": "Pick up rolls, bake pies",
+   "due_datetime": 1795645800.0,
+   "description": "Two dozen rolls from Café Selmarie on the way home, then pumpkin and pecan tonight.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "58d2f6a0c4e91b37d5f2a8c6",
+   "title": "Dental cleaning at Leland Avenue Dental, 7:00",
+   "due_datetime": 1796040900.0,
+   "description": "Six-month cleaning booked by text. Bring the insurance card. Call (773) 555-0190 if it needs to move.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "87b2d5f1e0a4c96b3d8f2e51",
+   "title": "Ethics CPE webinar, 4 hours",
+   "due_datetime": 1796306400.0,
+   "description": "The case-based session Dana took in September. Covers the 4 ethics hours I still owe by Dec 31.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": null
+  },
+  {
+   "reminder_id": "3b56ef0dfa0f483ef67e0657",
+   "title": "Foot + calf exercises (Fri)",
+   "due_datetime": 1789130700.0,
+   "description": "Calf raises 3x15 each side, towel scrunches, marble pickups, single-leg balance 3x30s, banded ankle circles. About 15 min.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": 1789130700.0
+  },
+  {
+   "reminder_id": "3639e2826f4691be768d2b6c",
+   "title": "Foot + calf exercises (Mon)",
+   "due_datetime": 1789389900.0,
+   "description": "Calf raises 3x15 each side, towel scrunches, marble pickups, single-leg balance 3x30s, banded ankle circles. About 15 min.",
+   "repetition_unit": "week",
+   "repetition_value": 1,
+   "time_notified": 1789389900.0
+  },
+  {
+   "reminder_id": "0c6cc7f4f772d35f117bc862",
+   "title": "Corn salad for the Kims",
+   "due_datetime": 1779721200.0,
+   "description": "Double batch for Steve and Diane's Memorial Day BBQ at 4:00.",
+   "repetition_unit": null,
+   "repetition_value": null,
+   "time_notified": 1779721200.0
+  }
+ ]
+}

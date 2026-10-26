@@ -1,0 +1,17 @@
+date,merchant,item,amount,card,category
+2026-04-03,Airtable,Team plan (monthly),24.00,Visa 0047,business
+2026-04-11,Adobe,Acrobat Pro (monthly),19.99,Visa 0047,business
+2026-04-17,Otter.ai,Pro plan (monthly),16.99,Visa 0047,business
+2026-05-03,Airtable,Team plan (monthly),24.00,Visa 0047,business
+2026-05-11,Adobe,Acrobat Pro (monthly),19.99,Visa 0047,business
+2026-05-17,Otter.ai,Pro plan (monthly),16.99,Visa 0047,business
+2026-06-03,Airtable,Team plan (monthly),24.00,Visa 0047,business
+2026-06-08,Society of Environmental Journalists,Membership dues,60.00,Visa 0047,business
+2026-06-11,Adobe,Acrobat Pro (monthly),19.99,Visa 0047,business
+2026-06-17,Otter.ai,Pro plan (monthly),16.99,Visa 0047,business
+
+,,Airtable,72.00,,
+,,Adobe,59.97,,
+,,Otter.ai,50.97,,
+,,SEJ dues,60.00,,
+,,Q2 2026 total,242.94,,

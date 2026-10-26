@@ -1,0 +1,78 @@
+
+<div class="app">
+
+<div class="sidebar">
+  <div class="sb-persona">
+    <div class="sb-avatar">GL</div>
+    <div>
+      <div class="sb-name">Grace Liu</div>
+      <div class="sb-sub"></div>
+    </div>
+  </div>
+  <div class="sb-search-wrap" id="sb-search-wrap">
+    <span class="sb-search-icon">⌕</span>
+    <input id="sb-search" class="sb-search" type="search" placeholder="Search dossier…" autocomplete="off" />
+    <span class="sb-search-hint">⌘K</span>
+    <button class="sb-search-clear" id="sb-search-clear" title="Clear">✕</button>
+  </div>
+  <div style="padding-bottom:16px">
+    <div class="nav-item active" data-nav="overview"><span class="nav-emoji">🏠</span> Overview</div>
+    <div class="nav-item" data-nav="timeline"><span class="nav-emoji">⏱</span> Timeline</div>
+    <div class="sb-section">Data</div>
+    <div id="data-nav-items"></div>
+    <div class="sb-section">Docs</div>
+    <div class="nav-item" data-nav="memory"><span class="nav-emoji">🧠</span> Memory </div>
+<div class="nav-item" data-nav="tensions"><span class="nav-emoji">⚠️</span> Tensions <span class="nav-count">7</span></div>
+<div class="nav-item" data-nav="storylines"><span class="nav-emoji">📖</span> Storylines </div>
+<div class="nav-item" data-nav="npcs"><span class="nav-emoji">🤝</span> Relationships </div>
+
+  </div>
+</div>
+
+<div class="main">
+  <div class="panel active" id="panel-overview">
+    <div id="ov-content"></div>
+  </div>
+  <div class="panel" id="panel-server">
+    <div class="panel-title" id="sv-title"></div>
+    <div class="panel-sub" id="sv-sub"></div>
+    <div id="sv-content"></div>
+  </div>
+  <div class="panel" id="panel-timeline">
+    <div class="panel-title">Timeline</div>
+    <div class="panel-sub" id="tl-sub">Every dated record, every server, newest first</div>
+    <div id="tl-filters"></div>
+    <div id="tl-content"></div>
+  </div>
+  <div class="panel" id="panel-memory"><div id="md-memory"></div></div>
+  <div class="panel" id="panel-tensions"><div id="md-tensions"></div></div>
+  <div class="panel" id="panel-storylines"><div id="md-storylines"></div></div>
+  <div class="panel" id="panel-npcs"><div id="md-npcs"></div></div>
+  <div class="panel" id="panel-search">
+    <div class="panel-title" id="search-title"></div>
+    <div class="panel-sub" id="search-sub"></div>
+    <div id="search-content"></div>
+  </div>
+</div>
+
+</div>
+
+<div class="overlay" id="overlay" onclick="closeModal()">
+  <div class="modal" id="modal-body" onclick="event.stopPropagation()"></div>
+</div>
+
+<div class="kbd-help-overlay" id="kbd-help-overlay" onclick="closeKbdHelp()">
+  <div class="kbd-help" onclick="event.stopPropagation()">
+    <div class="kbd-help-title">Keyboard Shortcuts</div>
+    <div class="kbd-help-sub">Move through the dossier without lifting your hands</div>
+    <div class="kbd-row"><div class="lbl">Focus search</div><div class="keys"><span class="kbd-key">⌘</span><span class="kbd-key">K</span><span style="color:var(--muted-2);margin:0 4px">or</span><span class="kbd-key">/</span></div></div>
+    <div class="kbd-row"><div class="lbl">Navigate search results</div><div class="keys"><span class="kbd-key">↑</span><span class="kbd-key">↓</span></div></div>
+    <div class="kbd-row"><div class="lbl">Open focused result</div><div class="keys"><span class="kbd-key">⏎</span></div></div>
+    <div class="kbd-row"><div class="lbl">Jump to nth data source</div><div class="keys"><span class="kbd-key">g</span><span class="kbd-key">1</span>-<span class="kbd-key">9</span></div></div>
+    <div class="kbd-row"><div class="lbl">Back to Overview</div><div class="keys"><span class="kbd-key">g</span><span class="kbd-key">o</span></div></div>
+    <div class="kbd-row"><div class="lbl">Close / clear search</div><div class="keys"><span class="kbd-key">esc</span></div></div>
+    <div class="kbd-row"><div class="lbl">Toggle this help</div><div class="keys"><span class="kbd-key">?</span></div></div>
+    <div class="kbd-help-close">Press esc or click outside to close</div>
+  </div>
+</div>
+

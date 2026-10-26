@@ -1,0 +1,2540 @@
+{
+ "users": [
+  {
+   "user_id": "7235c2296f764298dd782fc4",
+   "name": "Tomasz Nowak",
+   "email": "tomasz.nowak.cbus@gmail.com",
+   "member_since": null,
+   "linked_accounts_count": 3,
+   "status": "active",
+   "ssn": null,
+   "date_of_birth": null,
+   "mothers_maiden_name": null,
+   "phone": null
+  }
+ ],
+ "accounts": [
+  {
+   "account_id": "3d9f0a6c81e4b27d5c0a8e3f",
+   "user_id": "7235c2296f764298dd782fc4",
+   "institution_name": "Buckeye Community Bank",
+   "account_type": "checking",
+   "last_four": "6120",
+   "balance": 2850.0,
+   "status": "active",
+   "opening_balance": 440.23
+  },
+  {
+   "account_id": "a7b2e5d0f9c6143e2e8f0b6a",
+   "user_id": "7235c2296f764298dd782fc4",
+   "institution_name": "Buckeye Community Bank",
+   "account_type": "savings",
+   "last_four": "6157",
+   "balance": 6420.0,
+   "status": "active"
+  },
+  {
+   "account_id": "acct_d453ee84ab794ede8f13",
+   "user_id": "7235c2296f764298dd782fc4",
+   "institution_name": "Lake Erie Card (Visa)",
+   "account_type": "credit_card",
+   "last_four": "0912",
+   "balance": 610.0,
+   "status": "Active",
+   "opening_balance": 1115.34
+  },
+  {
+   "account_id": "c4e18b7a2d90f6531a6c0e44",
+   "user_id": "7235c2296f764298dd782fc4",
+   "institution_name": "Harbor Point Retirement (Ardent 401(k))",
+   "account_type": "retirement",
+   "last_four": "3847",
+   "balance": 14800.0,
+   "status": "active",
+   "opening_balance": 14800.0
+  }
+ ],
+ "subscriptions": [
+  {
+   "subscription_id": "6c0e3f9ad2b8174ce5a1d9b3",
+   "user_id": "7235c2296f764298dd782fc4",
+   "service_name": "Spotify",
+   "amount": 11.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-09",
+   "status": "active"
+  }
+ ],
+ "transactions": [
+  {
+   "transaction_id": "a3e07c5b9d14f26e8a3c07b5",
+   "date": "2026-04-23",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Speedway",
+   "amount": -3.29,
+   "category": "convenience",
+   "account_last_four": "0912",
+   "timestamp": 1776982560.0
+  },
+  {
+   "transaction_id": "6e0a3d9c1f75b48e2d6a0c3f",
+   "date": "2026-04-30",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Speedway",
+   "amount": -3.29,
+   "category": "convenience",
+   "account_last_four": "0912",
+   "timestamp": 1777568820.0
+  },
+  {
+   "transaction_id": "2c4f8e1a70b6d395f1a8c26e",
+   "date": "2026-04-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1777036462.0
+  },
+  {
+   "transaction_id": "e9b17d4c2f05a6838c3e9b10",
+   "date": "2026-05-08",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1778245967.0
+  },
+  {
+   "transaction_id": "6d3a0f58b91e4c27d5b0a74f",
+   "date": "2026-05-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1779455709.0
+  },
+  {
+   "transaction_id": "a1c69e034d7f2b856e9a1c3d",
+   "date": "2026-06-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1780665216.0
+  },
+  {
+   "transaction_id": "0f5e2b9c8a14d6e73b7c0f52",
+   "date": "2026-06-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1781874891.0
+  },
+  {
+   "transaction_id": "c83d7a16e5b90f24a6d2e98b",
+   "date": "2026-07-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1783084338.0
+  },
+  {
+   "transaction_id": "57a0e4b21c6f39d8e4f8b215",
+   "date": "2026-07-17",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1784294143.0
+  },
+  {
+   "transaction_id": "b4e2c8f793a05d1e0c5a6b4d",
+   "date": "2026-07-31",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1785503584.0
+  },
+  {
+   "transaction_id": "29f6b3d0e7c12a58b9d4f06a",
+   "date": "2026-08-14",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1786713269.0
+  },
+  {
+   "transaction_id": "e0d84a5c6b3f17e92a1c7d83",
+   "date": "2026-08-28",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1787922775.0
+  },
+  {
+   "transaction_id": "7c1f9b26a0e4d53cf6b3e819",
+   "date": "2026-09-11",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1789132531.0
+  },
+  {
+   "transaction_id": "9a6c2e40f3d8b175c0e5a2f6",
+   "date": "2026-09-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1790342027.0
+  },
+  {
+   "transaction_id": "43e5d1b80a92c6f7d7a1b54e",
+   "date": "2026-10-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1791551648.0
+  },
+  {
+   "transaction_id": "4f8c2a91e6d3b0571c9e4a26",
+   "date": "2026-04-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1468.32,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1777024937.0
+  },
+  {
+   "transaction_id": "9dce63d1f5926632a78b8f65",
+   "date": "2026-04-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *GLOBAL GALLERY COFFEE",
+   "amount": -6.75,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1777040323.0
+  },
+  {
+   "transaction_id": "9e4b1c7a26d0f853a7c3e01f",
+   "date": "2026-04-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -52.38,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1777047277.0
+  },
+  {
+   "transaction_id": "d6b0f3a258e1c94d1f7e6a0b",
+   "date": "2026-04-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1777036462.0
+  },
+  {
+   "transaction_id": "3a8e5c17f4b2096e9c4d3b72",
+   "date": "2026-05-08",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1778245967.0
+  },
+  {
+   "transaction_id": "f2c7a09e1b6d48c3e8a5f1d6",
+   "date": "2026-05-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1779455709.0
+  },
+  {
+   "transaction_id": "85d1e6b4c3a07f294b0e9d5a",
+   "date": "2026-06-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1780665216.0
+  },
+  {
+   "transaction_id": "1e9f4c3b7d25a0e8b6c2f847",
+   "date": "2026-06-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1781874891.0
+  },
+  {
+   "transaction_id": "b0a5d872e9c41f6b7f3a0e1c",
+   "date": "2026-07-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1783084338.0
+  },
+  {
+   "transaction_id": "6f2b9e4d03a8c751d1e6b9a3",
+   "date": "2026-07-17",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1784294143.0
+  },
+  {
+   "transaction_id": "ca73f105b2e86d495e0f4c2b",
+   "date": "2026-07-31",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1785503584.0
+  },
+  {
+   "transaction_id": "48d9a2e6f1b053c7a2c8e60d",
+   "date": "2026-08-14",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1786713269.0
+  },
+  {
+   "transaction_id": "e5f1b7c04c9a2d380b6d1f94",
+   "date": "2026-08-28",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1787922775.0
+  },
+  {
+   "transaction_id": "0b7e3d9a6f12c4e5c9f0a37e",
+   "date": "2026-09-11",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1789132531.0
+  },
+  {
+   "transaction_id": "93c4a6f1d0e87b256a3d2c08",
+   "date": "2026-09-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1790342027.0
+  },
+  {
+   "transaction_id": "7e0a2b5da6c3f914f4b9e16c",
+   "date": "2026-10-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1791551648.0
+  },
+  {
+   "transaction_id": "8d4f0b2ce7a9136b0c5e8f1a",
+   "date": "2026-10-18",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "6157",
+   "timestamp": 1792343880.0
+  },
+  {
+   "transaction_id": "158b9aa93c1b6529ba37268a",
+   "date": "2026-04-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "CHIPOTLE 2214 COLUMBUS OH",
+   "amount": -13.85,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1777164963.0
+  },
+  {
+   "transaction_id": "1c9f4a6e2b80d73c5f1a9e4b",
+   "date": "2026-04-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Speedway",
+   "amount": -6.58,
+   "category": "convenience",
+   "account_last_four": "0912",
+   "timestamp": 1777128540.0
+  },
+  {
+   "transaction_id": "c0e95a2d7b46f13e0c9a5d2b",
+   "date": "2026-05-06",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Speedway",
+   "amount": -6.58,
+   "category": "convenience",
+   "account_last_four": "0912",
+   "timestamp": 1778078280.0
+  },
+  {
+   "transaction_id": "0f6e5f06eaa02210d0f82cf7",
+   "date": "2026-04-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "BUCKEYE CMTY BK ATM N HIGH ST",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "6120",
+   "timestamp": 1777232752.0
+  },
+  {
+   "transaction_id": "e09a5add41a85f7d156586d3",
+   "date": "2026-06-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "BUCKEYE CMTY BK ATM N HIGH ST",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "6120",
+   "timestamp": 1782502471.0
+  },
+  {
+   "transaction_id": "e3d9a7c05b1f826ec7b4e1a5",
+   "date": "2026-04-27",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -41.36,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1777319352.0
+  },
+  {
+   "transaction_id": "d5b28e0f7a3c96d1b4e28f0a",
+   "date": "2026-04-28",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Speedway",
+   "amount": -3.99,
+   "category": "convenience",
+   "account_last_four": "0912",
+   "timestamp": 1777379820.0
+  },
+  {
+   "transaction_id": "c2d8f4a0e15b9c763f8a2d6e",
+   "date": "2026-04-30",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -81.46,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1777579702.0
+  },
+  {
+   "transaction_id": "4a7ec2d918b3f6509e1cd7a4",
+   "date": "2026-05-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Weber Property Management",
+   "amount": -725.0,
+   "category": "housing",
+   "account_last_four": "6120",
+   "timestamp": 1777639020.0
+  },
+  {
+   "transaction_id": "e1b85f3a0c6d92e7b4a03f5c",
+   "date": "2026-06-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Weber Property Management",
+   "amount": -725.0,
+   "category": "housing",
+   "account_last_four": "6120",
+   "timestamp": 1780324980.0
+  },
+  {
+   "transaction_id": "7d0ca94e6b2f13d8c5e9a07b",
+   "date": "2026-07-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Weber Property Management",
+   "amount": -725.0,
+   "category": "housing",
+   "account_last_four": "6120",
+   "timestamp": 1782925860.0
+  },
+  {
+   "transaction_id": "b6f2e3a74d91c08e2a5bf8d3",
+   "date": "2026-08-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Weber Property Management",
+   "amount": -725.0,
+   "category": "housing",
+   "account_last_four": "6120",
+   "timestamp": 1785586560.0
+  },
+  {
+   "transaction_id": "03c9d6f4a1e85b27e0d39c6a",
+   "date": "2026-09-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Weber Property Management",
+   "amount": -725.0,
+   "category": "housing",
+   "account_last_four": "6120",
+   "timestamp": 1788269100.0
+  },
+  {
+   "transaction_id": "9f4d2b8ce7a506f1d3c9b52e",
+   "date": "2026-10-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Weber Property Management",
+   "amount": -725.0,
+   "category": "housing",
+   "account_last_four": "6120",
+   "timestamp": 1790869620.0
+  },
+  {
+   "transaction_id": "9e2d5a07f6c13b48a0e9d27c",
+   "date": "2026-05-02",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Amazon.com",
+   "amount": -39.4,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1777736640.0
+  },
+  {
+   "transaction_id": "f82c7b4a0e3d915f6c8b2a7e",
+   "date": "2026-05-02",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Speedway",
+   "amount": -5.78,
+   "category": "convenience",
+   "account_last_four": "0912",
+   "timestamp": 1777753320.0
+  },
+  {
+   "transaction_id": "5b0e7c93d1a2f4687e3c9b15",
+   "date": "2026-05-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lattice Mobile",
+   "amount": -40.0,
+   "category": "utilities",
+   "account_last_four": "6120",
+   "timestamp": 1777813961.0
+  },
+  {
+   "transaction_id": "5e3c8b1fd2a09e740f6b2d9c",
+   "date": "2026-06-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lattice Mobile",
+   "amount": -40.0,
+   "category": "utilities",
+   "account_last_four": "6120",
+   "timestamp": 1780492364.0
+  },
+  {
+   "transaction_id": "9a63d0f2b8e4c5172f0ad96e",
+   "date": "2026-07-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lattice Mobile",
+   "amount": -40.0,
+   "category": "utilities",
+   "account_last_four": "6120",
+   "timestamp": 1783084338.0
+  },
+  {
+   "transaction_id": "c0f6a2d847e1b93cb5a8e40f",
+   "date": "2026-08-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lattice Mobile",
+   "amount": -40.0,
+   "category": "utilities",
+   "account_last_four": "6120",
+   "timestamp": 1785762687.0
+  },
+  {
+   "transaction_id": "f07a2e6b9c41d3850b7e26fc",
+   "date": "2026-09-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lattice Mobile",
+   "amount": -40.0,
+   "category": "utilities",
+   "account_last_four": "6120",
+   "timestamp": 1788441112.0
+  },
+  {
+   "transaction_id": "1b8d5f0ea9c264b7d3e7c16a",
+   "date": "2026-10-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lattice Mobile",
+   "amount": -40.0,
+   "category": "utilities",
+   "account_last_four": "6120",
+   "timestamp": 1791033185.0
+  },
+  {
+   "transaction_id": "0a6e4f2bc8d5379a4e1c8b06",
+   "date": "2026-05-04",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -39.82,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1777924367.0
+  },
+  {
+   "transaction_id": "3b6d1f8e5c09a24b7d3f1e6c",
+   "date": "2026-05-04",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Speedway",
+   "amount": -4.58,
+   "category": "convenience",
+   "account_last_four": "0912",
+   "timestamp": 1777914840.0
+  },
+  {
+   "transaction_id": "a2f74c19e0b35d86c1e94b07",
+   "date": "2026-08-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Scioto CC Tuition Payment Plan",
+   "amount": -412.0,
+   "category": "education",
+   "account_last_four": "6120",
+   "timestamp": 1785961740.0
+  },
+  {
+   "transaction_id": "6d0b3e8f15a9c27e4b6f0d93",
+   "date": "2026-09-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Scioto CC Tuition Payment Plan",
+   "amount": -412.0,
+   "category": "education",
+   "account_last_four": "6120",
+   "timestamp": 1788637620.0
+  },
+  {
+   "transaction_id": "c85e2a70d4f1b96e3a07c5d2",
+   "date": "2026-10-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Scioto CC Tuition Payment Plan",
+   "amount": -412.0,
+   "category": "education",
+   "account_last_four": "6120",
+   "timestamp": 1791206580.0
+  },
+  {
+   "transaction_id": "b73e05d82a6f914cd8e17b30",
+   "date": "2026-05-08",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1471.15,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1778234508.0
+  },
+  {
+   "transaction_id": "6a1f9c3eb0d527a4d2c9e86f",
+   "date": "2026-05-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1778328832.0
+  },
+  {
+   "transaction_id": "512fa18db8a71a9af83edd01",
+   "date": "2026-06-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1781031480.0
+  },
+  {
+   "transaction_id": "d4c0b7e29e3a61f58b2f4a1d",
+   "date": "2026-07-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1783599227.0
+  },
+  {
+   "transaction_id": "35094fe4ac7a097cb07f12b3",
+   "date": "2026-08-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1786310700.0
+  },
+  {
+   "transaction_id": "2b6e0d9f7c48a1e3f0a5c62b",
+   "date": "2026-09-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1788956035.0
+  },
+  {
+   "transaction_id": "dc7c642a8e226ea665b05973",
+   "date": "2026-10-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1791585480.0
+  },
+  {
+   "transaction_id": "71f0a3e9b4c62d18e9d5b740",
+   "date": "2026-05-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -41.27,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1778344565.0
+  },
+  {
+   "transaction_id": "8a4f2e6b1d70c39a4e8f2b6d",
+   "date": "2026-05-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Speedway",
+   "amount": -4.99,
+   "category": "convenience",
+   "account_last_four": "0912",
+   "timestamp": 1778348760.0
+  },
+  {
+   "transaction_id": "5d17c3a9e08b62f4d1c7a3e9",
+   "date": "2026-05-10",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Speedway",
+   "amount": -5.98,
+   "category": "convenience",
+   "account_last_four": "0912",
+   "timestamp": 1778420580.0
+  },
+  {
+   "transaction_id": "e2b8f06d4a91c57e3b2f8d06",
+   "date": "2026-05-10",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Northside Urgent Care",
+   "amount": -75.0,
+   "category": "healthcare",
+   "account_last_four": "6120",
+   "timestamp": 1778437080.0
+  },
+  {
+   "transaction_id": "c4b8d1e72f0a95c3b3a6f9d2",
+   "date": "2026-05-12",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -43.15,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1778615163.0
+  },
+  {
+   "transaction_id": "e8a2f4c613b70d9e9f5c3a27",
+   "date": "2026-05-15",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ohio Valley Mutual",
+   "amount": -112.0,
+   "category": "insurance",
+   "account_last_four": "6120",
+   "timestamp": 1778838076.0
+  },
+  {
+   "transaction_id": "74c9b1e0f6d23a582e0b8d4c",
+   "date": "2026-07-15",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ohio Valley Mutual",
+   "amount": -112.0,
+   "category": "insurance",
+   "account_last_four": "6120",
+   "timestamp": 1784108452.0
+  },
+  {
+   "transaction_id": "a3f6d0b98c4e1752e1a6c9b0",
+   "date": "2026-08-15",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ohio Valley Mutual",
+   "amount": -112.0,
+   "category": "insurance",
+   "account_last_four": "6120",
+   "timestamp": 1786786929.0
+  },
+  {
+   "transaction_id": "0d2e7a4bc9f83e167a4d1f58",
+   "date": "2026-09-15",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ohio Valley Mutual",
+   "amount": -112.0,
+   "category": "insurance",
+   "account_last_four": "6120",
+   "timestamp": 1789465233.0
+  },
+  {
+   "transaction_id": "f9b4e2c15a0d68e3c6f1b07a",
+   "date": "2026-10-15",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ohio Valley Mutual",
+   "amount": -112.0,
+   "category": "insurance",
+   "account_last_four": "6120",
+   "timestamp": 1792057307.0
+  },
+  {
+   "transaction_id": "b1a8f5c2e0d7369bf9c5e0d4",
+   "date": "2026-05-16",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lavash Café",
+   "amount": -18.47,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1778947473.0
+  },
+  {
+   "transaction_id": "e6b3c95d0a7f4e215c1e9a3b",
+   "date": "2026-05-16",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -94.13,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1778952108.0
+  },
+  {
+   "transaction_id": "7f2c6a90e1b4d38f9d0e2c5a",
+   "date": "2026-05-18",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -42.07,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1779134138.0
+  },
+  {
+   "transaction_id": "9c5a1e7f3d26b80c4a9e1f73",
+   "date": "2026-05-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Clintonville Family Medicine",
+   "amount": -30.0,
+   "category": "healthcare",
+   "account_last_four": "6120",
+   "timestamp": 1779211560.0
+  },
+  {
+   "transaction_id": "5e8a1c3fb70d4a96f2e5c18b",
+   "date": "2026-05-20",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Zelle to Jake Brennan",
+   "amount": -58.1,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1779292380.0
+  },
+  {
+   "transaction_id": "e4f19a2c7d385b06c1e94fa7",
+   "date": "2026-05-21",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ena's Caribbean Kitchen",
+   "amount": -18.9,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1779402978.0
+  },
+  {
+   "transaction_id": "92d6a1f4c0b85e37a4f2c968",
+   "date": "2026-05-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1474.86,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1779444185.0
+  },
+  {
+   "transaction_id": "e2f7b4d0a3c18e59d4a9c6b2",
+   "date": "2026-05-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Colin's Coffee",
+   "amount": -5.5,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1779451961.0
+  },
+  {
+   "transaction_id": "a7c1e5b94f0d82a6c1f4b8e3",
+   "date": "2026-08-21",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Colin's Coffee",
+   "amount": -5.5,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1787314727.0
+  },
+  {
+   "transaction_id": "0c9a7e14d8f3b26cb4e0f5d9",
+   "date": "2026-05-23",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -56.84,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1779552319.0
+  },
+  {
+   "transaction_id": "7c41e9a2b05fd38e6a19c4d7",
+   "date": "2026-05-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "1-800-FLOWERS.COM",
+   "amount": -59.99,
+   "category": "gifts",
+   "account_last_four": "0912",
+   "timestamp": 1779634380.0
+  },
+  {
+   "transaction_id": "a9d1e3b50c7f64a2e6f9b3d8",
+   "date": "2026-05-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -44.61,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1779824901.0
+  },
+  {
+   "transaction_id": "64e0c9a73b2f8d15a0d3b6e8",
+   "date": "2026-05-29",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Dirty Frank's Hot Dog Palace",
+   "amount": -16.85,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1780094530.0
+  },
+  {
+   "transaction_id": "a5e2d0b73c91f84e1d6b7c0a",
+   "date": "2026-05-29",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -77.92,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1780076876.0
+  },
+  {
+   "transaction_id": "47b0c8e32d9f61a5e3c70b94",
+   "date": "2026-05-30",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ohio BMV",
+   "amount": -60.25,
+   "category": "auto",
+   "account_last_four": "0912",
+   "timestamp": 1780160760.0
+  },
+  {
+   "transaction_id": "1c5b0f8e9a3d2e74b0c6a5f1",
+   "date": "2026-06-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -40.93,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1780343469.0
+  },
+  {
+   "transaction_id": "689b629c88a6bcd225f9c1b9",
+   "date": "2026-06-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Fitbit",
+   "amount": -9.99,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1780527720.0
+  },
+  {
+   "transaction_id": "e1a4c7d93b62f0857e0d1b4a",
+   "date": "2026-06-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1553.27,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1780653759.0
+  },
+  {
+   "transaction_id": "e9c3b1d5a8f407622c7e9f1a",
+   "date": "2026-06-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ena's Caribbean Kitchen",
+   "amount": -19.75,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1780677478.0
+  },
+  {
+   "transaction_id": "3f7c1a8de2b0549fc8a3d61e",
+   "date": "2026-06-06",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -49.65,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1780761151.0
+  },
+  {
+   "transaction_id": "91b5d8e30f6a2c74e7c0b3f9",
+   "date": "2026-06-06",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Stauf's Coffee Roasters",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1780747757.0
+  },
+  {
+   "transaction_id": "e7a4c2d6b91f08353a8d1e6c",
+   "date": "2026-06-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -45.28,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1781034296.0
+  },
+  {
+   "transaction_id": "d1a9e6f37b4c02e56e2f9b4c",
+   "date": "2026-06-11",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Weiland's Market",
+   "amount": -38.42,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1781208849.0
+  },
+  {
+   "transaction_id": "c47e1b9d2a0f863e5b1d7a42",
+   "date": "2026-06-13",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Babcia's Kitchen",
+   "amount": -64.2,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1781376540.0
+  },
+  {
+   "transaction_id": "56f9b3a1d2e0c7b8c9e4f0a3",
+   "date": "2026-06-15",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -43.7,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1781553210.0
+  },
+  {
+   "transaction_id": "5c0b9e72d4a18f36b2c5e047",
+   "date": "2026-06-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1612.44,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1781863316.0
+  },
+  {
+   "transaction_id": "8c5f2b0ea7d31c96f3b6a08d",
+   "date": "2026-06-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -53.17,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1781886524.0
+  },
+  {
+   "transaction_id": "c3b7a0e28f54d19c6e0a47f9",
+   "date": "2026-06-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Zelle to Jake Brennan",
+   "amount": -61.47,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1781896380.0
+  },
+  {
+   "transaction_id": "4b9e2c71d05a8f36e1c7a924",
+   "date": "2026-06-20",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Columbus Crew",
+   "amount": -84.0,
+   "category": "entertainment",
+   "account_last_four": "0912",
+   "timestamp": 1781996580.0
+  },
+  {
+   "transaction_id": "2f9d6e0b5a7c13e8b3e4a7d1",
+   "date": "2026-06-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": -653.89,
+   "category": "credit_card_payment",
+   "account_last_four": "6120",
+   "timestamp": 1782122294.0
+  },
+  {
+   "transaction_id": "8e6c1a4f0b9d35e7c2a7f18d",
+   "date": "2026-06-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": 653.89,
+   "category": "payment",
+   "account_last_four": "0912",
+   "timestamp": 1782122294.0
+  },
+  {
+   "transaction_id": "b2e6d9c40f81a5e37c3b9d02",
+   "date": "2026-06-23",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -46.12,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1782244064.0
+  },
+  {
+   "transaction_id": "1f6a8e3cd4b0592ee8b1c7d3",
+   "date": "2026-06-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ena's Caribbean Kitchen",
+   "amount": -21.3,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1782512804.0
+  },
+  {
+   "transaction_id": "c6d2f0a97e4b153c1b8f6d0e",
+   "date": "2026-06-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Fox in the Snow Cafe",
+   "amount": -7.4,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1782476213.0
+  },
+  {
+   "transaction_id": "4e0d7c3a91f6b5e20a9c4e7b",
+   "date": "2026-06-27",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -86.59,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1782578473.0
+  },
+  {
+   "transaction_id": "3d0a5e7fc4b9162de0f7a4b9",
+   "date": "2026-06-29",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -44.37,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1782762618.0
+  },
+  {
+   "transaction_id": "a8f3d61c07e94b2a5d6c3f18",
+   "date": "2026-07-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1588.2,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1783072944.0
+  },
+  {
+   "transaction_id": "b9f1a4e6c0d827b37e5d1a9c",
+   "date": "2026-07-02",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -103.74,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1783023777.0
+  },
+  {
+   "transaction_id": "c37a05e9f2b4618d9e0b52fa",
+   "date": "2026-07-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Hound Dog's Three Degree Pizza",
+   "amount": -34.62,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1783124100.0
+  },
+  {
+   "transaction_id": "e81d4f60a7c93b25d046e7b1",
+   "date": "2026-07-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Katalina's",
+   "amount": -46.18,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1783296240.0
+  },
+  {
+   "transaction_id": "f8c3b06a1e5d4a97a4b0e8c6",
+   "date": "2026-07-07",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -47.05,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1783453527.0
+  },
+  {
+   "transaction_id": "25c6e9d0f8a3b147c4f7e2a0",
+   "date": "2026-07-11",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -47.92,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1783786176.0
+  },
+  {
+   "transaction_id": "3a0c9e6bd5f84127f2e3a8c5",
+   "date": "2026-07-11",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Colin's Coffee",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1783771654.0
+  },
+  {
+   "transaction_id": "2c9f1b7e6a0e43d8b7a2f0c6",
+   "date": "2026-09-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Colin's Coffee",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1790424629.0
+  },
+  {
+   "transaction_id": "4e9d2a17f5b6083cd7a1e94b",
+   "date": "2026-10-16",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Colin's Coffee",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1792152412.0
+  },
+  {
+   "transaction_id": "6e1d4a8cb7f0293e1f9c6b5d",
+   "date": "2026-07-13",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -45.83,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1783972562.0
+  },
+  {
+   "transaction_id": "f0e8b3c56d2a491f9b1c5e8d",
+   "date": "2026-07-16",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -74.06,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1784232221.0
+  },
+  {
+   "transaction_id": "3e7b2c059f4d1a86c1b8e573",
+   "date": "2026-07-17",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1671.35,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1784282591.0
+  },
+  {
+   "transaction_id": "a4d0f7b62e9c81a37d5a0e2f",
+   "date": "2026-07-17",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lavash Café",
+   "amount": -19.62,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1784305145.0
+  },
+  {
+   "transaction_id": "4e7b90c2d31f6a85b07e2c94",
+   "date": "2026-07-18",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Clintonville Tire & Auto",
+   "amount": -236.8,
+   "category": "auto",
+   "account_last_four": "0912",
+   "timestamp": 1784388600.0
+  },
+  {
+   "transaction_id": "2f9e6d1bc5a8e304b7f60d2a",
+   "date": "2026-07-20",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Zelle to Jake Brennan",
+   "amount": -70.86,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1784576280.0
+  },
+  {
+   "transaction_id": "d5b7f2e93a6c08d1e2d5a9c7",
+   "date": "2026-07-21",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -46.58,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1784663329.0
+  },
+  {
+   "transaction_id": "4b0f7e2ad5c18e96a9e3b05c",
+   "date": "2026-07-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": 895.76,
+   "category": "payment",
+   "account_last_four": "0912",
+   "timestamp": 1784714261.0
+  },
+  {
+   "transaction_id": "c5a3e81f9d0b46c20e7f2b95",
+   "date": "2026-07-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": -895.76,
+   "category": "credit_card_payment",
+   "account_last_four": "6120",
+   "timestamp": 1784714261.0
+  },
+  {
+   "transaction_id": "6b4a0d2fe3c97581d0e8b3f6",
+   "date": "2026-07-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -58.31,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1784911928.0
+  },
+  {
+   "transaction_id": "f6e9a1c32b7d058ea3d6f2b9",
+   "date": "2026-07-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kafe Kerouac",
+   "amount": -4.9,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1784895266.0
+  },
+  {
+   "transaction_id": "7c41e9a2b85d03f6e1a94c27",
+   "date": "2026-07-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "DICK'S SPORTING GOODS",
+   "amount": -74.99,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1785019080.0
+  },
+  {
+   "transaction_id": "2a9e0c3df6b17e84c8f2d1a6",
+   "date": "2026-07-27",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -44.96,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1785181935.0
+  },
+  {
+   "transaction_id": "c7e5f19b2a0d3e64a5b2d0c7",
+   "date": "2026-07-31",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -82.65,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1785514645.0
+  },
+  {
+   "transaction_id": "d02f6a8e41c7b39de6a5047c",
+   "date": "2026-07-31",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1694.08,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1785492093.0
+  },
+  {
+   "transaction_id": "9c4f7b1e08d3a5c25b7e0f3a",
+   "date": "2026-08-04",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -45.41,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1785872798.0
+  },
+  {
+   "transaction_id": "3c8e2a9df1b6045cc0e9f6a4",
+   "date": "2026-08-07",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Dirty Frank's Hot Dog Palace",
+   "amount": -14.95,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1786143097.0
+  },
+  {
+   "transaction_id": "0d4b7f2ec9a63e155e0c9d7a",
+   "date": "2026-08-08",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Stauf's Coffee Roasters",
+   "amount": -6.45,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1786191062.0
+  },
+  {
+   "transaction_id": "19d3c7a5b6e0f82c3c6a9f1e",
+   "date": "2026-08-08",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Trader Joe's",
+   "amount": -46.28,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1786208812.0
+  },
+  {
+   "transaction_id": "e0b5a3f8c2d96e419a1d7c4e",
+   "date": "2026-08-10",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -43.88,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1786391651.0
+  },
+  {
+   "transaction_id": "e4a0b6d8c1f57392f7d3c4b0",
+   "date": "2026-08-13",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -79.84,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1786651890.0
+  },
+  {
+   "transaction_id": "7a5e1f93b8d02c6403f9a7e1",
+   "date": "2026-08-14",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1623.57,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1786701772.0
+  },
+  {
+   "transaction_id": "e47a0c95b3d21f86a9c4e0b7",
+   "date": "2026-08-15",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Scioto CC Bookstore",
+   "amount": -89.99,
+   "category": "education",
+   "account_last_four": "0912",
+   "timestamp": 1786802340.0
+  },
+  {
+   "transaction_id": "4d7c1e6a9f0b8253d6c3a0f7",
+   "date": "2026-08-18",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -44.25,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1787082597.0
+  },
+  {
+   "transaction_id": "d6a83f1c5e07b2d981f4c6e0",
+   "date": "2026-08-18",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Amazon.com",
+   "amount": -50.7,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1787064240.0
+  },
+  {
+   "transaction_id": "5d8f3e0c74b1a9e60e4b8d27",
+   "date": "2026-08-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -51.09,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1787169494.0
+  },
+  {
+   "transaction_id": "a6d1f8c43e9b7025d4a8e6c1",
+   "date": "2026-08-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Zelle to Jake Brennan",
+   "amount": -74.3,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1787157360.0
+  },
+  {
+   "transaction_id": "c5a92e7f14d08b36e9c2a5f1",
+   "date": "2026-08-21",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "EMBER & RYE",
+   "amount": -28.5,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1787357280.0
+  },
+  {
+   "transaction_id": "4b9e1d7a6c03f5e28d1b7a90",
+   "date": "2026-08-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Scioto CC Bookstore",
+   "amount": -54.5,
+   "category": "education",
+   "account_last_four": "0912",
+   "timestamp": 1787427300.0
+  },
+  {
+   "transaction_id": "61e8b4d72c3f90a5d8b1e6c4",
+   "date": "2026-08-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": -947.67,
+   "category": "credit_card_payment",
+   "account_last_four": "6120",
+   "timestamp": 1787392716.0
+  },
+  {
+   "transaction_id": "d9e3a5b07f61c2d41e8c4a7f",
+   "date": "2026-08-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": 947.67,
+   "category": "payment",
+   "account_last_four": "0912",
+   "timestamp": 1787392716.0
+  },
+  {
+   "transaction_id": "3dc8b51e06f97a42d5b3e810",
+   "date": "2026-08-23",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -47.36,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1787497782.0
+  },
+  {
+   "transaction_id": "a6f0d9b3e4c51a782d9b6e4f",
+   "date": "2026-08-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -42.69,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1787601102.0
+  },
+  {
+   "transaction_id": "c69d4b07e2f5a8139b0e6d2f",
+   "date": "2026-08-28",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1546.9,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1787911301.0
+  },
+  {
+   "transaction_id": "f0b9d4e16c3a72f89e2b4d7c",
+   "date": "2026-08-28",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Hound Dog's Three Degree Pizza",
+   "amount": -22.4,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1787958502.0
+  },
+  {
+   "transaction_id": "a0c4e7b1f9d6825ab8f1e3c9",
+   "date": "2026-08-29",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -92.47,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1788021229.0
+  },
+  {
+   "transaction_id": "18e3c5f07b2a9d46f5a0c3e9",
+   "date": "2026-09-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -41.97,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1788292026.0
+  },
+  {
+   "transaction_id": "3b1e9f560c8d4a73e2a7c5f0",
+   "date": "2026-09-04",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -55.63,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1788538867.0
+  },
+  {
+   "transaction_id": "5f8a3d0ce1b69c470a7e5c2d",
+   "date": "2026-09-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Fox in the Snow Cafe",
+   "amount": -7.65,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1788609975.0
+  },
+  {
+   "transaction_id": "c9a2b7e4d0f36158b1e5d9a0",
+   "date": "2026-09-08",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -43.12,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1788897204.0
+  },
+  {
+   "transaction_id": "d7f2a8c4e5b031691a9e6d3b",
+   "date": "2026-09-10",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -71.28,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1789070793.0
+  },
+  {
+   "transaction_id": "16b8e3a5d7c04f92a3e1c85b",
+   "date": "2026-09-11",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1479.63,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1789120928.0
+  },
+  {
+   "transaction_id": "d0e6c4a8b3f21957e5b8d1f4",
+   "date": "2026-09-11",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kafe Kerouac",
+   "amount": -5.1,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1789128818.0
+  },
+  {
+   "transaction_id": "7b5e9d0f2c4a81e60d8f3b5c",
+   "date": "2026-09-14",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -40.84,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1789415919.0
+  },
+  {
+   "transaction_id": "80e6d1b93f4c7a25c5d0b8e4",
+   "date": "2026-09-18",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -49.76,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1789749858.0
+  },
+  {
+   "transaction_id": "0b5f9e72c48a1d36f9b25e8a",
+   "date": "2026-09-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Amazon.com",
+   "amount": -46.41,
+   "category": "shopping",
+   "account_last_four": "0912",
+   "timestamp": 1789835040.0
+  },
+  {
+   "transaction_id": "7d2c5f0ab9e1836dd4f0a1b5",
+   "date": "2026-09-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Katalina's",
+   "amount": -24.86,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1789838568.0
+  },
+  {
+   "transaction_id": "1b5ce72a9d06c4f830e9b7d5",
+   "date": "2026-09-20",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Zelle to Jake Brennan",
+   "amount": -69.84,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1789921140.0
+  },
+  {
+   "transaction_id": "35c8f0e6a1b94d27e5d0b3c8",
+   "date": "2026-09-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": 738.67,
+   "category": "payment",
+   "account_last_four": "0912",
+   "timestamp": 1790071072.0
+  },
+  {
+   "transaction_id": "f1d4a6c8b5e0397ae3c1f7b6",
+   "date": "2026-09-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -42.33,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1790106351.0
+  },
+  {
+   "transaction_id": "f7b2c0a9e4d6185b3c9a5e02",
+   "date": "2026-09-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": -738.67,
+   "category": "credit_card_payment",
+   "account_last_four": "6120",
+   "timestamp": 1790071072.0
+  },
+  {
+   "transaction_id": "c5f4a7e30d8b29c16a3e8f0b",
+   "date": "2026-09-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lavash Café",
+   "amount": -17.94,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1790353876.0
+  },
+  {
+   "transaction_id": "f4e09c2d6a3b781e4d7f05c9",
+   "date": "2026-09-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1532.47,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1790330607.0
+  },
+  {
+   "transaction_id": "0e8b2f5a9d7c461ba8d4e2c0",
+   "date": "2026-09-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -39.76,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1790437288.0
+  },
+  {
+   "transaction_id": "f5a9c3e0b2d1e8746f3a0c9d",
+   "date": "2026-09-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -84.15,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1790439171.0
+  },
+  {
+   "transaction_id": "2e7b5d18c6a94f03d9c2e5a1",
+   "date": "2026-10-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -38.62,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1790884646.0
+  },
+  {
+   "transaction_id": "6b1e4d9a2f7c08e5b3d6a1f4",
+   "date": "2026-10-02",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "United Airlines",
+   "amount": -238.4,
+   "category": "travel",
+   "account_last_four": "0912",
+   "timestamp": 1790974680.0
+  },
+  {
+   "transaction_id": "81e6c4d92a5f0b73e9c8a164",
+   "date": "2026-10-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -68.47,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1791043594.0
+  },
+  {
+   "transaction_id": "d3c6e0b1f4a8527d6b0a9e3f",
+   "date": "2026-10-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -36.9,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1791229833.0
+  },
+  {
+   "transaction_id": "c2b5f80ae63d1974a0f5c2b8",
+   "date": "2026-10-08",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Hound Dog's Three Degree Pizza",
+   "amount": -23.15,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1791501507.0
+  },
+  {
+   "transaction_id": "8b2a7d16c5f39e40e0c4b6a3",
+   "date": "2026-10-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ardent Parcel Logistics Payroll",
+   "amount": 1469.88,
+   "category": "income",
+   "account_last_four": "6120",
+   "timestamp": 1791540119.0
+  },
+  {
+   "transaction_id": "8f3d6a0bc7e5214e3d9c7a1f",
+   "date": "2026-10-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Stauf's Coffee Roasters",
+   "amount": -5.85,
+   "category": "coffee",
+   "account_last_four": "0912",
+   "timestamp": 1791548112.0
+  },
+  {
+   "transaction_id": "a7d3e90c15b8f2640c9ae3d7",
+   "date": "2026-10-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ATI Testing",
+   "amount": -115.0,
+   "category": "education",
+   "account_last_four": "0912",
+   "timestamp": 1791586980.0
+  },
+  {
+   "transaction_id": "b6c0e4a3d1f8297e0b5f3d8c",
+   "date": "2026-10-10",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -49.18,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1791649600.0
+  },
+  {
+   "transaction_id": "5a2f8d4e1c9b07e3c0b7f5a8",
+   "date": "2026-10-13",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Marathon",
+   "amount": -37.48,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1791920887.0
+  },
+  {
+   "transaction_id": "0e1b6d9ce7a5f342b9c4d2e6",
+   "date": "2026-10-16",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Dirty Frank's Hot Dog Palace",
+   "amount": -13.85,
+   "category": "dining",
+   "account_last_four": "0912",
+   "timestamp": 1792190241.0
+  },
+  {
+   "transaction_id": "47a3f9d2e0c6b51aa1e7c4f9",
+   "date": "2026-10-17",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Kroger",
+   "amount": -44.35,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1792253883.0
+  },
+  {
+   "transaction_id": "b8e1c3a7e6d2f0944f6e2d1b",
+   "date": "2026-10-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Sunoco",
+   "amount": -35.12,
+   "category": "gas",
+   "account_last_four": "0912",
+   "timestamp": 1792439686.0
+  },
+  {
+   "transaction_id": "d0e64f9ab2c185d7e6f3a90c",
+   "date": "2026-10-20",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Zelle to Jake Brennan",
+   "amount": -62.63,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1792511460.0
+  },
+  {
+   "transaction_id": "a6f3e0b84c27d951b3e6f028",
+   "date": "2026-10-21",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ALDI",
+   "amount": -52.86,
+   "category": "groceries",
+   "account_last_four": "0912",
+   "timestamp": 1792613565.0
+  },
+  {
+   "transaction_id": "0a4d9f63b8e2c71e7b6f0d3a",
+   "date": "2026-10-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": -743.41,
+   "category": "credit_card_payment",
+   "account_last_four": "6120",
+   "timestamp": 1792663083.0
+  },
+  {
+   "transaction_id": "ab1d74c9e3f5082b6c4e9a1d",
+   "date": "2026-10-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Lake Erie Card Autopay",
+   "amount": 743.41,
+   "category": "payment",
+   "account_last_four": "0912",
+   "timestamp": 1792663083.0
+  },
+  {
+   "transaction_id": "f8894a9bed58b9d97ee602e4",
+   "date": "2026-04-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "STAUFS COFFEE ROASTERS COLUMBUS OH",
+   "amount": -6.45,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1777053922.0
+  },
+  {
+   "transaction_id": "81e7fcc4ad26d2df2ee491ef",
+   "date": "2026-04-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "TST* HOUND DOGS THREE DEGREE COLUMBUS OH",
+   "amount": -31.4,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1777162072.0
+  },
+  {
+   "transaction_id": "a7e2ebed8da53a8db2b0519d",
+   "date": "2026-04-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *KAFE KEROUAC COLUMBUS OH",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1777221398.0
+  },
+  {
+   "transaction_id": "85cd9e60f7bb5d7c36cafcbe",
+   "date": "2026-04-30",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "DIRTY FRANKS HOT DOG PALACE COLUMBUS OH",
+   "amount": -18.25,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1777562821.0
+  },
+  {
+   "transaction_id": "2d59d4a883c5bff2efb6cda0",
+   "date": "2026-05-02",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "6120",
+   "timestamp": 1777768504.0
+  },
+  {
+   "transaction_id": "e69a5bf02f7db1edc70e53ec",
+   "date": "2026-06-14",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "6120",
+   "timestamp": 1781440304.0
+  },
+  {
+   "transaction_id": "ae6df20c8079341502f1f4c9",
+   "date": "2026-08-29",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "6120",
+   "timestamp": 1788005839.0
+  },
+  {
+   "transaction_id": "0adc6c80dedf02006c6cb8bb",
+   "date": "2026-09-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "6120",
+   "timestamp": 1789837371.0
+  },
+  {
+   "transaction_id": "df50a402541f29f6c94e6663",
+   "date": "2026-10-17",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "6120",
+   "timestamp": 1792249901.0
+  },
+  {
+   "transaction_id": "10b4f3c56450debfc6c81df5",
+   "date": "2026-05-08",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *COLINS COFFEE COLUMBUS OH",
+   "amount": -7.2,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1778251113.0
+  },
+  {
+   "transaction_id": "335baefaf746b78141a5dc6d",
+   "date": "2026-05-16",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "DICK'S SPORTING GOODS #1102 COLUMBUS OH",
+   "amount": -109.99,
+   "category": "fitness",
+   "account_last_four": "6120",
+   "timestamp": 1778960257.0
+  },
+  {
+   "transaction_id": "78a670c95a523a13c6ba7415",
+   "date": "2026-05-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "amount": -32.0,
+   "category": "personal_care",
+   "account_last_four": "6120",
+   "timestamp": 1779474103.0
+  },
+  {
+   "transaction_id": "387ab5fa8d9a7573024eddfe",
+   "date": "2026-06-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "amount": -32.0,
+   "category": "personal_care",
+   "account_last_four": "6120",
+   "timestamp": 1782477039.0
+  },
+  {
+   "transaction_id": "c11e64edce877da781c17a91",
+   "date": "2026-07-31",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "amount": -32.0,
+   "category": "personal_care",
+   "account_last_four": "6120",
+   "timestamp": 1785506949.0
+  },
+  {
+   "transaction_id": "9175c9e80e63d127816bfeed",
+   "date": "2026-09-04",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "amount": -32.0,
+   "category": "personal_care",
+   "account_last_four": "6120",
+   "timestamp": 1788564929.0
+  },
+  {
+   "transaction_id": "395288712b41de73b21fceac",
+   "date": "2026-10-09",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *CLINTONVILLE BARBER CO COLUMBUS OH",
+   "amount": -32.0,
+   "category": "personal_care",
+   "account_last_four": "6120",
+   "timestamp": 1791550405.0
+  },
+  {
+   "transaction_id": "c9ad16b2b4c74e09bf67e5c5",
+   "date": "2026-05-23",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "EMBER & RYE COLUMBUS OH",
+   "amount": -67.8,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1779570283.0
+  },
+  {
+   "transaction_id": "a10268a8540b32ebd03b6fa2",
+   "date": "2026-05-29",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "TARGET T-1885 COLUMBUS OH",
+   "amount": -47.36,
+   "category": "home",
+   "account_last_four": "6120",
+   "timestamp": 1780076393.0
+  },
+  {
+   "transaction_id": "dcb86d33999985281f98eb40",
+   "date": "2026-05-30",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "LAVASH CAFE COLUMBUS OH",
+   "amount": -22.15,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1780143519.0
+  },
+  {
+   "transaction_id": "305eaa883b71eacae883d811",
+   "date": "2026-06-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *FOX IN THE SNOW CAFE COLUMBUS OH",
+   "amount": -9.85,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1780680766.0
+  },
+  {
+   "transaction_id": "6b3b1c402981d88baf13b104",
+   "date": "2026-06-06",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "COLUMBUS CLIPPERS HUNTINGTON PARK COLUMBUS OH",
+   "amount": -67.71,
+   "category": "entertainment",
+   "account_last_four": "6120",
+   "timestamp": 1780756028.0
+  },
+  {
+   "transaction_id": "8486a51734c5988340b5e017",
+   "date": "2026-06-13",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "KATALINAS CAFE COLUMBUS OH",
+   "amount": -21.4,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1781383144.0
+  },
+  {
+   "transaction_id": "bea5a50b52938967f6f5ed75",
+   "date": "2026-06-19",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "THE HOME DEPOT #3803 COLUMBUS OH",
+   "amount": -42.14,
+   "category": "home",
+   "account_last_four": "6120",
+   "timestamp": 1781893394.0
+  },
+  {
+   "transaction_id": "209226fc4bea6a8ce9f096c4",
+   "date": "2026-06-27",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ENAS CARIBBEAN KITCHEN COLUMBUS OH",
+   "amount": -27.9,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1782597541.0
+  },
+  {
+   "transaction_id": "6fb3dea8a045dd0d3b1b988c",
+   "date": "2026-07-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "STAUFS COFFEE ROASTERS COLUMBUS OH",
+   "amount": -6.95,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1783109984.0
+  },
+  {
+   "transaction_id": "f3b5c9076f647148f489061d",
+   "date": "2026-07-11",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ATM WITHDRAWAL HUNTINGTON MORSE RD COLUMBUS OH",
+   "amount": -240.0,
+   "category": "convenience",
+   "account_last_four": "6120",
+   "timestamp": 1783805903.0
+  },
+  {
+   "transaction_id": "6af73fc6f6d6e4e29a1fd55b",
+   "date": "2026-07-17",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "AMC LENNOX TOWN CENTER 24 COLUMBUS OH",
+   "amount": -32.98,
+   "category": "entertainment",
+   "account_last_four": "6120",
+   "timestamp": 1784311989.0
+  },
+  {
+   "transaction_id": "d032f2b4090ec7aa0558e501",
+   "date": "2026-07-18",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "BABCIAS KITCHEN COLUMBUS OH",
+   "amount": -36.75,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1784413126.0
+  },
+  {
+   "transaction_id": "d2b580b6e1eb4fcc9cf04545",
+   "date": "2026-07-24",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "DIRTY FRANKS HOT DOG PALACE COLUMBUS OH",
+   "amount": -19.6,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1784939290.0
+  },
+  {
+   "transaction_id": "0d88a45c0fe88bd6e06b05dc",
+   "date": "2026-07-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "COLUMBUS CREW LOWER.COM FIELD COLUMBUS OH",
+   "amount": -124.0,
+   "category": "entertainment",
+   "account_last_four": "6120",
+   "timestamp": 1784997196.0
+  },
+  {
+   "transaction_id": "28cfa8008df90ee99ec0cfbd",
+   "date": "2026-07-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *KAFE KEROUAC COLUMBUS OH",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1785113385.0
+  },
+  {
+   "transaction_id": "ac0cd5c929b0ee8f31b36a89",
+   "date": "2026-08-01",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "IKEA COLUMBUS OH",
+   "amount": -167.12,
+   "category": "home",
+   "account_last_four": "6120",
+   "timestamp": 1785632157.0
+  },
+  {
+   "transaction_id": "2f316d11c473012ce38385b8",
+   "date": "2026-08-07",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *FOX IN THE SNOW CAFE COLUMBUS OH",
+   "amount": -11.4,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1786126312.0
+  },
+  {
+   "transaction_id": "d134e759663fc0efaac92c03",
+   "date": "2026-08-08",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "TARGET T-1885 COLUMBUS OH",
+   "amount": -116.43,
+   "category": "home",
+   "account_last_four": "6120",
+   "timestamp": 1786225723.0
+  },
+  {
+   "transaction_id": "4409f9ff5936f3bd82565946",
+   "date": "2026-08-15",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "TST* HOUND DOGS THREE DEGREE COLUMBUS OH",
+   "amount": -28.1,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1786803374.0
+  },
+  {
+   "transaction_id": "495d348f3ed0092f07c52847",
+   "date": "2026-08-21",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "KATALINAS CAFE COLUMBUS OH",
+   "amount": -19.85,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1787314192.0
+  },
+  {
+   "transaction_id": "d1c583caa6af9a90f75ac514",
+   "date": "2026-08-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "CVS/PHARMACY #06118 COLUMBUS OH",
+   "amount": -18.48,
+   "category": "personal_care",
+   "account_last_four": "6120",
+   "timestamp": 1787442899.0
+  },
+  {
+   "transaction_id": "6c76b68d9f0925df399f553b",
+   "date": "2026-08-30",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "LAVASH CAFE COLUMBUS OH",
+   "amount": -24.3,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1788133734.0
+  },
+  {
+   "transaction_id": "91c6ef993e55fa9522fbb5c4",
+   "date": "2026-09-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *COLINS COFFEE COLUMBUS OH",
+   "amount": -6.8,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1788617227.0
+  },
+  {
+   "transaction_id": "66f4e3ddf7b668717b7a9f99",
+   "date": "2026-09-12",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "COLUMBUS CREW LOWER.COM FIELD COLUMBUS OH",
+   "amount": -129.0,
+   "category": "entertainment",
+   "account_last_four": "6120",
+   "timestamp": 1789241764.0
+  },
+  {
+   "transaction_id": "1201fd3c7c6e83802b2bf03b",
+   "date": "2026-09-18",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "ENAS CARIBBEAN KITCHEN COLUMBUS OH",
+   "amount": -26.75,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1789757571.0
+  },
+  {
+   "transaction_id": "2742523de7c5b86b0fcc72de",
+   "date": "2026-09-25",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "DICK'S SPORTING GOODS #1102 COLUMBUS OH",
+   "amount": -34.99,
+   "category": "fitness",
+   "account_last_four": "6120",
+   "timestamp": 1790366684.0
+  },
+  {
+   "transaction_id": "c66a9e6f3e871ef22b570ff6",
+   "date": "2026-09-26",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "STAUFS COFFEE ROASTERS COLUMBUS OH",
+   "amount": -7.15,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1790465095.0
+  },
+  {
+   "transaction_id": "48c4c1331adcaa04a4f83e33",
+   "date": "2026-10-02",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *KAFE KEROUAC COLUMBUS OH",
+   "amount": -6.4,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1790943710.0
+  },
+  {
+   "transaction_id": "896c14db2ff695dc7bf4b4ed",
+   "date": "2026-10-03",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "EMBER & RYE COLUMBUS OH",
+   "amount": -82.3,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1791054399.0
+  },
+  {
+   "transaction_id": "bc60ccf0e50d5eb669b3011b",
+   "date": "2026-10-10",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "BABCIAS KITCHEN COLUMBUS OH",
+   "amount": -29.45,
+   "category": "dining",
+   "account_last_four": "6120",
+   "timestamp": 1791649246.0
+  },
+  {
+   "transaction_id": "017c5afecd05147bdc3b1260",
+   "date": "2026-10-16",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "SQ *FOX IN THE SNOW CAFE COLUMBUS OH",
+   "amount": -10.25,
+   "category": "coffee",
+   "account_last_four": "6120",
+   "timestamp": 1792181629.0
+  },
+  {
+   "transaction_id": "76490c09f3bc9e6924a00fc9",
+   "date": "2026-05-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Payment received, thank you",
+   "amount": 209.5,
+   "category": "payment",
+   "account_last_four": "0912",
+   "timestamp": 1779471081.0
+  },
+  {
+   "transaction_id": "b80bc07fc2e28c1788e5a517",
+   "date": "2026-05-22",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Payment to Lake Erie Card (Visa) ..0912",
+   "amount": -209.5,
+   "category": "credit_card_payment",
+   "account_last_four": "6120",
+   "timestamp": 1779485794.0
+  },
+  {
+   "transaction_id": "5d499db19b4a354b887df8ed",
+   "date": "2026-06-15",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Ohio Valley Mutual",
+   "amount": -112.0,
+   "category": "insurance",
+   "account_last_four": "6120",
+   "timestamp": 1781567353.0
+  },
+  {
+   "transaction_id": "c9b18e4a0d27f6531a6c0e45",
+   "date": "2026-10-18",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Online Transfer to Savings ..6157",
+   "amount": -150.0,
+   "category": "transfer",
+   "account_last_four": "6120",
+   "timestamp": 1792329360.0
+  },
+  {
+   "transaction_id": "b13ed01ca036c9f31167963a",
+   "date": "2026-05-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Scioto CC Spring 2026 Payment Plan",
+   "amount": -412.0,
+   "category": "education",
+   "account_last_four": "6120",
+   "timestamp": 1777983300.0
+  },
+  {
+   "transaction_id": "0b47cf672fc7a110179e1c09",
+   "date": "2026-06-05",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Scioto CC Spring 2026 Payment Plan",
+   "amount": -412.0,
+   "category": "education",
+   "account_last_four": "6120",
+   "timestamp": 1780661700.0
+  },
+  {
+   "transaction_id": "f4f77a313c28f842a248757d",
+   "date": "2026-07-06",
+   "user_id": "7235c2296f764298dd782fc4",
+   "merchant": "Scioto CC Spring 2026 Payment Plan",
+   "amount": -412.0,
+   "category": "education",
+   "account_last_four": "6120",
+   "timestamp": 1783340100.0
+  }
+ ]
+}

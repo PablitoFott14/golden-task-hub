@@ -1,0 +1,2775 @@
+{
+ "users": [
+  {
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "name": "Owen Brandt",
+   "email": "owen.brandt.writes@gmail.com",
+   "member_since": null,
+   "linked_accounts_count": 4,
+   "status": "active",
+   "ssn": null,
+   "date_of_birth": null,
+   "mothers_maiden_name": null,
+   "phone": null
+  }
+ ],
+ "accounts": [
+  {
+   "account_id": "acct_1d073d56cf63b876b6b0",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "institution_name": "Nicollet Federal Credit Union",
+   "account_type": "checking",
+   "last_four": "5512",
+   "balance": 9412.36,
+   "status": "Active"
+  },
+  {
+   "account_id": "acct_cd62a0502fec0268076c",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "institution_name": "Nicollet Federal Credit Union",
+   "account_type": "savings",
+   "last_four": "5530",
+   "balance": 24860.15,
+   "status": "Active"
+  },
+  {
+   "account_id": "acct_1757a62b9cd5bd7454e3",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "institution_name": "Nicollet Federal Credit Union",
+   "account_type": "credit_card",
+   "last_four": "0047",
+   "balance": 2396.18,
+   "status": "Active",
+   "opening_balance": 0.0
+  },
+  {
+   "account_id": "acct_9a3e65075700ab347de6",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "institution_name": "Fidelity Investments",
+   "account_type": "retirement",
+   "last_four": "4419",
+   "balance": 214850.0,
+   "status": "Active"
+  }
+ ],
+ "subscriptions": [
+  {
+   "subscription_id": "4c1e9a7fd03b65e28a7f0c4d",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "service_name": "Airtable Team",
+   "amount": 24.0,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-03",
+   "status": "active"
+  },
+  {
+   "subscription_id": "e3b8d016a5f92c7e1d4b8e36",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "service_name": "Adobe Acrobat Pro",
+   "amount": 19.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-11",
+   "status": "active"
+  },
+  {
+   "subscription_id": "92f5c0a86e1d37b4f0c9a52e",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "service_name": "Otter.ai Pro",
+   "amount": 16.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-17",
+   "status": "active"
+  },
+  {
+   "subscription_id": "0b6d4e2ac8f71953e2a9d07b",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "service_name": "Google One 2 TB",
+   "amount": 9.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-26",
+   "status": "active"
+  }
+ ],
+ "transactions": [
+  {
+   "transaction_id": "1bfaed5bff4a7f40d0526f69",
+   "date": "2026-04-29",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1777501983.0
+  },
+  {
+   "transaction_id": "32fcc75ad846dae4b1600721",
+   "date": "2026-08-04",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1785849911.0
+  },
+  {
+   "transaction_id": "d5b47856fa3369f0d9b4b219",
+   "date": "2026-10-20",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1792521513.0
+  },
+  {
+   "transaction_id": "9d41e7b02c86fa531e0d97c4",
+   "date": "2026-04-29",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Angry Catfish Bicycle + Coffee Bar",
+   "amount": -5.4,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1777465195.0
+  },
+  {
+   "transaction_id": "5b2e8c14f7a039d66c81b2e5",
+   "date": "2026-04-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Friendship Store)",
+   "amount": -31.47,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1777592247.0
+  },
+  {
+   "transaction_id": "aa84b8d57a02d0399572ce55",
+   "date": "2026-04-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "MOON PALACE BOOKS MINNEAPOLIS MN",
+   "amount": -42.9,
+   "category": "shopping",
+   "account_last_four": "5512",
+   "timestamp": 1777564858.0
+  },
+  {
+   "transaction_id": "3e8b0d7a12c94f6e5b37a0d2",
+   "date": "2026-05-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 375.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1777643356.0
+  },
+  {
+   "transaction_id": "9b6e1d4f7a03c58e2d9b6f1a",
+   "date": "2026-06-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 375.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1780320351.0
+  },
+  {
+   "transaction_id": "47c1f9a3d6e8b25f7c1a9e3d",
+   "date": "2026-07-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 375.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1782938501.0
+  },
+  {
+   "transaction_id": "b4c7f0a3e9d6215c4f7b0e3a",
+   "date": "2026-08-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 375.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1785782279.0
+  },
+  {
+   "transaction_id": "b8a2e5c0f3d7961b8e2a5d0c",
+   "date": "2026-09-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 375.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1788283836.0
+  },
+  {
+   "transaction_id": "b2e6c0f4a8d1735b2c6e0a4f",
+   "date": "2026-10-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 375.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1790869230.0
+  },
+  {
+   "transaction_id": "7c2e91a4f05b3d68e1a9c472",
+   "date": "2026-05-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "North Current Media LLC",
+   "amount": 1500.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1777653435.0
+  },
+  {
+   "transaction_id": "2d9a5e8c0b7f4316d8e1a5c7",
+   "date": "2026-06-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "North Current Media LLC",
+   "amount": 1500.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1780326568.0
+  },
+  {
+   "transaction_id": "2b5c8e1f4a7d906c3b8e5d2a",
+   "date": "2026-07-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "North Current Media LLC",
+   "amount": 1500.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1782926695.0
+  },
+  {
+   "transaction_id": "d7a1c4f8e2b5093d6c1a7f4e",
+   "date": "2026-08-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "North Current Media LLC",
+   "amount": 1500.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1785763979.0
+  },
+  {
+   "transaction_id": "c3e8a1d6f0b4527c8e3a1f6d",
+   "date": "2026-09-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "North Current Media LLC",
+   "amount": 1500.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1788289051.0
+  },
+  {
+   "transaction_id": "e5c9b3d7a0f4268e5b9d3a7c",
+   "date": "2026-10-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "North Current Media LLC",
+   "amount": 1500.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1790875974.0
+  },
+  {
+   "transaction_id": "a91f3c0e6b24d8579e0c1fa3",
+   "date": "2026-05-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -375.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1777668012.0
+  },
+  {
+   "transaction_id": "f3c0e7b5a8d2961e4b7c0a8f",
+   "date": "2026-06-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -375.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1780347224.0
+  },
+  {
+   "transaction_id": "8e0a4d7b2f5c193a8d0e4b7f",
+   "date": "2026-07-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -375.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1782925285.0
+  },
+  {
+   "transaction_id": "60e9b3d6a1f4c78e9b5d2a0f",
+   "date": "2026-08-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -375.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1785787394.0
+  },
+  {
+   "transaction_id": "1d6f9b4e7a2c835d1f6b9e4a",
+   "date": "2026-09-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -375.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1788270549.0
+  },
+  {
+   "transaction_id": "6f3a7e1c4b8d952f3e7a1d4b",
+   "date": "2026-10-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -375.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1790872970.0
+  },
+  {
+   "transaction_id": "d40c6a8e9f1372b5c8e2a61f",
+   "date": "2026-05-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Joint household account (Ingrid's credit union)",
+   "amount": -2400.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1777651249.0
+  },
+  {
+   "transaction_id": "4a8c3f6e1d95b07a3f2c8e6d",
+   "date": "2026-06-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Joint household account (Ingrid's credit union)",
+   "amount": -2400.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1780323351.0
+  },
+  {
+   "transaction_id": "e3f6a0c4b8d2715e0f3c6a9b",
+   "date": "2026-07-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Joint household account (Ingrid's credit union)",
+   "amount": -2400.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1782916205.0
+  },
+  {
+   "transaction_id": "2e6d9b5f1c8a473e5d2f9c6b",
+   "date": "2026-08-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Joint household account (Ingrid's credit union)",
+   "amount": -2400.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1785762542.0
+  },
+  {
+   "transaction_id": "5f9c3a7e1b4d208f5c9a3e7b",
+   "date": "2026-09-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Joint household account (Ingrid's credit union)",
+   "amount": -2400.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1788276182.0
+  },
+  {
+   "transaction_id": "9c5d2a6f0e3b481c5a2d6e0f",
+   "date": "2026-10-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Joint household account (Ingrid's credit union)",
+   "amount": -2400.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1790861521.0
+  },
+  {
+   "transaction_id": "b27c0a783806707c541d5306",
+   "date": "2026-05-02",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "amount": -38.0,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1777731431.0
+  },
+  {
+   "transaction_id": "e7c03a951d64b8f20a5e3c71",
+   "date": "2026-05-02",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Cub (Lake Street)",
+   "amount": -41.86,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1777763708.0
+  },
+  {
+   "transaction_id": "4f8a2c6e0b9d13f75a2c8e04",
+   "date": "2026-05-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Airtable",
+   "amount": -24.0,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1777838906.0
+  },
+  {
+   "transaction_id": "e9a4b17d3c5f08e2a6d9b4c1",
+   "date": "2026-06-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Airtable",
+   "amount": -24.0,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1780505908.0
+  },
+  {
+   "transaction_id": "5f1b3e86d9a42c073b8d5f1a",
+   "date": "2026-07-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Airtable",
+   "amount": -24.0,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1783122637.0
+  },
+  {
+   "transaction_id": "cc95e2ac27a014b7ba8439e9",
+   "date": "2026-08-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Airtable",
+   "amount": -24.0,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1785790455.0
+  },
+  {
+   "transaction_id": "c7b04e1a92d6f35c0f8a3d61",
+   "date": "2026-09-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Airtable",
+   "amount": -24.0,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1788466345.0
+  },
+  {
+   "transaction_id": "8f6a2d471c0e5b93a8b3e72f",
+   "date": "2026-10-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Airtable",
+   "amount": -24.0,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1791071579.0
+  },
+  {
+   "transaction_id": "e8b6be22a30fd897aed61b9a",
+   "date": "2026-05-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "BACHMAN'S LYNDALE MINNEAPOLIS MN",
+   "amount": -168.34,
+   "category": "home",
+   "account_last_four": "5512",
+   "timestamp": 1777837768.0
+  },
+  {
+   "transaction_id": "28f6d1a49b3e70c5d2a8f416",
+   "date": "2026-05-05",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "amount": -5.75,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1777982400.0
+  },
+  {
+   "transaction_id": "1a0848551d98e04f464cd507",
+   "date": "2026-05-06",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1778108535.0
+  },
+  {
+   "transaction_id": "eeddcdb24923389296c684a5",
+   "date": "2026-06-18",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1781813708.0
+  },
+  {
+   "transaction_id": "d2775f00deb6f41004b17700",
+   "date": "2026-09-02",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1788359176.0
+  },
+  {
+   "transaction_id": "ee23f679b20114f92570d940",
+   "date": "2026-10-13",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1791930999.0
+  },
+  {
+   "transaction_id": "8652c71a591310b426434aa1",
+   "date": "2026-05-08",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "GANDHI MAHAL MINNEAPOLIS MN",
+   "amount": -72.4,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1778260942.0
+  },
+  {
+   "transaction_id": "b4097e3dc56a12f88e3b0d69",
+   "date": "2026-05-08",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -44.12,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1778252081.0
+  },
+  {
+   "transaction_id": "634890e27c11ff3b0d313297",
+   "date": "2026-05-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ACE HARDWARE LONGFELLOW MINNEAPOLIS MN",
+   "amount": -23.18,
+   "category": "home",
+   "account_last_four": "5512",
+   "timestamp": 1778339159.0
+  },
+  {
+   "transaction_id": "71ac5f280e94d3b74f6c2a1e",
+   "date": "2026-05-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Al's Breakfast",
+   "amount": -21.6,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1778344378.0
+  },
+  {
+   "transaction_id": "bc79fb32a2b57a5d780c1372",
+   "date": "2026-05-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SQ *LONGFELLOW FLORIST MINNEAPOLIS MN",
+   "amount": -78.0,
+   "category": "gifts",
+   "account_last_four": "5512",
+   "timestamp": 1778352005.0
+  },
+  {
+   "transaction_id": "b1e5d9a3f7c02e6b8d4a1f95",
+   "date": "2026-05-11",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Adobe",
+   "amount": -19.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1778531884.0
+  },
+  {
+   "transaction_id": "a3b60e5c2d8f19a74b3e06d7",
+   "date": "2026-06-11",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Adobe",
+   "amount": -19.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1781217155.0
+  },
+  {
+   "transaction_id": "34d0f9b72e6c8a15c0e72d93",
+   "date": "2026-07-11",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Adobe",
+   "amount": -19.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1783773023.0
+  },
+  {
+   "transaction_id": "c2a85e6f0d39b4173f5e9a28",
+   "date": "2026-08-11",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Adobe",
+   "amount": -19.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1786489896.0
+  },
+  {
+   "transaction_id": "4d0c7b25f9e2a61d3a6f1e08",
+   "date": "2026-09-11",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Adobe",
+   "amount": -19.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1789153940.0
+  },
+  {
+   "transaction_id": "a3e0d5b8c94f162e5b8a2d0f",
+   "date": "2026-10-11",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Adobe",
+   "amount": -19.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1791770182.0
+  },
+  {
+   "transaction_id": "d2d743e761e5f0cc23bcf59f",
+   "date": "2026-05-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PARKMOBILE MINNEAPOLIS MN",
+   "amount": -14.0,
+   "category": "transportation",
+   "account_last_four": "5512",
+   "timestamp": 1778621055.0
+  },
+  {
+   "transaction_id": "45650c0bbbc87cfcaf6dc89b",
+   "date": "2026-06-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PARKMOBILE MINNEAPOLIS MN",
+   "amount": -14.0,
+   "category": "transportation",
+   "account_last_four": "5512",
+   "timestamp": 1781028122.0
+  },
+  {
+   "transaction_id": "1dc009827f2102a35a47e75c",
+   "date": "2026-07-07",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PARKMOBILE MINNEAPOLIS MN",
+   "amount": -14.0,
+   "category": "transportation",
+   "account_last_four": "5512",
+   "timestamp": 1783438235.0
+  },
+  {
+   "transaction_id": "688f47f11df47c605e955f0f",
+   "date": "2026-08-06",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PARKMOBILE MINNEAPOLIS MN",
+   "amount": -14.0,
+   "category": "transportation",
+   "account_last_four": "5512",
+   "timestamp": 1786045324.0
+  },
+  {
+   "transaction_id": "18cf21a9b3a1f96ab568b24f",
+   "date": "2026-09-10",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PARKMOBILE MINNEAPOLIS MN",
+   "amount": -14.0,
+   "category": "transportation",
+   "account_last_four": "5512",
+   "timestamp": 1789069365.0
+  },
+  {
+   "transaction_id": "d834d3373791792135fc5db0",
+   "date": "2026-10-07",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PARKMOBILE MINNEAPOLIS MN",
+   "amount": -14.0,
+   "category": "transportation",
+   "account_last_four": "5512",
+   "timestamp": 1791403416.0
+  },
+  {
+   "transaction_id": "c8e2b960a31f5d47b07e4c92",
+   "date": "2026-05-13",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "amount": -19.45,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1778671686.0
+  },
+  {
+   "transaction_id": "0f5d3a86e2c714b95a9d0f3c",
+   "date": "2026-05-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Franklin Store)",
+   "amount": -38.29,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1778799899.0
+  },
+  {
+   "transaction_id": "0f6d3b9a4e58c271a6d9e3b8",
+   "date": "2026-05-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 700.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1778778746.0
+  },
+  {
+   "transaction_id": "5b9f2e07c3a1d86e4f0b7c29",
+   "date": "2026-05-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Great Lakes Dispatch",
+   "amount": 2800.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1778762933.0
+  },
+  {
+   "transaction_id": "cdaf68cee8f91d2a66ac83ec",
+   "date": "2026-05-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "CVS/PHARMACY #08712 MINNEAPOLIS MN",
+   "amount": -12.0,
+   "category": "medical",
+   "account_last_four": "5512",
+   "timestamp": 1778795362.0
+  },
+  {
+   "transaction_id": "e2a7c5d1903f6b8a7d4e0c15",
+   "date": "2026-05-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -700.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1778770262.0
+  },
+  {
+   "transaction_id": "02ec4c2598211f36f54fd115",
+   "date": "2026-05-16",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "5512",
+   "timestamp": 1778951694.0
+  },
+  {
+   "transaction_id": "af1bca6951e346371ad3799b",
+   "date": "2026-06-13",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "5512",
+   "timestamp": 1781377323.0
+  },
+  {
+   "transaction_id": "50caecb0bcee654aaf965246",
+   "date": "2026-08-28",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "5512",
+   "timestamp": 1787962385.0
+  },
+  {
+   "transaction_id": "423d8df956554bc23ae8b2cf",
+   "date": "2026-10-16",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "amount": -200.0,
+   "category": "convenience",
+   "account_last_four": "5512",
+   "timestamp": 1792179012.0
+  },
+  {
+   "transaction_id": "7c2f0e8b4a6d91c35e7b0a2f",
+   "date": "2026-05-17",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Otter.ai",
+   "amount": -16.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1779040184.0
+  },
+  {
+   "transaction_id": "d8e1c4a7f02b5e93c8d14a6f",
+   "date": "2026-06-17",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Otter.ai",
+   "amount": -16.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1781700373.0
+  },
+  {
+   "transaction_id": "35d282dcd2ae09bc5d637d6a",
+   "date": "2026-07-17",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Otter.ai",
+   "amount": -16.99,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1784320564.0
+  },
+  {
+   "transaction_id": "b1f7c03e8d4a5e26f6a0d3c4",
+   "date": "2026-08-17",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Otter.ai",
+   "amount": -16.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1787002974.0
+  },
+  {
+   "transaction_id": "f9c40e7b2a85d1f3c2a6e09d",
+   "date": "2026-09-17",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Otter.ai",
+   "amount": -16.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1789676981.0
+  },
+  {
+   "transaction_id": "2e9d5c187a4b0f63a7c1e93d",
+   "date": "2026-10-17",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Otter.ai",
+   "amount": -16.99,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1792277178.0
+  },
+  {
+   "transaction_id": "a6b1f04c7d28e95a3c1b6e07",
+   "date": "2026-05-19",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Angry Catfish Bicycle + Coffee Bar",
+   "amount": -6.4,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1779196876.0
+  },
+  {
+   "transaction_id": "e5a8d04f1b73c92eb7d0a5c6",
+   "date": "2026-09-10",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Angry Catfish Bicycle + Coffee Bar",
+   "amount": -6.4,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1789038646.0
+  },
+  {
+   "transaction_id": "d9c3c9b95dc443bdd894f777",
+   "date": "2026-05-19",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SPYHOUSE COFFEE MINNEAPOLIS MN",
+   "amount": -5.9,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1779207872.0
+  },
+  {
+   "transaction_id": "4e93c7d2b0a6185fe94c2d3a",
+   "date": "2026-05-21",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Longfellow Grill",
+   "amount": -52.73,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1779404621.0
+  },
+  {
+   "transaction_id": "0ac997032ab3bf3c7c493cc3",
+   "date": "2026-05-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "HI-LO DINER MINNEAPOLIS MN",
+   "amount": -41.3,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1779460713.0
+  },
+  {
+   "transaction_id": "0af24c00d011c7025f83e99a",
+   "date": "2026-05-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment to Nicollet Federal Credit Union ..0047",
+   "amount": -36.87,
+   "category": "credit_card_payment",
+   "account_last_four": "5512",
+   "timestamp": 1779473182.0
+  },
+  {
+   "transaction_id": "b855552d02c0ab03ccea6677",
+   "date": "2026-05-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment - Thank You",
+   "amount": 36.87,
+   "category": "payment",
+   "account_last_four": "0047",
+   "timestamp": 1779473182.0
+  },
+  {
+   "transaction_id": "d05a8e1b63f2c9407b2e5f18",
+   "date": "2026-05-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Speedway",
+   "amount": -39.48,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1779478099.0
+  },
+  {
+   "transaction_id": "0ac29c75c3e51a48c60836d2",
+   "date": "2026-05-24",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "THREE RIVERS PARK DISTRICT PLYMOUTH MN",
+   "amount": -40.0,
+   "category": "fitness",
+   "account_last_four": "5512",
+   "timestamp": 1779628335.0
+  },
+  {
+   "transaction_id": "1c7f6b39e8d4a025c63a91e4",
+   "date": "2026-05-26",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Google Play",
+   "amount": -9.99,
+   "category": "subscription",
+   "account_last_four": "0047",
+   "timestamp": 1779812466.0
+  },
+  {
+   "transaction_id": "1e4d8a73b9c05f2d7e1a4b60",
+   "date": "2026-06-26",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Google Play",
+   "amount": -9.99,
+   "category": "subscription",
+   "account_last_four": "0047",
+   "timestamp": 1782489916.0
+  },
+  {
+   "transaction_id": "d3e19c5a07b64f281a7c9e5d",
+   "date": "2026-07-26",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Google Play",
+   "amount": -9.99,
+   "category": "subscription",
+   "account_last_four": "0047",
+   "timestamp": 1785092587.0
+  },
+  {
+   "transaction_id": "cd295948a380f6ccb42cb4b3",
+   "date": "2026-08-26",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Google Play",
+   "amount": -9.99,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1787765568.0
+  },
+  {
+   "transaction_id": "a9f53e0dc18b64a22b6d9f37",
+   "date": "2026-09-26",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Google Play",
+   "amount": -9.99,
+   "category": "subscription",
+   "account_last_four": "0047",
+   "timestamp": 1790445678.0
+  },
+  {
+   "transaction_id": "a17f6c3e92d04b58c6e1f3a0",
+   "date": "2026-10-26",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Google Play",
+   "amount": -9.99,
+   "category": "subscription",
+   "account_last_four": "0047",
+   "timestamp": 1793000840.0
+  },
+  {
+   "transaction_id": "f2ab4d075c19e3b82d7f0a56",
+   "date": "2026-05-27",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Five Watt Coffee",
+   "amount": -6.85,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1779884187.0
+  },
+  {
+   "transaction_id": "64d0a2f8b3e17c5a9e6d4b01",
+   "date": "2026-05-28",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 225.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1779993183.0
+  },
+  {
+   "transaction_id": "8a3e6f1c2d07b95e3c8a1d64",
+   "date": "2026-05-28",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Prairie Wire",
+   "amount": 900.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1779971931.0
+  },
+  {
+   "transaction_id": "c15b8e4a7f62d0938b2f5e7a",
+   "date": "2026-05-28",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -225.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1779985113.0
+  },
+  {
+   "transaction_id": "6a8e2f51d4b07c93a0e5d3b1",
+   "date": "2026-05-29",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Friendship Store)",
+   "amount": -46.57,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1780098275.0
+  },
+  {
+   "transaction_id": "b7e4c9a02d5f1386c0a7e9d3",
+   "date": "2026-05-29",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Fidelity Government Money Market (SPAXX) dividend",
+   "amount": 17.42,
+   "category": "investment",
+   "account_last_four": "4419",
+   "timestamp": 1780102339.0
+  },
+  {
+   "transaction_id": "c3203bfd6075d4d0a7265c6c",
+   "date": "2026-05-29",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "TARGET T-2766 MINNEAPOLIS MN",
+   "amount": -68.42,
+   "category": "shopping",
+   "account_last_four": "5512",
+   "timestamp": 1780087458.0
+  },
+  {
+   "transaction_id": "0aff24a84be18dc69a3968e0",
+   "date": "2026-05-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "MERLINS REST MINNEAPOLIS MN",
+   "amount": -63.85,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1780146013.0
+  },
+  {
+   "transaction_id": "8b3d0e7a1f65c2d9e48a6c03",
+   "date": "2026-05-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Hi-Lo Diner",
+   "amount": -34.92,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1780169291.0
+  },
+  {
+   "transaction_id": "449553aaf4ef7ee564be7545",
+   "date": "2026-06-02",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "PEACE COFFEE WONDERLAND PARK MINNEAPOLIS MN",
+   "amount": -11.4,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1780409756.0
+  },
+  {
+   "transaction_id": "6e3fb1a80d92c574a9e621bf",
+   "date": "2026-06-02",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "MN DNR Reservations",
+   "amount": -89.0,
+   "category": "travel",
+   "account_last_four": "0047",
+   "timestamp": 1780415479.0
+  },
+  {
+   "transaction_id": "3e6c9a14b72f05e81d9c4b7f",
+   "date": "2026-06-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Target (Lake Street)",
+   "amount": -33.18,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1780528611.0
+  },
+  {
+   "transaction_id": "c1f48b2e09a7d653f5b1e08d",
+   "date": "2026-06-04",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Angry Catfish Bicycle + Coffee Bar",
+   "amount": -6.25,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1780574819.0
+  },
+  {
+   "transaction_id": "e230026fb145afd8d8456b54",
+   "date": "2026-06-05",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "LONGFELLOW GRILL MINNEAPOLIS MN",
+   "amount": -52.1,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1780675137.0
+  },
+  {
+   "transaction_id": "5d0b7e93a4c28f166e3d2a95",
+   "date": "2026-06-06",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -42.37,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1780756901.0
+  },
+  {
+   "transaction_id": "73ac6804a6ad879a9dcc4764",
+   "date": "2026-06-06",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "amount": -44.0,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1780768555.0
+  },
+  {
+   "transaction_id": "e6b2d9a1c4f70358a1e6c3b9",
+   "date": "2026-06-08",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Society of Environmental Journalists",
+   "amount": -60.0,
+   "category": "dues",
+   "account_last_four": "0047",
+   "timestamp": 1780934744.0
+  },
+  {
+   "transaction_id": "e94a2c6d38b1f07eb2c6d84a",
+   "date": "2026-06-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "amount": -18.95,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1781006944.0
+  },
+  {
+   "transaction_id": "07d5f3b8c6e924a14a7f1b0e",
+   "date": "2026-06-11",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Friendship Store)",
+   "amount": -44.62,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1781224849.0
+  },
+  {
+   "transaction_id": "dec9318f915ba887b691715c",
+   "date": "2026-06-11",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "GREAT CLIPS #2214 MINNEAPOLIS MN",
+   "amount": -26.0,
+   "category": "personal_care",
+   "account_last_four": "5512",
+   "timestamp": 1781191885.0
+  },
+  {
+   "transaction_id": "5d49ef67c768561beeefc976",
+   "date": "2026-08-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "GREAT CLIPS #2214 MINNEAPOLIS MN",
+   "amount": -26.0,
+   "category": "personal_care",
+   "account_last_four": "5512",
+   "timestamp": 1786550932.0
+  },
+  {
+   "transaction_id": "689953a9a51706783a88075a",
+   "date": "2026-10-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "GREAT CLIPS #2214 MINNEAPOLIS MN",
+   "amount": -26.0,
+   "category": "personal_care",
+   "account_last_four": "5512",
+   "timestamp": 1791996779.0
+  },
+  {
+   "transaction_id": "4b9e17c2d05a83f6e1c7a92d",
+   "date": "2026-06-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Northwoods Paddle Repair",
+   "amount": -68.5,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1781298115.0
+  },
+  {
+   "transaction_id": "1c7f4a9e3b62d08f5a1c7e40",
+   "date": "2026-06-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "IRS (federal estimated tax)",
+   "amount": -3050.0,
+   "category": "taxes",
+   "account_last_four": "5530",
+   "timestamp": 1781570539.0
+  },
+  {
+   "transaction_id": "d5e9a3c7f1b6480d5a9e3c7f",
+   "date": "2026-09-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "IRS (federal estimated tax)",
+   "amount": -3050.0,
+   "category": "taxes",
+   "account_last_four": "5530",
+   "timestamp": 1789521550.0
+  },
+  {
+   "transaction_id": "a5d8e2c6f0b9137d6c4a2e8b",
+   "date": "2026-06-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Minnesota Department of Revenue (estimated tax)",
+   "amount": -780.0,
+   "category": "taxes",
+   "account_last_four": "5530",
+   "timestamp": 1781574377.0
+  },
+  {
+   "transaction_id": "7b0f4d8a2e5c613b0d4f8e2a",
+   "date": "2026-09-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Minnesota Department of Revenue (estimated tax)",
+   "amount": -780.0,
+   "category": "taxes",
+   "account_last_four": "5530",
+   "timestamp": 1789519587.0
+  },
+  {
+   "transaction_id": "532d6a807a014a6d3b61a903",
+   "date": "2026-06-16",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "LONGFELLOW FAMILY DENTAL MINNEAPOLIS MN",
+   "amount": -348.0,
+   "category": "medical",
+   "account_last_four": "5512",
+   "timestamp": 1781648888.0
+  },
+  {
+   "transaction_id": "b6e81d4f2a07c95e9f0e3c27",
+   "date": "2026-06-16",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Five Watt Coffee",
+   "amount": -7.15,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1781613164.0
+  },
+  {
+   "transaction_id": "a0d3c96e1f84b752e3f60c18",
+   "date": "2026-10-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Five Watt Coffee",
+   "amount": -7.15,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1792073400.0
+  },
+  {
+   "transaction_id": "38e5b1c7a4d6f029e8c5a3d1",
+   "date": "2026-06-19",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 800.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1781897359.0
+  },
+  {
+   "transaction_id": "42c9a07ef1d63b85c8e4a16d",
+   "date": "2026-06-19",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Sea Salt Eatery",
+   "amount": -47.36,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1781918784.0
+  },
+  {
+   "transaction_id": "7f1b4e8a2c6d903b7e5f1a2c",
+   "date": "2026-06-19",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "North Current Media LLC",
+   "amount": 3200.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1781904804.0
+  },
+  {
+   "transaction_id": "d2c9a6f3e0b1845c9d3b7f6e",
+   "date": "2026-06-19",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -800.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1781902033.0
+  },
+  {
+   "transaction_id": "829322cc487a866e05bc100c",
+   "date": "2026-06-20",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "TOWN HALL LANES MINNEAPOLIS MN",
+   "amount": -58.4,
+   "category": "entertainment",
+   "account_last_four": "5512",
+   "timestamp": 1781988648.0
+  },
+  {
+   "transaction_id": "9a0f6e2b5d48c1a70b3f9d64",
+   "date": "2026-06-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Speedway",
+   "amount": -40.84,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1782175088.0
+  },
+  {
+   "transaction_id": "a3679ee70b259e1fbeb06f80",
+   "date": "2026-06-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment - Thank You",
+   "amount": 428.99,
+   "category": "payment",
+   "account_last_four": "0047",
+   "timestamp": 1782153466.0
+  },
+  {
+   "transaction_id": "f4b2dd38bfd5a648ba77b400",
+   "date": "2026-06-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment to Nicollet Federal Credit Union ..0047",
+   "amount": -428.99,
+   "category": "credit_card_payment",
+   "account_last_four": "5512",
+   "timestamp": 1782153466.0
+  },
+  {
+   "transaction_id": "1d755638714224a35bf6bc29",
+   "date": "2026-06-23",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "MIDWEST MOUNTAINEERING MINNEAPOLIS MN",
+   "amount": -179.95,
+   "category": "shopping",
+   "account_last_four": "5512",
+   "timestamp": 1782255772.0
+  },
+  {
+   "transaction_id": "bf8931ebb7e5a7a79c6b3240",
+   "date": "2026-06-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "THE HOME DEPOT #2801 MINNEAPOLIS MN",
+   "amount": -241.62,
+   "category": "home",
+   "account_last_four": "5512",
+   "timestamp": 1782438214.0
+  },
+  {
+   "transaction_id": "d7b35c90e04a2f61a5d8c3e9",
+   "date": "2026-06-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Cub (Lake Street)",
+   "amount": -38.71,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1782422291.0
+  },
+  {
+   "transaction_id": "8afe72417393991d80329c50",
+   "date": "2026-06-26",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "GANDHI MAHAL MINNEAPOLIS MN",
+   "amount": -78.6,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1782499584.0
+  },
+  {
+   "transaction_id": "e83d5a0f71c24b96d8a3f05e",
+   "date": "2026-06-27",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "REI Co-op",
+   "amount": -84.89,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1782572707.0
+  },
+  {
+   "transaction_id": "f80c2b5e4a7e19d32c9e6f05",
+   "date": "2026-06-27",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Town Hall Lanes",
+   "amount": -38.4,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1782595340.0
+  },
+  {
+   "transaction_id": "0b2e8ad377356b34adaf9880",
+   "date": "2026-06-28",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "MN DVS ONLINE TAB RENEWAL ST PAUL MN",
+   "amount": -186.25,
+   "category": "auto",
+   "account_last_four": "5512",
+   "timestamp": 1782658824.0
+  },
+  {
+   "transaction_id": "5e1d8b3a6c9f207e1b4d8a5f",
+   "date": "2026-06-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -287.5,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1782844317.0
+  },
+  {
+   "transaction_id": "63a7e1d0c2f84b96e07b3d48",
+   "date": "2026-06-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Spyhouse Coffee",
+   "amount": -6.6,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1782820007.0
+  },
+  {
+   "transaction_id": "63e8a1f5d2094bc7e85b2f19",
+   "date": "2026-09-16",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Spyhouse Coffee",
+   "amount": -6.6,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1789569000.0
+  },
+  {
+   "transaction_id": "6d3a9f5c8e2b471d0a6f3e9c",
+   "date": "2026-06-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Fidelity SEP-IRA contribution",
+   "amount": 3000.0,
+   "category": "investment",
+   "account_last_four": "4419",
+   "timestamp": 1782863719.0
+  },
+  {
+   "transaction_id": "b0f7c2e9d4a6183b5e0c9f2d",
+   "date": "2026-06-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 287.5,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1782846312.0
+  },
+  {
+   "transaction_id": "bdb951b7a37bb14023e3ed23",
+   "date": "2026-06-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "USPS PO 2645880406 MINNEAPOLIS MN",
+   "amount": -14.85,
+   "category": "shopping",
+   "account_last_four": "5512",
+   "timestamp": 1782841270.0
+  },
+  {
+   "transaction_id": "c8a4f7d2e5b1069a4f8d2c7b",
+   "date": "2026-06-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Prairie Wire",
+   "amount": 1150.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1782845034.0
+  },
+  {
+   "transaction_id": "f9e2b6d0a3c7584f2e9a6c1b",
+   "date": "2026-06-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Fidelity Government Money Market (SPAXX) dividend",
+   "amount": 17.86,
+   "category": "investment",
+   "account_last_four": "4419",
+   "timestamp": 1782843406.0
+  },
+  {
+   "transaction_id": "66f16b381598a85b6de2d6cd",
+   "date": "2026-07-02",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SPYHOUSE COFFEE MINNEAPOLIS MN",
+   "amount": -6.4,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1783019531.0
+  },
+  {
+   "transaction_id": "769ca9cf7e9bfe929255f71f",
+   "date": "2026-10-02",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SPYHOUSE COFFEE MINNEAPOLIS MN",
+   "amount": -6.4,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1790970742.0
+  },
+  {
+   "transaction_id": "469d00d222d8bb3a3da2fc92",
+   "date": "2026-10-27",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SPYHOUSE COFFEE MINNEAPOLIS MN",
+   "amount": -6.4,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1793108183.0
+  },
+  {
+   "transaction_id": "a2d95f4c0b6e3a18f3c0e7b2",
+   "date": "2026-07-02",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Franklin Store)",
+   "amount": -39.84,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1783030198.0
+  },
+  {
+   "transaction_id": "9bf1fd1f2cb5446044459b6f",
+   "date": "2026-07-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "TARGET T-2766 MINNEAPOLIS MN",
+   "amount": -74.8,
+   "category": "shopping",
+   "account_last_four": "5512",
+   "timestamp": 1783117573.0
+  },
+  {
+   "transaction_id": "e7db9ef09455cd760f85c95a",
+   "date": "2026-07-04",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "amount": -36.0,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1783170147.0
+  },
+  {
+   "transaction_id": "c4e70a2f61d85b3e9e2f0c74",
+   "date": "2026-07-07",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "amount": -5.6,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1783423175.0
+  },
+  {
+   "transaction_id": "f05a3c8e71b26d49e83f0c57",
+   "date": "2026-09-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "amount": -5.6,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1788959700.0
+  },
+  {
+   "transaction_id": "0b8f4d61e3a27c59d14b8e2c",
+   "date": "2026-07-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Cub (Lake Street)",
+   "amount": -52.36,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1783636325.0
+  },
+  {
+   "transaction_id": "7b0b68e8b3ff01b38fb3f2b7",
+   "date": "2026-07-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "CVS/PHARMACY #08712 MINNEAPOLIS MN",
+   "amount": -21.33,
+   "category": "health",
+   "account_last_four": "5512",
+   "timestamp": 1783628533.0
+  },
+  {
+   "transaction_id": "8e2a6c09f5b13d74a6c39f0b",
+   "date": "2026-07-10",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "MN DNR State Parks",
+   "amount": -35.0,
+   "category": "travel",
+   "account_last_four": "0047",
+   "timestamp": 1783708124.0
+  },
+  {
+   "transaction_id": "954190fd0074b932397e5d40",
+   "date": "2026-07-10",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "HOLIDAY STATIONSTORE TWO HARBORS MN",
+   "amount": -14.62,
+   "category": "convenience",
+   "account_last_four": "5512",
+   "timestamp": 1783700355.0
+  },
+  {
+   "transaction_id": "c08a4e6d91f3b72e5a0cd8e4",
+   "date": "2026-07-10",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -48.71,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1783686632.0
+  },
+  {
+   "transaction_id": "ed0c5e917d76e70a0c742db6",
+   "date": "2026-07-11",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SQ *SILVER BAY CAFE SILVER BAY MN",
+   "amount": -19.4,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1783788957.0
+  },
+  {
+   "transaction_id": "41d7e9b03c5af2860b4e7c19",
+   "date": "2026-07-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Betty's Pies",
+   "amount": -34.18,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1783896789.0
+  },
+  {
+   "transaction_id": "a1b21152e7f4cd4639130146",
+   "date": "2026-07-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "HOLIDAY STATIONSTORE HINCKLEY MN",
+   "amount": -6.48,
+   "category": "convenience",
+   "account_last_four": "5512",
+   "timestamp": 1783883948.0
+  },
+  {
+   "transaction_id": "e1b57a3c9d02f4685f9a1c3e",
+   "date": "2026-07-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Angry Catfish Bicycle + Coffee Bar",
+   "amount": -6.1,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1784032127.0
+  },
+  {
+   "transaction_id": "d6f30b8a2c7e941d6e1f5a2b",
+   "date": "2026-10-28",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Angry Catfish Bicycle + Coffee Bar",
+   "amount": -6.1,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1793195896.0
+  },
+  {
+   "transaction_id": "1f8c5a2d9e3b647c8f1d5b2e",
+   "date": "2026-07-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -350.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1784140013.0
+  },
+  {
+   "transaction_id": "a2d7b4e9c1f6308d5a2e7c4f",
+   "date": "2026-07-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Prairie Wire",
+   "amount": 1400.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1784164517.0
+  },
+  {
+   "transaction_id": "c6b3e8f1a5d0927b6e3a8d1c",
+   "date": "2026-07-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 350.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1784134412.0
+  },
+  {
+   "transaction_id": "cdb34adcc1b9bbd17a25bd33",
+   "date": "2026-07-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "LONGFELLOW GRILL MINNEAPOLIS MN",
+   "amount": -56.75,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1784128285.0
+  },
+  {
+   "transaction_id": "7e3b9c1d5a8f2e604b1c9d7a",
+   "date": "2026-07-16",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Newspapers.com",
+   "amount": -19.9,
+   "category": "business",
+   "account_last_four": "0047",
+   "timestamp": 1784230058.0
+  },
+  {
+   "transaction_id": "7fb532c18b73a900ada96072",
+   "date": "2026-07-17",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "amount": -140.0,
+   "category": "convenience",
+   "account_last_four": "5512",
+   "timestamp": 1784314026.0
+  },
+  {
+   "transaction_id": "7c3e0d94a8f61b25e2d05a8f",
+   "date": "2026-07-18",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -39.25,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1784381943.0
+  },
+  {
+   "transaction_id": "dc1e157a3e92bf600f6bc230",
+   "date": "2026-07-18",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ACE HARDWARE LONGFELLOW MINNEAPOLIS MN",
+   "amount": -34.27,
+   "category": "home",
+   "account_last_four": "5512",
+   "timestamp": 1784396362.0
+  },
+  {
+   "transaction_id": "b9a24f6e1c7d083a4e8b2f17",
+   "date": "2026-07-21",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Five Watt Coffee",
+   "amount": -17.85,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1784643833.0
+  },
+  {
+   "transaction_id": "ddeb25da41d5803829fed746",
+   "date": "2026-07-21",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "FIVE WATT COFFEE MINNEAPOLIS MN",
+   "amount": -12.5,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1784668982.0
+  },
+  {
+   "transaction_id": "0ad080172a5b3b17938c01f9",
+   "date": "2026-07-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment to Nicollet Federal Credit Union ..0047",
+   "amount": -697.79,
+   "category": "credit_card_payment",
+   "account_last_four": "5512",
+   "timestamp": 1784756787.0
+  },
+  {
+   "transaction_id": "5a0e7c3f8b1d649a7e2c0f5b",
+   "date": "2026-07-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -850.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1784752296.0
+  },
+  {
+   "transaction_id": "8f387d8e65f1e1c232a687bb",
+   "date": "2026-07-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment - Thank You",
+   "amount": 697.79,
+   "category": "payment",
+   "account_last_four": "0047",
+   "timestamp": 1784756787.0
+  },
+  {
+   "transaction_id": "02b02ceba4017982cc28be36",
+   "date": "2026-07-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Great Lakes Dispatch",
+   "amount": 3400.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1784743582.0
+  },
+  {
+   "transaction_id": "e8c2d5a9f4b7316e1d8c5a2f",
+   "date": "2026-07-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 850.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1784752920.0
+  },
+  {
+   "transaction_id": "2f6d8b13e5c94a70b9d3e60c",
+   "date": "2026-07-23",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Longfellow Grill",
+   "amount": -23.18,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1784845301.0
+  },
+  {
+   "transaction_id": "1786ab01e72c282dd30b15c9",
+   "date": "2026-07-24",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "RIVERVIEW THEATER MINNEAPOLIS MN",
+   "amount": -22.0,
+   "category": "entertainment",
+   "account_last_four": "5512",
+   "timestamp": 1784910541.0
+  },
+  {
+   "transaction_id": "5de9ded8f72cd9a31c296bc0",
+   "date": "2026-10-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "RIVERVIEW THEATER MINNEAPOLIS MN",
+   "amount": -22.0,
+   "category": "entertainment",
+   "account_last_four": "5512",
+   "timestamp": 1792974265.0
+  },
+  {
+   "transaction_id": "987a34c57ebd622e1a7a8754",
+   "date": "2026-07-26",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SEA SALT EATERY MINNEAPOLIS MN",
+   "amount": -47.2,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1785091229.0
+  },
+  {
+   "transaction_id": "60a4e2f8c3d71b95f8e2a04b",
+   "date": "2026-07-28",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Target (Lake Street)",
+   "amount": -31.62,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1785274048.0
+  },
+  {
+   "transaction_id": "453d91391f2948f09b26fd97",
+   "date": "2026-07-29",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "M HEALTH FAIRVIEW CLINICS MINNEAPOLIS MN",
+   "amount": -40.0,
+   "category": "medical",
+   "account_last_four": "5512",
+   "timestamp": 1785372332.0
+  },
+  {
+   "transaction_id": "a8c53b0d4f1e962a0d6b4c83",
+   "date": "2026-07-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Spyhouse Coffee",
+   "amount": -6.75,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1785414730.0
+  },
+  {
+   "transaction_id": "3b9e6a1d7c4f852b3a9d6e1c",
+   "date": "2026-07-31",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Fidelity Government Money Market (SPAXX) dividend",
+   "amount": 27.71,
+   "category": "investment",
+   "account_last_four": "4419",
+   "timestamp": 1785534587.0
+  },
+  {
+   "transaction_id": "4b7e1f2c9a35d806c5f1d927",
+   "date": "2026-07-31",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Hi-Lo Diner",
+   "amount": -41.8,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1785542006.0
+  },
+  {
+   "transaction_id": "51febbf39914d468df9cbb63",
+   "date": "2026-07-31",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "MINNESOTA TWINS TICKETS MINNEAPOLIS MN",
+   "amount": -112.0,
+   "category": "entertainment",
+   "account_last_four": "5512",
+   "timestamp": 1785530570.0
+  },
+  {
+   "transaction_id": "b93eff0eda77526bee025971",
+   "date": "2026-08-01",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "amount": -41.0,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1785595594.0
+  },
+  {
+   "transaction_id": "f6d02a9b3e8c147d6b0a8e15",
+   "date": "2026-08-04",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Friendship Store)",
+   "amount": -34.27,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1785887363.0
+  },
+  {
+   "transaction_id": "df04eaff7eeaab8550d76979",
+   "date": "2026-08-06",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Angry Catfish Bicycle + Coffee Bar",
+   "amount": -95.0,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1786059570.0
+  },
+  {
+   "transaction_id": "19e7c4a3b5d2068fe7c4b1d0",
+   "date": "2026-08-07",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Angry Catfish Bicycle + Coffee Bar",
+   "amount": -5.85,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1786111562.0
+  },
+  {
+   "transaction_id": "08d7c2f9a46e1b53f51ea6c4",
+   "date": "2026-09-29",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Angry Catfish Bicycle + Coffee Bar",
+   "amount": -5.85,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1790687100.0
+  },
+  {
+   "transaction_id": "892ccb7a2705d01b7e6aca9d",
+   "date": "2026-08-07",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "HI-LO DINER MINNEAPOLIS MN",
+   "amount": -38.9,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1786116269.0
+  },
+  {
+   "transaction_id": "3a6f395b8b498e5eb7c4bf8f",
+   "date": "2026-08-10",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "TARGET T-2766 MINNEAPOLIS MN",
+   "amount": -62.18,
+   "category": "shopping",
+   "account_last_four": "5512",
+   "timestamp": 1786403720.0
+  },
+  {
+   "transaction_id": "4d7b2e5a8f1c906d3b7e2a5f",
+   "date": "2026-08-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer from Checking 5512",
+   "amount": 212.5,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1786556297.0
+  },
+  {
+   "transaction_id": "85f3b0d1e6a92c4ba1d7f36e",
+   "date": "2026-08-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -41.08,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1786560489.0
+  },
+  {
+   "transaction_id": "8c3f6b0e4a7d521c9e3b6f0a",
+   "date": "2026-08-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet FCU Transfer to Savings 5530",
+   "amount": -212.5,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1786545782.0
+  },
+  {
+   "transaction_id": "f1a5e8c2b6d9304f8a5c2e1d",
+   "date": "2026-08-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Prairie Wire",
+   "amount": 850.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1786548093.0
+  },
+  {
+   "transaction_id": "861ff0c82c8507ad26b76176",
+   "date": "2026-08-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "MERLINS REST MINNEAPOLIS MN",
+   "amount": -68.4,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1786754863.0
+  },
+  {
+   "transaction_id": "e0c69d274b18f5a3d8b2c051",
+   "date": "2026-08-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Cub (Lake Street)",
+   "amount": -48.93,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1786749669.0
+  },
+  {
+   "transaction_id": "3a5d1e8bf72c06e90c4f7b92",
+   "date": "2026-08-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Gandhi Mahal",
+   "amount": -78.6,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1786818383.0
+  },
+  {
+   "transaction_id": "516848c500ff35f659bf87da",
+   "date": "2026-08-15",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "amount": -160.0,
+   "category": "convenience",
+   "account_last_four": "5512",
+   "timestamp": 1786801206.0
+  },
+  {
+   "transaction_id": "e1c91e59ea2ace007e2d4ade",
+   "date": "2026-09-18",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ATM WITHDRAWAL NICOLLET FCU MINNEAPOLIS MN",
+   "amount": -160.0,
+   "category": "convenience",
+   "account_last_four": "5512",
+   "timestamp": 1789779268.0
+  },
+  {
+   "transaction_id": "505fe8fc9a0ab082c02b4723",
+   "date": "2026-08-18",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Riverview Eye Care",
+   "amount": -145.0,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1787066767.0
+  },
+  {
+   "transaction_id": "574d1bdcf9b174bda7171718",
+   "date": "2026-08-20",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "THE HOME DEPOT #2801 MINNEAPOLIS MN",
+   "amount": -164.29,
+   "category": "home",
+   "account_last_four": "5512",
+   "timestamp": 1787264115.0
+  },
+  {
+   "transaction_id": "7e0b4a69c1f83d522e9c5b18",
+   "date": "2026-08-20",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "amount": -11.4,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1787231066.0
+  },
+  {
+   "transaction_id": "d48db6235122b6b73d7f99b6",
+   "date": "2026-08-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "amount": -32.0,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1787425461.0
+  },
+  {
+   "transaction_id": "d8a2f5c106e37b4db4f8e0a3",
+   "date": "2026-08-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -47.86,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1787425149.0
+  },
+  {
+   "transaction_id": "06b3d030a1fdaa445d95f349",
+   "date": "2026-08-24",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment - Thank You",
+   "amount": 473.11,
+   "category": "payment",
+   "account_last_four": "0047",
+   "timestamp": 1787608276.0
+  },
+  {
+   "transaction_id": "29985a6a3d60dad030615693",
+   "date": "2026-08-24",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment to Nicollet Federal Credit Union ..0047",
+   "amount": -473.11,
+   "category": "credit_card_payment",
+   "account_last_four": "5512",
+   "timestamp": 1787608276.0
+  },
+  {
+   "transaction_id": "2c9e6b04a7d15f38e51c3a7d",
+   "date": "2026-08-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Five Watt Coffee",
+   "amount": -6.95,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1787662717.0
+  },
+  {
+   "transaction_id": "1f86c3a20e7d59b4ac0e7352",
+   "date": "2026-09-23",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Five Watt Coffee",
+   "amount": -6.95,
+   "category": "coffee",
+   "account_last_four": "5512",
+   "timestamp": 1790171400.0
+  },
+  {
+   "transaction_id": "e643e6f3913852cac9429a3e",
+   "date": "2026-08-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "CVS/PHARMACY #08712 MINNEAPOLIS MN",
+   "amount": -24.99,
+   "category": "medical",
+   "account_last_four": "5512",
+   "timestamp": 1787696244.0
+  },
+  {
+   "transaction_id": "48e6bcd0a0675bf775d84fe9",
+   "date": "2026-08-27",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": -1625.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1787842690.0
+  },
+  {
+   "transaction_id": "817f4c76fc1372390c8d1a02",
+   "date": "2026-08-27",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Field & Flow",
+   "amount": 6500.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1787851936.0
+  },
+  {
+   "transaction_id": "a920c7a7940284e11a8131cf",
+   "date": "2026-08-27",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": 1625.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1787859043.0
+  },
+  {
+   "transaction_id": "4e9a17c3b05d8f62a7e1d940",
+   "date": "2026-08-31",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Fidelity Government Money Market (SPAXX) dividend",
+   "amount": 27.94,
+   "category": "investment",
+   "account_last_four": "4419",
+   "timestamp": 1788214200.0
+  },
+  {
+   "transaction_id": "b81f6d240c9e3a57e2d0b16f",
+   "date": "2026-09-05",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "amount": -29.0,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1788626100.0
+  },
+  {
+   "transaction_id": "2c7e90b4a3d15f86c09e4a21",
+   "date": "2026-09-07",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -42.16,
+   "category": "gas",
+   "account_last_four": "5512",
+   "timestamp": 1788784800.0
+  },
+  {
+   "transaction_id": "08df929d935b80124ae90b33",
+   "date": "2026-09-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": 325.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1788970816.0
+  },
+  {
+   "transaction_id": "755b3898f60d8e8b0d6a49ce",
+   "date": "2026-09-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Prairie Wire",
+   "amount": 1300.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1788980210.0
+  },
+  {
+   "transaction_id": "edcc83d22870af17ff606c59",
+   "date": "2026-09-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": -325.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1788974939.0
+  },
+  {
+   "transaction_id": "9b2d64e0f1c78a35407ec2b6",
+   "date": "2026-09-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Friendship Store)",
+   "amount": -37.48,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1789423800.0
+  },
+  {
+   "transaction_id": "3113caaf3239617d2adb78b9",
+   "date": "2026-09-16",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Great Lakes Dispatch",
+   "amount": 2600.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1789597350.0
+  },
+  {
+   "transaction_id": "9e41bfc18deea394f830f297",
+   "date": "2026-09-16",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": 650.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1789577575.0
+  },
+  {
+   "transaction_id": "b4b30cf77950a692dbeb76ab",
+   "date": "2026-09-16",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": -650.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1789604525.0
+  },
+  {
+   "transaction_id": "9dc22ba478ac2061b322f146",
+   "date": "2026-09-17",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Merlins Rest",
+   "amount": -62.4,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1789679735.0
+  },
+  {
+   "transaction_id": "c1c48368f109cf285c45c0c7",
+   "date": "2026-09-18",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Tires Plus",
+   "amount": -64.99,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1789749717.0
+  },
+  {
+   "transaction_id": "d4a07b9e35c1f8266f29c0b1",
+   "date": "2026-09-19",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "ACE HARDWARE LONGFELLOW MINNEAPOLIS MN",
+   "amount": -12.49,
+   "category": "home",
+   "account_last_four": "5512",
+   "timestamp": 1789831200.0
+  },
+  {
+   "transaction_id": "07fd240247ce85375ac7b787",
+   "date": "2026-09-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment - Thank You",
+   "amount": 585.91,
+   "category": "payment",
+   "account_last_four": "0047",
+   "timestamp": 1790096494.0
+  },
+  {
+   "transaction_id": "a20858ab99d52ac39a154080",
+   "date": "2026-09-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment to Nicollet Federal Credit Union ..0047",
+   "amount": -585.91,
+   "category": "credit_card_payment",
+   "account_last_four": "5512",
+   "timestamp": 1790096494.0
+  },
+  {
+   "transaction_id": "12f957be824dfcefc155f964",
+   "date": "2026-09-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": -562.5,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1790369801.0
+  },
+  {
+   "transaction_id": "a72e5d0c9b381f6430fc81e9",
+   "date": "2026-09-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Target (Lake Street)",
+   "amount": -33.71,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1790371800.0
+  },
+  {
+   "transaction_id": "b33f15e541ee64c6d15d9605",
+   "date": "2026-09-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": 562.5,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1790371971.0
+  },
+  {
+   "transaction_id": "b99a15126f696442e4430380",
+   "date": "2026-09-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "North Current Media",
+   "amount": 2250.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1790380371.0
+  },
+  {
+   "transaction_id": "5c09f4b7e2a63d18960ad4e3",
+   "date": "2026-09-26",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Sea Salt Eatery",
+   "amount": -46.85,
+   "category": "dining",
+   "account_last_four": "5512",
+   "timestamp": 1790444100.0
+  },
+  {
+   "transaction_id": "e3b61a8d07f45c92d8a0f673",
+   "date": "2026-09-27",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Speedway",
+   "amount": -38.27,
+   "category": "gas",
+   "account_last_four": "5512",
+   "timestamp": 1790532300.0
+  },
+  {
+   "transaction_id": "7a45d9e1c3b06f28a94e5d71",
+   "date": "2026-09-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Fidelity Government Money Market (SPAXX) dividend",
+   "amount": 26.88,
+   "category": "investment",
+   "account_last_four": "4419",
+   "timestamp": 1790807100.0
+  },
+  {
+   "transaction_id": "b6f2e04a8c1d973e27a9d5b4",
+   "date": "2026-09-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Franklin Store)",
+   "amount": -28.36,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1790804700.0
+  },
+  {
+   "transaction_id": "4d1b07a9e6f32c58a09c6e3f",
+   "date": "2026-10-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Franklin Store)",
+   "amount": -36.92,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1791058200.0
+  },
+  {
+   "transaction_id": "c2e83b6f0d95a147f4b19e60",
+   "date": "2026-10-03",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Al's Breakfast",
+   "amount": -24.8,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1791038400.0
+  },
+  {
+   "transaction_id": "6551e4b8ea6cb6da88d7ad86",
+   "date": "2026-10-06",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Prairie Wire",
+   "amount": 1200.0,
+   "category": "income",
+   "account_last_four": "5512",
+   "timestamp": 1791326619.0
+  },
+  {
+   "transaction_id": "7b4e0bfb70ff4a59988a84f5",
+   "date": "2026-10-06",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": -300.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1791314157.0
+  },
+  {
+   "transaction_id": "a2807a7e42a23eaf7b66beb5",
+   "date": "2026-10-06",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Nicollet Federal Credit Union",
+   "amount": 300.0,
+   "category": "transfer",
+   "account_last_four": "5530",
+   "timestamp": 1791297165.0
+  },
+  {
+   "transaction_id": "f9c64e2b1a07d38503e7b81d",
+   "date": "2026-10-08",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Peace Coffee (Wonderland Park, Minnehaha Ave)",
+   "amount": -6.85,
+   "category": "coffee",
+   "account_last_four": "0047",
+   "timestamp": 1791465600.0
+  },
+  {
+   "transaction_id": "3e0a8d5c7f19b246c1d82f57",
+   "date": "2026-10-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -44.31,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1791565800.0
+  },
+  {
+   "transaction_id": "85b3f1e60c4d2a97316fd8a0",
+   "date": "2026-10-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Target (Lake Street)",
+   "amount": -29.47,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1791582300.0
+  },
+  {
+   "transaction_id": "9f0b4e8c0316551c822f14ed",
+   "date": "2026-10-09",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Lakehead Books",
+   "amount": -100.0,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1791559664.0
+  },
+  {
+   "transaction_id": "1a9f5c3e8d26b0476e2d07fb",
+   "date": "2026-10-10",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Panera Bread",
+   "amount": -27.46,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1791649320.0
+  },
+  {
+   "transaction_id": "d06e2a9c4b78f51327a5e0b8",
+   "date": "2026-10-10",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -8.58,
+   "category": "convenience",
+   "account_last_four": "0047",
+   "timestamp": 1791636900.0
+  },
+  {
+   "transaction_id": "e74c0b8a2f5d936158d1a3c6",
+   "date": "2026-10-10",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Holiday",
+   "amount": -4.29,
+   "category": "convenience",
+   "account_last_four": "0047",
+   "timestamp": 1791659520.0
+  },
+  {
+   "transaction_id": "74c2974e756e76677d511db6",
+   "date": "2026-10-12",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Harbor Light Cabins",
+   "amount": -424.3,
+   "category": "travel",
+   "account_last_four": "0047",
+   "timestamp": 1791827592.0
+  },
+  {
+   "transaction_id": "6b28e5f0a3c71d94092fd4b7",
+   "date": "2026-10-13",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Cub (Lake Street)",
+   "amount": -38.56,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1791924120.0
+  },
+  {
+   "transaction_id": "319c0e2546da2ce8d2e1b591",
+   "date": "2026-10-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Lakewalk Inn",
+   "amount": -371.88,
+   "category": "travel",
+   "account_last_four": "0047",
+   "timestamp": 1792022757.0
+  },
+  {
+   "transaction_id": "a03bedb615b99acb8e4ca494",
+   "date": "2026-10-14",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Delta Air Lines",
+   "amount": -289.4,
+   "category": "travel",
+   "account_last_four": "0047",
+   "timestamp": 1791995987.0
+  },
+  {
+   "transaction_id": "2f7b4a0d9e63c5180ad5e926",
+   "date": "2026-10-17",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Gandhi Mahal",
+   "amount": -66.4,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1792281300.0
+  },
+  {
+   "transaction_id": "89174c5d4b52324c485111fc",
+   "date": "2026-10-20",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Riverside Analytical",
+   "amount": -384.0,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1792540682.0
+  },
+  {
+   "transaction_id": "c58e1d7b3a092f64b17e8a05",
+   "date": "2026-10-21",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Seward Community Co-op (Friendship Store)",
+   "amount": -33.26,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1792621200.0
+  },
+  {
+   "transaction_id": "1c9d8572025c47201589e8d8",
+   "date": "2026-10-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment - Thank You",
+   "amount": 204.76,
+   "category": "payment",
+   "account_last_four": "0047",
+   "timestamp": 1792683591.0
+  },
+  {
+   "transaction_id": "bf36c753b554041c0762e4b7",
+   "date": "2026-10-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Payment to Nicollet Federal Credit Union ..0047",
+   "amount": -204.76,
+   "category": "credit_card_payment",
+   "account_last_four": "5512",
+   "timestamp": 1792683591.0
+  },
+  {
+   "transaction_id": "c6ad9e5a3df2ead6197ad55c",
+   "date": "2026-10-22",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Northstar Environmental",
+   "amount": -260.0,
+   "category": "shopping",
+   "account_last_four": "0047",
+   "timestamp": 1792692545.0
+  },
+  {
+   "transaction_id": "97a2f6c0e4d13b85d06b19e3",
+   "date": "2026-10-23",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Longfellow Grill",
+   "amount": -54.36,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1792798800.0
+  },
+  {
+   "transaction_id": "0e5d8b2a7c14f69e92a6cf31",
+   "date": "2026-10-24",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "SQ *MIDTOWN FARMERS MARKET MINNEAPOLIS MN",
+   "amount": -26.0,
+   "category": "groceries",
+   "account_last_four": "5512",
+   "timestamp": 1792850700.0
+  },
+  {
+   "transaction_id": "b3c09e7f2d58a146f81e4d2c",
+   "date": "2026-10-24",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Costco Gasoline",
+   "amount": -39.86,
+   "category": "gas",
+   "account_last_four": "0047",
+   "timestamp": 1792866900.0
+  },
+  {
+   "transaction_id": "58f1a6d3c09e2b74e06c9a1b",
+   "date": "2026-10-25",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Hi-Lo Diner",
+   "amount": -49.42,
+   "category": "dining",
+   "account_last_four": "0047",
+   "timestamp": 1792967100.0
+  },
+  {
+   "transaction_id": "d2a96e04b7f15c38e70b4fa5",
+   "date": "2026-10-27",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Oxendale's Market",
+   "amount": -17.84,
+   "category": "groceries",
+   "account_last_four": "0047",
+   "timestamp": 1793132400.0
+  },
+  {
+   "transaction_id": "cdd896237f1ce8e94c4c9346",
+   "date": "2026-06-30",
+   "user_id": "3071a6457ee1723cf57d7c22",
+   "merchant": "Online transfer to Fidelity Investments ..4419",
+   "amount": -3000.0,
+   "category": "transfer",
+   "account_last_four": "5512",
+   "timestamp": 1782863719.0
+  }
+ ]
+}

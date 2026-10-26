@@ -1,0 +1,1334 @@
+{
+ "events": [
+  {
+   "event_id": "6d1f84b07e2ca935f0b8d4e1",
+   "title": "North Current edit meeting",
+   "start_datetime": 1777993200.0,
+   "end_datetime": 1777998600.0,
+   "tag": "work",
+   "description": null,
+   "location": "North Current, 401 N 3rd St, Suite 520, Minneapolis, MN 55401",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "4e7a0c2db9f563e1a8c4d02b",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1778026500.0,
+   "end_datetime": 1778029200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "9a4f2c7e1b0d83e5f6a2c9d1",
+   "title": "Call - Marcus (Dispatch)",
+   "start_datetime": 1778176800.0,
+   "end_datetime": 1778178600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Phone",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "c4e08b2f1d7a9e530c6bf4a8",
+   "title": "Carpenter: Leif Sandberg (back steps)",
+   "start_datetime": 1778612400.0,
+   "end_datetime": 1778621400.0,
+   "tag": "personal",
+   "description": "Side gate is unlatched. He'll come around back.",
+   "location": "Home, 4127 34th Ave S",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "9a0ed6b32f7ce1845a9d0b6f",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1778631300.0,
+   "end_datetime": 1778634000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "d2b741e9a0f3c6d8e2b51a74",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1779236100.0,
+   "end_datetime": 1779238800.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "9be20f4c5d71a83e6c09b2f5",
+   "title": "Fact-check column due",
+   "start_datetime": 1779253200.0,
+   "end_datetime": 1779339600.0,
+   "tag": "work",
+   "description": "May column: 'Mississippi is America's dirtiest river.' Copy to Hana.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "6c1df3a8e72b0d9f4c6ea83b",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1779840900.0,
+   "end_datetime": 1779843600.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "e5b8d1f3a6c09e27b4d8f1a6",
+   "title": "Dispatch: Ice-out on the Big Lake due",
+   "start_datetime": 1780030800.0,
+   "end_datetime": 1780117200.0,
+   "tag": "work",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "c27a9e053bd1f6480ac37e92",
+   "title": "North Current edit meeting",
+   "start_datetime": 1780412400.0,
+   "end_datetime": 1780417800.0,
+   "tag": "work",
+   "description": null,
+   "location": "North Current, 401 N 3rd St, Suite 520, Minneapolis, MN 55401",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "b5f09e2c4a1d7f63b0e9c25a",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1780445700.0,
+   "end_datetime": 1780448400.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "7e4c0a9b2d6f1e83c5a7b940",
+   "title": "Ingrid's last day of school",
+   "start_datetime": 1780635600.0,
+   "end_datetime": 1780722000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Grove Elementary",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "13a8c7e4f05bd29e63a18c4f",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1780704900.0,
+   "end_datetime": 1780708500.0,
+   "tag": "personal",
+   "description": "To the falls after dinner.",
+   "location": "Minnehaha Falls",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "3f8c1e6a90d74b25e8a1f05c",
+   "title": "Drop off kayak - Northwoods Paddle Repair",
+   "start_datetime": 1780849800.0,
+   "end_datetime": 1780851600.0,
+   "tag": "personal",
+   "description": "Jammed skeg cable. Open Sundays 11 to 4. They'll write up a ticket and email a quote before any work.",
+   "location": "Northwoods Paddle Repair",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "e6d92b0a8c5f1e47d6b30a92",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1781050500.0,
+   "end_datetime": 1781053200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "72a9d5c3e0f84b16a7d29ce5",
+   "title": "Pick up kayak - Northwoods Paddle Repair",
+   "start_datetime": 1781298000.0,
+   "end_datetime": 1781299800.0,
+   "tag": "personal",
+   "description": "Ticket 2241, new skeg cable. $68.50.",
+   "location": "Northwoods Paddle Repair",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "5c0be4d8f93a26e1b7c50a9d",
+   "title": "St. Croix paddle, Taylors Falls",
+   "start_datetime": 1781438400.0,
+   "end_datetime": 1781472600.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Interstate State Park, Taylors Falls",
+   "attendees": [
+    "Lisa Moberg",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "d58e2a7fb4c06193e5d2af07",
+   "title": "Estimated taxes due",
+   "start_datetime": 1781499600.0,
+   "end_datetime": 1781586000.0,
+   "tag": "personal",
+   "description": "Q2 federal and Minnesota estimates from savings 5530: IRS $3,050.00, Minnesota $780.00.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "80b4e5f13d9ca627f0e8b5d3",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1781655300.0,
+   "end_datetime": 1781658000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "51c8d3a60e9f7b24c5e108a3",
+   "title": "Fact-check column due",
+   "start_datetime": 1781672400.0,
+   "end_datetime": 1781758800.0,
+   "tag": "work",
+   "description": "June column: 'Ice-out came a month early on every Minnesota lake.' Copy to Hana.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "c03a9e5f7b64d2c10a8fe5b3",
+   "title": "Dinner at Kari and Tom's",
+   "start_datetime": 1781998200.0,
+   "end_datetime": 1782009000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Kari and Tom's, 34th Ave S",
+   "attendees": [
+    "Ingrid Brandt",
+    "Tom Haugen",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "c3f7a28e6b04d9e15c3a72f0",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1782260100.0,
+   "end_datetime": 1782262800.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "a1f6c3e89d04b725c8e31f5a",
+   "title": "SEJ webinar - records requests",
+   "start_datetime": 1782320400.0,
+   "end_datetime": 1782325800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Online (SEJ join link)",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "5e0c1d96f7a3b48e2d0f9c61",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1782864900.0,
+   "end_datetime": 1782867600.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "2c7a9e4b6f1d05a83c2e7b9f",
+   "title": "Call - Marcus re beach closures",
+   "start_datetime": 1783353600.0,
+   "end_datetime": 1783356300.0,
+   "tag": "work",
+   "description": null,
+   "location": "Phone",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "a9b27f0ec3d561a8e9f40b27",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1783469700.0,
+   "end_datetime": 1783472400.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "b1d58e3f6a02c97e4d1b0a6c",
+   "title": "Toby's birthday",
+   "start_datetime": 1783486800.0,
+   "end_datetime": 1783573200.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "08e5b1c7f93d2a64e0d815bf",
+   "title": "North Current edit meeting",
+   "start_datetime": 1783522800.0,
+   "end_datetime": 1783528200.0,
+   "tag": "work",
+   "description": null,
+   "location": "North Current, 401 N 3rd St, Suite 520, Minneapolis, MN 55401",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "a1f56c3e9d07b84a2f5ce639",
+   "title": "Call Toby for his birthday",
+   "start_datetime": 1783557000.0,
+   "end_datetime": 1783558800.0,
+   "tag": "personal",
+   "description": "He's off at 6 Bozeman time.",
+   "location": "Phone",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "8d4f2a60e9b3c17e05d8f6a4",
+   "title": "Ben Arroyo stopping by with Ledger scans",
+   "start_datetime": 1783630800.0,
+   "end_datetime": 1783634400.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Home, 4127 34th Ave S",
+   "attendees": [
+    "Ben Arroyo",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "2d8b6f1ea03c94e7b52a18d6",
+   "title": "Camping - Tettegouche State Park",
+   "start_datetime": 1783659600.0,
+   "end_datetime": 1783918740.0,
+   "tag": "personal",
+   "description": "Site 18, drive-in campground.",
+   "location": "Tettegouche State Park, Silver Bay, MN",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "2f6ed1c90a7be358f2c6a4d1",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1784074500.0,
+   "end_datetime": 1784077200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "f68e0c3d5a1be2f9c7d04b85",
+   "title": "Electrician: Nate Okafor",
+   "start_datetime": 1784206800.0,
+   "end_datetime": 1784212200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Home, 4127 34th Ave S",
+   "attendees": [
+    "Nate Okafor",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "e9f316b5a2c0d74e8f1a3b06",
+   "title": "Paddlers club night: shoulder care talk",
+   "start_datetime": 1784678400.0,
+   "end_datetime": 1784683800.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Nokomis Community Center",
+   "attendees": [
+    "Lisa Moberg",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "e0f74a2b96c3d15e8f40a7b6",
+   "title": "Fact-check column due",
+   "start_datetime": 1784696400.0,
+   "end_datetime": 1784782800.0,
+   "tag": "work",
+   "description": "July column: 'Minnesota lost half its wetlands since 2000.' Copy to Hana.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "97b2d4f6a8c0e1357b9d2f4a",
+   "title": "Lunch w/ Joel Ostrander",
+   "start_datetime": 1784826000.0,
+   "end_datetime": 1784830500.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Longfellow Grill",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "7f3d0a8c5e2b14f96d7a3c0e",
+   "title": "Field & Flow final due: Canoe Country's Quiet Lakes",
+   "start_datetime": 1784869200.0,
+   "end_datetime": 1784955600.0,
+   "tag": "work",
+   "description": "Final to features desk in the shared doc.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "d74c3a0f9e2b5c16d8a3f70e",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1785284100.0,
+   "end_datetime": 1785286800.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "b1e6c4a9d7f3028e5b1c6d4a",
+   "title": "Dispatch: beach closures piece due",
+   "start_datetime": 1785474000.0,
+   "end_datetime": 1785560400.0,
+   "tag": "work",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "f4b92d60a1e8c37f594b0d2a",
+   "title": "North Current edit meeting",
+   "start_datetime": 1785855600.0,
+   "end_datetime": 1785861000.0,
+   "tag": "work",
+   "description": null,
+   "location": "North Current, 401 N 3rd St, Suite 520, Minneapolis, MN 55401",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "4b93d7e2c6a01f58e9b3a0d6",
+   "title": "National Night Out",
+   "start_datetime": 1785880800.0,
+   "end_datetime": 1785895200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "34th Ave S",
+   "attendees": [
+    "Ingrid Brandt",
+    "Tom Haugen",
+    "Denise Harlow",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "0e8ab5d2c4f91736e0b82ad5",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1786493700.0,
+   "end_datetime": 1786496400.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "e59a2c07d4b81f6e3a0c9d25",
+   "title": "Maren visiting",
+   "start_datetime": 1786683600.0,
+   "end_datetime": 1786942800.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "3a8f6d1e0c95b2a74e8d3f61",
+   "title": "Pick up Maren at MSP",
+   "start_datetime": 1786749000.0,
+   "end_datetime": 1786752000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "MSP Airport",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "d20b7e5a9c4f3e18b6d0a27c",
+   "title": "Dinner at Gandhi Mahal",
+   "start_datetime": 1786833000.0,
+   "end_datetime": 1786838400.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Gandhi Mahal, 3009 27th Ave S",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "6c3e9b0f2a7d5c81e4f6b093",
+   "title": "Drop Maren at MSP",
+   "start_datetime": 1786902300.0,
+   "end_datetime": 1786905000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "MSP Airport",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "2b6e9d14f0a8c37e5b1f92d6",
+   "title": "Eye exam",
+   "start_datetime": 1787083200.0,
+   "end_datetime": 1787086800.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Riverview Eye Care, 3826 E 42nd St",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "f1d68c3a2e0b9f47a1c5d68e",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1787098500.0,
+   "end_datetime": 1787101200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "2c95b07e1f8a4d63e9b2c051",
+   "title": "Fact-check column due",
+   "start_datetime": 1787115600.0,
+   "end_datetime": 1787202000.0,
+   "tag": "work",
+   "description": "August column: 'Downtown nights are 15°F hotter.' Copy to Hana.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "a1e57f3c04d9b862e3a05c7b",
+   "title": "Ben Arroyo photo show opening",
+   "start_datetime": 1787353200.0,
+   "end_datetime": 1787360400.0,
+   "tag": "personal",
+   "description": "Ben's Ledger years show. Opening 6 to 8.",
+   "location": "Northrup King Building, 1500 Jackson St NE, Minneapolis",
+   "attendees": [
+    "Ingrid Brandt",
+    "Ben Arroyo",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "9a4e0c71d6b32f85e09c4a1b",
+   "title": "Split Rock paddle (day trip)",
+   "start_datetime": 1787402700.0,
+   "end_datetime": 1787439600.0,
+   "tag": "personal",
+   "description": "Check the marine forecast Friday night.",
+   "location": "Split Rock Lighthouse State Park, Two Harbors, MN",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "6a3ce9f0b72d4e18c6a20f9b",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1787703300.0,
+   "end_datetime": 1787706000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "3a60e7f2c9d418b5a2f76ec0",
+   "title": "North Current edit meeting",
+   "start_datetime": 1788274800.0,
+   "end_datetime": 1788280200.0,
+   "tag": "work",
+   "description": null,
+   "location": "North Current, 401 N 3rd St, Suite 520, Minneapolis, MN 55401",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "b8e14d7fa36c02e9b5f8c13a",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1788308100.0,
+   "end_datetime": 1788310800.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "f8c61a0d5e3b92f7c8a14d0e",
+   "title": "Ingrid's first day with students",
+   "start_datetime": 1788843600.0,
+   "end_datetime": 1788930000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Grove Elementary",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "47f9b0c2e6a1d83f5b07e9c4",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1788912900.0,
+   "end_datetime": 1788915600.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "1fa0c4e6d8b732f9a5c1e70d",
+   "title": "Denise's 70th open house",
+   "start_datetime": 1789326000.0,
+   "end_datetime": 1789336800.0,
+   "tag": "personal",
+   "description": "Open house 2 to 5. No gifts.",
+   "location": "Denise Harlow's, 34th Ave S",
+   "attendees": [
+    "Ingrid Brandt",
+    "Denise Harlow",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "38b7f2e10a6dc94f7e3b15c9",
+   "title": "Hollis Fellowship application due",
+   "start_datetime": 1789448400.0,
+   "end_datetime": 1789534800.0,
+   "tag": "work",
+   "description": "Portal closes 11:59 p.m. CT.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "1b4af9e672d0c8e53b1f06a9",
+   "title": "Estimated taxes due",
+   "start_datetime": 1789448400.0,
+   "end_datetime": 1789534800.0,
+   "tag": "personal",
+   "description": "Q3 federal and Minnesota estimates from savings 5530: IRS $3,050.00, Minnesota $780.00.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "3d8bf6a1c05e27d9b3e48f1c",
+   "title": "Help Bev Engstrom move the window AC",
+   "start_datetime": 1789510500.0,
+   "end_datetime": 1789513200.0,
+   "tag": "personal",
+   "description": "Window unit down to her basement. Bring the dolly.",
+   "location": "Bev Engstrom's",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "e2a56f1b0d8c3e94a7f2b60d",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1789517700.0,
+   "end_datetime": 1789520400.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "8b2e5f9c1a7d3460c5f8b2e9",
+   "title": "Ledger dinner - Merlins Rest",
+   "start_datetime": 1789687800.0,
+   "end_datetime": 1789698600.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Merlins Rest, 3601 E Lake St, Minneapolis",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "9c3e71b0a5d84f26c19e7b3d",
+   "title": "Oil change - Tires Plus",
+   "start_datetime": 1789736400.0,
+   "end_datetime": 1789740000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Tires Plus, E Lake St, Minneapolis",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "9d0bc4e7f25a8016d3c9e4a7",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1790122500.0,
+   "end_datetime": 1790125200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "a7d46e1c03b9f582d7a04e6f",
+   "title": "Fact-check column due",
+   "start_datetime": 1790139600.0,
+   "end_datetime": 1790226000.0,
+   "tag": "work",
+   "description": "September column: 'Superior is warming faster than any lake on Earth.' Copy to Hana.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "79e4b1d0f3c8a65bd2e90f17",
+   "title": "Tree crew: boulevard elm",
+   "start_datetime": 1790253000.0,
+   "end_datetime": 1790269200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Home, 4127 34th Ave S",
+   "attendees": [
+    "Ingrid Brandt",
+    "Tom Haugen",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "c4e81a07f39d2b56e0a7c3d1",
+   "title": "Creek cleanup - Minnehaha Creek",
+   "start_datetime": 1790431200.0,
+   "end_datetime": 1790442000.0,
+   "tag": "personal",
+   "description": "Longfellow Neighbors. Gloves, boots, water.",
+   "location": "Minnehaha Park, by the falls pavilion",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "3b6fa9d1e40c7e25b8d601f3",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1790727300.0,
+   "end_datetime": 1790730000.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "6b1f9d3e7a2c4085e9d1b7f3",
+   "title": "Call - Dr. Marchand",
+   "start_datetime": 1790794800.0,
+   "end_datetime": 1790798400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Phone: (218) 555-0141",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "5c92a7e0d4b13f8c6a92e7d0",
+   "title": "Salt story art planning w/ Lena Fischer",
+   "start_datetime": 1790870400.0,
+   "end_datetime": 1790873100.0,
+   "tag": "work",
+   "description": null,
+   "location": "North Current, 401 N 3rd St, Suite 520, Minneapolis",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "d5c863a90e7fb4d21c6af83e",
+   "title": "Fire pit at Kari and Tom's",
+   "start_datetime": 1791072000.0,
+   "end_datetime": 1791081000.0,
+   "tag": "personal",
+   "description": "Backyard fire if it stays dry. Bring cider.",
+   "location": "Kari and Tom's, 34th Ave S",
+   "attendees": [
+    "Ingrid Brandt",
+    "Tom Haugen",
+    "Denise Harlow",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "2d6ac8f1b05e93d7a4f0e18c",
+   "title": "Minnesota Paddlers season potluck",
+   "start_datetime": 1791151200.0,
+   "end_datetime": 1791158400.0,
+   "tag": "personal",
+   "description": "Season wrap. Lisa organizing. Bring a dish.",
+   "location": "Minnehaha Regional Park, picnic pavilion",
+   "attendees": [
+    "Lisa Moberg",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "5f2b8e0c3a9d7146e1b4c8a2",
+   "title": "North Current edit meeting",
+   "start_datetime": 1791298800.0,
+   "end_datetime": 1791304200.0,
+   "tag": "work",
+   "description": null,
+   "location": "North Current, 401 N 3rd St, Suite 520, Minneapolis, MN 55401",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "c0a75e3d8f1be9620c4ad7b5",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1791332100.0,
+   "end_datetime": 1791334800.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "2e7b4f90c13a68d5e2b7f4a9",
+   "title": "Pick up bottle kits - Riverside Analytical",
+   "start_datetime": 1791399600.0,
+   "end_datetime": 1791401400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Riverside Analytical, Coon Rapids",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "9a1d5c83f62e04b7a9d1c5e8",
+   "title": "Pick up kits - Northstar Environmental",
+   "start_datetime": 1791473400.0,
+   "end_datetime": 1791475200.0,
+   "tag": "work",
+   "description": null,
+   "location": "Northstar Environmental, Bloomington",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "7e3c9a5f2d8b1e46c7a3f9d5",
+   "title": "MLWD media call",
+   "start_datetime": 1791558000.0,
+   "end_datetime": 1791561600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Zoom",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "5e1b8d3f0a7c24e9b65d10f3",
+   "title": "Sampling day",
+   "start_datetime": 1791639000.0,
+   "end_datetime": 1791660600.0,
+   "tag": "work",
+   "description": "Cooler, ice, both labs' bottle kits.",
+   "location": "Corliss Lake boat launch",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "d63f08b2a5c71e49d63b0f2c",
+   "title": "Drop-off - Riverside Analytical",
+   "start_datetime": 1791813600.0,
+   "end_datetime": 1791815400.0,
+   "tag": "work",
+   "description": null,
+   "location": "Riverside Analytical, Coon Rapids",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "47c2e9a0b8f3d61c47e2a9b5",
+   "title": "Drop-off - Northstar Environmental",
+   "start_datetime": 1791819900.0,
+   "end_datetime": 1791821700.0,
+   "tag": "work",
+   "description": null,
+   "location": "Northstar Environmental, Bloomington",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "a7f2d4e6b18c0935d2a7e4f8",
+   "title": "Ingrid's book fair",
+   "start_datetime": 1791867600.0,
+   "end_datetime": 1792213200.0,
+   "tag": "personal",
+   "description": "Family night Thursday until 7.",
+   "location": "Minnehaha Grove Elementary",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "58d2f0b6a3e9c14d7f502b8e",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1791936900.0,
+   "end_datetime": 1791939600.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "c7f2a94e1d06b583e2a9c41f",
+   "title": "Flu shot - CVS (Target, Lake St)",
+   "start_datetime": 1791998400.0,
+   "end_datetime": 1791999300.0,
+   "tag": "personal",
+   "description": null,
+   "location": "CVS Pharmacy (inside Target, Lake Street)",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "b6e205f7a3d9c80b4e6f19a3",
+   "title": "Storm windows at Denise's",
+   "start_datetime": 1792249200.0,
+   "end_datetime": 1792254600.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Denise Harlow's, 34th Ave S",
+   "attendees": [
+    "Denise Harlow",
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "4f03c8b5e2d79a160f3eb8c4",
+   "title": "Fact-check column due",
+   "start_datetime": 1792472400.0,
+   "end_datetime": 1792558800.0,
+   "tag": "work",
+   "description": "October column: 'Monarchs crashed 90% this year.' Final copy to Hana for Lena's layout.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "a4e17b9cd06f3a85e2d7c09b",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1792541700.0,
+   "end_datetime": 1792544400.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "1f9ce3a05d6bb72e49c1f8a6",
+   "title": "Walk with Ingrid",
+   "start_datetime": 1793146500.0,
+   "end_datetime": 1793149200.0,
+   "tag": "personal",
+   "description": null,
+   "location": "Minnehaha Parkway",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "0c7be4f19a28d3e65c0a71f4",
+   "title": "Salt package: rough layout PDF from Lena",
+   "start_datetime": 1793163600.0,
+   "end_datetime": 1793250000.0,
+   "tag": "work",
+   "description": "Rough layout due from Lena.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "4e9b1d73a0f5c826d3b7e05a",
+   "title": "Halloween: trick-or-treat on 34th Ave S",
+   "start_datetime": 1793485800.0,
+   "end_datetime": 1793496600.0,
+   "tag": "personal",
+   "description": "Porch light on. Ingrid bought full-size bars; last year we ran out by 7:15.",
+   "location": "Home, 4127 34th Ave S",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "c4a8e1f7092d6b3e5a7c9f12",
+   "title": "Owen in Duluth (work)",
+   "start_datetime": 1793772000.0,
+   "end_datetime": 1794031140.0,
+   "tag": "work",
+   "description": null,
+   "location": "Duluth, MN",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "1e7b3d9f5c08a2e64b9d7c31",
+   "title": "Flight DL 3614 MSP to DLH",
+   "start_datetime": 1793806800.0,
+   "end_datetime": 1793810280.0,
+   "tag": "work",
+   "description": "Delta, booking QK4T7B",
+   "location": "MSP Terminal 1",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "8d3c6a0f2e9b71d4c5a8e06b",
+   "title": "Lakewalk Inn, Canal Park",
+   "start_datetime": 1793826000.0,
+   "end_datetime": 1793984400.0,
+   "tag": "work",
+   "description": "Confirmation LWI-58217",
+   "location": "Lakewalk Inn, Canal Park, Duluth",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "f2a9c47e1b6d083f7e2c5a98",
+   "title": "Interview - Dr. Marchand",
+   "start_datetime": 1793892600.0,
+   "end_datetime": 1793899800.0,
+   "tag": "work",
+   "description": null,
+   "location": "Lake Superior Freshwater Institute, Room 214",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "f6b2a8d4c0e9137f5b2d8a6c",
+   "title": "Pickup - Lakehead Books",
+   "start_datetime": 1793912400.0,
+   "end_datetime": 1793914200.0,
+   "tag": "personal",
+   "description": "Balance $325.",
+   "location": "Lakehead Books, Duluth",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "35e8b1d7c0a94f26e3b8d5c1",
+   "title": "Flight DL 3627 DLH to MSP",
+   "start_datetime": 1794006900.0,
+   "end_datetime": 1794010320.0,
+   "tag": "work",
+   "description": "Return leg, booking QK4T7B.",
+   "location": "Duluth International Airport",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "e5a03c8f91d7b62e4f0c8a3d",
+   "title": "Hollis interview (video)",
+   "start_datetime": 1794510000.0,
+   "end_datetime": 1794513600.0,
+   "tag": "work",
+   "description": null,
+   "location": "Zoom, home office",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "e93d5b08c6f2a14e7d953b0c",
+   "title": "Salt package: art list and photo selects to Lena",
+   "start_datetime": 1794549600.0,
+   "end_datetime": 1794636000.0,
+   "tag": "work",
+   "description": "Art list and photo selects to Lena.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "a9d4f1b7e3c6582aa9f4d1c7",
+   "title": "Salt in the Lakes due to Hana",
+   "start_datetime": 1795154400.0,
+   "end_datetime": 1795240800.0,
+   "tag": "work",
+   "description": "About 3,000 words.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "3a9e7c1f5d0b84a2e6c9f37b",
+   "title": "Hold - away (private)",
+   "start_datetime": 1795212000.0,
+   "end_datetime": 1795366800.0,
+   "tag": "personal",
+   "description": "Harbor Light, confirmation HL-1120-BR.",
+   "location": "Grand Marais",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "7d0e5b2a94f13c68e2b1a0f4",
+   "title": "30th anniversary",
+   "start_datetime": 1795327200.0,
+   "end_datetime": 1795413600.0,
+   "tag": "personal",
+   "description": null,
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "f08e3b6c5d9a1e27c40f8b3d",
+   "title": "Maren + Toby fly in - Thanksgiving at home",
+   "start_datetime": 1795586400.0,
+   "end_datetime": 1795672800.0,
+   "tag": "personal",
+   "description": "Flights land 2:05 and 4:40.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "07d3e9b4f2a6c1580d3b7a9e",
+   "title": "MSP pickups: Maren 2:05 PM, Toby 4:40",
+   "start_datetime": 1795637100.0,
+   "end_datetime": 1795650600.0,
+   "tag": "personal",
+   "description": "Both airport runs. Wait in the cell phone lot with Maren until Toby lands.",
+   "location": "MSP Airport",
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "b72e0d4a5c9f13e86d07a4b1",
+   "title": "Thanksgiving dinner",
+   "start_datetime": 1795734000.0,
+   "end_datetime": 1795744800.0,
+   "tag": "personal",
+   "description": "Ingrid: apple pie and wild rice. Maren: pecan pie. Toby: pumpkin pie, baked here, plus the whipped cream. Owen: cranberries.",
+   "location": "Home, 4127 34th Ave S",
+   "attendees": [
+    "Owen Brandt",
+    "Ingrid Brandt"
+   ]
+  },
+  {
+   "event_id": "5f2a7c9e0b6de831a4f6c27b",
+   "title": "Salt package: first pages out for fact read",
+   "start_datetime": 1796018400.0,
+   "end_datetime": 1796104800.0,
+   "tag": "work",
+   "description": "First pages for the fact read.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "b16e3f0d8a4c25e79b1fd063",
+   "title": "Salt package: final proofs",
+   "start_datetime": 1796277600.0,
+   "end_datetime": 1796364000.0,
+   "tag": "work",
+   "description": "From Lena's November layout schedule. Off to the printer Tue Dec 8.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  },
+  {
+   "event_id": "86f20d3ba5e94c17f2a8d93e",
+   "title": "Estimated taxes due",
+   "start_datetime": 1799992800.0,
+   "end_datetime": 1800079200.0,
+   "tag": "personal",
+   "description": "Q4 2026 federal and Minnesota estimates from savings 5530.",
+   "location": null,
+   "attendees": [
+    "Owen Brandt"
+   ]
+  }
+ ]
+}

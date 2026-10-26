@@ -1,0 +1,3010 @@
+{
+ "users": [
+  {
+   "user_id": "1172e1f099f239fa71426b06",
+   "name": "Grace Liu",
+   "email": "grace.liu@lakeshorefreight.com",
+   "member_since": null,
+   "linked_accounts_count": 4,
+   "status": "Active",
+   "ssn": null,
+   "date_of_birth": null,
+   "mothers_maiden_name": null,
+   "phone": null
+  }
+ ],
+ "accounts": [
+  {
+   "account_id": "acct_0732be705fb0e3178f9a",
+   "user_id": "1172e1f099f239fa71426b06",
+   "institution_name": "Lakeview Savings Bank",
+   "account_type": "checking",
+   "last_four": "4402",
+   "balance": 6840.0,
+   "status": "Active",
+   "opening_balance": 8774.95
+  },
+  {
+   "account_id": "05a5d41662ab7d83e599310c",
+   "user_id": "1172e1f099f239fa71426b06",
+   "institution_name": "Lakeview Savings Bank",
+   "account_type": "savings",
+   "last_four": "4419",
+   "balance": 31560.0,
+   "status": "Active",
+   "opening_balance": 17561.97
+  },
+  {
+   "account_id": "acct_d0a5bc725e3097cf46a1",
+   "user_id": "1172e1f099f239fa71426b06",
+   "institution_name": "Lakeview Savings Bank",
+   "account_type": "credit_card",
+   "last_four": "7781",
+   "balance": -1886.9,
+   "status": "Active",
+   "opening_balance": -751.94
+  },
+  {
+   "account_id": "811b7a8470da7a0df1bb401a",
+   "user_id": "1172e1f099f239fa71426b06",
+   "institution_name": "Lakeshore Freight 401(k) Plan (Northbridge Retirement Services)",
+   "account_type": "retirement",
+   "last_four": "6630",
+   "balance": 142815.4,
+   "status": "Active",
+   "opening_balance": 136695.4
+  }
+ ],
+ "subscriptions": [
+  {
+   "subscription_id": "d819e17df405f02971bbd8d3",
+   "user_id": "1172e1f099f239fa71426b06",
+   "service_name": "Apple",
+   "amount": 2.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-20",
+   "status": "Active"
+  },
+  {
+   "subscription_id": "9546f16ec2b5c0b6a9bdafe3",
+   "user_id": "1172e1f099f239fa71426b06",
+   "service_name": "Spotify",
+   "amount": 11.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-11-19",
+   "status": "Active"
+  }
+ ],
+ "transactions": [
+  {
+   "transaction_id": "209bafa47b26fb99e2488700",
+   "date": "2026-05-04",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Intelligentsia Coffee",
+   "amount": -5.85,
+   "category": "coffee",
+   "account_last_four": "4402",
+   "timestamp": 1777945607.0
+  },
+  {
+   "transaction_id": "0db0d6f076428102f28a13f7",
+   "date": "2026-08-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Intelligentsia Coffee",
+   "amount": -5.85,
+   "category": "coffee",
+   "account_last_four": "4402",
+   "timestamp": 1785807788.0
+  },
+  {
+   "transaction_id": "388636f9b0a19dc2c549dd78",
+   "date": "2026-10-02",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Intelligentsia Coffee",
+   "amount": -5.85,
+   "category": "coffee",
+   "account_last_four": "4402",
+   "timestamp": 1790979329.0
+  },
+  {
+   "transaction_id": "9f3a1c7eb2046d58e1c93a0f",
+   "date": "2026-05-05",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Leavitt Court Condo Association",
+   "amount": -345.0,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1778013310.0
+  },
+  {
+   "transaction_id": "3a26e8f1b5c0749d1f6a3e28",
+   "date": "2026-06-05",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Leavitt Court Condo Association",
+   "amount": -345.0,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1780670555.0
+  },
+  {
+   "transaction_id": "8f40c2e71b5ad963e0c8f45d",
+   "date": "2026-07-06",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Leavitt Court Condo Association",
+   "amount": -345.0,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1783360234.0
+  },
+  {
+   "transaction_id": "7f3d8a1e0c6b5e29b1e78d4c",
+   "date": "2026-08-05",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Leavitt Court Condo Association",
+   "amount": -345.0,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1785963656.0
+  },
+  {
+   "transaction_id": "38f5c9e4a1d07b266b3c8f0e",
+   "date": "2026-09-08",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Leavitt Court Condo Association",
+   "amount": -345.0,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1788875173.0
+  },
+  {
+   "transaction_id": "d0f4a68cb19e3e524b7d0f1a",
+   "date": "2026-10-05",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Leavitt Court Condo Association",
+   "amount": -345.0,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1791222535.0
+  },
+  {
+   "transaction_id": "4d82e0b71a6c935fd07e48b2",
+   "date": "2026-05-06",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Trader Joe's",
+   "amount": -84.42,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1778102615.0
+  },
+  {
+   "transaction_id": "e2ddfc4ebbf5791347e42b53",
+   "date": "2026-05-06",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Revival Food Hall",
+   "amount": -16.27,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1778106643.0
+  },
+  {
+   "transaction_id": "c15b9a3e07f4d2c86e19b053",
+   "date": "2026-05-07",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -21.4,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1778166878.0
+  },
+  {
+   "transaction_id": "7a0e6f2dc93b1845af27d6e0",
+   "date": "2026-05-08",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Tank Noodle",
+   "amount": -29.64,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1778289290.0
+  },
+  {
+   "transaction_id": "725156bfc4472f83189f5dce",
+   "date": "2026-05-09",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Trader Joe's",
+   "amount": -118.42,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1778338537.0
+  },
+  {
+   "transaction_id": "e38c51740bd9a62f4c81e7b9",
+   "date": "2026-05-09",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -13.4,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1778334199.0
+  },
+  {
+   "transaction_id": "2b97d40ae5c6183f9d0a2e71",
+   "date": "2026-05-11",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Peoples Gas",
+   "amount": -41.26,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1778505243.0
+  },
+  {
+   "transaction_id": "7f7608748aafafc4a5d44c20",
+   "date": "2026-05-12",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Target",
+   "amount": -87.83,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1778619820.0
+  },
+  {
+   "transaction_id": "0bf197207ce2844eb4cd65f3",
+   "date": "2026-05-14",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ATM Withdrawal",
+   "amount": -200.0,
+   "category": "cash",
+   "account_last_four": "4402",
+   "timestamp": 1778787319.0
+  },
+  {
+   "transaction_id": "ab16d5ef8082d20651d718c0",
+   "date": "2026-06-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ATM Withdrawal",
+   "amount": -200.0,
+   "category": "cash",
+   "account_last_four": "4402",
+   "timestamp": 1781636472.0
+  },
+  {
+   "transaction_id": "2b752867572900c0d696e493",
+   "date": "2026-07-10",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ATM Withdrawal",
+   "amount": -200.0,
+   "category": "cash",
+   "account_last_four": "4402",
+   "timestamp": 1783689857.0
+  },
+  {
+   "transaction_id": "cade7a94257d2fb63f172088",
+   "date": "2026-08-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ATM Withdrawal",
+   "amount": -200.0,
+   "category": "cash",
+   "account_last_four": "4402",
+   "timestamp": 1787261670.0
+  },
+  {
+   "transaction_id": "b32b0523721baed2db74e38e",
+   "date": "2026-09-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ATM Withdrawal",
+   "amount": -200.0,
+   "category": "cash",
+   "account_last_four": "4402",
+   "timestamp": 1789520472.0
+  },
+  {
+   "transaction_id": "58f1a6c39e2d07b413ca85e6",
+   "date": "2026-05-14",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Jewel-Osco",
+   "amount": -97.17,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1778800908.0
+  },
+  {
+   "transaction_id": "d06c3e9b4a17f28d5b3e90c4",
+   "date": "2026-05-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 3019.36,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1778866605.0
+  },
+  {
+   "transaction_id": "e5b2083c9d7a14f60b83e5d2",
+   "date": "2026-05-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 3019.36,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1780087782.0
+  },
+  {
+   "transaction_id": "18b5f7c4d03e9a623c58b1e7",
+   "date": "2026-06-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 3019.36,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1781560405.0
+  },
+  {
+   "transaction_id": "5a8c1e3f7d2b946e0a1c5d8f",
+   "date": "2026-06-30",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 3019.36,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1782838180.0
+  },
+  {
+   "transaction_id": "1e4a8d27f6b05c93a82d41e7",
+   "date": "2026-05-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spacca Napoli",
+   "amount": -51.2,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1778966236.0
+  },
+  {
+   "transaction_id": "2f24732fb85a7849116fada7",
+   "date": "2026-05-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Jewel-Osco",
+   "amount": -142.16,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1778970367.0
+  },
+  {
+   "transaction_id": "b7c2059e3d81a6f40e95c2b8",
+   "date": "2026-05-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "BP",
+   "amount": -46.35,
+   "category": "gas",
+   "account_last_four": "7781",
+   "timestamp": 1779052328.0
+  },
+  {
+   "transaction_id": "e7aeb8da15515c55b3d70410",
+   "date": "2026-05-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Bistro Campagne",
+   "amount": -96.85,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1779066241.0
+  },
+  {
+   "transaction_id": "6f9e13b8c2a7405de4b6f193",
+   "date": "2026-05-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer to Savings ••4419",
+   "amount": -400.0,
+   "category": "transfer",
+   "account_last_four": "4402",
+   "timestamp": 1779105780.0
+  },
+  {
+   "transaction_id": "9e0a43d8f17c5b26e2a94d0b",
+   "date": "2026-06-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer to Savings ••4419",
+   "amount": -400.0,
+   "category": "transfer",
+   "account_last_four": "4402",
+   "timestamp": 1781611380.0
+  },
+  {
+   "transaction_id": "8d4f2a6c0e9b17e3a5c8d2f0",
+   "date": "2026-07-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer to Savings ••4419",
+   "amount": -400.0,
+   "category": "transfer",
+   "account_last_four": "4402",
+   "timestamp": 1784203380.0
+  },
+  {
+   "transaction_id": "e3a8c16d5b0f72e9a2d8e61b",
+   "date": "2026-08-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer to Savings ••4419",
+   "amount": -400.0,
+   "category": "transfer",
+   "account_last_four": "4402",
+   "timestamp": 1786968180.0
+  },
+  {
+   "transaction_id": "b5e2a9f0d73c148bc1d5e8a3",
+   "date": "2026-09-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer to Savings ••4419",
+   "amount": -400.0,
+   "category": "transfer",
+   "account_last_four": "4402",
+   "timestamp": 1789560180.0
+  },
+  {
+   "transaction_id": "e2d8f04b9c1a6e573f0d8b2a",
+   "date": "2026-10-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer to Savings ••4419",
+   "amount": -400.0,
+   "category": "transfer",
+   "account_last_four": "4402",
+   "timestamp": 1792152180.0
+  },
+  {
+   "transaction_id": "a3e6c9f1b4d7024e8c1a6f3b",
+   "date": "2026-05-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 05/15)",
+   "amount": 450.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1779124781.0
+  },
+  {
+   "transaction_id": "a4d0b6e285f1c9372c0d8a5e",
+   "date": "2026-05-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer from Checking ••4402",
+   "amount": 400.0,
+   "category": "transfer",
+   "account_last_four": "4419",
+   "timestamp": 1779105780.0
+  },
+  {
+   "transaction_id": "4b7f2c951e8d06a3a5c1f79e",
+   "date": "2026-06-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer from Checking ••4402",
+   "amount": 400.0,
+   "category": "transfer",
+   "account_last_four": "4419",
+   "timestamp": 1781611380.0
+  },
+  {
+   "transaction_id": "1f9c7e3b5a2d80c4e6b1f9a3",
+   "date": "2026-07-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer from Checking ••4402",
+   "amount": 400.0,
+   "category": "transfer",
+   "account_last_four": "4419",
+   "timestamp": 1784203380.0
+  },
+  {
+   "transaction_id": "7c5e90a2d14b3f86c0a7e95d",
+   "date": "2026-08-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer from Checking ••4402",
+   "amount": 400.0,
+   "category": "transfer",
+   "account_last_four": "4419",
+   "timestamp": 1786968180.0
+  },
+  {
+   "transaction_id": "2c0d6b8fe1a594c7f8b2d06e",
+   "date": "2026-09-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer from Checking ••4402",
+   "amount": 400.0,
+   "category": "transfer",
+   "account_last_four": "4419",
+   "timestamp": 1789560180.0
+  },
+  {
+   "transaction_id": "5c4a1b7e0f9d3268a6e5c0f1",
+   "date": "2026-10-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer from Checking ••4402",
+   "amount": 400.0,
+   "category": "transfer",
+   "account_last_four": "4419",
+   "timestamp": 1792152180.0
+  },
+  {
+   "transaction_id": "3c69f18ad4e2b0757f13a9c6",
+   "date": "2026-05-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Starbucks",
+   "amount": -6.85,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1779193303.0
+  },
+  {
+   "transaction_id": "d700ca9851cb34b2f5582ee3",
+   "date": "2026-05-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1779227251.0
+  },
+  {
+   "transaction_id": "595f2a7bda95008ce1378766",
+   "date": "2026-06-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1781888215.0
+  },
+  {
+   "transaction_id": "43e577b4a74dc1e77c44182e",
+   "date": "2026-07-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1784480269.0
+  },
+  {
+   "transaction_id": "14b5de555aa0a0a941636b67",
+   "date": "2026-08-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1787174265.0
+  },
+  {
+   "transaction_id": "34ccbaa4f94212a097fb54d5",
+   "date": "2026-09-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1789823153.0
+  },
+  {
+   "transaction_id": "a899a4bbbed35da74d3d4ae5",
+   "date": "2026-10-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spotify",
+   "amount": -11.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1792425019.0
+  },
+  {
+   "transaction_id": "0a5e27c4b91d6f83e6c04b19",
+   "date": "2026-05-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Aldi",
+   "amount": -61.63,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1779313632.0
+  },
+  {
+   "transaction_id": "1c257887cac10b102853b707",
+   "date": "2026-05-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Apple",
+   "amount": -2.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1779289301.0
+  },
+  {
+   "transaction_id": "a88afc9ee0ebe760ec76b76c",
+   "date": "2026-06-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Apple",
+   "amount": -2.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1781989254.0
+  },
+  {
+   "transaction_id": "7d2a9e51c08f4b36a1e5d07c",
+   "date": "2026-07-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Apple",
+   "amount": -2.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1784556892.0
+  },
+  {
+   "transaction_id": "e5b07c3d91a24f68b0d3e7a2",
+   "date": "2026-08-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Apple",
+   "amount": -2.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1787243829.0
+  },
+  {
+   "transaction_id": "3f91d6b2e07a58c4d9e2a61b",
+   "date": "2026-09-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Apple",
+   "amount": -2.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1789908750.0
+  },
+  {
+   "transaction_id": "b61b5b33c3aaba99fd1de8a3",
+   "date": "2026-10-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Apple",
+   "amount": -2.99,
+   "category": "subscription",
+   "account_last_four": "4402",
+   "timestamp": 1792502451.0
+  },
+  {
+   "transaction_id": "85c3a0f7e14b29d6c3f70a5b",
+   "date": "2026-05-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Xfinity",
+   "amount": -75.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1779388092.0
+  },
+  {
+   "transaction_id": "d8b05c6ae72f13494e6d0a8b",
+   "date": "2026-06-22",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Xfinity",
+   "amount": -75.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1782139482.0
+  },
+  {
+   "transaction_id": "91e4a6c7b0d3582fc9f16e4a",
+   "date": "2026-07-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Xfinity",
+   "amount": -75.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1784649226.0
+  },
+  {
+   "transaction_id": "4e1c0a97b2d85f3e9a4e1c6d",
+   "date": "2026-08-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Xfinity",
+   "amount": -75.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1787316677.0
+  },
+  {
+   "transaction_id": "f9d2a07c3e6b51d87a0e9c4b",
+   "date": "2026-09-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Xfinity",
+   "amount": -75.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1790021154.0
+  },
+  {
+   "transaction_id": "3b8f1c6dd0e5a274c9b3f60e",
+   "date": "2026-10-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Xfinity",
+   "amount": -75.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1792587432.0
+  },
+  {
+   "transaction_id": "f2b84d61a7e039c51d58b2f0",
+   "date": "2026-05-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -20.6,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1779393202.0
+  },
+  {
+   "transaction_id": "4e0d97b32a6c18f5b09e3d74",
+   "date": "2026-05-23",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Dark Matter Coffee",
+   "amount": -8.25,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1779544022.0
+  },
+  {
+   "transaction_id": "c9a17e5d0f43b826d5a91c0e",
+   "date": "2026-05-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "T-Mobile",
+   "amount": -65.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1779824066.0
+  },
+  {
+   "transaction_id": "b9e36d024c7a15f81d0b9e4a",
+   "date": "2026-06-24",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "T-Mobile",
+   "amount": -65.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1782332407.0
+  },
+  {
+   "transaction_id": "0e9c5d72b48a1f63d3c07e5b",
+   "date": "2026-07-24",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "T-Mobile",
+   "amount": -65.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1784897255.0
+  },
+  {
+   "transaction_id": "15d7a0c3e8f26b49a3c75e1d",
+   "date": "2026-08-24",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "T-Mobile",
+   "amount": -65.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1787593465.0
+  },
+  {
+   "transaction_id": "c3a96f1de05b28479f3c0d6e",
+   "date": "2026-09-24",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "T-Mobile",
+   "amount": -65.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1790280390.0
+  },
+  {
+   "transaction_id": "c9e47a1d5a0b38f6e6d1c9b2",
+   "date": "2026-10-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "T-Mobile",
+   "amount": -65.0,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1793045823.0
+  },
+  {
+   "transaction_id": "17f6c2a9e8b30d54a2c6f871",
+   "date": "2026-05-28",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -79.24,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1780003503.0
+  },
+  {
+   "transaction_id": "2d70a9f5c6e18b348a5d0f27",
+   "date": "2026-05-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Bistro Campagne",
+   "amount": -86.35,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1780101732.0
+  },
+  {
+   "transaction_id": "3b8e6d1a9c4f27b0e3d8a6c1",
+   "date": "2026-05-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Interest Earned",
+   "amount": 11.26,
+   "category": "interest",
+   "account_last_four": "4419",
+   "timestamp": 1780059266.0
+  },
+  {
+   "transaction_id": "9b4c6e10a35f2d87f1e0c46a",
+   "date": "2026-05-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ComEd",
+   "amount": -47.63,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1780082250.0
+  },
+  {
+   "transaction_id": "6c1b84e3f0d25a973e74c1b6",
+   "date": "2026-05-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -12.95,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1780228613.0
+  },
+  {
+   "transaction_id": "6b2d8f4a1e7c39b5d0a2e8c6",
+   "date": "2026-06-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 05/29)",
+   "amount": 450.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1780329803.0
+  },
+  {
+   "transaction_id": "a83f5d0c1b96e247c0f3a8e5",
+   "date": "2026-06-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northpoint Home Loans",
+   "amount": -1640.18,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1780317837.0
+  },
+  {
+   "transaction_id": "39d2f4a8e6c107b5b4a39e6d",
+   "date": "2026-07-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northpoint Home Loans",
+   "amount": -1640.18,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1782910571.0
+  },
+  {
+   "transaction_id": "1d5f9c3ae06b2847f3c1e9a6",
+   "date": "2026-08-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northpoint Home Loans",
+   "amount": -1640.18,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1785780951.0
+  },
+  {
+   "transaction_id": "0c3f5a8eb72d16c9f4e03c8a",
+   "date": "2026-09-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northpoint Home Loans",
+   "amount": -1640.18,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1788267780.0
+  },
+  {
+   "transaction_id": "9a3d5c0fe7b16824c0d93a5e",
+   "date": "2026-10-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northpoint Home Loans",
+   "amount": -1640.18,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1790872345.0
+  },
+  {
+   "transaction_id": "9f5d0a6ce1b7c483c0a2e6d9",
+   "date": "2026-11-02",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northpoint Home Loans",
+   "amount": -1640.18,
+   "category": "housing",
+   "account_last_four": "4402",
+   "timestamp": 1793648600.0
+  },
+  {
+   "transaction_id": "0f7e2b96d4a8c1355b2e9a70",
+   "date": "2026-06-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Jewel-Osco",
+   "amount": -92.58,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1780531492.0
+  },
+  {
+   "transaction_id": "d5a90c477e2f13b8e9c40d63",
+   "date": "2026-06-04",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -17.4,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1780619691.0
+  },
+  {
+   "transaction_id": "b1e7c03d4f962a5ea7d1b8c0",
+   "date": "2026-06-05",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Opart Thai House",
+   "amount": -31.17,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1780703449.0
+  },
+  {
+   "transaction_id": "74d8b2a6e03c1f59c8b46e1d",
+   "date": "2026-06-06",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Dark Matter Coffee",
+   "amount": -7.95,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1780753648.0
+  },
+  {
+   "transaction_id": "e0c93f5a26b7d8144a90e3f6",
+   "date": "2026-06-10",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Trader Joe's",
+   "amount": -74.37,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1781126743.0
+  },
+  {
+   "transaction_id": "5f84a1d7c9e2063bb0a75d12",
+   "date": "2026-06-11",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Peoples Gas",
+   "amount": -36.9,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1781193183.0
+  },
+  {
+   "transaction_id": "c2d61e098a4fb375f6e2d90a",
+   "date": "2026-06-12",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Mrs. Murphy & Sons Irish Bistro",
+   "amount": -68.48,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1781299818.0
+  },
+  {
+   "transaction_id": "4f1a7c2e9b03d58e6a1c74b2",
+   "date": "2026-06-13",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Prairie Fork Farm",
+   "amount": -23.75,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1781358722.0
+  },
+  {
+   "transaction_id": "c83e05b9a17d42f6e90b3c51",
+   "date": "2026-06-13",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -17.54,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1781361109.0
+  },
+  {
+   "transaction_id": "d9a4e1c7f3b6085a2e9d4c1b",
+   "date": "2026-06-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 06/15)",
+   "amount": 450.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1781637869.0
+  },
+  {
+   "transaction_id": "f61d8e30b4a29c570d6e3b84",
+   "date": "2026-06-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Aldi",
+   "amount": -62.12,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1781734096.0
+  },
+  {
+   "transaction_id": "26e9b0a5d73f4c18c1b70e5f",
+   "date": "2026-06-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -19.0,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1781806250.0
+  },
+  {
+   "transaction_id": "25b9e7d1c3a40f86f7e25c9b",
+   "date": "2026-10-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -19.0,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1790874981.0
+  },
+  {
+   "transaction_id": "1a4a788bdd00bc9b531c5bdd",
+   "date": "2026-07-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer from Checking ••4402",
+   "amount": 11495.75,
+   "category": "transfer",
+   "account_last_four": "4419",
+   "timestamp": 1784135700.0
+  },
+  {
+   "transaction_id": "63f2e8d40b1ac7959a2f6c03",
+   "date": "2026-06-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Speedway",
+   "amount": -52.18,
+   "category": "gas",
+   "account_last_four": "7781",
+   "timestamp": 1781965630.0
+  },
+  {
+   "transaction_id": "8cf8c3dcb92743bcd246270a",
+   "date": "2026-07-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Transfer to Savings ••4419",
+   "amount": -11495.75,
+   "category": "transfer",
+   "account_last_four": "4402",
+   "timestamp": 1784135700.0
+  },
+  {
+   "transaction_id": "a0c47f1b5e9d3826e8f15a9d",
+   "date": "2026-06-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Gene's Sausage Shop & Delicatessen",
+   "amount": -26.81,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1781996711.0
+  },
+  {
+   "transaction_id": "0c4e9a37b81d2f65f7a3c0e1",
+   "date": "2026-06-23",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Starbucks",
+   "amount": -7.15,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1782223357.0
+  },
+  {
+   "transaction_id": "7e15a3c8d2f06b94a6e13d5c",
+   "date": "2026-06-25",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -69.86,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1782430885.0
+  },
+  {
+   "transaction_id": "e4f80b2d6a3c97e1c5d48f0a",
+   "date": "2026-06-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spacca Napoli",
+   "amount": -54.75,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1782515528.0
+  },
+  {
+   "transaction_id": "52a7c9e0f3b14d8608e5a2c7",
+   "date": "2026-06-27",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -13.85,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1782568818.0
+  },
+  {
+   "transaction_id": "c0b6e15f9d48a273e3f6b01c",
+   "date": "2026-06-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ComEd",
+   "amount": -61.08,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1782752018.0
+  },
+  {
+   "transaction_id": "a7c2f9e4d1b6385c0a7f2e9d",
+   "date": "2026-06-30",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Interest Earned",
+   "amount": 12.73,
+   "category": "interest",
+   "account_last_four": "4419",
+   "timestamp": 1782862341.0
+  },
+  {
+   "transaction_id": "2c7f5b9e3a1d46c8f2b7e5a0",
+   "date": "2026-07-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 06/30)",
+   "amount": 450.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1782910491.0
+  },
+  {
+   "transaction_id": "f8e1c03b27a5d94e6c0f8b13",
+   "date": "2026-07-02",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -22.8,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1783030494.0
+  },
+  {
+   "transaction_id": "0b2f7d45e9c61a386f1b4c0e",
+   "date": "2026-08-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -22.8,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1787085810.0
+  },
+  {
+   "transaction_id": "1c7b9e64a0f32d58d9e17c4b",
+   "date": "2026-07-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Jewel-Osco",
+   "amount": -94.43,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1783122819.0
+  },
+  {
+   "transaction_id": "a6d3058fc4e29b173b7d6e0a",
+   "date": "2026-07-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Shell",
+   "amount": -55.4,
+   "category": "gas",
+   "account_last_four": "7781",
+   "timestamp": 1783128078.0
+  },
+  {
+   "transaction_id": "d1a9e76b30c4f85e5f2a0d98",
+   "date": "2026-07-08",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -77.06,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1783556397.0
+  },
+  {
+   "transaction_id": "46e0b3d9f8a2c71cc7e45b0a",
+   "date": "2026-07-10",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Bad Apple",
+   "amount": -47.96,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1783709126.0
+  },
+  {
+   "transaction_id": "b3c85a1e6d0f427b0a9b3e6f",
+   "date": "2026-07-11",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Coffee Studio",
+   "amount": -8.4,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1783781520.0
+  },
+  {
+   "transaction_id": "3d8b1f6e9a2c4075b3e8d1a6",
+   "date": "2026-07-12",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakefront 15K",
+   "amount": -65.0,
+   "category": "fitness",
+   "account_last_four": "7781",
+   "timestamp": 1783904353.0
+  },
+  {
+   "transaction_id": "e7d24f08a91b6c3d9c4e7f21",
+   "date": "2026-07-13",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Peoples Gas",
+   "amount": -33.47,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1783966602.0
+  },
+  {
+   "transaction_id": "e2b7d49a1c6f3085b4e2a9d1",
+   "date": "2026-07-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 2953.62,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1784125884.0
+  },
+  {
+   "transaction_id": "68c2e5a1f0b7d943a9e46c08",
+   "date": "2026-07-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 2953.62,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1785528191.0
+  },
+  {
+   "transaction_id": "b6c19f407d2ea5830e5b6d9a",
+   "date": "2026-08-14",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 2953.62,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1786749715.0
+  },
+  {
+   "transaction_id": "83a1e6d2c0f59b47d6e83a0c",
+   "date": "2026-08-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 2953.62,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1788222716.0
+  },
+  {
+   "transaction_id": "71c8d3e6b4a0f29d5e6b1c08",
+   "date": "2026-09-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 2953.62,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1789499209.0
+  },
+  {
+   "transaction_id": "f6e8b30a2c4d971f8a6e0b3d",
+   "date": "2026-09-30",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 2953.62,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1790819665.0
+  },
+  {
+   "transaction_id": "19e6a5d0c4f2b837d7a19e3c",
+   "date": "2026-10-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 2953.62,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1792113520.0
+  },
+  {
+   "transaction_id": "1a7c5e3bf9d2068cb4c7a1e9",
+   "date": "2026-10-30",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeshore Freight Logistics",
+   "amount": 2953.62,
+   "category": "income",
+   "account_last_four": "4402",
+   "timestamp": 1793361856.0
+  },
+  {
+   "transaction_id": "0d6a1c95e3b78f42b8d02a6e",
+   "date": "2026-07-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Revival Food Hall",
+   "amount": -18.73,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1784246577.0
+  },
+  {
+   "transaction_id": "f4b1a8d2c6e93f07b4a1d8c2",
+   "date": "2026-07-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 07/15)",
+   "amount": 540.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1784224449.0
+  },
+  {
+   "transaction_id": "7b2e8d40c5f19a36f04b7c2d",
+   "date": "2026-07-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Trader Joe's",
+   "amount": -64.74,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1784331980.0
+  },
+  {
+   "transaction_id": "a06e4b9c27d1f853e4c9b0d7",
+   "date": "2026-07-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "IKEA Schaumburg Restaurant",
+   "amount": -23.06,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1784396906.0
+  },
+  {
+   "transaction_id": "c4f73e1a0d2b96e8a1c5d39b",
+   "date": "2026-07-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "IKEA Schaumburg",
+   "amount": -251.9,
+   "category": "shopping",
+   "account_last_four": "7781",
+   "timestamp": 1784415277.0
+  },
+  {
+   "transaction_id": "2a8d5b0fe96c41a76e3f0d82",
+   "date": "2026-07-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "BP",
+   "amount": -49.87,
+   "category": "gas",
+   "account_last_four": "7781",
+   "timestamp": 1784508074.0
+  },
+  {
+   "transaction_id": "f5c09e2b7a14d368d2b85f0c",
+   "date": "2026-07-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -21.8,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1784595365.0
+  },
+  {
+   "transaction_id": "c6b02e7d49a5f13e8d6c3b0f",
+   "date": "2026-08-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -21.8,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1785803213.0
+  },
+  {
+   "transaction_id": "5d3b07e92f6ca814e7a59d03",
+   "date": "2026-07-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Starbucks",
+   "amount": -7.35,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1784636897.0
+  },
+  {
+   "transaction_id": "a2f86c41e5b09d371b6e2a8f",
+   "date": "2026-07-22",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Jewel-Osco",
+   "amount": -69.92,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1784760605.0
+  },
+  {
+   "transaction_id": "d7a1f3b56c02e894a40d9c1e",
+   "date": "2026-07-24",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Bistro Campagne",
+   "amount": -79.18,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1784935003.0
+  },
+  {
+   "transaction_id": "7d26e9f0b48a13c5d702e6ab",
+   "date": "2026-07-25",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Coloma Ridge Orchard",
+   "amount": -18.45,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1784987894.0
+  },
+  {
+   "transaction_id": "3f6e0a28c97d4b15e5b3f80c",
+   "date": "2026-07-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -14.2,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1785074461.0
+  },
+  {
+   "transaction_id": "b0d4c96e1a83f7257c2e0b4d",
+   "date": "2026-07-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ComEd",
+   "amount": -94.51,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1785344932.0
+  },
+  {
+   "transaction_id": "d4e8b2a6f0c917d3b4e8f2a5",
+   "date": "2026-07-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Interest Earned",
+   "amount": 16.66,
+   "category": "interest",
+   "account_last_four": "4419",
+   "timestamp": 1785536611.0
+  },
+  {
+   "transaction_id": "e1f05b8c3d96a27e0f8c1d5a",
+   "date": "2026-07-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Opart Thai House",
+   "amount": -29.84,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1785527856.0
+  },
+  {
+   "transaction_id": "4c9a2d6fb7e1035cd6a49e1b",
+   "date": "2026-08-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lincoln Square farmers market",
+   "amount": -24.0,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1785595264.0
+  },
+  {
+   "transaction_id": "a8e37b05d1c46f922e0a8b7c",
+   "date": "2026-08-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -12.85,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1785591229.0
+  },
+  {
+   "transaction_id": "0e5c3a7d9f2b18e6c0a5f3d7",
+   "date": "2026-08-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 07/31)",
+   "amount": 540.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1785791942.0
+  },
+  {
+   "transaction_id": "e9a46c0b2d71f58e5a0c9e3d",
+   "date": "2026-08-05",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Trader Joe's",
+   "amount": -79.66,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1785976026.0
+  },
+  {
+   "transaction_id": "30b8e1f6a5c2d974c4f30b8e",
+   "date": "2026-08-07",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Tank Noodle",
+   "amount": -31.42,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1786141922.0
+  },
+  {
+   "transaction_id": "d2e57a9c8f1b0634e7d25c1a",
+   "date": "2026-08-09",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "CVS Pharmacy",
+   "amount": -16.42,
+   "category": "health",
+   "account_last_four": "7781",
+   "timestamp": 1786325825.0
+  },
+  {
+   "transaction_id": "9c0f6b3de48a127f1b9d0e65",
+   "date": "2026-08-11",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Peoples Gas",
+   "amount": -32.85,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1786475859.0
+  },
+  {
+   "transaction_id": "c7a4e2b9d05f3168a7c4e2b9",
+   "date": "2026-08-12",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ravenswood Sports Medicine",
+   "amount": -40.0,
+   "category": "health",
+   "account_last_four": "7781",
+   "timestamp": 1786552035.0
+  },
+  {
+   "transaction_id": "4b1e8c5a2f9d73e6b0a4c8d2",
+   "date": "2026-10-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ravenswood Sports Medicine",
+   "amount": -40.0,
+   "category": "health",
+   "account_last_four": "7781",
+   "timestamp": 1790877386.0
+  },
+  {
+   "transaction_id": "5a7e2d1bc3f90846d8a1c5f2",
+   "date": "2026-08-13",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Jewel-Osco",
+   "amount": -90.09,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1786666608.0
+  },
+  {
+   "transaction_id": "2f4d0b8ea6c35917f9e20a4c",
+   "date": "2026-08-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Dark Matter Coffee",
+   "amount": -6.95,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1786802502.0
+  },
+  {
+   "transaction_id": "b8f2d6a0c4e71b93d8f2a6c4",
+   "date": "2026-08-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 08/14)",
+   "amount": 540.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1787017959.0
+  },
+  {
+   "transaction_id": "a9d63e1c4f07b852e6c9a30b",
+   "date": "2026-08-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -68.43,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1787268883.0
+  },
+  {
+   "transaction_id": "f0a5d82e61c3b49f3d0e5a17",
+   "date": "2026-08-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spacca Napoli",
+   "amount": -52.65,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1787332897.0
+  },
+  {
+   "transaction_id": "c8e2b16f0d9a4735b5f8c02e",
+   "date": "2026-08-22",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Speedway",
+   "amount": -38.64,
+   "category": "gas",
+   "account_last_four": "7781",
+   "timestamp": 1787443472.0
+  },
+  {
+   "transaction_id": "6a0e3f8bc4b19d27e1f6a08c",
+   "date": "2026-08-25",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Starbucks",
+   "amount": -6.65,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1787665410.0
+  },
+  {
+   "transaction_id": "d9c41b6e2a7f05d37e9b4c1a",
+   "date": "2026-08-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Trader Joe's",
+   "amount": -73.28,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1787782330.0
+  },
+  {
+   "transaction_id": "0e6c9a3f7b1d4852e0c6a9f3",
+   "date": "2026-08-27",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northside Imaging",
+   "amount": -210.0,
+   "category": "health",
+   "account_last_four": "7781",
+   "timestamp": 1787840991.0
+  },
+  {
+   "transaction_id": "2e6b9d0af5c38e14c2a60f9b",
+   "date": "2026-08-28",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Mrs. Murphy & Sons Irish Bistro",
+   "amount": -63.27,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1787936521.0
+  },
+  {
+   "transaction_id": "5c2e8a0f91d4b7e36a0c3f58",
+   "date": "2026-08-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Book Cellar",
+   "amount": -38.59,
+   "category": "shopping",
+   "account_last_four": "7781",
+   "timestamp": 1788034757.0
+  },
+  {
+   "transaction_id": "b4f07c5e9e1d26a80c4b7e3f",
+   "date": "2026-08-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -11.6,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1788002718.0
+  },
+  {
+   "transaction_id": "60f3c7a1e5d98b2f6c0a4e7d",
+   "date": "2026-08-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Interest Earned",
+   "amount": 20.71,
+   "category": "interest",
+   "account_last_four": "4419",
+   "timestamp": 1788192191.0
+  },
+  {
+   "transaction_id": "e6d9b02f1c4a8e73a8b06d5e",
+   "date": "2026-08-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ComEd",
+   "amount": -108.36,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1788192187.0
+  },
+  {
+   "transaction_id": "47a9c3e1d5b2f8064a9c3e7b",
+   "date": "2026-09-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 08/31)",
+   "amount": 540.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1788283489.0
+  },
+  {
+   "transaction_id": "a1b84e7d6f0c39e22d5a8f1b",
+   "date": "2026-09-02",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -22.2,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1788398541.0
+  },
+  {
+   "transaction_id": "6e3a0c95f2d7b18ab9e4c0d1",
+   "date": "2026-09-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -22.2,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1789694050.0
+  },
+  {
+   "transaction_id": "5e9c2a03d8b4f716b1c95e0d",
+   "date": "2026-09-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Aldi",
+   "amount": -52.92,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1788473148.0
+  },
+  {
+   "transaction_id": "c7d0f6b13a5e982ce0f7a24b",
+   "date": "2026-09-04",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Bad Apple",
+   "amount": -44.38,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1788564103.0
+  },
+  {
+   "transaction_id": "f2c6a1d80e9b47f3c5e21a9d",
+   "date": "2026-09-10",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Jewel-Osco",
+   "amount": -83.35,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1789075274.0
+  },
+  {
+   "transaction_id": "9d1e7b4ce2a6053f1f8d6c2a",
+   "date": "2026-09-11",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Peoples Gas",
+   "amount": -33.12,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1789132496.0
+  },
+  {
+   "transaction_id": "4a8b3e0fc6d1f952e3a09b7d",
+   "date": "2026-09-12",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Coffee Studio",
+   "amount": -8.65,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1789218310.0
+  },
+  {
+   "transaction_id": "e0f5c27a9b3d684ea7c1e05f",
+   "date": "2026-09-13",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Shell",
+   "amount": -51.29,
+   "category": "gas",
+   "account_last_four": "7781",
+   "timestamp": 1789326431.0
+  },
+  {
+   "transaction_id": "a0f73d9b4e8c12a6d71b5e04",
+   "date": "2026-09-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Opart Thai House",
+   "amount": -28.53,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1789515710.0
+  },
+  {
+   "transaction_id": "c6d0b4f8a2e5197c6d0b4a8e",
+   "date": "2026-09-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 09/15)",
+   "amount": 540.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1789578863.0
+  },
+  {
+   "transaction_id": "d4b7f13c5e8a20d90a3f6c7b",
+   "date": "2026-09-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Trader Joe's",
+   "amount": -75.18,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1789598810.0
+  },
+  {
+   "transaction_id": "e4b19c6d0a7f5e323c8d0a97",
+   "date": "2026-09-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "WBEZ Chicago",
+   "amount": -60.0,
+   "category": "charity",
+   "account_last_four": "7781",
+   "timestamp": 1789693496.0
+  },
+  {
+   "transaction_id": "c4e81f07a9b35d26e0f7b19a",
+   "date": "2026-09-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "West Elm",
+   "amount": -449.0,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1789775539.0
+  },
+  {
+   "transaction_id": "a7f19d2e0c5b84e3d1a6f39c",
+   "date": "2026-09-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Bistro Campagne",
+   "amount": -78.62,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1789844018.0
+  },
+  {
+   "transaction_id": "1b6e4c8ad9f03a57e4c2b80f",
+   "date": "2026-09-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -11.9,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1789919211.0
+  },
+  {
+   "transaction_id": "54c0e8b9a2f7d163c6b51e0a",
+   "date": "2026-09-23",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -67.27,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1790209230.0
+  },
+  {
+   "transaction_id": "0f8b5d2ac71e9e36b2d0a84f",
+   "date": "2026-09-24",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Starbucks",
+   "amount": -7.45,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1790252352.0
+  },
+  {
+   "transaction_id": "e5c1a7b34d09f62ea0e8c5d7",
+   "date": "2026-09-25",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Tank Noodle",
+   "amount": -26.91,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1790353983.0
+  },
+  {
+   "transaction_id": "87d4e0c6f1b39a253e7a4d1b",
+   "date": "2026-09-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lincoln Square farmers market",
+   "amount": -22.5,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1790428918.0
+  },
+  {
+   "transaction_id": "a59f3d7b1e8c06a4d2f9b5e7",
+   "date": "2026-09-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakefront Runner's Shop",
+   "amount": -164.95,
+   "category": "shopping",
+   "account_last_four": "7781",
+   "timestamp": 1790440205.0
+  },
+  {
+   "transaction_id": "b2a0f59e6c8d13b7d5f2a0c9",
+   "date": "2026-09-28",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Trader Joe's",
+   "amount": -47.86,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1790636091.0
+  },
+  {
+   "transaction_id": "3d7c1e84a9f62b05e1b4d7c0",
+   "date": "2026-09-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ComEd",
+   "amount": -79.42,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1790696153.0
+  },
+  {
+   "transaction_id": "c9a5e3f7b1d40c6e9a3f5b8d",
+   "date": "2026-09-30",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Interest Earned",
+   "amount": 20.32,
+   "category": "interest",
+   "account_last_four": "4419",
+   "timestamp": 1790805623.0
+  },
+  {
+   "transaction_id": "92e7a1c5f9d3b40e7a2c6f1d",
+   "date": "2026-10-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 09/30)",
+   "amount": 540.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1790877489.0
+  },
+  {
+   "transaction_id": "59a316725a3fe69fd066cee7",
+   "date": "2026-10-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Big Star",
+   "amount": -29.31,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1791072772.0
+  },
+  {
+   "transaction_id": "a05b8e3d71c94f2b6e08d3a7",
+   "date": "2026-10-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -11.73,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1791040872.0
+  },
+  {
+   "transaction_id": "6b1c8e2f0a5d79c3e9f6b14d",
+   "date": "2026-10-06",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Starbucks",
+   "amount": -7.25,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1791288910.0
+  },
+  {
+   "transaction_id": "7b1e4c9ad03f82e6a5c71f0b",
+   "date": "2026-10-06",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Bellwether Tavern",
+   "amount": -250.0,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1791308399.0
+  },
+  {
+   "transaction_id": "a3e07d9b5f2c48e11c8a3e6f",
+   "date": "2026-10-07",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Jewel-Osco",
+   "amount": -95.72,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1791407764.0
+  },
+  {
+   "transaction_id": "5db671a6eb39b2255fc66879",
+   "date": "2026-10-08",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ledgerline CPE",
+   "amount": -149.0,
+   "category": "education",
+   "account_last_four": "7781",
+   "timestamp": 1791479083.0
+  },
+  {
+   "transaction_id": "e8b56c14d0a39f7eb3d8e50c",
+   "date": "2026-10-09",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spacca Napoli",
+   "amount": -47.3,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1791593178.0
+  },
+  {
+   "transaction_id": "0a9f2e6d47c1b85af2a9c3e7",
+   "date": "2026-10-10",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Dark Matter Coffee",
+   "amount": -7.65,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1791639335.0
+  },
+  {
+   "transaction_id": "c1d73b0e8e6a52f45d1c7a09",
+   "date": "2026-10-10",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Walgreens",
+   "amount": -12.37,
+   "category": "health",
+   "account_last_four": "7781",
+   "timestamp": 1791650063.0
+  },
+  {
+   "transaction_id": "4f0b6d3ae2c875e90b6f3a1d",
+   "date": "2026-10-13",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Aldi",
+   "amount": -57.48,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1791930219.0
+  },
+  {
+   "transaction_id": "7e4a9c1fb5d06e38a8f4d2c6",
+   "date": "2026-10-13",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Peoples Gas",
+   "amount": -35.64,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1791895034.0
+  },
+  {
+   "transaction_id": "b8c3e9f21d7a046be5c0b98a",
+   "date": "2026-10-14",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "BP",
+   "amount": -47.93,
+   "category": "gas",
+   "account_last_four": "7781",
+   "timestamp": 1792020623.0
+  },
+  {
+   "transaction_id": "7f2c90e41ab6d358c0e9a713",
+   "date": "2026-10-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "SP+ Parking",
+   "amount": -12.0,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1792072564.0
+  },
+  {
+   "transaction_id": "e63a0b8d5f1729c4ab07d2e8",
+   "date": "2026-10-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Portillo's",
+   "amount": -14.86,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1792084704.0
+  },
+  {
+   "transaction_id": "5d3f9b7e1a4c62d8f5b3e9a7",
+   "date": "2026-10-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 10/15)",
+   "amount": 540.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1792183078.0
+  },
+  {
+   "transaction_id": "d6f90e3ca28b51d7e4c6f09a",
+   "date": "2026-10-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Mrs. Murphy & Sons Irish Bistro",
+   "amount": -56.84,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1792190655.0
+  },
+  {
+   "transaction_id": "0e2c7a5bf84d19e6b7a0d3c8",
+   "date": "2026-10-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lincoln Square farmers market",
+   "amount": -29.0,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1792245244.0
+  },
+  {
+   "transaction_id": "a5b3d8e06e1f4c921d9b5a7e",
+   "date": "2026-10-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -18.8,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1792419112.0
+  },
+  {
+   "transaction_id": "f7a2e94c1b6d03f86c2a7e5d",
+   "date": "2026-10-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Trader Joe's",
+   "amount": -77.53,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1792620089.0
+  },
+  {
+   "transaction_id": "92d4c71e0a8f35b6e1d9047c",
+   "date": "2026-10-22",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lyft",
+   "amount": -18.4,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1792694320.0
+  },
+  {
+   "transaction_id": "82d5b0f7e3c96a14a0f8d2b6",
+   "date": "2026-10-24",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -14.6,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1792850316.0
+  },
+  {
+   "transaction_id": "b0e4d7c2a9f6153e8b2d7a46",
+   "date": "2026-10-27",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Little Harbor Baby Co.",
+   "amount": -439.9,
+   "category": "gifts",
+   "account_last_four": "7781",
+   "timestamp": 1793146835.0
+  },
+  {
+   "transaction_id": "6a3f9e1b7c0d4a85f2e9b3c1",
+   "date": "2026-10-28",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Zelle from Martin Keane",
+   "amount": 150.0,
+   "category": "transfer",
+   "account_last_four": "4402",
+   "timestamp": 1793194283.0
+  },
+  {
+   "transaction_id": "6d0a3f9eb2c5e7810f4d6a3c",
+   "date": "2026-10-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "ComEd",
+   "amount": -53.97,
+   "category": "utilities",
+   "account_last_four": "4402",
+   "timestamp": 1793292582.0
+  },
+  {
+   "transaction_id": "e4b1d6a80c7f952ed3e0b8f4",
+   "date": "2026-10-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Jewel-Osco",
+   "amount": -78.14,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1793313662.0
+  },
+  {
+   "transaction_id": "e9c2b5a8d1f7036c4a9e2d58",
+   "date": "2026-10-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Zelle from Sam Whitfield",
+   "amount": 75.0,
+   "category": "transfer",
+   "account_last_four": "4402",
+   "timestamp": 1793293806.0
+  },
+  {
+   "transaction_id": "2e6b0d4f8a3c71e5b2d6f0a9",
+   "date": "2026-10-30",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Lakeview Savings Bank - Interest Earned",
+   "amount": 20.6,
+   "category": "interest",
+   "account_last_four": "4419",
+   "timestamp": 1793395651.0
+  },
+  {
+   "transaction_id": "b6e0c48f3a91d5e25f8b0e6a",
+   "date": "2026-10-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Bad Apple",
+   "amount": -41.62,
+   "category": "dining",
+   "account_last_four": "7781",
+   "timestamp": 1793484320.0
+  },
+  {
+   "transaction_id": "70f3a9d5c2e6b18ee8a5f3c0",
+   "date": "2026-11-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Café Selmarie",
+   "amount": -9.8,
+   "category": "coffee",
+   "account_last_four": "7781",
+   "timestamp": 1793541538.0
+  },
+  {
+   "transaction_id": "d3c8e1b0a64f2d792b1e9c5f",
+   "date": "2026-11-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -44.36,
+   "category": "groceries",
+   "account_last_four": "7781",
+   "timestamp": 1793575807.0
+  },
+  {
+   "transaction_id": "4c2e8b9f07da5c31e9d4a0b7",
+   "date": "2026-11-02",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ventra",
+   "amount": -21.0,
+   "category": "transportation",
+   "account_last_four": "7781",
+   "timestamp": 1793659157.0
+  },
+  {
+   "transaction_id": "e0a6d2c8b4f17a39e0c6d2b8",
+   "date": "2026-11-02",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Northbridge Retirement Services - Contribution (pay date 10/30)",
+   "amount": 540.0,
+   "category": "investment",
+   "account_last_four": "6630",
+   "timestamp": 1793624568.0
+  },
+  {
+   "transaction_id": "1190267f94b4852796494124",
+   "date": "2026-05-06",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -96.84,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1778107485.0
+  },
+  {
+   "transaction_id": "db5ddcd7866d7eeda703cdcf",
+   "date": "2026-05-08",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Flowers for Dreams",
+   "amount": -98.41,
+   "category": "gifts",
+   "account_last_four": "4402",
+   "timestamp": 1778261363.0
+  },
+  {
+   "transaction_id": "c7903dead8c4840de1e9f8b3",
+   "date": "2026-05-12",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Walgreens",
+   "amount": -24.37,
+   "category": "health",
+   "account_last_four": "4402",
+   "timestamp": 1778601243.0
+  },
+  {
+   "transaction_id": "990d737943c168f7309097ee",
+   "date": "2026-05-16",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Shell",
+   "amount": -50.11,
+   "category": "gas",
+   "account_last_four": "4402",
+   "timestamp": 1778943128.0
+  },
+  {
+   "transaction_id": "be4d3a2449c87915fc6b5833",
+   "date": "2026-05-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Opart Thai House",
+   "amount": -43.99,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1779215635.0
+  },
+  {
+   "transaction_id": "ba5ed3df7d863e4573a6e739",
+   "date": "2026-05-23",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Book Cellar",
+   "amount": -28.99,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1779567157.0
+  },
+  {
+   "transaction_id": "42443cb14afcd9aa9e8eaf3d",
+   "date": "2026-05-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Binny's Beverage Depot",
+   "amount": -29.84,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1779821881.0
+  },
+  {
+   "transaction_id": "3b2d0230ba020a13018161cb",
+   "date": "2026-05-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Tank Noodle",
+   "amount": -39.11,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1780085246.0
+  },
+  {
+   "transaction_id": "bd027938b60ee7fb3b60bb67",
+   "date": "2026-05-30",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Studio Roots Salon",
+   "amount": -105.0,
+   "category": "personal_care",
+   "account_last_four": "4402",
+   "timestamp": 1780192446.0
+  },
+  {
+   "transaction_id": "2cedb4d65f5b9650f59064cb",
+   "date": "2026-06-02",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Gene's Sausage Shop & Delicatessen",
+   "amount": -58.74,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1780443325.0
+  },
+  {
+   "transaction_id": "3cedfc67ca8e4d5335983f42",
+   "date": "2026-06-09",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "CVS Pharmacy",
+   "amount": -28.63,
+   "category": "health",
+   "account_last_four": "4402",
+   "timestamp": 1781010015.0
+  },
+  {
+   "transaction_id": "f85ba9177f8f55147358b115",
+   "date": "2026-06-13",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Home Depot",
+   "amount": -112.46,
+   "category": "home",
+   "account_last_four": "4402",
+   "timestamp": 1781371207.0
+  },
+  {
+   "transaction_id": "50a2c51501ef0a19e9370c7f",
+   "date": "2026-06-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Amazon",
+   "amount": -68.36,
+   "category": "gifts",
+   "account_last_four": "4402",
+   "timestamp": 1781570792.0
+  },
+  {
+   "transaction_id": "86bbd59e0c1c563a3b2e80b0",
+   "date": "2026-06-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -99.1,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1781963061.0
+  },
+  {
+   "transaction_id": "e3ac9bb610d2ad92bd6d3fb4",
+   "date": "2026-06-24",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "City of Chicago",
+   "amount": -100.17,
+   "category": "auto",
+   "account_last_four": "4402",
+   "timestamp": 1782340484.0
+  },
+  {
+   "transaction_id": "f87901c87030ec40b7fccf23",
+   "date": "2026-06-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Big Star",
+   "amount": -56.85,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1782495657.0
+  },
+  {
+   "transaction_id": "2eca976cb18db1e92003a865",
+   "date": "2026-06-27",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Speedway",
+   "amount": -51.16,
+   "category": "gas",
+   "account_last_four": "4402",
+   "timestamp": 1782609255.0
+  },
+  {
+   "transaction_id": "c6245a3426557435fececa0f",
+   "date": "2026-06-30",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Binny's Beverage Depot",
+   "amount": -30.57,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1782862011.0
+  },
+  {
+   "transaction_id": "36471ddfdc2928cab846e22b",
+   "date": "2026-07-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Aldi",
+   "amount": -77.49,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1783096566.0
+  },
+  {
+   "transaction_id": "d3d952922dd8451856a9f5df",
+   "date": "2026-07-04",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Bad Apple",
+   "amount": -56.55,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1783216640.0
+  },
+  {
+   "transaction_id": "1b9911276d4c9df9155847da",
+   "date": "2026-07-12",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Crate & Barrel",
+   "amount": -105.41,
+   "category": "home",
+   "account_last_four": "4402",
+   "timestamp": 1783879652.0
+  },
+  {
+   "transaction_id": "c5f643e94869bea9e66ec20d",
+   "date": "2026-07-14",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Uniqlo",
+   "amount": -105.04,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1784064221.0
+  },
+  {
+   "transaction_id": "374827ba5196036c65f0526a",
+   "date": "2026-07-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spacca Napoli",
+   "amount": -59.27,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1784416675.0
+  },
+  {
+   "transaction_id": "2a2c1a61c288e6d310927743",
+   "date": "2026-07-21",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -96.13,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1784655942.0
+  },
+  {
+   "transaction_id": "3ebfd31e3bb1e77146a99b67",
+   "date": "2026-07-25",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "BP",
+   "amount": -51.5,
+   "category": "gas",
+   "account_last_four": "4402",
+   "timestamp": 1784989017.0
+  },
+  {
+   "transaction_id": "e85e5d2c4bce5b99a60d999e",
+   "date": "2026-07-28",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Book Cellar",
+   "amount": -29.0,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1785267606.0
+  },
+  {
+   "transaction_id": "72bd1888d5e4e5c5ba7bf092",
+   "date": "2026-07-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Music Box Theatre",
+   "amount": -29.53,
+   "category": "entertainment",
+   "account_last_four": "4402",
+   "timestamp": 1785533202.0
+  },
+  {
+   "transaction_id": "91bf9fa3b03542d3df5c5746",
+   "date": "2026-08-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Mrs. Murphy & Sons Irish Bistro",
+   "amount": -72.03,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1785624282.0
+  },
+  {
+   "transaction_id": "0aeeacc4133928ad3a7d7a50",
+   "date": "2026-08-05",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -102.16,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1785965408.0
+  },
+  {
+   "transaction_id": "9606b1524419a94f93f048b4",
+   "date": "2026-08-10",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Walgreens",
+   "amount": -23.88,
+   "category": "health",
+   "account_last_four": "4402",
+   "timestamp": 1786390291.0
+  },
+  {
+   "transaction_id": "b83f29a24d35e6b62afd2870",
+   "date": "2026-08-14",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "SwimOutlet",
+   "amount": -45.29,
+   "category": "fitness",
+   "account_last_four": "4402",
+   "timestamp": 1786747105.0
+  },
+  {
+   "transaction_id": "668e1da9d0804c4d0fc9c40c",
+   "date": "2026-08-15",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Ulta Beauty",
+   "amount": -57.46,
+   "category": "personal_care",
+   "account_last_four": "4402",
+   "timestamp": 1786828448.0
+  },
+  {
+   "transaction_id": "f5f089cfee2c449b9588f97f",
+   "date": "2026-08-22",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Studio Roots Salon",
+   "amount": -110.73,
+   "category": "personal_care",
+   "account_last_four": "4402",
+   "timestamp": 1787439784.0
+  },
+  {
+   "transaction_id": "3372375cda9884c5481c593b",
+   "date": "2026-08-25",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Binny's Beverage Depot",
+   "amount": -25.29,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1787691252.0
+  },
+  {
+   "transaction_id": "3a7019263099a2a0685e962c",
+   "date": "2026-08-27",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Tank Noodle",
+   "amount": -29.37,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1787866446.0
+  },
+  {
+   "transaction_id": "0767e1ca331e5b065ff0aef7",
+   "date": "2026-08-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Gene's Sausage Shop & Delicatessen",
+   "amount": -49.48,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1788034877.0
+  },
+  {
+   "transaction_id": "e3f183c717557be96b96d80b",
+   "date": "2026-08-30",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Shell",
+   "amount": -57.84,
+   "category": "gas",
+   "account_last_four": "4402",
+   "timestamp": 1788116199.0
+  },
+  {
+   "transaction_id": "20a12b109c213003c30d42ec",
+   "date": "2026-09-05",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Marshalls",
+   "amount": -88.0,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1788654813.0
+  },
+  {
+   "transaction_id": "096134378c008a4e262da460",
+   "date": "2026-09-08",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Illinois Secretary of State",
+   "amount": -163.98,
+   "category": "auto",
+   "account_last_four": "4402",
+   "timestamp": 1788916379.0
+  },
+  {
+   "transaction_id": "21fe9667481e9b1479b97f28",
+   "date": "2026-09-09",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Home Depot",
+   "amount": -66.94,
+   "category": "home",
+   "account_last_four": "4402",
+   "timestamp": 1788968178.0
+  },
+  {
+   "transaction_id": "a5ead54394eff4a43a6c9e64",
+   "date": "2026-09-13",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -112.08,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1789308431.0
+  },
+  {
+   "transaction_id": "02512e7aa9bfefe4973656de",
+   "date": "2026-09-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Opart Thai House",
+   "amount": -45.15,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1789674308.0
+  },
+  {
+   "transaction_id": "7f65114a16b5ec288c75f39a",
+   "date": "2026-09-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "J.Crew",
+   "amount": -160.0,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1789831056.0
+  },
+  {
+   "transaction_id": "4f9f31c2b13f242481b29e8b",
+   "date": "2026-09-22",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "CVS Pharmacy",
+   "amount": -27.86,
+   "category": "health",
+   "account_last_four": "4402",
+   "timestamp": 1790098605.0
+  },
+  {
+   "transaction_id": "2147fad7035a4044a867dac4",
+   "date": "2026-09-26",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Portillo's",
+   "amount": -17.38,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1790436794.0
+  },
+  {
+   "transaction_id": "2930c232e9409545ccd39550",
+   "date": "2026-09-29",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Book Cellar",
+   "amount": -25.63,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1790714294.0
+  },
+  {
+   "transaction_id": "cf1967c9e7e82a9e74ba7ad0",
+   "date": "2026-10-03",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "The Coffee Studio",
+   "amount": -8.07,
+   "category": "coffee",
+   "account_last_four": "4402",
+   "timestamp": 1791038373.0
+  },
+  {
+   "transaction_id": "7bb238de507209041e4362a8",
+   "date": "2026-10-06",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -101.95,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1791311316.0
+  },
+  {
+   "transaction_id": "8e2e24408029580ca4be1e95",
+   "date": "2026-10-09",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Hopleaf Bar",
+   "amount": -71.51,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1791589329.0
+  },
+  {
+   "transaction_id": "358059dd817d90a034197e96",
+   "date": "2026-10-10",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Fleet Feet",
+   "amount": -57.04,
+   "category": "fitness",
+   "account_last_four": "4402",
+   "timestamp": 1791654263.0
+  },
+  {
+   "transaction_id": "3b5a1e2bb021c371ebea901d",
+   "date": "2026-10-12",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Speedway",
+   "amount": -44.63,
+   "category": "gas",
+   "account_last_four": "4402",
+   "timestamp": 1791828960.0
+  },
+  {
+   "transaction_id": "2cc4fc7265cb3a6ce0e36af1",
+   "date": "2026-10-14",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Nordstrom Rack",
+   "amount": -141.95,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1791991086.0
+  },
+  {
+   "transaction_id": "7f3e0af7debfb49c5c37d654",
+   "date": "2026-10-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "FedEx Office",
+   "amount": -26.1,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1792248036.0
+  },
+  {
+   "transaction_id": "4acadff69ad2108a49532945",
+   "date": "2026-10-20",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Tank Noodle",
+   "amount": -28.72,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1792519496.0
+  },
+  {
+   "transaction_id": "66ec42e21a1e6ef990e5ff1e",
+   "date": "2026-10-24",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Spacca Napoli",
+   "amount": -71.0,
+   "category": "dining",
+   "account_last_four": "4402",
+   "timestamp": 1792859751.0
+  },
+  {
+   "transaction_id": "f45303eea3e0cb67127b9718",
+   "date": "2026-10-27",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Binny's Beverage Depot",
+   "amount": -45.5,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1793109186.0
+  },
+  {
+   "transaction_id": "88811553a546e5c5426f6c22",
+   "date": "2026-10-31",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Aldi",
+   "amount": -73.1,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1793455775.0
+  },
+  {
+   "transaction_id": "360289998be064c70428b1d5",
+   "date": "2026-11-01",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Dark Matter Coffee",
+   "amount": -7.22,
+   "category": "coffee",
+   "account_last_four": "4402",
+   "timestamp": 1793585522.0
+  },
+  {
+   "transaction_id": "f479eaa230c9dc676a2b1a07",
+   "date": "2026-10-25",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Harvestime Foods",
+   "amount": -98.0,
+   "category": "groceries",
+   "account_last_four": "4402",
+   "timestamp": 1792926360.0
+  },
+  {
+   "transaction_id": "6498171d9f3ede036035c8fe",
+   "date": "2026-06-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment received, thank you",
+   "amount": 619.45,
+   "category": "credit_card_payment",
+   "account_last_four": "7781",
+   "timestamp": 1781694900.0
+  },
+  {
+   "transaction_id": "09b87c684d1c36391fbc7e6b",
+   "date": "2026-06-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment to Lakeview Savings Bank (Visa Signature) ..7781",
+   "amount": -619.45,
+   "category": "credit_card_payment",
+   "account_last_four": "4402",
+   "timestamp": 1781694900.0
+  },
+  {
+   "transaction_id": "838446abc17e1a950d11c24b",
+   "date": "2026-07-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment received, thank you",
+   "amount": 748.9,
+   "category": "credit_card_payment",
+   "account_last_four": "7781",
+   "timestamp": 1784286900.0
+  },
+  {
+   "transaction_id": "5bdad06de6258a41e997a4d8",
+   "date": "2026-07-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment to Lakeview Savings Bank (Visa Signature) ..7781",
+   "amount": -748.9,
+   "category": "credit_card_payment",
+   "account_last_four": "4402",
+   "timestamp": 1784286900.0
+  },
+  {
+   "transaction_id": "5703b8154bf9b41e1b4851ca",
+   "date": "2026-08-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment received, thank you",
+   "amount": 1044.65,
+   "category": "credit_card_payment",
+   "account_last_four": "7781",
+   "timestamp": 1786965300.0
+  },
+  {
+   "transaction_id": "1fe5fc613ae3445dbe702307",
+   "date": "2026-08-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment to Lakeview Savings Bank (Visa Signature) ..7781",
+   "amount": -1044.65,
+   "category": "credit_card_payment",
+   "account_last_four": "4402",
+   "timestamp": 1786965300.0
+  },
+  {
+   "transaction_id": "0c1b6b4981a84246607e3ec6",
+   "date": "2026-09-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment received, thank you",
+   "amount": 556.4,
+   "category": "credit_card_payment",
+   "account_last_four": "7781",
+   "timestamp": 1789643700.0
+  },
+  {
+   "transaction_id": "a4393cc5565a8512000bf91f",
+   "date": "2026-09-17",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment to Lakeview Savings Bank (Visa Signature) ..7781",
+   "amount": -556.4,
+   "category": "credit_card_payment",
+   "account_last_four": "4402",
+   "timestamp": 1789643700.0
+  },
+  {
+   "transaction_id": "c858c729f914d90b277b57b8",
+   "date": "2026-10-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment received, thank you",
+   "amount": 1037.59,
+   "category": "credit_card_payment",
+   "account_last_four": "7781",
+   "timestamp": 1792408500.0
+  },
+  {
+   "transaction_id": "93dcd1eb351ee5f4f6364964",
+   "date": "2026-10-19",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment to Lakeview Savings Bank (Visa Signature) ..7781",
+   "amount": -1037.59,
+   "category": "credit_card_payment",
+   "account_last_four": "4402",
+   "timestamp": 1792408500.0
+  },
+  {
+   "transaction_id": "d875d104e392fed84d7eaaca",
+   "date": "2026-05-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment to Lakeview Savings Bank (Visa Signature) ..7781",
+   "amount": -573.4,
+   "category": "credit_card_payment",
+   "account_last_four": "4402",
+   "timestamp": 1779102900.0
+  },
+  {
+   "transaction_id": "83af46444a7bc304c53f8d77",
+   "date": "2026-05-18",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Payment received, thank you",
+   "amount": 573.4,
+   "category": "credit_card_payment",
+   "account_last_four": "7781",
+   "timestamp": 1779102900.0
+  },
+  {
+   "transaction_id": "b6651672eab9879c8a6908de",
+   "date": "2026-07-06",
+   "user_id": "1172e1f099f239fa71426b06",
+   "merchant": "Venmo",
+   "amount": -175.0,
+   "category": "shopping",
+   "account_last_four": "4402",
+   "timestamp": 1783377686.0
+  }
+ ]
+}

@@ -1,0 +1,1415 @@
+{
+ "users": [
+  {
+   "id": "fbu_1031",
+   "email": "sam.okafor.oh@gmail.com",
+   "name": "Sam Okafor",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fbgr_311"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1032",
+   "email": "kaylareese.cbus@gmail.com",
+   "name": "Kayla Reese",
+   "visibility": "public",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fbgr_311"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1033",
+   "email": "devon.price614@gmail.com",
+   "name": "Devon Price",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fbgr_311"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1034",
+   "email": "andre.watkins.cbus@gmail.com",
+   "name": "Andre Watkins",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fbgr_311"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1002",
+   "email": "ewa.nowak.parma@gmail.com",
+   "name": "Ewa Nowak",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001",
+    "fbu_1003",
+    "fbu_1004"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1003",
+   "email": "marek.nowak.chi@gmail.com",
+   "name": "Marek Nowak",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001",
+    "fbu_1002",
+    "fbu_1004"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1004",
+   "email": "jake.brennan.cooks@gmail.com",
+   "name": "Jake Brennan",
+   "visibility": "public",
+   "friend_ids": [
+    "fbu_1001",
+    "fbu_1002",
+    "fbu_1003"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fbu_1001",
+   "email": "tomasz.nowak.cbus@gmail.com",
+   "name": "Tomasz Nowak",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1002",
+    "fbu_1003",
+    "fbu_1004",
+    "fb_u_amanda_pruitt73_200e27",
+    "fbu_1034",
+    "fb_u_brianna_cole_rn2b_4aa063",
+    "fb_u_bstout62_c398bb",
+    "fb_u_carlos_mendoza28_414ae8",
+    "fb_u_dale_whitfield_01d204",
+    "fb_u_dariusz_zielinski48_c595fe",
+    "fbu_1033",
+    "fb_u_dholcomb37_8ad9d0",
+    "fb_u_evance57_ec8d93",
+    "fb_u_frank_hollister83_04bea7",
+    "fb_u_gadeyemi67_4056a0",
+    "fb_u_gary_mitchell33_2a6d46",
+    "fb_u_gloria_esposito_fe2813",
+    "fb_u_grabowski_pawe_52f800",
+    "fbu_1032",
+    "fb_u_kowalczyk_steve_be15e7",
+    "fb_u_lkowalczyk57_b790df",
+    "fb_u_lortega_emt_505310",
+    "fb_u_marcus_bell_f45f9d",
+    "fb_u_megan_orourke18_00271a",
+    "fb_u_meichen_sci_0761eb",
+    "fb_u_natalie_szymanski_38b01c",
+    "fb_u_patricia_lunsford68_9656c8",
+    "fb_u_phendricks_9013b6",
+    "fb_u_rob_kessler_ff5fe8",
+    "fb_u_rosa_delgado_6450c0",
+    "fbu_1031",
+    "fb_u_tasha_greene_73da3f",
+    "fb_u_walt_jenkins13_92ddf4",
+    "fb_u_wisniewska_joanna_612e2a",
+    "fb_u_wojciech_lis63_be0c5c",
+    "fb_u_aaliyah_brooks78_20a5a4",
+    "fb_u_abdiwarsame_c7519d",
+    "fb_u_ahmedyusuf_9ac1b8",
+    "fb_u_albrecht_nate_15160b",
+    "fb_u_aliciamoreno_bc231e",
+    "fb_u_andrzej_kaczmarek93_cb8b21",
+    "fb_u_benostrowski_b8a28f",
+    "fb_u_bernard_okoye58_3e9e46",
+    "fb_u_cbennett47_4276d6",
+    "fb_u_cdavenport37_fbe95f",
+    "fb_u_cheryltomlinson_a614b9",
+    "fb_u_cmcbride92_b30d1a",
+    "fb_u_coleman_isaiah_bff9d5",
+    "fb_u_colleen_byrne_ccc9e1",
+    "fb_u_corey_lindqvist_246806",
+    "fb_u_courtney_fields38_04dfce",
+    "fb_u_destinyharper_d4a8e4",
+    "fb_u_dvogel32_c2dbfb",
+    "fb_u_eddie_malone_449798",
+    "fb_u_elena_popescu_30dc43",
+    "fb_u_ferraro_kyle_7e79a2",
+    "fb_u_genepulaski_5855ac",
+    "fb_u_gmcallister82_7af133",
+    "fb_u_gus_petrovich68_d4eea3",
+    "fb_u_halinamazur_faba1c"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors",
+    "fbgr_311"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_lkowalczyk57_b790df",
+   "email": "lkowalczyk57@yahoo.com",
+   "name": "Linda Kowalczyk",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_carlos_mendoza28_414ae8",
+   "email": "carlos.mendoza28@outlook.com",
+   "name": "Carlos Mendoza",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_bstout62_c398bb",
+   "email": "bstout62@gmail.com",
+   "name": "Bill Stout",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_megan_orourke18_00271a",
+   "email": "megan.orourke18@yahoo.com",
+   "name": "Megan O'Rourke",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_wisniewska_joanna_612e2a",
+   "email": "wisniewska.joanna@yahoo.com",
+   "name": "Joanna Wiśniewska",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_dariusz_zielinski48_c595fe",
+   "email": "dariusz.zielinski48@gmail.com",
+   "name": "Dariusz Zielinski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gloria_esposito_fe2813",
+   "email": "gloria.esposito@icloud.com",
+   "name": "Gloria Esposito",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_marcus_bell_f45f9d",
+   "email": "marcus.bell@gmail.com",
+   "name": "Marcus Bell",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_dholcomb37_8ad9d0",
+   "email": "dholcomb37@gmail.com",
+   "name": "Diane Holcomb",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_evance57_ec8d93",
+   "email": "evance57@yahoo.com",
+   "name": "Emily Vance",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rosa_delgado_6450c0",
+   "email": "rosa.delgado@yahoo.com",
+   "name": "Rosa Delgado",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gadeyemi67_4056a0",
+   "email": "gadeyemi67@icloud.com",
+   "name": "Grace Adeyemi",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_frank_hollister83_04bea7",
+   "email": "frank.hollister83@icloud.com",
+   "name": "Frank Hollister",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_natalie_szymanski_38b01c",
+   "email": "natalie.szymanski@gmail.com",
+   "name": "Natalie Szymanski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_patricia_lunsford68_9656c8",
+   "email": "patricia.lunsford68@gmail.com",
+   "name": "Patricia Lunsford",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_wojciech_lis63_be0c5c",
+   "email": "wojciech.lis63@gmail.com",
+   "name": "Wojciech Lis",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_amanda_pruitt73_200e27",
+   "email": "amanda.pruitt73@gmail.com",
+   "name": "Amanda Pruitt",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gary_mitchell33_2a6d46",
+   "email": "gary.mitchell33@gmail.com",
+   "name": "Gary Mitchell",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_walt_jenkins13_92ddf4",
+   "email": "walt.jenkins13@icloud.com",
+   "name": "Walt Jenkins",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_grabowski_pawe_52f800",
+   "email": "grabowski.pawe@gmail.com",
+   "name": "Paweł Grabowski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_kowalczyk_steve_be15e7",
+   "email": "kowalczyk.steve@yahoo.com",
+   "name": "Steve Kowalczyk",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [
+    "fb_group_clintonville_neighbors"
+   ],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_brianna_cole_rn2b_4aa063",
+   "email": "brianna.cole.rn2b@gmail.com",
+   "name": "Brianna Cole",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_dale_whitfield_01d204",
+   "email": "dale.whitfield@ardentparcel.com",
+   "name": "Dale Whitfield",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_lortega_emt_505310",
+   "email": "lortega.emt@gmail.com",
+   "name": "Luis Ortega",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_meichen_sci_0761eb",
+   "email": "meichen.sci@gmail.com",
+   "name": "Mei Chen",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_phendricks_9013b6",
+   "email": "phendricks@sciotocc.edu",
+   "name": "Paul Hendricks",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rob_kessler_ff5fe8",
+   "email": "rob.kessler@ardentparcel.com",
+   "name": "Rob Kessler",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rsilva_ef6985",
+   "email": "rsilva@sciotocc.edu",
+   "name": "Renata Silva",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_tasha_greene_73da3f",
+   "email": "tasha.greene@ardentparcel.com",
+   "name": "Tasha Greene",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_margaret_hollins_500e6f",
+   "email": "margaret.hollins@gmail.com",
+   "name": "Margaret Hollins",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ferraro_kyle_7e79a2",
+   "email": "ferraro.kyle@icloud.com",
+   "name": "Kyle Ferraro",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ruthabernathy_c0d7da",
+   "email": "ruthabernathy@gmail.com",
+   "name": "Ruth Abernathy",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ogallagher12_c70057",
+   "email": "ogallagher12@gmail.com",
+   "name": "Owen Gallagher",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_kimura_sandra_6f1c52",
+   "email": "kimura.sandra@gmail.com",
+   "name": "Sandra Kimura",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_genepulaski_5855ac",
+   "email": "genepulaski@yahoo.com",
+   "name": "Gene Pulaski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_travis_boone13_95e762",
+   "email": "travis.boone13@gmail.com",
+   "name": "Travis Boone",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_whitaker_jasmine_e39de0",
+   "email": "whitaker.jasmine@icloud.com",
+   "name": "Jasmine Whitaker",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_cdavenport37_fbe95f",
+   "email": "cdavenport37@outlook.com",
+   "name": "Chuck Davenport",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ramona_pettit_efbcc6",
+   "email": "ramona.pettit@outlook.com",
+   "name": "Ramona Pettit",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_andrzej_kaczmarek93_cb8b21",
+   "email": "andrzej.kaczmarek93@outlook.com",
+   "name": "Andrzej Kaczmarek",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_courtney_fields38_04dfce",
+   "email": "courtney.fields38@gmail.com",
+   "name": "Courtney Fields",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_mikefields_b8da8f",
+   "email": "mikefields@gmail.com",
+   "name": "Mike Fields",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_bernard_okoye58_3e9e46",
+   "email": "bernard.okoye58@icloud.com",
+   "name": "Bernard Okoye",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ricardo_morales_be4c58",
+   "email": "ricardo.morales@outlook.com",
+   "name": "Ricardo Morales",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ihalvorsen27_b96ecd",
+   "email": "ihalvorsen27@gmail.com",
+   "name": "Ingrid Halvorsen",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gmcallister82_7af133",
+   "email": "gmcallister82@gmail.com",
+   "name": "Gordon McAllister",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_karen_lindqvist_8b96a5",
+   "email": "karen.lindqvist@gmail.com",
+   "name": "Karen Lindqvist",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_phil_kuznicki73_74b061",
+   "email": "phil.kuznicki73@gmail.com",
+   "name": "Phil Kuznicki",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_samuelachterberg_7f3c9e",
+   "email": "samuelachterberg@outlook.com",
+   "name": "Samuel Achterberg",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_aliciamoreno_bc231e",
+   "email": "aliciamoreno@gmail.com",
+   "name": "Alicia Moreno",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_hbramwell87_f51903",
+   "email": "hbramwell87@gmail.com",
+   "name": "Harold Bramwell",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_benostrowski_b8a28f",
+   "email": "benostrowski@yahoo.com",
+   "name": "Ben Ostrowski",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_eddie_malone_449798",
+   "email": "eddie.malone@gmail.com",
+   "name": "Eddie Malone",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_gus_petrovich68_d4eea3",
+   "email": "gus.petrovich68@outlook.com",
+   "name": "Gus Petrovich",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_halinamazur_faba1c",
+   "email": "halinamazur@gmail.com",
+   "name": "Halina Mazur",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rthornton37_d2cbd9",
+   "email": "rthornton37@gmail.com",
+   "name": "Reggie Thornton",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_corey_lindqvist_246806",
+   "email": "corey.lindqvist@gmail.com",
+   "name": "Corey Lindqvist",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_kasante37_628877",
+   "email": "kasante37@icloud.com",
+   "name": "Kwame Asante",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_kbober87_82ddc9",
+   "email": "kbober87@yahoo.com",
+   "name": "Krystyna Bober",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_rutledge_deshawn_e691a8",
+   "email": "rutledge.deshawn@yahoo.com",
+   "name": "Deshawn Rutledge",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_abdiwarsame_c7519d",
+   "email": "abdiwarsame@gmail.com",
+   "name": "Abdi Warsame",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_cheryltomlinson_a614b9",
+   "email": "cheryltomlinson@yahoo.com",
+   "name": "Cheryl Tomlinson",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ruiz_mateo_e68e00",
+   "email": "ruiz.mateo@gmail.com",
+   "name": "Mateo Ruiz",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ykarim22_3fd3b0",
+   "email": "ykarim22@yahoo.com",
+   "name": "Yusra Karim",
+   "visibility": "friends",
+   "friend_ids": [],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_colleen_byrne_ccc9e1",
+   "email": "colleen.byrne@icloud.com",
+   "name": "Colleen Byrne",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_aaliyah_brooks78_20a5a4",
+   "email": "aaliyah.brooks78@gmail.com",
+   "name": "Aaliyah Brooks",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_ahmedyusuf_9ac1b8",
+   "email": "ahmedyusuf@yahoo.com",
+   "name": "Ahmed Yusuf",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_albrecht_nate_15160b",
+   "email": "albrecht.nate@icloud.com",
+   "name": "Nate Albrecht",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_cbennett47_4276d6",
+   "email": "cbennett47@yahoo.com",
+   "name": "Chloe Bennett",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_cmcbride92_b30d1a",
+   "email": "cmcbride92@icloud.com",
+   "name": "Connor McBride",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_coleman_isaiah_bff9d5",
+   "email": "coleman.isaiah@yahoo.com",
+   "name": "Isaiah Coleman",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_destinyharper_d4a8e4",
+   "email": "destinyharper@icloud.com",
+   "name": "Destiny Harper",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_dvogel32_c2dbfb",
+   "email": "dvogel32@gmail.com",
+   "name": "Derek Vogel",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  },
+  {
+   "id": "fb_u_elena_popescu_30dc43",
+   "email": "elena.popescu@gmail.com",
+   "name": "Elena Popescu",
+   "visibility": "friends",
+   "friend_ids": [
+    "fbu_1001"
+   ],
+   "group_ids": [],
+   "admin_page_ids": [],
+   "followed_page_ids": []
+  }
+ ],
+ "pages": [],
+ "groups": [
+  {
+   "id": "fbgr_311",
+   "name": "Scioto CC A&P II - Fall 2026",
+   "visibility": "private",
+   "member_ids": [
+    "fbu_1001",
+    "fbu_1031",
+    "fbu_1032",
+    "fbu_1033",
+    "fbu_1034"
+   ]
+  },
+  {
+   "id": "fb_group_clintonville_neighbors",
+   "name": "Clintonville Neighbors",
+   "visibility": "public",
+   "member_ids": [
+    "fbu_1001",
+    "fb_u_amanda_pruitt73_200e27",
+    "fb_u_bstout62_c398bb",
+    "fb_u_evance57_ec8d93",
+    "fb_u_frank_hollister83_04bea7",
+    "fb_u_gadeyemi67_4056a0",
+    "fb_u_gloria_esposito_fe2813",
+    "fbu_1004",
+    "fb_u_kowalczyk_steve_be15e7",
+    "fb_u_lkowalczyk57_b790df",
+    "fb_u_megan_orourke18_00271a",
+    "fb_u_natalie_szymanski_38b01c",
+    "fb_u_patricia_lunsford68_9656c8",
+    "fb_u_rosa_delgado_6450c0",
+    "fb_u_walt_jenkins13_92ddf4",
+    "fb_u_wisniewska_joanna_612e2a",
+    "fb_u_wojciech_lis63_be0c5c"
+   ]
+  }
+ ],
+ "posts": [
+  {
+   "id": "fbp_4910",
+   "author_id": "fbu_1001",
+   "message": "Took my brother Marek Nowak to the Crew last night for the 4th. Loud the whole match, fireworks over the field after. Good to have him down from Chicago for the weekend 🔥",
+   "created_at": "2026-07-05T15:01:56Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fbp_4911",
+   "author_id": "fbu_1002",
+   "message": "Moi synowie ❤️❤️",
+   "created_at": "2026-07-05T15:37:12Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fbp_4614",
+   "author_id": "fbu_1002",
+   "message": "Wszystkiego najlepszego, synku! ❤️ Zdrowia, szczescia i spelnienia wszystkich marzen. Wczorajszy dzien z Toba byl dla mnie najpiekniejszym prezentem. Sto lat, Tomeczku! 🙏",
+   "created_at": "2026-06-14T12:00:41Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fbp_4615",
+   "author_id": "fbu_1001",
+   "message": "Thanks everyone for the birthday wishes 🙂 Dziękuję, mamo ❤️ Mom drove down from Parma yesterday with pierogi and sernik, so the freezer is stocked for the next two weeks.",
+   "created_at": "2026-06-14T13:15:27Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fbp_4616",
+   "author_id": "fbu_1002",
+   "message": "Dzien Matki ❤️ Dziekuje, synku! Najpiekniejsze roze i lilie w calej Parmie 🙏",
+   "created_at": "2026-05-26T19:10:37Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fbp_4211",
+   "author_id": "fbu_1032",
+   "message": "North Campus library has the A&P models on 2 hour reserve again, kidney and heart both. just ask at the front desk with your student ID",
+   "created_at": "2026-10-16T17:12:46Z",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "fbgr_311"
+  },
+  {
+   "id": "fbp_4212",
+   "author_id": "fbu_1033",
+   "message": "silva sent the official PQ6 key to everyone's email this afternoon. check it before you study off anything else, mine was buried under financial aid stuff",
+   "created_at": "2026-10-21T20:40:09Z",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "fbgr_311"
+  },
+  {
+   "id": "fbp_4213",
+   "author_id": "fbu_1031",
+   "message": "anyone have checkpoint answers lol",
+   "created_at": "2026-10-23T10:40:00Z",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "fbgr_311"
+  },
+  {
+   "id": "fbp_4601",
+   "author_id": "fbu_1002",
+   "message": "Odliczam dni do Wigilii… w tym roku bez Marka 😢 Zdjecie z zeszlego roku, 12 potraw jak zawsze.",
+   "created_at": "2026-10-18T16:30:41Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_33b844b863",
+   "author_id": "fbu_1001",
+   "message": "First properly warm Sunday at Whetstone. Legs are done, worth it 🔥",
+   "created_at": "2026-05-17T15:05:35Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_73c70f96a6",
+   "author_id": "fbu_1001",
+   "message": "New front tires on the Civic, thanks to Clintonville Tire & Auto for getting me in and out fast. Ten years old and still running like a champ 👍",
+   "created_at": "2026-07-18T16:45:02Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_7db63f1d65",
+   "author_id": "fbu_1002",
+   "message": "Pierwsze sliwki z ogrodu w tym roku. Jutro bedzie placek ze sliwkami, szkoda ze chlopcy tak daleko 🙂",
+   "created_at": "2026-08-15T21:10:00Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_66cefde811",
+   "author_id": "fbu_1001",
+   "message": "Finally made it to Ember & Rye with Jake tonight. He's been talking about this place since spring and ok, he was right.",
+   "created_at": "2026-08-22T01:40:01Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_7829f09d05",
+   "author_id": "fb_u_marcus_bell_f45f9d",
+   "message": "Pickup cookout tomorrow at Whetstone right after the 9am game. Bring a side, a chair, or just yourself. Grill will be going by 10:30.",
+   "created_at": "2026-08-29T21:45:02Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_36eaa2aa26",
+   "author_id": "fbu_1001",
+   "message": "Good game this morning and an even better cookout after. Thanks Marcus for organizing, and Carlos for bringing enough hot dogs for three teams 🔥",
+   "created_at": "2026-08-30T16:30:21Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_27790edaff",
+   "author_id": "fbu_1001",
+   "message": "New RF scanners went live on the outbound dock this morning. Crew picked them up faster than I expected, only two resets before lunch 👍",
+   "created_at": "2026-09-14T16:15:40Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_ab91d7f8ee",
+   "author_id": "fbu_1001",
+   "message": "Lunch with Bartek at Katalina's. Pancake balls are still undefeated.",
+   "created_at": "2026-09-19T18:10:27Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_d9099fffbd",
+   "author_id": "fb_u_patricia_lunsford68_9656c8",
+   "message": "I want to say thank you to Tomasz Nowak from up the street, who carries my groceries up the steps without me even asking. Young people like him make this neighborhood what it is.",
+   "created_at": "2026-09-26T19:00:16Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_3382126000",
+   "author_id": "fb_u_bstout62_c398bb",
+   "message": "Anybody else see the fox cutting across Indianola near Weber around 6:30 this morning? My beagle about pulled my arm off.",
+   "created_at": "2026-10-01T11:40:19Z",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "fb_group_clintonville_neighbors"
+  },
+  {
+   "id": "fb_post_0eab15ce6b",
+   "author_id": "fb_u_lkowalczyk57_b790df",
+   "message": "Our landlord had the furnaces in our building on Indianola checked today. If you rent and haven't asked about yours yet, now is the time, before the first cold snap.",
+   "created_at": "2026-10-08T20:30:47Z",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "fb_group_clintonville_neighbors"
+  },
+  {
+   "id": "fb_post_18032fb2aa",
+   "author_id": "fbu_1004",
+   "message": "Took the morning off for the furnace guy so my roommate didn't have to. Apartment has heat, I have done my civic duty.",
+   "created_at": "2026-10-08T22:30:15Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_b13bebcdcc",
+   "author_id": "fb_u_amanda_pruitt73_200e27",
+   "message": "Quick reminder for our new members: items for sale go on Marketplace, and you're welcome to share the link here. Lost and found pet posts are always okay in the main feed. Thanks for keeping this group friendly!",
+   "created_at": "2026-10-10T13:30:54Z",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "fb_group_clintonville_neighbors"
+  },
+  {
+   "id": "fb_post_03d8d22c4b",
+   "author_id": "fbu_1001",
+   "message": "If you're still putting off the flu shot, the Kroger pharmacy on N High was quick today. Booked an appointment online and was out in about 20 minutes.",
+   "created_at": "2026-10-17T17:20:01Z",
+   "visibility": "group",
+   "page_id": "",
+   "group_id": "fb_group_clintonville_neighbors"
+  },
+  {
+   "id": "fb_post_d3b723bb12",
+   "author_id": "fb_u_carlos_mendoza28_414ae8",
+   "message": "Cold one at Whetstone this morning but plenty of people still came out. gloves season is officially here",
+   "created_at": "2026-10-18T15:20:22Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_abb4e4aad5",
+   "author_id": "fbu_1001",
+   "message": "Staying in this morning. Unit 2 is Wednesday, so Whetstone waits until the 11th.",
+   "created_at": "2026-10-04T16:15:18Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_cd47687cb2",
+   "author_id": "fb_u_whitaker_jasmine_e39de0",
+   "message": "Three nights in a row on the unit, finally done. Driving home up High St at sunrise with the leaves turning almost made up for it. almost. Goodnight everybody, see you tonight",
+   "created_at": "2026-10-11T12:40:17Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_325b6c7ead",
+   "author_id": "fb_u_cdavenport37_fbe95f",
+   "message": "Block watch reminder for the Indianola and Weber area: trick or treat in Clintonville is Saturday, Oct 31, 6 to 8pm. Porch light on means you're handing out candy, porch light off means skip the house. Please drive slow that night, lots of little ones crossing mid block.",
+   "created_at": "2026-10-20T23:05:36Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_aa966e1a70",
+   "author_id": "fb_u_ruiz_mateo_e68e00",
+   "message": "Birria truck is parked at the Rohr Rd lunch lot again today, 11 to 2. Warehouse folks, I know your breaks are short so text your order ahead and I'll have it bagged when you walk up. Quesabirria plate is $12 🔥",
+   "created_at": "2026-10-21T14:20:02Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  },
+  {
+   "id": "fb_post_47f4fb1620",
+   "author_id": "fbu_1001",
+   "message": "Crew beat our UPH target all four days this week, new scanners and all. Really proud of this group 👍 Sleeping in until 7:30 tomorrow like a king.",
+   "created_at": "2026-10-22T21:30:13Z",
+   "visibility": "friends",
+   "page_id": "",
+   "group_id": ""
+  }
+ ],
+ "marketplace_listings": [
+  {
+   "id": "fb_listing_caa89ca665",
+   "seller_id": "fbu_1001",
+   "title": "Men's turf soccer shoes, size 10",
+   "price": 30.0,
+   "created_at": "2026-10-10T16:30:15Z",
+   "status": "active",
+   "visibility": "public",
+   "description": "Bought these for winter pickup but they run narrow on me. Worn twice on turf, no damage, still have the box. Pickup in Clintonville near Indianola and Weber, weekends work best.",
+   "category": "Sporting Goods",
+   "currency": "USD"
+  }
+ ],
+ "saved_items": [
+  {
+   "id": "fbsv_6910",
+   "user_id": "fbu_1001",
+   "item_type": "post",
+   "item_id": "fbp_4910",
+   "created_at": "2026-07-05T15:35:48Z"
+  },
+  {
+   "id": "fbsv_6911",
+   "user_id": "fbu_1003",
+   "item_type": "post",
+   "item_id": "fbp_4910",
+   "created_at": "2026-07-05T22:18:05Z"
+  },
+  {
+   "id": "fbsv_6614",
+   "user_id": "fbu_1001",
+   "item_type": "post",
+   "item_id": "fbp_4614",
+   "created_at": "2026-06-14T13:17:52Z"
+  },
+  {
+   "id": "fbsv_6615",
+   "user_id": "fbu_1001",
+   "item_type": "post",
+   "item_id": "fbp_4615",
+   "created_at": "2026-06-14T13:44:06Z"
+  },
+  {
+   "id": "fbsv_6211",
+   "user_id": "fbu_1034",
+   "item_type": "post",
+   "item_id": "fbp_4211",
+   "created_at": "2026-10-16T19:27:30Z"
+  },
+  {
+   "id": "fbsv_6212",
+   "user_id": "fbu_1034",
+   "item_type": "post",
+   "item_id": "fbp_4212",
+   "created_at": "2026-10-22T02:05:13Z"
+  }
+ ],
+ "current_user_id": "fbu_1001"
+}

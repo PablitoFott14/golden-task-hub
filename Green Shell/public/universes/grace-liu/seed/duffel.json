@@ -1,0 +1,1713 @@
+{
+ "users": [
+  {
+   "id": "07692a2f3a05a66730378811",
+   "email": "grace.liu@lakeshorefreight.com"
+  }
+ ],
+ "offers": [
+  {
+   "id": "off_0000AgVn3qTx",
+   "owner": {
+    "name": "American Airlines",
+    "iata_code": "AA",
+    "id": "arl_0000VME7DBKe"
+   },
+   "slices": [
+    {
+     "id": "sli_0000AgVn3qTy",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "MEM",
+      "type": "airport",
+      "name": "Memphis International Airport",
+      "city_name": "Memphis",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H48M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000AgVn3qTz",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "MEM",
+        "type": "airport",
+        "name": "Memphis International Airport",
+        "city_name": "Memphis",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-11T17:10:00",
+       "arriving_at": "2026-11-11T18:58:00",
+       "marketing_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA"
+       },
+       "operating_carrier": {
+        "name": "Envoy Air",
+        "iata_code": "MQ"
+       },
+       "marketing_carrier_flight_number": "3391",
+       "duration": "PT1H48M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000AgVn3qU0",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          },
+          {
+           "type": "checked",
+           "quantity": 0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000AgVn3qU0",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "214.40",
+   "total_currency": "USD",
+   "base_amount": "185.12",
+   "base_currency": "USD",
+   "tax_amount": "29.28",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "expires_at": "2026-11-09T05:59:00Z",
+   "created_at": "2026-10-29T17:10:04+00:00"
+  },
+  {
+   "id": "off_0000AgVn5rWb",
+   "owner": {
+    "name": "United Airlines",
+    "iata_code": "UA",
+    "id": "arl_0000VME7DAGi"
+   },
+   "slices": [
+    {
+     "id": "sli_0000AgVn5rWc",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "MEM",
+      "type": "airport",
+      "name": "Memphis International Airport",
+      "city_name": "Memphis",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H50M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000AgVn5rWd",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "MEM",
+        "type": "airport",
+        "name": "Memphis International Airport",
+        "city_name": "Memphis",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-11T18:45:00",
+       "arriving_at": "2026-11-11T20:35:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "4120",
+       "duration": "PT1H50M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000AgVn5rX0",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          },
+          {
+           "type": "checked",
+           "quantity": 0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000AgVn5rX0",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "189.60",
+   "total_currency": "USD",
+   "base_amount": "162.05",
+   "base_currency": "USD",
+   "tax_amount": "27.55",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "expires_at": "2026-11-09T05:59:00Z",
+   "created_at": "2026-10-29T17:10:09+00:00"
+  },
+  {
+   "id": "off_0000AgVn7sKd",
+   "owner": {
+    "name": "American Airlines",
+    "iata_code": "AA",
+    "id": "arl_0000VME7DBKe"
+   },
+   "slices": [
+    {
+     "id": "sli_0000AgVn7sKe",
+     "origin": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "MEM",
+      "type": "airport",
+      "name": "Memphis International Airport",
+      "city_name": "Memphis",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H47M",
+     "fare_brand_name": "Basic Economy",
+     "segments": [
+      {
+       "id": "seg_0000AgVn7sKf",
+       "origin": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "MEM",
+        "type": "airport",
+        "name": "Memphis International Airport",
+        "city_name": "Memphis",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-11T20:25:00",
+       "arriving_at": "2026-11-11T22:12:00",
+       "marketing_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA"
+       },
+       "operating_carrier": {
+        "name": "Envoy Air",
+        "iata_code": "MQ"
+       },
+       "marketing_carrier_flight_number": "3517",
+       "duration": "PT1H47M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000AgVn7sL0",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          },
+          {
+           "type": "checked",
+           "quantity": 0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000AgVn7sL0",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "162.10",
+   "total_currency": "USD",
+   "base_amount": "136.47",
+   "base_currency": "USD",
+   "tax_amount": "25.63",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    }
+   },
+   "expires_at": "2026-11-09T05:59:00Z",
+   "created_at": "2026-10-29T17:10:13+00:00"
+  },
+  {
+   "id": "off_0000AgWp2hMc",
+   "owner": {
+    "name": "American Airlines",
+    "iata_code": "AA",
+    "id": "arl_0000VME7DBKe"
+   },
+   "slices": [
+    {
+     "id": "sli_0000AgWp2hMd",
+     "origin": {
+      "iata_code": "MEM",
+      "type": "airport",
+      "name": "Memphis International Airport",
+      "city_name": "Memphis",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H52M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000AgWp2hMe",
+       "origin": {
+        "iata_code": "MEM",
+        "type": "airport",
+        "name": "Memphis International Airport",
+        "city_name": "Memphis",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-12T11:20:00",
+       "arriving_at": "2026-11-12T13:12:00",
+       "marketing_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA"
+       },
+       "operating_carrier": {
+        "name": "Envoy Air",
+        "iata_code": "MQ"
+       },
+       "marketing_carrier_flight_number": "3402",
+       "duration": "PT1H52M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000AgWp2hN0",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          },
+          {
+           "type": "checked",
+           "quantity": 0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000AgWp2hN0",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "176.80",
+   "total_currency": "USD",
+   "base_amount": "150.14",
+   "base_currency": "USD",
+   "tax_amount": "26.66",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "expires_at": "2026-11-09T05:59:00Z",
+   "created_at": "2026-10-29T17:10:18+00:00"
+  },
+  {
+   "id": "off_0000AgWp4jNe",
+   "owner": {
+    "name": "United Airlines",
+    "iata_code": "UA",
+    "id": "arl_0000VME7DAGi"
+   },
+   "slices": [
+    {
+     "id": "sli_0000AgWp4jNf",
+     "origin": {
+      "iata_code": "MEM",
+      "type": "airport",
+      "name": "Memphis International Airport",
+      "city_name": "Memphis",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H54M",
+     "fare_brand_name": "Economy",
+     "segments": [
+      {
+       "id": "seg_0000AgWp4jNg",
+       "origin": {
+        "iata_code": "MEM",
+        "type": "airport",
+        "name": "Memphis International Airport",
+        "city_name": "Memphis",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-12T14:35:00",
+       "arriving_at": "2026-11-12T16:29:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "4127",
+       "duration": "PT1H54M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000AgWp4jP0",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          },
+          {
+           "type": "checked",
+           "quantity": 0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000AgWp4jP0",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "246.10",
+   "total_currency": "USD",
+   "base_amount": "214.60",
+   "base_currency": "USD",
+   "tax_amount": "31.50",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "expires_at": "2026-11-09T05:59:00Z",
+   "created_at": "2026-10-29T17:10:24+00:00"
+  },
+  {
+   "id": "off_0000AgWp6kQf",
+   "owner": {
+    "name": "American Airlines",
+    "iata_code": "AA",
+    "id": "arl_0000VME7DBKe"
+   },
+   "slices": [
+    {
+     "id": "sli_0000AgWp6kQg",
+     "origin": {
+      "iata_code": "MEM",
+      "type": "airport",
+      "name": "Memphis International Airport",
+      "city_name": "Memphis",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H54M",
+     "fare_brand_name": "Main Cabin",
+     "segments": [
+      {
+       "id": "seg_0000AgWp6kQh",
+       "origin": {
+        "iata_code": "MEM",
+        "type": "airport",
+        "name": "Memphis International Airport",
+        "city_name": "Memphis",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-12T15:50:00",
+       "arriving_at": "2026-11-12T17:44:00",
+       "marketing_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA"
+       },
+       "operating_carrier": {
+        "name": "Envoy Air",
+        "iata_code": "MQ"
+       },
+       "marketing_carrier_flight_number": "3488",
+       "duration": "PT1H54M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000AgWp6kR0",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          },
+          {
+           "type": "checked",
+           "quantity": 0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000AgWp6kR0",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "289.50",
+   "total_currency": "USD",
+   "base_amount": "254.98",
+   "base_currency": "USD",
+   "tax_amount": "34.52",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": true,
+     "penalty_amount": "0.00",
+     "penalty_currency": "USD"
+    }
+   },
+   "expires_at": "2026-11-09T05:59:00Z",
+   "created_at": "2026-10-29T17:10:29+00:00"
+  },
+  {
+   "id": "off_0000AgWp8mRg",
+   "owner": {
+    "name": "United Airlines",
+    "iata_code": "UA",
+    "id": "arl_0000VME7DAGi"
+   },
+   "slices": [
+    {
+     "id": "sli_0000AgWp8mRh",
+     "origin": {
+      "iata_code": "MEM",
+      "type": "airport",
+      "name": "Memphis International Airport",
+      "city_name": "Memphis",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H51M",
+     "fare_brand_name": "Basic Economy",
+     "segments": [
+      {
+       "id": "seg_0000AgWp8mRi",
+       "origin": {
+        "iata_code": "MEM",
+        "type": "airport",
+        "name": "Memphis International Airport",
+        "city_name": "Memphis",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-12T16:30:00",
+       "arriving_at": "2026-11-12T18:21:00",
+       "marketing_carrier": {
+        "name": "United Airlines",
+        "iata_code": "UA"
+       },
+       "operating_carrier": {
+        "name": "SkyWest Airlines",
+        "iata_code": "OO"
+       },
+       "marketing_carrier_flight_number": "4133",
+       "duration": "PT1H51M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000AgWp8mS0",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "United Economy",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 0
+          },
+          {
+           "type": "checked",
+           "quantity": 0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000AgWp8mS0",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "158.40",
+   "total_currency": "USD",
+   "base_amount": "133.02",
+   "base_currency": "USD",
+   "tax_amount": "25.38",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    }
+   },
+   "expires_at": "2026-11-09T05:59:00Z",
+   "created_at": "2026-10-29T17:10:35+00:00"
+  },
+  {
+   "id": "off_0000AgWp9nSh",
+   "owner": {
+    "name": "American Airlines",
+    "iata_code": "AA",
+    "id": "arl_0000VME7DBKe"
+   },
+   "slices": [
+    {
+     "id": "sli_0000AgWp9nSi",
+     "origin": {
+      "iata_code": "MEM",
+      "type": "airport",
+      "name": "Memphis International Airport",
+      "city_name": "Memphis",
+      "time_zone": "America/Chicago"
+     },
+     "destination": {
+      "iata_code": "ORD",
+      "type": "airport",
+      "name": "O'Hare International Airport",
+      "city_name": "Chicago",
+      "time_zone": "America/Chicago"
+     },
+     "duration": "PT1H52M",
+     "fare_brand_name": "Basic Economy",
+     "segments": [
+      {
+       "id": "seg_0000AgWp9nSj",
+       "origin": {
+        "iata_code": "MEM",
+        "type": "airport",
+        "name": "Memphis International Airport",
+        "city_name": "Memphis",
+        "time_zone": "America/Chicago"
+       },
+       "destination": {
+        "iata_code": "ORD",
+        "type": "airport",
+        "name": "O'Hare International Airport",
+        "city_name": "Chicago",
+        "time_zone": "America/Chicago"
+       },
+       "departing_at": "2026-11-12T18:55:00",
+       "arriving_at": "2026-11-12T20:47:00",
+       "marketing_carrier": {
+        "name": "American Airlines",
+        "iata_code": "AA"
+       },
+       "operating_carrier": {
+        "name": "Envoy Air",
+        "iata_code": "MQ"
+       },
+       "marketing_carrier_flight_number": "3530",
+       "duration": "PT1H52M",
+       "passengers": [
+        {
+         "passenger_id": "pas_0000AgWp9nT0",
+         "cabin_class": "economy",
+         "cabin_class_marketing_name": "Main Cabin",
+         "baggages": [
+          {
+           "type": "carry_on",
+           "quantity": 1
+          },
+          {
+           "type": "checked",
+           "quantity": 0
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "passengers": [
+    {
+     "id": "pas_0000AgWp9nT0",
+     "type": "adult"
+    }
+   ],
+   "total_amount": "139.90",
+   "total_currency": "USD",
+   "base_amount": "115.81",
+   "base_currency": "USD",
+   "tax_amount": "24.09",
+   "tax_currency": "USD",
+   "conditions": {
+    "refund_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    },
+    "change_before_departure": {
+     "allowed": false,
+     "penalty_amount": null,
+     "penalty_currency": null
+    }
+   },
+   "expires_at": "2026-11-09T05:59:00Z",
+   "created_at": "2026-10-29T17:10:41+00:00"
+  }
+ ],
+ "seat_map_elements": [
+  {
+   "id": "sea_0000Bk3q01Ta",
+   "offer_id": "off_0000AgVn3qTx",
+   "segment_id": "seg_0000AgVn3qTz",
+   "type": "seat",
+   "designator": "9C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 0,
+   "position": 0,
+   "total_amount": "21.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk3q02Tb",
+   "offer_id": "off_0000AgVn3qTx",
+   "segment_id": "seg_0000AgVn3qTz",
+   "type": "seat",
+   "designator": "11C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk3q03Tc",
+   "offer_id": "off_0000AgVn3qTx",
+   "segment_id": "seg_0000AgVn3qTz",
+   "type": "seat",
+   "designator": "11D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Bk3q04Td",
+   "offer_id": "off_0000AgVn3qTx",
+   "segment_id": "seg_0000AgVn3qTz",
+   "type": "seat",
+   "designator": "14A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk3q05Te",
+   "offer_id": "off_0000AgVn3qTx",
+   "segment_id": "seg_0000AgVn3qTz",
+   "type": "seat",
+   "designator": "16D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 16,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk5r01Wa",
+   "offer_id": "off_0000AgVn5rWb",
+   "segment_id": "seg_0000AgVn5rWd",
+   "type": "seat",
+   "designator": "12C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 0,
+   "position": 0,
+   "total_amount": "24.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk5r02Wb",
+   "offer_id": "off_0000AgVn5rWb",
+   "segment_id": "seg_0000AgVn5rWd",
+   "type": "seat",
+   "designator": "12D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 0,
+   "position": 0,
+   "total_amount": "24.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Bk5r03Wc",
+   "offer_id": "off_0000AgVn5rWb",
+   "segment_id": "seg_0000AgVn5rWd",
+   "type": "seat",
+   "designator": "14D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk5r04Wd",
+   "offer_id": "off_0000AgVn5rWb",
+   "segment_id": "seg_0000AgVn5rWd",
+   "type": "seat",
+   "designator": "15C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 15,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk5r05We",
+   "offer_id": "off_0000AgVn5rWb",
+   "segment_id": "seg_0000AgVn5rWd",
+   "type": "seat",
+   "designator": "17A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk5r06Wf",
+   "offer_id": "off_0000AgVn5rWb",
+   "segment_id": "seg_0000AgVn5rWd",
+   "type": "seat",
+   "designator": "19F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 19,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Bk7s01Ka",
+   "offer_id": "off_0000AgVn7sKd",
+   "segment_id": "seg_0000AgVn7sKf",
+   "type": "seat",
+   "designator": "13D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 13,
+   "section": 0,
+   "position": 0,
+   "total_amount": "26.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Bk7s02Kb",
+   "offer_id": "off_0000AgVn7sKd",
+   "segment_id": "seg_0000AgVn7sKf",
+   "type": "seat",
+   "designator": "18C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 18,
+   "section": 0,
+   "position": 0,
+   "total_amount": "18.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk7s03Kc",
+   "offer_id": "off_0000AgVn7sKd",
+   "segment_id": "seg_0000AgVn7sKf",
+   "type": "seat",
+   "designator": "19D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 19,
+   "section": 0,
+   "position": 0,
+   "total_amount": "18.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bk7s04Kd",
+   "offer_id": "off_0000AgVn7sKd",
+   "segment_id": "seg_0000AgVn7sKf",
+   "type": "seat",
+   "designator": "20A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 20,
+   "section": 0,
+   "position": 0,
+   "total_amount": "15.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm2h01Ma",
+   "offer_id": "off_0000AgWp2hMc",
+   "segment_id": "seg_0000AgWp2hMe",
+   "type": "seat",
+   "designator": "10D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 10,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm2h02Mb",
+   "offer_id": "off_0000AgWp2hMc",
+   "segment_id": "seg_0000AgWp2hMe",
+   "type": "seat",
+   "designator": "12C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Bm2h03Mc",
+   "offer_id": "off_0000AgWp2hMc",
+   "segment_id": "seg_0000AgWp2hMe",
+   "type": "seat",
+   "designator": "15A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 15,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm2h04Md",
+   "offer_id": "off_0000AgWp2hMc",
+   "segment_id": "seg_0000AgWp2hMe",
+   "type": "seat",
+   "designator": "17F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm4j01Na",
+   "offer_id": "off_0000AgWp4jNe",
+   "segment_id": "seg_0000AgWp4jNg",
+   "type": "seat",
+   "designator": "12D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 0,
+   "position": 0,
+   "total_amount": "24.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm4j02Nb",
+   "offer_id": "off_0000AgWp4jNe",
+   "segment_id": "seg_0000AgWp4jNg",
+   "type": "seat",
+   "designator": "13C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 13,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm4j03Nc",
+   "offer_id": "off_0000AgWp4jNe",
+   "segment_id": "seg_0000AgWp4jNg",
+   "type": "seat",
+   "designator": "13D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 13,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Bm4j04Nd",
+   "offer_id": "off_0000AgWp4jNe",
+   "segment_id": "seg_0000AgWp4jNg",
+   "type": "seat",
+   "designator": "16D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 16,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm4j05Ne",
+   "offer_id": "off_0000AgWp4jNe",
+   "segment_id": "seg_0000AgWp4jNg",
+   "type": "seat",
+   "designator": "18A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 18,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm6k01Qa",
+   "offer_id": "off_0000AgWp6kQf",
+   "segment_id": "seg_0000AgWp6kQh",
+   "type": "seat",
+   "designator": "9D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 9,
+   "section": 0,
+   "position": 0,
+   "total_amount": "21.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm6k02Qb",
+   "offer_id": "off_0000AgWp6kQf",
+   "segment_id": "seg_0000AgWp6kQh",
+   "type": "seat",
+   "designator": "11D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 11,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm6k03Qc",
+   "offer_id": "off_0000AgWp6kQf",
+   "segment_id": "seg_0000AgWp6kQh",
+   "type": "seat",
+   "designator": "14C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Bm6k04Qd",
+   "offer_id": "off_0000AgWp6kQf",
+   "segment_id": "seg_0000AgWp6kQh",
+   "type": "seat",
+   "designator": "16A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 16,
+   "section": 0,
+   "position": 0,
+   "total_amount": "0.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm8m01Ra",
+   "offer_id": "off_0000AgWp8mRg",
+   "segment_id": "seg_0000AgWp8mRi",
+   "type": "seat",
+   "designator": "14C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 14,
+   "section": 0,
+   "position": 0,
+   "total_amount": "28.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm8m02Rb",
+   "offer_id": "off_0000AgWp8mRg",
+   "segment_id": "seg_0000AgWp8mRi",
+   "type": "seat",
+   "designator": "17C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 17,
+   "section": 0,
+   "position": 0,
+   "total_amount": "19.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm8m03Rc",
+   "offer_id": "off_0000AgWp8mRg",
+   "segment_id": "seg_0000AgWp8mRi",
+   "type": "seat",
+   "designator": "18D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 18,
+   "section": 0,
+   "position": 0,
+   "total_amount": "19.00",
+   "total_currency": "USD",
+   "available": false
+  },
+  {
+   "id": "sea_0000Bm8m04Rd",
+   "offer_id": "off_0000AgWp8mRg",
+   "segment_id": "seg_0000AgWp8mRi",
+   "type": "seat",
+   "designator": "20F",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 20,
+   "section": 0,
+   "position": 0,
+   "total_amount": "16.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm9n01Sa",
+   "offer_id": "off_0000AgWp9nSh",
+   "segment_id": "seg_0000AgWp9nSj",
+   "type": "seat",
+   "designator": "12C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 12,
+   "section": 0,
+   "position": 0,
+   "total_amount": "24.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm9n02Sb",
+   "offer_id": "off_0000AgWp9nSh",
+   "segment_id": "seg_0000AgWp9nSj",
+   "type": "seat",
+   "designator": "15D",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 15,
+   "section": 0,
+   "position": 0,
+   "total_amount": "18.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm9n03Sc",
+   "offer_id": "off_0000AgWp9nSh",
+   "segment_id": "seg_0000AgWp9nSj",
+   "type": "seat",
+   "designator": "19C",
+   "name": "Aisle",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 19,
+   "section": 0,
+   "position": 0,
+   "total_amount": "18.00",
+   "total_currency": "USD",
+   "available": true
+  },
+  {
+   "id": "sea_0000Bm9n04Sd",
+   "offer_id": "off_0000AgWp9nSh",
+   "segment_id": "seg_0000AgWp9nSj",
+   "type": "seat",
+   "designator": "20A",
+   "name": "Window",
+   "cabin_class": "economy",
+   "deck": 0,
+   "row": 20,
+   "section": 0,
+   "position": 0,
+   "total_amount": "15.00",
+   "total_currency": "USD",
+   "available": false
+  }
+ ],
+ "orders": [],
+ "order_cancellations": [],
+ "accommodations": [
+  {
+   "id": "acc_0000Hq4Lc7Zn",
+   "name": "Lamar Crossing Inn",
+   "location": {
+    "address": {
+     "line_one": "2635 E Brooks Rd",
+     "city_name": "Memphis",
+     "country_code": "US",
+     "region": "TN",
+     "postal_code": "38116"
+    },
+    "geographic_coordinates": {
+     "latitude": 35.0705,
+     "longitude": -89.9723
+    }
+   },
+   "description": "Three-story inn on Brooks Road in the airport business district. Free parking, 24-hour front desk and grab-and-go coffee from 5 am.",
+   "rating": 2,
+   "review_score": 7.9,
+   "amenities": [
+    {
+     "type": "wifi",
+     "description": "Free Wi-Fi"
+    },
+    {
+     "type": "parking",
+     "description": "Free on-site parking"
+    },
+    {
+     "type": "24_hour_front_desk",
+     "description": "24-hour front desk"
+    },
+    {
+     "type": "laundry",
+     "description": "Guest laundry"
+    }
+   ],
+   "check_in_information": {
+    "check_in_after_time": "15:00",
+    "check_out_before_time": "11:00"
+   }
+  },
+  {
+   "id": "acc_0000Hq4Am2Yp",
+   "name": "Airways Suites Memphis",
+   "location": {
+    "address": {
+     "line_one": "2715 Airways Blvd",
+     "city_name": "Memphis",
+     "country_code": "US",
+     "region": "TN",
+     "postal_code": "38114"
+    },
+    "geographic_coordinates": {
+     "latitude": 35.086,
+     "longitude": -89.989
+    }
+   },
+   "description": "All-suite hotel on Airways Boulevard. Studio suites with kitchenettes, hot breakfast included and a free airport shuttle from 5 am to 11 pm.",
+   "rating": 3,
+   "review_score": 8.3,
+   "amenities": [
+    {
+     "type": "wifi",
+     "description": "Free Wi-Fi"
+    },
+    {
+     "type": "parking",
+     "description": "Free parking"
+    },
+    {
+     "type": "gym",
+     "description": "Fitness room"
+    },
+    {
+     "type": "business_centre",
+     "description": "Business center with printing"
+    }
+   ],
+   "check_in_information": {
+    "check_in_after_time": "15:00",
+    "check_out_before_time": "12:00"
+   }
+  },
+  {
+   "id": "acc_0000Hq4Gr9Xk",
+   "name": "MEM Airport Grand",
+   "location": {
+    "address": {
+     "line_one": "2240 Democrat Rd",
+     "city_name": "Memphis",
+     "country_code": "US",
+     "region": "TN",
+     "postal_code": "38132"
+    },
+    "geographic_coordinates": {
+     "latitude": 35.064,
+     "longitude": -89.9255
+    }
+   },
+   "description": "Full-service airport hotel with a restaurant, lobby bar, indoor pool and fitness center. Shuttle to Memphis International Airport every 30 minutes.",
+   "rating": 4,
+   "review_score": 8.1,
+   "amenities": [
+    {
+     "type": "wifi",
+     "description": "Free Wi-Fi"
+    },
+    {
+     "type": "restaurant",
+     "description": "On-site restaurant and bar"
+    },
+    {
+     "type": "pool",
+     "description": "Indoor pool"
+    },
+    {
+     "type": "gym",
+     "description": "24-hour fitness center"
+    },
+    {
+     "type": "parking",
+     "description": "Self parking, fee applies"
+    }
+   ],
+   "check_in_information": {
+    "check_in_after_time": "16:00",
+    "check_out_before_time": "11:00"
+   }
+  },
+  {
+   "id": "acc_0000Hq4Rb5Wm",
+   "name": "River Bluff Hotel Downtown",
+   "location": {
+    "address": {
+     "line_one": "128 S Front St",
+     "city_name": "Memphis",
+     "country_code": "US",
+     "region": "TN",
+     "postal_code": "38103"
+    },
+    "geographic_coordinates": {
+     "latitude": 35.143,
+     "longitude": -90.053
+    }
+   },
+   "description": "Boutique hotel on Front Street above the Mississippi, a short walk to Beale Street. Rooftop bar and valet parking.",
+   "rating": 4,
+   "review_score": 8.8,
+   "amenities": [
+    {
+     "type": "wifi",
+     "description": "Free Wi-Fi"
+    },
+    {
+     "type": "restaurant",
+     "description": "Rooftop bar and restaurant"
+    },
+    {
+     "type": "parking",
+     "description": "Valet parking, fee applies"
+    },
+    {
+     "type": "gym",
+     "description": "Fitness studio"
+    }
+   ],
+   "check_in_information": {
+    "check_in_after_time": "16:00",
+    "check_out_before_time": "12:00"
+   }
+  }
+ ],
+ "rooms": [
+  {
+   "id": "rom_0000Hq4Lc8Zn",
+   "accommodation_id": "acc_0000Hq4Lc7Zn",
+   "name": "King Room",
+   "beds": [
+    {
+     "type": "king",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "rom_0000Hq4Am3Yp",
+   "accommodation_id": "acc_0000Hq4Am2Yp",
+   "name": "King Studio Suite",
+   "beds": [
+    {
+     "type": "king",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "rom_0000Hq4Gr0Xk",
+   "accommodation_id": "acc_0000Hq4Gr9Xk",
+   "name": "Standard King Room",
+   "beds": [
+    {
+     "type": "king",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "rom_0000Hq4Rb6Wm",
+   "accommodation_id": "acc_0000Hq4Rb5Wm",
+   "name": "Deluxe Queen Room",
+   "beds": [
+    {
+     "type": "queen",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "rates": [
+  {
+   "id": "rat_0000Hq4Lc9Zq",
+   "room_id": "rom_0000Hq4Lc8Zn",
+   "check_in_date": "2026-11-11",
+   "check_out_date": "2026-11-12",
+   "total_amount": "199.82",
+   "total_currency": "USD",
+   "base_amount": "168.00",
+   "tax_amount": "31.82",
+   "board_type": "room_only",
+   "payment_type": "pay_now",
+   "cancellation_timeline": [
+    {
+     "before": "2026-11-11T00:00:00Z",
+     "refund_amount": "199.82",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 3
+  },
+  {
+   "id": "rat_0000Hq4Am4Yr",
+   "room_id": "rom_0000Hq4Am3Yp",
+   "check_in_date": "2026-11-11",
+   "check_out_date": "2026-11-12",
+   "total_amount": "177.45",
+   "total_currency": "USD",
+   "base_amount": "149.00",
+   "tax_amount": "28.45",
+   "board_type": "breakfast",
+   "payment_type": "pay_now",
+   "cancellation_timeline": [
+    {
+     "before": "2026-11-11T18:00:00Z",
+     "refund_amount": "177.45",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 5
+  },
+  {
+   "id": "rat_0000Hq4Gr1Xs",
+   "room_id": "rom_0000Hq4Gr0Xk",
+   "check_in_date": "2026-11-11",
+   "check_out_date": "2026-11-12",
+   "total_amount": "224.55",
+   "total_currency": "USD",
+   "base_amount": "189.00",
+   "tax_amount": "35.55",
+   "board_type": "room_only",
+   "payment_type": "guarantee",
+   "cancellation_timeline": [
+    {
+     "before": "2026-11-10T05:59:00Z",
+     "refund_amount": "224.55",
+     "currency": "USD"
+    }
+   ],
+   "quantity_available": 8
+  },
+  {
+   "id": "rat_0000Hq4Rb7Wt",
+   "room_id": "rom_0000Hq4Rb6Wm",
+   "check_in_date": "2026-11-11",
+   "check_out_date": "2026-11-12",
+   "total_amount": "251.63",
+   "total_currency": "USD",
+   "base_amount": "212.00",
+   "tax_amount": "39.63",
+   "board_type": "room_only",
+   "payment_type": "pay_now",
+   "cancellation_timeline": [],
+   "quantity_available": 2
+  }
+ ],
+ "quotes": [],
+ "bookings": [],
+ "current_user_email": "grace.liu@lakeshorefreight.com"
+}
