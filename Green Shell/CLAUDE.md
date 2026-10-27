@@ -321,34 +321,42 @@ than hub copy. `dimensionLinks` at the foot of the file is the one hand-authored
 **gen_spec.py is what writes it**, so an edit made in `specDoc.ts` alone is lost on the next
 regeneration.
 
-What moved between revisions lives in [src/data/specLog.ts](src/data/specLog.ts), hand-authored by
-diffing the new export against the one the hub was carrying, and renders in two places. The
-**Change Log** pane is a third rail group under Dimensions and Appendix, built the same way as the
-rest of the page: one rail entry with a count, one pane at a time, each revision a boxed batch
-headed by its `version` and date, and its entries fold into the page search with everything else.
-**Only the five newest revisions are kept**: when a sixth lands, delete the oldest.
+What changed lately lives in [src/data/specLog.ts](src/data/specLog.ts), hand-authored by diffing
+the new export against the one the hub was carrying, and renders in two places. The **Change Log**
+pane is a third rail group under Dimensions and Appendix, one rail entry with a count like the rest
+of the page, one card per revision, and its entries fold into the page search and the ⌘K index.
+The **update log banner** sits above the rail, directly under the search box, because the pane is
+only found by a reader who goes looking and someone arriving at the spec has no way of knowing the
+standard moved under them. Collapsed it is the newest revision in one line; opened it is that
+revision's changes, the same `ChangeList` the pane renders.
 
-**Green Shell's log starts at one entry with nothing under it**, because the first Green Shell
-export had no earlier Green Shell revision to diff against and its `changes` is empty. Three guards
-in [SpecDoc.tsx](src/pages/SpecDoc.tsx) keep that from reading as a broken count: the rail badge is
-dropped, the section note says "1 revision" rather than "0 changes", and the banner's drawer
-explains the state instead of opening on an empty list. They are all `length === 0` checks on the
-totals, so they switched themselves off the moment the second export landed and the page went back
-to the counts. Leave them in: the initial entry still renders its own `0`. The **update log banner**
-sits above the rail, directly under the search box, because the pane is only found by a reader who
-goes looking and someone arriving at the spec has no way of knowing the standard moved under them.
-It heads the newest revision, opens to the same cards, and links through to the pane. An entry
-earns its place only where the standard actually changed, so a revision that moves nothing adds
-nothing.
+**The log is the last five changes, not a history.** It used to be one card per dimension edit,
+each quoting the old and new wording, with a rule that kept the five newest *revisions*. That rule
+never limited the entries: V6 was diffed against V4 and carried everything in between, so it alone
+was twenty one cards, and cutting the log down to the newest revision still showed all twenty one.
+Nobody read them. The log now works like this:
 
-**Every entry links to the dimension it changed.** Each dimension card carries a `dim-<name>`
+- **A change is a group**: one thing an author or reviewer now does differently. It has a `kind`
+  (`removed`, `scoring` or `guidance`), a one line `title`, an optional one or two sentence `note`,
+  and the dimensions it touches as `items`. An item carries a few words of `text` when the
+  dimensions under one change moved differently, and none when the `note` covers them all. V6's
+  twenty dimensions are five changes.
+- **Five changes at most, across the whole log.** A new revision goes on top with its changes most
+  important first. Then delete changes from the bottom until five remain, drop any older change the
+  new spec supersedes, and delete a revision left with none. If trimming removes the change an older
+  revision's `title` names, rewrite the title. A revision that moves nothing earns no entry.
+- **Say what changed and what it means, in a few words.** Do not quote the old wording: every live
+  dimension links to its card, which carries the current wording. A dimension reworded without
+  changing what it scores gets no entry. Never point out a gap or inconsistency in the spec. Tell
+  the user in chat instead.
+
+**Every dimension in an entry links to its card.** Each dimension card carries a `dim-<name>`
 anchor, `dimensionHome` in [SpecDoc.tsx](src/pages/SpecDoc.tsx) maps that anchor back to the pane
 holding it, and the hash effect opens that pane so `/spec#dim-realism` works cold as well as from
-inside the page. The anchor is derived from `SpecChange.dimension`, which has to match the name in
-`specDoc.ts` character for character: **a renamed dimension silently turns every log link at it
+inside the page. The anchor is derived from `SpecChangeItem.dimension`, which has to match the name
+in `specDoc.ts` character for character: **a renamed dimension silently turns every log link at it
 into a dead one**, and nothing validates that, so rename in both files together. The one exception
-is a `removed` entry (first used in V6): the dimension is gone, so the card names it as it was and
-renders no link.
+is a `removed` change: the dimension is gone, so the entry names it as it was and renders no link.
 
 ### The method is the spine
 
@@ -648,7 +656,7 @@ answers a different question, and each links to the other two rather than restat
 | --- | --- | --- | --- |
 | **The update notice** | [src/data/hubLog.ts](src/data/hubLog.ts) | [HubLog.tsx](src/components/HubLog.tsx), the `#updates` bar under the nav on `/` | What has changed that I have to act on before my next task |
 | **Must Read: Project Updates** | [src/data/changes.ts](src/data/changes.ts) | [WhatsNew.tsx](src/pages/WhatsNew.tsx), the `whats-new` pane of `/reference` | What a contributor has to do differently: the *guidelines* change coming from Red Shell, and every client flag since |
-| **Spec Doc change log** | [src/data/specLog.ts](src/data/specLog.ts) | the `log` pane of `/spec` | Which *rubric dimension* moved between exports |
+| **Spec Doc change log** | [src/data/specLog.ts](src/data/specLog.ts) | the `log` pane of `/spec` | What changed in the *rubric* lately: the last five changes, grouped |
 
 **The update notice is not a changelog of the site.** It carries three kinds and nothing else:
 `guidelines`, `onboarding`, and `resource`, a resource a contributor should start using on their next

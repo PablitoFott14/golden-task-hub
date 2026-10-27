@@ -275,7 +275,7 @@ export default function SpecDoc() {
 
       {!searching && (
         <Reveal>
-          <UpdateLogBanner onOpenLog={() => goTo("log")} />
+          <UpdateLogBanner />
         </Reveal>
       )}
 
@@ -702,108 +702,131 @@ function StandardsSection() {
 }
 
 const changeKindLabel: Record<SpecChangeKind, string> = {
-  added: "New dimension",
-  options: "Scored options",
-  guidance: "Guidance",
-  wording: "Wording",
   removed: "Removed",
+  scoring: "Scoring",
+  guidance: "Guidance",
 };
 
 const changeKindTone: Record<SpecChangeKind, string> = {
-  added: "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-200",
-  options: "bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-200",
-  guidance: "bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-200",
-  wording: "bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-200",
   // Muted, the way the deprecated weight scale is: nothing left to grade against.
   removed: "bg-ink-200/70 text-ink-600",
+  scoring: "bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-200",
+  guidance: "bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-200",
 };
 
-const changeKindBorder: Record<SpecChangeKind, string> = {
-  added: "border-l-emerald-400 dark:border-l-emerald-500/60",
-  options: "border-l-rose-400 dark:border-l-rose-500/60",
-  guidance: "border-l-sky-400 dark:border-l-sky-500/60",
-  wording: "border-l-amber-400 dark:border-l-amber-500/60",
-  removed: "border-l-ink-300",
-};
-
-function ChangeCard({ ch, query }: { ch: SpecChange; query?: string }) {
+/* A dimension named in the log links to its card. A removed one has no card
+   left to open, so it is named and not linked. */
+function DimensionRef({
+  name,
+  removed,
+  query,
+  className,
+}: {
+  name: string;
+  removed: boolean;
+  query?: string;
+  className?: string;
+}) {
+  const text = <Highlight text={name} query={query} />;
+  if (removed) return <span className={cx("font-semibold text-ink-500", className)}>{text}</span>;
   return (
-    <div className={cx("card border-l-4 p-4", changeKindBorder[ch.kind])}>
-      <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
-        <span className={cx("chip", changeKindTone[ch.kind])}>{changeKindLabel[ch.kind]}</span>
-        <h3 className="text-[15px] font-bold text-ink-900">
-          <Highlight text={ch.dimension} query={query} />
-        </h3>
-        <span className="text-[11px] font-bold uppercase tracking-wide text-ink-400">
-          <Highlight text={ch.group} query={query} />
-        </span>
-      </div>
-      <p className="mt-1 text-[13px] font-semibold leading-relaxed text-ink-800">
-        <Highlight text={ch.summary} query={query} />
-      </p>
-      <p className="mt-1.5 text-[13px] leading-relaxed text-ink-600">
-        <Highlight text={ch.detail} query={query} />
-      </p>
-      {/* A removed dimension has no card left to open, so its entry links nowhere. */}
-      {ch.kind !== "removed" && (
-        <Crosslinks
-          links={[
-            {
-              to: `/spec#${dimSlug(ch.dimension)}`,
-              tag: ch.group,
-              label: `Read ${ch.dimension} as it stands now`,
-            },
-          ]}
-          className="mt-3"
-        />
+    <Link
+      to={`/spec#${dimSlug(name)}`}
+      className={cx(
+        "font-semibold text-brand-700 transition hover:text-brand-900 hover:underline dark:text-brand-300 dark:hover:text-brand-200",
+        className
       )}
-    </div>
+    >
+      {text}
+    </Link>
   );
 }
 
-/* Each revision is its own boxed batch, headed by its version and date, so
-   where one ends and the next begins is never in doubt. */
+/* One row per change: its kind, what changed, and the dimensions it touches.
+   Dimensions that moved the same way sit together as one line of names;
+   dimensions that moved differently each get a line saying how. */
+function ChangeList({ changes, query }: { changes: SpecChange[]; query?: string }) {
+  return (
+    <ol className="divide-y divide-ink-200/70">
+      {changes.map((ch) => {
+        const removed = ch.kind === "removed";
+        return (
+          <li key={ch.title} className="py-4 first:pt-0 last:pb-0">
+            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+              <span className={cx("chip py-0.5", changeKindTone[ch.kind])}>{changeKindLabel[ch.kind]}</span>
+              <h4 className="text-[14.5px] font-bold leading-snug text-ink-900">
+                <Highlight text={ch.title} query={query} />
+              </h4>
+            </div>
+            {ch.note && (
+              <p className="mt-1.5 text-[13px] leading-relaxed text-ink-600">
+                <Highlight text={ch.note} query={query} />
+              </p>
+            )}
+            {ch.items.some((it) => it.text) ? (
+              <ul className="mt-2.5 space-y-2">
+                {ch.items.map((it) => (
+                  <li key={it.dimension} className="text-[13px] leading-relaxed sm:flex sm:gap-4">
+                    <DimensionRef
+                      name={it.dimension}
+                      removed={removed}
+                      query={query}
+                      className="block shrink-0 sm:w-48"
+                    />
+                    {it.text && (
+                      <span className="block text-ink-600">
+                        <Highlight text={it.text} query={query} />
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div className="mt-2.5 flex flex-wrap gap-1.5">
+                {ch.items.map((it) => (
+                  <DimensionRef
+                    key={it.dimension}
+                    name={it.dimension}
+                    removed={removed}
+                    query={query}
+                    className="rounded-md border border-ink-200/80 bg-surface px-2 py-0.5 text-[12.5px]"
+                  />
+                ))}
+              </div>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+/* Each revision is one card, headed by its version and date, with its changes
+   listed under it. */
 function ChangeLogSection() {
   return (
     <section>
       <SectionHeader
         icon={History}
         title="Change Log"
-        note={
-          // The first revision of a spec has nothing to diff against, so it
-          // logs no changes. "0 changes" would read as a fault rather than a
-          // starting point.
-          specChangeCount === 0
-            ? `${specRevisions.length} revision${specRevisions.length === 1 ? "" : "s"}`
-            : `${specChangeCount} change${specChangeCount === 1 ? "" : "s"} across ${
-                specRevisions.length
-              } revision${specRevisions.length === 1 ? "" : "s"}`
-        }
+        note={`${specChangeCount} change${specChangeCount === 1 ? "" : "s"}`}
       />
       <p className="mb-5 text-[13px] leading-relaxed text-ink-500">{specLogNote}</p>
-      <div className="space-y-8">
+      <div className="space-y-6">
         {specRevisions.map((rev) => (
-          <div key={rev.id} className="rounded-2xl border border-ink-200/70 bg-ink-50/60 p-4 sm:p-5">
-            <div className="mb-3 flex flex-wrap items-center gap-2 border-b border-ink-200/70 pb-3">
+          <div key={rev.id} className="card p-4 sm:p-5">
+            <div className="flex flex-wrap items-center gap-2">
               <span className="rounded-md bg-brand-600 px-2 py-0.5 font-mono text-[12px] font-bold text-white">
                 {rev.version}
               </span>
-              <span className="chip bg-brand-100 text-brand-700 dark:bg-brand-500/20 dark:text-brand-200">
+              <span className="chip bg-brand-100 py-0.5 text-brand-700 dark:bg-brand-500/20 dark:text-brand-200">
                 {rev.date}
               </span>
-              <span className="text-xs font-semibold text-ink-400">
-                {rev.changes.length} change{rev.changes.length === 1 ? "" : "s"}
-              </span>
             </div>
-            <h3 className="text-[15.5px] font-bold leading-snug text-ink-900">{rev.title}</h3>
-            <p className="mt-1 text-[13px] leading-relaxed text-ink-600">{rev.note}</p>
-            {rev.changes.length > 0 && (
-              <div className="mt-4 space-y-3">
-                {rev.changes.map((ch) => (
-                  <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} />
-                ))}
-              </div>
-            )}
+            <h3 className="mt-2 text-[15.5px] font-bold leading-snug text-ink-900">{rev.title}</h3>
+            <div className="mt-4 border-t border-ink-200/70 pt-4">
+              <ChangeList changes={rev.changes} />
+            </div>
           </div>
         ))}
       </div>
@@ -816,14 +839,13 @@ function ChangeLogSection() {
  *
  * The Change Log pane is only found by someone who goes looking for it, and a
  * reader arriving at the spec has no way of knowing the standard moved under
- * them. This is the same content, headed by the newest revision, sitting where
- * it cannot be missed. Collapsed it is a headline and a sentence; opened it is
- * the revision in full, with a way through to the pane.
+ * them. Collapsed it is the newest revision in one line; opened it is that
+ * revision's changes, the same list the pane renders.
  */
-function UpdateLogBanner({ onOpenLog }: { onOpenLog: () => void }) {
+function UpdateLogBanner() {
   const [open, setOpen] = useState(false);
   const rev = specRevisions[0];
-  const requirements = new Set(rev.changes.map((c) => c.dimension)).size;
+  const changes = rev.changes.length;
 
   return (
     <div className="mt-4 overflow-hidden rounded-2xl border border-brand-200/80 bg-brand-50/70 dark:border-brand-500/30 dark:bg-brand-500/10">
@@ -839,24 +861,16 @@ function UpdateLogBanner({ onOpenLog }: { onOpenLog: () => void }) {
         <span className="min-w-0 flex-1">
           <span className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
             <span className="mono-label text-brand-700 dark:text-brand-200">Update log</span>
-            {specChangeCount > 0 && (
-              <span className="font-mono text-[11px] text-ink-500">
-                {specChangeCount} logged change{specChangeCount === 1 ? "" : "s"}
-              </span>
-            )}
             <span className="rounded-md bg-brand-600 px-2 py-0.5 font-mono text-[11px] font-bold text-white">
-              {rev.date}
+              {rev.version}
             </span>
-            {requirements > 0 && (
-              <span className="font-mono text-[11px] text-ink-500">
-                {requirements} requirement{requirements === 1 ? "" : "s"} updated
-              </span>
-            )}
+            <span className="font-mono text-[11px] text-ink-500">
+              {rev.date} · {changes} change{changes === 1 ? "" : "s"}
+            </span>
           </span>
           <span className="mt-1.5 block text-[14px] font-bold leading-snug text-ink-900">
             {rev.title}
           </span>
-          <span className="mt-1 block text-[12.5px] leading-relaxed text-ink-600">{rev.note}</span>
         </span>
 
         <ChevronDown
@@ -867,24 +881,8 @@ function UpdateLogBanner({ onOpenLog }: { onOpenLog: () => void }) {
       </button>
 
       {open && (
-        <div className="border-t border-brand-200/70 p-4 dark:border-brand-500/25">
-          {rev.changes.length > 0 ? (
-            <div className="space-y-3">
-              {rev.changes.map((ch) => (
-                <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} />
-              ))}
-            </div>
-          ) : (
-            // An empty list under an open drawer reads as a loading failure.
-            <p className="text-[13px] leading-relaxed text-ink-600">
-              Nothing is logged as changed, because this is the first revision the hub has carried.
-              Every dimension below is new to it. The next export will be diffed against this one
-              and the entries will appear here.
-            </p>
-          )}
-          <button onClick={onOpenLog} className="btn-ghost mt-4">
-            Open the full log <ArrowRight size={14} />
-          </button>
+        <div className="border-t border-brand-200/70 p-4 sm:p-5 dark:border-brand-500/25">
+          <ChangeList changes={rev.changes} />
         </div>
       )}
     </div>
@@ -932,7 +930,10 @@ function SearchResults({ query }: { query: string }) {
   const changeResults = specRevisions.flatMap((rev) =>
     rev.changes.filter(
       (ch) =>
-        has(ch.dimension) || has(ch.group) || has(ch.summary) || has(ch.detail) || has(rev.date)
+        has(ch.title) ||
+        has(ch.note) ||
+        ch.items.some((it) => has(it.dimension) || has(it.text)) ||
+        has(rev.date)
     )
   );
 
@@ -1007,10 +1008,8 @@ function SearchResults({ query }: { query: string }) {
           {changeResults.length > 0 && (
             <div>
               <ResultLabel>Change Log</ResultLabel>
-              <div className="space-y-3">
-                {changeResults.map((ch) => (
-                  <ChangeCard key={ch.group + ch.dimension + ch.summary} ch={ch} query={query} />
-                ))}
+              <div className="card p-4 sm:p-5">
+                <ChangeList changes={changeResults} query={query} />
               </div>
             </div>
           )}

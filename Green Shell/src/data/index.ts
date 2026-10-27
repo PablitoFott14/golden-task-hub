@@ -342,10 +342,10 @@ export const searchIndex: SearchEntry[] = [
   ...specRevisions.flatMap<SearchEntry>((rev) =>
     rev.changes.map((ch) => ({
       kind: "QC spec" as const,
-      title: `Spec change · ${ch.dimension}`,
-      hint: `${rev.date} · ${ch.summary}`,
+      title: `Spec change · ${ch.title}`,
+      hint: `${rev.date} · ${ch.items.map((it) => it.dimension).join(", ")}`,
       to: "/spec#log",
-      terms: `${ch.group} ${ch.detail} spec change log revision updated`,
+      terms: `${ch.note ?? ""} ${ch.items.map((it) => it.text ?? "").join(" ")} spec change log revision updated`,
     }))
   ),
 
