@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Moon, Search, Sun, X } from "lucide-react";
+import { Menu, Moon, Search, Star, Sun, X } from "lucide-react";
 import { cx } from "../lib/util";
 import { useTheme } from "../lib/useTheme";
 import CommandPalette from "./CommandPalette";
 
 /**
- * Seven tabs, one of them parked, and the number is the point.
+ * Eight tabs, one of them parked, and the number is the point.
  *
  * It was eight. Four of those were things a contributor looks something up in
  * rather than works from — onboarding, what moved from Red Shell, the FAQ, and
@@ -46,11 +46,21 @@ import CommandPalette from "./CommandPalette";
  * second, right after the method, because exploring the universe is the
  * method's second step.
  *
+ * **My Performance is the last, and this is the argument for it.** It is the
+ * one page about the contributor rather than the task: their own standing, the
+ * issues their audits found, what to do in the next task, and the feedback of
+ * every attempt, opened with their CB ID and the key in their personal link.
+ * Every other tab reads the same for everyone, so none of them can hold it, and
+ * Reference is for looking something up in, not for one person's record. It is
+ * not the standard either, though each finding in it names the Guidelines
+ * section and the hub page it rests on. It sits last because it is read after
+ * the work is audited, and its star marks it as the one tab that is personal.
+ *
  * **Complexity is parked.** The proposals tool is off the site for now, so its
- * entry is out of this list and six tabs show. The page and everything behind
+ * entry is out of this list and seven tabs show. The page and everything behind
  * it are still in the source, and CLAUDE.md has the way back.
  *
- * **Anything new goes inside one of these.** An eighth tab needs an argument
+ * **Anything new goes inside one of these.** A ninth tab needs an argument
  * for why it is not a pane of an existing one.
  */
 const links = [
@@ -60,7 +70,19 @@ const links = [
   { to: "/failure-approach", label: "Failure Approach" },
   { to: "/spec", label: "Spec Doc" },
   { to: "/reference", label: "Reference" },
+  { to: "/performance", label: "My Performance", star: true },
 ];
+
+/** A tab's label, with the gold star of the hub's mark on the one tab that is personal. */
+function TabLabel({ l }: { l: (typeof links)[number] }) {
+  if (!l.star) return <>{l.label}</>;
+  return (
+    <span className="inline-flex items-center gap-1.5 align-top">
+      <Star size={13} className="shrink-0 fill-gold-400 text-gold-500" aria-hidden />
+      {l.label}
+    </span>
+  );
+}
 
 function Mark() {
   return (
@@ -217,7 +239,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                   navClass(isActive || (l.to === "/golden-tasks" && pathname.startsWith("/golden-tasks")))
                 }
               >
-                {l.label}
+                <TabLabel l={l} />
               </NavLink>
             ))}
           </nav>
@@ -269,7 +291,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                       )
                     }
                   >
-                    {l.label}
+                    <TabLabel l={l} />
                   </NavLink>
                 ))}
               </div>

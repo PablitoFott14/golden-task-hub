@@ -5,10 +5,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 A static React site, the practical reference for contributors (CBs) on the Green Shell / OpenClaw MM
-Rubrics single turn project. **Seven tabs**, and the detail of why is in
-[Seven tabs, and where everything lives](#seven-tabs-and-where-everything-lives). One of them,
+Rubrics single turn project. **Eight tabs**, and the detail of why is in
+[Eight tabs, and where everything lives](#eight-tabs-and-where-everything-lives). One of them,
 Complexity, is [parked](#the-complexity-tab-is-parked): off the site for now, kept in the source,
-so six show.
+so seven show.
 
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
@@ -20,6 +20,7 @@ so six show.
 | Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | **Parked, not on the site**, and the route redirects to `/`. The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
 | Spec Doc | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec: the dimensions, the appendix and the change log, one pane at a time off a vertical rail, under one search. |
 | Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, the must-read project updates, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
+| My Performance | `/performance` | [Performance.tsx](src/pages/Performance.tsx) | A contributor's own performance card: their standing and what the next audits can do to it, the issues to fix first, what to do in the next task, and every audited attempt's feedback, opened with their CB ID and the key in their personal link. The card is fetched from Green Shell Insights for that one contributor. See [The My Performance tab](#the-my-performance-tab). |
 
 `/grading`, `/checklist`, `/onboarding`, `/whats-new` and `/faq` are kept as redirects that carry
 the hash across.
@@ -76,7 +77,7 @@ cat > src/ssr-smoke.tsx <<'EOF'
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import App from "./App";
-const routes = ["/", "/universes", "/universes/kofi-mensah", "/golden-tasks", "/golden-tasks/charge-disputes", "/failure-approach", "/complexity", "/spec", "/reference", "/nope"];
+const routes = ["/", "/universes", "/universes/kofi-mensah", "/golden-tasks", "/golden-tasks/charge-disputes", "/failure-approach", "/complexity", "/spec", "/reference", "/performance", "/nope"];
 let fail = 0;
 for (const r of routes) {
   try { console.log(`OK   ${r} ${renderToString(<StaticRouter location={r}><App /></StaticRouter>).length}`); }
@@ -113,10 +114,11 @@ checklist persistence and every cross-link were verified that way.
 
 ## Architecture
 
-### Seven tabs, and where everything lives
+### Eight tabs, and where everything lives
 
 The hub was eight tabs and it had stopped being navigable. It went to six, one per thing someone is
-actually doing, and one of those is parked; Universes made it seven, so six show.
+actually doing, and one of those is parked; Universes made it seven and My Performance eight, so
+seven show.
 
 | Tab | Route | Panes inside it | Was |
 | --- | --- | --- | --- |
@@ -127,6 +129,7 @@ actually doing, and one of those is parked; Universes made it seven, so six show
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
 | Spec Doc | `/spec` | **7 dimension groups** (default: Task Parameters) · 3 appendix sections · Change log | `/spec` |
 | Reference | `/reference`, `/reference/:pane` | **Onboarding** (default) · Pre-Submit · Must Read: Project Updates · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
+| My Performance | `/performance` | the landing (CB ID, personal key), then the contributor's card under the hub's header | new |
 
 **The spec doc is the destination, not a pane of something else.** It is the one piece of content
 nothing else in the hub can stand in for: the exact rubric a reviewer scores against. The gate, the
@@ -174,8 +177,10 @@ Failure Approach's is there: it is worked from rather than looked up in, so it i
 it is seven failure types, twenty eight patterns and the real runs behind them, so it would swallow
 a method step whole; and it is not the standard. Universes made the same case and is the seventh:
 three complete applications a contributor works in from the method's second step on, so not a
-Reference pane, not a method step and not the standard. An eighth tab makes the same case or goes in
-a pane.
+Reference pane, not a method step and not the standard. My Performance made it too and is the
+eighth: the one page about the contributor rather than the task, so no tab that reads the same for
+everyone can hold it, and not the standard, though every finding in it names the Guidelines section
+it rests on. A ninth tab makes the same case or goes in a pane.
 
 ### They are onboardings, not courses
 
@@ -595,6 +600,45 @@ diagnosis, under the kind `Failure approach`.
 **It follows the guidelines where the studies do not**: the 30% failure floor with 50% preferred,
 an assigned universe you explore rather than build, grading where it lands, no breaking tools or
 files on purpose, deviation from a parameter only as the guidelines allow.
+
+### The My Performance tab
+
+[Performance.tsx](src/pages/Performance.tsx) is the one page about a contributor rather than the
+task: their own performance card, the same card the project team opens for them in Green Shell
+Insights' CB Cards tab. A contributor opens the tab from their **personal link**,
+`/#/performance?k=<key>`, enters their CB ID, and the card opens under the hub's header: where they
+stand and what the next audits can do to it, the areas where improvement is expected, what to do in
+the next task with the hub pages that help, and every audited attempt's feedback.
+
+**Nothing private is in this repo, and nothing private is in the bundle.** The repo is public and
+the site static, so the card is fetched after a check, for that one contributor, from Green Shell
+Insights' `/api/card`. That endpoint answers a CB ID only with the key from that contributor's own
+link, an HMAC of the ID under a secret that lives on Insights alone: a key opens one card, and
+another CB ID with it gets the same refusal as an ID that does not exist. The page takes the key
+out of the address bar as soon as it arrives and keeps it, with the CB ID, in `sessionStorage` for
+that tab only. The team hands each contributor their link from the CB Cards tab (a copy button per
+contributor, or every link as a CSV).
+
+**`src/performance/card/` is a verbatim copy: never edit it here.** The card is the CB Performance
+& Project Guidance Hub's (`Green Shell/Evals/cb-guidance-hub/app/src` on Drive), the source
+Insights' card page is built from too, so both show the same card from the same data. Its
+`scripts/sync-hub-card.mjs` copies the card in (`--check` compares it file by file) and refuses a
+copy that would leave out a file the card imports. `card.css` holds the card's own styles, outside
+`@layer`, imported by the page. [src/performance/api.ts](src/performance/api.ts), the one call, and
+the page itself are this repo's own.
+
+**The cards link into this hub, and a build there checks every link against this source.** Each
+finding names a Guidelines section and up to two hub pages from the guidance hub's
+`guidance/catalog.json`: routes as [App.tsx](src/App.tsx) defines them, anchors as `src/data/`
+does. **Renaming a route or an anchor a catalog entry names breaks those links**: the guidance
+hub's build refuses to publish until its catalog follows, and its `scripts/verify-hub-links.mjs`
+opens every one on the live site.
+
+`VITE_CARDS_API` points a local preview at another API host (unset, it is
+`https://green-shell-insights.vercel.app`); Insights' `CB_CARD_ORIGINS` then has to name the
+preview's origin. The tab is not in the update notice or the ⌘K index: nothing in it reads the same
+for two people. Its nav entry carries the gold star of the hub's mark, as the one tab that is
+personal.
 
 ### The Complexity tab is parked
 

@@ -7,6 +7,7 @@ import FailureApproach from "./pages/FailureApproach";
 import Universes from "./pages/Universes";
 import SpecDoc from "./pages/SpecDoc";
 import Reference from "./pages/Reference";
+import Performance from "./pages/Performance";
 import { checklist } from "./data/checklist";
 
 function NotFound() {
@@ -88,6 +89,9 @@ export default function App() {
         {/* One route for the bare tab and each pane, `/reference/<pane>`, so
             the page stays mounted while the bar switches between them. */}
         <Route path="/reference/:pane?" element={<Reference />} />
+        {/* A contributor's own card. A personal link lands here with its key,
+            `/performance?k=<key>`, which the page takes out of the address. */}
+        <Route path="/performance" element={<Performance />} />
 
         {/* Where the retired tabs went. */}
         <Route path="/grading" element={<MovedFromGrading />} />

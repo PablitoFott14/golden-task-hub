@@ -11,6 +11,7 @@ It answers the questions a contributor has while building a task, and then gets 
 - **How does the model actually fail, and how do I make it fail for real?** → Failure Approach
 - **What will a reviewer score me against?** → Spec Doc
 - **What changed, what do I check before submitting, what does everyone ask?** → Reference
+- **Where do I stand, and what should I fix first?** → My Performance
 
 Press <kbd>⌘K</kbd> (or <kbd>Ctrl</kbd>+<kbd>K</kbd>) anywhere to search every method step, task
 section, failure pattern and case, pre-submit check, spec dimension, project update and FAQ answer
@@ -30,8 +31,9 @@ it, and where the two disagree the guidelines win.
 | **Failure Approach** | `/failure-approach` | Real cases of how Opus fails as an agent and how to build the same pressure into a Leg A, which runs Opus 5. Where the cases come from first, then seven failure types in the order a run breaks, twenty eight patterns, and eighty nine graded runs behind them, each with why it failed. A "Model A passed?" view diagnoses a Leg A that passed. See below. |
 | **Spec Doc** | `/spec` | The QC spec the task is scored against: 28 dimensions in 7 groups, the appendix (rubric quality issues, weights, authoring standards) and the change log, one pane at a time, under one search. |
 | **Reference** | `/reference` | Onboarding, the 29 check pre-submit gate written for single turn (with its printable PDF, generated from the same data), Must Read: Project Updates, and the FAQ, one pane at a time. |
+| **My Performance** | `/performance` | Your own performance card: where you stand and what your next audits can do to it, the issues to fix first, what to do in your next task, and the feedback of every audited attempt. It opens with your CB ID and the personal link you were sent. See below. |
 
-A sixth tab, **Complexity** (the Increase Complexity Proposals tool), is **parked**: off the site,
+A seventh tab, **Complexity** (the Increase Complexity Proposals tool), is **parked**: off the site,
 its route redirects to `/`, and its source is kept so it can come back. `/grading`, `/checklist`,
 `/onboarding`, `/whats-new` and `/faq` are kept as redirects that carry the hash across.
 
@@ -73,6 +75,15 @@ which is gitignored: they are internal and this repository is public.
 
 The tab carries no planning sequence, rating guidance or Leg B hints of its own. The method, the
 Golden Task and the spec own those, and the tab links to them instead.
+
+### My Performance
+
+Each contributor's own card: where they stand and what their next audits can do to it, the areas
+where improvement is expected, what to do in the next task with the hub pages that help, and the
+feedback of every audited attempt. It opens with the contributor's CB ID and the personal link they
+were sent, which carries a key that opens their card and no one else's. Nothing of it is in this
+repository: the card is fetched for that one contributor, after the check, from Green Shell
+Insights, where the project team sees the same card. `CLAUDE.md` has the details.
 
 ## Running it
 

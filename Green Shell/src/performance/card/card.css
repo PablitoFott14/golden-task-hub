@@ -1,0 +1,64 @@
+/*
+  The card's own styles, on top of the Golden Task Hub's design foundation (index.css here, the hub's
+  own src/index.css there). Every page that shows the card imports this file after its foundation: this
+  app's two entries (main.tsx, team.tsx) and the Golden Task Hub's My Performance tab, which carries a
+  verbatim copy (src/performance/card/card.css, written by scripts/sync-hub-card.mjs).
+
+  It sits outside @layer, so it is emitted after the utilities: an element that carries one of these
+  classes never also carries a utility setting the same property, and none of the card's elements does.
+*/
+
+.btn-sm {
+  @apply inline-flex items-center gap-1.5 rounded-lg border border-ink-200 bg-surface px-2.5 py-1.5 text-[12.5px] font-semibold text-ink-700 transition-colors hover:border-ink-300 hover:bg-ink-100 active:bg-ink-200;
+}
+.attempt-id {
+  @apply font-mono text-[13px] font-semibold tracking-tight text-ink-900;
+}
+/* The compact layout's reading column. */
+.column {
+  @apply mx-auto w-full max-w-4xl px-4 sm:px-6;
+}
+.focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+}
+
+/* The passage an improvement card points at, inside the feedback. */
+mark.evidence {
+  @apply rounded-[3px] bg-gold-300/60 px-0.5 text-ink-950;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+html.dark mark.evidence {
+  @apply bg-gold-400/40 text-ink-950;
+}
+.flash {
+  animation: flash 1.6s ease-out 1;
+}
+@keyframes flash {
+  0% { box-shadow: 0 0 0 0 rgb(234 180 53 / 0.0); }
+  20% { box-shadow: 0 0 0 4px rgb(234 180 53 / 0.55); }
+  100% { box-shadow: 0 0 0 0 rgb(234 180 53 / 0.0); }
+}
+
+/* Final Call on the status scale, hatched because failed audits set it, not the average. */
+.hatch-rose {
+  background-image: repeating-linear-gradient(-45deg, theme("colors.rose.500") 0 3px, theme("colors.rose.500 / 30%") 3px 6px);
+}
+
+/* The feedback panel's entrance. */
+.sheet-in {
+  animation: sheet-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sheet-fade {
+  animation: sheet-fade 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes sheet-in {
+  from { transform: translateX(28px); opacity: 0; }
+}
+@keyframes sheet-fade {
+  from { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flash, .sheet-in, .sheet-fade { animation: none; }
+}
