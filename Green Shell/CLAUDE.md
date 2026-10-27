@@ -1125,7 +1125,8 @@ of its own `::after`, and the layer then shrinks to the button between mousedown
 press on the card text opened nothing. Keep any transform off that link.
 
 `body` and `note` say only what the viewers themselves say. The card replaced the "Want feedback on
-a task?" hero button on Oct 18, 2026, and `community.ts`, which held that link, went with it.
+a task?" hero button on Oct 18, 2026. That button came back on Oct 27, 2026, unchanged, in the hero
+button row after Onboarding, with its link in [src/data/community.ts](src/data/community.ts).
 
 ### The objective block is shaped by two caps
 
