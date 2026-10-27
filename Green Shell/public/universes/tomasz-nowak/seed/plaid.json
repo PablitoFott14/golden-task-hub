@@ -4527,5 +4527,6 @@
  "student_liabilities": [],
  "securities": [],
  "holdings": [],
- "investment_transactions": []
+ "investment_transactions": [],
+ "current_user_email": "tomasz.nowak.cbus@gmail.com"
 }

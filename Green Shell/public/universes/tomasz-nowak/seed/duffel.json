@@ -49,8 +49,8 @@
         "city_name": "Chicago",
         "time_zone": "America/Chicago"
        },
-       "departing_at": "2026-12-19T11:40:00-05:00",
-       "arriving_at": "2026-12-19T12:02:00-06:00",
+       "departing_at": "2026-12-19T11:40:00",
+       "arriving_at": "2026-12-19T12:02:00",
        "marketing_carrier": {
         "name": "United Airlines",
         "iata_code": "UA"
@@ -112,8 +112,8 @@
         "city_name": "Columbus",
         "time_zone": "America/New_York"
        },
-       "departing_at": "2026-12-23T15:10:00-06:00",
-       "arriving_at": "2026-12-23T17:45:00-05:00",
+       "departing_at": "2026-12-23T15:10:00",
+       "arriving_at": "2026-12-23T17:45:00",
        "marketing_carrier": {
         "name": "United Airlines",
         "iata_code": "UA"
@@ -341,8 +341,8 @@
         "city_name": "Chicago",
         "time_zone": "America/Chicago"
        },
-       "departing_at": "2026-12-19T11:40:00-05:00",
-       "arriving_at": "2026-12-19T12:02:00-06:00",
+       "departing_at": "2026-12-19T11:40:00",
+       "arriving_at": "2026-12-19T12:02:00",
        "marketing_carrier": {
         "name": "United Airlines",
         "iata_code": "UA"
@@ -404,8 +404,8 @@
         "city_name": "Columbus",
         "time_zone": "America/New_York"
        },
-       "departing_at": "2026-12-23T15:10:00-06:00",
-       "arriving_at": "2026-12-23T17:45:00-05:00",
+       "departing_at": "2026-12-23T15:10:00",
+       "arriving_at": "2026-12-23T17:45:00",
        "marketing_carrier": {
         "name": "United Airlines",
         "iata_code": "UA"
@@ -450,7 +450,7 @@
    "total_amount": "238.40",
    "total_currency": "USD",
    "created_at": "2026-10-02T13:15:04Z",
-   "cancelled_at": ""
+   "cancelled_at": null
   }
  ],
  "order_cancellations": [],
@@ -458,5 +458,6 @@
  "rooms": [],
  "rates": [],
  "quotes": [],
- "bookings": []
+ "bookings": [],
+ "current_user_email": "tomasz.nowak.cbus@gmail.com"
 }

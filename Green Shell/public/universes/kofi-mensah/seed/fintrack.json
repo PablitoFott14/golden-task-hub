@@ -6,7 +6,7 @@
    "email": "kofi@corktownaudio.com",
    "member_since": null,
    "linked_accounts_count": 3,
-   "status": "active",
+   "status": "Active",
    "ssn": null,
    "date_of_birth": null,
    "mothers_maiden_name": null,
@@ -21,7 +21,7 @@
    "account_type": "checking",
    "last_four": "8851",
    "balance": 3920.0,
-   "status": "active",
+   "status": "Active",
    "opening_balance": 3976.59
   },
   {
@@ -31,7 +31,7 @@
    "account_type": "savings",
    "last_four": "4410",
    "balance": 9800.0,
-   "status": "active",
+   "status": "Active",
    "opening_balance": 9072.02
   },
   {
@@ -41,7 +41,7 @@
    "account_type": "retirement",
    "last_four": "7731",
    "balance": 21300.0,
-   "status": "active",
+   "status": "Active",
    "opening_balance": 21300.0
   }
  ],

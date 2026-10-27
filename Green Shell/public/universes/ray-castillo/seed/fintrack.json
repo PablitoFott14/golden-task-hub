@@ -6,7 +6,7 @@
    "email": "ray.castillo.phx@gmail.com",
    "member_since": null,
    "linked_accounts_count": 3,
-   "status": "active",
+   "status": "Active",
    "ssn": null,
    "date_of_birth": null,
    "mothers_maiden_name": null,
@@ -21,7 +21,7 @@
    "account_type": "checking",
    "last_four": "4471",
    "balance": 22924.0,
-   "status": "active"
+   "status": "Active"
   },
   {
    "account_id": "57146d968180fe95dcb0731e",
@@ -30,7 +30,7 @@
    "account_type": "savings",
    "last_four": "4490",
    "balance": 2275.0,
-   "status": "active"
+   "status": "Active"
   },
   {
    "account_id": "1e65fe7c9c1b92feae69e8ea",
@@ -39,7 +39,7 @@
    "account_type": "credit_card",
    "last_four": "3306",
    "balance": -2518.34,
-   "status": "active"
+   "status": "Active"
   }
  ],
  "subscriptions": [
@@ -50,7 +50,7 @@
    "amount": 17.99,
    "billing_frequency": "monthly",
    "next_billing_date": "2026-11-09",
-   "status": "active"
+   "status": "Active"
   },
   {
    "subscription_id": "1c2ed6b3b90c2fa8957ac0e2",
@@ -59,7 +59,7 @@
    "amount": 11.99,
    "billing_frequency": "monthly",
    "next_billing_date": "2026-11-16",
-   "status": "active"
+   "status": "Active"
   },
   {
    "subscription_id": "f7b61476c6385f2702850407",
@@ -68,7 +68,7 @@
    "amount": 47.26,
    "billing_frequency": "monthly",
    "next_billing_date": "2026-11-04",
-   "status": "active"
+   "status": "Active"
   }
  ],
  "transactions": [

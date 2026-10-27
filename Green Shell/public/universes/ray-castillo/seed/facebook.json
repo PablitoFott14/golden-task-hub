@@ -2352,7 +2352,7 @@
    "message": "Does anyone have a handyman they trust for a block wall gate? Ours drags on the ground now and the post is starting to lean. Not looking for a big company, just somebody honest.",
    "created_at": "2026-05-02T08:47:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2361,7 +2361,7 @@
    "message": "Lupe, Hector Salas fixed the latch on my side gate last spring and he was honest about what it needed. I'll message you his number.",
    "created_at": "2026-05-02T10:16:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2370,8 +2370,8 @@
    "message": "SWAP MEET WITH MY SON THIS MORNING. GOT A LAMP FOR 8 THEY WANTED 20. TERESA SAYS WE HAVE FOUR LAMPS. NOW WE HAVE FIVE 😂",
    "created_at": "2026-05-02T10:48:00-07:00",
    "visibility": "public",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "a4a4fa6eeca109caa3c47973",
@@ -2379,7 +2379,7 @@
    "message": "Another vote for Hector Salas. He reset our gate post in concrete two years ago and it hasn't moved since. Shows up when he says he will, which is half the battle.",
    "created_at": "2026-05-02T13:05:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2388,7 +2388,7 @@
    "message": "Update for anyone with a sagging gate: Hector came out Monday and had ours fixed by lunch. Thank you Gloria and Art.",
    "created_at": "2026-05-05T19:22:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2397,8 +2397,8 @@
    "message": "Feliz Día de las Madres to all the mamás!! My Ray called me before 8, before he goes to Costco, ay that boy and his Costco. Everybody is coming for lunch hear at the house today and I made too much like always. Dios los bendiga to all my family, and to my mamá in heaven te extraño mucho.",
    "created_at": "2026-05-10T08:20:00-07:00",
    "visibility": "public",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "be1ad8d62855e72d6b0e95a0",
@@ -2406,8 +2406,8 @@
    "message": "Happy Mother's Day to my mom, who sent everybody home with too much food again, and to Dana, who keeps this whole house running. We love you both.",
    "created_at": "2026-05-10T16:05:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "1167cb1bac45c286d57bf793",
@@ -2415,8 +2415,8 @@
    "message": "To my mom, who still calls to make sure I ate, and to my big sister Dana, who did all of this first so I could copy her. Happy Mother's Day ❤️",
    "created_at": "2026-05-10T17:40:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "b5e2d422613d98614fd44ebf",
@@ -2424,8 +2424,8 @@
    "message": "My girls and my grandbabies spoiled me today. I am so blessed ❤️",
    "created_at": "2026-05-10T19:12:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "a3840775e276d74cf82da45c",
@@ -2433,8 +2433,8 @@
    "message": "lucía's spring concert. she found us in the crowd during the second song and waved the whole rest of it 😂❤️",
    "created_at": "2026-05-21T19:05:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "f53928dcd19cb0b1d113a65d",
@@ -2442,8 +2442,8 @@
    "message": "Lake Pleasant at sunrise. Two stripers before the wind came up and back home before it hit 100.",
    "created_at": "2026-05-23T11:10:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "0bd0aec1a3828011db4d91e2",
@@ -2451,8 +2451,8 @@
    "message": "Sofi's first dance recital! She forgot half the moves and smiled through every single one of them ❤️",
    "created_at": "2026-05-30T19:40:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "98499594289e8f26381542e1",
@@ -2460,7 +2460,7 @@
    "message": "Heads up, a package was taken off my porch on 49th Ave today around 1:30. My camera shows a guy in a gray hoodie on a black bike, and he rode off toward Campbell. I filed a report. If you're on our block, please check your cameras.",
    "created_at": "2026-06-09T15:58:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2469,7 +2469,7 @@
    "message": "Denise, same thing happened on 48th Dr two weeks ago, also a guy on a bike, also in the middle of the afternoon. I have everything held at the store now.",
    "created_at": "2026-06-09T18:44:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2478,7 +2478,7 @@
    "message": "Denise, send the clip to the community officer at the Maryvale precinct too, not just the report line. They told us they look for patterns on the same streets.",
    "created_at": "2026-06-10T07:15:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2487,8 +2487,8 @@
    "message": "My viejo Rogelio, happy Father's Day! All these years and he still can't find his keys, but he always finds a deal at the swap meet. We had the family here for lunch and he was king for the day. Gracias a Dios por mi familia.",
    "created_at": "2026-06-21T15:48:00-07:00",
    "visibility": "public",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "4938d18c57d159f341f360bf",
@@ -2496,8 +2496,8 @@
    "message": "Happy Father's Day to my pops, the original swap meet hustler. And to my brother Ray, the only man alive who negotiates a five dollar lamp like it's a house.",
    "created_at": "2026-06-21T16:30:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "4009b3bbb5483f6461b766d9",
@@ -2505,7 +2505,7 @@
    "message": "Excessive heat warning through Sunday, 115 to 117 they're saying. If you have older neighbors on your street, please knock on their doors this weekend, especially anyone who lives alone. I'm 70 and I know I don't always feel the heat until it's too late.",
    "created_at": "2026-06-25T07:38:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2514,7 +2514,7 @@
    "message": "Thank you Connie. If anyone needs a ride to a cooling center this weekend, message me. I'm home all day Saturday and my car has good AC.",
    "created_at": "2026-06-25T12:10:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2523,8 +2523,8 @@
    "message": "Four rooftop calls today and the last one in Tolleson was 118. If your AC tech shows up late and soaked, hand him a cold water. We're all running behind out here.",
    "created_at": "2026-06-25T18:55:00-07:00",
    "visibility": "public",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "31dd675b3cae38429c5675ea",
@@ -2532,7 +2532,7 @@
    "message": "Thank you to the young man from 46th Dr who brought me two cases of water today and fixed my thermostat. It got set wrong when the power blinked. God bless you, mijo.",
    "created_at": "2026-06-27T17:22:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2541,7 +2541,7 @@
    "message": "Our AC quit Friday afternoon and it was 96 inside by dinner. Desert Air got a tech out Saturday morning even though they're slammed. It was the capacitor. If your unit hums but won't start, that's probably it.",
    "created_at": "2026-06-28T14:05:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2550,8 +2550,8 @@
    "message": "Heading up to my brother's in Phoenix for the long weekend. Nico asked if we were there yet before we even got on the 10.",
    "created_at": "2026-07-03T09:12:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "8bd2ed6a45deaf1f925af176",
@@ -2559,8 +2559,8 @@
    "message": "Good Fourth at our place. Javi, Marisa and Nico came up from Tucson, my folks were here, Carla and Rudy brought the kids, and Gilbert ran the grill with me. Biscuit is riding out the fireworks in the bathtub.",
    "created_at": "2026-07-04T21:40:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "6c40be0cea3fe04946504ae9",
@@ -2568,7 +2568,7 @@
    "message": "Whoever has the big aerial ones by 48th Dr, my dog has been shaking under the bed since 8. I know it's the Fourth, but please.",
    "created_at": "2026-07-04T21:08:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2577,7 +2577,7 @@
    "message": "Hilda, for what it's worth, the aerial ones are illegal in Phoenix. Not that anybody's coming out tonight. Same thing every year.",
    "created_at": "2026-07-04T21:31:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2586,7 +2586,7 @@
    "message": "It's one night a year, guys. Let the kids have their fun. It'll be over by midnight.",
    "created_at": "2026-07-04T21:56:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2595,7 +2595,7 @@
    "message": "Jaime, midnight?? I have a 4 month old who just fell asleep for the third time. The ones on 47th Dr are shaking my windows.",
    "created_at": "2026-07-04T22:47:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2604,7 +2604,7 @@
    "message": "Finally quiet on our end. For the dogs next year: a thunder shirt and a fan running in a closet helped ours more than anything. And please pick up your debris tomorrow, some of it landed on roofs over on 47th Ave.",
    "created_at": "2026-07-04T23:39:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2613,8 +2613,8 @@
    "message": "Back home in Tucson. Thank you Ray and Dana for having us all weekend. Nico already misses Biscuit.",
    "created_at": "2026-07-05T18:30:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "af5b944d4fffa68188c39e6c",
@@ -2622,8 +2622,8 @@
    "message": "Rooftop in Tolleson at 2, black clouds coming up from the south by 3. Got off that roof just in time. Stay safe tonight, west side.",
    "created_at": "2026-07-28T16:40:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "1718d6a970f406ab618bafc4",
@@ -2631,7 +2631,7 @@
    "message": "Power just went out on 47th Dr and 48th Ave. That wind came out of nowhere. Anyone else?",
    "created_at": "2026-07-28T19:51:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2640,7 +2640,7 @@
    "message": "Big mesquite branch down on 47th Ave at the south end of the block, across the sidewalk and partly into the street. Go slow if you're driving, it's dark with the power out. I called it in to the city.",
    "created_at": "2026-07-28T20:04:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2649,7 +2649,7 @@
    "message": "SRP outage map says 9:45 for our area. Around 1,800 customers out.",
    "created_at": "2026-07-28T20:37:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2658,7 +2658,7 @@
    "message": "Lights are back on 47th Dr. Hope everybody's fridge made it.",
    "created_at": "2026-07-28T21:52:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2667,7 +2667,7 @@
    "message": "47th Ave is clear this morning. Thank you to whoever took care of that branch.",
    "created_at": "2026-07-29T07:46:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2676,7 +2676,7 @@
    "message": "Hey Ray, the resin on your patio chairs is getting chalky, I can see it from my side of the block. Mine did the same before one finally cracked. Hector Salas does small repairs if you want a name.",
    "created_at": "2026-08-09T19:05:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2685,7 +2685,7 @@
    "message": "Hector is fine.",
    "created_at": "2026-08-09T19:20:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2694,7 +2694,7 @@
    "message": "Ray, we switched to the heavy poly lumber Adirondacks three summers ago and they still look new. Pricey new, but they come up on Marketplace sometimes.",
    "created_at": "2026-08-09T20:48:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2703,8 +2703,8 @@
    "message": "first day. 8th grade and 4th grade. how is this happening 🙄❤️",
    "created_at": "2026-08-10T07:42:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "24dc7745e1c19682788ecd8b",
@@ -2712,8 +2712,8 @@
    "message": "Lake Pleasant with my carnal Ray this morning. On the water by 6:30 and off before it got stupid hot. He caught two little stripers, I caught a 9 pound catfish. You decide who won.",
    "created_at": "2026-08-16T10:24:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "7f8e908873d9a8ee3c818e79",
@@ -2721,7 +2721,7 @@
    "message": "LOST DOG. Rocco, brown and white pit mix, blue collar, about 60 lbs. He dug under our side gate last night on 50th Ave. Friendly, but scared of men in hats. Please message me if you see him, and don't chase him.",
    "created_at": "2026-08-17T06:41:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2730,7 +2730,7 @@
    "message": "Ricky, I think I saw him around 7 this morning by the ramadas at the park on 51st. He was drinking from the sprinklers.",
    "created_at": "2026-08-17T12:26:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2739,7 +2739,7 @@
    "message": "FOUND! A family on 53rd Ave had him in their backyard. He walked right in and lay down next to their kids. Thank you to everyone who shared and looked. The gate is getting fixed tomorrow.",
    "created_at": "2026-08-17T20:19:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2748,8 +2748,8 @@
    "message": "Ay thank you all for the beautiful birthday wishes!! 66 years and still dancing in my kitchen. We had lunch with the whole family and Lucía made me a card with Biscuit on it, I'm going to frame it. Dios los bendiga a todos.",
    "created_at": "2026-08-22T19:30:00-07:00",
    "visibility": "public",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "1543c3a239f63b8771b4280b",
@@ -2757,7 +2757,7 @@
    "message": "Looking for someone to patch a small hole in our stucco and fix a sticking screen door. Is Hector Salas still doing small jobs? I've seen his name in here a few times.",
    "created_at": "2026-08-26T08:55:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2766,7 +2766,7 @@
    "message": "Lourdes, yes. Hector fixed our screen door and two outlet covers last month and was very reasonable. Gloria has his number.",
    "created_at": "2026-08-26T12:41:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2775,8 +2775,8 @@
    "message": "SWAP MEET THIS MORNING. SAW A MAYTAG WASHER FOR 60. RAY SAYS HIS WASHER IS FINE. WE WILL SEE",
    "created_at": "2026-08-29T11:05:00-07:00",
    "visibility": "public",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "ea748d9cd3c4cf714d41b577",
@@ -2784,8 +2784,8 @@
    "message": "Thanks to everybody who came out today. Too much carne, not enough shade, perfect Labor Day.",
    "created_at": "2026-09-07T17:45:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "6417481cac435703ff3cebc6",
@@ -2793,7 +2793,7 @@
    "message": "Bulk trash for our part of Maryvale: you can put items out starting this Saturday, and the trucks come through the week of the 14th. Keep piles off the sidewalk and away from mailboxes, meters and cars, or they skip you. No tires, no paint.",
    "created_at": "2026-09-08T07:30:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2802,7 +2802,7 @@
    "message": "Free: a working treadmill and a box of picture frames on my curb on 49th Dr. Too heavy for me to drag back in, so take them before the bulk truck does.",
    "created_at": "2026-09-12T10:34:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2811,7 +2811,7 @@
    "message": "Treadmill is gone, sorry to whoever came after me. My wife is thrilled. Thank you Sandra.",
    "created_at": "2026-09-12T13:48:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2820,8 +2820,8 @@
    "message": "Cardinals season starts today. Every year I say this is the year. This is the year, bro.",
    "created_at": "2026-09-13T09:30:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "6e7ab03fc51b0450a76cc5f0",
@@ -2829,7 +2829,7 @@
    "message": "Who do people use for washer repair? Our top loader started grinding on the spin today. It's only a couple of years old, so I'd rather fix it than replace it if I can.",
    "created_at": "2026-09-16T16:56:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2838,7 +2838,7 @@
    "message": "Ray, grinding on the spin is usually the bearings or the drive coupling. The coupling is a cheap part. If it's the bearings on a top loader, most repair guys will tell you to replace the machine.",
    "created_at": "2026-09-16T18:37:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2847,7 +2847,7 @@
    "message": "Ray, a grinding washer is really a replace-or-repair choice, and the repair can cost close to a newer used one. Hector Salas can look at small repairs if you want that name again, at least to tell you which it is.",
    "created_at": "2026-09-16T19:40:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2856,8 +2856,8 @@
    "message": "Strikers U14 fall season starts this morning! Home game at Maryvale Park, field 2, kickoff at 9. Bring water, chairs and shade, it's still September in Phoenix. Let's go Strikers!",
    "created_at": "2026-09-19T08:05:00-07:00",
    "visibility": "public",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "09cf0b208858bf8dd7c505a7",
@@ -2865,7 +2865,7 @@
    "message": "Garage sale today, 7 to noon, on 49th Dr. Baby clothes, a crib, a rice cooker, hand tools, Christmas decorations and a lot of random stuff. Everything has to go before my in-laws move in.",
    "created_at": "2026-09-26T06:15:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2874,8 +2874,8 @@
    "message": "Happy birthday to my Dana. You were such a sweet baby and now you're the best mom. Love you mija ❤️",
    "created_at": "2026-09-27T08:02:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "d864f33e07514f9ada26c036",
@@ -2883,8 +2883,8 @@
    "message": "39 looks good on you, sis! Happy birthday Dana, see you this afternoon ❤️",
    "created_at": "2026-09-27T09:15:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "11c9e9d47f4afb306525cfde",
@@ -2892,8 +2892,8 @@
    "message": "thank you everyone for the birthday love today ❤️ my mom came with carla and rudy and the kids, ray grilled, and i didn't wash a single dish. 39 is good so far",
    "created_at": "2026-09-27T19:48:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "6551790d20a60a00e429c992",
@@ -2901,7 +2901,7 @@
    "message": "The streetlight by the alley on 48th Ave has been out since July. I reported it again today on the city app. If a few more of us report it, maybe it moves up the list.",
    "created_at": "2026-09-29T19:12:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2910,8 +2910,8 @@
    "message": "Strikers U14 beat Avondale this morning. Proud of Mateo and the whole team. They played hard and they listened to their coach.",
    "created_at": "2026-10-03T11:52:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "915612a377d545a2d891fa3e",
@@ -2919,8 +2919,8 @@
    "message": "Diego with the assist this morning. Good win, Strikers ⚽",
    "created_at": "2026-10-03T12:30:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "4992993d077a95ec481218b7",
@@ -2928,8 +2928,8 @@
    "message": "Mis nietos spent the whole week with me while school was out. We made empanadas, Lucía beat me at lottery every single day, and Mateo ate everything in my kitchen ay. The house is so quiet tonight. Gracias a Dios for these kids.",
    "created_at": "2026-10-09T17:20:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "c4ab8d042ca6f6114662d49b",
@@ -2937,7 +2937,7 @@
    "message": "Our cat Mango hasn't come home since Friday night. Orange tabby with a white chest, chipped, no collar. He's an indoor cat who slipped out on 48th Dr. Please check your sheds and garages, he hides when he's scared.",
    "created_at": "2026-10-11T07:58:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2946,7 +2946,7 @@
    "message": "Mango is HOME. He showed up at the back door tonight, hungry and very offended. Thank you all for checking your sheds.",
    "created_at": "2026-10-13T21:05:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2955,8 +2955,8 @@
    "message": "Our Lady of Guadalupe needs volunteers for the food pantry on Saturdays, 8 to 11. If you can help even one Saturday, please call the parish office. Gracias y Dios los bendiga.",
    "created_at": "2026-10-18T12:15:00-07:00",
    "visibility": "public",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "b9a5e84d645f90f38baaa4c4",
@@ -2964,8 +2964,8 @@
    "message": "Suns are back. Me and Nico in our jerseys on the couch, Marisa pretending she doesn't care. Let's go.",
    "created_at": "2026-10-21T20:10:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "03d33f1559599555efafdf14",
@@ -2973,8 +2973,8 @@
    "message": "Suns season. Here we go again.",
    "created_at": "2026-10-21T21:15:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "fa41aad3403375cd34e7c24f",
@@ -2982,7 +2982,7 @@
    "message": "Well, one of our resin chairs finally gave out yesterday. The seat split right across and a front leg cracked. Has anyone seen a decent resin set around here that isn't already sun-baked?",
    "created_at": "2026-10-25T14:31:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -2991,7 +2991,7 @@
    "message": "Oh Ray, I'm sorry about the chair! After all those summers. I hope you find a good set soon.",
    "created_at": "2026-10-25T15:02:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -3000,7 +3000,7 @@
    "message": "Ray, check the legs before you buy used. If they're white and chalky like yours were getting, they're on their way out too. Good ones still have a little shine to them.",
    "created_at": "2026-10-25T17:12:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -3009,8 +3009,8 @@
    "message": "Our little witch and our very tall ninja are ready. Happy Halloween from the Gutierrez house 🎃",
    "created_at": "2026-10-31T18:10:00-07:00",
    "visibility": "friends",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   },
   {
    "id": "5a423c5448902102af5e1a80",
@@ -3018,7 +3018,7 @@
    "message": "We had well over 100 kids on 47th Dr tonight and ran out of candy at 7:40. Sorry to the late crowd! Best costume goes to the little guy dressed as a saguaro.",
    "created_at": "2026-10-31T20:55:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -3027,7 +3027,7 @@
    "message": "Someone left a pumpkin bucket full of candy on our wall on 48th Ave last night. Message me and I'll get it back to you.",
    "created_at": "2026-11-01T09:40:00-07:00",
    "visibility": "group",
-   "page_id": "",
+   "page_id": null,
    "group_id": "cbb93fd7ae705c1bbf758574"
   },
   {
@@ -3036,8 +3036,8 @@
    "message": "Mi ofrenda for my mamá and papá and for all our family who went before us. Pan de muerto from the panadería and marigolds from my own yard. Que descansen en paz.",
    "created_at": "2026-11-01T13:20:00-07:00",
    "visibility": "public",
-   "page_id": "",
-   "group_id": ""
+   "page_id": null,
+   "group_id": null
   }
  ],
  "marketplace_listings": [

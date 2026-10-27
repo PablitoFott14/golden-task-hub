@@ -4,99 +4,170 @@
   "kofi-mensah": {
    "artifact_id": "openclaw-kofi_mensah_20261016-universe",
    "last_updated": "2026-10-18",
-   "fingerprint": "b924ba3a6038c4d8e72037ce61122b1c9fb2de3a42492ee2a1ec894952e6c279",
-   "page_sha256": "c6cc1c9ac56a6034b4aceafaf1de55c71d356d950c9b0ee9b86dd99077c1a860",
+   "fingerprint": "8cb6292a0c5bb92fc19e47abd06ed3ab5bc0e8faf696d98f4100974d05e57abf",
+   "page_sha256": "0f42123a9d95405432e886964d4c701fee7a692b109aa235a1d0e3cf022b2997",
    "source": {
-    "kind": "viewer page",
-    "origin": "https://universe-viewers.vercel.app/kofi-mensah/",
-    "time": "2026-10-18T21:29:18+00:00",
-    "export": {
-     "origin": "kofi-mensah.zip",
-     "time": "2026-10-19T10:52:36+00:00",
-     "matches_page": true
-    }
+    "kind": "universe export",
+    "origin": "openclaw-kofi_mensah_20261016-universe.zip",
+    "sha256": "cac401963e56c747fb6acc92395c6807f38a96cbf5dd883759ec9233000acac6",
+    "time": "2026-10-18T00:00:00+00:00"
    },
-   "synced_at": "2026-10-19T11:17:36+00:00",
-   "notes": [],
-   "history": []
+   "synced_at": "2026-10-27T01:12:49+00:00",
+   "notes": [
+    "The data of openclaw-kofi_mensah_20261016-universe.zip, over the viewer build in place, which keeps its program, its docs and its Files app."
+   ],
+   "history": [
+    {
+     "fingerprint": "b924ba3a6038c4d8e72037ce61122b1c9fb2de3a42492ee2a1ec894952e6c279",
+     "page_sha256": "c6cc1c9ac56a6034b4aceafaf1de55c71d356d950c9b0ee9b86dd99077c1a860",
+     "source": {
+      "kind": "viewer page",
+      "origin": "https://universe-viewers.vercel.app/kofi-mensah/",
+      "time": "2026-10-18T21:29:18+00:00",
+      "export": {
+       "origin": "kofi-mensah.zip",
+       "time": "2026-10-19T10:52:36+00:00",
+       "matches_page": true
+      }
+     },
+     "synced_at": "2026-10-19T11:17:36+00:00"
+    }
+   ]
   },
   "elena-marsh": {
    "artifact_id": "openclaw-elena_marsh_20261013-universe",
-   "last_updated": "2026-10-19",
-   "fingerprint": "e92a54985907831121fb0a4f1cfdfcbef480c342e337928c4ec6a0a384092582",
-   "page_sha256": "83c7a89c7cb5e56713855e99c5bf8d3d6b39c307e2b2299882e91828a1a88b4f",
+   "last_updated": "2026-10-15",
+   "fingerprint": "b04044c793641ed4608f3f8af6dc09b3355d3c973378a681066082c58f4a748b",
+   "page_sha256": "2f5405c5649c19c594565323fb29801c18ca4615647d94897c0185307e02ea08",
    "source": {
-    "kind": "viewer page",
-    "origin": "https://universe-viewers.vercel.app/elena-marsh/",
-    "time": "2026-10-19T10:26:10+00:00",
-    "export": {
-     "origin": "elena-marsh (1).zip",
-     "time": "2026-10-19T10:50:52+00:00",
-     "matches_page": true
-    }
+    "kind": "universe export",
+    "origin": "openclaw-elena_marsh_20261013-universe.zip",
+    "sha256": "ef16292ec2052ad9f87e2092936d82204b0bd9ae16f31ad00054b6992df8534c",
+    "time": "2026-10-15T00:00:00+00:00"
    },
-   "synced_at": "2026-10-19T11:17:40+00:00",
-   "notes": [],
-   "history": []
+   "synced_at": "2026-10-27T01:12:46+00:00",
+   "notes": [
+    "The data of openclaw-elena_marsh_20261013-universe.zip, over the viewer build in place, which keeps its program, its docs and its Files app."
+   ],
+   "history": [
+    {
+     "fingerprint": "e92a54985907831121fb0a4f1cfdfcbef480c342e337928c4ec6a0a384092582",
+     "page_sha256": "83c7a89c7cb5e56713855e99c5bf8d3d6b39c307e2b2299882e91828a1a88b4f",
+     "source": {
+      "kind": "viewer page",
+      "origin": "https://universe-viewers.vercel.app/elena-marsh/",
+      "time": "2026-10-19T10:26:10+00:00",
+      "export": {
+       "origin": "elena-marsh (1).zip",
+       "time": "2026-10-19T10:50:52+00:00",
+       "matches_page": true
+      }
+     },
+     "synced_at": "2026-10-19T11:17:40+00:00"
+    }
+   ]
   },
   "ray-castillo": {
    "artifact_id": "openclaw-legacy_ray_castillo_20261011-universe",
-   "last_updated": "2026-10-19",
-   "fingerprint": "21d278c0ac1ab199ae54f42beb9be9dc78c413ddb269343cb5ffc8e7b525786c",
-   "page_sha256": "358b16d75147b0b606a17fa8aaa82fa9114143cc50829f37466019325b34a417",
+   "last_updated": "2026-10-15",
+   "fingerprint": "d0b9a20e3212e84b228c8d184fbab8de01f5f6cc240d940df0daed8e8c0b3f0b",
+   "page_sha256": "481794ca546abbf4a26aa735cf9ca70ea3a7dd7baf1a8a27a6e0b2edcec3ede0",
    "source": {
-    "kind": "viewer page",
-    "origin": "https://universe-viewers.vercel.app/ray-castillo/",
-    "time": "2026-10-19T10:46:51+00:00",
-    "export": {
-     "origin": "ray-castillo.zip",
-     "time": "2026-10-19T10:50:36+00:00",
-     "matches_page": true
-    }
+    "kind": "universe export",
+    "origin": "openclaw-legacy_ray_castillo_20261011-universe.zip",
+    "sha256": "74f93df6aa9f4a8d0a9ed65d23aedf24c839aeccf07b2f095e6121141d87e40e",
+    "time": "2026-10-15T00:00:00+00:00"
    },
-   "synced_at": "2026-10-19T11:17:43+00:00",
-   "notes": [],
-   "history": []
+   "synced_at": "2026-10-27T01:12:55+00:00",
+   "notes": [
+    "The data of openclaw-legacy_ray_castillo_20261011-universe.zip, over the viewer build in place, which keeps its program, its docs and its Files app."
+   ],
+   "history": [
+    {
+     "fingerprint": "21d278c0ac1ab199ae54f42beb9be9dc78c413ddb269343cb5ffc8e7b525786c",
+     "page_sha256": "358b16d75147b0b606a17fa8aaa82fa9114143cc50829f37466019325b34a417",
+     "source": {
+      "kind": "viewer page",
+      "origin": "https://universe-viewers.vercel.app/ray-castillo/",
+      "time": "2026-10-19T10:46:51+00:00",
+      "export": {
+       "origin": "ray-castillo.zip",
+       "time": "2026-10-19T10:50:36+00:00",
+       "matches_page": true
+      }
+     },
+     "synced_at": "2026-10-19T11:17:43+00:00"
+    }
+   ]
   },
   "owen-brandt": {
    "artifact_id": "openclaw-owen_brandt_20261020-universe",
-   "last_updated": "2026-10-26",
-   "fingerprint": "c6bbc2dca6b1a6a167b0d65d5e4757dee4530ddfdacab3c2357592f983999cda",
-   "page_sha256": "b8b16d704e4ba64ad4d9a062c0431a5d85ac67b8ae148d078348cb4e22aaf8eb",
+   "last_updated": "2026-10-22",
+   "fingerprint": "e90bf65c3b56ff62059c3ad735c793a1744aaf46ac07399817ce123cde9790a1",
+   "page_sha256": "212eaa69d7a699dacc2d150b62239c56f0c350621360a71a95200ce6d3bfdad5",
    "source": {
-    "kind": "viewer page",
-    "origin": "https://universe-viewers.vercel.app/owen-brandt/",
-    "time": "2026-10-26T19:55:51+00:00"
+    "kind": "universe export",
+    "origin": "openclaw-owen_brandt_20261020-universe.zip",
+    "sha256": "8f68ddeb7b1ce44fcb798f066f22075390d2bbc798d46c504af080fcda4531e4",
+    "time": "2026-10-22T00:00:00+00:00"
    },
-   "synced_at": "2026-10-26T21:41:38+00:00",
-   "notes": [],
-   "history": []
+   "synced_at": "2026-10-27T01:12:52+00:00",
+   "notes": [
+    "The data of openclaw-owen_brandt_20261020-universe.zip, over the viewer build in place, which keeps its program, its docs and its Files app."
+   ],
+   "history": [
+    {
+     "fingerprint": "c6bbc2dca6b1a6a167b0d65d5e4757dee4530ddfdacab3c2357592f983999cda",
+     "page_sha256": "b8b16d704e4ba64ad4d9a062c0431a5d85ac67b8ae148d078348cb4e22aaf8eb",
+     "source": {
+      "kind": "viewer page",
+      "origin": "https://universe-viewers.vercel.app/owen-brandt/",
+      "time": "2026-10-26T19:55:51+00:00"
+     },
+     "synced_at": "2026-10-26T21:41:38+00:00"
+    }
+   ]
   },
   "tomasz-nowak": {
    "artifact_id": "openclaw-tomasz_nowak_20261020-universe",
-   "last_updated": "2026-10-26",
-   "fingerprint": "94111771a3ffffde1a59461d0d725f3386ee3790659103f5d88fa0869572fbf5",
-   "page_sha256": "20689520c286045cd687efe988bf79c9667e38e492f98e4fadff93c78337401e",
+   "last_updated": "2026-10-22",
+   "fingerprint": "221c4957437c94f806b68d37a4c3e241dc27ecf18b2b99fc2d802100b25ad0e3",
+   "page_sha256": "a4a31a61d527afde7523d681b940bb510cf4ac1785b4dc5f1ed55a63bef80ae1",
    "source": {
-    "kind": "viewer page",
-    "origin": "https://universe-viewers.vercel.app/tomasz-nowak/",
-    "time": "2026-10-26T19:55:57+00:00"
+    "kind": "universe export",
+    "origin": "openclaw-tomasz_nowak_20261020-universe.zip",
+    "sha256": "eead5697dbe8a0086d30ba957bb9316e1fe0744ee6ebe8912fc436e916359992",
+    "time": "2026-10-22T00:00:00+00:00"
    },
-   "synced_at": "2026-10-26T21:41:43+00:00",
-   "notes": [],
-   "history": []
+   "synced_at": "2026-10-27T01:12:59+00:00",
+   "notes": [
+    "The data of openclaw-tomasz_nowak_20261020-universe.zip, over the viewer build in place, which keeps its program, its docs and its Files app."
+   ],
+   "history": [
+    {
+     "fingerprint": "94111771a3ffffde1a59461d0d725f3386ee3790659103f5d88fa0869572fbf5",
+     "page_sha256": "20689520c286045cd687efe988bf79c9667e38e492f98e4fadff93c78337401e",
+     "source": {
+      "kind": "viewer page",
+      "origin": "https://universe-viewers.vercel.app/tomasz-nowak/",
+      "time": "2026-10-26T19:55:57+00:00"
+     },
+     "synced_at": "2026-10-26T21:41:43+00:00"
+    }
+   ]
   },
   "grace-liu": {
    "artifact_id": "openclaw-grace_liu_20261020-universe",
-   "last_updated": null,
+   "last_updated": "2026-10-22",
    "fingerprint": "418259f0cf53de40534c8b1a37029489c18a3e3603cb3bb47bd5c326ec3ce631",
    "page_sha256": "7b68ac7495e18dd1734516a6206d3c4ee25b4ca49316dcf42c23732a9bd4f299",
    "source": {
-    "kind": "viewer page",
-    "origin": "grace-liu.html",
-    "time": "2026-10-26T21:40:06.384586+00:00"
+    "kind": "universe export",
+    "origin": "openclaw-grace_liu_20261020-universe.zip",
+    "sha256": "eff8828da266c3671a38e75e2013b05eb27701b3415c0b17c1811a87e1325f9c",
+    "time": "2026-10-22T00:00:00+00:00"
    },
-   "synced_at": "2026-10-26T21:41:45+00:00",
+   "synced_at": "2026-10-27T01:12:47+00:00",
    "notes": [
     "Built from the live viewer page's program (engine, stylesheet, persona header, docs) with the data of openclaw-grace_liu_20261020-universe.zip, which matches the in-task database export record for record. The live page carries another generation of the data, so it was not used as the data source.",
     "Nav counts recomputed by the page's own rule. Files keeps the page's listing with the previews the site serves; 28 records take the served file's sha256 and size, and 3 the site does not serve are marked not rendered.",

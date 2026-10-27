@@ -6,7 +6,7 @@
    "email": "tomasz.nowak.cbus@gmail.com",
    "member_since": null,
    "linked_accounts_count": 3,
-   "status": "active",
+   "status": "Active",
    "ssn": null,
    "date_of_birth": null,
    "mothers_maiden_name": null,
@@ -21,7 +21,7 @@
    "account_type": "checking",
    "last_four": "6120",
    "balance": 2850.0,
-   "status": "active",
+   "status": "Active",
    "opening_balance": 440.23
   },
   {
@@ -31,7 +31,7 @@
    "account_type": "savings",
    "last_four": "6157",
    "balance": 6420.0,
-   "status": "active"
+   "status": "Active"
   },
   {
    "account_id": "acct_d453ee84ab794ede8f13",
@@ -50,7 +50,7 @@
    "account_type": "retirement",
    "last_four": "3847",
    "balance": 14800.0,
-   "status": "active",
+   "status": "Active",
    "opening_balance": 14800.0
   }
  ],
@@ -62,7 +62,7 @@
    "amount": 11.99,
    "billing_frequency": "monthly",
    "next_billing_date": "2026-11-09",
-   "status": "active"
+   "status": "Active"
   }
  ],
  "transactions": [
