@@ -963,30 +963,54 @@ the pane those two will not keep. Pins are a per-device convenience under `gsh.e
 9 pm" are ranges over stored values, and a facet that has one value on every record is said once, under
 "Every record here", rather than offered as a filter.
 
+**Each card names its Universe Artifact ID and its Last updated date**, the ID with a copy button,
+and the grid opens with an amber notice that the universes are updated regularly and may lag here,
+so a contributor verifies through the Database Agent or the agent's legs before relying on them.
+The ID is what a task's universe parameter gives (`## Universe` in an audited task's
+`parameters.md`), and the date is the day in that universe's `last_modified.md` (below).
+
 **Keeping them current is the `/openclaw-universe-sync` skill**, in `~/.claude/skills/`, which runs
-[scripts/universes.py](scripts/universes.py):
+[scripts/universes.py](scripts/universes.py) over the universes' own exports. They sit in
+`Universes/` at the repo root, gitignored, one folder per Universe Artifact ID holding the export
+ZIP and a `last_modified.md` whose `Last Modified:` line the user copies by hand from the universe's
+page on agent-env-hub (`10/15/2026, 1:57:25 PM PDT`, or `pending`). The skill first compares each of
+those dates with the page (`universes_remote.mjs`, below); a new ZIP and its new date in a folder
+then refresh that universe and its card; every other universe stays as it is.
 
 ```bash
-python scripts/universes.py status                # what the hub carries
-python scripts/universes.py check <source>...     # what would change: exit 0 in sync, 1 changes, 2 problems
-python scripts/universes.py apply <source>...     # write it, regenerate the catalog and the ledger, verify
+node universes_remote.mjs                         # from the mirror: each page's Last Modified against last_modified.md: exit 0 unchanged, 1 modified, 2 problems
+node universes_remote.mjs --login                 # once: sign its Chrome profile (C:\uvw-sync\outlier-profile) in to Outlier
+python scripts/universes.py status                # what the hub carries, with each artifact ID and date
+python scripts/universes.py check-exports         # what the exports would change: exit 0 in sync, 1 changes, 2 problems
+python scripts/universes.py apply-exports         # write it, record the dates, regenerate the catalog and the ledger, verify
 python scripts/universes.py verify                # every universe reassembles and is complete
 python scripts/universes.py verify-zips universe-zips  # each built ZIP is its stored universe, file for file
 bash scripts/universes_validate.sh                # all of it: verify, build, ZIPs, SSR, parity, downloads, Explore
 ```
 
-A source is the viewer site (`https://universe-viewers.vercel.app/`, every persona on it), one viewer
-page (a URL or a saved `.html`), or an export (a ZIP or folder with `SUMMARY.json`), in any mix and
-several personas to a ZIP. Personas with no source given are still checked against the live site. It
-writes only the files that changed, removes only what a newer complete source no longer references,
-and refuses rather than guesses: a version the ledger already replaced, a source older than the one
-in place, an export that differs from every viewer page and is newer than them (`--data-only`
-applies it over the current build and keeps that build's counts), a missing file, a persona the hub
-does not carry (`--add`). [scripts/universes.lock.json](scripts/universes.lock.json) is the ledger:
-per universe the fingerprint, the page checksum, the source and its date, and the versions it
-replaced. [src/data/universeCatalog.ts](src/data/universeCatalog.ts) is generated: the grid's labels,
-which are the viewer site's own, and what is read off the data, `loadBytes` being what opening a
-universe downloads.
+An export holds `<artifact id>/services/<name>/<name>.json` and nothing else: the data of every
+service but the Files app, its attachments and media inline. It has no engine, no docs and none of
+the viewer's figures, so it is applied over the viewer build in place, which keeps its program, its
+docs, the Files app and its previews. The export's services replace the hub's, each nav count and
+overview figure moves with the records it counts (by whichever rule gives back its old value; the
+builds count differently, and a figure no rule fits, like Elena's calendar's 99 for 97 events, is kept),
+and a build that serves media from `viewer_previews/`, as Tomasz's does, goes on serving it from
+there. It refuses rather than guesses: a pending, malformed or future date, a changed export still
+carrying the date in place, an older date or a version the ledger already replaced
+(`--allow-older`), an export that drops records, fields or collections (`--allow-removals`), and,
+with no flag to clear them, a service missing or added, an export carrying the Files app, an entry
+that is no service, another universe's ZIP, two new ZIPs in one folder. A date changed with no new
+export is reported and not applied. Every export applied is recorded by its SHA-256, so an old ZIP
+left in its folder is never applied again.
+
+`check` and `apply` still take a viewer page as a source (the site, one page, a saved `.html`, or
+an export with `SUMMARY.json`), which is how the tab was first built, but **the viewer site carries
+a different generation of the data from the exports**, so syncing from it would overwrite them.
+[scripts/universes.lock.json](scripts/universes.lock.json) is the ledger: per universe the artifact
+ID, the date shown, the fingerprint, the page checksum, the source and its date, and the versions
+it replaced. [src/data/universeCatalog.ts](src/data/universeCatalog.ts) is generated: the grid's
+labels, which are the viewer site's own, what is read off the data, `loadBytes` being what opening
+a universe downloads, and the ledger's artifact ID and date.
 
 **The parity crawl is the regression test.** [scripts/universes_parity.mjs](scripts/universes_parity.mjs)
 opens each original page (written by `emit-reference`, byte-identical to the imported one, served
@@ -1032,7 +1056,8 @@ one reachable.
 
 **The repo is public, and so is this data.** The universes are synthetic, as the viewers say, and the
 site they came from was public; they are committed so Pages can serve them. The source ZIPs stay
-outside the repo. Nothing under `public/universes/` is edited by hand, and `verify` fails if it is.
+out of git (`/Universes/` is ignored). Nothing under `public/universes/` is edited by hand, and
+`verify` fails if it is.
 
 ### The Universe Interaction videos are a strip, not four players
 

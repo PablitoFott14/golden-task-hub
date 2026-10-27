@@ -20,23 +20,31 @@ Reassembling those parts gives back the original page byte for byte, and
 ``verify`` checks exactly that against the SHA-256 recorded at import. That is
 what "nothing lost" means here: not a resemblance, the same bytes.
 
-Sources, in any mix, all on one command line:
+The usual source is each universe's own export, kept in Universes/ at the repo
+root in a folder named for its Universe Artifact ID, beside a last_modified.md
+that gives its Last Modified date on agent-env-hub (see "the export folders"
+below). `check-exports` and `apply-exports` read that folder, and nothing else;
+universes_remote.mjs compares each date with the universe's page there.
+
+The viewer pages are the other kind of source, in any mix, all on one command
+line, for `check` and `apply`:
 
     https://universe-viewers.vercel.app/          the viewer site (every persona on it)
     https://universe-viewers.vercel.app/<slug>/   one persona's viewer page
     <file>.html                                   a viewer page saved to disk
     <export>.zip | <folder>                       an export (SUMMARY.json, seed/, docs/, files/)
 
-A viewer page is the authoritative source: it carries the engine and the
-derived constants an export does not. An export identifies the persona, supplies
-file bytes and is cross-checked against the viewer page named in its
-SUMMARY.json, which is fetched unless --offline is given. Personas with no
-source on the command line are still checked against the live site, so an
-update published there is not missed.
+A viewer page carries the engine and the derived constants an export does not.
+An export of that kind identifies the persona, supplies file bytes and is
+cross-checked against the viewer page named in its SUMMARY.json, which is
+fetched unless --offline is given. Personas with no source on the command line
+are still checked against the live site.
 
 Commands:
 
     status                  what the hub carries now
+    check-exports           report what the exports in Universes/ would change; exit 0 in sync, 1 changes, 2 problems
+    apply-exports           apply them, record each date, regenerate the catalog, then verify
     check  <source>...      report what would change; exit 0 in sync, 1 changes, 2 problems
     apply  <source>...      apply the changes, regenerate the catalog, then verify
     verify                  prove every stored universe reassembles and is complete
@@ -1061,6 +1069,8 @@ class Plan:
     target: Optional[Universe]
     lines: list[str] = field(default_factory=list)
     problems: list[str] = field(default_factory=list)
+    # What the ledger records beside the version: the artifact ID and the date.
+    meta: dict[str, Any] = field(default_factory=dict)
 
 
 def plan_all(args: argparse.Namespace) -> tuple[list[Plan], Optional[list[dict[str, Any]]], dict[str, Any]]:
@@ -1186,6 +1196,409 @@ def plan_all(args: argparse.Namespace) -> tuple[list[Plan], Optional[list[dict[s
     return plans, shell, {"notes": notes}
 
 
+# ------------------------------------------------------- the export folders
+#
+# Each universe's own export, kept in Universes/ at the repo root (gitignored)
+# in a folder named for its Universe Artifact ID:
+#
+#     Universes/openclaw-elena_marsh_20261013-universe/
+#         last_modified.md                              "Last Modified: 10/15/2026, 1:57:25 PM PDT", edited by hand
+#         openclaw-elena_marsh_20261013-universe.zip    the export
+#
+# An export holds <artifact id>/services/<name>/<name>.json and nothing else:
+# every service's data with its blobs inline, and no engine, no Files app, no
+# docs and none of the figures the viewer derives. So it is applied over the
+# viewer build in place, which keeps all of those: the export's services
+# replace the hub's, each figure moves with the records it counts, and a build
+# that serves its media from viewer_previews/ goes on serving it from there.
+# The Last updated date on the universe's card is the day its last_modified.md
+# gives, and it is recorded only with the export it dates.
+
+EXPORTS = ROOT.parent / "Universes"
+LAST_MODIFIED = "last_modified.md"
+# The Last Modified date as the universe's page on agent-env-hub shows it, which
+# is how it is copied into the file: 10/15/2026, 1:57:25 PM PDT.
+STAMP = re.compile(r"(\d{1,2})/(\d{1,2})/(\d{4}),?\s+\d{1,2}:\d{2}(?::\d{2})?\s*[AP]M(?:\s+[A-Z]{2,5})?", re.I)
+# What the viewer build renders itself and an export never carries.
+KEPT = ("filesystem",)
+
+
+def read_last_modified(folder: Path) -> tuple[Optional[str], Optional[str]]:
+    """The day a folder's last_modified.md gives, as YYYY-MM-DD, or None for
+    "pending"; and what is wrong with the file, if anything is."""
+    p = folder / LAST_MODIFIED
+    if not p.is_file():
+        return None, f"{folder.name}/{LAST_MODIFIED} is missing"
+    for line in read_bytes(p).decode("utf-8-sig", "replace").splitlines():
+        m = re.match(r"^[\s#>-]*last modified\s*:\s*(.*?)\s*$", re.sub(r"[*_`]", "", line), re.I)
+        if not m:
+            continue
+        v = m.group(1)
+        if v.lower() == "pending":
+            return None, None
+        s = STAMP.fullmatch(v)
+        try:
+            if not s:
+                raise ValueError(v)
+            day = dt.date(int(s[3]), int(s[1]), int(s[2]))
+        except ValueError:
+            return None, (f'{folder.name}/{LAST_MODIFIED} gives "{v}"; copy the Last Modified date as the '
+                          "universe's page shows it (10/15/2026, 1:57:25 PM PDT), or write pending")
+        if day > dt.date.today():
+            return None, f"{folder.name}/{LAST_MODIFIED} gives {v}, which is in the future"
+        return day.isoformat(), None
+    return None, f'{folder.name}/{LAST_MODIFIED} has no "Last Modified:" line'
+
+
+def read_export_zip(path: Path) -> tuple[str, dict[str, Any]]:
+    """An export's artifact ID, which is its one top folder, and its services."""
+    try:
+        z = zipfile.ZipFile(long_path(path))
+    except (zipfile.BadZipFile, OSError) as e:
+        raise Problem(f"{path.name} cannot be read as a ZIP ({e})")
+    with z:
+        names = [n for n in z.namelist() if not n.endswith("/")]
+        tops = sorted({n.split("/")[0] for n in names})
+        if len(tops) != 1:
+            raise Problem(f"{path.name} has {len(tops)} top folders; an export has one, named for its universe")
+        top = tops[0]
+        services: dict[str, Any] = {}
+        other: list[str] = []
+        for n in names:
+            # The file names the service; its folder may spell it with hyphens
+            # (services/apple-health/apple_health.json).
+            m = re.fullmatch(re.escape(top) + r"/services/([^/]+)/([^/]+)\.json", n)
+            if not m or m.group(1).replace("-", "_") != m.group(2).replace("-", "_"):
+                other.append(n[len(top) + 1:])
+                continue
+            if m.group(2) in services:
+                raise Problem(f"{path.name} holds {m.group(2)} twice")
+            try:
+                services[m.group(2)] = json.loads(z.read(n))
+            except Exception as e:  # a damaged member or JSON that does not parse
+                raise Problem(f"{n} cannot be read ({e})")
+    if not services:
+        raise Problem(f"{path.name} has no services/<name>/<name>.json, so it is not a universe export")
+    if other:
+        raise Problem(f"{path.name} also holds {len(other)} entries this sync does not apply ({', '.join(other[:4])}), "
+                      "which would be left out")
+    return top, services
+
+
+def serve_media(v: Any, files: dict[str, bytes]) -> Any:
+    """A record naming its file under viewer_previews/, in the form the build
+    stores it: without the inline copy, whose bytes become that file. Only for
+    a build that serves its media that way."""
+    if isinstance(v, list):
+        return [serve_media(x, files) for x in v]
+    if not isinstance(v, dict):
+        return v
+    rel = v.get("rel_path")
+    out: dict[str, Any] = {}
+    for k, x in v.items():
+        if isinstance(rel, str) and rel.startswith(MEDIA_DIR) and isinstance(x, str) and "base64" in k.lower():
+            try:
+                b = base64.b64decode(x, validate=True)
+            except ValueError:
+                raise Problem(f"the media at {rel} is not valid base64")
+            if files.get("files/" + rel, b) != b:
+                raise Problem(f"two records give different bytes for {rel}")
+            files["files/" + rel] = b
+            continue
+        out[k] = serve_media(x, files)
+    return out
+
+
+def count_rules(v: Any) -> dict[str, int]:
+    """The ways the viewer builds count a service's records, each with what it
+    gives: every record, every record and every message inside them, every
+    message, or one collection."""
+    if not isinstance(v, dict):
+        return {}
+    lists = {k: x for k, x in v.items() if isinstance(x, list)}
+    total = sum(len(x) for x in lists.values())
+    nested = sum(len(r["messages"]) for x in lists.values() for r in x if isinstance(r, dict) and isinstance(r.get("messages"), list))
+    return {"<all>": total, "<all+messages>": total + nested, "<messages>": nested, **{k: len(x) for k, x in lists.items()}}
+
+
+def recount(old: dict[str, Any], new: dict[str, Any], consts: dict[str, Any]) -> list[str]:
+    """Move each nav count and overview figure with the records it counts.
+
+    The builds count differently (one counts every record, one the messages
+    in each conversation, another a single collection), so a figure is redone
+    by whichever rule gives back its old value from the old data. One no rule
+    gives back is kept, and said, only when the records it may count changed."""
+    out: list[str] = []
+
+    def moved(svc: str, figure: int, label: str) -> int:
+        a, b = count_rules(old.get(svc)), count_rules(new.get(svc))
+        if a == b:
+            return figure
+        got = {b.get(r) for r, n in a.items() if n == figure}
+        if len(got) == 1 and None not in got:
+            return got.pop()  # type: ignore[return-value]
+        out.append(f"warning: {label} stays {figure}: it is no count of {svc}'s records this sync can redo, and they changed")
+        return figure
+
+    for x in consts.get("DATA_NAV") or []:
+        if isinstance(x, dict) and isinstance(x.get("count"), int) and x.get("id") in new:
+            x["count"] = moved(x["id"], x["count"], f"the {x['id']} nav count")
+    counts = consts.get("COUNTS")
+    if isinstance(counts, dict):
+        for svc, n in list(counts.items()):
+            if isinstance(n, int) and svc in new:
+                counts[svc] = moved(svc, n, f"the {svc} overview figure")
+    return out
+
+
+def losses(old: dict[str, Any], new: dict[str, Any]) -> list[str]:
+    """What the new seed no longer holds that the old one did: a record (matched
+    by its id), a field, a collection, a value emptied. Each is said once, with
+    the number of records it touches."""
+    seen: dict[tuple[str, str], int] = {}
+
+    def empty(x: Any) -> bool:
+        return x is None or x == "" or x == [] or x == {}
+
+    def note(path: str, kind: str, n: int = 1) -> None:
+        seen[(path, kind)] = seen.get((path, kind), 0) + n
+
+    def walk(a: Any, b: Any, path: str) -> None:
+        if isinstance(a, dict) and isinstance(b, dict):
+            for k, x in a.items():
+                if k not in b:
+                    if not empty(x):
+                        note(f"{path}.{k}", "gone")
+                elif not empty(x) and empty(b[k]):
+                    note(f"{path}.{k}", "emptied")
+                else:
+                    walk(x, b[k], f"{path}.{k}")
+        elif isinstance(a, list) and isinstance(b, list) and a:
+            key = id_key(a)
+            if key and b and id_key(b) == key:
+                mb_ = {r[key]: r for r in b}
+                gone = [r for r in a if r[key] not in mb_]
+                if gone:
+                    note(path, "removed", len(gone))
+                for r in a:
+                    if r[key] in mb_:
+                        walk(r, mb_[r[key]], f"{path}[]")
+            elif len(a) == len(b):
+                for x, y in zip(a, b):
+                    walk(x, y, f"{path}[]")
+            elif len(b) < len(a):
+                note(path, "removed", len(a) - len(b))
+
+    for svc, v in old.items():
+        if svc in new:
+            walk(v, new[svc], svc)
+    out = []
+    for (path, kind), n in seen.items():
+        many = f"{n} record{'' if n == 1 else 's'}"
+        if kind == "removed":
+            out.append(f"{path}: {many} removed")
+        elif "[]" not in path:
+            out.append(f"{path}: {'removed' if kind == 'gone' else 'emptied'}")
+        else:
+            out.append(f"{path}: {'gone from' if kind == 'gone' else 'emptied in'} {many}")
+    return out
+
+
+def build_from_export(services: dict[str, Any], current: Universe) -> tuple[Universe, list[str]]:
+    """An export's services over the viewer build in place, which keeps its
+    program, its docs, its Files app and the media it serves beside the page.
+    Returns the universe and the report's line on what was kept."""
+    cp = current.page
+    missing = [s for s in cp.seed if s not in services and s not in KEPT]
+    if missing:
+        raise Problem(f"the export has no {', '.join(missing)}, which the hub carries; applying it would drop "
+                      f"{'that service' if len(missing) == 1 else 'those services'}")
+    extra = [s for s in services if s not in cp.seed]
+    if extra:
+        raise Problem(f"the export adds {', '.join(extra)}, which the viewer in place has no app for; that takes a "
+                      "viewer page built with it")
+    carried = [s for s in KEPT if s in services]
+    if carried:
+        raise Problem(f"the export carries {', '.join(carried)}, which the viewer build renders itself (the Files app "
+                      "and its previews); that takes a viewer page built from this export")
+    for s, v in services.items():
+        if type(v) is not type(cp.seed[s]):
+            raise Problem(f"{s} in the export is a {type(v).__name__}, and the hub's is a {type(cp.seed[s]).__name__}")
+    files: dict[str, bytes] = {}
+    seed = {s: services.get(s, cp.seed[s]) for s in cp.seed}
+    if current.media():
+        seed = {s: (serve_media(v, files) if s in services else v) for s, v in seed.items()}
+    consts = json.loads(json.dumps(cp.consts))
+    notes = recount(cp.seed, seed, consts)
+    prior: dict[str, str] = {}
+    for svc, v in current.stored_seed.items():
+        ref_positions(v, svc, prior)
+    stored: dict[str, Any] = {}
+    for s, v in seed.items():
+        if s in services:
+            stored[s], got = externalize(s, v, prior, lambda p: current.files.get(p))
+        else:
+            stored[s] = current.stored_seed[s]
+            got = {r: current.files[r] for r in refs_in(stored[s])}
+        for p_, b in got.items():
+            if files.get(p_, b) != b:
+                raise Problem(f"two services want to store different bytes at {p_}")
+            files[p_] = b
+    page = Page(cp.pre, cp.css, cp.mid, cp.body, cp.script_open, cp.tail, list(cp.lines), seed, cp.skin, consts,
+                cp.markdown, cp.title, "", 0, list(cp.compact))
+    text = assemble(page).encode()
+    page.sha256, page.size = sha(text), len(text)
+    u = Universe(current.slug, page, stored, files)
+    # The Files previews, and the media the export does not hold, stay as they are.
+    for f in u.needed_externals():
+        p_ = "files/filesystem/" + str(f["path"]).lstrip("/")
+        if p_ in current.files:
+            files[p_] = current.files[p_]
+    for p_ in u.media():
+        if p_ not in files and p_ in current.files:
+            files[p_] = current.files[p_]
+    kept = ["the program", "the docs"] + ["the Files app" if s == "filesystem" else s for s in cp.seed if s not in services]
+    return u, [f"kept from the viewer build in place: {', '.join(kept[:-1])} and {kept[-1]}"] + notes
+
+
+def slug_for(aid: str, carried: list[str]) -> Optional[str]:
+    """The universe an artifact ID names, by the persona's name inside it:
+    openclaw-legacy_ray_castillo_20261011-universe is ray-castillo."""
+    m = re.fullmatch(r"openclaw-([a-z0-9_]+?)_\d{8}-universe", aid)
+    if not m:
+        return None
+    parts = m.group(1).split("_")
+    return next(("-".join(parts[i:]) for i in range(len(parts) - 1) if "-".join(parts[i:]) in carried), None)
+
+
+def plan_exports(args: argparse.Namespace) -> tuple[list[Plan], dict[str, Any]]:
+    """One plan per universe the hub carries, from the export in its folder.
+
+    A ZIP the ledger records as the export in place, or as one it replaced, is
+    not read again. Any other is compared with the version in place: the same
+    data with a new date records only the date, and new data is applied over
+    the build. A universe with no new export stays exactly as it is, and so
+    does its date."""
+    ledger = load_ledger()
+    entries = ledger.get("universes", {})
+    root = Path(args.dir) if args.dir else EXPORTS
+    if not root.is_dir():
+        raise SystemExit(f"error: {root} does not exist")
+    carried = [d.name for d in sorted(UNIV.iterdir()) if (d / "viewer" / "page.json").exists()] if UNIV.exists() else []
+    by_id = {e["artifact_id"]: s for s, e in entries.items() if e.get("artifact_id")}
+    notes: list[str] = []
+    folders: dict[str, Path] = {}
+    for d in sorted(root.iterdir()):
+        if not d.is_dir():
+            if d.suffix.lower() == ".zip":
+                notes.append(f"{d.name} is not in a universe's folder and was not read; it goes in {root.name}/<its artifact ID>/")
+            continue
+        slug = by_id.get(d.name)
+        if slug is None:
+            # A universe with no artifact ID recorded yet takes the folder that names it.
+            s = slug_for(d.name, carried)
+            slug = s if s and not entries.get(s, {}).get("artifact_id") else None
+        if slug is None or slug in folders:
+            notes.append(f"{d.name}/ is the folder of no universe the hub carries, and was not read")
+        else:
+            folders[slug] = d
+
+    plans: list[Plan] = []
+    for slug in carried:
+        cur = load_current(slug)
+        assert cur is not None
+        entry = entries.get(slug, {})
+        plan = Plan(slug, "unchanged", cur, None)
+        plans.append(plan)
+        d = folders.get(slug)
+        if d is None:
+            plan.status = "no-source"
+            plan.lines.append(f"no folder in {root.name}/" + (f" named {entry['artifact_id']}" if entry.get("artifact_id") else ""))
+            continue
+        date, bad_date = read_last_modified(d)
+        shown = entry.get("last_updated")
+        in_place = entry.get("source", {}).get("sha256")
+        replaced = {h.get("source", {}).get("sha256") for h in entry.get("history", [])} - {None}
+        zips = sorted(p for p in d.iterdir() if p.is_file() and p.suffix.lower() == ".zip")
+        fresh: list[tuple[Path, str]] = []
+        for zp in zips:
+            h = sha(read_bytes(zp))
+            if h == in_place:
+                plan.lines.append(f"{zp.name} is the export in place")
+            elif h in replaced:
+                plan.lines.append(f"{zp.name} is an earlier export the hub has replaced, and was not read")
+            else:
+                fresh.append((zp, h))
+        try:
+            if not fresh:
+                if not zips:
+                    plan.status = "no-source"
+                    plan.lines.append(f"no export in {d.name}/")
+                if bad_date:
+                    plan.lines.append(f"note: {bad_date}")
+                elif date != shown:
+                    plan.lines.append(f"note: {LAST_MODIFIED} gives {date or 'pending'} and the hub shows {shown or 'pending'}; "
+                                      "a date is applied only with the export it dates")
+                continue
+            if len(fresh) > 1:
+                raise Problem(f"{d.name}/ holds {len(fresh)} exports not applied yet ({', '.join(z.name for z, _ in fresh)}); "
+                              "leave only the one to apply")
+            zp, h = fresh[0]
+            aid, services = read_export_zip(zp)
+            if aid != d.name:
+                raise Problem(f"{zp.name} is the export of {aid}, not of {d.name}")
+            target, kept = build_from_export(services, cur)
+            same = target.fingerprint() == cur.fingerprint()
+            if same and (bad_date or date == shown) and entry.get("artifact_id") == d.name:
+                plan.lines.append(f"{zp.name} holds the version in place")
+                if bad_date:
+                    plan.lines.append(f"note: {bad_date}")
+                continue
+            lost = [] if same else losses(cur.page.seed, target.page.seed)
+            dated = f"last updated {shown or 'pending'} -> {date or 'pending'}"
+            if same:
+                plan.lines.append(f"{zp.name} holds the version in place: the data stays, "
+                                  + (dated if date != shown else "and its artifact ID is recorded"))
+            else:
+                plan.lines += [f"{zp.name}: {dated}"] + kept + report(cur, target) + [f"removed: {x}" for x in lost]
+            # Every reason to refuse is said at once, under what the export would change.
+            refuse: list[str] = []
+            if bad_date:
+                refuse.append(bad_date)
+            elif date is None and not (same and shown is None):
+                refuse.append(f"{d.name}/{LAST_MODIFIED} says pending; give the Last Modified date of this export")
+            elif date and shown and date < shown and not args.allow_older:
+                refuse.append(f"{LAST_MODIFIED} dates this export {date}, before the version in place ({shown}). "
+                              "Pass --allow-older if that is really wanted.")
+            elif not same and date == shown and not args.allow_older:
+                refuse.append(f"{LAST_MODIFIED} still gives {shown}, the date of the version in place. Set it to the "
+                              "Last Modified date of this export, or pass --allow-older if it is that date.")
+            if not same and target.fingerprint() in [x.get("fingerprint") for x in entry.get("history", [])]:
+                refuse.append("this is a version the hub already carried and replaced with a newer one")
+            if lost and not args.allow_removals:
+                refuse.append(f"it would drop data the hub has ({len(lost)} removal{'' if len(lost) == 1 else 's'} listed "
+                              "above). Pass --allow-removals if that is intended.")
+            if refuse:
+                plan.status = "refused"
+                plan.problems += refuse
+                continue
+            target.source = {"kind": "universe export", "origin": zp.name, "sha256": h,
+                             "time": f"{date}T00:00:00+00:00" if date else None}
+            target.notes = list(entry.get("notes", [])) if same else (
+                [f"The data of {zp.name}, over the viewer build in place, which keeps its program, its docs and its Files app."]
+                + [x for x in kept if x.startswith("warning:")])
+            plan.target = target
+            plan.status = "update"
+            plan.meta = {"artifact_id": d.name, "last_updated": date}
+        except Problem as e:
+            plan.status = "refused"
+            plan.problems.append(str(e))
+        except Exception as e:  # one broken export must not hide the others
+            plan.status = "refused"
+            plan.problems.append(f"{type(e).__name__}: {e}")
+    return plans, {"notes": notes}
+
+
 # --------------------------------------------------------------- outputs
 
 
@@ -1195,7 +1608,8 @@ def load_ledger() -> dict[str, Any]:
     return {"format": FORMAT, "universes": {}}
 
 
-def persona_meta(u: Universe, shell: Optional[list[dict[str, Any]]], prev: Optional[dict[str, Any]]) -> dict[str, Any]:
+def persona_meta(u: Universe, shell: Optional[list[dict[str, Any]]], prev: Optional[dict[str, Any]],
+                 entry: dict[str, Any]) -> dict[str, Any]:
     p = u.page.consts.get("PERSONA") or {}
     nav = u.page.consts.get("DATA_NAV") or []
     apps = sorted(APP_LABELS.get(x.get("id"), x.get("label") or x.get("id")) for x in nav if isinstance(x, dict))
@@ -1226,6 +1640,8 @@ def persona_meta(u: Universe, shell: Optional[list[dict[str, Any]]], prev: Optio
         "files": len(fs),
         "loadBytes": meta["loadBytes"],
         "services": [x.get("id") for x in nav if isinstance(x, dict)],
+        "artifactId": entry.get("artifact_id"),
+        "lastUpdated": entry.get("last_updated"),
         "shellApps": sh.get("apps") if sh else None,
     }
 
@@ -1234,16 +1650,18 @@ def write_catalog(entries: list[dict[str, Any]]) -> str:
     rows = []
     for e in entries:
         rows.append("  {\n" + "\n".join(f"    {k}: {json.dumps(e[k], ensure_ascii=False)}," for k in
-                                        ("slug", "name", "age", "role", "city", "hue", "apps", "files", "loadBytes", "services")) + "\n  },")
+                                        ("slug", "name", "age", "role", "city", "hue", "apps", "files", "loadBytes", "services",
+                                         "artifactId", "lastUpdated")) + "\n  },")
     return (
         "/**\n"
         " * The universes the Universes tab carries, one entry per persona.\n"
         " *\n"
         " * GENERATED by scripts/universes.py from public/universes/. Do not edit by\n"
-        " * hand: run `python scripts/universes.py apply <source>` and this file is\n"
+        " * hand: run `python scripts/universes.py apply-exports` and this file is\n"
         " * rewritten. `hue`, `name`, `age`, `role` and `city` are the viewer site's own\n"
         " * labels for its home grid; `apps`, `files` and `loadBytes` are read off the\n"
-        " * stored data, `loadBytes` being what opening the universe downloads.\n"
+        " * stored data, `loadBytes` being what opening the universe downloads;\n"
+        " * `artifactId` and `lastUpdated` are the ledger's, scripts/universes.lock.json.\n"
         " */\n\n"
         "export interface UniverseEntry {\n"
         "  slug: string;\n  name: string;\n  age: string;\n  role: string;\n  city: string;\n"
@@ -1251,12 +1669,16 @@ def write_catalog(entries: list[dict[str, Any]]) -> str:
         "  apps: string[];\n  /** Files in the persona's Files app. */\n  files: number;\n"
         "  /** Bytes fetched to open the viewer, previews loaded on demand excluded. */\n  loadBytes: number;\n"
         "  /** The data services, in the viewer's nav order. */\n  services: string[];\n"
+        "  /** The Universe Artifact ID, which names the folder its exports arrive in. */\n  artifactId: string | null;\n"
+        "  /** The date of the universe update the hub carries, YYYY-MM-DD, from that folder's\n"
+        "   *  last_modified.md; null while it is pending. */\n  lastUpdated: string | null;\n"
         "}\n\n"
         "export const universeCatalog: UniverseEntry[] = [\n" + "\n".join(rows) + "\n];\n"
     )
 
 
-def catalog_entries(universes: dict[str, Universe], shell: Optional[list[dict[str, Any]]]) -> list[dict[str, Any]]:
+def catalog_entries(universes: dict[str, Universe], shell: Optional[list[dict[str, Any]]],
+                    ledger: dict[str, Any]) -> list[dict[str, Any]]:
     prev = {}
     if CATALOG_TS.exists():
         m = re.search(r"universeCatalog: UniverseEntry\[\] = (\[.*\]);", CATALOG_TS.read_text(encoding="utf-8"), re.S)
@@ -1271,7 +1693,7 @@ def catalog_entries(universes: dict[str, Universe], shell: Optional[list[dict[st
     out = []
     for slug in dict.fromkeys(order):
         if slug in universes:
-            out.append(persona_meta(universes[slug], shell, prev.get(slug)))
+            out.append(persona_meta(universes[slug], shell, prev.get(slug), ledger.get("universes", {}).get(slug, {})))
     return out
 
 
@@ -1430,8 +1852,8 @@ def verify_all(quiet: bool = False) -> int:
                   f"{len(u.needed_externals())} previews present")
         for w in warnings_for(u):
             print(f"WARN {slug}: {w}")
-    # The catalog must describe what is stored.
-    want = write_catalog(catalog_entries(found, None))
+    # The catalog must describe what is stored, and what the ledger says of it.
+    want = write_catalog(catalog_entries(found, None, ledger))
     if not CATALOG_TS.exists() or CATALOG_TS.read_text(encoding="utf-8") != want:
         print("FAIL catalog: src/data/universeCatalog.ts does not match the stored universes (run apply)")
         bad += 1
@@ -1628,6 +2050,7 @@ def cmd_status() -> int:
         src = e.get("source", {})
         print(f"{d.name:16} {meta['title'][:40]:42} synced {e.get('synced_at', '?')[:10]}  "
               f"page {meta['pageSha256'][:12]}  opens {mb(meta['loadBytes'])}  from {src.get('origin', '?')}")
+        print(f"{'':16} {e.get('artifact_id') or 'no artifact ID recorded'}, last updated {e.get('last_updated') or 'pending'}")
     return 0
 
 
@@ -1661,6 +2084,14 @@ def main() -> int:
         sp.add_argument("--add", action="store_true", help="allow a universe the hub does not carry yet")
         sp.add_argument("--allow-older", action="store_true", help="accept a source dated before the one in place")
         sp.add_argument("--data-only", action="store_true", help="apply an export over the current viewer build")
+    for name in ("check-exports", "apply-exports"):
+        sp = sub.add_parser(name)
+        sp.add_argument("--dir", default=None, help=f"the folder of export folders (default {EXPORTS})")
+        sp.add_argument("--only", nargs="*", default=None, help="apply these universes only")
+        sp.add_argument("--allow-older", action="store_true",
+                        help="accept an export dated no later than the version in place")
+        sp.add_argument("--allow-removals", action="store_true",
+                        help="accept an export that drops records, fields or collections the hub has")
     args = ap.parse_args()
 
     if args.cmd == "status":
@@ -1685,9 +2116,13 @@ def main() -> int:
             print(f"wrote {d.name}: page {u.page.sha256[:12]}, {len(u.needed_externals())} previews, {len(u.media())} media")
         return 0
 
-    if not UNIV.exists() and not args.sources:
-        raise SystemExit("error: nothing is stored yet, so name at least one source")
-    plans, shell, extra = plan_all(args)
+    shell: Optional[list[dict[str, Any]]] = None
+    if args.cmd in ("check-exports", "apply-exports"):
+        plans, extra = plan_exports(args)
+    else:
+        if not UNIV.exists() and not args.sources:
+            raise SystemExit("error: nothing is stored yet, so name at least one source")
+        plans, shell, extra = plan_all(args)
     selected = [p for p in plans if args.only is None or p.slug in args.only]
     print_plans(plans, extra)
     problems = [p for p in selected if p.status == "refused"]
@@ -1700,7 +2135,7 @@ def main() -> int:
         for w in warnings_for(p.target):
             print(f"          warning: {p.slug}: {w}")
     blocked = problems + [p for p in changes if p.problems]
-    if args.cmd == "check":
+    if args.cmd in ("check", "check-exports"):
         if blocked:
             return 2
         return 1 if changes else 0
@@ -1723,9 +2158,12 @@ def main() -> int:
         wrote, kept, removed = write_universe(p.target)
         old = ledger["universes"].get(p.slug)
         hist = (old.get("history", []) if old else [])
-        if old:
+        # A new date on the same data is no new version.
+        if old and old.get("fingerprint") != p.target.fingerprint():
             hist = hist + [{k: old[k] for k in ("fingerprint", "page_sha256", "source", "synced_at") if k in old}]
         ledger["universes"][p.slug] = {
+            **{k: old[k] for k in ("artifact_id", "last_updated") if old and k in old},
+            **p.meta,
             "fingerprint": p.target.fingerprint(),
             "page_sha256": p.target.page.sha256,
             "source": p.target.source,
@@ -1734,9 +2172,9 @@ def main() -> int:
             "history": hist[-20:],
         }
         print(f"wrote {p.slug}: {wrote} files written, {kept} unchanged, {removed} removed")
-    CATALOG_TS.write_text(write_catalog(catalog_entries(universes, shell)), encoding="utf-8", newline="\n")
+    CATALOG_TS.write_text(write_catalog(catalog_entries(universes, shell, ledger)), encoding="utf-8", newline="\n")
     LEDGER.write_text(json.dumps(ledger, indent=1, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
-    for e in catalog_entries(universes, shell):
+    for e in catalog_entries(universes, shell, ledger):
         if e.get("shellApps") and sorted(e["shellApps"]) != e["apps"]:
             print(f"warning: {e['slug']}: the viewer site lists its apps as {e['shellApps']}, the hub derives {e['apps']}")
     print("")

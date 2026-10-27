@@ -1,8 +1,8 @@
-import { lazy, Suspense, useEffect, useRef, useState, type CSSProperties } from "react";
+import { Fragment, lazy, Suspense, useEffect, useRef, useState, type CSSProperties } from "react";
 import { Link, Navigate, useHref, useLocation } from "react-router-dom";
-import { AlertTriangle, ArrowRight, ArrowUpRight, Download, MonitorSmartphone, Orbit, RotateCw, Telescope } from "lucide-react";
+import { AlertTriangle, ArrowRight, ArrowUpRight, Check, Copy, Download, MonitorSmartphone, Orbit, RotateCw, Telescope } from "lucide-react";
 import { universeCatalog, type UniverseEntry } from "../data/universeCatalog";
-import { SectionHeading } from "../components/ui";
+import { Callout, SectionHeading } from "../components/ui";
 import { loadUniverse, mountUniverse, type LoadedUniverse, type MountedUniverse } from "../lib/universeHost";
 import { cx } from "../lib/util";
 
@@ -43,6 +43,12 @@ const initials = (n: string) =>
     .toUpperCase();
 const mbLabel = (bytes: number) => `${Math.max(1, Math.round(bytes / 1_000_000))} MB`;
 const hue = (u: UniverseEntry) => ({ "--h": u.hue }) as CSSProperties;
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+/** "2026-10-19" as the hub writes dates, "Oct 19, 2026". */
+const dayLabel = (iso: string) => {
+  const [y, m, d] = iso.split("-").map(Number);
+  return `${MONTHS[m - 1]} ${d}, ${y}`;
+};
 
 /** Explore is its own chunk: the tab's grid and viewer never load it. */
 const Explore = lazy(() => import("../components/explore/Explore"));
@@ -94,8 +100,44 @@ function ZipLink({ u, place }: { u: UniverseEntry; place: "card" | "bar" }) {
 
 /* -------------------------------------------------------------- the grid */
 
+/** Copies the Universe Artifact ID, the name a task's universe goes by. */
+function CopyId({ id, name }: { id: string; name: string }) {
+  const [state, setState] = useState<"idle" | "done" | "failed">("idle");
+  useEffect(() => {
+    if (state === "idle") return;
+    const t = window.setTimeout(() => setState("idle"), 1600);
+    return () => window.clearTimeout(t);
+  }, [state]);
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(id);
+      setState("done");
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = id;
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      ta.remove();
+      setState(ok ? "done" : "failed");
+    }
+  };
+  return (
+    <button
+      type="button"
+      onClick={copy}
+      aria-label={`Copy ${name}'s Universe Artifact ID`}
+      className="-my-1 -mr-1.5 inline-flex shrink-0 items-center gap-1 rounded-md px-1.5 py-1 text-[12px] font-semibold text-ink-500 transition hover:bg-ink-100 hover:text-ink-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.64_0.15_var(--h))]"
+    >
+      {state === "done" ? <Check size={13} className="text-emerald-600 dark:text-emerald-400" aria-hidden /> : <Copy size={13} aria-hidden />}
+      <span aria-live="polite">{state === "done" ? "Copied" : state === "failed" ? "Copy failed" : "Copy"}</span>
+    </button>
+  );
+}
+
 /** The whole card opens the viewer, through the stretched "Open viewer" link,
- *  and the Explore and ZIP buttons sit above that link. */
+ *  and the Explore and ZIP buttons sit above that link. So does the artifact
+ *  ID, so it can be selected and copied without opening anything. */
 function PersonaCard({ u }: { u: UniverseEntry }) {
   return (
     <div
@@ -125,7 +167,25 @@ function PersonaCard({ u }: { u: UniverseEntry }) {
           </span>
         ))}
       </div>
-      <div className="mt-auto flex items-center justify-between gap-3 border-t border-ink-200/70 pt-3.5 text-[13px] text-ink-500">
+      <div className="relative z-10 mb-3.5 mt-auto rounded-xl border border-ink-200/70 bg-raised px-3.5 py-3">
+        <div className="flex items-center justify-between gap-2">
+          <span className="mono-label text-ink-400">Universe Artifact ID</span>
+          {u.artifactId && <CopyId id={u.artifactId} name={u.name} />}
+        </div>
+        {/* It wraps at its own underscores and hyphens, never inside a word. */}
+        <div className="mt-1 select-all font-mono text-[12px] leading-snug text-ink-800 [overflow-wrap:anywhere]">
+          {u.artifactId
+            ? u.artifactId.split(/(_)/).map((s, i) => (i % 2 ? <Fragment key={i}>{s}<wbr /></Fragment> : s))
+            : "Not recorded"}
+        </div>
+        <div className="mt-2.5 flex items-baseline justify-between gap-2 border-t border-ink-200/70 pt-2.5">
+          <span className="mono-label text-ink-400">Last updated</span>
+          <span className={cx("text-[13px]", u.lastUpdated ? "font-semibold text-ink-800" : "text-ink-500")}>
+            {u.lastUpdated ? dayLabel(u.lastUpdated) : "Pending"}
+          </span>
+        </div>
+      </div>
+      <div className="flex items-center justify-between gap-3 border-t border-ink-200/70 pt-3.5 text-[13px] text-ink-500">
         <span>
           {u.apps.length} apps · {u.files} files · {mbLabel(u.loadBytes)}
         </span>
@@ -165,6 +225,13 @@ function UniversesHome() {
             title={`${WORDS[universeCatalog.length] ?? universeCatalog.length} persona universes`}
             sub="Each viewer holds one persona's apps, files and messages. Every name, address and document in them is synthetic. The pages are large, so the first open takes a few seconds."
           />
+          <div role="note" className="mt-6 max-w-3xl">
+            <Callout title="Not always the latest version" tone="warn" icon={<AlertTriangle size={13} aria-hidden />}>
+              Universes are updated regularly, but the latest changes may not always be reflected here. While most
+              universe data generally remains unchanged, always verify relevant information directly through the
+              Database Agent or any of the legs of the agent before relying on it for your task.
+            </Callout>
+          </div>
         </div>
       </section>
       <div className="wrap py-10">

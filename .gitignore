@@ -19,3 +19,9 @@ failure approach/
 # committed, so a clone builds without them.
 *-rubric.csv
 appendix.csv
+# The universe exports, one folder per Universe Artifact ID with its
+# last_modified.md. Green Shell's scripts/universes.py apply-exports applies
+# them and records each date in the ledger and src/data/universeCatalog.ts.
+# Anchored, because Windows matches ignore patterns without regard to case
+# and public/universes/ must deploy.
+/Universes/

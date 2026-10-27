@@ -2,6 +2,8 @@
  "format": 1,
  "universes": {
   "kofi-mensah": {
+   "artifact_id": "openclaw-kofi_mensah_20261016-universe",
+   "last_updated": "2026-10-18",
    "fingerprint": "b924ba3a6038c4d8e72037ce61122b1c9fb2de3a42492ee2a1ec894952e6c279",
    "page_sha256": "c6cc1c9ac56a6034b4aceafaf1de55c71d356d950c9b0ee9b86dd99077c1a860",
    "source": {
@@ -19,6 +21,8 @@
    "history": []
   },
   "elena-marsh": {
+   "artifact_id": "openclaw-elena_marsh_20261013-universe",
+   "last_updated": "2026-10-19",
    "fingerprint": "e92a54985907831121fb0a4f1cfdfcbef480c342e337928c4ec6a0a384092582",
    "page_sha256": "83c7a89c7cb5e56713855e99c5bf8d3d6b39c307e2b2299882e91828a1a88b4f",
    "source": {
@@ -36,6 +40,8 @@
    "history": []
   },
   "ray-castillo": {
+   "artifact_id": "openclaw-legacy_ray_castillo_20261011-universe",
+   "last_updated": "2026-10-19",
    "fingerprint": "21d278c0ac1ab199ae54f42beb9be9dc78c413ddb269343cb5ffc8e7b525786c",
    "page_sha256": "358b16d75147b0b606a17fa8aaa82fa9114143cc50829f37466019325b34a417",
    "source": {
@@ -53,6 +59,8 @@
    "history": []
   },
   "owen-brandt": {
+   "artifact_id": "openclaw-owen_brandt_20261020-universe",
+   "last_updated": "2026-10-26",
    "fingerprint": "c6bbc2dca6b1a6a167b0d65d5e4757dee4530ddfdacab3c2357592f983999cda",
    "page_sha256": "b8b16d704e4ba64ad4d9a062c0431a5d85ac67b8ae148d078348cb4e22aaf8eb",
    "source": {
@@ -65,6 +73,8 @@
    "history": []
   },
   "tomasz-nowak": {
+   "artifact_id": "openclaw-tomasz_nowak_20261020-universe",
+   "last_updated": "2026-10-26",
    "fingerprint": "94111771a3ffffde1a59461d0d725f3386ee3790659103f5d88fa0869572fbf5",
    "page_sha256": "20689520c286045cd687efe988bf79c9667e38e492f98e4fadff93c78337401e",
    "source": {
@@ -77,6 +87,8 @@
    "history": []
   },
   "grace-liu": {
+   "artifact_id": "openclaw-grace_liu_20261020-universe",
+   "last_updated": null,
    "fingerprint": "418259f0cf53de40534c8b1a37029489c18a3e3603cb3bb47bd5c326ec3ce631",
    "page_sha256": "7b68ac7495e18dd1734516a6206d3c4ee25b4ca49316dcf42c23732a9bd4f299",
    "source": {

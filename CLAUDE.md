@@ -92,6 +92,13 @@ md written from them, which must never be committed: the repo is public). They a
 projects transcribe into `src/data/`, never site content, and a project reads only its own. Each
 project's `CLAUDE.md` carries the table mapping a source document to the data file that holds it.
 
+**The universe exports sit at the root, not inside a project.** `Universes/` holds one folder per Universe
+Artifact ID, each with its export ZIP and a hand edited `last_modified.md`. It is gitignored (anchored
+as `/Universes/`, since Windows matches ignore patterns without regard to case and
+`Green Shell/public/universes/` must deploy), and only Green Shell's universe sync reads it:
+`scripts/universes.py apply-exports`, and `scripts/universes_remote.mjs`, which checks each date
+against the universe's page on agent-env-hub.
+
 ## Other agent configs
 
 An OpenAI Codex config exists at `~/.codex/config.toml`. If you want its MCP servers, commands or
