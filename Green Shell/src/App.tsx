@@ -85,7 +85,9 @@ export default function App() {
             lands on the method rather than on a 404. */}
         <Route path="/complexity" element={<Navigate to="/" replace />} />
         <Route path="/spec" element={<SpecDoc />} />
-        <Route path="/reference" element={<Reference />} />
+        {/* One route for the bare tab and each pane, `/reference/<pane>`, so
+            the page stays mounted while the bar switches between them. */}
+        <Route path="/reference/:pane?" element={<Reference />} />
 
         {/* Where the retired tabs went. */}
         <Route path="/grading" element={<MovedFromGrading />} />

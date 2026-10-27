@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ClipboardCheck, GraduationCap, HelpCircle, ShieldAlert } from "lucide-react";
 import Onboarding from "./Onboarding";
@@ -91,19 +91,29 @@ const paneHome: Record<string, string> = {
 };
 
 export default function Reference() {
+  const { pane } = useParams();
   const { hash, key } = useLocation();
-  const [active, setActive] = useState<string>(PANES[0].id);
+  const navigate = useNavigate();
+  // Read off the path on the first render too, so a direct link to
+  // `/reference/<pane>` never flashes the default pane first.
+  const [active, setActive] = useState<string>(
+    pane && PANE_IDS.has(pane) ? pane : PANES[0].id
+  );
 
-  /* `key` is in the deps, not just `hash`: the bar moves the pane without
-     touching the URL, so after a click the hash can name something off screen
-     and a link targeting it would not re-run the effect on `[hash]` alone.
-     Same reason the spec doc watches it. */
+  /* Each pane has its own path, `/reference/<pane>`, and the bar navigates to
+     it, so a pane can be linked to, refreshed and opened in a new tab. The bar
+     passes `keepScroll`, so switching a pane does not jump the page. An
+     anchor in the hash still wins over the path: every older link and every
+     cross-link into a pane is `/reference#<entry>`, and the entry decides the
+     pane. `key` is in the deps, not just `hash`, so a link to the anchor the
+     URL already names still re-runs the effect. Same reason the spec doc
+     watches it. */
   useEffect(() => {
     const id = decodeURIComponent(hash.replace(/^#/, ""));
-    if (!id) return;
     if (PANE_IDS.has(id)) setActive(id);
     else if (paneHome[id]) setActive(paneHome[id]);
-  }, [hash, key]);
+    else if (pane && PANE_IDS.has(pane)) setActive(pane);
+  }, [pane, hash, key]);
 
   const current = PANES.find((p) => p.id === active) ?? PANES[0];
 
@@ -132,7 +142,7 @@ export default function Reference() {
                   key={p.id}
                   role="tab"
                   aria-selected={on}
-                  onClick={() => setActive(p.id)}
+                  onClick={() => navigate(`/reference/${p.id}`, { state: { keepScroll: true } })}
                   className={cx(
                     "inline-flex shrink-0 items-center gap-2 rounded-xl border px-3.5 py-2 text-[13.5px] font-semibold transition",
                     on

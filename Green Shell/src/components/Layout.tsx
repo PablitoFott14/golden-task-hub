@@ -109,7 +109,7 @@ function ThemeToggle() {
  * A rail item you have scrolled away from is exactly that case.
  */
 function useHashScroll() {
-  const { pathname, hash, key } = useLocation();
+  const { pathname, hash, key, state } = useLocation();
   const previous = useRef<string | null>(null);
 
   useEffect(() => {
@@ -117,7 +117,10 @@ function useHashScroll() {
     previous.current = pathname;
 
     if (!hash) {
-      window.scrollTo({ top: 0, behavior: "instant" });
+      // The Reference bar switches panes by path and passes `keepScroll`, so
+      // picking a pane leaves the page where it was.
+      if (!(state as { keepScroll?: boolean } | null)?.keepScroll)
+        window.scrollTo({ top: 0, behavior: "instant" });
       return;
     }
 

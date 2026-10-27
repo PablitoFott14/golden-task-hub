@@ -126,7 +126,7 @@ actually doing, and one of those is parked; Universes made it seven, so six show
 | Failure Approach | `/failure-approach` | **three levels**, all off the hash: the overview (seven type cards and the diagnosis tile, the task filter), a type (`#looking` … `#finishing`), a pattern (`#<pattern-id>`), and `#keeps-passing` | new, in the slot Complexity held; rebuilt from a thirteen pane rail |
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
 | Spec Doc | `/spec` | **7 dimension groups** (default: Task Parameters) · 3 appendix sections · Change log | `/spec` |
-| Reference | `/reference` | **Onboarding** (default) · Pre-Submit · Must Read: Project Updates · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
+| Reference | `/reference`, `/reference/:pane` | **Onboarding** (default) · Pre-Submit · Must Read: Project Updates · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
 
 **The spec doc is the destination, not a pane of something else.** It is the one piece of content
 nothing else in the hub can stand in for: the exact rubric a reviewer scores against. The gate, the
@@ -152,6 +152,13 @@ the data rather than listed by hand: `dimensionHome` in [SpecDoc.tsx](src/pages/
 `paneHome` in [Reference.tsx](src/pages/Reference.tsx), `gateAnchors` in
 [App.tsx](src/App.tsx). Add a check, a dimension, a change or a question and its anchor works
 without touching any of them.
+
+**Each Reference pane has its own path**, `/reference/<pane>` with the pane's `id`
+(`onboarding`, `pre-submit`, `whats-new`, `faq`), and the bar navigates to it, so a pane can be
+linked to, refreshed and opened in a new tab. An anchor in the hash still wins over the path, so
+every `/reference#<entry>` link keeps landing where it did. The bar navigates with
+`state: { keepScroll: true }`, which `useHashScroll` in [Layout.tsx](src/components/Layout.tsx)
+reads to skip its scroll to the top, so switching a pane leaves the page where it was.
 
 **Two pane mechanisms, both already in the hub, chosen by size.** The spec doc keeps a vertical rail
 because it has eleven entries. Reference uses a bar across the top because it has four, and three of
