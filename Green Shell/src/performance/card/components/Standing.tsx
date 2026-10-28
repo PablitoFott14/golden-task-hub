@@ -7,9 +7,9 @@ import { cx, shortDate } from "../lib/util";
 const pos = (v: number) => `${((Math.min(5, Math.max(1, v)) - 1) / 4) * 100}%`;
 
 export const ZONES = [
-  { from: 1, to: 3, label: "High Risk", note: "3.00 or below", tint: "bg-amber-500/15", swatch: "bg-amber-500", text: "text-amber-700 dark:text-amber-300" },
-  { from: 3, to: 4, label: "On Track, But Don't Relax", note: "above 3.00", tint: "bg-sky-500/15", swatch: "bg-sky-500", text: "text-sky-700 dark:text-sky-300" },
-  { from: 4, to: 5, label: "Top Performer", note: "above 4.00", tint: "bg-emerald-500/15", swatch: "bg-emerald-500", text: "text-emerald-700 dark:text-emerald-300" },
+  { from: 1, to: 3, label: "High Risk", note: "below 3.00", tint: "bg-amber-500/15", swatch: "bg-amber-500", text: "text-amber-700 dark:text-amber-300" },
+  { from: 3, to: 4, label: "On Track, But Don't Relax", note: "3.00 or above", tint: "bg-sky-500/15", swatch: "bg-sky-500", text: "text-sky-700 dark:text-sky-300" },
+  { from: 4, to: 5, label: "Top Performer", note: "4.00 or above", tint: "bg-emerald-500/15", swatch: "bg-emerald-500", text: "text-emerald-700 dark:text-emerald-300" },
 ];
 
 /** Why the status is not simply the band the average sits in. After a lift, the path says it. */
