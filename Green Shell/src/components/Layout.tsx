@@ -49,7 +49,7 @@ import CommandPalette from "./CommandPalette";
  * **My Performance is the last, and this is the argument for it.** It is the
  * one page about the contributor rather than the task: their own standing, the
  * issues their audits found, what to do in the next task, and the feedback of
- * every attempt, opened with their CB ID and the key in their personal link.
+ * every attempt, opened with their CB ID.
  * Every other tab reads the same for everyone, so none of them can hold it, and
  * Reference is for looking something up in, not for one person's record. It is
  * not the standard either, though each finding in it names the Guidelines

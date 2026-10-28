@@ -20,7 +20,7 @@ so seven show.
 | Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | **Parked, not on the site**, and the route redirects to `/`. The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
 | Spec Doc | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec: the dimensions, the appendix and the change log, one pane at a time off a vertical rail, under one search. |
 | Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, the must-read project updates, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
-| My Performance | `/performance` | [Performance.tsx](src/pages/Performance.tsx) | A contributor's own performance card: their standing and what the next audits can do to it, the issues to fix first, what to do in the next task, and every audited attempt's feedback, opened with their CB ID and the key in their personal link. The card is fetched from Green Shell Insights for that one contributor. See [The My Performance tab](#the-my-performance-tab). |
+| My Performance | `/performance` | [Performance.tsx](src/pages/Performance.tsx) | A contributor's own performance card: their standing and what the next audits can do to it, the issues to fix first, what to do in the next task, and every audited attempt's feedback, opened with their CB ID. The card is fetched from Green Shell Insights for that one contributor. See [The My Performance tab](#the-my-performance-tab). |
 
 `/grading`, `/checklist`, `/onboarding`, `/whats-new` and `/faq` are kept as redirects that carry
 the hash across.
@@ -129,7 +129,7 @@ seven show.
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
 | Spec Doc | `/spec` | **7 dimension groups** (default: Task Parameters) · 3 appendix sections · Change log | `/spec` |
 | Reference | `/reference`, `/reference/:pane` | **Onboarding** (default) · Pre-Submit · Must Read: Project Updates · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
-| My Performance | `/performance` | the landing (CB ID, personal key), then the contributor's card under the hub's header | new |
+| My Performance | `/performance` | the landing (CB ID), then the contributor's card under the hub's header | new |
 
 **The spec doc is the destination, not a pane of something else.** It is the one piece of content
 nothing else in the hub can stand in for: the exact rubric a reviewer scores against. The gate, the
@@ -605,19 +605,18 @@ files on purpose, deviation from a parameter only as the guidelines allow.
 
 [Performance.tsx](src/pages/Performance.tsx) is the one page about a contributor rather than the
 task: their own performance card, the same card the project team opens for them in Green Shell
-Insights' CB Cards tab. A contributor opens the tab from their **personal link**,
-`/#/performance?k=<key>`, enters their CB ID, and the card opens under the hub's header: where they
-stand and what the next audits can do to it, the areas where improvement is expected, what to do in
-the next task with the hub pages that help, and every audited attempt's feedback.
+Insights' CB Cards tab. A contributor opens the tab, enters their CB ID, and the card opens under
+the hub's header: where they stand and what the next audits can do to it, the areas where
+improvement is expected, what to do in the next task with the hub pages that help, and every
+audited attempt's feedback.
 
 **Nothing private is in this repo, and nothing private is in the bundle.** The repo is public and
-the site static, so the card is fetched after a check, for that one contributor, from Green Shell
-Insights' `/api/card`. That endpoint answers a CB ID only with the key from that contributor's own
-link, an HMAC of the ID under a secret that lives on Insights alone: a key opens one card, and
-another CB ID with it gets the same refusal as an ID that does not exist. The page takes the key
-out of the address bar as soon as it arrives and keeps it, with the CB ID, in `sessionStorage` for
-that tab only. The team hands each contributor their link from the CB Cards tab (a copy button per
-contributor, or every link as a CSV).
+the site static, so the card is fetched for that one contributor from Green Shell Insights'
+`/api/card`, which answers a CB ID on the active contributors list with that card and anything else
+with one and the same refusal. **The CB ID alone opens the card**: personal links were dropped on 28
+Oct 2026, since many contributors cannot read the email on record, so a card is as private as its
+CB ID. The page keeps the CB ID in `sessionStorage` for that tab only and never puts it in the
+address.
 
 **`src/performance/card/` is a verbatim copy: never edit it here.** The card is the CB Performance
 & Project Guidance Hub's (`Green Shell/Evals/cb-guidance-hub/app/src` on Drive), the source

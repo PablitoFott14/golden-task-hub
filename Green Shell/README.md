@@ -31,7 +31,7 @@ it, and where the two disagree the guidelines win.
 | **Failure Approach** | `/failure-approach` | Real cases of how Opus fails as an agent and how to build the same pressure into a Leg A, which runs Opus 5. Where the cases come from first, then seven failure types in the order a run breaks, twenty eight patterns, and eighty nine graded runs behind them, each with why it failed. A "Model A passed?" view diagnoses a Leg A that passed. See below. |
 | **Spec Doc** | `/spec` | The QC spec the task is scored against: 28 dimensions in 7 groups, the appendix (rubric quality issues, weights, authoring standards) and the change log, one pane at a time, under one search. |
 | **Reference** | `/reference` | Onboarding, the 29 check pre-submit gate written for single turn (with its printable PDF, generated from the same data), Must Read: Project Updates, and the FAQ, one pane at a time. |
-| **My Performance** | `/performance` | Your own performance card: where you stand and what your next audits can do to it, the issues to fix first, what to do in your next task, and the feedback of every audited attempt. It opens with your CB ID and the personal link you were sent. See below. |
+| **My Performance** | `/performance` | Your own performance card: where you stand and what your next audits can do to it, the issues to fix first, what to do in your next task, and the feedback of every audited attempt. It opens with your CB ID. See below. |
 
 A seventh tab, **Complexity** (the Increase Complexity Proposals tool), is **parked**: off the site,
 its route redirects to `/`, and its source is kept so it can come back. `/grading`, `/checklist`,
@@ -80,10 +80,9 @@ Golden Task and the spec own those, and the tab links to them instead.
 
 Each contributor's own card: where they stand and what their next audits can do to it, the areas
 where improvement is expected, what to do in the next task with the hub pages that help, and the
-feedback of every audited attempt. It opens with the contributor's CB ID and the personal link they
-were sent, which carries a key that opens their card and no one else's. Nothing of it is in this
-repository: the card is fetched for that one contributor, after the check, from Green Shell
-Insights, where the project team sees the same card. `CLAUDE.md` has the details.
+feedback of every audited attempt. It opens with the contributor's CB ID alone. Nothing of it is in
+this repository: the card is fetched for that one contributor from Green Shell Insights, where the
+project team sees the same card. `CLAUDE.md` has the details.
 
 ## Running it
 

@@ -89,8 +89,7 @@ export default function App() {
         {/* One route for the bare tab and each pane, `/reference/<pane>`, so
             the page stays mounted while the bar switches between them. */}
         <Route path="/reference/:pane?" element={<Reference />} />
-        {/* A contributor's own card. A personal link lands here with its key,
-            `/performance?k=<key>`, which the page takes out of the address. */}
+        {/* A contributor's own card, opened with their CB ID. */}
         <Route path="/performance" element={<Performance />} />
 
         {/* Where the retired tabs went. */}
