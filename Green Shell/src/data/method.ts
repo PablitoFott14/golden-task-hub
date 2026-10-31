@@ -86,8 +86,7 @@ export const methodSteps: MethodStep[] = [
     moves: [
       "Settle the deliverable first. It clears the complexity bar for its type or the scenario is not finished.",
       "Keep the thresholds and rules in the inputs, so finding them is part of the work.",
-      "Build friction that the situation would really produce, never constraints bolted on to look hard. A rule a professional knows but nobody wrote down beats a planted trap.",
-      "Prefer a request that makes or changes something, ideally building on the user's earlier work, over an audit of a pile of files.",
+      "Build friction that the situation would really produce, never constraints bolted on to look hard.",
       "Resolve the GTFA down to the values: the totals, the dates, the classifications, the edge cases.",
     ],
     produces: "A scenario the pair explains, and the one answer it has to reach.",
@@ -101,9 +100,6 @@ export const methodSteps: MethodStep[] = [
     },
     links: [
       { to: "/failure-approach", tag: "FA", label: "Real Opus failures to build the scenario around" },
-      { to: "/reference#flag-make-and-change", tag: "WN", label: "Fewer audits, more making and changing" },
-      { to: "/reference#flag-earlier-work", tag: "WN", label: "Build on the user's earlier work" },
-      { to: "/reference#flag-expert-rules", tag: "WN", label: "Difficulty from expertise, not from traps" },
     ],
   },
   {
@@ -148,7 +144,7 @@ export const methodSteps: MethodStep[] = [
       "The task is single turn. One prompt is sent automatically when you submit, and the agent answers it once. Anything you expect the agent to produce has to be requested here, in the user's own voice, or it cannot be graded at all.",
     moves: [
       "Name every expected output file, spelled exactly as it has to appear.",
-      "Keep it short and in the user's own voice: a realistic goal and a clear call to action, in language a real person would use.",
+      "Open with a realistic goal and close with a clear call to action, in language a real person would use.",
       "State today's date in the user's voice, matching the date the universe assumes, so that tonight or in time has one right answer.",
       "Require action inside the assigned universe, subcategory and tools, without naming the tools as calls.",
       "State the assigned execution target and any limit on the run, such as nothing sent, and keep the answers to the verification condition out of the prompt.",
@@ -165,7 +161,6 @@ export const methodSteps: MethodStep[] = [
     },
     links: [
       { to: "/reference#flag-dates", tag: "WN", label: "Anchor the prompt and the rubric to a stated date" },
-      { to: "/reference#flag-short-request", tag: "WN", label: "Write the request the way a real user would" },
     ],
   },
   {
@@ -258,7 +253,6 @@ export const methodSteps: MethodStep[] = [
     links: [
       { to: "/reference#flag-thresholds", tag: "WN", label: "A correct answer must never fail a criterion" },
       { to: "/reference#flag-link-code", tag: "WN", label: "No link code in the prompt or the criteria" },
-      { to: "/reference#flag-critical-items", tag: "WN", label: "The criteria that decide the task state an exact value" },
     ],
   },
   {

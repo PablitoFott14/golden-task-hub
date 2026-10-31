@@ -808,11 +808,10 @@ Four fields carry the rest:
 
 **The rail is grouped by date**, each date headed once, and a group made only of client flags says
 so in its heading. When the newest entries are client flags, a rose line under the lead tells the
-reader to start with them, counting them off the data. The ten flags of Oct 27, 2026 lead the list:
-five from the client's review of the last delivery (`hard`) and five from its single turn design
-recommendations (`shape`). Two recommendations run against the guidelines as they stand, unnamed
-output files and a critical mark the guidelines do not define, and those entries tell the reader to
-keep following the guidelines until they change. Each flag is also worked into its method step, and
+reader to start with them, counting them off the data. The five flags of Oct 27, 2026 lead the list,
+all `hard`, from the client's review of the last delivery. The client's single turn design
+recommendations of the same day are left out on purpose: they are not in effect yet, and several run
+against the guidelines as they stand. Each flag is also worked into its method step, and
 gate check F1 now reads as guidelines 6.3 does: where the golden fails a criterion, fix whichever
 side is wrong.
 
