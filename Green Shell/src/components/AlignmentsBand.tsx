@@ -43,7 +43,7 @@ export default function AlignmentsBand() {
                 Urgent Alignments · {alignmentsFlagged}
               </span>
               <span className="block font-display text-[16px] font-bold leading-snug text-ink-900 sm:text-[17px]">
-                The client flagged {n} issues. Fix them in every task.
+                The client flagged {n} issues. Avoid them in every task.
               </span>
             </span>
             <ChevronRight size={20} className="shrink-0 text-rose-600 sm:hidden dark:text-rose-300" aria-hidden />

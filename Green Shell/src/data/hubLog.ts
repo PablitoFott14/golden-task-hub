@@ -61,7 +61,7 @@ export const hubUpdates: HubUpdate[] = [
     id: "client-flags-oct-27",
     date: "Oct 31, 2026",
     kind: "guidelines",
-    what: "The client flagged five issues to fix in your tasks",
+    what: "The client flagged five issues to avoid in your tasks",
     where: "Urgent Alignments",
     why: "Found in the last delivery, and they apply to every task, new or being fixed: graded files missing from the inputs, a golden that fails its own rubric, link code in prompts and criteria, no stated date, and thresholds a correct answer can fail. Each one shows the mistake and what to do about it.",
     to: "/alignments",

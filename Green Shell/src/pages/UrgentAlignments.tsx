@@ -191,7 +191,7 @@ export default function UrgentAlignments() {
             <ShieldAlert size={13} /> Urgent Alignments
           </div>
           <h1 className="mt-2 font-display text-[30px] font-bold leading-tight tracking-tight text-ink-900 sm:text-[38px]">
-            {word(alignments.length)} issues to fix in every task
+            {word(alignments.length)} issues to avoid in every task
           </h1>
           <p className="mt-3 max-w-3xl text-[16px] leading-relaxed text-ink-600">
             The client reviewed the last delivery and flagged these {word(alignments.length).toLowerCase()}. They apply to
