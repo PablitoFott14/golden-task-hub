@@ -27,6 +27,21 @@ import type { GuidelineChange } from "./types";
  * `detail` is supporting context and is optional on purpose. It is there where
  * the rule is easy to misread, and absent where the rule explains itself.
  *
+ * `example` is the mistake as it showed up, and every client flag carries one:
+ * a flag is a pattern the client found in delivered tasks, and a contributor
+ * recognises it in their own task from the case faster than from the rule. It
+ * is written as a generic case and never names a task, a task id or a persona.
+ *
+ * The Oct 27 flags come from two client notes of that day: the review of the
+ * Oct 26 single turn delivery (graded files, golden against rubric, link code,
+ * dates, thresholds, all `hard`) and the single turn task design
+ * recommendations (the other five, `shape`). Where a recommendation runs
+ * against the guidelines as they stand, unnamed output files and a critical
+ * mark the guidelines do not define, the entry says to keep following the
+ * guidelines. The design note's "no Drive connector" is left out: the
+ * guidelines list a Google Drive service, and the note does not say which it
+ * means.
+ *
  * Newest first.
  */
 export const guidelinesVersion = { version: "Green Shell v1", updated: "Oct 8, 2026" };
@@ -39,6 +54,229 @@ export const guidelinesVersion = { version: "Green Shell v1", updated: "Oct 8, 2
 export const clientFlagVersion = "Client flag";
 
 export const guidelineChanges: GuidelineChange[] = [
+  {
+    id: "flag-graded-files",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "Every file a criterion grades has to ship as a task input",
+    body: "Criteria graded details inside photos that were saved with the golden but never added to the task inputs. The golden run could open them from a folder outside the task package. The agent being tested never gets them, so no run can pass those criteria however good it is. Missing task data was flagged in an earlier report, and it came back.",
+    example: [
+      "The inputs are three phone screenshots of a piece of equipment.",
+      "Four criteria grade details that only show in the full size master photos, such as a scratch on the faceplate below the meters in photo 2.",
+      "The master photos sit only in the golden's folder, so every run fails those four criteria.",
+    ],
+    does: "For each criterion, name the file it depends on and check that the file is in the inputs folder. If it is not, add it or rewrite the criterion. A passing golden proves nothing here, because the golden may have reached files the agent never will.",
+    refs: [
+      { section: "1.2.2", title: "Select the Multimodal Inputs" },
+      { section: "2.2", title: "Upload Folders" },
+      { section: "5.7", title: "Final Rubric Checklist" },
+    ],
+    impact: "hard",
+    links: [{ to: "/#inputs", tag: "M4", label: "Every graded file ships as an input" }],
+  },
+  {
+    id: "flag-golden-agrees",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "The golden has to pass its own rubric",
+    body: "The golden is meant to be an answer that passes every criterion. When it contradicts one, either the rubric or the golden is wrong, and the client cannot tell which side to trust. This was flagged in an earlier report, and it came back.",
+    example: [
+      "The prompt asks which of two shipping options to go with, and a criterion requires the answer to end with one recommended option.",
+      "The golden says not to commit to either option yet.",
+      "Another criterion expects Saturday evening drop-off hours, and the golden's table only lists Sunday hours.",
+    ],
+    does: "Rate the golden against every objective criterion, as you rated Model A, and point at the place where it passes each one. Where it fails one, decide which side is wrong and fix that side: rewrite the criterion if it misreads the prompt, the inputs or the data, and steer again if the golden missed a valid requirement. After any fix to the prompt, the rubric or the golden, rate the golden against every criterion again.",
+    refs: [
+      { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "6.3", title: "Before You Wrap the Golden Up" },
+    ],
+    impact: "hard",
+    links: [
+      { to: "/#golden", tag: "M9", label: "The golden and the rubric agree" },
+      { to: "/reference#s6", tag: "F1", label: "The golden passes the complete set" },
+    ],
+  },
+  {
+    id: "flag-link-code",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "No link code in the prompt or the criteria",
+    body: "Some editors turn file names and website names into markdown links as you paste. The prompt or the criterion then carries link code instead of the plain name, so the agent reads a garbled request and a criterion no longer matches the real file name. Website names were flagged in an earlier report, and file names came back.",
+    example: [
+      "Written: please tidy up drafts.md",
+      "Delivered: please tidy up [drafts.md](http://drafts.md)",
+      "In a criterion, trip_notes.md came out as trip\\_[notes.md](http://notes.md). File names ending in .md are especially prone to it, because many editors read them as web addresses.",
+    ],
+    does: "Before you submit, search the prompt and every criterion for ](http and for \\_, and replace each match with the plain text. Check the prompt as the platform shows it, not only your own draft, because the conversion often happens when you paste it in.",
+    refs: [
+      { section: "1.2.3", title: "Create the Prompt" },
+      { section: "5.1", title: "Rubric Fundamentals" },
+      { section: "5.7", title: "Final Rubric Checklist" },
+    ],
+    impact: "hard",
+    links: [
+      { to: "/#rubrics", tag: "M8", label: "Search for link code before you submit" },
+      { to: "/reference#literal-matching", tag: "WN", label: "Every literal has to match its source exactly" },
+    ],
+  },
+  {
+    id: "flag-dates",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "Anchor the prompt and the rubric to a stated date",
+    body: "Two problems, both new. A rubric assumed a today the prompt never stated: tonight, tomorrow or in time have one right answer only if the agent knows what day it is, and otherwise it goes by the day the task actually runs. And criteria graded records that expire, so once the date passed a correct run could no longer use them.",
+    example: [
+      "The prompt asks which gifts will arrive in time for book club tonight. A criterion checks delivery against Saturday, Oct 24, and nothing in the prompt says today is Saturday, Oct 24.",
+      "Two criteria grade flight offers whose data says they expire on Oct 21. Every run after that date is graded on offers that have already expired.",
+    ],
+    does: "State today's date in the prompt, in the user's voice, matching the date the universe calendar and records assume: “it's saturday the 24th and book club is tonight at 7”. Write criteria with fixed dates, “arrives by Saturday, Oct 24”, never relative ones. If a criterion depends on anything that can expire, such as an offer, a quote, a hold or availability, open the data and check the expiry date. If it lapses before or soon after delivery, pick a record that stays valid or rework the criterion.",
+    refs: [
+      { section: "1.2.1", title: "Start With the Universe" },
+      { section: "1.2.3", title: "Create the Prompt" },
+      { section: "5.1", title: "Rubric Fundamentals" },
+    ],
+    impact: "hard",
+    links: [
+      { to: "/#prompt", tag: "M5", label: "State today's date in the prompt" },
+      { to: "/#universe", tag: "M2", label: "Anchor to dates you have actually seen" },
+    ],
+  },
+  {
+    id: "flag-thresholds",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "A correct answer must never fail a criterion",
+    body: "A task set its rule one way and the rubric counted it another, with a value sitting exactly on the line. More than one answer was then correct, and the criterion accepted only one. New in the last delivery.",
+    example: [
+      "The user's message sets the rule “only if it stays below 40 degrees out there”, and a criterion expects 23 of 30 daily highs above 40.",
+      "One day's high is exactly 40. It is not below 40, so by the user's own rule it belongs with the days above, but the criterion's above 40 leaves it out.",
+      "A run that follows the user's rule answers 24, which is just as right, and fails.",
+    ],
+    does: "Use the same boundary in the prompt, the inputs and the rubric: a rule of below 40 is counted as 40 or above, not above 40. Look in the data for values sitting exactly on a threshold, and either settle how they count or accept both answers. Then test the criterion both ways: two valid answers pass and a wrong one fails.",
+    refs: [
+      { section: "5.1", title: "Rubric Fundamentals" },
+      { section: "5.1.2", title: "Stacked Rubrics (OR Logic)" },
+      { section: "5.7", title: "Final Rubric Checklist" },
+    ],
+    impact: "hard",
+    links: [
+      { to: "/#rubrics", tag: "M8", label: "Use the user's own boundary" },
+      { to: "/spec#rubric-quality", tag: "QC", label: "Overfitting and Underfitting" },
+    ],
+  },
+  {
+    id: "flag-make-and-change",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "Fewer audits and text bundles, more making and changing",
+    body: "The client compared 500 hard real user sessions with 389 recently delivered single turn tasks. 43% of ours ask the agent to check or audit something, against 8% of real ones, while real users mostly create or revise things, 46% against our 28%. 65% of ours hand back several text files at once, against 16% of real ones. Real users want code, spreadsheets, images, video or audio, 3D models, or simply an answer in the chat.",
+    example: [
+      "Typical now: review these seven files, find the inconsistencies, and write audit_report.md, discrepancies.csv and summary.md.",
+      "Typical of real users: make my script handle the new export format, or update my budget so the monthly numbers are right.",
+    ],
+    does: "Within the output artifact you were assigned, frame the request as the user making or changing something rather than auditing it, and ask for one main output rather than a bundle of text files. Say in the criteria how the output is checked: the code runs and does what was asked, the video plays with the right content and timing, the 3D mesh is valid and printable. Leave out tasks that need live back and forth with the user, or their taste on drafts along the way, because those do not fit a single turn.",
+    refs: [
+      { section: "Complexity Bar", title: "Genuine complexity is not negotiable" },
+      { section: "1.1", title: "Task Parameters & Execution Rules" },
+      { section: "1.2", title: "Building the Idea" },
+    ],
+    impact: "shape",
+    links: [{ to: "/#scenario", tag: "M3", label: "Settle the deliverable first" }],
+  },
+  {
+    id: "flag-short-request",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "Write the request the way a real user would",
+    body: "A real first message runs a median of 22 words, and ours run 201. Only 7% of real requests name the output file, and 99.7% of ours do. The client wants a short opening request in the user's own voice, graded on the content of what comes back.",
+    example: [
+      "Specification style: using the attached paystub and budget workbook, recalculate monthly take-home pay on the Monthly tab to reflect the new 401(k) contribution rate, and summarize the changes in changes.md.",
+      "Real user style, with the output file still named: i'm bumping my 401k to 6% starting next paycheck. can you update budget_2026.xlsx so the monthly numbers are right?",
+    ],
+    does: "Keep the request short and in the user's own voice, and let the files and notes carry the background. The client would also leave the output file unnamed and grade it under any sensible name, but the guidelines still require every expected output file to be named in the prompt, and gate check C1 tests it, so keep naming them until that rule changes.",
+    refs: [{ section: "1.2.3", title: "Create the Prompt" }],
+    impact: "shape",
+    links: [
+      { to: "/#prompt", tag: "M5", label: "One prompt, in the user's own voice" },
+      { to: "/reference#s3", tag: "C1", label: "Every expected output file named" },
+    ],
+  },
+  {
+    id: "flag-earlier-work",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "Build on the user's earlier work",
+    body: "Most real tasks pick up work the user already did with the agent. Keeping earlier decisions intact is part of what makes 62% of real tasks hard, and 1% of ours.",
+    example: [
+      "In earlier sessions the user and the agent built a budget spreadsheet and agreed that the employer's 401k match is not income.",
+      "The new request raises the contribution. A good task checks that the agent updates the numbers and still keeps the match out of income.",
+    ],
+    does: "Ship the earlier files with a short, informal, dated notes.md: decisions agreed, the user's rules and preferences, corrections already made, what was delivered and what is still open. Include one decision that was later reversed and a few entries that do not matter for this request, and do not repeat the notes in the prompt. Make one criterion check that an earlier decision still holds, and another that the parts of the earlier files that should not change are unchanged.",
+    refs: [
+      { section: "1.2.2", title: "Select the Multimodal Inputs" },
+      { section: "1.2.3", title: "Create the Prompt" },
+    ],
+    impact: "shape",
+    detail: {
+      label: "Shapes that fit one turn",
+      items: [
+        "A correction: the summary tab in my expenses sheet is counting the transfers between my accounts as spending. can you fix that?",
+        "An extension: the Q2 report you made is good. do the same for Q3 with the new export, and add a chart comparing the two.",
+        "Pasted material: about a fifth of what real users type is pasted, such as a log, a document or another assistant's draft, and it can go straight into the prompt.",
+      ],
+    },
+    links: [{ to: "/#scenario", tag: "M3", label: "Build on the user's earlier work" }],
+  },
+  {
+    id: "flag-expert-rules",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "Difficulty from expertise, not from traps",
+    body: "Our tasks take their difficulty from planted traps, a deliberately misleading file or instruction, from image reading audits that check photos or scans for planted errors, and from piles of files: a median of 7, with images in 90% of tasks. Real tasks are hard because they rest on rules a professional knows and nobody writes down, and because several outputs have to agree.",
+    example: [
+      "Same budget: the paystub shows $3,000 gross every other Friday, and the notes put the user's tax on extra income at about 30%.",
+      "The unstated rule: a 401k contribution is pre-tax for income tax but not for Social Security and Medicare. The 6% is $180 a paycheck, so take-home falls by $180 minus the $54 of income tax saved, which is $126. Over 26 paychecks a year, the monthly drop is $273.",
+      "A run that ignores the tax saving gets $390, and one that assumes 24 paychecks gets $252. No trap needed.",
+    ],
+    does: "Build the task on a rule a professional in the field would know that neither the request nor the files state. It has to appear in a standard professional reference, be cited in your task notes, and not depend on a jurisdiction the task leaves unstated. Outputs that must agree with each other are the other good source of difficulty. Keep the workspace to a few purposeful files that are the user's own work, not a pile to search through.",
+    refs: [
+      { section: "Complexity Bar", title: "Genuine complexity is not negotiable" },
+      { section: "1.2", title: "Building the Idea" },
+      { section: "1.2.2", title: "Select the Multimodal Inputs" },
+    ],
+    impact: "shape",
+    detail: {
+      label: "Rules of that kind",
+      items: [
+        "Billing: an insurer payment plus a contractual adjustment that together equal the charge leave a zero balance.",
+        "Fire safety: a sprinkler system passes on measured supply pressure at the required flow, not on a regulator setting.",
+        "Electronics: a CMOS pull-up network is the exact logical complement of the pull-down network.",
+      ],
+    },
+    links: [{ to: "/#scenario", tag: "M3", label: "Friction the situation would really produce" }],
+  },
+  {
+    id: "flag-critical-items",
+    date: "Oct 27, 2026",
+    version: clientFlagVersion,
+    title: "The criteria that decide the task state an exact value",
+    body: "Real users judge a result pass or fail on the main thing. The client wants the few criteria that decide a task to say exactly what that is, and never to rest on formatting or on a file existing.",
+    example: [
+      "Weak: the budget is updated correctly. Or: budget_2026.xlsx exists.",
+      "Strong: monthly take-home on the Monthly tab falls by $273, not $390, which ignores the tax saving, and not $252, which assumes 24 paychecks.",
+    ],
+    does: "Write the exact expected value into every criterion that decides the task, and name the tempting wrong values where it helps. Never let formatting or a file's existence decide it, and never rest a deciding criterion on a tool that misbehaves, because a broken tool fails it through no fault of the agent. The client's brief marks at most three items as critical. The guidelines do not define that mark yet, so weights still answer how hard a criterion was to satisfy.",
+    refs: [
+      { section: "5.1", title: "Rubric Fundamentals" },
+      { section: "5.2", title: "Rubric Weights" },
+      { section: "5.7", title: "Final Rubric Checklist" },
+    ],
+    impact: "shape",
+    links: [
+      { to: "/#rubrics", tag: "M8", label: "Embed the exact value" },
+      { to: "/reference#no-existence-checks", tag: "WN", label: "A criterion that only checks existence is never valid" },
+    ],
+  },
   {
     id: "binding-parameters",
     date: "Oct 8, 2026",

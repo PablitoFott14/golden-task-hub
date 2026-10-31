@@ -86,7 +86,8 @@ export const methodSteps: MethodStep[] = [
     moves: [
       "Settle the deliverable first. It clears the complexity bar for its type or the scenario is not finished.",
       "Keep the thresholds and rules in the inputs, so finding them is part of the work.",
-      "Build friction that the situation would really produce, never constraints bolted on to look hard.",
+      "Build friction that the situation would really produce, never constraints bolted on to look hard. A rule a professional knows but nobody wrote down beats a planted trap.",
+      "Prefer a request that makes or changes something, ideally building on the user's earlier work, over an audit of a pile of files.",
       "Resolve the GTFA down to the values: the totals, the dates, the classifications, the edge cases.",
     ],
     produces: "A scenario the pair explains, and the one answer it has to reach.",
@@ -100,6 +101,9 @@ export const methodSteps: MethodStep[] = [
     },
     links: [
       { to: "/failure-approach", tag: "FA", label: "Real Opus failures to build the scenario around" },
+      { to: "/reference#flag-make-and-change", tag: "WN", label: "Fewer audits, more making and changing" },
+      { to: "/reference#flag-earlier-work", tag: "WN", label: "Build on the user's earlier work" },
+      { to: "/reference#flag-expert-rules", tag: "WN", label: "Difficulty from expertise, not from traps" },
     ],
   },
   {
@@ -117,6 +121,7 @@ export const methodSteps: MethodStep[] = [
       "Give every file a purpose. Required signal or a deliberate distractor, never decoration.",
       "Cover every assigned input modality, each carrying part of the answer, so no single source carries the whole of it. An image earns its slot by what has to be seen in it, not by the text it happens to contain.",
       "Keep health inputs mocked or synthetic, and keep the answer out of every filename.",
+      "Ship every file a criterion grades as an input. A file saved only with the golden is one no run can open.",
     ],
     produces: "An input set where each file earns its place.",
     rule: {
@@ -127,6 +132,9 @@ export const methodSteps: MethodStep[] = [
       body: "Nine files, in the state someone who keeps receipts badly would really have them. One photograph carries two unrelated receipts, two arrive rotated and folded across the line that decides the dispute, and the ninth file is the layout of the page rather than evidence.",
       link: { to: `${GT}#inputs`, tag: "GT", label: "Nine files, and the fact each one carries" },
     },
+    links: [
+      { to: "/reference#flag-graded-files", tag: "WN", label: "Every graded file ships as an input" },
+    ],
   },
   {
     n: 5,
@@ -140,7 +148,8 @@ export const methodSteps: MethodStep[] = [
       "The task is single turn. One prompt is sent automatically when you submit, and the agent answers it once. Anything you expect the agent to produce has to be requested here, in the user's own voice, or it cannot be graded at all.",
     moves: [
       "Name every expected output file, spelled exactly as it has to appear.",
-      "Open with a realistic goal and close with a clear call to action, in language a real person would use.",
+      "Keep it short and in the user's own voice: a realistic goal and a clear call to action, in language a real person would use.",
+      "State today's date in the user's voice, matching the date the universe assumes, so that tonight or in time has one right answer.",
       "Require action inside the assigned universe, subcategory and tools, without naming the tools as calls.",
       "State the assigned execution target and any limit on the run, such as nothing sent, and keep the answers to the verification condition out of the prompt.",
       "Leave room for subjectivity. State the visual requirements you want graded objectively, and no more.",
@@ -154,6 +163,10 @@ export const methodSteps: MethodStep[] = [
       body: "The one prompt names the page to produce, says the drafts are not to be sent, fixes the window to the charges between May and July, and states the $50 monthly rule once in her own words. The rules that decide which charges hold up are left in the attachments and the universe, where the agent has to go and find them.",
       link: { to: `${GT}#prompt`, tag: "GT", label: "Every span of the prompt that is doing work" },
     },
+    links: [
+      { to: "/reference#flag-dates", tag: "WN", label: "Anchor the prompt and the rubric to a stated date" },
+      { to: "/reference#flag-short-request", tag: "WN", label: "Write the request the way a real user would" },
+    ],
   },
   {
     n: 6,
@@ -230,6 +243,8 @@ export const methodSteps: MethodStep[] = [
       "Embed the exact value, filename, date or classification, copied from the source rather than typed from memory.",
       "Keep a process criterion only where no deliverable can show the failure.",
       "Give a group of more than eight similar outcomes one completeness criterion and at most five spot checks.",
+      "Use fixed dates and the user's own boundary. A rule of below 40 counts 40 or above, and a value sitting exactly on the line is settled or accepted both ways.",
+      "Search the prompt as submitted and every criterion for ](http and \\_, the marks an editor leaves when it turns a name into a link.",
     ],
     produces: "A block that can be rated without you in the room.",
     rule: {
@@ -240,6 +255,11 @@ export const methodSteps: MethodStep[] = [
       body: "Twenty six criteria, each pinning its own transaction id, amount, date and filename. None of them targets the trajectory, which is the preferred number rather than merely inside the cap, and not one checks only that something exists.",
       link: { to: `${GT}#rubrics`, tag: "GT", label: "All 26 criteria and how Model A rated" },
     },
+    links: [
+      { to: "/reference#flag-thresholds", tag: "WN", label: "A correct answer must never fail a criterion" },
+      { to: "/reference#flag-link-code", tag: "WN", label: "No link code in the prompt or the criteria" },
+      { to: "/reference#flag-critical-items", tag: "WN", label: "The criteria that decide the task state an exact value" },
+    ],
   },
   {
     n: 9,
@@ -259,13 +279,16 @@ export const methodSteps: MethodStep[] = [
     ],
     produces: "The golden artifacts, and a run that proves the rubric set is passable.",
     rule: {
-      label: "The golden passes its own block",
-      body: "Anything the golden fails is a broken criterion, not a broken golden. Reaching it once by accident proves nothing: you have to be able to steer the model there deliberately.",
+      label: "The golden and the rubric agree",
+      body: "Rate the golden against every objective criterion. Where it fails one, decide which side is wrong: fix the criterion if it misreads the prompt, the inputs or the data, and steer again if the golden missed a valid requirement. Reaching it once by accident proves nothing: you have to be able to steer the model there deliberately.",
     },
     inTask: {
       body: "Four steers took the same prompt from two disputes to five. The one that found the hardest of them pointed at her own photographs being taken in a rush, and at what she had filled in by hand. It never mentioned the slip, the restaurant or the figure.",
       link: { to: `${GT}#golden`, tag: "GT", label: "The four steers, and what each one never says" },
     },
+    links: [
+      { to: "/reference#flag-golden-agrees", tag: "WN", label: "The golden has to pass its own rubric" },
+    ],
   },
   {
     n: 10,

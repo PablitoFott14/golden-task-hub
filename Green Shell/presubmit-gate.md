@@ -334,13 +334,14 @@
 
 **Q:** Did Leg B run the same prompt word for word, every hint at intent level and in the same persona, and does the golden pass the complete objective rubric set?
 
-**Fix:** If the model could copy your hint straight into the artifact, you gave away the answer. Anything the golden fails is a broken criterion, not a broken golden.
+**Fix:** If the model could copy your hint straight into the artifact, you gave away the answer. Where the golden fails a criterion, fix whichever side is wrong: the criterion if it misreads the prompt, the inputs or the data, the golden if it missed a valid requirement.
 
-**Ref:** §5.7 · 6.1 · 6.2
+**Ref:** §5.7 · 6.1 · 6.2 · 6.3
 
 **Links:**
 - `M9` Point at the intent, never at the answer -> /#golden
 - `GT` The golden run, steer by steer -> /golden-tasks/charge-disputes#golden
+- `WN` The golden has to pass its own rubric -> /reference#flag-golden-agrees
 
 ### F2
 

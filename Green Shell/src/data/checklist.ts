@@ -323,11 +323,12 @@ export const checklist: ChecklistSection[] = [
       {
         id: "F1",
         q: "Did Leg B run the same prompt word for word, every hint at intent level and in the same persona, and does the golden pass the complete objective rubric set?",
-        f: "If the model could copy your hint straight into the artifact, you gave away the answer. Anything the golden fails is a broken criterion, not a broken golden.",
-        ref: "§5.7 · 6.1 · 6.2",
+        f: "If the model could copy your hint straight into the artifact, you gave away the answer. Where the golden fails a criterion, fix whichever side is wrong: the criterion if it misreads the prompt, the inputs or the data, the golden if it missed a valid requirement.",
+        ref: "§5.7 · 6.1 · 6.2 · 6.3",
         links: [
           { to: "/#golden", tag: "M9", label: "Point at the intent, never at the answer" },
           { to: `${GT}#golden`, tag: "GT", label: "The golden run, steer by steer" },
+          { to: "/reference#flag-golden-agrees", tag: "WN", label: "The golden has to pass its own rubric" },
         ],
       },
       {

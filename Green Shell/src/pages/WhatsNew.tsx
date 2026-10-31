@@ -3,10 +3,11 @@ import {
   BookMarked,
   CircleAlert,
   CornerDownRight,
+  Eye,
   Sparkles,
 } from "lucide-react";
 import type { GuidelineChange } from "../data/types";
-import { guidelineChanges, guidelinesVersion } from "../data/changes";
+import { clientFlagVersion, guidelineChanges, guidelinesVersion } from "../data/changes";
 import { Crosslinks, Eyebrow, Reveal } from "../components/ui";
 import Taxonomy from "../components/Taxonomy";
 import { useScrollSpy } from "../lib/useScrollSpy";
@@ -70,6 +71,23 @@ function ChangeEntry({ c }: { c: GuidelineChange }) {
 
       <p className="mt-4 text-[14.5px] leading-relaxed text-ink-600">{c.body}</p>
 
+      {/* The mistake as it showed up, between the rule and the move, so the
+          reader recognises it before being told what to do about it. */}
+      {c.example && (
+        <div className="mt-5 border-l-2 border-ink-200 pl-4">
+          <div className="mono-label mb-2 flex items-center gap-1.5 text-ink-400">
+            <Eye size={12} /> Example
+          </div>
+          <ul className="space-y-1.5">
+            {c.example.map((e, i) => (
+              <li key={i} className="text-[13px] leading-relaxed text-ink-600">
+                {e}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div className="mt-5 rounded-xl border border-ink-200/70 bg-raised p-4">
         <div className="mono-label mb-1.5 flex items-center gap-1.5 text-brand-600 dark:text-brand-300">
           <ArrowRight size={12} /> What you do now
@@ -130,6 +148,28 @@ export default function WhatsNew({ embedded = false }: { embedded?: boolean }) {
 
   const hard = guidelineChanges.filter((c) => c.impact === "hard").length;
 
+  /* The newest client flags lead the list and get a line of their own above
+     it, so a contributor arriving here starts with what the client found in
+     delivered tasks. Read off the data: no flags on top, no line. */
+  const newest = guidelineChanges[0];
+  const latestFlags =
+    newest?.version === clientFlagVersion
+      ? guidelineChanges.filter((c) => c.version === clientFlagVersion && c.date === newest.date)
+          .length
+      : 0;
+
+  /* The rail is grouped by date, each group headed once, and a group made only
+     of client flags says so. Twenty odd titles in one run gave no way to tell
+     the newest from the rest. */
+  const railHead = (i: number) => {
+    const c = guidelineChanges[i];
+    if (i > 0 && guidelineChanges[i - 1].date === c.date) return null;
+    const group = guidelineChanges.filter((g) => g.date === c.date);
+    return group.every((g) => g.version === clientFlagVersion)
+      ? `${c.date} · Client flags`
+      : c.date;
+  };
+
   const Heading = embedded ? "h2" : "h1";
 
   return (
@@ -152,6 +192,12 @@ export default function WhatsNew({ embedded = false }: { embedded?: boolean }) {
             <span className="font-mono text-[14px] font-semibold text-ink-700">[NEW]</span> in the
             guidelines to find every tagged section.
           </p>
+          {latestFlags > 0 && (
+            <p className="mt-3 text-[15px] font-semibold leading-relaxed text-rose-700 dark:text-rose-300">
+              Start with the first {latestFlags}: the issues the client flagged on {newest.date}, each
+              with an example of the mistake and what to do about it.
+            </p>
+          )}
           <span className="chip mt-5 bg-ink-100 text-ink-600 ring-1 ring-ink-200">
             Guidelines {guidelinesVersion.version} · {guidelinesVersion.updated}
           </span>
@@ -168,6 +214,11 @@ export default function WhatsNew({ embedded = false }: { embedded?: boolean }) {
           <ol className="space-y-1.5">
             {guidelineChanges.map((c, i) => (
               <li key={c.id}>
+                {railHead(i) && (
+                  <div className={cx("mono-label px-2 pb-1 text-ink-400", i > 0 && "pt-3")}>
+                    {railHead(i)}
+                  </div>
+                )}
                 <a
                   href={`#${c.id}`}
                   data-rail={c.id}

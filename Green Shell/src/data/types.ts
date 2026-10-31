@@ -709,6 +709,12 @@ export interface GuidelineChange {
   before?: string;
   /** What it now says. Two or three sentences. */
   body: string;
+  /**
+   * The mistake as it showed up, a line per beat, so a reader can recognise it
+   * in their own task. Client flags carry one, because a flag is a pattern seen
+   * in delivered tasks; written as a generic case, never naming a task.
+   */
+  example?: string[];
   /** What a contributor has to do differently because of it. */
   does: string;
   /**

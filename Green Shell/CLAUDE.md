@@ -790,7 +790,7 @@ does, which is why `does` is required: if you cannot write the move it forces, t
 belong. `impact` is `hard` for a rule a task fails without and `shape` for everything else, and it
 always ships beside a text label rather than as colour alone.
 
-Three fields carry the rest:
+Four fields carry the rest:
 
 - **`before`** is the Red Shell rule being replaced. The page is a comparison, and most readers
   arrive holding the old rule, so an entry that replaces something names it before stating the
@@ -802,6 +802,19 @@ Three fields carry the rest:
   needs, the floor each deliverable has to clear. **Optional on purpose.** It is there where the
   rule is easy to misread and absent where the rule explains itself, so do not add one for the sake
   of symmetry.
+- **`example`** is the mistake as it showed up, one line per beat, rendered between the body and
+  What you do now so the reader recognises the case before being told the move. **Every client flag
+  carries one**, written as a generic case that never names a task, a task id or a persona.
+
+**The rail is grouped by date**, each date headed once, and a group made only of client flags says
+so in its heading. When the newest entries are client flags, a rose line under the lead tells the
+reader to start with them, counting them off the data. The ten flags of Oct 27, 2026 lead the list:
+five from the client's review of the last delivery (`hard`) and five from its single turn design
+recommendations (`shape`). Two recommendations run against the guidelines as they stand, unnamed
+output files and a critical mark the guidelines do not define, and those entries tell the reader to
+keep following the guidelines until they change. Each flag is also worked into its method step, and
+gate check F1 now reads as guidelines 6.3 does: where the golden fails a criterion, fix whichever
+side is wrong.
 
 `embed: "taxonomy"` renders [Taxonomy.tsx](src/components/Taxonomy.tsx) inside an entry. Only the
 use case entry uses it, because the 68 subcategories are that change's supporting context rather
