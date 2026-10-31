@@ -328,7 +328,7 @@ export const checklist: ChecklistSection[] = [
         links: [
           { to: "/#golden", tag: "M9", label: "Point at the intent, never at the answer" },
           { to: `${GT}#golden`, tag: "GT", label: "The golden run, steer by steer" },
-          { to: "/reference#flag-golden-agrees", tag: "WN", label: "The golden has to pass its own rubric" },
+          { to: "/alignments#flag-golden-agrees", tag: "UA", label: "The golden has to pass its own rubric" },
         ],
       },
       {

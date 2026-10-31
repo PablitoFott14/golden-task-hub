@@ -5,14 +5,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 A static React site, the practical reference for contributors (CBs) on the Green Shell / OpenClaw MM
-Rubrics single turn project. **Eight tabs**, and the detail of why is in
-[Eight tabs, and where everything lives](#eight-tabs-and-where-everything-lives). One of them,
+Rubrics single turn project. **Nine tabs**, and the detail of why is in
+[Nine tabs, and where everything lives](#nine-tabs-and-where-everything-lives). One of them,
 Complexity, is [parked](#the-complexity-tab-is-parked): off the site for now, kept in the source,
-so seven show.
+so eight show.
 
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
 | The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the Universe Viewers, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
+| Urgent Alignments | `/alignments` | [UrgentAlignments.tsx](src/pages/UrgentAlignments.tsx) | The issues the client flagged in delivered tasks, each as the mistake beside the fix with the check to run before submitting, led into by a band at the top of `/`. See [The Urgent Alignments tab](#the-urgent-alignments-tab). |
 | Universes | `/universes` | [Universes.tsx](src/pages/Universes.tsx) | The three persona universes, run inside the hub: a grid of persona cards, then one persona's own viewer at a time under a bar of persona tabs (`/universes/:slug`), the viewer alone at `/universes/:slug/full`, and Explore, the same universe as a research tool, at `/universes/:slug/explore`. See [The Universes tab](#the-universes-tab). |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
@@ -77,7 +78,7 @@ cat > src/ssr-smoke.tsx <<'EOF'
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import App from "./App";
-const routes = ["/", "/universes", "/universes/kofi-mensah", "/golden-tasks", "/golden-tasks/charge-disputes", "/failure-approach", "/complexity", "/spec", "/reference", "/performance", "/nope"];
+const routes = ["/", "/alignments", "/universes", "/universes/kofi-mensah", "/golden-tasks", "/golden-tasks/charge-disputes", "/failure-approach", "/complexity", "/spec", "/reference", "/performance", "/nope"];
 let fail = 0;
 for (const r of routes) {
   try { console.log(`OK   ${r} ${renderToString(<StaticRouter location={r}><App /></StaticRouter>).length}`); }
@@ -114,15 +115,16 @@ checklist persistence and every cross-link were verified that way.
 
 ## Architecture
 
-### Eight tabs, and where everything lives
+### Nine tabs, and where everything lives
 
 The hub was eight tabs and it had stopped being navigable. It went to six, one per thing someone is
-actually doing, and one of those is parked; Universes made it seven and My Performance eight, so
-seven show.
+actually doing, and one of those is parked; Universes made it seven, My Performance eight and
+Urgent Alignments nine, so eight show.
 
 | Tab | Route | Panes inside it | Was |
 | --- | --- | --- | --- |
 | The Method | `/` | one scrolling page: hero with the Universe Viewers card, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
+| Urgent Alignments | `/alignments` | one scrolling page: the issues at a glance, then each issue as the mistake beside the fix, then the checks before submitting | new; the flags were the newest Must Read entries |
 | Universes | `/universes`, `/universes/:slug`, `/universes/:slug/full`, `/universes/:slug/explore` | the persona grid, then one persona's viewer or Explore at a time under the persona bar | new, in place of the external Universe Viewers site |
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
 | Failure Approach | `/failure-approach` | **three levels**, all off the hash: the overview (seven type cards and the diagnosis tile, the task filter), a type (`#looking` … `#finishing`), a pattern (`#<pattern-id>`), and `#keeps-passing` | new, in the slot Complexity held; rebuilt from a thirteen pane rail |
@@ -180,7 +182,9 @@ three complete applications a contributor works in from the method's second step
 Reference pane, not a method step and not the standard. My Performance made it too and is the
 eighth: the one page about the contributor rather than the task, so no tab that reads the same for
 everyone can hold it, and not the standard, though every finding in it names the Guidelines section
-it rests on. A ninth tab makes the same case or goes in a pane.
+it rests on. Urgent Alignments made it too and is the ninth: the issues the client flagged in
+delivered tasks are checked against every task rather than looked up, cut across several method
+steps, and are not the standard. A tenth tab makes the same case or goes in a pane.
 
 ### They are onboardings, not courses
 
@@ -600,6 +604,42 @@ diagnosis, under the kind `Failure approach`.
 **It follows the guidelines where the studies do not**: the 30% failure floor with 50% preferred,
 an assigned universe you explore rather than build, grading where it lands, no breaking tools or
 files on purpose, deviation from a parameter only as the guidelines allow.
+
+### The Urgent Alignments tab
+
+[UrgentAlignments.tsx](src/pages/UrgentAlignments.tsx) is the issues the client flagged in delivered
+tasks, and [AlignmentsBand.tsx](src/components/AlignmentsBand.tsx) is the band that leads into it
+from the top of the landing page. The flags used to show only as the newest Must Read entries, five
+of eighteen in the fourth pane of Reference, and that was too hidden for what decides whether a
+delivery is accepted.
+
+**The words live in `changes.ts`, and the tab reads them by id.** [alignments.ts](src/data/alignments.ts)
+lists which client flags are urgent and adds presentation only: a `short` label, a `status` (came
+back from an earlier report, or new, both stated in the entry's body) and the one line `check` to
+verify before submitting, worded as the contributor post on the same flags words it. `step`, where
+the issue bites, is read off the entry's first method step link. Must Read still renders the same
+entries, and its rose lead line links here. A missing id, or an entry with no method step link,
+throws, so the render check catches it.
+
+**The layout follows the issue.** The band says why these come first; the cards are the set at a
+glance and the way into each one; each issue opens with the problem, then puts What it looks like
+(the `example`) beside How to fix it (`does` and the `check`); the page ends on the checks, one per
+issue, and a link to the Pre-Submit Gate. Search strings and link code (`](http`, a backslash before
+an underscore, `[x](http://x)`) are set in mono by `Marked`. Rose throughout; status is a chip with
+its label, rose for came back and sky for new.
+
+**It is the one rose tab**, second in the nav with the alert icon, and its band sits above the
+update notice on `/`. The desktop row shows it by its `short` name, Urgent, with the full name as
+its tooltip and accessible name, and the search button drops its word from `lg` up: with the full
+label the row needs about 960px against the 880 it has beside the wordmark and the search, and a row
+that wraps breaks every tab in it. On a phone the band is its headline alone, itself the link,
+because every row there pushes the Universe Viewers card further down the first screen. Method steps 4, 5, 8 and 9,
+gate check F1 and the update notice link into the tab (tag `UA`), and the search palette sends the
+entries here.
+
+**Adding a flag**: write it into `changes.ts` as a Must Read entry with an `example` and a method
+step link, add its row to `alignments.ts`, and work it into its method step. **Retiring one**:
+delete its row; the Must Read entry stays as the record.
 
 ### The My Performance tab
 

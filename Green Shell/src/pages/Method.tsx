@@ -37,6 +37,7 @@ import { specGroups } from "../data/specDoc";
 import { subcategoryCount } from "../data/taxonomy";
 import { tasks } from "../data";
 import { Callout, Crosslinks, Reveal, SectionHeading } from "../components/ui";
+import AlignmentsBand from "../components/AlignmentsBand";
 import HubLog from "../components/HubLog";
 import QuickAnswers from "../components/QuickAnswers";
 import VideoStrip from "../components/VideoStrip";
@@ -215,6 +216,11 @@ export default function Method() {
 
   return (
     <div>
+      {/* Urgent Alignments first: the issues the client flagged in delivered
+          tasks, each a link into its own tab. Above the notice bar, because
+          these decide whether the next delivery is accepted. */}
+      <AlignmentsBand />
+
       {/* The project update notice, directly under the nav. Above the hero
           rather than below it because the hero is around 800px tall, and a
           guidelines change nobody scrolls to is a guidelines change nobody

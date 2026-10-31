@@ -62,9 +62,9 @@ export const hubUpdates: HubUpdate[] = [
     date: "Oct 31, 2026",
     kind: "guidelines",
     what: "The client flagged five issues to fix in your tasks",
-    where: "Reference → Must Read: Project Updates",
+    where: "Urgent Alignments",
     why: "Found in the last delivery, and they apply to every task, new or being fixed: graded files missing from the inputs, a golden that fails its own rubric, link code in prompts and criteria, no stated date, and thresholds a correct answer can fail. Each one shows the mistake and what to do about it.",
-    to: "/reference#flag-graded-files",
+    to: "/alignments",
   },
   {
     id: "spec-v6",

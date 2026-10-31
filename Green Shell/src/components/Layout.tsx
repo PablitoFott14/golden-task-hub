@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Moon, Search, Star, Sun, X } from "lucide-react";
+import { Menu, Moon, Search, ShieldAlert, Star, Sun, X } from "lucide-react";
 import { cx } from "../lib/util";
 import { useTheme } from "../lib/useTheme";
 import CommandPalette from "./CommandPalette";
 
 /**
- * Eight tabs, one of them parked, and the number is the point.
+ * Nine tabs, one of them parked, and the number is the point.
  *
  * It was eight. Four of those were things a contributor looks something up in
  * rather than works from — onboarding, what moved from Red Shell, the FAQ, and
@@ -46,6 +46,19 @@ import CommandPalette from "./CommandPalette";
  * second, right after the method, because exploring the universe is the
  * method's second step.
  *
+ * **Urgent Alignments is second, and this is the argument for it.** It holds
+ * the issues the client flagged in delivered tasks, each with the mistake as it
+ * showed up and its fix, and every task has to clear them before it is
+ * submitted. They were the newest entries of Must Read, five of eighteen in the
+ * fourth pane of Reference, and that was too hidden for what decides whether a
+ * delivery is accepted. It is not Reference: it is checked against, not looked
+ * up in. It is not a method step, because each issue cuts across several of
+ * them, and each one links to the step where it bites. It is not the standard,
+ * though every issue names the Guidelines sections it rests on. It sits right
+ * after the method and is the one tab in rose, the hub's must-read signal, with
+ * a band at the top of the landing page leading into it. Its words stay in
+ * `changes.ts`, so Must Read still carries them too.
+ *
  * **My Performance is the last, and this is the argument for it.** It is the
  * one page about the contributor rather than the task: their own standing, the
  * issues their audits found, what to do in the next task, and the feedback of
@@ -57,14 +70,15 @@ import CommandPalette from "./CommandPalette";
  * the work is audited, and its star marks it as the one tab that is personal.
  *
  * **Complexity is parked.** The proposals tool is off the site for now, so its
- * entry is out of this list and seven tabs show. The page and everything behind
+ * entry is out of this list and eight tabs show. The page and everything behind
  * it are still in the source, and CLAUDE.md has the way back.
  *
- * **Anything new goes inside one of these.** A ninth tab needs an argument
+ * **Anything new goes inside one of these.** A tenth tab needs an argument
  * for why it is not a pane of an existing one.
  */
 const links = [
   { to: "/", label: "The Method", end: true },
+  { to: "/alignments", label: "Urgent Alignments", short: "Urgent", urgent: true },
   { to: "/universes", label: "Universes" },
   { to: "/golden-tasks", label: "Golden Tasks" },
   { to: "/failure-approach", label: "Failure Approach" },
@@ -73,8 +87,22 @@ const links = [
   { to: "/performance", label: "My Performance", star: true },
 ];
 
-/** A tab's label, with the gold star of the hub's mark on the one tab that is personal. */
-function TabLabel({ l }: { l: (typeof links)[number] }) {
+/** A tab's label, with the gold star of the hub's mark on the one tab that is
+ *  personal, and the alert icon on the one that is urgent.
+ *
+ *  The desktop row shows the urgent tab by its `short` name (`compact`): eight
+ *  full labels do not fit on one line beside the wordmark and the search, and a
+ *  row that wraps breaks every tab in it. The full name is its tooltip and its
+ *  accessible name there, and it is spelled out in the mobile menu, the footer,
+ *  the landing band and on the page itself. */
+function TabLabel({ l, compact }: { l: (typeof links)[number]; compact?: boolean }) {
+  if (l.urgent)
+    return (
+      <span className="inline-flex items-center gap-1.5 align-top">
+        <ShieldAlert size={13} className="shrink-0" aria-hidden />
+        {compact && l.short ? l.short : l.label}
+      </span>
+    );
   if (!l.star) return <>{l.label}</>;
   return (
     <span className="inline-flex items-center gap-1.5 align-top">
@@ -207,12 +235,18 @@ export default function Layout({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const navClass = (active: boolean) =>
+  /* Urgent Alignments is the one rose tab: tinted at rest so it stands out of
+     the row, filled when open. Every other tab keeps the brand pill. */
+  const navClass = (active: boolean, urgent?: boolean) =>
     cx(
       "relative rounded-lg px-3 py-2 text-[13.5px] font-semibold transition duration-200",
-      active
-        ? "bg-brand-600 text-white shadow-glow"
-        : "text-ink-600 hover:bg-ink-100 hover:text-ink-900"
+      urgent
+        ? active
+          ? "bg-rose-600 text-white shadow-soft"
+          : "bg-rose-500/10 text-rose-700 ring-1 ring-rose-500/30 hover:bg-rose-500/20 dark:text-rose-300"
+        : active
+          ? "bg-brand-600 text-white shadow-glow"
+          : "text-ink-600 hover:bg-ink-100 hover:text-ink-900"
     );
 
   return (
@@ -235,11 +269,16 @@ export default function Layout({ children }: { children: ReactNode }) {
                 key={l.to}
                 to={l.to}
                 end={l.end}
+                title={l.urgent ? l.label : undefined}
+                aria-label={l.urgent ? l.label : undefined}
                 className={({ isActive }) =>
-                  navClass(isActive || (l.to === "/golden-tasks" && pathname.startsWith("/golden-tasks")))
+                  navClass(
+                    isActive || (l.to === "/golden-tasks" && pathname.startsWith("/golden-tasks")),
+                    l.urgent
+                  )
                 }
               >
-                <TabLabel l={l} />
+                <TabLabel l={l} compact />
               </NavLink>
             ))}
           </nav>
@@ -251,7 +290,10 @@ export default function Layout({ children }: { children: ReactNode }) {
               aria-label="Search the hub"
             >
               <Search size={14} />
-              <span className="text-[13px] text-ink-400 group-hover:text-ink-600">Search</span>
+              {/* The word goes where the tab row shows, which is what leaves the
+                  row room for the urgent tab; the icon, the shortcut and the
+                  button's label still say what it is. */}
+              <span className="text-[13px] text-ink-400 group-hover:text-ink-600 lg:hidden">Search</span>
               <kbd className="rounded border border-ink-200 bg-ink-100 px-1.5 py-0.5 font-mono text-[10px] text-ink-500">
                 ⌘K
               </kbd>
@@ -285,7 +327,8 @@ export default function Layout({ children }: { children: ReactNode }) {
                     className={({ isActive }) =>
                       cx(
                         navClass(
-                          isActive || (l.to === "/golden-tasks" && pathname.startsWith("/golden-tasks"))
+                          isActive || (l.to === "/golden-tasks" && pathname.startsWith("/golden-tasks")),
+                          l.urgent
                         ),
                         "block"
                       )

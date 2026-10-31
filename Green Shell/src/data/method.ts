@@ -129,7 +129,7 @@ export const methodSteps: MethodStep[] = [
       link: { to: `${GT}#inputs`, tag: "GT", label: "Nine files, and the fact each one carries" },
     },
     links: [
-      { to: "/reference#flag-graded-files", tag: "WN", label: "Every graded file ships as an input" },
+      { to: "/alignments#flag-graded-files", tag: "UA", label: "Every graded file ships as an input" },
     ],
   },
   {
@@ -160,7 +160,7 @@ export const methodSteps: MethodStep[] = [
       link: { to: `${GT}#prompt`, tag: "GT", label: "Every span of the prompt that is doing work" },
     },
     links: [
-      { to: "/reference#flag-dates", tag: "WN", label: "Anchor the prompt and the rubric to a stated date" },
+      { to: "/alignments#flag-dates", tag: "UA", label: "Anchor the prompt and the rubric to a stated date" },
     ],
   },
   {
@@ -251,8 +251,8 @@ export const methodSteps: MethodStep[] = [
       link: { to: `${GT}#rubrics`, tag: "GT", label: "All 26 criteria and how Model A rated" },
     },
     links: [
-      { to: "/reference#flag-thresholds", tag: "WN", label: "A correct answer must never fail a criterion" },
-      { to: "/reference#flag-link-code", tag: "WN", label: "No link code in the prompt or the criteria" },
+      { to: "/alignments#flag-thresholds", tag: "UA", label: "A correct answer must never fail a criterion" },
+      { to: "/alignments#flag-link-code", tag: "UA", label: "No link code in the prompt or the criteria" },
     ],
   },
   {
@@ -281,7 +281,7 @@ export const methodSteps: MethodStep[] = [
       link: { to: `${GT}#golden`, tag: "GT", label: "The four steers, and what each one never says" },
     },
     links: [
-      { to: "/reference#flag-golden-agrees", tag: "WN", label: "The golden has to pass its own rubric" },
+      { to: "/alignments#flag-golden-agrees", tag: "UA", label: "The golden has to pass its own rubric" },
     ],
   },
   {

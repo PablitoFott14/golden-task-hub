@@ -5,6 +5,7 @@ import { checklist } from "./checklist";
 import { authoringStandards, rubricQualityIssues, specGroups, weightBuckets } from "./specDoc";
 import { faq } from "./faq";
 import { guidelineChanges } from "./changes";
+import { alignments } from "./alignments";
 import { taxonomy } from "./taxonomy";
 import { onboardingItems } from "./onboarding";
 import { universeVideos } from "./videos";
@@ -49,6 +50,9 @@ export function taskById(id: string): GoldenTask | undefined {
  * `terms` is folded into the match but never displayed, which is how a search
  * for a vendor name finds the evidence ledger.
  */
+/** The client flags that have a tab of their own open there, not in Must Read. */
+const alignmentIds = new Set(alignments.map((a) => a.id));
+
 export const searchIndex: SearchEntry[] = [
   ...methodSteps.map<SearchEntry>((s) => ({
     kind: "Method",
@@ -89,8 +93,8 @@ export const searchIndex: SearchEntry[] = [
   ...guidelineChanges.map<SearchEntry>((c) => ({
     kind: "Must read" as const,
     title: c.title,
-    hint: `${c.date} · ${c.version}`,
-    to: `/reference#${c.id}`,
+    hint: alignmentIds.has(c.id) ? "Urgent Alignments" : `${c.date} · ${c.version}`,
+    to: alignmentIds.has(c.id) ? `/alignments#${c.id}` : `/reference#${c.id}`,
     terms: [
       c.body,
       c.does,

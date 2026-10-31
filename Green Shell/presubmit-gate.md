@@ -341,7 +341,7 @@
 **Links:**
 - `M9` Point at the intent, never at the answer -> /#golden
 - `GT` The golden run, steer by steer -> /golden-tasks/charge-disputes#golden
-- `WN` The golden has to pass its own rubric -> /reference#flag-golden-agrees
+- `UA` The golden has to pass its own rubric -> /alignments#flag-golden-agrees
 
 ### F2
 

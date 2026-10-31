@@ -6,6 +6,7 @@ import TaskDetail from "./pages/TaskDetail";
 import FailureApproach from "./pages/FailureApproach";
 import Universes from "./pages/Universes";
 import SpecDoc from "./pages/SpecDoc";
+import UrgentAlignments from "./pages/UrgentAlignments";
 import Reference from "./pages/Reference";
 import Performance from "./pages/Performance";
 import { checklist } from "./data/checklist";
@@ -67,6 +68,8 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Method />} />
+        {/* The issues the client flagged in delivered tasks, and their fixes. */}
+        <Route path="/alignments" element={<UrgentAlignments />} />
         {/* One route for the grid, a persona and its full page, so the page
             stays mounted between them and a loaded universe survives a visit
             to the grid. */}

@@ -6,6 +6,7 @@ import {
   Eye,
   Sparkles,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import type { GuidelineChange } from "../data/types";
 import { clientFlagVersion, guidelineChanges, guidelinesVersion } from "../data/changes";
 import { Crosslinks, Eyebrow, Reveal } from "../components/ui";
@@ -195,7 +196,10 @@ export default function WhatsNew({ embedded = false }: { embedded?: boolean }) {
           {latestFlags > 0 && (
             <p className="mt-3 text-[15px] font-semibold leading-relaxed text-rose-700 dark:text-rose-300">
               Start with the first {latestFlags}: the issues the client flagged on {newest.date}, each
-              with an example of the mistake and what to do about it.
+              with an example of the mistake and what to do about it.{" "}
+              <Link to="/alignments" className="inline-flex items-center gap-1 underline underline-offset-2 hover:text-rose-800 dark:hover:text-rose-200">
+                Open them in Urgent Alignments <ArrowRight size={14} />
+              </Link>
             </p>
           )}
           <span className="chip mt-5 bg-ink-100 text-ink-600 ring-1 ring-ink-200">
