@@ -100,6 +100,7 @@ export const methodSteps: MethodStep[] = [
     },
     links: [
       { to: "/failure-approach", tag: "FA", label: "Real Opus failures to build the scenario around" },
+      { to: "/alignments#flag-genuine-complexity", tag: "UA", label: "44 tasks rejected: complexity has to come from the scenario" },
     ],
   },
   {
@@ -221,6 +222,7 @@ export const methodSteps: MethodStep[] = [
     links: [
       { to: "/failure-approach", tag: "FA", label: "How Opus actually fails, case by case" },
       { to: "/failure-approach#keeps-passing", tag: "FA", label: "Model A passed? Find out why" },
+      { to: "/alignments#flag-genuine-complexity", tag: "UA", label: "Below 30%? Make the scenario harder, never the rubric" },
     ],
   },
   {
@@ -240,6 +242,7 @@ export const methodSteps: MethodStep[] = [
       "Give a group of more than eight similar outcomes one completeness criterion and at most five spot checks.",
       "Use fixed dates and the user's own boundary. A rule of below 40 counts 40 or above, and a value sitting exactly on the line is settled or accepted both ways.",
       "Search the prompt as submitted and every criterion for ](http and \\_, the marks an editor leaves when it turns a name into a link.",
+      "Write criteria only for what the prompt, its inputs and the universe require, and keep the ones Model A passes. A criterion stretched to make the run fail is a rubric issue, not a failure.",
     ],
     produces: "A block that can be rated without you in the room.",
     rule: {
@@ -251,6 +254,7 @@ export const methodSteps: MethodStep[] = [
       link: { to: `${GT}#rubrics`, tag: "GT", label: "All 26 criteria and how Model A rated" },
     },
     links: [
+      { to: "/alignments#flag-genuine-complexity", tag: "UA", label: "Complexity has to come from the scenario, not from a stretched rubric" },
       { to: "/alignments#flag-thresholds", tag: "UA", label: "A correct answer must never fail a criterion" },
       { to: "/alignments#flag-link-code", tag: "UA", label: "No link code in the prompt or the criteria" },
     ],

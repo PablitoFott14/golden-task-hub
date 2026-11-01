@@ -10,6 +10,7 @@ import {
   ShieldAlert,
   Sparkles,
   Wrench,
+  XCircle,
 } from "lucide-react";
 import { alignments, alignmentsFlagged, statusLabel, type Alignment } from "../data/alignments";
 import { Crosslinks, Reveal } from "../components/ui";
@@ -22,11 +23,12 @@ import { cx } from "../lib/util";
  * for checking a task against rather than for reading through.
  *
  * The page is shaped by what each issue is: something that went wrong, what it
- * looked like, and the fix. So the band says why these come first, the five
- * cards are the whole set at a glance and the way into each one, and every
- * issue opens with the problem, then puts the mistake beside the fix so the two
- * read together. The page closes on the five checks, one per issue, the thing a
- * contributor actually runs before submitting.
+ * looked like, and the fix. So the band says why these come first, the cards
+ * are the whole set at a glance and the way into each one, and every issue
+ * opens with the problem, then puts the mistake beside the fix so the two read
+ * together. An issue the client rejected tasks over leads with that count and
+ * its share of the delivery. The page closes on the checks, one per issue, the
+ * thing a contributor actually runs before submitting.
  *
  * Rose throughout, the hub's must-read signal. Status is a chip with its label,
  * never colour alone: rose for an issue that came back, sky for a new one.
@@ -79,6 +81,43 @@ function StatusChip({ status }: { status: Alignment["status"] }) {
   );
 }
 
+/** A rejection the client made over the issue, as two figures: the tasks it
+ *  cost and their share of the delivery. Label above value, values in ink. */
+function RejectedFigures({ r }: { r: NonNullable<Alignment["rejected"]> }) {
+  return (
+    <dl className="mt-5 grid max-w-md grid-cols-2 overflow-hidden rounded-xl border border-rose-500/30 bg-rose-500/10">
+      <div className="p-4">
+        <dt className="flex items-center gap-1.5 text-[12.5px] font-semibold leading-snug text-rose-700 dark:text-rose-300">
+          <XCircle size={13} className="shrink-0" /> Tasks rejected by the client
+        </dt>
+        <dd className="mt-2 text-[40px] font-semibold leading-none tracking-tight text-ink-900">{r.tasks}</dd>
+      </div>
+      <div className="border-l border-rose-500/25 p-4">
+        <dt className="text-[12.5px] font-semibold leading-snug text-rose-700 dark:text-rose-300">
+          Share of the total delivery
+        </dt>
+        <dd className="mt-2 text-[40px] font-semibold leading-none tracking-tight text-ink-900">{r.share}</dd>
+      </div>
+    </dl>
+  );
+}
+
+/** The same rejection as one solid chip, for the cards and the header. */
+function RejectedChip({ r }: { r: NonNullable<Alignment["rejected"]> }) {
+  return (
+    <span className="chip bg-rose-600 font-bold text-white">
+      <XCircle size={11} /> {r.tasks} tasks rejected · {r.share}
+    </span>
+  );
+}
+
+/** The overview grid, sized so the cards fill whole rows. */
+const overviewCols: Record<number, string> = {
+  4: "lg:grid-cols-4",
+  5: "lg:grid-cols-5",
+  6: "lg:grid-cols-3",
+};
+
 function Num({ n, className }: { n: number; className?: string }) {
   return (
     <span
@@ -110,6 +149,7 @@ function IssueCard({ a, n }: { a: Alignment; n: number }) {
             Where it bites · Step {a.step.n}, {a.step.title}
           </Link>
         </div>
+        {a.rejected && <RejectedFigures r={a.rejected} />}
         <h2 className="mt-4 font-display text-[22px] font-bold leading-snug tracking-tight text-ink-900 sm:text-[26px]">
           {c.title}
         </h2>
@@ -194,12 +234,12 @@ export default function UrgentAlignments() {
             {word(alignments.length)} issues to avoid in every task
           </h1>
           <p className="mt-3 max-w-3xl text-[16px] leading-relaxed text-ink-600">
-            The client reviewed the last delivery and flagged these {word(alignments.length).toLowerCase()}. They apply to
+            The client reviewed the delivered tasks and flagged these {word(alignments.length).toLowerCase()}. They apply to
             every task, new or being fixed. {word(cameBack)} had been flagged in earlier reports and
             came back, so the client is watching them closely.
           </p>
           <p className="mt-2 max-w-3xl text-[14px] leading-relaxed text-ink-500">
-            The client only named a few example tasks for each issue. If yours was not named, that
+            For most issues the client only named a few example tasks. If yours was not named, that
             does not mean it is clean, so check your own tasks.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
@@ -212,6 +252,7 @@ export default function UrgentAlignments() {
             <span className={cx("chip", statusTone.new)}>
               <Sparkles size={11} /> {fresh} new
             </span>
+            {alignments.map((a) => a.rejected && <RejectedChip key={a.id} r={a.rejected} />)}
           </div>
         </div>
       </section>
@@ -219,16 +260,17 @@ export default function UrgentAlignments() {
       <div className="wrap py-10">
         {/* The whole set at a glance, and the way into each issue. */}
         <Reveal>
-          <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <ol className={cx("grid gap-3 sm:grid-cols-2", overviewCols[alignments.length] ?? "lg:grid-cols-3")}>
             {alignments.map((a, i) => (
               <li key={a.id}>
                 <Link
                   to={{ hash: `#${a.id}` }}
                   className="card group flex h-full flex-col p-4 transition duration-200 hover:-translate-y-0.5 hover:border-rose-300 hover:shadow-lift"
                 >
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <Num n={i + 1} className="h-7 w-7 text-[12px]" />
                     <StatusChip status={a.status} />
+                    {a.rejected && <RejectedChip r={a.rejected} />}
                   </div>
                   <div className="mt-3 font-display text-[15px] font-bold leading-snug text-ink-900">
                     {a.short}
@@ -287,7 +329,7 @@ export default function UrgentAlignments() {
               </Reveal>
             ))}
 
-            {/* The five checks, one per issue: what to run before submitting. */}
+            {/* The checks, one per issue: what to run before submitting. */}
             <Reveal>
               <section id="before-you-submit" className="card scroll-mt-24 p-6 sm:p-8">
                 <div className="mono-label flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300">

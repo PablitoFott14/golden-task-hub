@@ -16,6 +16,9 @@ import type { GuidelineChange, MethodStep } from "./types";
  *   Both are stated in the entry's own body; this makes them a chip.
  * - `check`, the one line to verify before submitting, as the contributor post
  *   on the same flags words it.
+ * - `rejected`, only where the client rejected tasks over the issue: how many,
+ *   and their share of the delivery, shown as figures on the issue, its card
+ *   and its band entry. The entry's body says the same in words.
  *
  * `step` is where the issue bites in the work: the method step the entry links
  * to first. It is read off the entry's links rather than typed again.
@@ -28,11 +31,20 @@ export interface Alignment {
   short: string;
   status: "came-back" | "new";
   check: string;
+  rejected?: { tasks: number; share: string };
   change: GuidelineChange;
   step: MethodStep;
 }
 
 const rows: Omit<Alignment, "change" | "step">[] = [
+  {
+    id: "flag-genuine-complexity",
+    short: "Genuine complexity",
+    status: "new",
+    check:
+      "Every criterion grades something the request requires, and Model A still fails 30% on the scenario itself.",
+    rejected: { tasks: 44, share: "30%" },
+  },
   {
     id: "flag-graded-files",
     short: "Graded files",
@@ -81,8 +93,31 @@ function resolve(row: (typeof rows)[number]): Alignment {
 
 export const alignments: Alignment[] = rows.map(resolve);
 
-/** The day the client flagged them, as the entries carry it. */
-export const alignmentsFlagged = alignments[0]?.change.date ?? "";
+const MONTHS = "JanFebMarAprMayJunJulAugSepOctNovDec";
+const dateKey = (d: string) => {
+  const [m, day, y] = d.replace(",", "").split(" ");
+  return Number(y) * 10000 + (MONTHS.indexOf(m) / 3 + 1) * 100 + Number(day);
+};
+const yearOf = (d: string) => d.slice(d.lastIndexOf(",") + 1).trim();
+
+/**
+ * Dates as the entries carry them ("Oct 27, 2026"), distinct, oldest first, in
+ * one phrase with a shared year said once: "Oct 27 and Nov 1, 2026".
+ */
+export function dayList(dates: string[]): string {
+  const ds = [...new Set(dates)].sort((a, b) => dateKey(a) - dateKey(b));
+  const oneYear = ds.every((d) => yearOf(d) === yearOf(ds[0]));
+  const days = oneYear ? ds.map((d, i) => (i < ds.length - 1 ? d.slice(0, d.lastIndexOf(",")) : d)) : ds;
+  return days.length < 2 ? days.join("") : `${days.slice(0, -1).join(", ")} and ${days[days.length - 1]}`;
+}
+
+/** The days the client flagged them. */
+export const alignmentsFlagged = dayList(alignments.map((a) => a.change.date));
+
+/** The newest of those days alone, for the landing band, where one date fits a phone. */
+export const alignmentsUpdated = alignments
+  .map((a) => a.change.date)
+  .reduce((n, d) => (dateKey(d) > dateKey(n) ? d : n), alignments[0]?.change.date ?? "");
 
 export const statusLabel: Record<Alignment["status"], string> = {
   "came-back": "Came back",

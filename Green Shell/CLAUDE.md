@@ -616,7 +616,12 @@ delivery is accepted.
 **The words live in `changes.ts`, and the tab reads them by id.** [alignments.ts](src/data/alignments.ts)
 lists which client flags are urgent and adds presentation only: a `short` label, a `status` (came
 back from an earlier report, or new, both stated in the entry's body) and the one line `check` to
-verify before submitting, worded as the contributor post on the same flags words it. `step`, where
+verify before submitting, worded as the contributor post on the same flags words it. An issue the
+client rejected tasks over also carries `rejected`, the count and its share of the delivery: two
+figures at the top of the issue, a solid chip on its card and in the page header, and a note on
+its band entry. The header's Flagged chip names every date in the set (`dayList`), and the landing
+band the newest alone, so it still fits a phone. Six issues sit in one band row only from `xl`,
+in rows of three below it, so every label keeps to one line. `step`, where
 the issue bites, is read off the entry's first method step link. Must Read still renders the same
 entries, and its rose lead line links here. A missing id, or an entry with no method step link,
 throws, so the render check catches it.
@@ -848,8 +853,10 @@ Four fields carry the rest:
 
 **The rail is grouped by date**, each date headed once, and a group made only of client flags says
 so in its heading. When the newest entries are client flags, a rose line under the lead tells the
-reader to start with them, counting them off the data. The five flags of Oct 27, 2026 lead the list,
-all `hard`, from the client's review of the last delivery. The client's single turn design
+reader to start with them, counting the whole run of flags on top and naming every date in it. The
+Nov 1, 2026 flag leads the list: the client rejected 44 tasks, 30% of the total delivery, for
+complexity that came from a stretched rubric rather than the scenario. The five flags of
+Oct 27, 2026 follow it, all `hard`, from the client's review of the last delivery. The client's single turn design
 recommendations of the same day are left out on purpose: they are not in effect yet, and several run
 against the guidelines as they stand. Each flag is also worked into its method step, and
 gate check F1 now reads as guidelines 6.3 does: where the golden fails a criterion, fix whichever

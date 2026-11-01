@@ -38,6 +38,10 @@ import type { GuidelineChange } from "./types";
  * recommendations of the same day are left out on purpose: they are not in
  * effect yet, and several run against the guidelines as they stand.
  *
+ * The Nov 1 flag is the client's rejection of 44 tasks, 30% of the total
+ * delivery, for complexity that came from a stretched rubric rather than the
+ * scenario. Its rule is already the Complexity Bar section of the guidelines.
+ *
  * Newest first.
  */
 export const guidelinesVersion = { version: "Green Shell v1", updated: "Oct 8, 2026" };
@@ -50,6 +54,32 @@ export const guidelinesVersion = { version: "Green Shell v1", updated: "Oct 8, 2
 export const clientFlagVersion = "Client flag";
 
 export const guidelineChanges: GuidelineChange[] = [
+  {
+    id: "flag-genuine-complexity",
+    date: "Nov 1, 2026",
+    version: clientFlagVersion,
+    title: "Complexity has to come from the scenario, not from a stretched rubric",
+    body: "The client rejected 44 tasks, 30% of the total delivery, because they were not genuinely complex. The scenarios were simple enough for Model A to handle, and the rubrics were stretched until it failed 30%: criteria graded things the user never asked for, or accepted one answer where several were right. The model failed the rubric, not the task, and the client does not count those as failures. New in this review.",
+    example: [
+      "The scenario is a simple lookup: find the dentist appointment in this week's emails and put it on the calendar. Model A does it correctly.",
+      "To reach 30%, criteria then grade what the user never asked for: the event title in one exact wording, a reminder exactly 30 minutes before, the clinic's phone number in the notes.",
+      "The criteria Model A passed are left out, so its misses weigh more. The rate clears 30%, and the task is still a simple lookup.",
+    ],
+    does: "Build the complexity into the scenario itself, while you design it, before the first run. Give it a situation that is hard because of what the agent has to find, read and reconcile: a later email that corrects an earlier one, a rule kept in a document rather than the prompt, a detail that only shows in a photo. Then write criteria only for what the prompt, its inputs and the universe require, cover what Model A gets right as well as what it misses, and check that each one passes every valid answer. If honest criteria, rated honestly, still land below 30%, make the scenario harder, never the rubric.",
+    refs: [
+      { section: "Complexity Bar", title: "Genuine complexity and the 30% threshold" },
+      { section: "Hard Client Requirements", title: "Model A has to fail" },
+      { section: "1.2", title: "Building the Idea" },
+      { section: "5.1", title: "Rubric Fundamentals" },
+      { section: "5.5", title: "Rating Model A and Justifying the Failures" },
+    ],
+    impact: "hard",
+    links: [
+      { to: "/#scenario", tag: "M3", label: "Complexity is planned, never patched in" },
+      { to: "/#rubrics", tag: "M8", label: "Criteria only for what the request requires" },
+      { to: "/failure-approach", tag: "FA", label: "Real Opus failures to build the scenario around" },
+    ],
+  },
   {
     id: "flag-graded-files",
     date: "Oct 27, 2026",

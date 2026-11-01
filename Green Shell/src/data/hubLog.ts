@@ -58,6 +58,15 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "client-rejection-nov-1",
+    date: "Nov 1, 2026",
+    kind: "guidelines",
+    what: "44 tasks, 30% of the delivery, were rejected by the client",
+    where: "Urgent Alignments",
+    why: "They were not genuinely complex: the scenarios were simple, and the rubrics were stretched until Model A failed 30%. Build the complexity into the scenario itself, and write criteria only for what the request requires. It is now the first issue in Urgent Alignments, with an example of the mistake and the fix.",
+    to: "/alignments#flag-genuine-complexity",
+  },
+  {
     id: "client-flags-oct-27",
     date: "Oct 31, 2026",
     kind: "guidelines",

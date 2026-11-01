@@ -9,6 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import type { GuidelineChange } from "../data/types";
 import { clientFlagVersion, guidelineChanges, guidelinesVersion } from "../data/changes";
+import { dayList } from "../data/alignments";
 import { Crosslinks, Eyebrow, Reveal } from "../components/ui";
 import Taxonomy from "../components/Taxonomy";
 import { useScrollSpy } from "../lib/useScrollSpy";
@@ -149,15 +150,13 @@ export default function WhatsNew({ embedded = false }: { embedded?: boolean }) {
 
   const hard = guidelineChanges.filter((c) => c.impact === "hard").length;
 
-  /* The newest client flags lead the list and get a line of their own above
-     it, so a contributor arriving here starts with what the client found in
-     delivered tasks. Read off the data: no flags on top, no line. */
-  const newest = guidelineChanges[0];
-  const latestFlags =
-    newest?.version === clientFlagVersion
-      ? guidelineChanges.filter((c) => c.version === clientFlagVersion && c.date === newest.date)
-          .length
-      : 0;
+  /* The client flags lead the list and get a line of their own above it, so a
+     contributor arriving here starts with what the client found in delivered
+     tasks. Read off the data: the run of flags on top, however many dates it
+     spans; no flags on top, no line. */
+  const firstRule = guidelineChanges.findIndex((c) => c.version !== clientFlagVersion);
+  const latestFlags = firstRule === -1 ? guidelineChanges.length : firstRule;
+  const flaggedOn = dayList(guidelineChanges.slice(0, latestFlags).map((c) => c.date));
 
   /* The rail is grouped by date, each group headed once, and a group made only
      of client flags says so. Twenty odd titles in one run gave no way to tell
@@ -195,7 +194,7 @@ export default function WhatsNew({ embedded = false }: { embedded?: boolean }) {
           </p>
           {latestFlags > 0 && (
             <p className="mt-3 text-[15px] font-semibold leading-relaxed text-rose-700 dark:text-rose-300">
-              Start with the first {latestFlags}: the issues the client flagged on {newest.date}, each
+              Start with the first {latestFlags}: the issues the client flagged on {flaggedOn}, each
               with an example of the mistake and what to do about it.{" "}
               <Link to="/alignments" className="inline-flex items-center gap-1 underline underline-offset-2 hover:text-rose-800 dark:hover:text-rose-200">
                 Open them in Urgent Alignments <ArrowRight size={14} />

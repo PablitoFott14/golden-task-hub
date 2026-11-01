@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ChevronRight, RotateCcw, ShieldAlert, Sparkles } from "lucide-react";
-import { alignments, alignmentsFlagged, statusLabel } from "../data/alignments";
+import { alignments, alignmentsUpdated, statusLabel } from "../data/alignments";
 import { cx } from "../lib/util";
 
 const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+
+/** One row from `xl` up, and whole rows of three below it, so every label
+ *  keeps to one line: six in a row need about 1200px, which `lg` lacks. */
+const issueCols: Record<number, string> = {
+  4: "sm:grid-cols-2 lg:grid-cols-4",
+  5: "sm:grid-cols-3 lg:grid-cols-5",
+  6: "sm:grid-cols-3 xl:grid-cols-6",
+};
 
 /**
  * The Urgent Alignments band, the first block under the nav on the landing
@@ -40,7 +48,7 @@ export default function AlignmentsBand() {
             </span>
             <span className="min-w-0 flex-1">
               <span className="mono-label block text-rose-700 dark:text-rose-300">
-                Urgent Alignments · {alignmentsFlagged}
+                Urgent Alignments · {alignmentsUpdated}
               </span>
               <span className="block font-display text-[16px] font-bold leading-snug text-ink-900 sm:text-[17px]">
                 The client flagged {n} issues. Avoid them in every task.
@@ -56,7 +64,7 @@ export default function AlignmentsBand() {
           </Link>
         </div>
 
-        <ol className="mt-3 hidden gap-2 sm:grid sm:grid-cols-3 lg:grid-cols-5">
+        <ol className={cx("mt-3 hidden gap-2 sm:grid", issueCols[alignments.length] ?? "sm:grid-cols-3")}>
           {alignments.map((a, i) => (
             <li key={a.id}>
               <Link
@@ -73,7 +81,7 @@ export default function AlignmentsBand() {
                   </span>
                   <span
                     className={cx(
-                      "mt-0.5 flex items-center gap-1 text-[10.5px] font-semibold",
+                      "mt-0.5 flex flex-wrap items-center gap-x-1 text-[10.5px] font-semibold",
                       a.status === "came-back"
                         ? "text-rose-700 dark:text-rose-300"
                         : "text-sky-700 dark:text-sky-300"
@@ -81,6 +89,11 @@ export default function AlignmentsBand() {
                   >
                     {a.status === "came-back" ? <RotateCcw size={10} /> : <Sparkles size={10} />}
                     {statusLabel[a.status]}
+                    {a.rejected && (
+                      <span className="font-bold text-rose-700 dark:text-rose-300">
+                        · {a.rejected.tasks} rejected, {a.rejected.share}
+                      </span>
+                    )}
                   </span>
                 </span>
               </Link>
