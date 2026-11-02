@@ -125,8 +125,13 @@ const overviewCols: Record<number, string> = {
   4: "lg:grid-cols-4",
   5: "lg:grid-cols-5",
   6: "lg:grid-cols-3",
+  7: "lg:grid-cols-4",
   8: "lg:grid-cols-4",
 };
+
+/** Where the count leaves a row one short, the first card, the issue leading
+ *  the set, takes two columns so the rest still fill whole rows, as on the band. */
+const leadSpan: Record<number, string> = { 7: "sm:col-span-2" };
 
 function Num({ n, className }: { n: number; className?: string }) {
   return (
@@ -280,7 +285,7 @@ export default function UrgentAlignments() {
         <Reveal>
           <ol className={cx("grid gap-3 sm:grid-cols-2", overviewCols[alignments.length] ?? "lg:grid-cols-3")}>
             {alignments.map((a, i) => (
-              <li key={a.id}>
+              <li key={a.id} className={i === 0 ? leadSpan[alignments.length] : undefined}>
                 <Link
                   to={{ hash: `#${a.id}` }}
                   className="card group flex h-full flex-col p-4 transition duration-200 hover:-translate-y-0.5 hover:border-rose-300 hover:shadow-lift"

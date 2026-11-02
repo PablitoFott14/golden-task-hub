@@ -120,7 +120,6 @@ export const methodSteps: MethodStep[] = [
       "Give every file a purpose. Required signal or a deliberate distractor, never decoration.",
       "Cover every assigned input modality, each carrying part of the answer, so no single source carries the whole of it. An image earns its slot by what has to be seen in it, not by the text it happens to contain.",
       "Keep health inputs mocked or synthetic, and keep the answer out of every filename.",
-      "Ship every file a criterion grades as an input. A file saved only with the golden is one no run can open.",
     ],
     produces: "An input set where each file earns its place.",
     rule: {
@@ -131,9 +130,6 @@ export const methodSteps: MethodStep[] = [
       body: "Nine files, in the state someone who keeps receipts badly would really have them. One photograph carries two unrelated receipts, two arrive rotated and folded across the line that decides the dispute, and the ninth file is the layout of the page rather than evidence.",
       link: { to: `${GT}#inputs`, tag: "GT", label: "Nine files, and the fact each one carries" },
     },
-    links: [
-      { to: "/alignments#flag-graded-files", tag: "UA", label: "Every graded file ships as an input" },
-    ],
   },
   {
     n: 5,

@@ -622,7 +622,8 @@ client rejected tasks over also carries `rejected`, the count and its share of t
 figures at the top of the issue, a solid chip on its card and in the page header, and a note on
 its band entry. The header's Flagged chip names every date in the set (`dayList`), and the landing
 band the newest alone, so it still fits a phone. The band keeps whole rows so every label stays on
-one line: six sat in one row from `xl`, and eight sit in two rows of four from `lg`, two to a
+one line: six sat in one row from `xl`, eight in two rows of four from `lg`, and seven sit the
+same way with the first issue two columns wide (`leadSpan`, on the overview cards too), two to a
 row below it. `step`, where
 the issue bites, is read off the entry's first method step link. Must Read still renders the same
 entries, and its rose lead line links here. A missing id, or an entry with no method step link,
@@ -640,13 +641,15 @@ update notice on `/`. The desktop row shows it by its `short` name, Urgent, with
 its tooltip and accessible name, and the search button drops its word from `lg` up: with the full
 label the row needs about 960px against the 880 it has beside the wordmark and the search, and a row
 that wraps breaks every tab in it. On a phone the band is its headline alone, itself the link,
-because every row there pushes the Universe Viewers card further down the first screen. Method steps 3, 4, 5, 7, 8 and 9,
+because every row there pushes the Universe Viewers card further down the first screen. Method steps 3, 5, 7, 8 and 9,
 gate checks F1 and F2 and the update notice link into the tab (tag `UA`), and the search palette sends the
 entries here.
 
 **Adding a flag**: write it into `changes.ts` as a Must Read entry with an `example` and a method
 step link, add its row to `alignments.ts`, and work it into its method step. **Retiring one**:
-delete its row; the Must Read entry stays as the record.
+delete its row; the Must Read entry stays as the record. A flag that turns out not to be a
+contributor's mistake comes out entirely, its Must Read entry, method move and notice wording with
+it: the Oct 27 graded files flag was a bundling error and came out that way on Nov 2, 2026.
 
 ### The My Performance tab
 

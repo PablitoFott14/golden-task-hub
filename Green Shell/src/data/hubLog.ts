@@ -75,13 +75,16 @@ export const hubUpdates: HubUpdate[] = [
     why: "They were not genuinely complex: the scenarios were simple, and the rubrics were stretched until Model A failed 30%. Build the complexity into the scenario itself, and write criteria only for what the request requires. It is now the first issue in Urgent Alignments, with an example of the mistake and the fix.",
     to: "/alignments#flag-genuine-complexity",
   },
+  // The one entry rewritten after its date: the review flagged five, and the
+  // fifth, graded files missing from the inputs, was a bundling error rather
+  // than a contributor's, so it came out of the hub on Nov 2.
   {
     id: "client-flags-oct-27",
     date: "Oct 31, 2026",
     kind: "guidelines",
-    what: "The client flagged five issues to avoid in your tasks",
+    what: "The client flagged four issues to avoid in your tasks",
     where: "Urgent Alignments",
-    why: "Found in the last delivery, and they apply to every task, new or being fixed: graded files missing from the inputs, a golden that fails its own rubric, link code in prompts and criteria, no stated date, and thresholds a correct answer can fail. Each one shows the mistake and what to do about it.",
+    why: "Found in the last delivery, and they apply to every task, new or being fixed: a golden that fails its own rubric, link code in prompts and criteria, no stated date, and thresholds a correct answer can fail. Each one shows the mistake and what to do about it.",
     to: "/alignments",
   },
   {

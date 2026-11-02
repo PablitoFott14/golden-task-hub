@@ -26,7 +26,10 @@ import type { GuidelineChange, MethodStep } from "./types";
  * to first. It is read off the entry's links rather than typed again.
  *
  * To retire an issue, delete its row here; its Must Read entry stays as the
- * record. To add one, write the flag into `changes.ts` first, then add its row.
+ * record. A flag that turns out not to be a contributor's mistake comes out
+ * entirely, its Must Read entry and its method move with it: the Oct 27 graded
+ * files flag was a bundling error, and was removed that way on Nov 2. To add
+ * one, write the flag into `changes.ts` first, then add its row.
  */
 export interface Alignment {
   id: string;
@@ -46,12 +49,6 @@ const rows: Omit<Alignment, "change" | "step">[] = [
     check:
       "Every criterion grades something the request requires, and Model A still fails 30% on the scenario itself.",
     rejected: { tasks: 44, share: "30%" },
-  },
-  {
-    id: "flag-graded-files",
-    short: "Graded files",
-    status: "came-back",
-    check: "Every file a criterion grades is in the task inputs.",
   },
   {
     id: "flag-golden-agrees",

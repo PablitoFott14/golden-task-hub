@@ -33,10 +33,13 @@ import type { GuidelineChange } from "./types";
  * is written as a generic case and never names a task, a task id or a persona.
  *
  * The Oct 27 flags come from the client's review of the Oct 26 single turn
- * delivery: graded files, golden against rubric, link code, dates and
- * thresholds, all `hard`. The client's single turn task design
- * recommendations of the same day are left out on purpose: they are not in
- * effect yet, and several run against the guidelines as they stand.
+ * delivery: golden against rubric, link code, dates and thresholds, all
+ * `hard`. The review's fifth flag, graded files missing from the task inputs,
+ * is left out: it was a mistake in bundling the delivery, not in the
+ * contributors' work, so there is nothing for a contributor to do about it.
+ * The client's single turn task design recommendations of the same day are
+ * left out on purpose too: they are not in effect yet, and several run against
+ * the guidelines as they stand.
  *
  * The Nov 1 flag is the client's rejection of 44 tasks, 30% of the total
  * delivery, for complexity that came from a stretched rubric rather than the
@@ -134,26 +137,6 @@ export const guidelineChanges: GuidelineChange[] = [
       { to: "/#rubrics", tag: "M8", label: "Criteria only for what the request requires" },
       { to: "/failure-approach", tag: "FA", label: "Real Opus failures to build the scenario around" },
     ],
-  },
-  {
-    id: "flag-graded-files",
-    date: "Oct 27, 2026",
-    version: clientFlagVersion,
-    title: "Every file a criterion grades has to ship as a task input",
-    body: "Criteria graded details inside photos that were saved with the golden but never added to the task inputs. The golden run could open them from a folder outside the task package. The agent being tested never gets them, so no run can pass those criteria however good it is. Missing task data was flagged in an earlier report, and it came back.",
-    example: [
-      "The inputs are three phone screenshots of a piece of equipment.",
-      "Four criteria grade details that only show in the full size master photos, such as a scratch on the faceplate below the meters in photo 2.",
-      "The master photos sit only in the golden's folder, so every run fails those four criteria.",
-    ],
-    does: "For each criterion, name the file it depends on and check that the file is in the inputs folder. If it is not, add it or rewrite the criterion. A passing golden proves nothing here, because the golden may have reached files the agent never will.",
-    refs: [
-      { section: "1.2.2", title: "Select the Multimodal Inputs" },
-      { section: "2.2", title: "Upload Folders" },
-      { section: "5.7", title: "Final Rubric Checklist" },
-    ],
-    impact: "hard",
-    links: [{ to: "/#inputs", tag: "M4", label: "Every graded file ships as an input" }],
   },
   {
     id: "flag-golden-agrees",

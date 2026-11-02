@@ -6,13 +6,19 @@ import { cx } from "../lib/util";
 const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
 
 /** Whole rows only, so every label keeps to one line: six fit one row from
- *  `xl` (about 1200px, which `lg` lacks), eight two rows of four from `lg`. */
+ *  `xl` (about 1200px, which `lg` lacks), eight two rows of four from `lg`,
+ *  and seven the same once the first issue takes two columns. */
 const issueCols: Record<number, string> = {
   4: "sm:grid-cols-2 lg:grid-cols-4",
   5: "sm:grid-cols-3 lg:grid-cols-5",
   6: "sm:grid-cols-3 xl:grid-cols-6",
+  7: "sm:grid-cols-2 lg:grid-cols-4",
   8: "sm:grid-cols-2 lg:grid-cols-4",
 };
+
+/** Where the count leaves a row one short, the first issue, the one leading
+ *  the set, takes two columns so the rest still fill whole rows. */
+const leadSpan: Record<number, string> = { 7: "sm:col-span-2" };
 
 /** The status under each label, in the tab's colours: rose came back, sky
  *  new, amber a rule the Guidelines have carried from the start. */
@@ -82,7 +88,7 @@ export default function AlignmentsBand() {
           {alignments.map((a, i) => {
             const Icon = statusIcon[a.status];
             return (
-              <li key={a.id}>
+              <li key={a.id} className={i === 0 ? leadSpan[alignments.length] : undefined}>
                 <Link
                   to={`/alignments#${a.id}`}
                   title={a.change.title}
