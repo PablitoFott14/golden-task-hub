@@ -336,6 +336,9 @@ export const checklist: ChecklistSection[] = [
         q: "If the scenario touches the public internet or another dynamic type of information, essentially prices, is no criterion pinned to a value that can legitimately change between runs?",
         f: "Grade the retrieval and the relationship the model has to establish, with the value given as an example rather than as the required answer.",
         ref: "§8.3.1",
+        links: [
+          { to: "/alignments#flag-dynamic-values", tag: "UA", label: "A live value is graded as retrieved, never as a fixed figure" },
+        ],
       },
       {
         id: "F3",

@@ -58,6 +58,15 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "client-flags-nov-2",
+    date: "Nov 2, 2026",
+    kind: "guidelines",
+    what: "Two more issues to avoid: live-server dates and live values in rubrics",
+    where: "Urgent Alignments",
+    why: "Dates searched on a live server, such as Duffel flights, need at least a month of room, or the task can no longer run when the client reviews it. And no criterion may require a live price, rate or availability as a fixed figure: that rule has been in the Guidelines from the start, and it is reinforced now. Both are in Urgent Alignments with an example of the mistake and the fix.",
+    to: "/alignments",
+  },
+  {
     id: "client-rejection-nov-1",
     date: "Nov 1, 2026",
     kind: "guidelines",

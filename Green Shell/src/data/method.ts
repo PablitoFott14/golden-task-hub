@@ -88,6 +88,7 @@ export const methodSteps: MethodStep[] = [
       "Keep the thresholds and rules in the inputs, so finding them is part of the work.",
       "Build friction that the situation would really produce, never constraints bolted on to look hard.",
       "Resolve the GTFA down to the values: the totals, the dates, the classifications, the edge cases.",
+      "Put every date searched on a live server, such as a Duffel flight, at least a month after the day you write the task, so it can still be run when the client reviews it.",
     ],
     produces: "A scenario the pair explains, and the one answer it has to reach.",
     rule: {
@@ -101,6 +102,7 @@ export const methodSteps: MethodStep[] = [
     links: [
       { to: "/failure-approach", tag: "FA", label: "Real Opus failures to build the scenario around" },
       { to: "/alignments#flag-genuine-complexity", tag: "UA", label: "44 tasks rejected: complexity has to come from the scenario" },
+      { to: "/alignments#flag-live-dates", tag: "UA", label: "Dates searched on a live server need at least a month of room" },
     ],
   },
   {
@@ -238,6 +240,7 @@ export const methodSteps: MethodStep[] = [
     moves: [
       "Write the completion version of every criterion first. A reasoning decision is graded where it lands in the deliverable.",
       "Embed the exact value, filename, date or classification, copied from the source rather than typed from memory.",
+      "Grade a live price, rate or availability as the value retrieved during the run, with yours in parentheses as an example, never as a fixed figure.",
       "Keep a process criterion only where no deliverable can show the failure.",
       "Give a group of more than eight similar outcomes one completeness criterion and at most five spot checks.",
       "Use fixed dates and the user's own boundary. A rule of below 40 counts 40 or above, and a value sitting exactly on the line is settled or accepted both ways.",
@@ -257,6 +260,7 @@ export const methodSteps: MethodStep[] = [
       { to: "/alignments#flag-genuine-complexity", tag: "UA", label: "Complexity has to come from the scenario, not from a stretched rubric" },
       { to: "/alignments#flag-thresholds", tag: "UA", label: "A correct answer must never fail a criterion" },
       { to: "/alignments#flag-link-code", tag: "UA", label: "No link code in the prompt or the criteria" },
+      { to: "/alignments#flag-dynamic-values", tag: "UA", label: "A live value is graded as retrieved, never as a fixed figure" },
     ],
   },
   {

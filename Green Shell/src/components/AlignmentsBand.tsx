@@ -1,16 +1,30 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronRight, RotateCcw, ShieldAlert, Sparkles } from "lucide-react";
-import { alignments, alignmentsUpdated, statusLabel } from "../data/alignments";
+import { ArrowRight, BookMarked, ChevronRight, RotateCcw, ShieldAlert, Sparkles } from "lucide-react";
+import { alignments, alignmentsUpdated, statusLabel, type Alignment } from "../data/alignments";
 import { cx } from "../lib/util";
 
 const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
 
-/** One row from `xl` up, and whole rows of three below it, so every label
- *  keeps to one line: six in a row need about 1200px, which `lg` lacks. */
+/** Whole rows only, so every label keeps to one line: six fit one row from
+ *  `xl` (about 1200px, which `lg` lacks), eight two rows of four from `lg`. */
 const issueCols: Record<number, string> = {
   4: "sm:grid-cols-2 lg:grid-cols-4",
   5: "sm:grid-cols-3 lg:grid-cols-5",
   6: "sm:grid-cols-3 xl:grid-cols-6",
+  8: "sm:grid-cols-2 lg:grid-cols-4",
+};
+
+/** The status under each label, in the tab's colours: rose came back, sky
+ *  new, amber a rule the Guidelines have carried from the start. */
+const statusText: Record<Alignment["status"], string> = {
+  "came-back": "text-rose-700 dark:text-rose-300",
+  new: "text-sky-700 dark:text-sky-300",
+  "existing-rule": "text-amber-700 dark:text-amber-300",
+};
+const statusIcon: Record<Alignment["status"], typeof RotateCcw> = {
+  "came-back": RotateCcw,
+  new: Sparkles,
+  "existing-rule": BookMarked,
 };
 
 /**
@@ -65,40 +79,41 @@ export default function AlignmentsBand() {
         </div>
 
         <ol className={cx("mt-3 hidden gap-2 sm:grid", issueCols[alignments.length] ?? "sm:grid-cols-3")}>
-          {alignments.map((a, i) => (
-            <li key={a.id}>
-              <Link
-                to={`/alignments#${a.id}`}
-                title={a.change.title}
-                className="flex h-full items-center gap-2 rounded-xl border border-rose-500/25 bg-surface/80 px-2.5 py-2 transition hover:-translate-y-px hover:border-rose-400 hover:shadow-soft"
-              >
-                <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-rose-600 font-mono text-[11px] font-bold text-white">
-                  {i + 1}
-                </span>
-                <span className="min-w-0">
-                  <span className="block text-[12.5px] font-semibold leading-tight text-ink-800">
-                    {a.short}
+          {alignments.map((a, i) => {
+            const Icon = statusIcon[a.status];
+            return (
+              <li key={a.id}>
+                <Link
+                  to={`/alignments#${a.id}`}
+                  title={a.change.title}
+                  className="flex h-full items-center gap-2 rounded-xl border border-rose-500/25 bg-surface/80 px-2.5 py-2 transition hover:-translate-y-px hover:border-rose-400 hover:shadow-soft"
+                >
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-rose-600 font-mono text-[11px] font-bold text-white">
+                    {i + 1}
                   </span>
-                  <span
-                    className={cx(
-                      "mt-0.5 flex flex-wrap items-center gap-x-1 text-[10.5px] font-semibold",
-                      a.status === "came-back"
-                        ? "text-rose-700 dark:text-rose-300"
-                        : "text-sky-700 dark:text-sky-300"
-                    )}
-                  >
-                    {a.status === "came-back" ? <RotateCcw size={10} /> : <Sparkles size={10} />}
-                    {statusLabel[a.status]}
-                    {a.rejected && (
-                      <span className="font-bold text-rose-700 dark:text-rose-300">
-                        · {a.rejected.tasks} rejected, {a.rejected.share}
-                      </span>
-                    )}
+                  <span className="min-w-0">
+                    <span className="block text-[12.5px] font-semibold leading-tight text-ink-800">
+                      {a.short}
+                    </span>
+                    <span
+                      className={cx(
+                        "mt-0.5 flex flex-wrap items-center gap-x-1 text-[10.5px] font-semibold",
+                        statusText[a.status]
+                      )}
+                    >
+                      <Icon size={10} />
+                      {statusLabel[a.status]}
+                      {a.rejected && (
+                        <span className="font-bold text-rose-700 dark:text-rose-300">
+                          · {a.rejected.tasks} rejected, {a.rejected.share}
+                        </span>
+                      )}
+                    </span>
                   </span>
-                </span>
-              </Link>
-            </li>
-          ))}
+                </Link>
+              </li>
+            );
+          })}
         </ol>
       </div>
     </section>

@@ -31,7 +31,8 @@ import { cx } from "../lib/util";
  * thing a contributor actually runs before submitting.
  *
  * Rose throughout, the hub's must-read signal. Status is a chip with its label,
- * never colour alone: rose for an issue that came back, sky for a new one.
+ * never colour alone: rose for an issue that came back, sky for a new one,
+ * amber for a rule the Guidelines have carried from the start.
  *
  * The words come from the Must Read entries (see `alignments.ts`), so nothing
  * here restates them.
@@ -70,12 +71,20 @@ function Marked({ text }: { text: string }) {
 const statusTone: Record<Alignment["status"], string> = {
   "came-back": "bg-rose-500/15 text-rose-700 ring-1 ring-rose-500/25 dark:text-rose-200",
   new: "bg-sky-500/15 text-sky-700 ring-1 ring-sky-500/25 dark:text-sky-200",
+  "existing-rule": "bg-amber-500/15 text-amber-800 ring-1 ring-amber-500/25 dark:text-amber-200",
+};
+
+const statusIcon: Record<Alignment["status"], typeof RotateCcw> = {
+  "came-back": RotateCcw,
+  new: Sparkles,
+  "existing-rule": BookMarked,
 };
 
 function StatusChip({ status }: { status: Alignment["status"] }) {
+  const Icon = statusIcon[status];
   return (
     <span className={cx("chip", statusTone[status])}>
-      {status === "came-back" ? <RotateCcw size={11} /> : <Sparkles size={11} />}
+      <Icon size={11} />
       {statusLabel[status]}
     </span>
   );
@@ -116,6 +125,7 @@ const overviewCols: Record<number, string> = {
   4: "lg:grid-cols-4",
   5: "lg:grid-cols-5",
   6: "lg:grid-cols-3",
+  8: "lg:grid-cols-4",
 };
 
 function Num({ n, className }: { n: number; className?: string }) {
@@ -219,7 +229,8 @@ export default function UrgentAlignments() {
   useRailFollow(railRef, active);
 
   const cameBack = alignments.filter((a) => a.status === "came-back").length;
-  const fresh = alignments.length - cameBack;
+  const fresh = alignments.filter((a) => a.status === "new").length;
+  const rules = alignments.filter((a) => a.status === "existing-rule").length;
 
   return (
     <div>
@@ -237,6 +248,8 @@ export default function UrgentAlignments() {
             The client reviewed the delivered tasks and flagged these {word(alignments.length).toLowerCase()}. They apply to
             every task, new or being fixed. {word(cameBack)} had been flagged in earlier reports and
             came back, so the client is watching them closely.
+            {rules > 0 &&
+              ` ${word(rules)} ${rules === 1 ? "is a rule" : "are rules"} the Guidelines have carried from the start, reinforced here rather than introduced.`}
           </p>
           <p className="mt-2 max-w-3xl text-[14px] leading-relaxed text-ink-500">
             For most issues the client only named a few example tasks. If yours was not named, that
@@ -252,6 +265,11 @@ export default function UrgentAlignments() {
             <span className={cx("chip", statusTone.new)}>
               <Sparkles size={11} /> {fresh} new
             </span>
+            {rules > 0 && (
+              <span className={cx("chip", statusTone["existing-rule"])}>
+                <BookMarked size={11} /> {rules} existing {rules === 1 ? "rule" : "rules"}
+              </span>
+            )}
             {alignments.map((a) => a.rejected && <RejectedChip key={a.id} r={a.rejected} />)}
           </div>
         </div>

@@ -615,13 +615,15 @@ delivery is accepted.
 
 **The words live in `changes.ts`, and the tab reads them by id.** [alignments.ts](src/data/alignments.ts)
 lists which client flags are urgent and adds presentation only: a `short` label, a `status` (came
-back from an earlier report, or new, both stated in the entry's body) and the one line `check` to
+back from an earlier report, new, or a rule the Guidelines have carried from the start,
+reinforced rather than introduced, each stated in the entry's body) and the one line `check` to
 verify before submitting, worded as the contributor post on the same flags words it. An issue the
 client rejected tasks over also carries `rejected`, the count and its share of the delivery: two
 figures at the top of the issue, a solid chip on its card and in the page header, and a note on
 its band entry. The header's Flagged chip names every date in the set (`dayList`), and the landing
-band the newest alone, so it still fits a phone. Six issues sit in one band row only from `xl`,
-in rows of three below it, so every label keeps to one line. `step`, where
+band the newest alone, so it still fits a phone. The band keeps whole rows so every label stays on
+one line: six sat in one row from `xl`, and eight sit in two rows of four from `lg`, two to a
+row below it. `step`, where
 the issue bites, is read off the entry's first method step link. Must Read still renders the same
 entries, and its rose lead line links here. A missing id, or an entry with no method step link,
 throws, so the render check catches it.
@@ -631,15 +633,15 @@ glance and the way into each one; each issue opens with the problem, then puts W
 (the `example`) beside How to fix it (`does` and the `check`); the page ends on the checks, one per
 issue, and a link to the Pre-Submit Gate. Search strings and link code (`](http`, a backslash before
 an underscore, `[x](http://x)`) are set in mono by `Marked`. Rose throughout; status is a chip with
-its label, rose for came back and sky for new.
+its label, rose for came back, sky for new and amber for an existing rule.
 
 **It is the one rose tab**, second in the nav with the alert icon, and its band sits above the
 update notice on `/`. The desktop row shows it by its `short` name, Urgent, with the full name as
 its tooltip and accessible name, and the search button drops its word from `lg` up: with the full
 label the row needs about 960px against the 880 it has beside the wordmark and the search, and a row
 that wraps breaks every tab in it. On a phone the band is its headline alone, itself the link,
-because every row there pushes the Universe Viewers card further down the first screen. Method steps 4, 5, 8 and 9,
-gate check F1 and the update notice link into the tab (tag `UA`), and the search palette sends the
+because every row there pushes the Universe Viewers card further down the first screen. Method steps 3, 4, 5, 7, 8 and 9,
+gate checks F1 and F2 and the update notice link into the tab (tag `UA`), and the search palette sends the
 entries here.
 
 **Adding a flag**: write it into `changes.ts` as a Must Read entry with an `example` and a method

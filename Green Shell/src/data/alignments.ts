@@ -12,8 +12,10 @@ import type { GuidelineChange, MethodStep } from "./types";
  * adds is presentation only:
  *
  * - `short`, a label of a word or two for the navigator and the landing band.
- * - `status`, whether the issue came back from an earlier report or is new.
- *   Both are stated in the entry's own body; this makes them a chip.
+ * - `status`, whether the issue came back from an earlier report, is new, or
+ *   is a rule the Guidelines have carried from the start, reinforced rather
+ *   than introduced. Each is stated in the entry's own body; this makes it a
+ *   chip.
  * - `check`, the one line to verify before submitting, as the contributor post
  *   on the same flags words it.
  * - `rejected`, only where the client rejected tasks over the issue: how many,
@@ -29,7 +31,7 @@ import type { GuidelineChange, MethodStep } from "./types";
 export interface Alignment {
   id: string;
   short: string;
-  status: "came-back" | "new";
+  status: "came-back" | "new" | "existing-rule";
   check: string;
   rejected?: { tasks: number; share: string };
   change: GuidelineChange;
@@ -71,11 +73,25 @@ const rows: Omit<Alignment, "change" | "step">[] = [
       "The prompt states today's date, criteria use fixed dates, and no graded record expires around delivery.",
   },
   {
+    id: "flag-live-dates",
+    short: "Live-server dates",
+    status: "new",
+    check:
+      "Every date the scenario searches or books on a live server, such as Duffel, is at least a month after the day you write the task.",
+  },
+  {
     id: "flag-thresholds",
     short: "Thresholds",
     status: "new",
     check:
       "Thresholds match between the user's rule and the rubric, and values sitting exactly on a boundary are handled.",
+  },
+  {
+    id: "flag-dynamic-values",
+    short: "Dynamic values",
+    status: "existing-rule",
+    check:
+      "No criterion requires a live price, rate or availability as a fixed figure: each grades the value retrieved during the run, with yours as an example.",
   },
 ];
 
@@ -122,4 +138,5 @@ export const alignmentsUpdated = alignments
 export const statusLabel: Record<Alignment["status"], string> = {
   "came-back": "Came back",
   new: "New",
+  "existing-rule": "Existing rule",
 };

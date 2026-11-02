@@ -42,6 +42,13 @@ import type { GuidelineChange } from "./types";
  * delivery, for complexity that came from a stretched rubric rather than the
  * scenario. Its rule is already the Complexity Bar section of the guidelines.
  *
+ * The Nov 2 flags are two. Dates a live server is searched on, such as a
+ * Duffel flight, need at least a month of room, or the task can no longer run
+ * when the client reviews it. And a criterion never requires a live price, rate
+ * or availability as a fixed figure: that one is the guidelines' own dynamic
+ * values rule (5.1, 8.3.1), restated as a flag to reinforce it, not a new rule,
+ * and the `dynamic-values` entry below stays as the record of it.
+ *
  * Newest first.
  */
 export const guidelinesVersion = { version: "Green Shell v1", updated: "Oct 8, 2026" };
@@ -54,6 +61,54 @@ export const guidelinesVersion = { version: "Green Shell v1", updated: "Oct 8, 2
 export const clientFlagVersion = "Client flag";
 
 export const guidelineChanges: GuidelineChange[] = [
+  {
+    id: "flag-live-dates",
+    date: "Nov 2, 2026",
+    version: clientFlagVersion,
+    title: "Dates searched on a live server need at least a month of room",
+    body: "Some services answer from a live server, not from stored universe records, and Duffel is the clearest case: flight offers expire, and a flight whose date has passed can no longer be searched. A scenario set on a date in the past, or only days ahead, works the day it is written and is impossible to run by the time the client reviews it. Stating the date does not help here, because the server itself no longer answers for it. New in this review.",
+    example: [
+      "The task is written on Oct 20. The user asks for a direct flight to Lisbon on Friday, Oct 30, landing before 6 pm, and the criteria grade the flight the run picks against those rules.",
+      "On Oct 20 Duffel still returns offers for Oct 30, and the golden passes.",
+      "The client reviews the task in mid November. Oct 30 has passed, Duffel no longer returns flights for it, and no run can meet the criteria, however good it is.",
+    ],
+    does: "While you design the scenario, find which of the services it depends on answer from a live server, such as Duffel for flights. Put every date the agent has to search or book on them at least a month after the day you write the task: the flight, the stay, the booking. Avoid dates in the past and dates only days or weeks ahead, which may still work on the day you write the task but not when the client reviews it. State that date in the prompt as usual, and grade the rules the choice has to meet rather than one offer, because offers expire.",
+    refs: [
+      { section: "1.2.1", title: "Start With the Universe" },
+      { section: "1.2.5", title: "Common Scenario Issues Getting Tasks Rejected" },
+      { section: "8.3", title: "The Services in the Universe" },
+    ],
+    impact: "hard",
+    links: [
+      { to: "/#scenario", tag: "M3", label: "Dates on a live server sit at least a month ahead" },
+      { to: "/alignments#flag-dates", tag: "UA", label: "Anchor the prompt and the rubric to a stated date" },
+    ],
+  },
+  {
+    id: "flag-dynamic-values",
+    date: "Nov 2, 2026",
+    version: clientFlagVersion,
+    title: "A live value is graded as retrieved, never as a fixed figure",
+    body: "Rubrics required fixed values for information that changes on its own, such as live prices, rates and availability. A model that fetches the correct, current value then fails a criterion that still expects the figure from the day the task was written. This is not a new rule: it has been in the Guidelines from the start, and it is reinforced here because a correct, up to date answer must never fail.",
+    example: [
+      "The prompt asks to convert a €1,240 invoice into dollars at today's exchange rate, and a criterion requires the total to be $1,345.40, the figure the rate gave the day the task was written.",
+      "A week later the rate has moved. A run that fetches the current rate correctly reports $1,359.04 and fails the criterion.",
+      "The model did exactly what the prompt asked, with up to date information, and the rubric marked it wrong for not repeating an outdated value.",
+    ],
+    does: "Go through every criterion that names a value the model has to fetch live, from the web or from a live server: a price, a rate, a fare, a seat or room count. Grade the retrieval and what the model does with it, never the frozen figure: “invoice_summary.md converts the €1,240 invoice at the EUR to USD rate retrieved during the run (e.g., 1.085, giving $1,345.40)”. Your figure goes in parentheses as an example, and the file, the item and the source stay named so the criterion can still be rated with the prompt closed. Fixed values stay fixed: anything from an attachment, a universe record or the GTFA still has to match its source exactly.",
+    refs: [
+      { section: "5.1", title: "Rubric Fundamentals" },
+      { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "8.3.1", title: "The Built-in Tools" },
+    ],
+    impact: "hard",
+    links: [
+      { to: "/#rubrics", tag: "M8", label: "Grade the retrieval, not the figure" },
+      { to: "/reference#dynamic-values", tag: "WN", label: "The rule as the Guidelines have set it from the start" },
+      { to: "/reference#s6", tag: "F2", label: "No criterion pinned to a value that can change" },
+      { to: "/spec#rubric-quality", tag: "QC", label: "Overfitting and Underfitting" },
+    ],
+  },
   {
     id: "flag-genuine-complexity",
     date: "Nov 1, 2026",
@@ -363,6 +418,7 @@ export const guidelineChanges: GuidelineChange[] = [
       { to: "/reference#assigned-tool-use", tag: "WN", label: "Assigned tools have to be used, not just assigned" },
       { to: "/reference#literal-matching", tag: "WN", label: "Every literal has to match its source exactly" },
       { to: "/spec#rubric-quality", tag: "QC", label: "Overfitting and Underfitting" },
+      { to: "/alignments#flag-dynamic-values", tag: "UA", label: "Reinforced in Urgent Alignments" },
     ],
   },
   {
