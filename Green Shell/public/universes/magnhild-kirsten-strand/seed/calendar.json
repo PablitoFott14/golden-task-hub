@@ -1,0 +1,3667 @@
+{
+ "events": [
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "14.2 km classic on a cold set track. Both dogs waited at the car.",
+   "end_datetime": 1772390820.0,
+   "event_id": "a7a932581e2ac6cc814d0a0c",
+   "location": "Bohart Ranch, Bridger Canyon Road, Bozeman MT",
+   "start_datetime": 1772385300.0,
+   "tag": "personal",
+   "title": "Ski, Bohart Ranch, morning classic"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Weekly Administration and Finance leadership meeting. Division items from Space Planning, in a numbered list, circulated beforehand.",
+   "end_datetime": 1772470800.0,
+   "event_id": "e8bfcad9183a74f4b8b07b72",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1772467200.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Resolve the open detail for 1:1, Dagny Foss on Mar 3 at 10:00 AM using the notes from the last sync. Looping in Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1772560800.0,
+   "event_id": "483d1a6898acc1fdaf01cd2a",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1772557200.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Out of the building at 16:30 while the tracks are still there.",
+   "end_datetime": 1772586000.0,
+   "event_id": "a3f81c027d4b9e605f21ab74",
+   "location": "Sourdough trailhead, Bozeman MT",
+   "start_datetime": 1772580600.0,
+   "tag": "personal",
+   "title": "Ski, Sourdough trail"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Confirm the point person for Room-request triage on Mar 4 at 1:30 PM with the vendor or teammate who owns it. Sitting down with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1772659800.0,
+   "event_id": "71f972c6ac20b9b384bdebf9",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1772656200.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Delphine Nakamura-Reyes",
+    "Ozias Lindqvist",
+    "Tamsin Wrigley-Achebe"
+   ],
+   "description": "Wednesday league draw, sheet 3. Rock Bottom: Delphine Nakamura-Reyes skip, Ozias Lindqvist third, Tamsin Wrigley-Achebe lead. Bridger Brewing after.",
+   "end_datetime": 1772678700.0,
+   "event_id": "7b3e91af52d0c46a18f7d205",
+   "location": "Gallatin County Fairgrounds ice, Bozeman",
+   "start_datetime": 1772674200.0,
+   "tag": "personal",
+   "title": "Curling, draw"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng",
+    "Dagny Foss"
+   ],
+   "description": "The Annex has not been re-measured since the 2021 fit-out. Measure before a number goes in a workbook. Dagny's note stands: the air handler will do wet work all day and will not hold a collection.",
+   "end_datetime": 1772727300.0,
+   "event_id": "8e9ba38b0cecd4b0e1fd0920",
+   "location": "Ferris Annex",
+   "start_datetime": 1772722800.0,
+   "tag": "work",
+   "title": "Ferris Annex, walk it with a tape"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Hollis Beaumont-Ndiaye"
+   ],
+   "description": "Hollis Beaumont-Ndiaye inspecting the west slope and the purlins for claim MT-2026-041882. Ladder access from the north end of the aisle.",
+   "end_datetime": 1772735400.0,
+   "event_id": "d92c7e01b8a4536f10c2b7e8",
+   "location": "4482 Sourdough Ridge Road, pole barn",
+   "start_datetime": 1772730000.0,
+   "tag": "",
+   "title": "Farm Bureau adjuster, barn inspection"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Skate skis. Bag is in the Outback.",
+   "end_datetime": 1772758800.0,
+   "event_id": "b71e4d90c2a86f3157cd0e29",
+   "location": "Highland Glen trailhead, Bozeman MT",
+   "start_datetime": 1772753400.0,
+   "tag": "personal",
+   "title": "Ski, Highland Glen"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Weekly queue with Tobiah. Twenty-three requests this week, four of them the same person asking for Reid 108 on four different days.",
+   "end_datetime": 1772829000.0,
+   "event_id": "2a71c58b0e4d93f6a2c81b07",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1772825400.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Two nights, two ski days. Leave Saturday afternoon, home Sunday evening. No cell Bozeman from from the trailhead in.",
+   "end_datetime": 1772841600.0,
+   "event_id": "4c9a2f7e18b350d6ea47c1f8",
+   "location": "Bell Lake trailhead, Tobacco Root Mountains, Harrison MT",
+   "start_datetime": 1772836200.0,
+   "tag": "personal",
+   "title": "Bell Lake Yurt, Tobacco Roots"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Day one out of the yurt. Skins on at the trailhead, 16.8 km. The harder of the two days on paper and the easier of the two in the legs.",
+   "end_datetime": 1772902800.0,
+   "event_id": "b5694471928cfc2b293576b2",
+   "location": "Bell Lake, Tobacco Root Mountains, Harrison MT",
+   "start_datetime": 1772899200.0,
+   "tag": "personal",
+   "title": "Bell Lake Yurt, up the north side"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Second day, 13.4 km, and the legs knew about it. Out and driving home by mid afternoon.",
+   "end_datetime": 1772987400.0,
+   "event_id": "360e667fa5d2f7a388abba28",
+   "location": "Bell Lake, Tobacco Root Mountains, Harrison MT",
+   "start_datetime": 1772983800.0,
+   "tag": "personal",
+   "title": "Bell Lake Yurt, second day"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Align on the next move for Leadership meeting (Mar 9); and leave side topics for another time.",
+   "end_datetime": 1773072000.0,
+   "event_id": "6a519a9e6517cda14f7cfc7a",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1773068400.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Calloway Rhee"
+   ],
+   "description": "One to one with Provost Rhee, forty minutes. Nordquist 2 is obvious, he says, and he has told the dean. Nothing is decided.",
+   "end_datetime": 1773078000.0,
+   "event_id": "6c07b1d9a4e3f82501ab7c34",
+   "location": "Montana Hall, provost's office",
+   "start_datetime": 1773075600.0,
+   "tag": "work",
+   "title": "1:1, Provost Rhee"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Six month thyroid panel with Dr. Peregrine Halvorson-Ito. Fasting is not required. Result 2.1 mIU/L, no dose change.",
+   "end_datetime": 1773151200.0,
+   "event_id": "214579e89be9fa6a06dbfb15",
+   "location": "Bozeman Health, 915 Highland Boulevard, Bozeman MT",
+   "start_datetime": 1773148500.0,
+   "tag": "personal",
+   "title": "Lab draw, TSH and free T4"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Confirm the point person for 1:1, Dagny Foss (Mar 10) on Mar 10 at 10:00 AM so the follow-up stays traceable. Sitting down with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1773162900.0,
+   "event_id": "5fac69ec0d27d9b89e3685a5",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1773158400.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ninety day fill of levothyroxine 88 mcg, $11.40. Ready through 03/18.",
+   "end_datetime": 1773249300.0,
+   "event_id": "539ade21cf6a5d8420956c29",
+   "location": "Costco Pharmacy, 2505 Catron Street, Bozeman MT",
+   "start_datetime": 1773247500.0,
+   "tag": "personal",
+   "title": "Prescription pickup, Costco Pharmacy"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Capture the action item for Room-request triage (Mar 11) on Mar 11 at 1:30 PM with the right person named. Meeting with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1773261000.0,
+   "event_id": "d3f9f52c172d17e6a3facaea",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1773257400.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "8.4 km, out of the building at half past four and on the snow by five. Curling after.",
+   "end_datetime": 1773272700.0,
+   "event_id": "6d3dba5f2dadb277dec1de1b",
+   "location": "Bohart Ranch, Bridger Canyon Road, Bozeman MT",
+   "start_datetime": 1773268200.0,
+   "tag": "personal",
+   "title": "Ski, Bohart Ranch, short one before dark"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Delphine Nakamura-Reyes",
+    "Ozias Lindqvist",
+    "Tamsin Wrigley-Achebe"
+   ],
+   "description": "Sheet 1. Won six to four, and the last two ends were not close. Bridger Brewing after.",
+   "end_datetime": 1773280800.0,
+   "event_id": "3f0a68d1c94b27e5a0d61c88",
+   "location": "Gallatin County Fairgrounds ice, Bozeman",
+   "start_datetime": 1773275400.0,
+   "tag": "personal",
+   "title": "Curling, draw"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "",
+   "end_datetime": 1773444600.0,
+   "event_id": "e05b13ca7f2946d8b1c3082e",
+   "location": "Sourdough trailhead, Bozeman MT",
+   "start_datetime": 1773441000.0,
+   "tag": "personal",
+   "title": "Ski, Sourdough after work"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand",
+    "Anneke Strand-Solheim",
+    "Torvald Strand-Solheim"
+   ],
+   "description": "Call at ten, all four of us on it. She is awake by then and nobody else in her house is.",
+   "end_datetime": 1773506700.0,
+   "event_id": "b40e19d75c83a2f6e70d146b",
+   "location": "",
+   "start_datetime": 1773504000.0,
+   "tag": "personal",
+   "title": "Anneke, 21"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ride if the arena is not frozen, otherwise groom and hand walk.",
+   "end_datetime": 1773592200.0,
+   "event_id": "1a2b3c4d5e6f7a8b9c0d1e2f",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1773586800.0,
+   "tag": "personal",
+   "title": "Kvikk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Update the working note for Leadership meeting (Mar 16); with the vendor or teammate who owns it.",
+   "end_datetime": 1773676800.0,
+   "event_id": "a128799acb7d36f4253e6909",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1773673200.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Verify the handoff for 1:1, Dagny Foss (Mar 17) on Mar 17 at 10:00 AM before it becomes stale. Meeting with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1773765900.0,
+   "event_id": "468a91fab8242c01c01e1b88",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1773763200.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "",
+   "end_datetime": 1773791100.0,
+   "event_id": "17d6ea4b95c0382f7ab41d6c",
+   "location": "Highland Glen trailhead, Bozeman MT",
+   "start_datetime": 1773786600.0,
+   "tag": "personal",
+   "title": "Ski, Highland Glen skate"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ambrose Tallchief"
+   ],
+   "description": "Kvikk, full set. Check on the tack room shelf, he prefers a check.",
+   "end_datetime": 1773854100.0,
+   "event_id": "2b3c4d5e6f7a8b9c0d1e2f3a",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1773849600.0,
+   "tag": "personal",
+   "title": "Ambrose"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Review the current status for Room-request triage (Mar 18) on Mar 18 at 1:30 PM against what is already on the shared calendar. On the invite: Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1773865800.0,
+   "event_id": "a83f12b3ee7728bae88743b9",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1773862200.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Delphine Nakamura-Reyes",
+    "Ozias Lindqvist",
+    "Tamsin Wrigley-Achebe"
+   ],
+   "description": "Last draw of the regular schedule, sheet 2. Playoff seeding is set tonight.",
+   "end_datetime": 1773882900.0,
+   "event_id": "d21c47b0e9a35f68c7014b2d",
+   "location": "Gallatin County Fairgrounds ice, Bozeman",
+   "start_datetime": 1773880200.0,
+   "tag": "personal",
+   "title": "Curling, draw"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler",
+    "Emmanuel Adjei-Boateng",
+    "Ferdinand Nakashima",
+    "Wynonna Pettibone",
+    "Perpetua Sandoval-Okafor"
+   ],
+   "description": "First reading of the Kirchner criteria approach. FY26 inventory status, lease register, room-request volume. Agenda circulated 16 March.",
+   "end_datetime": 1773955800.0,
+   "event_id": "b40f27ea19c8d3560b7a12ce",
+   "location": "Plew Building conference room",
+   "start_datetime": 1773950400.0,
+   "tag": "work",
+   "title": "University Space Advisory Committee"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "13.1 km. The tracks were holding above the bridge and were finished below it.",
+   "end_datetime": 1774050300.0,
+   "event_id": "4d0f00ad0e91f265a9914097",
+   "location": "Sourdough trailhead, Bozeman MT",
+   "start_datetime": 1774045800.0,
+   "tag": "personal",
+   "title": "Ski, Sourdough, wet snow by the bridge"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Cyrus Delacroix-Munoz"
+   ],
+   "description": "Cyrus Delacroix-Munoz walking the west slope.",
+   "end_datetime": 1774110600.0,
+   "event_id": "7a01c8b7e4d29365102cb8e7",
+   "location": "4482 Sourdough Ridge Road, pole barn",
+   "start_datetime": 1774105200.0,
+   "tag": "",
+   "title": "Roof quote, Gallatin Valley Roofing"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Grieg and Sibelius. Two seats, main floor center. Doors at 19:00, walk down from the truck lot.",
+   "end_datetime": 1774150200.0,
+   "event_id": "7d2c9e05a13b846fe0c72d19",
+   "location": "Willson Auditorium, 404 West Main Street, Bozeman",
+   "start_datetime": 1774143000.0,
+   "tag": "personal",
+   "title": "Bozeman Symphony, Willson"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "18.3 km with the dogs waiting at the car. The last long Sunday of the season.",
+   "end_datetime": 1774200600.0,
+   "event_id": "f37a8c053441958256c43d5b",
+   "location": "Bohart Ranch, Bridger Canyon Road, Bozeman MT",
+   "start_datetime": 1774195200.0,
+   "tag": "personal",
+   "title": "Ski, Bohart Ranch, Sunday"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Align on the next move for Leadership meeting (Mar 23); before it becomes stale.",
+   "end_datetime": 1774281600.0,
+   "event_id": "d1495aaded99a997bf13a7b3",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1774278000.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Absalom Whitcomb"
+   ],
+   "description": "Collections environment, with Absalom Whitcomb. Wilson Hall, his office.",
+   "end_datetime": 1774372500.0,
+   "event_id": "18de53c7b092a4610fc2b78a",
+   "location": "Wilson Hall",
+   "start_datetime": 1774369800.0,
+   "tag": "work",
+   "title": "Walk to Anthropology"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand",
+    "Charlene Two Bulls"
+   ],
+   "description": "EIA test drawn ahead of the 2026-04-02 expiry. Ingrid draws it at the barn and the certificate goes in Family/Kvikk.",
+   "end_datetime": 1774377900.0,
+   "event_id": "315cdfc78633741bbe2c73f1",
+   "location": "Bridger Creek Stables, 8460 Springhill Road, Bozeman MT",
+   "start_datetime": 1774375200.0,
+   "tag": "personal",
+   "title": "Kvikk, coggins drawn"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "",
+   "end_datetime": 1774395900.0,
+   "event_id": "9b240fe7c3157a8d62e09b4f",
+   "location": "Highland Glen trailhead, Bozeman MT",
+   "start_datetime": 1774391400.0,
+   "tag": "personal",
+   "title": "Ski, Highland Glen, hard snow"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Confirm the point person for Room-request triage (Mar 25) on Mar 25 at 1:30 PM and leave side topics for another time. Sitting down with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1774470600.0,
+   "event_id": "7301fd7d581e65d0f7a30d1c",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1774467000.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "April issue laid out in Affinity Publisher and exported to PDF the same night. Sign-up sheet goes on page two.",
+   "end_datetime": 1774489500.0,
+   "event_id": "7b41e9d306a5f82c1de4903b",
+   "location": "4482 Sourdough Ridge Road, Bozeman",
+   "start_datetime": 1774486800.0,
+   "tag": "personal",
+   "title": "Fjordposten layout"
+  },
+  {
+   "attendees": [
+    "Delphine Nakamura-Reyes",
+    "Ozias Lindqvist",
+    "Tamsin Wrigley-Achebe",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "B event final, sheet 2. Coin toss at 18:20. Last night on the fairgrounds ice this season.",
+   "end_datetime": 1774502100.0,
+   "event_id": "9a6f20c81b3d7e45f0928c61",
+   "location": "Gallatin County Fairgrounds ice, Bozeman",
+   "start_datetime": 1774496700.0,
+   "tag": "personal",
+   "title": "Curling, B event final"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "15.4 km and the last of the good tracks on that trail this year.",
+   "end_datetime": 1774656000.0,
+   "event_id": "e1cd849f3b81fff8a3b0800b",
+   "location": "Sourdough trailhead, Bozeman MT",
+   "start_datetime": 1774650600.0,
+   "tag": "personal",
+   "title": "Ski, Sourdough, last good tracks"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Review the current status for Leadership meeting (Mar 30); so the follow-up stays traceable.",
+   "end_datetime": 1774886400.0,
+   "event_id": "12b25deab96452e4177fce56",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1774882800.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Capture the action item for 1:1, Dagny Foss (Mar 31) on Mar 31 at 10:00 AM with the right person named. Meeting with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1774974600.0,
+   "event_id": "6002e9b34e3f490e82e02928",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1774972800.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "",
+   "end_datetime": 1775001600.0,
+   "event_id": "d82c6a01f4b79e35c018da27",
+   "location": "Bohart Ranch, Bridger Canyon Road, Bozeman MT",
+   "start_datetime": 1774996200.0,
+   "tag": "personal",
+   "title": "Ski, Bohart Ranch, last of the month"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Record the decision for Room-request triage (Apr 1) on Apr 1 at 1:30 PM using the notes from the last sync. Looping in Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1775075400.0,
+   "event_id": "2ce7f1b3a156b13a72f60ef4",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1775071800.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Wilhelmina Oyelowo-Krantz"
+   ],
+   "description": "Wilhelmina Oyelowo-Krantz looking at the purlins and the framing.",
+   "end_datetime": 1775248200.0,
+   "event_id": "18e0c7b4a9d5236f01b2c8e7",
+   "location": "4482 Sourdough Ridge Road, pole barn",
+   "start_datetime": 1775242800.0,
+   "tag": "",
+   "title": "Structural inspection, Big Sky Post & Beam"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "The Friday drink. Dagny and Daisy, one round, and the week left in the building.",
+   "end_datetime": 1775262600.0,
+   "event_id": "b21a28504a8754af8089b657",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1775257200.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Closing weekend. Home by five.",
+   "end_datetime": 1775338200.0,
+   "event_id": "6f13b95ad72c40e8195fc3b6",
+   "location": "Bridger Bowl, Bridger Canyon Road, Bozeman MT",
+   "start_datetime": 1775318400.0,
+   "tag": "personal",
+   "title": "Ski, Bridger Bowl, last day"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Update the working note for Leadership meeting (Apr 6); before the next calendar pass.",
+   "end_datetime": 1775491200.0,
+   "event_id": "931a308181cbfaa0ff45f3ce",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1775487600.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Update the working note for 1:1, Dagny Foss (Apr 7) on Apr 7 at 10:00 AM so the follow-up stays traceable. Sitting down with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1775582100.0,
+   "event_id": "343b4a2088c5087e92263ee0",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1775577600.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng"
+   ],
+   "description": "KIR-006 goes on the public page at www.montana.edu/space/kirchner. Fourteen day comment window, closes 2026-04-22. Comments are logged verbatim with names on them.",
+   "end_datetime": 1775656800.0,
+   "event_id": "c175907430d30872e8479a73",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1775655000.0,
+   "tag": "work",
+   "title": "Draft criteria v1 published, comment window opens"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Annual wellness examination for Bjorn with Ingrid at the practice. Nine years old, and the left hip to look at.",
+   "end_datetime": 1775668500.0,
+   "event_id": "c58d2731ba90e4f617cd8a02",
+   "location": "Gallatin Valley Veterinary Partners, 1740 Baxter Lane",
+   "start_datetime": 1775665800.0,
+   "tag": "personal",
+   "title": "Bjorn, annual"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Verify the handoff for Room-request triage (Apr 8) on Apr 8 at 1:30 PM so the follow-up stays traceable. Meeting with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1775680200.0,
+   "event_id": "28a176bbad5e797a2991706e",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1775676600.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Follow up on the Vavstuga account and update the payment method if it changed.",
+   "end_datetime": 1775752200.0,
+   "event_id": "184f0e3ef1133535467f1ce1",
+   "location": "",
+   "start_datetime": 1775750400.0,
+   "tag": "",
+   "title": "Vavstuga account follow-up"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Rosemary Ojukwu-Bright"
+   ],
+   "description": "Kettering Blaise Partners, about the Associate Vice President for Campus Planning and Real Estate post at North Dakota State University. She had read the Kirchner criteria page before she rang, which is why the call ran twenty-two minutes.",
+   "end_datetime": 1775775600.0,
+   "event_id": "5e0a3b71cd92f486a05b2c37",
+   "location": "Plew Building, office",
+   "start_datetime": 1775772900.0,
+   "tag": "personal",
+   "title": "Call, Rosemary Ojukwu-Bright"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Tell Ingrid about the call from Kettering Blaise before anything else happens with it.",
+   "end_datetime": 1775788200.0,
+   "event_id": "b93d0f27a4c185e6390bd472",
+   "location": "Home, 4482 Sourdough Ridge Road",
+   "start_datetime": 1775784600.0,
+   "tag": "personal",
+   "title": "Kitchen table, Ingrid"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite \"Daisy\" Oyelaran"
+   ],
+   "description": "Friday table. Telling Dagny and Daisy about the NDSU call.",
+   "end_datetime": 1775867400.0,
+   "event_id": "1c7e46b0d38f9a250e17c4b8",
+   "location": "Plonk, East Main Street",
+   "start_datetime": 1775862000.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Torvald Strand-Solheim",
+    "Ingrid Solheim-Strand",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Report time 07:45. Admission ticket, photo ID, approved calculator, two pencils. Out by about a quarter past twelve.",
+   "end_datetime": 1775921400.0,
+   "event_id": "1d6f83c0a49e527b3fc8b0a5",
+   "location": "Bozeman High School, 205 North 11th Avenue",
+   "start_datetime": 1775916000.0,
+   "tag": "personal",
+   "title": "ACT, Bozeman High School"
+  },
+  {
+   "attendees": [
+    "Delphine Nakamura-Reyes",
+    "Ozias Lindqvist",
+    "Tamsin Wrigley-Achebe",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Butte Spring Bonspiel, first draw, Saturday.",
+   "end_datetime": 1775928600.0,
+   "event_id": "4e8b13d7a05c96f2b8e3407d",
+   "location": "Butte Curling Club, Butte MT",
+   "start_datetime": 1775923200.0,
+   "tag": "personal",
+   "title": "Butte bonspiel, first draw"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Delphine Nakamura-Reyes",
+    "Ozias Lindqvist",
+    "Tamsin Wrigley-Achebe"
+   ],
+   "description": "Butte Spring Bonspiel, second draw, Saturday.",
+   "end_datetime": 1775945700.0,
+   "event_id": "b57d2ea940c16b83f7d5921e",
+   "location": "Butte Curling Club, Butte MT",
+   "start_datetime": 1775943000.0,
+   "tag": "personal",
+   "title": "Butte bonspiel, second draw"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Delphine Nakamura-Reyes",
+    "Ozias Lindqvist",
+    "Tamsin Wrigley-Achebe"
+   ],
+   "description": "Two draws, nine and half past one. Three and one across the weekend and a set of coasters. Home by eight.",
+   "end_datetime": 1776007800.0,
+   "event_id": "1c9048f6b3e27da5c081f4b9",
+   "location": "Butte Curling Club, Butte MT",
+   "start_datetime": 1776006000.0,
+   "tag": "personal",
+   "title": "Butte bonspiel, day two"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ride out to the top of the hill and back. Mud most of the way.",
+   "end_datetime": 1776038400.0,
+   "event_id": "3c4d5e6f7a8b9c0d1e2f3a4b",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1776033000.0,
+   "tag": "personal",
+   "title": "Kvikk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Keep the context narrow for Leadership meeting (Apr 13); with any money or timing detail called out.",
+   "end_datetime": 1776096000.0,
+   "event_id": "5d870154f754c26223f79e5c",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1776092400.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "The Woolery"
+   ],
+   "description": "Circle back on Woolery and update the payment method if it changed.",
+   "end_datetime": 1776119400.0,
+   "event_id": "2f250c4c383f240203b6f069",
+   "location": "",
+   "start_datetime": 1776117600.0,
+   "tag": "",
+   "title": "Woolery account follow-up"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Six month cleaning. 2415 West Main Street. Early enough to be at the desk by nine.",
+   "end_datetime": 1776193200.0,
+   "event_id": "3b1f7c25d0a84e69cf12ab73",
+   "location": "Bridger Peaks Dental, 2415 West Main Street, Bozeman MT",
+   "start_datetime": 1776189600.0,
+   "tag": "personal",
+   "title": "Bridger Peaks Dental"
+  },
+  {
+   "attendees": [
+    "Ingeborg Falk",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Telling Ingeborg about the NDSU approach, in her Ndsu, before agreeing to any interview.",
+   "end_datetime": 1776183300.0,
+   "event_id": "a0f52d81b76c30e94ad12f6b",
+   "location": "Montana Hall, Administration and Finance",
+   "start_datetime": 1776180600.0,
+   "tag": "work",
+   "title": "Ingeborg Falk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Provost Calloway Rhee"
+   ],
+   "description": "The same conversation with Provost Rhee, after Ingeborg and on the same day.",
+   "end_datetime": 1776195000.0,
+   "event_id": "7d34c9e0182fb65a4c09e7d1",
+   "location": "Montana Hall, provost's office",
+   "start_datetime": 1776193200.0,
+   "tag": "work",
+   "title": "Provost Rhee"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Magnhild Strand"
+   ],
+   "description": "Guild meeting ahead of the Emerson sale. Table count, load in time, and how the price cards get printed.",
+   "end_datetime": 1776216600.0,
+   "event_id": "5e91c3a70b246df8e15a09c2",
+   "location": "Emerson Center for the Arts and Culture, 111 South Grand Avenue",
+   "start_datetime": 1776213000.0,
+   "tag": "personal",
+   "title": "Weavers Guild meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Denton Tolliver"
+   ],
+   "description": "Denton Tolliver. He asked for a ladder and went up on the roof rather than looking at it from the ground.",
+   "end_datetime": 1776258000.0,
+   "event_id": "c40b81e7a9d2536f10c8b7e2",
+   "location": "4482 Sourdough Ridge Road, pole barn",
+   "start_datetime": 1776254400.0,
+   "tag": "",
+   "title": "Roof quote, Tolliver & Sons"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Sourdough Creek Ditch Users Association annual assessment, $240.00 for 4.2 miner's inches. Check out of 3318.",
+   "end_datetime": 1776259800.0,
+   "event_id": "c41e8b0a7d3f26b95c08e1a4",
+   "location": "",
+   "start_datetime": 1776258000.0,
+   "tag": "personal",
+   "title": "Ditch assessment due"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Triage the logistics for Room-request triage (Apr 15) on Apr 15 at 1:30 PM with the relevant family context. Meeting with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1776285000.0,
+   "event_id": "121dde4e588d631ededa4ddc",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1776281400.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng",
+    "Wynonna Pettibone",
+    "Tobiah Ruiz-Kranzler",
+    "Ferdinand Nakashima",
+    "Perpetua Sandoval-Okafor"
+   ],
+   "description": "Agenda out Friday, three days ahead as always. Draft criteria v1 and the comment window, FY26 inventory draft attached so the committee reads the number before it is said out loud.",
+   "end_datetime": 1776375000.0,
+   "event_id": "30986aaf9dca863989bb0ec0",
+   "location": "Plew Building conference room",
+   "start_datetime": 1776369600.0,
+   "tag": "work",
+   "title": "University Space Advisory Committee"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "The Woolery"
+   ],
+   "description": "Sort out the open Woolery item and log the amount before it slips.",
+   "end_datetime": 1776457800.0,
+   "event_id": "76eae1f6a887b7a2bd278764",
+   "location": "",
+   "start_datetime": 1776456000.0,
+   "tag": "",
+   "title": "Woolery account follow-up"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Update the working note for Plonk (Apr 17) on Apr 17 at 5:00 PM with the vendor or teammate who owns it. Sitting down with Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1776472200.0,
+   "event_id": "7cd4ba5902af18d6d99b1d12",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1776466800.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Torvald Strand-Solheim",
+    "Hollis Deering"
+   ],
+   "description": "Eleven households, about a mile of ditch from the headgate down. Shovels, and Deering has the excavator on loan again. Torvald is coming, as he has every year since he was eight, and will complain about it. Doughnuts from Wild Crumb are on me.",
+   "end_datetime": 1776520800.0,
+   "event_id": "a0f7c2d81b64e35970af2c1d",
+   "location": "Sourdough Creek ditch, headgate to the Deering line",
+   "start_datetime": 1776517200.0,
+   "tag": "personal",
+   "title": "Ditch cleaning, Sourdough Creek"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Kjersti Lunde-Barrow"
+   ],
+   "description": "First planning meeting for the seventeenth. Food, the flag procession, and the volunteer sheet. Kjersti Lunde-Barrow chairs. Bringing last year's count and the 2025 food order.",
+   "end_datetime": 1776631500.0,
+   "event_id": "e02c58b7a413d69f80c25e74",
+   "location": "Gallatin Fjord Lodge hall, Bozeman",
+   "start_datetime": 1776628800.0,
+   "tag": "personal",
+   "title": "Syttende Mai planning, first meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Six krokbragd runners off, hems by Monday, entry form for the Emerson sale after that.",
+   "end_datetime": 1776641400.0,
+   "event_id": "1c8f5a2960d3e74b18a5c06f",
+   "location": "Basement",
+   "start_datetime": 1776636000.0,
+   "tag": "personal",
+   "title": "Loom, cut off the runners"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Update the working note for Leadership meeting (Apr 20); and leave side topics for another time.",
+   "end_datetime": 1776700800.0,
+   "event_id": "b88c25fe806c5c0534a901aa",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1776697200.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Check the timing for 1:1, Dagny Foss (Apr 21) on Apr 21 at 10:00 AM with the right person named. Sitting down with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1776789900.0,
+   "event_id": "c4c3cf6c9a8f5612a4ad55e4",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1776787200.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Verify the handoff for Room-request triage (Apr 22) on Apr 22 at 1:30 PM while the context is fresh. Meeting with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1776889800.0,
+   "event_id": "34d8d17481efbb4f286fc213",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1776886200.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng"
+   ],
+   "description": "Fourteen days from publication. Comment log KIR-009 goes up the same day, verbatim, with the names on it.",
+   "end_datetime": 1776897000.0,
+   "event_id": "2d0e255ede8c1eb917b08b97",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1776895200.0,
+   "tag": "work",
+   "title": "Kirchner criteria, comment window closes"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand",
+    "Torvald Strand-Solheim"
+   ],
+   "description": "Bridger Ski Foundation Nordic banquet. Athletes eat free, head count went in by the seventeenth, and the graduating seniors are recognised, which next year is Torvald.",
+   "end_datetime": 1777079700.0,
+   "event_id": "06d8cafebd265bdc9b0bd816",
+   "location": "Baxter Ballroom, 105 West Main Street, Bozeman MT",
+   "start_datetime": 1777075200.0,
+   "tag": "personal",
+   "title": "Nordic team banquet"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "May issue, which is the Syttende Mai issue. Programme on the front page, sign-up list on page two.",
+   "end_datetime": 1777167900.0,
+   "event_id": "3a97f1c80b5e24d6a7309fb1",
+   "location": "4482 Sourdough Ridge Road, Bozeman",
+   "start_datetime": 1777165200.0,
+   "tag": "personal",
+   "title": "Fjordposten layout"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ride. The arena has been harrowed.",
+   "end_datetime": 1777221000.0,
+   "event_id": "4d5e6f7a8b9c0d1e2f3a4b5c",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1777215600.0,
+   "tag": "personal",
+   "title": "Kvikk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Eight yards, 564 ends, 12 epi. Cotton came from Vavstuga on Monday.",
+   "end_datetime": 1777257000.0,
+   "event_id": "a04d6e1b7f9328c50d1a6e83",
+   "location": "Basement",
+   "start_datetime": 1777251600.0,
+   "tag": "personal",
+   "title": "Loom, warp the rag rug"
+  },
+  {
+   "attendees": [
+    "Ingrid Solheim-Strand",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Five weighted criteria, three columns, with Ingrid.",
+   "end_datetime": 1777264200.0,
+   "event_id": "9e18c0b7a4d5236f01c8b2e7",
+   "location": "Home, kitchen",
+   "start_datetime": 1777260600.0,
+   "tag": "",
+   "title": "Quote matrix at the kitchen table"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Close the loop for Leadership meeting (Apr 27); so the follow-up stays traceable.",
+   "end_datetime": 1777305600.0,
+   "event_id": "f32a879db15518d3a79e164f",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1777302000.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Rosemary Ojukwu-Bright"
+   ],
+   "description": "Video interview with the NDSU search committee, seventy-five minutes. Rosemary Ojukwu-Bright chairing the logistics.",
+   "end_datetime": 1777310100.0,
+   "event_id": "e2b81c057af4d69301b7c5a8",
+   "location": "Home, 4482 Sourdough Ridge Road",
+   "start_datetime": 1777305600.0,
+   "tag": "personal",
+   "title": "NDSU video interview"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Triage the logistics for 1:1, Dagny Foss (Apr 28) on Apr 28 at 10:00 AM while the context is fresh. Meeting with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1777395600.0,
+   "event_id": "f7c83389bd8f49aaa4840e94",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1777392000.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Contract at $34,800.00 goes back signed. Three lines to Gallatin Valley Roofing on why it did not go their way.",
+   "end_datetime": 1777397400.0,
+   "event_id": "2f6c40be71d3a985cf0e21b4",
+   "location": "Plew Building, office",
+   "start_datetime": 1777395600.0,
+   "tag": "personal",
+   "title": "Barn roof, sign and answer the other quotes"
+  },
+  {
+   "attendees": [
+    "Emmanuel Adjei-Boateng",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "KIR-011. Instructional contact hours displaced 30, research continuity and collections environment 25, adjacency 20, backfill efficiency 15, fit-out cost per ASF 10. Scoring begins after this and not before.",
+   "end_datetime": 1777474800.0,
+   "event_id": "514482bff0ea59f5b0e7878c",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1777473000.0,
+   "tag": "work",
+   "title": "Criteria v3 published, final"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Sindre Strand"
+   ],
+   "description": "Catch-up with Sindre Strand: surface open questions and decide who owns the follow-up.",
+   "end_datetime": 1777487400.0,
+   "event_id": "b2731eaef4c3f62b5758b9f2",
+   "location": "",
+   "start_datetime": 1777485600.0,
+   "tag": "",
+   "title": "Catch-up with Sindre Strand: surface open questions"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Confirm the point person for Room-request triage (Apr 29) on Apr 29 at 1:30 PM and keep the note short. Sitting down with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1777494600.0,
+   "event_id": "d3e3a8481b0679737bbdbe41",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1777491000.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Gallatin Valley Weavers Guild"
+   ],
+   "description": "Catch-up with Gallatin Valley Weavers Guild: discuss the present decision point and any practical constraints.",
+   "end_datetime": 1777501800.0,
+   "event_id": "71975bbc8f704978a090413d",
+   "location": "",
+   "start_datetime": 1777500000.0,
+   "tag": "",
+   "title": "Catch-up with Gallatin Valley Weavers Guild: discuss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng"
+   ],
+   "description": "Last pass over the submission with Emmanuel before it goes to the system of record at 16:00. Reid and Roberts room splits reconciled on tab 2.",
+   "end_datetime": 1777555800.0,
+   "event_id": "b4e17c05a9d38f26e01b7c4a",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1777554000.0,
+   "tag": "work",
+   "title": "FY26 inventory, final read before submission"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Triage the logistics for Plonk (May 1) on May 1 at 5:00 PM with the right person named. Meeting with Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1777680000.0,
+   "event_id": "78c7b7764a1f74b8c594a8af",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1777676400.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Magnhild Strand"
+   ],
+   "description": "Carry the nine pieces in, set up table 11 at the north hallway end, cash box and the folding chair.",
+   "end_datetime": 1777733100.0,
+   "event_id": "a270df41986bc35e0d1a7f68",
+   "location": "Emerson Center for the Arts and Culture, 111 South Grand Avenue",
+   "start_datetime": 1777729500.0,
+   "tag": "personal",
+   "title": "Emerson, load in"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Magnhild Strand"
+   ],
+   "description": "Six hours behind table 11. Nine pieces entered, priced at what the yarn cost plus a number.",
+   "end_datetime": 1777738500.0,
+   "event_id": "47b1e6c02da95f381704bc6e",
+   "location": "Emerson Center for the Arts and Culture, 111 South Grand Avenue",
+   "start_datetime": 1777734000.0,
+   "tag": "personal",
+   "title": "Weavers Guild spring sale"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Kjersti Lunde-Barrow"
+   ],
+   "description": "Second and last planning meeting with Kjersti Lunde-Barrow. Rommegrot voted out, food order signed off, price set at twelve dollars a plate.",
+   "end_datetime": 1777842900.0,
+   "event_id": "8d16b4e07c9a3f52d081ce46",
+   "location": "Gallatin Fjord Lodge hall, Bozeman",
+   "start_datetime": 1777838400.0,
+   "tag": "personal",
+   "title": "Syttende Mai planning, second meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Check the timing for Leadership meeting (May 4); with the right person named.",
+   "end_datetime": 1777910400.0,
+   "event_id": "5a2603baea98004803857a13",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1777906800.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Annual eye examination. Booked at 08:45 so the day starts on time afterwards.",
+   "end_datetime": 1777988700.0,
+   "event_id": "3f1a9c47b2d85e60a1c47f92",
+   "location": "Bozeman Eye Care, 1006 West Main Street, Bozeman MT",
+   "start_datetime": 1777985100.0,
+   "tag": "personal",
+   "title": "Eye examination"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Update the working note for 1:1, Dagny Foss (May 5) on May 5 at 10:00 AM while the context is fresh. Sitting down with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1777999500.0,
+   "event_id": "5a7d5de8e61157e5ac90249d",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1777996800.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ambrose Tallchief"
+   ],
+   "description": "Kvikk, reset all four.",
+   "end_datetime": 1778087700.0,
+   "event_id": "5e6f7a8b9c0d1e2f3a4b5c6d",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1778083200.0,
+   "tag": "personal",
+   "title": "Ambrose"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Capture the action item for Room-request triage (May 6) on May 6 at 1:30 PM with the right person named. Meeting with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1778099400.0,
+   "event_id": "a667621716f26e32cb59d796",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1778095800.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Update the working note for Plonk (May 8) on May 8 at 5:00 PM with the vendor or teammate who owns it. Sitting down with Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1778286600.0,
+   "event_id": "dc2e2e955fc7fefb1293571d",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1778281200.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ride up the Bridger Creek road, an hour out and back.",
+   "end_datetime": 1778430600.0,
+   "event_id": "6f7a8b9c0d1e2f3a4b5c6d7e",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1778425200.0,
+   "tag": "personal",
+   "title": "Kvikk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng"
+   ],
+   "description": "Scoring the three departments against criteria v3, with Emmanuel's FY26 inventory pull. Three hours and no interruptions.",
+   "end_datetime": 1778522400.0,
+   "event_id": "9f2b06c81ae4d7350b1c27fa",
+   "location": "Plew Building conference room",
+   "start_datetime": 1778511600.0,
+   "tag": "work",
+   "title": "Kirchner scoring workshop"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Capture the action item for Leadership meeting (May 11); with the right person named.",
+   "end_datetime": 1778515200.0,
+   "event_id": "a73a1da4c298da7c97c45c30",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1778511600.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Perpetua Sandoval-Okafor"
+   ],
+   "description": "Third message on the thread, so no fourth email. Perpetua brings the fall grid, I bring the Kirchner room list.",
+   "end_datetime": 1778533200.0,
+   "event_id": "043d7fb68a48e678cb13bef7",
+   "location": "Montana Hall, Registrar's office",
+   "start_datetime": 1778530500.0,
+   "tag": "work",
+   "title": "Walk to the Registrar"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Resolve the open detail for 1:1, Dagny Foss (May 12) on May 12 at 10:00 AM against what is already on the shared calendar. Looping in Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1778605200.0,
+   "event_id": "30e02ffa5073016c2b93ac2b",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1778601600.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Confirm the point person for Room-request triage (May 13) on May 13 at 1:30 PM with the vendor or teammate who owns it. Sitting down with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1778704200.0,
+   "event_id": "b05a7759c9f570a899a89dc4",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1778700600.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Blood panel before Bjorn stays on the carprofen through the summer. Ingrid draws it at the practice after five.",
+   "end_datetime": 1778715000.0,
+   "event_id": "70b1e9ac35df82461c07ba95",
+   "location": "Gallatin Valley Veterinary Partners, 1740 Baxter Lane",
+   "start_datetime": 1778713200.0,
+   "tag": "personal",
+   "title": "Bjorn, chemistry panel"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Absalom Whitcomb",
+    "Oleander Bhattacharya",
+    "Rutherford Vang",
+    "Ferdinand Nakashima"
+   ],
+   "description": "The only date in this project that does not move. Demolition follows in summer 2027 and the building opens in fall 2029.",
+   "end_datetime": 1810306800.0,
+   "event_id": "735e1a7ada3d46b96e9360ed",
+   "location": "Kirchner Hall",
+   "start_datetime": 1810303200.0,
+   "tag": "work",
+   "title": "Kirchner Hall vacant, all three departments out"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "The Woolery"
+   ],
+   "description": "Circle back on Woolery and update the payment method if it changed. The agenda for this session is household follow-up block (may 14).",
+   "end_datetime": 1778769000.0,
+   "event_id": "b20bc6914d586528c00f4e4f",
+   "location": "",
+   "start_datetime": 1778767200.0,
+   "tag": "",
+   "title": "Woolery account follow-up"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Gallatin County Fire Warden"
+   ],
+   "description": "Catch-up with Gallatin County Fire Warden: compare the active workstream against the current timeline.",
+   "end_datetime": 1778776200.0,
+   "event_id": "0b8a341b98a877cedacb7ec5",
+   "location": "",
+   "start_datetime": 1778774400.0,
+   "tag": "",
+   "title": "Catch-up with Gallatin County Fire Warden: compare"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Record the decision for Plonk (May 15) on May 15 at 5:00 PM before it becomes stale. Looping in Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1778891400.0,
+   "event_id": "53cba5c52d3d927adb70073a",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1778886000.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Baking for the brunch. Two ovens, seven to one, and the flat boxes go in the car Saturday night.",
+   "end_datetime": 1778940000.0,
+   "event_id": "5c8021fa93d7b6e4108c5da9",
+   "location": "4482 Sourdough Ridge Road, Bozeman",
+   "start_datetime": 1778936400.0,
+   "tag": "personal",
+   "title": "Kardemommeboller, eleven dozen"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Sindre Strand"
+   ],
+   "description": "Catch-up with Sindre Strand: share a concise progress update and confirm whether to reconnect.",
+   "end_datetime": 1778963400.0,
+   "event_id": "18a450b211280005d98eb70f",
+   "location": "",
+   "start_datetime": 1778961600.0,
+   "tag": "",
+   "title": "Sindre Strand"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Kjersti Lunde-Barrow"
+   ],
+   "description": "Doors at 10:00, flag procession at 11:15, brunch until 14:00. Buns at the hall by half nine.",
+   "end_datetime": 1779048000.0,
+   "event_id": "a4e739c10b826d5fe3a91d70",
+   "location": "Bozeman Senior Center, 807 North Tracy Avenue",
+   "start_datetime": 1779033600.0,
+   "tag": "personal",
+   "title": "Syttende Mai"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Two days at North Dakota State University. Into Hector at 12:40 on the 18th, hotel on 19th Avenue North, committee at 13:00 Monday, flight out at 17:35.",
+   "end_datetime": 1779119100.0,
+   "event_id": "34a9d7f21e0c58b6470d92af",
+   "location": "North Dakota State University, Fargo ND",
+   "start_datetime": 1779106500.0,
+   "tag": "personal",
+   "title": "NDSU campus visit, Fargo"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Rosemary Ojukwu-Bright"
+   ],
+   "description": "Facilities walk and the open forum in the morning, search committee at 13:00. Receipts held for the single itemised reimbursement summary.",
+   "end_datetime": 1779203700.0,
+   "event_id": "b537bd47a665dfc4e7c02fe1",
+   "location": "North Dakota State University, Fargo ND",
+   "start_datetime": 1779199200.0,
+   "tag": "personal",
+   "title": "NDSU campus visit, day two"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Out of Hector in the afternoon and home the same night. Flights booked on the personal card and reimbursed in full on TR-2026-05512.",
+   "end_datetime": 1779240600.0,
+   "event_id": "62d42ee9f95b7801d488e520",
+   "location": "Hector International Airport, Fargo ND to Bozeman MT",
+   "start_datetime": 1779226200.0,
+   "tag": "personal",
+   "title": "Fargo to Bozeman"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng"
+   ],
+   "description": "KIR-015. Every score published with the arithmetic beside it, including the Facilities-supplied coil and humidifier numbers for Nordquist 2.",
+   "end_datetime": 1779289200.0,
+   "event_id": "6e0d6e2f20b803f1e02752e9",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1779287400.0,
+   "tag": "work",
+   "title": "Kirchner scores published with the workings"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Close the loop for Room-request triage (May 20) on May 20 at 1:30 PM with any money or timing detail called out. Looping in Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1779309000.0,
+   "event_id": "4edd00854a180c66f565099f",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1779305400.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Sourdough Creek Ditch Users Association"
+   ],
+   "description": "Catch-up with Sourdough Creek Ditch Users Association: compare the active workstream against the current timeline.",
+   "end_datetime": 1779381000.0,
+   "event_id": "927b7c91eaf69bd5af9ac21c",
+   "location": "",
+   "start_datetime": 1779379200.0,
+   "tag": "",
+   "title": "Sourdough Creek Ditch Users Association"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Align on the next move for Plonk (May 22) on May 22 at 5:00 PM while the context is fresh. On the invite: Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1779496200.0,
+   "event_id": "4cb3a1b2e710d1dbfb03d8f2",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1779490800.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "June issue. The Syttende Mai tally goes on page three at the numbers sent to the board on the eighteenth.",
+   "end_datetime": 1779759900.0,
+   "event_id": "16f8d3072ba9e45c8d20f6a3",
+   "location": "4482 Sourdough Ridge Road, Bozeman",
+   "start_datetime": 1779757200.0,
+   "tag": "personal",
+   "title": "Fjordposten layout"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Align on the next move for 1:1, Dagny Foss (May 26) on May 26 at 10:00 AM and leave side topics for another time. On the invite: Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1779814800.0,
+   "event_id": "835f4734ad557884be1efcd0",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1779811200.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Align on the next move for Room-request triage (May 27) on May 27 at 1:30 PM using the notes from the last sync. On the invite: Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1779913800.0,
+   "event_id": "46765b41bbff32e8acb092b5",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1779910200.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Torvald Strand-Solheim"
+   ],
+   "description": "Doors at 19:00, band on at 20:00. Sweet Chili on North 7th first with Torvald. Two tickets, bought in April.",
+   "end_datetime": 1780110000.0,
+   "event_id": "a1d4f70b93c62e58017ba4d9",
+   "location": "The ELM, 506 North 7th Avenue, Bozeman",
+   "start_datetime": 1780106400.0,
+   "tag": "personal",
+   "title": "The ELM, Gravel Radio"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ride. Take the fly mask up with me.",
+   "end_datetime": 1780245000.0,
+   "event_id": "7a8b9c0d1e2f3a4b5c6d7e8f",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1780239600.0,
+   "tag": "personal",
+   "title": "Kvikk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Close the loop for Leadership meeting (Jun 1); with the right person named.",
+   "end_datetime": 1780329600.0,
+   "event_id": "c946b7738eb691b199952b04",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1780326000.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "The Woolery"
+   ],
+   "description": "Circle back on Woolery and note whether the subscription is still worth keeping.",
+   "end_datetime": 1780331400.0,
+   "event_id": "9af30cdf38ba8664847eed09",
+   "location": "",
+   "start_datetime": 1780329600.0,
+   "tag": "",
+   "title": "Woolery account follow-up"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Update the working note for 1:1, Dagny Foss (Jun 2) on Jun 2 at 10:00 AM with the relevant family context. Sitting down with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1780420500.0,
+   "event_id": "5886cc6afc114e9851a40347",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1780416000.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng",
+    "Ingeborg Falk",
+    "Calloway Rhee"
+   ],
+   "description": "KIR-016. Earth Sciences to the Ferris Annex, Anthropology and the collection to Nordquist 2, Modern Languages to Nordquist 3 plus six rooms at 2115 Fallon Street. Each decision cites the criterion number.",
+   "end_datetime": 1780500600.0,
+   "event_id": "7ffc1a5d8fe78c5506e39f11",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1780498800.0,
+   "tag": "work",
+   "title": "Kirchner relocation decision, memo v1 issued"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Verify the handoff for Room-request triage (Jun 3) on Jun 3 at 1:30 PM using the notes from the last sync. Meeting with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1780518600.0,
+   "event_id": "5bc604af9a87a1da0adb9d60",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1780515000.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Perpetua Sandoval-Okafor",
+    "Marguerite \"Daisy\" Oyelaran"
+   ],
+   "description": "Perpetua and Daisy. Fixing the 62 percent figure and the three limitations into the same paragraph before the study is published.",
+   "end_datetime": 1780686900.0,
+   "event_id": "7d2a6b01e94c58f3a07d1b62",
+   "location": "Montana Hall, Registrar conference room",
+   "start_datetime": 1780679700.0,
+   "tag": "work",
+   "title": "Classroom utilization study, working session"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Check the timing for Plonk (Jun 5) on Jun 5 at 5:00 PM with the vendor or teammate who owns it. Sitting down with Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1780705800.0,
+   "event_id": "664dd9aadda9a6638a8e9c82",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1780700400.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand",
+    "Charlene Two Bulls"
+   ],
+   "description": "Charlene rang at twenty to six: barely weighting it and pointing the foot. Ingrid opens it at the toe quarter and poultices it. He is in the stall until she looks at it again.",
+   "end_datetime": 1780713000.0,
+   "event_id": "b1c6a1baf0cdc88879c25ec1",
+   "location": "Bridger Creek Stables, 8460 Springhill Road, Bozeman MT",
+   "start_datetime": 1780707600.0,
+   "tag": "personal",
+   "title": "Kvikk, left hind"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "11.4 km, up fast and down slow, which is the whole of the knee in one sentence.",
+   "end_datetime": 1780758000.0,
+   "event_id": "67d6a3b8d8b8fe9f89b94a56",
+   "location": "Sypes Canyon trailhead, Bridger Range",
+   "start_datetime": 1780756200.0,
+   "tag": "personal",
+   "title": "Trailhead, Sypes Canyon"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "9.6 km with both dogs. Bjorn walks the fence line first and does not notice he is nine.",
+   "end_datetime": 1780848900.0,
+   "event_id": "f61b3625d4c7bd75eb1593f3",
+   "location": "Sypes Canyon trailhead, Bridger Range",
+   "start_datetime": 1780845300.0,
+   "tag": "personal",
+   "title": "Trailhead, Sypes Canyon"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Record the decision for Leadership meeting (Jun 8); with the vendor or teammate who owns it.",
+   "end_datetime": 1780934400.0,
+   "event_id": "58613f044e3283c6ed936488",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1780930800.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Review the current status for 1:1, Dagny Foss (Jun 9) on Jun 9 at 10:00 AM with any money or timing detail called out. On the invite: Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1781023500.0,
+   "event_id": "00a0b5651a1435704be67554",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1781020800.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Oleander Bhattacharya",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Three messages on the net-to-gross thread, so the fourth email does not get written. The answer to the restatement request is the same one it always is: it is on the page.",
+   "end_datetime": 1781027100.0,
+   "event_id": "443d8262a7f9617855c92a00",
+   "location": "Kirchner Hall",
+   "start_datetime": 1781024400.0,
+   "tag": "work",
+   "title": "Walk to Modern Languages"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ninety day levothyroxine 88 mcg at $11.40 and the meloxicam 15 mg at $8.20, both in one trip.",
+   "end_datetime": 1781035200.0,
+   "event_id": "a227fb1bae390751c0d1c50b",
+   "location": "Costco Pharmacy, 2505 Catron Street, Bozeman MT",
+   "start_datetime": 1781033400.0,
+   "tag": "personal",
+   "title": "Prescription pickup, Costco Pharmacy"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Second look at the abscess opened on the fifth. Wrap came off in the paddock on the eighth and the sole looked dry, so it stays off.",
+   "end_datetime": 1781050500.0,
+   "event_id": "f0a9940cc97b434bf5640095",
+   "location": "Bridger Creek Stables, 8460 Springhill Road, Bozeman MT",
+   "start_datetime": 1781047800.0,
+   "tag": "personal",
+   "title": "Kvikk, foot recheck"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Gallatin Valley Weavers Guild"
+   ],
+   "description": "Bring a sample and a draft. The sale committee reports the Emerson numbers: nine entered, two sold, $310.00 against a $40.00 table.",
+   "end_datetime": 1781058600.0,
+   "event_id": "98e4a954b190796a0c5585d6",
+   "location": "Emerson Center for the Arts and Culture, room 205, 111 South Grand Avenue, Bozeman",
+   "start_datetime": 1781051400.0,
+   "tag": "personal",
+   "title": "Weavers Guild, overshot study group"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Capture the action item for Room-request triage (Jun 10) on Jun 10 at 1:30 PM so the follow-up stays traceable. Meeting with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1781123400.0,
+   "event_id": "33265fed49f44a5f61951c4d",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1781119800.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "Half past six at the Cherry River access, which gives four hours and no reason to hurry. Sunset is at 21:12 and the last useful half hour is after it. Boots, a licence and no opinions for the first hour.",
+   "end_datetime": 1781179200.0,
+   "event_id": "a79638931085862516b5a1c0",
+   "location": "East Gallatin River, Cherry River access, Bozeman MT",
+   "start_datetime": 1781177400.0,
+   "tag": "personal",
+   "title": "East Gallatin with Ozias, first evening"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Rosemary Ojukwu-Bright"
+   ],
+   "description": "Declining the NDSU offer. Telephone at nine, in writing by twenty to ten.",
+   "end_datetime": 1781190900.0,
+   "event_id": "c60b18e5d3729af4051c8b6d",
+   "location": "Plew Building, office",
+   "start_datetime": 1781190000.0,
+   "tag": "personal",
+   "title": "Call, Kettering Blaise Partners"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "The Friday drink. Arranged by text on the eleventh: Plonk at five, Daisy already knows. The NDSU decline and the salary number, which is public record.",
+   "end_datetime": 1781310600.0,
+   "event_id": "1700db0b6c9876a6cb21fded",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1781305200.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Fairy Lake road is open. Early start, home before the heat.",
+   "end_datetime": 1781360100.0,
+   "event_id": "0d5f7b34ae182c96d0a4f37b",
+   "location": "Fairy Lake trailhead, Bridger Range",
+   "start_datetime": 1781357400.0,
+   "tag": "personal",
+   "title": "Trailhead, Sacagawea Pass"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Follow up on the Vavstuga account and update the payment method if it changed.",
+   "end_datetime": 1781377200.0,
+   "event_id": "369d3d1aabd2a08c8a4b0f7d",
+   "location": "",
+   "start_datetime": 1781375400.0,
+   "tag": "",
+   "title": "Quick call: Vavstuga"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Twenty-two years on the twenty-second. Table booked for 18:30. Goes in a week ahead, as it has since 2004.",
+   "end_datetime": 1781406000.0,
+   "event_id": "3f8b2c7d94a1e05b6c2d8f41",
+   "location": "",
+   "start_datetime": 1781404200.0,
+   "tag": "personal",
+   "title": "Anniversary, Blackbird"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Eight yards of rag rug from the family's worn shirts, warped 2026-04-26 and cut off today. Berta is still owed a photograph of it.",
+   "end_datetime": 1781472600.0,
+   "event_id": "5c00b5e99974c6b10daf6c67",
+   "location": "Home, basement, 4482 Sourdough Ridge Road",
+   "start_datetime": 1781470800.0,
+   "tag": "personal",
+   "title": "Loom, rag rug off the loom"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "First Monday evening on the river instead of the fairgrounds ice. Ozias Lindqvist is bringing a spare rod and the nymph box.",
+   "end_datetime": 1781485200.0,
+   "event_id": "3f8a1c7d2e5b94061a8fd3c2",
+   "location": "East Gallatin River, Cherry River access",
+   "start_datetime": 1781483400.0,
+   "tag": "personal",
+   "title": "East Gallatin with Ozias"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Check the timing for Leadership meeting (Jun 15); using the notes from the last sync.",
+   "end_datetime": 1781539200.0,
+   "event_id": "ee7cfe3e009397aa56ccf49a",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1781535600.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Close the loop for 1:1, Dagny Foss (Jun 16) on Jun 16 at 10:00 AM with the right person named. Looping in Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1781629200.0,
+   "event_id": "4ce964dd32b0fbb3d7d21856",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1781625600.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Verify the handoff for Room-request triage (Jun 17) on Jun 17 at 1:30 PM with the relevant family context. Meeting with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1781728200.0,
+   "event_id": "76cf91d2c1428ba19a3dab19",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1781724600.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "The riffle above the bridge, where the fish are stupid and forgiving. Short and straight is the correct way round to be bad at this.",
+   "end_datetime": 1781745300.0,
+   "event_id": "aa90b35299493bb807318d46",
+   "location": "East Gallatin River, above the Springhill bridge, Bozeman MT",
+   "start_datetime": 1781742600.0,
+   "tag": "personal",
+   "title": "East Gallatin with Ozias, the riffle above the bridge"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Calloway Rhee",
+    "Lucienne Marchetti-Boone",
+    "Ingeborg Falk",
+    "Absalom Whitcomb",
+    "Oleander Bhattacharya",
+    "Rutherford Vang"
+   ],
+   "description": "Called by the provost. Decision memo v1, the objection from the College of Letters and Science, and where the process goes next.",
+   "end_datetime": 1781908200.0,
+   "event_id": "a5c93017be24f8d601ab72ce",
+   "location": "Montana Hall, provost's conference room",
+   "start_datetime": 1781902800.0,
+   "tag": "work",
+   "title": "Kirchner relocation, deans and department heads"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Keep the context narrow for Plonk (Jun 19) on Jun 19 at 5:00 PM before it becomes stale. On the invite: Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1781915400.0,
+   "event_id": "19eec3dce365a41e31833525",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1781910000.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "",
+   "end_datetime": 1781967600.0,
+   "event_id": "b6183ce09f7a542d81b0e6c4",
+   "location": "Storm Castle trailhead, Gallatin Canyon",
+   "start_datetime": 1781964000.0,
+   "tag": "personal",
+   "title": "Trailhead, Storm Castle"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "First ride since the abscess. Walk only.",
+   "end_datetime": 1782059400.0,
+   "event_id": "8b9c0d1e2f3a4b5c6d7e8f90",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1782054000.0,
+   "tag": "personal",
+   "title": "Kvikk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "Second river evening. Ozias wants to work the riffle above the bridge before the light goes.",
+   "end_datetime": 1782090000.0,
+   "event_id": "9c2e5b8a4d1f70632c9ab8e4",
+   "location": "East Gallatin River, Cherry River access",
+   "start_datetime": 1782088200.0,
+   "tag": "personal",
+   "title": "East Gallatin with Ozias"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Update the working note for Leadership meeting (Jun 22); with the relevant family context.",
+   "end_datetime": 1782144000.0,
+   "event_id": "e94a6442471684feae126576",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1782140400.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Married 2004-06-22. Dinner at Blackbird, $138.40, and half a cake from Wild Crumb that Torvald found before they got home.",
+   "end_datetime": 1782183600.0,
+   "event_id": "d9c44a9f454fe99b368e633c",
+   "location": "Blackbird Kitchen, East Main Street, Bozeman MT",
+   "start_datetime": 1782176400.0,
+   "tag": "personal",
+   "title": "Twenty-two years, Blackbird Kitchen"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Keep the context narrow for 1:1, Dagny Foss (Jun 23) on Jun 23 at 10:00 AM and keep the note short. On the invite: Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1782232200.0,
+   "event_id": "d89e8d7c473e4609369f7842",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1782230400.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dr. Xiomara Petrosyan"
+   ],
+   "description": "Left knee. X-ray and consultation with Dr. Xiomara Petrosyan, four years after it started objecting to stairs.",
+   "end_datetime": 1782248400.0,
+   "event_id": "2e70c48fb9153da60c7e21b5",
+   "location": "Gallatin Orthopedic and Sports Medicine, 1006 West Main Street, Bozeman MT",
+   "start_datetime": 1782244800.0,
+   "tag": "personal",
+   "title": "Dr. Petrosyan"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ambrose Tallchief"
+   ],
+   "description": "Kvikk, full set. Left hind had an abscess at the toe quarter on the fifth.",
+   "end_datetime": 1782321300.0,
+   "event_id": "9c0d1e2f3a4b5c6d7e8f9012",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1782316800.0,
+   "tag": "personal",
+   "title": "Ambrose"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Close the loop for Room-request triage (Jun 24) on Jun 24 at 1:30 PM against what is already on the shared calendar. Looping in Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1782333000.0,
+   "event_id": "d7014e7b24f24b71b019e35e",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1782329400.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Check where things stand with Vavstuga and log the amount before it slips.",
+   "end_datetime": 1782426600.0,
+   "event_id": "4cdaae78b7a0f0756a8ad26e",
+   "location": "",
+   "start_datetime": 1782424800.0,
+   "tag": "",
+   "title": "Vavstuga account follow-up"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "July issue, short one. Picnic sign-up on page two and the June board minutes on the back.",
+   "end_datetime": 1782436500.0,
+   "event_id": "c93b607ade14f2805b6ac371",
+   "location": "4482 Sourdough Ridge Road, Bozeman",
+   "start_datetime": 1782435600.0,
+   "tag": "personal",
+   "title": "Fjordposten layout"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Resolve the open detail for Plonk (Jun 26) on Jun 26 at 5:00 PM with the right person named. Looping in Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1782520200.0,
+   "event_id": "e2380636c1782eedbebc2c62",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1782514800.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "10.2 km up the canyon before the heat. Water carried for Bjorn.",
+   "end_datetime": 1782571500.0,
+   "event_id": "20484b9149577cb7b91c2f24",
+   "location": "Lava Lake trailhead, Gallatin Canyon",
+   "start_datetime": 1782567900.0,
+   "tag": "personal",
+   "title": "Trailhead, Lava Lake"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ride. Worm him after, the tube is in the tack box.",
+   "end_datetime": 1782664200.0,
+   "event_id": "0d1e2f3a4b5c6d7e8f901234",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1782658800.0,
+   "tag": "personal",
+   "title": "Kvikk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "Third evening. Water dropping. Bring the 5 weight and the waders that do not leak.",
+   "end_datetime": 1782695700.0,
+   "event_id": "a71d4f0c8b3e29561d7c4a90",
+   "location": "East Gallatin River, below the Springhill bridge",
+   "start_datetime": 1782693000.0,
+   "tag": "personal",
+   "title": "East Gallatin with Ozias"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Review the current status for Leadership meeting (Jun 29); with the relevant family context.",
+   "end_datetime": 1782748800.0,
+   "event_id": "e2a2d7a1ad785ff3a4f20a6a",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1782745200.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Wynonna Pettibone"
+   ],
+   "description": "Per the lease, notice is due twelve months before the 2027-06-30 expiry. Six Modern Languages rooms sit in that building through the Kirchner moves, so the two dates were always going to collide.",
+   "end_datetime": 1782833400.0,
+   "event_id": "ec51d095166e9a7148105d55",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1782831600.0,
+   "tag": "work",
+   "title": "2115 Fallon Street, renewal notice due to the landlord"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Resolve the open detail for 1:1, Dagny Foss (Jun 30) on Jun 30 at 10:00 AM with the right person named. Looping in Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1782839700.0,
+   "event_id": "6bf996d1be6ba7279b9d9474",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1782835200.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "The Woolery"
+   ],
+   "description": "Square away the Woolery details and mark it done once the charge clears.",
+   "end_datetime": 1782844200.0,
+   "event_id": "f4ca85902e9a235176053b99",
+   "location": "",
+   "start_datetime": 1782842400.0,
+   "tag": "",
+   "title": "Woolery account follow-up"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng",
+    "Oleander Bhattacharya"
+   ],
+   "description": "KIR-018. The 546 ASF error Emmanuel found on 2026-06-24 goes in the second paragraph of the first page, above the decision it changes, with Oleander Bhattacharya's name on the appeal that produced it.",
+   "end_datetime": 1782916200.0,
+   "event_id": "230a7429a446229005ac2dc8",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1782914400.0,
+   "tag": "work",
+   "title": "Kirchner decision memo v2 published, with the correction"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Align on the next move for Room-request triage (Jul 1) on Jul 1 at 1:30 PM before the next calendar pass. On the invite: Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1782937800.0,
+   "event_id": "51c927c9063301eedf280c54",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1782934200.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Renata Kowalczyk-Bell"
+   ],
+   "description": "Evaluation and home program with Renata Kowalczyk-Bell. Copay $45.00.",
+   "end_datetime": 1783034100.0,
+   "event_id": "8a45d1c60fe293b74d18a05c",
+   "location": "Alpenglow Physical Therapy, 2001 Stadium Drive, Bozeman MT",
+   "start_datetime": 1783031400.0,
+   "tag": "personal",
+   "title": "Alpenglow, first session"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Keep the context narrow for Plonk (Jul 3) on Jul 3 at 5:00 PM while the context is fresh. On the invite: Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1783125000.0,
+   "event_id": "035a7cda88f781cc418a76b8",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1783119600.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "",
+   "end_datetime": 1783264500.0,
+   "event_id": "45a9e2f18c0d637b5e91a2d8",
+   "location": "Beehive Basin trailhead, Big Sky MT",
+   "start_datetime": 1783260000.0,
+   "tag": "personal",
+   "title": "Trailhead, Beehive Basin"
+  },
+  {
+   "attendees": [
+    "Emmanuel Adjei-Boateng",
+    "Wynonna Pettibone",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ferris Annex fit-out at $2,140,000.00 and Nordquist humidity control at $1,860,000.00, both in and competing. Emmanuel brings the cost sheets, Wynonna the FY27 lease obligations.",
+   "end_datetime": 1783267200.0,
+   "event_id": "93b0d47e2f1a6c85d09b3e07",
+   "location": "Plew Building conference room",
+   "start_datetime": 1783264500.0,
+   "tag": "work",
+   "title": "FY28 capital request, drafting starts"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ride early. It is going to be ninety by noon.",
+   "end_datetime": 1783279800.0,
+   "event_id": "1e2f3a4b5c6d7e8f90123456",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1783274400.0,
+   "tag": "personal",
+   "title": "Kvikk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "Fourth evening. Ozias is going to show me the nymph rig again, slowly.",
+   "end_datetime": 1783303200.0,
+   "event_id": "c48b9e1a6f2d30754e8ba2c1",
+   "location": "East Gallatin River, Cherry River access",
+   "start_datetime": 1783297800.0,
+   "tag": "personal",
+   "title": "East Gallatin with Ozias"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Align on the next move for Leadership meeting (Jul 6); with the vendor or teammate who owns it.",
+   "end_datetime": 1783353600.0,
+   "event_id": "b3db8f9c8b8f7eb079858b32",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1783350000.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Align on the next move for 1:1, Dagny Foss (Jul 7) on Jul 7 at 10:00 AM so the follow-up stays traceable. On the invite: Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1783441800.0,
+   "event_id": "91417faa1ac3f6eaf51dfe7b",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1783440000.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Renata Kowalczyk-Bell"
+   ],
+   "description": "",
+   "end_datetime": 1783466100.0,
+   "event_id": "51ce93a2078bd4f61e5c30a9",
+   "location": "Alpenglow Physical Therapy, 2001 Stadium Drive, Bozeman MT",
+   "start_datetime": 1783463400.0,
+   "tag": "personal",
+   "title": "Alpenglow, second session"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Confirm the point person for Room-request triage (Jul 8) on Jul 8 at 1:30 PM before it becomes stale. Sitting down with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1783542600.0,
+   "event_id": "5db428e3e9c9f42859b43b3a",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1783539000.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Renata Kowalczyk-Bell"
+   ],
+   "description": "Step-downs go to the eight inch box.",
+   "end_datetime": 1783638900.0,
+   "event_id": "cd0a7f8264e13b95a2f60d17",
+   "location": "Alpenglow Physical Therapy, 2001 Stadium Drive, Bozeman MT",
+   "start_datetime": 1783636200.0,
+   "tag": "personal",
+   "title": "Alpenglow, third session"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Verify the handoff for Plonk (Jul 10) on Jul 10 at 5:00 PM with the right person named. Meeting with Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1783728900.0,
+   "event_id": "e4364a939a96c76a476a3571",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1783724400.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "11.8 km. Saga was off the trail below the third switchback for about a minute and it cost an afternoon of radiographs.",
+   "end_datetime": 1783780200.0,
+   "event_id": "41c2c5b8bb4e5264e214c19d",
+   "location": "Sypes Canyon trailhead, Bridger Range",
+   "start_datetime": 1783778400.0,
+   "tag": "personal",
+   "title": "Trailhead, Sypes Canyon"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Gravel on all three views and nothing obstructing. She was off the trail below the third switchback on Sypes for about a minute. Metronidazole twice daily for five days, bland diet through Sunday, no trail.",
+   "end_datetime": 1783809000.0,
+   "event_id": "6a63a45ee1773788f62cd707",
+   "location": "Gallatin Valley Veterinary Partners, 1740 Baxter Lane, Bozeman MT",
+   "start_datetime": 1783803600.0,
+   "tag": "personal",
+   "title": "Saga, abdominal radiographs"
+  },
+  {
+   "attendees": [
+    "Merideth Thorsrud",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Catch-up with Merideth Thorsrud: discuss the present decision point and any practical constraints.",
+   "end_datetime": 1783810800.0,
+   "event_id": "857edbc0a86a5c32ad809d80",
+   "location": "",
+   "start_datetime": 1783809000.0,
+   "tag": "",
+   "title": "Merideth Thorsrud"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Square away the Vavstuga details and flag anything that needs a reply.",
+   "end_datetime": 1783866600.0,
+   "event_id": "a9721af421dbdbe7c0693727",
+   "location": "",
+   "start_datetime": 1783864800.0,
+   "tag": "",
+   "title": "Coffee w/ Vavstuga"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "8.4 km on a Sunday morning, flat by design, with the step-downs done first.",
+   "end_datetime": 1783875600.0,
+   "event_id": "685f3be752c1066fcc32d6f0",
+   "location": "Hyalite Reservoir trailhead, Hyalite Canyon",
+   "start_datetime": 1783868400.0,
+   "tag": "personal",
+   "title": "Trailhead, Hyalite Reservoir"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "Fifth evening. Hot week, so we start later and stay until it is dark.",
+   "end_datetime": 1783904400.0,
+   "event_id": "e17c3a9d5b8f42061c3e7dab",
+   "location": "East Gallatin River, below the Springhill bridge",
+   "start_datetime": 1783902600.0,
+   "tag": "personal",
+   "title": "East Gallatin with Ozias"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Denton Tolliver",
+    "Wilhelmina Oyelowo-Krantz"
+   ],
+   "description": "Day one of nine working days. Big Sky Post & Beam on the structure first, Tolliver's crew behind them. Magnet sweeper down both fence lines at the end of the day.",
+   "end_datetime": 1783951200.0,
+   "event_id": "6c9fd03b5c44277a4b510cc1",
+   "location": "4482 Sourdough Ridge Road, pole barn",
+   "start_datetime": 1783947600.0,
+   "tag": "personal",
+   "title": "Roof, crew on site, day one"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Capture the action item for Leadership meeting (Jul 13); against what is already on the shared calendar.",
+   "end_datetime": 1783958400.0,
+   "event_id": "96977ab2566a3453d52c514d",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1783954800.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Denton Tolliver",
+    "Wilhelmina Oyelowo-Krantz"
+   ],
+   "description": "Crew starts. Willa's people pull the two purlins and sister the rafter tail on the 13th and 14th, then Tolliver's crew on the metal. Off by the 23rd.",
+   "end_datetime": 1784043000.0,
+   "event_id": "20c8b1e7a4d9536f10b2c8e7",
+   "location": "4482 Sourdough Ridge Road, pole barn",
+   "start_datetime": 1784042100.0,
+   "tag": "",
+   "title": "Roof, day 1 of 9 (Big Sky framing)"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Record the decision for 1:1, Dagny Foss (Jul 14) on Jul 14 at 10:00 AM with any money or timing detail called out. Looping in Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1784048400.0,
+   "event_id": "3c199aea9b42f8b5c8f9e91e",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1784044800.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Renata Kowalczyk-Bell",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "",
+   "end_datetime": 1784070900.0,
+   "event_id": "3b6e15d0c48a729f0be5147d",
+   "location": "Alpenglow Physical Therapy, 2001 Stadium Drive, Bozeman MT",
+   "start_datetime": 1784068200.0,
+   "tag": "personal",
+   "title": "Alpenglow, fourth session"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Resolve the open detail for Room-request triage (Jul 15) on Jul 15 at 1:30 PM before the next calendar pass. Looping in Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1784147400.0,
+   "event_id": "8f988f74523b39635ed6bfc5",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1784143800.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Aase Bergflodt"
+   ],
+   "description": "Catch-up with Aase Bergflodt: discuss the present decision point and any practical constraints.",
+   "end_datetime": 1784241000.0,
+   "event_id": "9427631785ded6395ddc8de0",
+   "location": "",
+   "start_datetime": 1784239200.0,
+   "tag": "",
+   "title": "Aase Bergflodt"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Renata Kowalczyk-Bell"
+   ],
+   "description": "",
+   "end_datetime": 1784243700.0,
+   "event_id": "f294a86b03d51ce7482b6f10",
+   "location": "Alpenglow Physical Therapy, 2001 Stadium Drive, Bozeman MT",
+   "start_datetime": 1784241000.0,
+   "tag": "personal",
+   "title": "Alpenglow, fifth session"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Denton Tolliver",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Walk both slopes, sign off, hand over the balance of $20,880.00 and collect the completion certificate for Farm Bureau.",
+   "end_datetime": 1784329200.0,
+   "event_id": "b71e0c8a4d29536f10c2b8e7",
+   "location": "4482 Sourdough Ridge Road, pole barn",
+   "start_datetime": 1784325600.0,
+   "tag": "",
+   "title": "Final walk, Denton Tolliver"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Review the current status for Plonk (Jul 17) on Jul 17 at 5:00 PM with the vendor or teammate who owns it. On the invite: Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1784331900.0,
+   "event_id": "f63d8c16e59ecfcb6facbd04",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1784329200.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "14.0 km and 880 metres climbed, and nothing hurt on the way up.",
+   "end_datetime": 1784385900.0,
+   "event_id": "8eb43e4f1cc7917e1a81d299",
+   "location": "Fairy Lake trailhead, Bridger Range",
+   "start_datetime": 1784381400.0,
+   "tag": "personal",
+   "title": "Trailhead, Sacagawea Pass"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "Sixth evening. The mended rig works. Told Ozias so on the bank and he wrote two hundred words back about it anyway.",
+   "end_datetime": 1784509200.0,
+   "event_id": "b62f8d4e1a7c39051f2b6c8d",
+   "location": "East Gallatin River, Cherry River access",
+   "start_datetime": 1784507400.0,
+   "tag": "personal",
+   "title": "East Gallatin with Ozias"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Out of the drive at 06:45. Both elkhounds in the back, because the alternative was boarding them. Lunch stop in Three Forks.",
+   "end_datetime": 1784556000.0,
+   "event_id": "c7a1e40b93f25d6180ac4e32",
+   "location": "Bozeman MT to Missoula MT",
+   "start_datetime": 1784551500.0,
+   "tag": "personal",
+   "title": "Drive to Missoula"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Torvald Strand-Solheim",
+    "Ingrid Solheim-Strand"
+   ],
+   "description": "Out at seven in the Outback with both dogs in the back. Missoula the twenty-first, Butte the twenty-second, Moscow the twenty-third, home the twenty-fourth. Tours booked at ten each morning.",
+   "end_datetime": 1784592000.0,
+   "event_id": "9520e7ba3d18c46f057ea9d3",
+   "location": "Missoula, Butte, Moscow ID",
+   "start_datetime": 1784556000.0,
+   "tag": "personal",
+   "title": "Campus trip: Missoula, Butte, Moscow"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Morning tour. On the road south by noon to be home for the 16:30 Alpenglow session.",
+   "end_datetime": 1784656800.0,
+   "event_id": "b41f9c02de7a586134cd90e7",
+   "location": "Lommasson Center, University of Montana, Missoula MT",
+   "start_datetime": 1784649600.0,
+   "tag": "personal",
+   "title": "University of Montana visit"
+  },
+  {
+   "attendees": [
+    "Renata Kowalczyk-Bell",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Sixth of six. Ask about the long days in August.",
+   "end_datetime": 1784675700.0,
+   "event_id": "7ea3018cd526b94f13c8e0a5",
+   "location": "Alpenglow Physical Therapy, 2001 Stadium Drive, Bozeman MT",
+   "start_datetime": 1784673000.0,
+   "tag": "personal",
+   "title": "Alpenglow, sixth and last session"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Check in 09:45 at the Student Union Building. Session at 10:00, then the mineral processing and petroleum laboratories. Closed toe shoes for the lab portion.",
+   "end_datetime": 1784740500.0,
+   "event_id": "9e5c34ab71d0f2683a4b1cd5",
+   "location": "Student Union Building, Montana Technological University, Butte MT",
+   "start_datetime": 1784736000.0,
+   "tag": "personal",
+   "title": "Montana Tech visit"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "The overlook after the campus tour, with Ingrid and both dogs on the platform.",
+   "end_datetime": 1784755800.0,
+   "event_id": "e10c74d3ab29586f04b1d7c8",
+   "location": "Berkeley Pit overlook, Butte MT",
+   "start_datetime": 1784752200.0,
+   "tag": "personal",
+   "title": "Berkeley Pit overlook"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Check in 09:45 at the Bruce Pitman Center. Presentation at 10:00, tour to 11:45, then an adviser from the College of Natural Resources.",
+   "end_datetime": 1784828700.0,
+   "event_id": "4d2b8f6013ac59e7d8b0c14f",
+   "location": "Bruce Pitman Center, University of Idaho, Moscow ID",
+   "start_datetime": 1784822400.0,
+   "tag": "personal",
+   "title": "University of Idaho visit"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Highway 12 down the Clearwater, over Lolo Pass, and home. About eleven hours with stops for the dogs.",
+   "end_datetime": 1784903400.0,
+   "event_id": "a8032e5cbd47196f2a5d8b03",
+   "location": "Moscow ID to Bozeman MT",
+   "start_datetime": 1784899800.0,
+   "tag": "personal",
+   "title": "Moscow to Bozeman"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "9.9 km and hot by nine. Poles on the descent, which is the one thing Petrosyan asked for.",
+   "end_datetime": 1784992500.0,
+   "event_id": "4996b10fe27c0e69e261234d",
+   "location": "Storm Castle trailhead, Gallatin Canyon",
+   "start_datetime": 1784988000.0,
+   "tag": "personal",
+   "title": "Trailhead, Storm Castle"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "August issue. Picnic on the ninth on the front, and two coffee urns still unclaimed.",
+   "end_datetime": 1785029400.0,
+   "event_id": "0e47a1c9b8d62f350a7e94db",
+   "location": "4482 Sourdough Ridge Road, Bozeman",
+   "start_datetime": 1785027600.0,
+   "tag": "personal",
+   "title": "Fjordposten layout"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "",
+   "end_datetime": 1785082500.0,
+   "event_id": "58b2ce70941df6a3c25b08e1",
+   "location": "Lava Lake trailhead, Gallatin Canyon",
+   "start_datetime": 1785078000.0,
+   "tag": "personal",
+   "title": "Trailhead, Lava Lake"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Drop the Outback for the timing belt, water pump, seals and accessory belt. One day in the shop, loaner held. Ready between 16:00 and 17:00.",
+   "end_datetime": 1785160800.0,
+   "event_id": "6e13b8d4f0a25c79e3b104da",
+   "location": "Bozeman Import Service, 2404 North 7th Avenue",
+   "start_datetime": 1785159000.0,
+   "tag": "personal",
+   "title": "Outback in the shop"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Review the current status for Leadership meeting (Jul 27); and leave side topics for another time.",
+   "end_datetime": 1785168000.0,
+   "event_id": "e04158735dd2b4cf37516ecb",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1785164400.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Collect the car, settle the invoice, return the loaner with fuel in it.",
+   "end_datetime": 1785193200.0,
+   "event_id": "a90f52c6b71e348d05c2f9b1",
+   "location": "Bozeman Import Service, 2404 North 7th Avenue",
+   "start_datetime": 1785191400.0,
+   "tag": "personal",
+   "title": "Pick up the Outback"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Capture the action item for 1:1, Dagny Foss (Jul 28) on Jul 28 at 10:00 AM before it becomes stale. Meeting with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1785257100.0,
+   "event_id": "ddef58aa03b682a76e0c1604",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1785254400.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Rutherford Vang",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Fourth time this window that a thread reached three messages. Six words per message from Rutherford, which is a reason to walk and not a reason to write again.",
+   "end_datetime": 1785256200.0,
+   "event_id": "59efe8f6e2ef8c53b791a812",
+   "location": "Traphagen Hall",
+   "start_datetime": 1785253500.0,
+   "tag": "work",
+   "title": "Walk to Earth Sciences"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Record the decision for Room-request triage (Jul 29) on Jul 29 at 1:30 PM before it becomes stale. Looping in Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1785357000.0,
+   "event_id": "e37f60360cbb8d2caaefad3d",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1785353400.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Check where things stand with Vavstuga and update the payment method if it changed.",
+   "end_datetime": 1785508200.0,
+   "event_id": "c26e8c0155c73c9857344127",
+   "location": "",
+   "start_datetime": 1785506400.0,
+   "tag": "",
+   "title": "Vavstuga account follow-up"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Keep the context narrow for Plonk (Jul 31) on Jul 31 at 5:00 PM using the notes from the last sync. On the invite: Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1785542400.0,
+   "event_id": "5c7999aba15b3967a92175bc",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1785538800.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "11.4 km. The wildflowers are done and the gully is finally dry.",
+   "end_datetime": 1785682800.0,
+   "event_id": "e2e0a3dfdf20deab5a02a1a7",
+   "location": "Beehive Basin trailhead, Big Sky MT",
+   "start_datetime": 1785680100.0,
+   "tag": "personal",
+   "title": "Trailhead, Beehive Basin"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "Seventh evening, and off the East Gallatin for the first time. Axtell Bridge, because the water is warm everywhere else.",
+   "end_datetime": 1785720600.0,
+   "event_id": "d93a1e6b8c4f27503a9d1e5b",
+   "location": "Gallatin River, Axtell Bridge access",
+   "start_datetime": 1785717000.0,
+   "tag": "personal",
+   "title": "Gallatin with Ozias"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Close the loop for Leadership meeting (Aug 3); before it becomes stale.",
+   "end_datetime": 1785772800.0,
+   "event_id": "23b127a1e2df8ec924ca9df7",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1785769200.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Capture the action item for 1:1, Dagny Foss (Aug 4) on Aug 4 at 10:00 AM and keep the note short. Meeting with Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1785863700.0,
+   "event_id": "8f560d414b2b636e3993129d",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1785859200.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Check the timing for Room-request triage (Aug 5) on Aug 5 at 1:30 PM while the context is fresh. Sitting down with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1785961800.0,
+   "event_id": "f097c8c450e6560886c92967",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1785958200.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Align on the next move for Plonk (Aug 7) on Aug 7 at 5:00 PM and keep the note short. On the invite: Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1786149000.0,
+   "event_id": "79dee5d40da978dc75d208a5",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1786143600.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "13.6 km on the north half of the ridge line, a week before the traverse. The knee was fine on it.",
+   "end_datetime": 1786200300.0,
+   "event_id": "11b7febbb00735fff8e3f277",
+   "location": "Fairy Lake trailhead, Bridger Range",
+   "start_datetime": 1786196700.0,
+   "tag": "personal",
+   "title": "Trailhead, Sacagawea Pass, reconnaissance"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Ride, then measure him for the winter blanket.",
+   "end_datetime": 1786293000.0,
+   "event_id": "2f3a4b5c6d7e8f9012345678",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1786287600.0,
+   "tag": "personal",
+   "title": "Kvikk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Triage the logistics for Leadership meeting (Aug 10); so the follow-up stays traceable.",
+   "end_datetime": 1786377600.0,
+   "event_id": "6592d9af868eea18460b49bd",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1786374000.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Review the current status for 1:1, Dagny Foss (Aug 11) on Aug 11 at 10:00 AM using the notes from the last sync. On the invite: Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1786466700.0,
+   "event_id": "068ffa461dc8782536c79b05",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1786464000.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ambrose Tallchief"
+   ],
+   "description": "Kvikk, full set. Next visit the thirtieth of September.",
+   "end_datetime": 1786554900.0,
+   "event_id": "3a4b5c6d7e8f90123456789a",
+   "location": "Bridger Creek Stables, 8460 Springhill Road",
+   "start_datetime": 1786550400.0,
+   "tag": "personal",
+   "title": "Ambrose"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Check the timing for Room-request triage (Aug 12) on Aug 12 at 1:30 PM against what is already on the shared calendar. Sitting down with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1786566600.0,
+   "event_id": "57301cbca5f4fa209f9d2f98",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1786563000.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Record the decision for Plonk (Aug 14) on Aug 14 at 5:00 PM and leave side topics for another time. Looping in Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1786753800.0,
+   "event_id": "16b340beed118135eb9f0564",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1786748400.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Nineteen point six miles with Dagny Foss. Her truck at the M, my Outback at Fairy Lake. Walking by 05:40. Ross Pass is the bail if the weather turns.",
+   "end_datetime": 1786833900.0,
+   "event_id": "e731b0d5642af9c8073e1b95",
+   "location": "Fairy Lake trailhead to the M trailhead, Bridger Range",
+   "start_datetime": 1786794300.0,
+   "tag": "personal",
+   "title": "Bridger ridge, Fairy Lake to the M"
+  },
+  {
+   "attendees": [
+    "Wynonna Pettibone",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Term to 2030-06-30 at $18.40 a square foot. Wynonna signs, countersignature the same morning.",
+   "end_datetime": 1786822200.0,
+   "event_id": "0e5c3a186bd94f27c1a80e35",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1786818600.0,
+   "tag": "work",
+   "title": "2115 Fallon Street, amendment signing"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Capture the action item for Leadership meeting (Aug 17); with the relevant family context.",
+   "end_datetime": 1786982400.0,
+   "event_id": "be211ad92aad8e8e9d3c196b",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1786978800.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ozias Lindqvist"
+   ],
+   "description": "Last river evening before school and the groundbreaking take the calendar back. Axtell Bridge again.",
+   "end_datetime": 1787014800.0,
+   "event_id": "f28c7b3d9e1a56042b8f3c7e",
+   "location": "Gallatin River, Axtell Bridge access",
+   "start_datetime": 1787012100.0,
+   "tag": "personal",
+   "title": "Gallatin with Ozias"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Close the loop for 1:1, Dagny Foss (Aug 18) on Aug 18 at 10:00 AM with the vendor or teammate who owns it. Looping in Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1787070600.0,
+   "event_id": "252a85d798458e981e857e41",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1787068800.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Check the timing for Room-request triage (Aug 19) on Aug 19 at 1:30 PM against what is already on the shared calendar. Sitting down with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1787171400.0,
+   "event_id": "dce7fe48e5048a9a879f2937",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1787167800.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng",
+    "Wynonna Pettibone",
+    "Tobiah Ruiz-Kranzler",
+    "Ferdinand Nakashima",
+    "Perpetua Sandoval-Okafor",
+    "Dagny Foss"
+   ],
+   "description": "The FY28 capital request ranking goes to the committee before it goes to the system of record. Ferris Annex fit-out at $2,140,000.00 against Nordquist humidity control at $1,860,000.00, ranked with the reasons beside it. Comments back by 4 September.",
+   "end_datetime": 1787261400.0,
+   "event_id": "f9f5a292584d042ea5316e6f",
+   "location": "Plew Building conference room",
+   "start_datetime": 1787256000.0,
+   "tag": "work",
+   "title": "University Space Advisory Committee, FY28 capital ranking"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss",
+    "Marguerite Oyelaran"
+   ],
+   "description": "Keep the context narrow for Plonk (Aug 21) on Aug 21 at 5:00 PM and keep the note short. On the invite: Magnhild Kirsten Strand, Dagny Foss, and 1 more.",
+   "end_datetime": 1787358600.0,
+   "event_id": "fe716282a5e3d4ae0676390f",
+   "location": "Plonk, East Main Street, Bozeman",
+   "start_datetime": 1787353200.0,
+   "tag": "personal",
+   "title": "Plonk"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Torvald Strand-Solheim"
+   ],
+   "description": "Four ton of grass hay into the loft. Torvald and I stacking with the driver.",
+   "end_datetime": 1787412600.0,
+   "event_id": "4b5c6d7e8f90123456789abc",
+   "location": "4482 Sourdough Ridge Road, Bozeman MT 59715",
+   "start_datetime": 1787407200.0,
+   "tag": "personal",
+   "title": "Hay delivery"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Special order 20 inch chain at the Main Street counter, ordered 2026-08-21.",
+   "end_datetime": 1787427900.0,
+   "event_id": "f70b1e8d5a26c4930f18ad72",
+   "location": "Owenhouse Ace Hardware, 36 East Main Street",
+   "start_datetime": 1787425200.0,
+   "tag": "personal",
+   "title": "Pick up chainsaw chain, Owenhouse"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand",
+    "Torvald Strand-Solheim"
+   ],
+   "description": "Limbing conifers to ten feet inside the thirty foot zone, house and barn. Borrowed pole saw from Hollis Deering. Magnhild, Ingrid and Torvald.",
+   "end_datetime": 1787436900.0,
+   "event_id": "5d8a2f7b419c03e6ad71b2f4",
+   "location": "4482 Sourdough Ridge Road",
+   "start_datetime": 1787432400.0,
+   "tag": "personal",
+   "title": "Defensible space, day one"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Eight shafts, lambswool from The Woolery. Natural ground, moorit blocks, four picks of red at each end. For a graduation on 2027-05-30, and it is not grey.",
+   "end_datetime": 1787514300.0,
+   "event_id": "66840e07592d071fb8929c01",
+   "location": "Home, basement, 4482 Sourdough Ridge Road",
+   "start_datetime": 1787511600.0,
+   "tag": "personal",
+   "title": "Loom, warp Torvald's blanket"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingrid Solheim-Strand",
+    "Torvald Strand-Solheim"
+   ],
+   "description": "Finish the south side, move the woodpile off the house wall to the north side of the barn, and run the debris to Logan. Magnhild, Ingrid and Torvald.",
+   "end_datetime": 1787530500.0,
+   "event_id": "a2f65c390b7d18e4c5a3f091",
+   "location": "4482 Sourdough Ridge Road",
+   "start_datetime": 1787522400.0,
+   "tag": "personal",
+   "title": "Defensible space, day two"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Review the current status for Leadership meeting (Aug 24); with any money or timing detail called out.",
+   "end_datetime": 1787587200.0,
+   "event_id": "96923868dee7c8fa6ddb12cb",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1787583600.0,
+   "tag": "work",
+   "title": "Leadership meeting"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Six month cleaning, confirmed by text. Covered in full under the MUS Choices dental plan.",
+   "end_datetime": 1787669100.0,
+   "event_id": "5a6fcb8e4d9fe0ddb60a76f1",
+   "location": "Bridger Peaks Dental, 2415 West Main Street, Bozeman MT",
+   "start_datetime": 1787665500.0,
+   "tag": "personal",
+   "title": "Bridger Peaks Dental, cleaning"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Dagny Foss"
+   ],
+   "description": "Resolve the open detail for 1:1, Dagny Foss (Aug 25) on Aug 25 at 10:00 AM while the context is fresh. Looping in Magnhild Kirsten Strand and Dagny Foss.",
+   "end_datetime": 1787678100.0,
+   "event_id": "051406c1980a757e2ae9590f",
+   "location": "Plew Building, room 210",
+   "start_datetime": 1787673600.0,
+   "tag": "work",
+   "title": "1:1, Dagny Foss"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "September issue, laid out and exported tonight, out on the first. Autumn calendar and the picnic photographs.",
+   "end_datetime": 1787709600.0,
+   "event_id": "f628d0b4915ae7c32d840b6f",
+   "location": "4482 Sourdough Ridge Road, Bozeman",
+   "start_datetime": 1787706000.0,
+   "tag": "personal",
+   "title": "Fjordposten layout"
+  },
+  {
+   "attendees": [
+    "Torvald Strand-Solheim",
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Senior year starts. He drives himself and Nordic team meets afterward.",
+   "end_datetime": 1787763600.0,
+   "event_id": "c78b3062e15da9744b209fc8",
+   "location": "Bozeman High School, 205 North 11th Avenue",
+   "start_datetime": 1787752800.0,
+   "tag": "personal",
+   "title": "First day, senior year"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Cleaning, booked from the chair in April. Second one this year.",
+   "end_datetime": 1787669100.0,
+   "event_id": "9c40ea1b7d635f2804be18ca",
+   "location": "Bridger Peaks Dental, 2415 West Main Street, Bozeman MT",
+   "start_datetime": 1787665500.0,
+   "tag": "personal",
+   "title": "Bridger Peaks Dental"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Tobiah Ruiz-Kranzler"
+   ],
+   "description": "Update the working note for Room-request triage (Aug 26) on Aug 26 at 1:30 PM before it becomes stale. Sitting down with Magnhild Kirsten Strand and Tobiah Ruiz-Kranzler.",
+   "end_datetime": 1787776200.0,
+   "event_id": "a754290fcaf41e756e6391ac",
+   "location": "Plew Building, room 214",
+   "start_datetime": 1787772600.0,
+   "tag": "work",
+   "title": "Room-request triage"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "9.4 km, the last Saturday of August, and the descent cost less than it did in June.",
+   "end_datetime": 1788014700.0,
+   "event_id": "dbbc9b30e0a0b0ccc4433736",
+   "location": "Storm Castle trailhead, Gallatin Canyon",
+   "start_datetime": 1788012000.0,
+   "tag": "personal",
+   "title": "Trailhead, Storm Castle"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Special order 20 inch chain, held at the Main Street counter under STRAND through 08/29.",
+   "end_datetime": 1788028200.0,
+   "event_id": "a0de6e3b7e8802cec8985acf",
+   "location": "Owenhouse Ace Hardware, 36 East Main Street, Bozeman MT",
+   "start_datetime": 1788026400.0,
+   "tag": "personal",
+   "title": "Pick up the chainsaw chain, Owenhouse"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Twelve month look at the patellofemoral joint, deliberately set after the ski season rather than in the middle of it, which she noticed and appreciated.",
+   "end_datetime": 1802386800.0,
+   "event_id": "9b1a3269d09ba7233886720b",
+   "location": "Gallatin Orthopedic and Sports Medicine, 1006 West Main Street, Bozeman MT",
+   "start_datetime": 1802383200.0,
+   "tag": "personal",
+   "title": "Dr. Petrosyan, left knee follow-up"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Two seats, sideline, lower bowl. Bought on the porch in July for $196.00. Idaho, not Idaho State. Ingrid is on call that weekend.",
+   "end_datetime": 1789270200.0,
+   "event_id": "58763c04c8aebebe3653d3cb",
+   "location": "Brick Breeden Fieldhouse, 1 Bobcat Circle, Bozeman MT",
+   "start_datetime": 1789263000.0,
+   "tag": "personal",
+   "title": "Bobcats volleyball vs. Idaho"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Clementine Achebe-Ross",
+    "Merideth Thorsrud",
+    "Barrett Quillan-Doyle",
+    "Calloway Rhee",
+    "Ferdinand Nakashima"
+   ],
+   "description": "Ninety seconds on the programme, one hundred and forty words written. Advancement wants photographs. Mrs Thorsrud comes from Big Timber and does not do email, so the confirmation went by letter.",
+   "end_datetime": 1790271000.0,
+   "event_id": "fc6e595a2f2ed93dc2acb0df",
+   "location": "Kirchner Hall parking lot, Montana State University",
+   "start_datetime": 1790267400.0,
+   "tag": "work",
+   "title": "Thorsrud Center groundbreaking"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Deadline marker. Ranking as published to the committee on 20 August, ASF per FTE columns refreshed against the fall census the week before.",
+   "end_datetime": 1792080000.0,
+   "event_id": "c17b9de035a2f486b0d31c79",
+   "location": "",
+   "start_datetime": 1792076400.0,
+   "tag": "work",
+   "title": "FY28 capital request due to system office"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Six months on from the March draw. Booked through the patient portal.",
+   "end_datetime": 1788965100.0,
+   "event_id": "c73615dfaa06ba6690beb3ba",
+   "location": "Bozeman Health, 915 Highland Boulevard, Bozeman MT",
+   "start_datetime": 1788962400.0,
+   "tag": "personal",
+   "title": "Lab draw, TSH and free T4"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand"
+   ],
+   "description": "Next ninety day fill of the levothyroxine. Refill started by text on 2026-08-23.",
+   "end_datetime": 1788798600.0,
+   "event_id": "60fee083c5e899d8efdc4ee5",
+   "location": "Costco Pharmacy, 2505 Catron Street, Bozeman MT",
+   "start_datetime": 1788796800.0,
+   "tag": "personal",
+   "title": "Prescription refill due, Costco Pharmacy"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ambrose Tallchief"
+   ],
+   "description": "Seven weeks on from the twelfth of August. $185.00 and he prefers a check, which goes on the tack room shelf as always.",
+   "end_datetime": 1790787600.0,
+   "event_id": "c59b6928a29943356938d7ab",
+   "location": "Bridger Creek Stables, 8460 Springhill Road, Bozeman MT",
+   "start_datetime": 1790784000.0,
+   "tag": "personal",
+   "title": "Ambrose Tallchief, farrier"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Anneke Strand-Solheim"
+   ],
+   "description": "Two tickets, Orchestra Left, Row K, $118.00 all in. The same pairing as the Bozeman Symphony in March, in the other order, in Anneke's town.",
+   "end_datetime": 1791694800.0,
+   "event_id": "8003ab62f464a60d6740735d",
+   "location": "Hult Center for the Performing Arts, Silva Concert Hall, 1 Eugene Center, Eugene OR",
+   "start_datetime": 1791685800.0,
+   "tag": "personal",
+   "title": "Eugene Symphony, Sibelius and Grieg"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng",
+    "Wynonna Pettibone",
+    "Tobiah Ruiz-Kranzler",
+    "Ferdinand Nakashima",
+    "Perpetua Sandoval-Okafor"
+   ],
+   "description": "Agenda out Friday, three days ahead as always. Draft criteria v1 and the comment window, FY26 inventory draft attached so the committee reads the number before it is said out loud.",
+   "end_datetime": 1779399000.0,
+   "event_id": "f047756e0327790f6a4959a1",
+   "location": "Plew Building conference room",
+   "start_datetime": 1779393600.0,
+   "tag": "work",
+   "title": "University Space Advisory Committee"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng",
+    "Wynonna Pettibone",
+    "Tobiah Ruiz-Kranzler",
+    "Ferdinand Nakashima",
+    "Perpetua Sandoval-Okafor"
+   ],
+   "description": "Agenda out Friday, three days ahead as always. Draft criteria v1 and the comment window, FY26 inventory draft attached so the committee reads the number before it is said out loud.",
+   "end_datetime": 1781818200.0,
+   "event_id": "3a1fdf48c6135271dda62326",
+   "location": "Plew Building conference room",
+   "start_datetime": 1781812800.0,
+   "tag": "work",
+   "title": "University Space Advisory Committee"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Emmanuel Adjei-Boateng",
+    "Wynonna Pettibone",
+    "Tobiah Ruiz-Kranzler",
+    "Ferdinand Nakashima",
+    "Perpetua Sandoval-Okafor"
+   ],
+   "description": "Agenda out Friday, three days ahead as always. Draft criteria v1 and the comment window, FY26 inventory draft attached so the committee reads the number before it is said out loud.",
+   "end_datetime": 1784237400.0,
+   "event_id": "c7373f0bc22a255aa1a05f03",
+   "location": "Plew Building conference room",
+   "start_datetime": 1784232000.0,
+   "tag": "work",
+   "title": "University Space Advisory Committee"
+  },
+  {
+   "attendees": [
+    "Magnhild Kirsten Strand",
+    "Ingeborg Falk"
+   ],
+   "description": "Close the loop for Leadership meeting (Jun 1); with the right person named.",
+   "end_datetime": 1779120000.0,
+   "event_id": "293bcb52fdc4e5d92ce7d676",
+   "location": "Montana Hall, VP conference room",
+   "start_datetime": 1779116400.0,
+   "tag": "work",
+   "title": "University Services leadership"
+  }
+ ]
+}

@@ -1,0 +1,2239 @@
+{
+ "conversations": [
+  {
+   "conversation_id": "c47b1e0a935d68f2017a4cb3",
+   "last_updated": 1781798194.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "is the hall unlocked before 6 tonight or do we wait",
+     "message_id": "2d81af4790c635be0173ea18",
+     "sender_id": "145f85435e97b7c63c1bfddf",
+     "timestamp": 1777485578.0
+    },
+    {
+     "attachment_name": null,
+     "content": "kjersti has the key",
+     "message_id": "e69340c15ba7218f0142db07",
+     "sender_id": "05f8851f5f10e7c7972d1f1c",
+     "timestamp": 1777488025.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I will be there at 5:30!! Door will be open!",
+     "message_id": "804cb17e29a3d5f6013b7a90",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1777489511.0
+    },
+    {
+     "attachment_name": null,
+     "content": "takk",
+     "message_id": "5f2ba0c73e148d9601c47b3a",
+     "sender_id": "b874bf10b3dc80da15bd00c7",
+     "timestamp": 1777490092.0
+    },
+    {
+     "attachment_name": null,
+     "content": "who has the coffee urn from May",
+     "message_id": "36c1d8047a95be2f0158ac71",
+     "sender_id": "145f85435e97b7c63c1bfddf",
+     "timestamp": 1781794499.0
+    },
+    {
+     "attachment_name": null,
+     "content": "basement closet i think",
+     "message_id": "b02e7c934af158d60127b4a9",
+     "sender_id": "05f8851f5f10e7c7972d1f1c",
+     "timestamp": 1781798194.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "799138452b96423b8dc1682b",
+    "b874bf10b3dc80da15bd00c7",
+    "05f8851f5f10e7c7972d1f1c",
+    "145f85435e97b7c63c1bfddf"
+   ],
+   "title": "Fjordposten"
+  },
+  {
+   "conversation_id": "d5810c7a49be235f0173ac92",
+   "last_updated": 1783229780.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Hi, this is Magnhild Strand out on Sourdough Ridge Road. Our well pressure has been dropping off in the mornings and the tap sputters air. Do you have anyone who could come look this week?",
+     "message_id": "9704b1ca38de526f0147ba61",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783045495.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Morning Magnhild. Sputtering usually means the pressure tank is waterlogged or the bladder is shot. Can you check the gauge when it cycles and tell me the cut in and cut out numbers?",
+     "message_id": "2e0c8b7143ad956f0128bc47",
+     "sender_id": "25682696e399f541371247e4",
+     "timestamp": 1783049427.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Gauge drops to about 22 then climbs to 48, and it cycles fast. Maybe four times while I filled a stock pot.",
+     "message_id": "71bd0a4c9e83526f0193ac18",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783051373.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That's short cycling, almost certainly the tank. We can be out Thursday between 9 and 11. Bring the dogs in if you have any, we'll be in and out of the well house.",
+     "message_id": "f5da49744c2a198f8c3633d9",
+     "sender_id": "25682696e399f541371247e4",
+     "timestamp": 1783209183.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Thursday works. The well house is the small cedar one behind the garage, it's unlocked. I teach until noon so my husband will be around.",
+     "message_id": "4d746fc23a00ec616bdf7ec3",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783221573.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Perfect. Tank replacement runs about $680 installed if that's all it is. If the pump itself is weak we'll pull it and talk before doing anything else.",
+     "message_id": "cf8daa026155f5f5bd02dd51",
+     "sender_id": "25682696e399f541371247e4",
+     "timestamp": 1783224666.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Understood, please call before pulling anything. Thanks Ferndale.",
+     "message_id": "cde68a1507b762be99fc9fde",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783225730.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Will do. See you Thursday.",
+     "message_id": "276ba0944878914ef42412b7",
+     "sender_id": "25682696e399f541371247e4",
+     "timestamp": 1783229780.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "25682696e399f541371247e4"
+   ],
+   "title": "Ferndale Well & Pump"
+  },
+  {
+   "conversation_id": "4d82e0b9c76135af2e08d914",
+   "last_updated": 1777910496.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Magnhild, are you still good to bring two batches of lefse for the lodge supper on the 21st? I'm finalizing the food list tonight.",
+     "message_id": "b60c9174e2af38d05b1c724e",
+     "sender_id": "bfe5eb21d961b92cbc6e5b30",
+     "timestamp": 1777831207.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Yes, two batches. I'll need the big griddle back though, it's still in your basement from December.",
+     "message_id": "15af3c8062be9d7401fa38c5",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1777831423.0
+    },
+    {
+     "attachment_name": null,
+     "content": "It's sitting right by the freezer. Come grab it any evening this week, side door is unlocked until 8.",
+     "message_id": "c7d418ba60539ef21b4a0d86",
+     "sender_id": "bfe5eb21d961b92cbc6e5b30",
+     "timestamp": 1777834107.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I'll swing by Thursday after work. Do you want me to bring butter and sugar or is that covered?",
+     "message_id": "641b5894c344ac1a57c36691",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1777898377.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Covered. What we're actually short on is someone to run the coffee urns. Would Anneke help if it counted for service hours?",
+     "message_id": "70930a6a93521065c97cd264",
+     "sender_id": "bfe5eb21d961b92cbc6e5b30",
+     "timestamp": 1777902410.0
+    },
+    {
+     "attachment_name": null,
+     "content": "She'd probably say yes for the hours. Let me ask her tonight and I'll text you.",
+     "message_id": "72f832017b2bda2c1dc1a0e9",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1777902604.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Perfect. Thanks Magnhild.",
+     "message_id": "c7bb188a93edb8ba6215089f",
+     "sender_id": "bfe5eb21d961b92cbc6e5b30",
+     "timestamp": 1777910496.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "bfe5eb21d961b92cbc6e5b30"
+   ],
+   "title": "Berta Nyquist-Ogle"
+  },
+  {
+   "conversation_id": "4c9e7f1b8a23d05e61fa9c34",
+   "last_updated": 1776258713.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Dropped him at the north doors at 7:30. He took two pencils and no breakfast.",
+     "message_id": "a71f3c9b04e28d65fa310c7b",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1776192592.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Over Homestake now. First draw at ten.",
+     "message_id": "e04b72d1c9a835f6b21e40dd",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1776192803.0
+    },
+    {
+     "attachment_name": null,
+     "content": "mamma is really at a bonspiel",
+     "message_id": "b58c0e2a91f7d43c6a08b17e",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1776194135.0
+    },
+    {
+     "attachment_name": null,
+     "content": "on ACT day",
+     "message_id": "d2a94f0b6c81e37d5b09a24f",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1776169252.0
+    },
+    {
+     "attachment_name": null,
+     "content": "incredible",
+     "message_id": "f60d81c3a27b94e50fd3128a",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1776174093.0
+    },
+    {
+     "attachment_name": null,
+     "content": "He gets out at 12:15. I'm in the parking lot with the dogs.",
+     "message_id": "3ac71e95b0d248fa6c19e037",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1776177408.0
+    },
+    {
+     "attachment_name": "butte_ice_first_draw.jpg",
+     "content": "Won the first one, seven to four. Delphine is very pleased with herself.",
+     "message_id": "96e2b70a4c1df835a70b2e14",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1776191912.0
+    },
+    {
+     "attachment_name": "bubble_sheet.jpg",
+     "content": "",
+     "message_id": "1d8f4a6e30c95b7218ea60cd",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1776194626.0
+    },
+    {
+     "attachment_name": null,
+     "content": "is that legal to photograph",
+     "message_id": "5e19c8d2b74a03f6c8215bde",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1776194861.0
+    },
+    {
+     "attachment_name": null,
+     "content": "scratch paper",
+     "message_id": "c47a2f81e05b9d36a1cf3082",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1776198458.0
+    },
+    {
+     "attachment_name": null,
+     "content": "He says the science section was fine and the math was long. He ate an entire sandwich in the car in about ninety seconds.",
+     "message_id": "80b3d67f2ae194c05d1af8b6",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1776200095.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Good. Second draw at four. Home late tomorrow.",
+     "message_id": "2f5e94a1c837b60d4e9a1730",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1776211722.0
+    },
+    {
+     "attachment_name": null,
+     "content": "torvald how do you think it went honestly",
+     "message_id": "a90c17e4b3d8f2650a71ce39",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1776212361.0
+    },
+    {
+     "attachment_name": null,
+     "content": "fine",
+     "message_id": "6b02e8d5197caf34b28e0d17",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1776220745.0
+    },
+    {
+     "attachment_name": null,
+     "content": "cool great thanks for the detail",
+     "message_id": "e83b41f0d267a95c1b0e74a2",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1776220954.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Three and one. We won a set of coasters. Kvikk gets nothing out of this.",
+     "message_id": "07d6c92b8e1a534fb7c02e93",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1776258182.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Coasters. Two nights in Butte for coasters.",
+     "message_id": "b1e50a7c34f9d826e0ba17cf",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1776258365.0
+    },
+    {
+     "attachment_name": "coasters_would_have_been_cheaper_online.jpg",
+     "content": "",
+     "message_id": "4d8a2f61b0e97c53a2f10de8",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1776258713.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "3f1a7c92b40d6e58a1c33d72",
+    "c82d5b1e6a04f79c3e2b81da",
+    "9b0e34fa7c25d81b6f4a2ce3"
+   ],
+   "title": "Strand-Solheim 4"
+  },
+  {
+   "conversation_id": "b675dbce83850f1a26c4d97e",
+   "last_updated": 1786850160.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Bohart in the morning. Dogs in the car.",
+     "message_id": "8afac2373c393edf94300243",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1772417400.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I will tarp if it blows again. Leave the ladder.",
+     "message_id": "489ae2921d19c2a8d75b5868",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1772418120.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Matrix is on the table. Tolliver is 4.50. I am signing Tuesday.",
+     "message_id": "2d8ef409d504b3b109fff27f",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1777255500.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Sign it. The horse fund has not been small since 2019.",
+     "message_id": "bb94d07ccd6c4c746773efa2",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1777256280.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Petrosyan said grade 2. Six sessions in July.",
+     "message_id": "54335a484e32da129d7f3da0",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1782261600.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Go. I will do Kvikk's feet Wednesday.",
+     "message_id": "3843f056595672b4ff142314",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1782262260.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Roof is paid. Both slopes.",
+     "message_id": "5894703e674ff92b3b7309a0",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784936400.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Good. Do not talk about it again.",
+     "message_id": "9dc477d2e33b91f13a5ff949",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1784937720.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Ridge was fine going up. Slow coming down.",
+     "message_id": "d12e4f988f644a3a89e03908",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786849800.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That is the knee. Eat.",
+     "message_id": "7cff0b7c540f2d839c1d58c0",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1786850160.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "3f1a7c92b40d6e58a1c33d72"
+   ],
+   "title": "Ingrid"
+  },
+  {
+   "conversation_id": "4d17b0e9c825a3f6720e1db4",
+   "last_updated": 1784935320.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Both slopes, standing seam, purlins inside the number. $34,800. I can start after haying if you sign this week.",
+     "message_id": "e209765d379d0b4af28a56d6",
+     "sender_id": "6b47395b412e34994c205c04",
+     "timestamp": 1777393200.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Signed. Ingrid tarped the west slope on 02-17. Deposit when you invoice.",
+     "message_id": "1e6d39f1d87753ad03fb8b83",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1777413900.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Deposit invoice is out. $13,920, forty percent. I will not order the seam until that clears.",
+     "message_id": "9ee76d94a99f73ad45328237",
+     "sender_id": "6b47395b412e34994c205c04",
+     "timestamp": 1778605800.0
+    },
+    {
+     "attachment_name": null,
+     "content": "West slope is stripped. Purlins come off tomorrow. Kvikk can stay in the south paddock.",
+     "message_id": "abcd9d811db3b820e9732091",
+     "sender_id": "6b47395b412e34994c205c04",
+     "timestamp": 1783950000.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Balance is $20,880. Certificate is in the envelope with the invoice.",
+     "message_id": "2fbfefdbedfd223076ccdc15",
+     "sender_id": "6b47395b412e34994c205c04",
+     "timestamp": 1784927100.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Paid. Both slopes look like one roof. Thank you.",
+     "message_id": "450fe53cb5bb7810026c6e79",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784935320.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "6b47395b412e34994c205c04"
+   ],
+   "title": "Denton Tolliver"
+  },
+  {
+   "conversation_id": "b8a0c73e91d5f2648c07b1ae",
+   "last_updated": 1783963077.0,
+   "messages": [
+    {
+     "content": "Big truck went past at 7 this morning pulling a lift. That your barn?",
+     "message_id": "d3f70b81c6a5924e0d18b7c2",
+     "sender_id": "1ea9b3d6d24a234a45a9f688",
+     "timestamp": 1783088391.0
+    },
+    {
+     "content": "That is us. Nine working days if the weather holds. Big Sky is doing the framing today and tomorrow, then Tolliver's crew.",
+     "message_id": "5a9c1e08b7d4326f90a1c8e7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783088781.0
+    },
+    {
+     "content": "good outfit. i had em look at my loafing shed. they told me it didnt need anything which is how you know",
+     "message_id": "9220bff7531e774dce241f15",
+     "sender_id": "1ea9b3d6d24a234a45a9f688",
+     "timestamp": 1783089749.0
+    },
+    {
+     "content": "they got the whole west side stripped already. moving right along",
+     "message_id": "7e40a9c2b1d8635f02c7e1a8",
+     "sender_id": "1ea9b3d6d24a234a45a9f688",
+     "timestamp": 1783371459.0
+    },
+    {
+     "content": "Are they picking up the old fasteners? Two hundred screws in the pasture is a colic bill waiting to happen.",
+     "message_id": "a2c71f80e6b3945d10c8a7b2",
+     "sender_id": "3f1a7c92b40d6e58a1c33d72",
+     "timestamp": 1783375054.0
+    },
+    {
+     "content": "They ran a magnet sweeper down both fence lines at the end of the day. I watched them do it.",
+     "message_id": "4f18b7e0c29d536a80b1e7c4",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783375250.0
+    },
+    {
+     "content": "rained hard here about 4. hope they got it dried in",
+     "message_id": "c60e18a7b4d3925f01c8e7b0",
+     "sender_id": "1ea9b3d6d24a234a45a9f688",
+     "timestamp": 1783635215.0
+    },
+    {
+     "content": "They did. Underlayment down and the ridge capped before it came over the ridge.",
+     "message_id": "9d20c8e1b7a4635f80a2c1e7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783638078.0
+    },
+    {
+     "content": "stopped by the fence this afternoon. that standing seam looks sharp. going to outlast all of us",
+     "message_id": "3b7f0a91c8e2546d20b1c7a8",
+     "sender_id": "1ea9b3d6d24a234a45a9f688",
+     "timestamp": 1783959097.0
+    },
+    {
+     "content": "It should. Twenty-six gauge, and Willa replaced two purlins and a rafter tail underneath it that I did not know were cracked.",
+     "message_id": "e18c70b2a5d9436f10c8b2e7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783959404.0
+    },
+    {
+     "content": "the tail was probably cracked before the storm. those 78 barns all did the same thing",
+     "message_id": "7a4d1c80e9b3625f01a8c7e2",
+     "sender_id": "1ea9b3d6d24a234a45a9f688",
+     "timestamp": 1783963077.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "3f1a7c92b40d6e58a1c33d72",
+    "1ea9b3d6d24a234a45a9f688"
+   ],
+   "title": "Sourdough Ridge"
+  },
+  {
+   "conversation_id": "2e46525e1e8b04c7a3f19d62",
+   "last_updated": 1787855603.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "can i use your laptop for my history slides, mine wont connect to the printer",
+     "message_id": "5c8b03e91af742d60c39ba18",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1781206185.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Yes, but log into your own account and don't save anything to my desktop. Paper is in the bottom drawer.",
+     "message_id": "a2f719c04b8de635f0a1c827",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781210707.0
+    },
+    {
+     "attachment_name": null,
+     "content": "theres like 4 sheets left",
+     "message_id": "71e0c58b39a24df6b0c81e35",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1781211433.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Then print it at school in the morning, the library printer is free. Is it due first period?",
+     "message_id": "d94c6a2f81b05e73a2d0fc18",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781213088.0
+    },
+    {
+     "attachment_name": null,
+     "content": "3rd. also we're out of the cinnamon cereal",
+     "message_id": "3b7f18a0e26c95d41f8a0b73",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1781213948.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Noted. I'm home by six.",
+     "message_id": "e51a83fc0d762b940ea7c318",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781214165.0
+    },
+    {
+     "attachment_name": null,
+     "content": "mom i left my chem folder on the counter. the blue one",
+     "message_id": "0b7c3d91af264e58c07d193b",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1781727505.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I see it. I can drop it at the front office around 11, does that work?",
+     "message_id": "6d09b2f47ac31e850b62d7f4",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781728923.0
+    },
+    {
+     "attachment_name": null,
+     "content": "yeah that class isnt till 1",
+     "message_id": "af31c05d94b7e2680d13f5a9",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1781729246.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Ok. Did you actually eat breakfast or did you just walk out?",
+     "message_id": "12e8b6d037c9a4f5b028e14d",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781729438.0
+    },
+    {
+     "attachment_name": null,
+     "content": "i had a bar",
+     "message_id": "78c4a1f95d0b3e267ac91d40",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1781730510.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That is not breakfast. There's a burrito in the freezer for tomorrow morning.",
+     "message_id": "e0b937d15a4c268f7bd034a1",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781731935.0
+    },
+    {
+     "attachment_name": null,
+     "content": "ok also practice got moved to 5:30 so dont come at 4",
+     "message_id": "45a7c2e8b91d306f4e17c9b2",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1781733098.0
+    },
+    {
+     "attachment_name": null,
+     "content": "practice got cancelled, air quality thing. coach sent everyone home",
+     "message_id": "2eec1f44e2ce5cc05b6d835f",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1783525271.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Ok. Wait by the front doors, I can be there by 4.",
+     "message_id": "4c7e91b0d825a36f107bcd23",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783607212.0
+    },
+    {
+     "attachment_name": null,
+     "content": "can you drop me at the field house instead? a few of us were gonna do treadmills",
+     "message_id": "7c1f63600d6608c7d46a807e",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1783608361.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Not today. Front doors at 4.",
+     "message_id": "0f6a3ce18b7d40592c1b7ea3",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783611575.0
+    },
+    {
+     "attachment_name": null,
+     "content": "the field house is INSIDE",
+     "message_id": "6a0b9a5a4d055855e5f222aa",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1783612679.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Still no. You said your chest felt tight Saturday and it hasn't cleared out there.",
+     "message_id": "56c9b2e0a71d483f0c17de82",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783616382.0
+    },
+    {
+     "attachment_name": null,
+     "content": "fine. can you bring my water bottle, i left it on the counter",
+     "message_id": "e81f70cad3b26594017c2b0d",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1783618810.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Already in the truck. See you at 4.",
+     "message_id": "e9075f5414a25a5d6594519b",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783827155.0
+    },
+    {
+     "attachment_name": "IMG_5518.jpg",
+     "content": "practice moved to the fieldhouse, we dont finish til 5:30",
+     "message_id": "a1c93f0e57b246d8901fa3c7",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1784563562.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Ok. I'll be in the lot by the tennis courts at 5:30. Don't make me circle.",
+     "message_id": "5e28d417cb903a6f45e1b820",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784563954.0
+    },
+    {
+     "attachment_name": null,
+     "content": "can u bring my inhaler its on the counter by the toaster",
+     "message_id": "b70a3c8e14df925601ba47c3",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1784564481.0
+    },
+    {
+     "attachment_name": "IMG_5523.jpg",
+     "content": "Got it. Did you need it this morning or are you just packing it?",
+     "message_id": "0d4fb6291ea75c83b20e9f14",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784645530.0
+    },
+    {
+     "attachment_name": null,
+     "content": "just packing it. i didnt use it",
+     "message_id": "e9315c07ab4d68f210c5b7a2",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1784650214.0
+    },
+    {
+     "attachment_name": "IMG_5526.jpg",
+     "content": "Good. If the smoke gets thicker tell your coach and sit out. I mean it.",
+     "message_id": "34a8e0d95f126bc7803ad41e",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784650715.0
+    },
+    {
+     "attachment_name": null,
+     "content": "ok ok",
+     "message_id": "c60b19f47a3e28d5b409e2f1",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1784730916.0
+    },
+    {
+     "attachment_name": null,
+     "content": "can i stay at Jonahs after the scrimmage friday, his mom says she can drive us both",
+     "message_id": "7f2e58a3d091b64c25e07fa9",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1784735372.0
+    },
+    {
+     "attachment_name": "IMG_5541.jpg",
+     "content": "Yes if she confirms with me herself. Send me her number.",
+     "message_id": "18b0d47c6e2f95a3401cb8d5",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784786138.0
+    },
+    {
+     "attachment_name": null,
+     "content": "sent",
+     "message_id": "9c47e206b1d83fa540e7192c",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1784825846.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Thank you. Home by 11 Saturday though, you have the barn that morning.",
+     "message_id": "2a5f8b31c70e469d81b3f0a4",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784832484.0
+    },
+    {
+     "attachment_name": null,
+     "content": "we're almost out of pellets btw. like half a bag left",
+     "message_id": "d802f61a4c95e73b06a1c8d3",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1784914911.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Noted. Split what's left tonight and I'll get more Saturday.",
+     "message_id": "4b6c09e5f83a17d2905eb4c6",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784918699.0
+    },
+    {
+     "attachment_name": null,
+     "content": "get the same kind pls, the other bag they wouldnt touch it",
+     "message_id": "f158a72d0b6e34c98d10b52a",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1784894756.0
+    },
+    {
+     "attachment_name": "IMG_5554.jpg",
+     "content": "Same kind. Also the trough was low this morning, top it off before school.",
+     "message_id": "63d914b8e0af25c7318da96b",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784896101.0
+    },
+    {
+     "attachment_name": null,
+     "content": "already did it. love u",
+     "message_id": "af07253c9d1b6e480a25c3f7",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1784915255.0
+    },
+    {
+     "attachment_name": "IMG_4482.HEIC",
+     "content": "5:30 start or 5:30 finish?",
+     "message_id": "9c150fa73e6b28d40b17c5e9",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786841120.0
+    },
+    {
+     "attachment_name": null,
+     "content": "starts. were done at 7",
+     "message_id": "3b8e6c41d70a29f5c16b04e7",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1786844320.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That's late. I'll be at the north doors at 7:05, please don't make me circle the lot.",
+     "message_id": "d7420ab13f9c65e80c37b1d4",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786846979.0
+    },
+    {
+     "attachment_name": null,
+     "content": "k can jesse ride with us he goes the same way",
+     "message_id": "60f9d3a72b158c4ed09a72b6",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1786848281.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Sure. Tell him 7:05 too.",
+     "message_id": "b53c81e0d4a76f92310ec8b7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786852620.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Coop door has to be shut before dark and the water tub is low. Can you do both when you get home?",
+     "message_id": "5f28c1a09d3b64e7ac150268",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787154759.0
+    },
+    {
+     "attachment_name": "IMG_0972.jpg",
+     "content": "im staying for the physics review til 5:30, is that ok",
+     "message_id": "c063eb4712a58df96be03714",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787158752.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That's fine. Who's driving you home?",
+     "message_id": "39d7a5b08e614c2f07ba53e1",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787159901.0
+    },
+    {
+     "attachment_name": null,
+     "content": "someone from the team can drop me at the end of the road",
+     "message_id": "a4b18f6305d2ce793810f5b4",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787247123.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Text me when you leave the school. Chores still happen, it's not dark until almost 8.",
+     "message_id": "6d0359cab7e42186f05c93d7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787262581.0
+    },
+    {
+     "attachment_name": null,
+     "content": "mom practice is running late again",
+     "message_id": "7d3a0c6e51b98f240a7c3e15",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787711911.0
+    },
+    {
+     "attachment_name": null,
+     "content": "How late? I'm already in the lot.",
+     "message_id": "c8f14b70e2a95d631c08b4a7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787719921.0
+    },
+    {
+     "attachment_name": null,
+     "content": "like 20 min coach is making us do the hill thing",
+     "message_id": "b0e57c4a3d18f96205a7c1e3",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787720494.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Ok, I'll wait. Do you have your water bottle?",
+     "message_id": "5a9c30f8b47e21d60c3a8f14",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787754399.0
+    },
+    {
+     "attachment_name": null,
+     "content": "no i left it in your car",
+     "message_id": "e21b78d0c53a94f6182b0e57",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787755517.0
+    },
+    {
+     "attachment_name": null,
+     "content": "It's in the back seat. Anneke's with me, she can walk it down to the fence.",
+     "message_id": "94c1e086b7f253a0d418c72b",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787755852.0
+    },
+    {
+     "attachment_name": null,
+     "content": "no dont send her she'll make it weird",
+     "message_id": "3f80a7d2c19b46e50a2c8f31",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787756079.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Then survive twenty minutes.",
+     "message_id": "d6b249a0f81c37e5024b9d18",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787759452.0
+    },
+    {
+     "attachment_name": null,
+     "content": "can i go to a friends house friday after school",
+     "message_id": "8c5f10b3e947a2d60c18f43a",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787761905.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Who's driving?",
+     "message_id": "1a4e93c0d75b28f6304c1b87",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787764680.0
+    },
+    {
+     "attachment_name": "IMG_4418.jpg",
+     "content": "his mom shes getting us at the flagpole",
+     "message_id": "f7301c8ab265d94e07a13b5c",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787766162.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Ok, but home by 8 and text me when you get there.",
+     "message_id": "46b8d07f2e91c35a08d47e12",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787766382.0
+    },
+    {
+     "attachment_name": null,
+     "content": "8:30?? nothing even happens before 8",
+     "message_id": "20c9e4b81f76a3d504b81e69",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787766849.0
+    },
+    {
+     "attachment_name": null,
+     "content": "8. You have that history thing Monday and you haven't started it.",
+     "message_id": "b53a17e0c48d92f61a05c73f",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787768007.0
+    },
+    {
+     "attachment_name": null,
+     "content": "i started it i have like a paragraph",
+     "message_id": "c14f8b02d69a35e701c4a87d",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787773317.0
+    },
+    {
+     "attachment_name": null,
+     "content": "A paragraph is not started. 8.",
+     "message_id": "7e60a19c48b2f35d0d19c4b8",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787753651.0
+    },
+    {
+     "attachment_name": null,
+     "content": "fine. love you",
+     "message_id": "05b83f7ad1c964e2071a5d3c",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787754293.0
+    },
+    {
+     "attachment_name": "IMG_0988.jpg",
+     "content": "can anneke do the water one? my shoulder is still weird from stacking hay",
+     "message_id": "0b7e46d539fc80214ad76e59",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787844506.0
+    },
+    {
+     "attachment_name": null,
+     "content": "She has practice until 6:30. Do the coop and I'll fill the tub.",
+     "message_id": "e91240ab6c53f78d2019b4ce",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787848058.0
+    },
+    {
+     "attachment_name": "IMG_0989.jpg",
+     "content": "deal. thanks mom",
+     "message_id": "72ac68f104b9e35d8f26107a",
+     "sender_id": "9b0e34fa7c25d81b6f4a2ce3",
+     "timestamp": 1787855603.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "9b0e34fa7c25d81b6f4a2ce3"
+   ],
+   "title": "Torvald Strand-Solheim"
+  },
+  {
+   "conversation_id": "7d2b9f4a1c8e35604a7bd23f",
+   "last_updated": 1787198732.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Still on for Saturday? I was thinking Drinking Horse at 7 before it gets hot.",
+     "message_id": "1a8f3c7b2d9e46051b8a4c30",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1780528457.0
+    },
+    {
+     "attachment_name": null,
+     "content": "7 works. How far are you wanting to go?",
+     "message_id": "4e1c8b3d7a2f59064c1e8b57",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1780530370.0
+    },
+    {
+     "attachment_name": null,
+     "content": "8 to 10 if the legs cooperate. Easy pace, I'm not racing you up the switchbacks.",
+     "message_id": "8b4d1e9c3f7a26051d9c4e82",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1780536257.0
+    },
+    {
+     "attachment_name": null,
+     "content": "You say that every single time and then you go.",
+     "message_id": "c7a2f8d4b1e93650a4c7b1d9",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1780549769.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Fair. I'll behave. Bring more water than you think, the upper spring is dry.",
+     "message_id": "2f9b6c1a8d4e37052c8f1b64",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1781534245.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Two bottles then. Meet at the lower lot?",
+     "message_id": "9d3e7a2c8b1f46053e9a7c25",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781538156.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Lower lot, 6:55. It fills up fast on weekends.",
+     "message_id": "5c8b2d9e4a1f37064b5c8d21",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1781548956.0
+    },
+    {
+     "attachment_name": null,
+     "content": "See you there.",
+     "message_id": "a1f4c8b7d2e93650c1a4f8b3",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1782154975.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Calf is not happy this morning. Right side, sort of a pull just above the ankle.",
+     "message_id": "7b2e9c4a1d8f36052a7be9c4",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1782158979.0
+    },
+    {
+     "attachment_name": "napkin_nymph_rig.jpg",
+     "content": "Don't run on it. That is exactly how you lose a month.",
+     "message_id": "3d9a1c8b4e7f25063d1a9c87",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784072235.0
+    },
+    {
+     "attachment_name": null,
+     "content": "It loosens up after a mile though",
+     "message_id": "c4b8d1e7a2f95063c4b8d1e7",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1784076175.0
+    },
+    {
+     "attachment_name": null,
+     "content": "It always loosens up. Then it tears. Take three days and walk instead.",
+     "message_id": "e8a3c7b1d4f26095e8a3c7b1",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784082463.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Ok ok. Ice and the roller?",
+     "message_id": "6f1b9d3c8a4e27056f1b9d3c",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1784092426.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Ice tonight. Gentle calf raises after a couple days. If it's still sharp Friday, go get it looked at.",
+     "message_id": "b9c4e1a8d3f72056b9c4e1a8",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784132026.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Yes ma'am. Sunday easy four instead of the long one?",
+     "message_id": "2a7d4c9b1e8f36052a7d4c9b",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1784752875.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Sunday easy four, and flat. River trail, no hills.",
+     "message_id": "d1e8b4c7a2f93650d1e8b4c7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784755568.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Signups opened for the October half. Early rate ends Sunday night.",
+     "message_id": "8c3f1b7d4a9e26058c3f1b7d",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1785978686.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Put me in. I'll send you the entry fee tonight.",
+     "message_id": "4b9e2c8a1d7f36054b9e2c8a",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1785995467.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Registered, you're in. We should get a couple of longer ones in through September then.",
+     "message_id": "f7a1d4b8c3e29506f7a1d4b8",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1787196670.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Agreed. Slowly though, for both of us.",
+     "message_id": "a2c8f4d1b7e93650a2c8f4d1",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787198732.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Delphine, I am at the kitchen table with a cup of tea and I would like to answer you properly rather than across a sheet of ice. Give me twenty minutes. O.L.",
+     "message_id": "91e47b2c05da8f36c1704be9",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1774535823.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Delphine, You blamed me before the rock had stopped, and you were half right, so let me be precise about which half. I threw it heavy. I knew it as it left my hand, I said so, and I asked for sweeping because from the hack all I could see was a light rock, and I would rather. I can put the rest in the shared note.",
+     "message_id": "7c05a3e81b49d726f085c31a",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1774544516.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That is fair. We can be wrong about different halves of it and still enter Butte; entries close Monday and I would like us in the first draw at ten. O.L.",
+     "message_id": "0e5c39b7a41d68f2c95b0741",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1774528913.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Agreed, and gladly. Sleep well; it was a good final and one rock is not a season. O.L.",
+     "message_id": "2b7e94c0f13a856d0c47e9b1",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1774533188.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Two hundred words about four feet. He is right about the tee line, Delphine.",
+     "message_id": "46b98c1d072ea53f9c8d10b7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1774550353.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I will send the club our four names in the morning and pay mine before Monday.",
+     "message_id": "f814a06c2ed35b79014c8a63",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1774530107.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "38d1c6ae0f9b47521a0e7c34"
+   ],
+   "title": "Ozias Lindqvist"
+  },
+  {
+   "conversation_id": "54187803f22a0d1e7c4b93a6",
+   "last_updated": 1787026715.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Magnhild, can you take the Saturday morning bugling walk? Our usual guide is out with a bad knee.",
+     "message_id": "0d3f8b1c62e05a7d4931cb26",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1779281137.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I can. What time are you having people meet?",
+     "message_id": "97c25e0da8b41f36027ce5d1",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1779284703.0
+    },
+    {
+     "attachment_name": null,
+     "content": "6:15 in the lower lot, back by 9 for breakfast. Twelve signed up so far.",
+     "message_id": "4b18a6f2073ed95c81b04a7f",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1779284916.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Twelve is already a lot for that meadow. Cap it at fifteen and I'll split them into two groups if it fills.",
+     "message_id": "e50c9d2718ab3f6402d7c91b",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1779287718.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Capping at fifteen. I'll change it on the Gallatinfjordlodge page this afternoon.",
+     "message_id": "2a7b4c0f951de836b07c2a4d",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1781277133.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Do we still have the loaner binoculars or did those disappear in July?",
+     "message_id": "83e1b7d40c25f96a1e08b3c7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781278285.0
+    },
+    {
+     "attachment_name": "ferris_annex_drain.jpg",
+     "content": "Six pairs left, but two have fogged lenses. Plan on four.",
+     "message_id": "f10a56c9d372b48e0a15d6c3",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1781281324.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Four is fine, most people bring their own. I'll haul my spotting scope for the far side of the draw.",
+     "message_id": "6c93017eab52d8f4310b7e29",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781282054.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That'll help. Heads up that a wedding block checks in Friday, so the lot will be a mess at that hour.",
+     "message_id": "b7d40e2a5169c83f07b4d1e2",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1781284592.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I'll park by the maintenance shed and walk in. Let the front desk know so nobody has me towed.",
+     "message_id": "19f6c8b3072ad45e91c60f83",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781294480.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Already told them. Thanks for covering.",
+     "message_id": "d82b6f13c904a7e50238bd61",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1781295052.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I can do Tuesday. Are they still on the first unit or do they start infiltration?",
+     "message_id": "c52f9078d1a3b46e05c1782f",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1785700758.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Infiltration. Setup sheet is in the shared folder and the trays are already made up in 214.",
+     "message_id": "8e1a35d70b6c294f8a01e5d3",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1785700954.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Good. Are the field notebooks still due that day or did you push it?",
+     "message_id": "3f60b8e2417ac95d6f30b1a8",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786383567.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Pushed to Thursday. Remind them at the end, someone always swears they never heard.",
+     "message_id": "b9d7042fe86c135a2d70f4b1",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1786384375.0
+    },
+    {
+     "attachment_name": "ridge_forecast.png",
+     "content": "I'll tell them twice. Can you take my Thursday office hour in trade? I have something at 10.",
+     "message_id": "1a48c50b937de26f4c81a920",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786599734.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Sure. Your office or mine?",
+     "message_id": "6d2e97b04f1a583c0e6d1274",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1786639334.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Mine, the students know where to find it. Door code hasn't changed.",
+     "message_id": "f80c31a5d6294be71f803c5a",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786650134.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Different thing, are you coming to the retreat at Gallatinfjordlodge? Ingeborg wants a headcount by Friday.",
+     "message_id": "20b5e64c8fa13d90b2e57046",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1786829190.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I'm in. Is it both days or can I come up just for Thursday?",
+     "message_id": "a71f0d38c5e2469b7a1c0f5e",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786829374.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Both days on paper, but several of us are doing Thursday only. Tell her which when you reply.",
+     "message_id": "5c9b26e0143fda87c5b90e21",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1786829956.0
+    },
+    {
+     "attachment_name": "sacagawea_summit.jpg",
+     "content": "Thursday only then, and I'd have to leave by four.",
+     "message_id": "e483a7015bd6c29f4e08a3b7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786901468.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That's fine. The curriculum review is the afternoon block, which is the part you'd care about anyway.",
+     "message_id": "94d1c6b0728ef53a91d4c60b",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1786898541.0
+    },
+    {
+     "attachment_name": "the_M_sign.jpg",
+     "content": "Am I presenting something or just sitting in?",
+     "message_id": "7b0e52f4a91d386c7b0e5243",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786927638.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Fifteen minutes on field course enrollment. Nothing formal, she just wants the numbers in front of everyone.",
+     "message_id": "d36a80c1f5b427e9d3608a15",
+     "sender_id": "84e0b76d1fa2c53907b4e2a1",
+     "timestamp": 1786931605.0
+    },
+    {
+     "attachment_name": "boots_on_the_porch.jpg",
+     "content": "Fifteen I can do. Tuesday is covered, don't think about it.",
+     "message_id": "48f2b9d0e6a3157c48f20bd9",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1787026715.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "84e0b76d1fa2c53907b4e2a1"
+   ],
+   "title": "Dagny Foss"
+  },
+  {
+   "conversation_id": "4b19e6d02c8a75f31b0e9d4a",
+   "last_updated": 1785703338.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Oh no. On my way, two minutes. Stand between them and the cattle guard if you can.",
+     "message_id": "1d7be03a95c682f4017ae35d",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1772383849.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Standing here. They're more interested in my lilacs than going anywhere.",
+     "message_id": "c50e9b28a6d417f3b02d96e8",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1772475568.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Got them. The gate latch dropped open again, that's twice this month.",
+     "message_id": "96b3d78f102ec4a5d76b03f1",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1772484173.0
+    },
+    {
+     "attachment_name": null,
+     "content": "A chain and a snap would fix that. We have a spare in the shop if you want it.",
+     "message_id": "27e4a9106bd8c53f2a90e74b",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1776135480.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I'll take it, thank you. That road is awful at dusk, I don't want to think about it.",
+     "message_id": "e8107cf35a2b9d640e73b18c",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1776138881.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I saw the white one first, she stands out. Truck was already slowing down.",
+     "message_id": "4f92c0d861ae37b5904c2fd6",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1776701889.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Different question, are we splitting the plowing again this winter? He left a card in our door with a new rate.",
+     "message_id": "b71a5e3d20c98f4617ae0d53",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1776703074.0
+    },
+    {
+     "attachment_name": null,
+     "content": "$65 a push, we got the same card. I'd still rather pay it than shovel that lane.",
+     "message_id": "0c68f2a7d31b95e40c82a6f7",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1776713874.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Agreed. Same as last year, you pay him and I send you half?",
+     "message_id": "d3f507b9c68a12e4f05d38b1",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1777994131.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Works for me. He wants a card on file this season instead of checks.",
+     "message_id": "5b8e14a0f7d2c93685b1e0a4",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1778004931.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That's fine. Ask him to do the whole lane and not stop at the turnaround like last year.",
+     "message_id": "a09d63f4e15c827b0d94f6a1",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1778990236.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That was on us, we never asked him. I'll bring it up when I call.",
+     "message_id": "71c4b8092de6a35f81cd407e",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1779203805.0
+    },
+    {
+     "attachment_name": null,
+     "content": "And tell him not to pile snow against the north fence. It sat there until May.",
+     "message_id": "3e5a6d1cb0f947285e30ba9d",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1779204042.0
+    },
+    {
+     "attachment_name": null,
+     "content": "There's a box on my porch with your name on it. Driver must have counted mailboxes wrong.",
+     "message_id": "f24019cd7b6e3a58042f9c61",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1779248358.0
+    },
+    {
+     "attachment_name": null,
+     "content": "That's the bulb order for the front beds. Can I come grab it tonight?",
+     "message_id": "6db8305e94a1cf27b6e05d38",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1779249263.0
+    },
+    {
+     "attachment_name": null,
+     "content": "It's under the bench out of the rain. Come whenever, we're up late.",
+     "message_id": "2a91fe4b038d6c75a12e9b40",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1779288863.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Picked it up, thanks. I put a bigger number on our post so it stops happening.",
+     "message_id": "903dc652f1a87be402d59a1c",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1779463370.0
+    },
+    {
+     "attachment_name": null,
+     "content": "The old one was completely faded. I couldn't read it either and I've lived here nine years.",
+     "message_id": "c7e21b8d4903f65a2c8107eb",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1779470458.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Ha. The new one is reflective, you'll see it from the highway.",
+     "message_id": "48b6a0d3e29c517f4a6b90d2",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1779474257.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Good. Ours is next on the list.",
+     "message_id": "ba0f37e51c94d268b03e75af",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1779496234.0
+    },
+    {
+     "attachment_name": null,
+     "content": "We're gone Thursday through Sunday. Could you keep an eye on the place and shut the coop at dusk?",
+     "message_id": "15c9e8b473a02df691c4e830",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1779502219.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Of course. Same as last time, feed out of the metal can?",
+     "message_id": "e6473a09d158b2fc7e0a4d61",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1779564613.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Metal can, one scoop. The water heater is already plugged in. Eggs are yours.",
+     "message_id": "7fa2d5061b93ce84a70f2d5b",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1779565329.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Deal. Porch light on or off while you're away?",
+     "message_id": "0d9b74c3e825af160b3d97e4",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1782600866.0
+    },
+    {
+     "attachment_name": null,
+     "content": "On please. And if the mail piles up just push it inside the door.",
+     "message_id": "84e0c917ab53d6f209e4c71b",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1782659617.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Got it. Text me when you're back so I stop wandering over.",
+     "message_id": "fd35b06a2e4917c83b50d29a",
+     "sender_id": "799138452b96423b8dc1682b",
+     "timestamp": 1785699843.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I will. Thank you, genuinely.",
+     "message_id": "596a2f8d0b13e7c45d902af6",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1785703338.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "799138452b96423b8dc1682b"
+   ],
+   "title": "Kjersti Lunde-Barrow"
+  },
+  {
+   "conversation_id": "15029126f33b15029126f33b",
+   "last_updated": 1786547700.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Feet.",
+     "message_id": "3a44e73dbbe6b1c32b110e52",
+     "sender_id": "dd5b47c6d30c3284ac22ca31",
+     "timestamp": 1773879000.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Still sound.",
+     "message_id": "40afdef701c540f9520a2228",
+     "sender_id": "dd5b47c6d30c3284ac22ca31",
+     "timestamp": 1778110800.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Watching the crew.",
+     "message_id": "be373118c9b6758b0b19a194",
+     "sender_id": "dd5b47c6d30c3284ac22ca31",
+     "timestamp": 1784225100.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Farrier was out. He ate.",
+     "message_id": "643b660536799130fafcc1bc",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1786547700.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "dd5b47c6d30c3284ac22ca31"
+   ],
+   "title": "Charlene Two Bulls"
+  },
+  {
+   "conversation_id": "a5984ad8ad564c100f634da1",
+   "title": "Delphine Nakamura-Reyes",
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "e743b09c8a2d15f6207ce4a1"
+   ],
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "four feet 🥌😭 i can still see it going past 🫠 and i had ozias in my ear the whole way 😤",
+     "message_id": "08c3f5a71e26b940d7c81352",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1774492732.0
+    },
+    {
+     "attachment_name": null,
+     "content": "we lost by ONE 😭 one rock mags 🥌 seven six after ten ends 🙃 im never sweeping again ❄️",
+     "message_id": "c76b0e419df258a3c04b7e1d",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1774499988.0
+    },
+    {
+     "attachment_name": null,
+     "content": "🥌😭🧹🧹😤🙃💀🫠🥲❄️🫶",
+     "message_id": "a3f610d29c74b58e0d21ac97",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1774548829.0
+    },
+    {
+     "attachment_name": null,
+     "content": "i read the whole thing 😤 twice 🧹 hes still wrong about the hurry 😭🥌 but ok 🥲",
+     "message_id": "bd270e6a91c48f350b7ea219",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1774554187.0
+    },
+    {
+     "attachment_name": null,
+     "content": "in 🥌😤 butte 🚗 im throwing last 🙃",
+     "message_id": "63a0b7f19d4e25c8a17f60d3",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1774532960.0
+    },
+    {
+     "attachment_name": null,
+     "content": "He threw it heavy and he said so out loud. You were the one behind the tee line.",
+     "message_id": "5a90d1c74b6e2f83a05d9c17",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1774499741.0
+    },
+    {
+     "attachment_name": null,
+     "content": "You will sweep on the eleventh in Butte. Tamsin has already sent a poll about the drive.",
+     "message_id": "2fd85a03c917e64b0d3a75c8",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1774534178.0
+    }
+   ],
+   "last_updated": 1774554187.0
+  },
+  {
+   "conversation_id": "0f1ba2fd613a0694c0802a3f",
+   "title": "Kirsten Strand Halvorsen",
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "5d47a1c8e93b02f6ad8c7415"
+   ],
+   "last_updated": 1782177000.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Magnhild, I read the March issue twice. The header is spelled correctly this time.",
+     "message_id": "d9b372c1712adad500109c33",
+     "sender_id": "5d47a1c8e93b02f6ad8c7415",
+     "timestamp": 1773670200.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Thank you. Kjersti closed it on the first.",
+     "message_id": "73bcbf4efeab425780c73f49",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1773706920.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Syttende Mai photographs arrived. I have put them with the others.",
+     "message_id": "262e8ad37bb75151379e6114",
+     "sender_id": "5d47a1c8e93b02f6ad8c7415",
+     "timestamp": 1779116700.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Eighty-four people. The lodge cleared $612.00.",
+     "message_id": "c1ab3517b462542292a75629",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1779154800.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Mor: the June Fjordposten is on the page. I will send you the PDF when Kjersti closes the file.",
+     "message_id": "909db5142ed0b956edc89303",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1782177000.0
+    }
+   ]
+  },
+  {
+   "conversation_id": "d76998209ba41c921507d4bd",
+   "title": "Sindre Strand",
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "e6b21f83d0a47c95b28e5304"
+   ],
+   "last_updated": 1784517720.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "mag Neild the north field is still wet i am not putting a tractor on it",
+     "message_id": "05284a4e4c91e94291792677",
+     "sender_id": "e6b21f83d0a47c95b28e5304",
+     "timestamp": 1775220000.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Leave it. Plentywood can wait a week.",
+     "message_id": "f07a58d27e42c006c739eb40",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1775222100.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Sindre: wheat looks early from here. Tell me when you start cutting and I will call.",
+     "message_id": "d9acc3826fae45dbc408a895",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783562700.0
+    },
+    {
+     "attachment_name": null,
+     "content": "torvald said you are driving past on a loop. i am not on the loop",
+     "message_id": "a12cae05476f43d4f81e7ce9",
+     "sender_id": "e6b21f83d0a47c95b28e5304",
+     "timestamp": 1784516880.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Missoula, Butte, Moscow. Not Plentywood. I will call Sunday.",
+     "message_id": "fba63984cb0161fe05de73a5",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1784517720.0
+    }
+   ]
+  },
+  {
+   "conversation_id": "53edf881c3d80604b45898cb",
+   "title": "Marguerite Daisy Oyelaran",
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "88482352b83ca3746a7336f5"
+   ],
+   "last_updated": 1781305800.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Fargo. I already know. Five at Plonk and I will not ask you in the hallway.",
+     "message_id": "f0524579bd34e6b0ae14c74d",
+     "sender_id": "88482352b83ca3746a7336f5",
+     "timestamp": 1775858700.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Tomorrow. Not in Slack.",
+     "message_id": "343232159342f60b0556f5da",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1775859480.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Friday drink is on. I will be out of Plew by 16:20.",
+     "message_id": "15335ffba7733aa934f031b1",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781300400.0
+    },
+    {
+     "attachment_name": null,
+     "content": "You declined. I heard it from Dagny, which is how I prefer to hear things.",
+     "message_id": "c58d223a9203c29b5f62cc17",
+     "sender_id": "88482352b83ca3746a7336f5",
+     "timestamp": 1781305320.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Yes.",
+     "message_id": "4890d0f4bddfd5bf3a5bd346",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781305800.0
+    }
+   ]
+  },
+  {
+   "conversation_id": "753c548713b19bf34263bf1c",
+   "title": "Emmanuel Adjei-Boateng",
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "a71c4b09e6d3f28540ba9c17"
+   ],
+   "last_updated": 1782342300.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Workbook v2 is filed. Every weight is a cell reference.",
+     "message_id": "ecdbc30de623e79342ced351",
+     "sender_id": "a71c4b09e6d3f28540ba9c17",
+     "timestamp": 1778098200.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Good. Nothing scored until the 22nd.",
+     "message_id": "502f999aa96da6a2b28c55e4",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1778098920.0
+    },
+    {
+     "attachment_name": null,
+     "content": "The 546 is in TAB 3. I have written it down twice.",
+     "message_id": "a3020e09e99d8a191f08c376",
+     "sender_id": "a71c4b09e6d3f28540ba9c17",
+     "timestamp": 1782340800.0
+    },
+    {
+     "attachment_name": null,
+     "content": "It goes on page one of the memo, above the decision.",
+     "message_id": "5646762331593cf2857e3c72",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1782341460.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Put the 546 on page one of v2, not in a footnote. I will look at the workbook in the morning.",
+     "message_id": "4cb86fe14ba02a0588478218",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1782342300.0
+    }
+   ]
+  },
+  {
+   "conversation_id": "53815655db1a82822e405087",
+   "title": "Tamsin Wrigley-Achebe",
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "92b47e0ac1d538f60ba25e17"
+   ],
+   "last_updated": 1783016100.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "I am throwing first tomorrow. Do not let Delphine sweep early.",
+     "message_id": "38f077d6404af62ce0e88e72",
+     "sender_id": "92b47e0ac1d538f60ba25e17",
+     "timestamp": 1773882600.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I will say it once.",
+     "message_id": "8099b574270a9e1cff677d1c",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1773882960.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Butte. Three and one if we are lucky. Coasters if we are not.",
+     "message_id": "754644c7886253cccee0e63f",
+     "sender_id": "92b47e0ac1d538f60ba25e17",
+     "timestamp": 1775873100.0
+    },
+    {
+     "attachment_name": null,
+     "content": "We entered. $60.00. I am driving Saturday morning.",
+     "message_id": "c1bbe52db79e791e608bf6c6",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1775873520.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I can do lefse for the July social. Two trays.",
+     "message_id": "a65278e79f94303e92cddfc8",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1783016100.0
+    }
+   ]
+  },
+  {
+   "conversation_id": "45cb5bb743ffc6ab2e5e8f52",
+   "title": "Rock Bottom",
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "e743b09c8a2d15f6207ce4a1",
+    "38d1c6ae0f9b47521a0e7c34",
+    "92b47e0ac1d538f60ba25e17"
+   ],
+   "last_updated": 1780510500.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "ice is slow tonight. i already told ozias",
+     "message_id": "66af0c5ee490012264b623b5",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1772673000.0
+    },
+    {
+     "attachment_name": null,
+     "content": "The ice is not slow. The broom is late. O.L.",
+     "message_id": "b0792891b5474ce8033dd8fc",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1772673240.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Draw is 18:30. I will be there.",
+     "message_id": "f25601da9edebd1dcad2910e",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1772673600.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I have the rocks. Strand bring the scoreboard markers.",
+     "message_id": "4b419a674e96087a160f069a",
+     "sender_id": "92b47e0ac1d538f60ba25e17",
+     "timestamp": 1773273300.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I have them.",
+     "message_id": "510f57508157b3e73ac958e8",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1773273720.0
+    },
+    {
+     "attachment_name": null,
+     "content": "😂😂😂😂😂😂😂😂😂😂😂",
+     "message_id": "8f9fe74a8de4e21cf19f254f",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1773283200.0
+    },
+    {
+     "attachment_name": null,
+     "content": "A two-hundred-word note on sweeping judgment is attached in my head. I will not send it. O.L.",
+     "message_id": "bf353be9b8423f5144a81bdb",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1773885000.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Send it to Delphine. Not to me.",
+     "message_id": "e956f9d42d98ac3f143d2fe6",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1773885660.0
+    },
+    {
+     "attachment_name": null,
+     "content": "last rock. i over-swept. seven six. i know",
+     "message_id": "6ca9e7651570d22a72fd1f0a",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1774491120.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Four feet. I measured it with my eye, which is not a measuring tool. O.L.",
+     "message_id": "13909cd7d6c78407b4088905",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1774491480.0
+    },
+    {
+     "attachment_name": null,
+     "content": "B-event final. We played it.",
+     "message_id": "1c49ca6d74381f5f4ebfabf0",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1774491900.0
+    },
+    {
+     "attachment_name": null,
+     "content": "League is over. Ozias, the last rock was mine to sweep. Next year.",
+     "message_id": "3344572e33abe6a5b04aaa34",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1774494000.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Butte entry is in. Sixty dollars. Strand you are driving.",
+     "message_id": "e15b98fac3bb66316baeecc4",
+     "sender_id": "92b47e0ac1d538f60ba25e17",
+     "timestamp": 1774893900.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Saturday 10:00 first draw. I am staying the night.",
+     "message_id": "ba3b9b4321311674ad259498",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1774896000.0
+    },
+    {
+     "attachment_name": null,
+     "content": "photo from butte. we are not elegant",
+     "message_id": "7383e92cac3ec8f841b4a75c",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1775932920.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Elegance is not a criterion. The rock stopped. O.L.",
+     "message_id": "d956205c31a1acdf4b97717c",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1775933400.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Three and one. Coasters if we finish it.",
+     "message_id": "34b0e1fd7caf578ce5dc9ee9",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1775933700.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Coasters. I am putting mine in the truck.",
+     "message_id": "9f1319ccb4611b87e9476064",
+     "sender_id": "92b47e0ac1d538f60ba25e17",
+     "timestamp": 1776031800.0
+    },
+    {
+     "attachment_name": null,
+     "content": "🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉",
+     "message_id": "1573c42ee67df945871aed09",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1776032040.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Three and one. I am driving home.",
+     "message_id": "d5401c5427237be8369d07da",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1776032400.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Wednesday ice is other things now. I have joined a Tuesday book. O.L.",
+     "message_id": "d258b75ed2bbaf083684ba0f",
+     "sender_id": "38d1c6ae0f9b47521a0e7c34",
+     "timestamp": 1778115720.0
+    },
+    {
+     "attachment_name": null,
+     "content": "The slot is gone. I am walking dogs.",
+     "message_id": "ac557ad729ac7ed86a1d4295",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1778116200.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Summer league sheet if anyone wants it. I do not.",
+     "message_id": "e23547506a0e50ea6faf49b1",
+     "sender_id": "92b47e0ac1d538f60ba25e17",
+     "timestamp": 1780509600.0
+    },
+    {
+     "attachment_name": null,
+     "content": "no",
+     "message_id": "96781d67af40f9c7c353f37f",
+     "sender_id": "e743b09c8a2d15f6207ce4a1",
+     "timestamp": 1780510080.0
+    },
+    {
+     "attachment_name": null,
+     "content": "No.",
+     "message_id": "21efb98603908711f41a2bb7",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1780510500.0
+    }
+   ]
+  },
+  {
+   "conversation_id": "0233dd4d4a4fb2a53c94881b",
+   "title": "Aase Bergflodt",
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "7a3c9e50b81d24f6c07a3ba9"
+   ],
+   "last_updated": 1767722400.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Aase: Anneke is back in Eugene in September. She still talks about the kitchen in Voss.",
+     "message_id": "e6c8d0f8395b3c238fc590e9",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1767722400.0
+    }
+   ]
+  },
+  {
+   "conversation_id": "7274284064a4ae82a84f2356",
+   "title": "Corliss Ahenakew",
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "21e5c73a90bd4f68a1c30e7b"
+   ],
+   "last_updated": 1770852000.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "Corliss: Wyoming still has you. I am sorry we missed lunch when you came through in February. The invitation stands if you are west of Sheridan again.",
+     "message_id": "f6ef454a0251484c393f6a3b",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1770852000.0
+    }
+   ]
+  },
+  {
+   "conversation_id": "40ac861a67f6804316cf87df",
+   "last_updated": 1785624000.0,
+   "messages": [
+    {
+     "attachment_name": null,
+     "content": "mamma the cake is not even mine somebody in the house made it",
+     "message_id": "bfd3ff69ef71a5ea0beec7db",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1773504480.0
+    },
+    {
+     "attachment_name": null,
+     "content": "We are all four on the call. Happy birthday.",
+     "message_id": "3e5cd7951873dd66693847d9",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1773504660.0
+    },
+    {
+     "attachment_name": null,
+     "content": "i know i can hear pappa talking to the dogs in the background",
+     "message_id": "972a9ca7b3cf79419bf59366",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1773504840.0
+    },
+    {
+     "attachment_name": null,
+     "content": "does fargo even have mountains or is that the whole point",
+     "message_id": "73018072075fc964d49c2cbe",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1776043320.0
+    },
+    {
+     "attachment_name": null,
+     "content": "It has a river. I have not said yes.",
+     "message_id": "907487ce30a78df9ed139e7d",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1776044460.0
+    },
+    {
+     "attachment_name": null,
+     "content": "good. eugene has a river and i can see a hill if i stand on a bench",
+     "message_id": "82190537755a71ce1bf69f22",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1776044640.0
+    },
+    {
+     "attachment_name": null,
+     "content": "I declined this morning. Torvald's last year, the mountains, and the work.",
+     "message_id": "39c67d234c412b3ace718904",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1781193900.0
+    },
+    {
+     "attachment_name": null,
+     "content": "voice note. four seconds. i am glad",
+     "message_id": "9c33b1ce5ea00597119b3363",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1781194680.0
+    },
+    {
+     "attachment_name": null,
+     "content": "lease is signed. 2250 split four ways. you still paying 400",
+     "message_id": "58ac9f455fad2ed28d464536",
+     "sender_id": "c82d5b1e6a04f79c3e2b81da",
+     "timestamp": 1785622320.0
+    },
+    {
+     "attachment_name": null,
+     "content": "Yes. $400.00 from September. The letter is in the folder.",
+     "message_id": "afd37135e467f5cbdd6198a9",
+     "sender_id": "ba2e71496ddae2b68875edb6",
+     "timestamp": 1785624000.0
+    }
+   ],
+   "participant_ids": [
+    "ba2e71496ddae2b68875edb6",
+    "c82d5b1e6a04f79c3e2b81da"
+   ],
+   "title": "Anneke Strand-Solheim"
+  }
+ ],
+ "current_user_id": "ba2e71496ddae2b68875edb6"
+}

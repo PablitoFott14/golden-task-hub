@@ -99,8 +99,10 @@ for (const slug of slugs) {
   const files = stored(slug);
   const hashes = new Set(files.values());
   const zipSha = sha(fs.readFileSync(path.join(ZIPS, `${slug}.zip`)));
-  const fsSeed = JSON.parse(fs.readFileSync(path.join(STORE, slug, "seed", "filesystem.json"), "utf8"));
-  const recordSha = new Map((fsSeed.files ?? []).map((f) => [String(f.path).replace(/^\/+/, ""), f.sha256]));
+  // A universe built from its export alone (Magnhild) has no Files app.
+  const fsPath = path.join(STORE, slug, "seed", "filesystem.json");
+  const fsSeed = fs.existsSync(fsPath) ? JSON.parse(fs.readFileSync(fsPath, "utf8")) : null;
+  const recordSha = new Map((fsSeed?.files ?? []).map((f) => [String(f.path).replace(/^\/+/, ""), f.sha256]));
   const problems = [];
   const counts = { zip: 0, files: 0, notIncluded: 0, viaCopy: 0, inline: 0, attachments: 0, added: 0, lightbox: 0 };
 
@@ -143,65 +145,67 @@ for (const slug of slugs) {
   const $ = (sel) => page.locator(`[data-universe="${slug}"] ${sel}`);
 
   // 2. The Files app: every file.
-  await inRoot(`R.querySelector('.nav-item[data-nav="filesystem"]').click()`);
-  await page.waitForTimeout(600);
-  // Its previews load lazily, and each one that lands moves every row below
-  // it, which can move a button between Playwright finding it and clicking
-  // it. So all of them load first, as in the parity crawl.
-  await inRoot(`R.querySelectorAll('.panel.active img[loading=lazy]').forEach((i) => (i.loading = 'eager'))`);
-  await page
-    .waitForFunction((s) => [...document.querySelector(`[data-universe="${s}"]`).shadowRoot.querySelectorAll(".panel.active img")].every((i) => i.complete), slug, { timeout: 90000 })
-    .catch(() => {});
-  const info = `
-    const info = (a, i, row) => {
-      const cs = getComputedStyle(a), before = getComputedStyle(a, '::before'), r = a.getBoundingClientRect();
-      return {
-        i, row, name: a.getAttribute('download'), href: a.getAttribute('href'), off: a.classList.contains('uv-dl-off'),
-        disabled: a.getAttribute('aria-disabled'), text: a.textContent.trim(), title: a.title,
-        display: cs.display, color: cs.color, border: cs.borderTopWidth, mask: before.maskImage || before.webkitMaskImage || '',
-        w: Math.round(r.width), h: Math.round(r.height),
-      };
-    };`;
-  // The older Files app lists every file with a Download of its own. The newer
-  // one lists the files and shows one at a time, its Download in the preview,
-  // so each file is opened from its row first.
-  const rows = await inRoot(`return [...R.querySelectorAll('.panel.active #fs-list .fs-item')].map((el) => el.dataset.filePath.replace(/^\\/+/, ''))`);
-  const links = rows.length
-    ? rows.map((row, k) => ({ row, k }))
-    : await inRoot(info + `return [...R.querySelectorAll('.panel.active a[download]')].map((a, i) => info(a, i, a.closest('.gen-rec')?.querySelector('b')?.textContent ?? ''))`);
-  if (!links.length) problems.push("the Files app shows no downloads");
-  for (const entry of links) {
-    let l = entry;
-    if (rows.length) {
-      await $(".panel.active #fs-list .fs-item").nth(entry.k).click();
-      await page.waitForTimeout(250);
-      l = await inRoot(info + `const el = R.querySelector('.panel.active #fs-preview a[download]'); return el ? info(el, 0, a) : null`, entry.row);
-      if (!l) {
-        problems.push(`Files: ${entry.row}: no Download in the preview`);
+  if (fsSeed) {
+    await inRoot(`R.querySelector('.nav-item[data-nav="filesystem"]').click()`);
+    await page.waitForTimeout(600);
+    // Its previews load lazily, and each one that lands moves every row below
+    // it, which can move a button between Playwright finding it and clicking
+    // it. So all of them load first, as in the parity crawl.
+    await inRoot(`R.querySelectorAll('.panel.active img[loading=lazy]').forEach((i) => (i.loading = 'eager'))`);
+    await page
+      .waitForFunction((s) => [...document.querySelector(`[data-universe="${s}"]`).shadowRoot.querySelectorAll(".panel.active img")].every((i) => i.complete), slug, { timeout: 90000 })
+      .catch(() => {});
+    const info = `
+      const info = (a, i, row) => {
+        const cs = getComputedStyle(a), before = getComputedStyle(a, '::before'), r = a.getBoundingClientRect();
+        return {
+          i, row, name: a.getAttribute('download'), href: a.getAttribute('href'), off: a.classList.contains('uv-dl-off'),
+          disabled: a.getAttribute('aria-disabled'), text: a.textContent.trim(), title: a.title,
+          display: cs.display, color: cs.color, border: cs.borderTopWidth, mask: before.maskImage || before.webkitMaskImage || '',
+          w: Math.round(r.width), h: Math.round(r.height),
+        };
+      };`;
+    // The older Files app lists every file with a Download of its own. The newer
+    // one lists the files and shows one at a time, its Download in the preview,
+    // so each file is opened from its row first.
+    const rows = await inRoot(`return [...R.querySelectorAll('.panel.active #fs-list .fs-item')].map((el) => el.dataset.filePath.replace(/^\\/+/, ''))`);
+    const links = rows.length
+      ? rows.map((row, k) => ({ row, k }))
+      : await inRoot(info + `return [...R.querySelectorAll('.panel.active a[download]')].map((a, i) => info(a, i, a.closest('.gen-rec')?.querySelector('b')?.textContent ?? ''))`);
+    if (!links.length) problems.push("the Files app shows no downloads");
+    for (const entry of links) {
+      let l = entry;
+      if (rows.length) {
+        await $(".panel.active #fs-list .fs-item").nth(entry.k).click();
+        await page.waitForTimeout(250);
+        l = await inRoot(info + `const el = R.querySelector('.panel.active #fs-preview a[download]'); return el ? info(el, 0, a) : null`, entry.row);
+        if (!l) {
+          problems.push(`Files: ${entry.row}: no Download in the preview`);
+          continue;
+        }
+      }
+      const where = `Files: ${l.row}`;
+      if (!/flex/.test(l.display) || !/svg/.test(l.mask) || l.border !== "1px" || l.h < 20) {
+        problems.push(`${where}: not drawn as the download button (${l.display}, mask ${l.mask.slice(0, 20)}, ${l.w}x${l.h})`);
+      }
+      if (l.off) {
+        counts.notIncluded++;
+        if (l.href !== null || l.disabled !== "true" || l.text !== "Not included") problems.push(`${where}: shown as not included, but still a live link`);
+        if (files.has(`files/filesystem/${l.row}`)) problems.push(`${where}: shown as not included, but it is stored`);
         continue;
       }
-    }
-    const where = `Files: ${l.row}`;
-    if (!/flex/.test(l.display) || !/svg/.test(l.mask) || l.border !== "1px" || l.h < 20) {
-      problems.push(`${where}: not drawn as the download button (${l.display}, mask ${l.mask.slice(0, 20)}, ${l.w}x${l.h})`);
-    }
-    if (l.off) {
-      counts.notIncluded++;
-      if (l.href !== null || l.disabled !== "true" || l.text !== "Not included") problems.push(`${where}: shown as not included, but still a live link`);
-      if (files.has(`files/filesystem/${l.row}`)) problems.push(`${where}: shown as not included, but it is stored`);
-      continue;
-    }
-    if (l.text !== "Download" || !l.title.startsWith("Download ")) problems.push(`${where}: labelled "${l.text}", titled "${l.title}"`);
-    const expect = files.get(`files/filesystem/${l.row}`) ?? recordSha.get(l.row);
-    if (!files.has(`files/filesystem/${l.row}`)) counts.viaCopy++;
-    if (l.href?.startsWith("data:")) counts.inline++;
-    try {
-      const got = await save(page, () => (rows.length ? $(".panel.active #fs-preview a[download]") : $(".panel.active a[download]").nth(l.i)).click());
-      counts.files++;
-      if (got.name !== l.row.split("/").pop()) problems.push(`${where}: saves as ${got.name}`);
-      if (got.sha !== expect) problems.push(`${where}: the saved bytes are not the file (${got.bytes} bytes)`);
-    } catch (e) {
-      problems.push(`${where}: ${e.message.split("\n")[0]}`);
+      if (l.text !== "Download" || !l.title.startsWith("Download ")) problems.push(`${where}: labelled "${l.text}", titled "${l.title}"`);
+      const expect = files.get(`files/filesystem/${l.row}`) ?? recordSha.get(l.row);
+      if (!files.has(`files/filesystem/${l.row}`)) counts.viaCopy++;
+      if (l.href?.startsWith("data:")) counts.inline++;
+      try {
+        const got = await save(page, () => (rows.length ? $(".panel.active #fs-preview a[download]") : $(".panel.active a[download]").nth(l.i)).click());
+        counts.files++;
+        if (got.name !== l.row.split("/").pop()) problems.push(`${where}: saves as ${got.name}`);
+        if (got.sha !== expect) problems.push(`${where}: the saved bytes are not the file (${got.bytes} bytes)`);
+      } catch (e) {
+        problems.push(`${where}: ${e.message.split("\n")[0]}`);
+      }
     }
   }
 
@@ -274,8 +278,11 @@ for (const slug of slugs) {
   const ok = !problems.length;
   if (!ok) failed++;
   console.log(
-    `${ok ? "OK  " : "FAIL"} ${slug}: ZIP saved ${counts.zip}/2 identical; Files ${counts.files} downloads byte for byte` +
-      ` (${counts.inline} held inline, ${counts.viaCopy} from a stored copy), ${counts.notIncluded} shown as not included;` +
+    `${ok ? "OK  " : "FAIL"} ${slug}: ZIP saved ${counts.zip}/2 identical; ` +
+      (fsSeed
+        ? `Files ${counts.files} downloads byte for byte (${counts.inline} held inline, ${counts.viaCopy} from a stored copy),` +
+          ` ${counts.notIncluded} shown as not included;`
+        : "no Files app;") +
       ` attachments ${counts.attachments} (${counts.added} on a PDF that had none); image viewer ${counts.lightbox}`
   );
   for (const p of problems.slice(0, 30)) console.log(`     ${p}`);

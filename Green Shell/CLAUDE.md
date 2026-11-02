@@ -1126,6 +1126,16 @@ it replaced. [src/data/universeCatalog.ts](src/data/universeCatalog.ts) is gener
 labels, which are the viewer site's own, what is read off the data, `loadBytes` being what opening
 a universe downloads, and the ledger's artifact ID and date.
 
+**Magnhild Kirsten Strand is the one universe with no viewer page.** The viewer site never carried
+her, so on Nov 2, 2026 her page was built from her export on Owen's engine, the newest the hub
+stores: her seed, the timezone, header and nav read off that data (`America/Denver`, her age, role
+and home as the records give them), and no docs, no Files app and no app skins, so Slack shows in
+the engine's own layout. `apply --add --offline --only magnhild-kirsten-strand` imported it, and
+from there it is stored, verified and synced like the others; her exports go through
+`apply-exports` over that build. A universe the viewer site never labelled takes its card's labels
+from its header (the age after the name or in its Name line, the role from the subtitle, the city
+from Home), and the catalog keeps them from then on, as it keeps the hue chosen for her card (155).
+
 **The parity crawl is the regression test.** [scripts/universes_parity.mjs](scripts/universes_parity.mjs)
 opens each original page (written by `emit-reference`, byte-identical to the imported one, served
 over HTTP) in a window the size of the hub's stage, and the hub's tab beside it. It drives both

@@ -1,0 +1,4417 @@
+{
+ "user_profiles": [
+  {
+   "user_id": "user_magnhild",
+   "is_user": true
+  }
+ ],
+ "heart_rate_records": [
+  {
+   "record_id": 51001,
+   "user_id": "user_magnhild",
+   "date": "2026-03-01T10:45:00",
+   "value": 141.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51002,
+   "user_id": "user_magnhild",
+   "date": "2026-03-03T16:50:00",
+   "value": 133.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51003,
+   "user_id": "user_magnhild",
+   "date": "2026-03-05T17:00:00",
+   "value": 149.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51004,
+   "user_id": "user_magnhild",
+   "date": "2026-03-07T10:30:00",
+   "value": 151.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51005,
+   "user_id": "user_magnhild",
+   "date": "2026-03-08T10:15:00",
+   "value": 146.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51006,
+   "user_id": "user_magnhild",
+   "date": "2026-03-10T07:20:00",
+   "value": 58.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51007,
+   "user_id": "user_magnhild",
+   "date": "2026-03-13T17:05:00",
+   "value": 143.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51008,
+   "user_id": "user_magnhild",
+   "date": "2026-03-15T10:20:00",
+   "value": 137.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51009,
+   "user_id": "user_magnhild",
+   "date": "2026-03-17T16:55:00",
+   "value": 152.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51010,
+   "user_id": "user_magnhild",
+   "date": "2026-03-20T16:50:00",
+   "value": 136.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51011,
+   "user_id": "user_magnhild",
+   "date": "2026-03-22T10:40:00",
+   "value": 140.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51012,
+   "user_id": "user_magnhild",
+   "date": "2026-03-24T17:10:00",
+   "value": 155.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51013,
+   "user_id": "user_magnhild",
+   "date": "2026-03-25T19:15:00",
+   "value": 88.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51014,
+   "user_id": "user_magnhild",
+   "date": "2026-03-27T16:55:00",
+   "value": 134.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51015,
+   "user_id": "user_magnhild",
+   "date": "2026-03-30T12:00:00",
+   "value": 57.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51016,
+   "user_id": "user_magnhild",
+   "date": "2026-03-31T16:45:00",
+   "value": 144.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51017,
+   "user_id": "user_magnhild",
+   "date": "2026-04-04T11:30:00",
+   "value": 132.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 51018,
+   "user_id": "user_magnhild",
+   "date": "2026-04-05T08:10:00",
+   "value": 59.0,
+   "unit": "count/min"
+  }
+ ],
+ "resting_heart_rate_records": [
+  {
+   "record_id": 202148420878410,
+   "user_id": "user_magnhild",
+   "date": "2026-03-02T06:15:00",
+   "value": 54.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 206034232945503,
+   "user_id": "user_magnhild",
+   "date": "2026-03-04T06:12:00",
+   "value": 54.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 126855211628733,
+   "user_id": "user_magnhild",
+   "date": "2026-03-08T06:40:00",
+   "value": 59.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 200505813838753,
+   "user_id": "user_magnhild",
+   "date": "2026-03-09T06:20:00",
+   "value": 61.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 116696169641422,
+   "user_id": "user_magnhild",
+   "date": "2026-03-10T06:18:00",
+   "value": 58.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 246309165113762,
+   "user_id": "user_magnhild",
+   "date": "2026-03-13T06:15:00",
+   "value": 55.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 129500708063610,
+   "user_id": "user_magnhild",
+   "date": "2026-03-16T06:22:00",
+   "value": 57.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 151485579073198,
+   "user_id": "user_magnhild",
+   "date": "2026-03-19T06:14:00",
+   "value": 54.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 189118985911868,
+   "user_id": "user_magnhild",
+   "date": "2026-03-22T06:28:00",
+   "value": 58.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 13774067991963,
+   "user_id": "user_magnhild",
+   "date": "2026-03-23T06:16:00",
+   "value": 57.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 164960855700175,
+   "user_id": "user_magnhild",
+   "date": "2026-03-26T06:24:00",
+   "value": 58.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 37578235125325,
+   "user_id": "user_magnhild",
+   "date": "2026-03-29T06:18:00",
+   "value": 55.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 158259249494724,
+   "user_id": "user_magnhild",
+   "date": "2026-03-30T06:20:00",
+   "value": 57.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 216329175622047,
+   "user_id": "user_magnhild",
+   "date": "2026-04-02T06:15:00",
+   "value": 54.0,
+   "unit": "count/min"
+  },
+  {
+   "record_id": 257126766394159,
+   "user_id": "user_magnhild",
+   "date": "2026-04-05T06:26:00",
+   "value": 59.0,
+   "unit": "count/min"
+  }
+ ],
+ "hrv_records": [],
+ "sleep_records": [],
+ "step_records": [
+  {
+   "record_id": 1,
+   "user_id": "user_magnhild",
+   "date": "2026-03-01T16:17:00-07:00",
+   "total_steps": 7238
+  },
+  {
+   "record_id": 3,
+   "user_id": "user_magnhild",
+   "date": "2026-03-02T14:11:00-07:00",
+   "total_steps": 10372
+  },
+  {
+   "record_id": 5,
+   "date": "2026-03-03T18:16:00-07:00",
+   "total_steps": 12480,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 7,
+   "user_id": "user_magnhild",
+   "date": "2026-03-04T16:00:00-07:00",
+   "total_steps": 6099
+  },
+  {
+   "record_id": 9,
+   "user_id": "user_magnhild",
+   "date": "2026-03-05T14:08:00-07:00",
+   "total_steps": 9923
+  },
+  {
+   "record_id": 11,
+   "user_id": "user_magnhild",
+   "date": "2026-03-06T07:20:00-07:00",
+   "total_steps": 13850
+  },
+  {
+   "record_id": 13,
+   "date": "2026-03-07T19:16:00-07:00",
+   "total_steps": 21840,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 15,
+   "user_id": "user_magnhild",
+   "date": "2026-03-08T07:07:00-06:00",
+   "total_steps": 12128
+  },
+  {
+   "record_id": 17,
+   "date": "2026-03-09T10:53:00-06:00",
+   "total_steps": 14352,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 19,
+   "user_id": "user_magnhild",
+   "date": "2026-03-10T09:39:00-06:00",
+   "total_steps": 5251
+  },
+  {
+   "record_id": 21,
+   "user_id": "user_magnhild",
+   "date": "2026-03-11T22:46:00-06:00",
+   "total_steps": 9369
+  },
+  {
+   "record_id": 22,
+   "date": "2026-03-12T18:52:00-06:00",
+   "total_steps": 14573,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 24,
+   "user_id": "user_magnhild",
+   "date": "2026-03-13T10:55:00-06:00",
+   "total_steps": 7824
+  },
+  {
+   "record_id": 26,
+   "user_id": "user_magnhild",
+   "date": "2026-03-14T09:04:00-06:00",
+   "total_steps": 10339
+  },
+  {
+   "record_id": 28,
+   "user_id": "user_magnhild",
+   "date": "2026-03-15T12:16:00-06:00",
+   "total_steps": 13833
+  },
+  {
+   "record_id": 30,
+   "date": "2026-03-16T14:57:00-06:00",
+   "total_steps": 7176,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 32,
+   "user_id": "user_magnhild",
+   "date": "2026-03-17T19:16:00-06:00",
+   "total_steps": 9945
+  },
+  {
+   "record_id": 33,
+   "user_id": "user_magnhild",
+   "date": "2026-03-18T07:07:00-06:00",
+   "total_steps": 9244
+  },
+  {
+   "record_id": 35,
+   "date": "2026-03-19T08:22:00-06:00",
+   "total_steps": 15184,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 37,
+   "user_id": "user_magnhild",
+   "date": "2026-03-20T18:16:00-06:00",
+   "total_steps": 10464
+  },
+  {
+   "record_id": 39,
+   "user_id": "user_magnhild",
+   "date": "2026-03-21T10:05:00-06:00",
+   "total_steps": 7094
+  },
+  {
+   "record_id": 41,
+   "user_id": "user_magnhild",
+   "date": "2026-03-22T07:17:00-06:00",
+   "total_steps": 13301
+  },
+  {
+   "record_id": 43,
+   "user_id": "user_magnhild",
+   "date": "2026-03-23T21:54:00-06:00",
+   "total_steps": 10133
+  },
+  {
+   "record_id": 44,
+   "date": "2026-03-24T17:41:00-06:00",
+   "total_steps": 11960,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 46,
+   "date": "2026-03-25T12:09:00-06:00",
+   "total_steps": 8268,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 48,
+   "user_id": "user_magnhild",
+   "date": "2026-03-26T11:36:00-06:00",
+   "total_steps": 13522
+  },
+  {
+   "record_id": 50,
+   "date": "2026-03-27T19:29:00-06:00",
+   "total_steps": 20020,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 52,
+   "user_id": "user_magnhild",
+   "date": "2026-03-28T15:59:00-06:00",
+   "total_steps": 15141
+  },
+  {
+   "record_id": 53,
+   "user_id": "user_magnhild",
+   "date": "2026-03-29T08:02:00-06:00",
+   "total_steps": 7891
+  },
+  {
+   "record_id": 55,
+   "user_id": "user_magnhild",
+   "date": "2026-03-30T20:19:00-06:00",
+   "total_steps": 13897
+  },
+  {
+   "record_id": 57,
+   "user_id": "user_magnhild",
+   "date": "2026-03-31T15:45:00-06:00",
+   "total_steps": 13215
+  },
+  {
+   "record_id": 58,
+   "date": "2026-04-01T14:52:00-06:00",
+   "total_steps": 9061,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 60,
+   "user_id": "user_magnhild",
+   "date": "2026-04-02T20:57:00-06:00",
+   "total_steps": 13673
+  },
+  {
+   "record_id": 61,
+   "date": "2026-04-03T18:17:00-06:00",
+   "total_steps": 6175,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 63,
+   "date": "2026-04-04T20:33:00-06:00",
+   "total_steps": 31980,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 65,
+   "user_id": "user_magnhild",
+   "date": "2026-04-05T21:04:00-06:00",
+   "total_steps": 14850
+  },
+  {
+   "record_id": 66,
+   "user_id": "user_magnhild",
+   "date": "2026-04-06T18:51:00-06:00",
+   "total_steps": 14197
+  },
+  {
+   "record_id": 68,
+   "user_id": "user_magnhild",
+   "date": "2026-04-07T15:15:00-06:00",
+   "total_steps": 9049
+  },
+  {
+   "record_id": 70,
+   "date": "2026-04-08T09:19:00-06:00",
+   "total_steps": 5148,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 72,
+   "user_id": "user_magnhild",
+   "date": "2026-04-09T15:28:00-06:00",
+   "total_steps": 10243
+  },
+  {
+   "record_id": 73,
+   "date": "2026-04-10T08:22:00-06:00",
+   "total_steps": 9633,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 75,
+   "user_id": "user_magnhild",
+   "date": "2026-04-11T20:55:00-06:00",
+   "total_steps": 12940
+  },
+  {
+   "record_id": 76,
+   "date": "2026-04-12T22:01:00-06:00",
+   "total_steps": 13260,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 78,
+   "date": "2026-04-13T18:50:00-06:00",
+   "total_steps": 4420,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 80,
+   "date": "2026-04-14T18:19:00-06:00",
+   "total_steps": 9009,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 82,
+   "user_id": "user_magnhild",
+   "date": "2026-04-15T19:48:00-06:00",
+   "total_steps": 7290
+  },
+  {
+   "record_id": 83,
+   "date": "2026-04-16T11:24:00-06:00",
+   "total_steps": 10179,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 85,
+   "user_id": "user_magnhild",
+   "date": "2026-04-17T14:03:00-06:00",
+   "total_steps": 11773
+  },
+  {
+   "record_id": 87,
+   "user_id": "user_magnhild",
+   "date": "2026-04-18T23:59:00",
+   "total_steps": 14600
+  },
+  {
+   "record_id": 88,
+   "date": "2026-04-19T20:14:00-06:00",
+   "total_steps": 11115,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 90,
+   "user_id": "user_magnhild",
+   "date": "2026-04-20T08:15:00-06:00",
+   "total_steps": 13286
+  },
+  {
+   "record_id": 92,
+   "user_id": "user_magnhild",
+   "date": "2026-04-21T20:27:00-06:00",
+   "total_steps": 12195
+  },
+  {
+   "record_id": 93,
+   "date": "2026-04-22T07:47:00-06:00",
+   "total_steps": 7514,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 95,
+   "date": "2026-04-23T13:55:00-06:00",
+   "total_steps": 8177,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 97,
+   "user_id": "user_magnhild",
+   "date": "2026-04-24T15:50:00-06:00",
+   "total_steps": 10855
+  },
+  {
+   "record_id": 99,
+   "user_id": "user_magnhild",
+   "date": "2026-04-25T11:14:00-06:00",
+   "total_steps": 7525
+  },
+  {
+   "record_id": 101,
+   "user_id": "user_magnhild",
+   "date": "2026-04-26T15:43:00-06:00",
+   "total_steps": 10654
+  },
+  {
+   "record_id": 102,
+   "date": "2026-04-27T17:01:00-06:00",
+   "total_steps": 7241,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 104,
+   "user_id": "user_magnhild",
+   "date": "2026-04-28T17:36:00-06:00",
+   "total_steps": 7124
+  },
+  {
+   "record_id": 106,
+   "user_id": "user_magnhild",
+   "date": "2026-04-29T15:21:00-06:00",
+   "total_steps": 10388
+  },
+  {
+   "record_id": 108,
+   "user_id": "user_magnhild",
+   "date": "2026-04-30T14:15:00-06:00",
+   "total_steps": 9177
+  },
+  {
+   "record_id": 109,
+   "user_id": "user_magnhild",
+   "date": "2026-05-01T08:09:00-06:00",
+   "total_steps": 10788
+  },
+  {
+   "record_id": 111,
+   "date": "2026-05-02T18:23:00-06:00",
+   "total_steps": 13819,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 113,
+   "user_id": "user_magnhild",
+   "date": "2026-05-03T07:15:00-06:00",
+   "total_steps": 9480
+  },
+  {
+   "record_id": 114,
+   "user_id": "user_magnhild",
+   "date": "2026-05-04T10:01:00-06:00",
+   "total_steps": 14343
+  },
+  {
+   "record_id": 116,
+   "date": "2026-05-05T08:11:00-06:00",
+   "total_steps": 11674,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 118,
+   "date": "2026-05-06T15:03:00-06:00",
+   "total_steps": 8827,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 120,
+   "date": "2026-05-07T08:14:00-06:00",
+   "total_steps": 11141,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 122,
+   "user_id": "user_magnhild",
+   "date": "2026-05-08T10:22:00-06:00",
+   "total_steps": 10648
+  },
+  {
+   "record_id": 124,
+   "user_id": "user_magnhild",
+   "date": "2026-05-09T17:03:00-06:00",
+   "total_steps": 10409
+  },
+  {
+   "record_id": 125,
+   "date": "2026-05-10T08:34:00-06:00",
+   "total_steps": 4940,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 127,
+   "user_id": "user_magnhild",
+   "date": "2026-05-11T20:40:00-06:00",
+   "total_steps": 13825
+  },
+  {
+   "record_id": 129,
+   "date": "2026-05-12T16:14:00-06:00",
+   "total_steps": 12194,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 131,
+   "user_id": "user_magnhild",
+   "date": "2026-05-13T08:51:00-06:00",
+   "total_steps": 13834
+  },
+  {
+   "record_id": 133,
+   "user_id": "user_magnhild",
+   "date": "2026-05-14T16:17:00-06:00",
+   "total_steps": 14809
+  },
+  {
+   "record_id": 134,
+   "user_id": "user_magnhild",
+   "date": "2026-05-15T15:11:00-06:00",
+   "total_steps": 8058
+  },
+  {
+   "record_id": 136,
+   "user_id": "user_magnhild",
+   "date": "2026-05-16T09:18:00-06:00",
+   "total_steps": 10943
+  },
+  {
+   "record_id": 137,
+   "date": "2026-05-17T14:01:00-06:00",
+   "total_steps": 12597,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 139,
+   "user_id": "user_magnhild",
+   "date": "2026-05-18T17:06:00-06:00",
+   "total_steps": 14062
+  },
+  {
+   "record_id": 140,
+   "date": "2026-05-19T07:25:00-06:00",
+   "total_steps": 6552,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 142,
+   "date": "2026-05-20T14:44:00-06:00",
+   "total_steps": 6422,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 144,
+   "user_id": "user_magnhild",
+   "date": "2026-05-21T11:37:00-06:00",
+   "total_steps": 8300
+  },
+  {
+   "record_id": 145,
+   "date": "2026-05-22T13:40:00-06:00",
+   "total_steps": 10413,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 147,
+   "user_id": "user_magnhild",
+   "date": "2026-05-23T09:10:00-06:00",
+   "total_steps": 7870
+  },
+  {
+   "record_id": 149,
+   "date": "2026-05-24T13:46:00-06:00",
+   "total_steps": 5720,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 151,
+   "user_id": "user_magnhild",
+   "date": "2026-05-25T22:41:00-06:00",
+   "total_steps": 11811
+  },
+  {
+   "record_id": 152,
+   "user_id": "user_magnhild",
+   "date": "2026-05-26T12:32:00-06:00",
+   "total_steps": 14755
+  },
+  {
+   "record_id": 154,
+   "user_id": "user_magnhild",
+   "date": "2026-05-27T13:52:00-06:00",
+   "total_steps": 7898
+  },
+  {
+   "record_id": 156,
+   "user_id": "user_magnhild",
+   "date": "2026-05-28T11:02:00-06:00",
+   "total_steps": 10377
+  },
+  {
+   "record_id": 158,
+   "date": "2026-05-29T23:59:00",
+   "total_steps": 9400,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 159,
+   "user_id": "user_magnhild",
+   "date": "2026-05-30T10:51:00-06:00",
+   "total_steps": 10952
+  },
+  {
+   "record_id": 161,
+   "user_id": "user_magnhild",
+   "date": "2026-05-31T20:22:00-06:00",
+   "total_steps": 14985
+  },
+  {
+   "record_id": 162,
+   "date": "2026-06-01T07:24:00-06:00",
+   "total_steps": 6435,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 164,
+   "user_id": "user_magnhild",
+   "date": "2026-06-02T14:37:00-06:00",
+   "total_steps": 10008
+  },
+  {
+   "record_id": 166,
+   "user_id": "user_magnhild",
+   "date": "2026-06-03T11:35:00-06:00",
+   "total_steps": 10703
+  },
+  {
+   "record_id": 168,
+   "user_id": "user_magnhild",
+   "date": "2026-06-04T10:43:00-06:00",
+   "total_steps": 10253
+  },
+  {
+   "record_id": 169,
+   "user_id": "user_magnhild",
+   "date": "2026-06-05T15:32:00-06:00",
+   "total_steps": 6042
+  },
+  {
+   "record_id": 171,
+   "date": "2026-06-06T14:51:00-06:00",
+   "total_steps": 14820,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 173,
+   "date": "2026-06-07T19:27:00-06:00",
+   "total_steps": 12480,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 175,
+   "user_id": "user_magnhild",
+   "date": "2026-06-08T11:46:00-06:00",
+   "total_steps": 12504
+  },
+  {
+   "record_id": 177,
+   "user_id": "user_magnhild",
+   "date": "2026-06-09T15:49:00-06:00",
+   "total_steps": 11001
+  },
+  {
+   "record_id": 178,
+   "date": "2026-06-10T12:12:00-06:00",
+   "total_steps": 13936,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 180,
+   "user_id": "user_magnhild",
+   "date": "2026-06-11T16:14:00-06:00",
+   "total_steps": 5786
+  },
+  {
+   "record_id": 182,
+   "user_id": "user_magnhild",
+   "date": "2026-06-12T19:23:00-06:00",
+   "total_steps": 11783
+  },
+  {
+   "record_id": 184,
+   "user_id": "user_magnhild",
+   "date": "2026-06-13T07:23:00-06:00",
+   "total_steps": 21354
+  },
+  {
+   "record_id": 185,
+   "date": "2026-06-14T17:18:00-06:00",
+   "total_steps": 3848,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 187,
+   "user_id": "user_magnhild",
+   "date": "2026-06-15T15:14:00-06:00",
+   "total_steps": 10353
+  },
+  {
+   "record_id": 189,
+   "user_id": "user_magnhild",
+   "date": "2026-06-16T16:17:00-06:00",
+   "total_steps": 12610
+  },
+  {
+   "record_id": 191,
+   "user_id": "user_magnhild",
+   "date": "2026-06-17T09:30:00-06:00",
+   "total_steps": 13364
+  },
+  {
+   "record_id": 192,
+   "user_id": "user_magnhild",
+   "date": "2026-06-18T11:14:00-06:00",
+   "total_steps": 8650
+  },
+  {
+   "record_id": 194,
+   "date": "2026-06-19T10:05:00-06:00",
+   "total_steps": 14209,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 196,
+   "user_id": "user_magnhild",
+   "date": "2026-06-20T13:46:00-06:00",
+   "total_steps": 5588
+  },
+  {
+   "record_id": 198,
+   "user_id": "user_magnhild",
+   "date": "2026-06-21T09:49:00-06:00",
+   "total_steps": 9146
+  },
+  {
+   "record_id": 199,
+   "user_id": "user_magnhild",
+   "date": "2026-06-22T12:12:00-06:00",
+   "total_steps": 10405
+  },
+  {
+   "record_id": 201,
+   "user_id": "user_magnhild",
+   "date": "2026-06-23T08:07:00-06:00",
+   "total_steps": 9235
+  },
+  {
+   "record_id": 203,
+   "date": "2026-06-24T17:04:00-06:00",
+   "total_steps": 4524,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 205,
+   "user_id": "user_magnhild",
+   "date": "2026-06-25T16:16:00-06:00",
+   "total_steps": 5827
+  },
+  {
+   "record_id": 206,
+   "user_id": "user_magnhild",
+   "date": "2026-06-26T21:42:00-06:00",
+   "total_steps": 12925
+  },
+  {
+   "record_id": 208,
+   "date": "2026-06-27T14:46:00-06:00",
+   "total_steps": 13260,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 210,
+   "user_id": "user_magnhild",
+   "date": "2026-06-28T09:45:00-06:00",
+   "total_steps": 9827
+  },
+  {
+   "record_id": 211,
+   "user_id": "user_magnhild",
+   "date": "2026-06-29T15:42:00-06:00",
+   "total_steps": 5396
+  },
+  {
+   "record_id": 213,
+   "date": "2026-06-30T10:21:00-06:00",
+   "total_steps": 12090,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 215,
+   "date": "2026-07-01T14:49:00-06:00",
+   "total_steps": 6084,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 217,
+   "user_id": "user_magnhild",
+   "date": "2026-07-02T10:07:00-06:00",
+   "total_steps": 14397
+  },
+  {
+   "record_id": 219,
+   "user_id": "user_magnhild",
+   "date": "2026-07-03T20:41:00-06:00",
+   "total_steps": 12560
+  },
+  {
+   "record_id": 220,
+   "user_id": "user_magnhild",
+   "date": "2026-07-04T07:09:00-06:00",
+   "total_steps": 11351
+  },
+  {
+   "record_id": 222,
+   "date": "2026-07-05T22:20:00-06:00",
+   "total_steps": 17914,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 224,
+   "date": "2026-07-06T15:06:00-06:00",
+   "total_steps": 11102,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 226,
+   "user_id": "user_magnhild",
+   "date": "2026-07-07T21:55:00-06:00",
+   "total_steps": 10407
+  },
+  {
+   "record_id": 227,
+   "date": "2026-07-08T18:49:00-06:00",
+   "total_steps": 2782,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 229,
+   "date": "2026-07-09T18:29:00-06:00",
+   "total_steps": 10660,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 231,
+   "user_id": "user_magnhild",
+   "date": "2026-07-10T22:57:00-06:00",
+   "total_steps": 7983
+  },
+  {
+   "record_id": 232,
+   "date": "2026-07-11T12:09:00-06:00",
+   "total_steps": 15340,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 234,
+   "user_id": "user_magnhild",
+   "date": "2026-07-12T19:43:00-06:00",
+   "total_steps": 10905
+  },
+  {
+   "record_id": 236,
+   "user_id": "user_magnhild",
+   "date": "2026-07-13T23:59:00",
+   "total_steps": 13400
+  },
+  {
+   "record_id": 237,
+   "date": "2026-07-14T16:56:00-06:00",
+   "total_steps": 11310,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 239,
+   "user_id": "user_magnhild",
+   "date": "2026-07-15T18:37:00-06:00",
+   "total_steps": 8601
+  },
+  {
+   "record_id": 241,
+   "date": "2026-07-16T19:32:00-06:00",
+   "total_steps": 13156,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 243,
+   "user_id": "user_magnhild",
+   "date": "2026-07-17T13:32:00-06:00",
+   "total_steps": 6285
+  },
+  {
+   "record_id": 244,
+   "user_id": "user_magnhild",
+   "date": "2026-07-18T19:39:00-06:00",
+   "total_steps": 12947
+  },
+  {
+   "record_id": 246,
+   "date": "2026-07-19T16:26:00-06:00",
+   "total_steps": 4238,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 248,
+   "user_id": "user_magnhild",
+   "date": "2026-07-20T23:59:00",
+   "total_steps": 12400
+  },
+  {
+   "record_id": 249,
+   "user_id": "user_magnhild",
+   "date": "2026-07-21T23:59:00",
+   "total_steps": 16800
+  },
+  {
+   "record_id": 250,
+   "user_id": "user_magnhild",
+   "date": "2026-07-22T23:59:00",
+   "total_steps": 15100
+  },
+  {
+   "record_id": 251,
+   "user_id": "user_magnhild",
+   "date": "2026-07-23T23:59:00",
+   "total_steps": 11640
+  },
+  {
+   "record_id": 253,
+   "user_id": "user_magnhild",
+   "date": "2026-07-24T23:59:00",
+   "total_steps": 10920
+  },
+  {
+   "record_id": 255,
+   "date": "2026-07-25T11:23:00-06:00",
+   "total_steps": 12870,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 257,
+   "user_id": "user_magnhild",
+   "date": "2026-07-26T22:29:00-06:00",
+   "total_steps": 18953
+  },
+  {
+   "record_id": 258,
+   "user_id": "user_magnhild",
+   "date": "2026-07-27T11:42:00-06:00",
+   "total_steps": 10149
+  },
+  {
+   "record_id": 260,
+   "user_id": "user_magnhild",
+   "date": "2026-07-28T13:06:00-06:00",
+   "total_steps": 5819
+  },
+  {
+   "record_id": 262,
+   "user_id": "user_magnhild",
+   "date": "2026-07-29T17:58:00-06:00",
+   "total_steps": 8831
+  },
+  {
+   "record_id": 263,
+   "user_id": "user_magnhild",
+   "date": "2026-07-30T09:01:00-06:00",
+   "total_steps": 11845
+  },
+  {
+   "record_id": 265,
+   "user_id": "user_magnhild",
+   "date": "2026-07-31T21:09:00-06:00",
+   "total_steps": 11859
+  },
+  {
+   "record_id": 266,
+   "user_id": "user_magnhild",
+   "date": "2026-08-01T12:32:00-06:00",
+   "total_steps": 13675
+  },
+  {
+   "record_id": 268,
+   "user_id": "user_magnhild",
+   "date": "2026-08-02T08:15:00-06:00",
+   "total_steps": 11516
+  },
+  {
+   "record_id": 270,
+   "user_id": "user_magnhild",
+   "date": "2026-08-03T11:13:00-06:00",
+   "total_steps": 13110
+  },
+  {
+   "record_id": 271,
+   "user_id": "user_magnhild",
+   "date": "2026-08-04T23:59:00",
+   "total_steps": 640
+  },
+  {
+   "record_id": 272,
+   "user_id": "user_magnhild",
+   "date": "2026-08-05T23:59:00",
+   "total_steps": 14320
+  },
+  {
+   "record_id": 273,
+   "date": "2026-08-06T15:17:00-06:00",
+   "total_steps": 9750,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 275,
+   "user_id": "user_magnhild",
+   "date": "2026-08-07T07:54:00-06:00",
+   "total_steps": 10975
+  },
+  {
+   "record_id": 277,
+   "user_id": "user_magnhild",
+   "date": "2026-08-08T14:36:00-06:00",
+   "total_steps": 13694
+  },
+  {
+   "record_id": 279,
+   "user_id": "user_magnhild",
+   "date": "2026-08-09T22:37:00-06:00",
+   "total_steps": 15240
+  },
+  {
+   "record_id": 280,
+   "date": "2026-08-10T11:07:00-06:00",
+   "total_steps": 12298,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 282,
+   "date": "2026-08-11T10:43:00-06:00",
+   "total_steps": 8060,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 284,
+   "date": "2026-08-12T19:24:00-06:00",
+   "total_steps": 7865,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 286,
+   "user_id": "user_magnhild",
+   "date": "2026-08-13T09:03:00-06:00",
+   "total_steps": 13474
+  },
+  {
+   "record_id": 287,
+   "user_id": "user_magnhild",
+   "date": "2026-08-14T10:53:00-06:00",
+   "total_steps": 6213
+  },
+  {
+   "record_id": 289,
+   "user_id": "user_magnhild",
+   "date": "2026-08-15T15:56:00-06:00",
+   "total_steps": 33900
+  },
+  {
+   "record_id": 291,
+   "user_id": "user_magnhild",
+   "date": "2026-08-16T14:29:00-06:00",
+   "total_steps": 12140
+  },
+  {
+   "record_id": 293,
+   "user_id": "user_magnhild",
+   "date": "2026-08-17T19:02:00-06:00",
+   "total_steps": 10115
+  },
+  {
+   "record_id": 295,
+   "date": "2026-08-18T18:45:00-06:00",
+   "total_steps": 15496,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 297,
+   "user_id": "user_magnhild",
+   "date": "2026-08-19T09:32:00-06:00",
+   "total_steps": 14457
+  },
+  {
+   "record_id": 298,
+   "date": "2026-08-20T10:56:00-06:00",
+   "total_steps": 14560,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 300,
+   "user_id": "user_magnhild",
+   "date": "2026-08-21T12:24:00-06:00",
+   "total_steps": 14587
+  },
+  {
+   "record_id": 302,
+   "user_id": "user_magnhild",
+   "date": "2026-08-22T23:59:00",
+   "total_steps": 18200
+  },
+  {
+   "record_id": 303,
+   "user_id": "user_magnhild",
+   "date": "2026-08-23T23:59:00",
+   "total_steps": 16400
+  },
+  {
+   "record_id": 304,
+   "user_id": "user_magnhild",
+   "date": "2026-08-24T16:15:00-06:00",
+   "total_steps": 5139
+  },
+  {
+   "record_id": 306,
+   "user_id": "user_magnhild",
+   "date": "2026-08-25T13:47:00-06:00",
+   "total_steps": 12113
+  },
+  {
+   "record_id": 308,
+   "user_id": "user_magnhild",
+   "date": "2026-08-26T17:19:00-06:00",
+   "total_steps": 11180
+  },
+  {
+   "record_id": 309,
+   "user_id": "user_magnhild",
+   "date": "2026-08-27T19:05:00-06:00",
+   "total_steps": 9668
+  },
+  {
+   "record_id": 311,
+   "date": "2026-08-28T12:14:00-06:00",
+   "total_steps": 5642,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 313,
+   "user_id": "user_magnhild",
+   "date": "2026-08-29T11:34:00-06:00",
+   "total_steps": 7054
+  },
+  {
+   "record_id": 315,
+   "user_id": "user_magnhild",
+   "date": "2026-08-30T08:45:00-06:00",
+   "total_steps": 11305
+  }
+ ],
+ "workout_records": [
+  {
+   "record_id": 1,
+   "user_id": "user_magnhild",
+   "start": "2026-03-01T17:15:00Z",
+   "end": "2026-03-01T18:47:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 92.0,
+   "total_energy_kcal": 780.4,
+   "total_distance_km": 14.2,
+   "start_time": "2026-03-01T17:15:00Z",
+   "end_time": "2026-03-01T18:47:00Z",
+   "duration": 5520
+  },
+  {
+   "record_id": 2,
+   "user_id": "user_magnhild",
+   "start": "2026-03-03T23:35:00Z",
+   "end": "2026-03-04T00:36:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 61.0,
+   "total_energy_kcal": 527.6,
+   "total_distance_km": 9.6,
+   "start_time": "2026-03-03T23:35:00Z",
+   "end_time": "2026-03-04T00:36:00Z",
+   "duration": 3660
+  },
+  {
+   "record_id": 3,
+   "user_id": "user_magnhild",
+   "start": "2026-03-05T23:40:00Z",
+   "end": "2026-03-06T00:38:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 58.0,
+   "total_energy_kcal": 648.5,
+   "total_distance_km": 11.8,
+   "start_time": "2026-03-05T23:40:00Z",
+   "end_time": "2026-03-06T00:38:00Z",
+   "duration": 3480
+  },
+  {
+   "record_id": 4,
+   "user_id": "user_magnhild",
+   "start": "2026-03-07T16:00:00Z",
+   "end": "2026-03-07T21:00:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 300.0,
+   "total_energy_kcal": 923.2,
+   "total_distance_km": 16.8,
+   "start_time": "2026-03-07T16:00:00Z",
+   "end_time": "2026-03-07T21:00:00Z",
+   "duration": 18000
+  },
+  {
+   "record_id": 5,
+   "user_id": "user_magnhild",
+   "start": "2026-03-08T15:30:00Z",
+   "end": "2026-03-08T19:30:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 240.0,
+   "total_energy_kcal": 736.4,
+   "total_distance_km": 13.4,
+   "start_time": "2026-03-08T15:30:00Z",
+   "end_time": "2026-03-08T19:30:00Z",
+   "duration": 14400
+  },
+  {
+   "record_id": 6,
+   "user_id": "user_magnhild",
+   "start": "2026-03-11T22:30:00Z",
+   "end": "2026-03-11T23:25:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 55.0,
+   "total_energy_kcal": 461.6,
+   "total_distance_km": 8.4,
+   "start_time": "2026-03-11T22:30:00Z",
+   "end_time": "2026-03-11T23:25:00Z",
+   "duration": 3300
+  },
+  {
+   "record_id": 7,
+   "user_id": "user_magnhild",
+   "start": "2026-03-13T22:45:00Z",
+   "end": "2026-03-14T00:04:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 79.0,
+   "total_energy_kcal": 692.4,
+   "total_distance_km": 12.6,
+   "start_time": "2026-03-13T22:45:00Z",
+   "end_time": "2026-03-14T00:04:00Z",
+   "duration": 4740
+  },
+  {
+   "record_id": 8,
+   "user_id": "user_magnhild",
+   "start": "2026-03-15T15:40:00Z",
+   "end": "2026-03-15T17:58:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 138.0,
+   "total_energy_kcal": 1187.0,
+   "total_distance_km": 21.6,
+   "start_time": "2026-03-15T15:40:00Z",
+   "end_time": "2026-03-15T17:58:00Z",
+   "duration": 8280
+  },
+  {
+   "record_id": 9,
+   "user_id": "user_magnhild",
+   "start": "2026-03-17T22:35:00Z",
+   "end": "2026-03-17T23:26:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 51.0,
+   "total_energy_kcal": 571.5,
+   "total_distance_km": 10.4,
+   "start_time": "2026-03-17T22:35:00Z",
+   "end_time": "2026-03-17T23:26:00Z",
+   "duration": 3060
+  },
+  {
+   "record_id": 10,
+   "user_id": "user_magnhild",
+   "start": "2026-03-20T22:30:00Z",
+   "end": "2026-03-20T23:53:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 83.0,
+   "total_energy_kcal": 719.9,
+   "total_distance_km": 13.1,
+   "start_time": "2026-03-20T22:30:00Z",
+   "end_time": "2026-03-20T23:53:00Z",
+   "duration": 4980
+  },
+  {
+   "record_id": 11,
+   "user_id": "user_magnhild",
+   "start": "2026-03-22T16:05:00Z",
+   "end": "2026-03-22T18:02:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 117.0,
+   "total_energy_kcal": 1005.7,
+   "total_distance_km": 18.3,
+   "start_time": "2026-03-22T16:05:00Z",
+   "end_time": "2026-03-22T18:02:00Z",
+   "duration": 7020
+  },
+  {
+   "record_id": 12,
+   "user_id": "user_magnhild",
+   "start": "2026-03-24T22:50:00Z",
+   "end": "2026-03-24T23:35:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 45.0,
+   "total_energy_kcal": 505.6,
+   "total_distance_km": 9.2,
+   "start_time": "2026-03-24T22:50:00Z",
+   "end_time": "2026-03-24T23:35:00Z",
+   "duration": 2700
+  },
+  {
+   "record_id": 13,
+   "user_id": "user_magnhild",
+   "start": "2026-03-27T22:35:00Z",
+   "end": "2026-03-28T00:13:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 98.0,
+   "total_energy_kcal": 846.3,
+   "total_distance_km": 15.4,
+   "start_time": "2026-03-27T22:35:00Z",
+   "end_time": "2026-03-28T00:13:00Z",
+   "duration": 5880
+  },
+  {
+   "record_id": 14,
+   "user_id": "user_magnhild",
+   "start": "2026-03-31T22:30:00Z",
+   "end": "2026-03-31T23:41:00Z",
+   "activity_type": "CrossCountrySkiing",
+   "duration_minutes": 71.0,
+   "total_energy_kcal": 610.0,
+   "total_distance_km": 11.1,
+   "start_time": "2026-03-31T22:30:00Z",
+   "end_time": "2026-03-31T23:41:00Z",
+   "duration": 4260
+  },
+  {
+   "record_id": 15,
+   "user_id": "user_magnhild",
+   "start": "2026-04-04T16:00:00Z",
+   "end": "2026-04-04T21:30:00Z",
+   "activity_type": "DownhillSkiing",
+   "duration_minutes": 330.0,
+   "total_energy_kcal": 890.0,
+   "total_distance_km": 24.6,
+   "start_time": "2026-04-04T16:00:00Z",
+   "end_time": "2026-04-04T21:30:00Z",
+   "duration": 19800
+  },
+  {
+   "record_id": 16,
+   "user_id": "user_magnhild",
+   "start": "2026-04-13T23:30:00Z",
+   "end": "2026-04-14T00:15:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 45.0,
+   "total_energy_kcal": 223.0,
+   "total_distance_km": 3.4,
+   "start_time": "2026-04-13T23:30:00Z",
+   "end_time": "2026-04-14T00:15:00Z",
+   "duration": 2700
+  },
+  {
+   "record_id": 17,
+   "user_id": "user_magnhild",
+   "start": "2026-04-25T15:15:00Z",
+   "end": "2026-04-25T16:09:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 54.0,
+   "total_energy_kcal": 268.9,
+   "total_distance_km": 4.1,
+   "start_time": "2026-04-25T15:15:00Z",
+   "end_time": "2026-04-25T16:09:00Z",
+   "duration": 3240
+  },
+  {
+   "record_id": 18,
+   "user_id": "user_magnhild",
+   "start": "2026-05-10T14:50:00Z",
+   "end": "2026-05-10T15:39:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 49.0,
+   "total_energy_kcal": 249.2,
+   "total_distance_km": 3.8,
+   "start_time": "2026-05-10T14:50:00Z",
+   "end_time": "2026-05-10T15:39:00Z",
+   "duration": 2940
+  },
+  {
+   "record_id": 19,
+   "user_id": "user_magnhild",
+   "start": "2026-05-24T23:40:00Z",
+   "end": "2026-05-25T00:38:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 58.0,
+   "total_energy_kcal": 288.5,
+   "total_distance_km": 4.4,
+   "start_time": "2026-05-24T23:40:00Z",
+   "end_time": "2026-05-25T00:38:00Z",
+   "duration": 3480
+  },
+  {
+   "record_id": 20,
+   "user_id": "user_magnhild",
+   "start": "2026-06-02T23:10:00Z",
+   "end": "2026-06-03T00:11:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 61.0,
+   "total_energy_kcal": 406.0,
+   "total_distance_km": 4.8,
+   "start_time": "2026-06-02T23:10:00Z",
+   "end_time": "2026-06-03T00:11:00Z",
+   "duration": 3660
+  },
+  {
+   "record_id": 21,
+   "user_id": "user_magnhild",
+   "start": "2026-06-04T13:15:00Z",
+   "end": "2026-06-04T14:26:40Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 71.66666666666667,
+   "total_energy_kcal": 456.7,
+   "total_distance_km": 5.4,
+   "start_time": "2026-06-04T13:15:00Z",
+   "end_time": "2026-06-04T14:26:40Z",
+   "duration": 4300
+  },
+  {
+   "record_id": 22,
+   "user_id": "user_magnhild",
+   "start": "2026-06-06T14:30:00Z",
+   "end": "2026-06-06T17:15:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 165.0,
+   "total_energy_kcal": 964.1,
+   "total_distance_km": 11.4,
+   "start_time": "2026-06-06T14:30:00Z",
+   "end_time": "2026-06-06T17:15:00Z",
+   "duration": 9900
+  },
+  {
+   "record_id": 23,
+   "user_id": "user_magnhild",
+   "start": "2026-06-07T15:10:00Z",
+   "end": "2026-06-07T17:39:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 149.0,
+   "total_energy_kcal": 811.9,
+   "total_distance_km": 9.6,
+   "start_time": "2026-06-07T15:10:00Z",
+   "end_time": "2026-06-07T17:39:00Z",
+   "duration": 8940
+  },
+  {
+   "record_id": 24,
+   "user_id": "user_magnhild",
+   "start": "2026-06-09T23:20:00Z",
+   "end": "2026-06-10T00:39:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 79.0,
+   "total_energy_kcal": 524.4,
+   "total_distance_km": 6.2,
+   "start_time": "2026-06-09T23:20:00Z",
+   "end_time": "2026-06-10T00:39:00Z",
+   "duration": 4740
+  },
+  {
+   "record_id": 25,
+   "user_id": "user_magnhild",
+   "start": "2026-06-11T13:10:00Z",
+   "end": "2026-06-11T14:28:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 78.0,
+   "total_energy_kcal": 515.9,
+   "total_distance_km": 6.1,
+   "start_time": "2026-06-11T13:10:00Z",
+   "end_time": "2026-06-11T14:28:00Z",
+   "duration": 4680
+  },
+  {
+   "record_id": 26,
+   "user_id": "user_magnhild",
+   "start": "2026-06-13T13:50:00Z",
+   "end": "2026-06-13T17:20:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 210.0,
+   "total_energy_kcal": 1116.4,
+   "total_distance_km": 13.2,
+   "start_time": "2026-06-13T13:50:00Z",
+   "end_time": "2026-06-13T17:20:00Z",
+   "duration": 12600
+  },
+  {
+   "record_id": 27,
+   "user_id": "user_magnhild",
+   "start": "2026-06-15T00:35:00Z",
+   "end": "2026-06-15T03:25:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 170.0,
+   "total_energy_kcal": 194.1,
+   "total_distance_km": 2.96,
+   "start_time": "2026-06-15T00:35:00Z",
+   "end_time": "2026-06-15T03:25:00Z",
+   "duration": 10200
+  },
+  {
+   "record_id": 28,
+   "user_id": "user_magnhild",
+   "start": "2026-06-16T13:23:00Z",
+   "end": "2026-06-16T14:33:10Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 70.16666666666667,
+   "total_energy_kcal": 439.8,
+   "total_distance_km": 5.2,
+   "start_time": "2026-06-16T13:23:00Z",
+   "end_time": "2026-06-16T14:33:10Z",
+   "duration": 4210
+  },
+  {
+   "record_id": 29,
+   "user_id": "user_magnhild",
+   "start": "2026-06-16T22:45:00Z",
+   "end": "2026-06-16T23:58:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 73.0,
+   "total_energy_kcal": 456.7,
+   "total_distance_km": 5.4,
+   "start_time": "2026-06-16T22:45:00Z",
+   "end_time": "2026-06-16T23:58:00Z",
+   "duration": 4380
+  },
+  {
+   "record_id": 30,
+   "user_id": "user_magnhild",
+   "start": "2026-06-18T23:25:00Z",
+   "end": "2026-06-19T00:41:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 76.0,
+   "total_energy_kcal": 507.4,
+   "total_distance_km": 6.0,
+   "start_time": "2026-06-18T23:25:00Z",
+   "end_time": "2026-06-19T00:41:00Z",
+   "duration": 4560
+  },
+  {
+   "record_id": 31,
+   "user_id": "user_magnhild",
+   "start": "2026-06-20T14:10:00Z",
+   "end": "2026-06-20T16:38:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 148.0,
+   "total_energy_kcal": 811.9,
+   "total_distance_km": 9.6,
+   "start_time": "2026-06-20T14:10:00Z",
+   "end_time": "2026-06-20T16:38:00Z",
+   "duration": 8880
+  },
+  {
+   "record_id": 32,
+   "user_id": "user_magnhild",
+   "start": "2026-06-22T00:35:00Z",
+   "end": "2026-06-22T03:15:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 160.0,
+   "total_energy_kcal": 204.6,
+   "total_distance_km": 3.12,
+   "start_time": "2026-06-22T00:35:00Z",
+   "end_time": "2026-06-22T03:15:00Z",
+   "duration": 9600
+  },
+  {
+   "record_id": 33,
+   "user_id": "user_magnhild",
+   "start": "2026-06-25T01:04:00Z",
+   "end": "2026-06-25T03:46:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 162.0,
+   "total_energy_kcal": 228.2,
+   "total_distance_km": 3.48,
+   "start_time": "2026-06-25T01:04:00Z",
+   "end_time": "2026-06-25T03:46:00Z",
+   "duration": 9720
+  },
+  {
+   "record_id": 34,
+   "user_id": "user_magnhild",
+   "start": "2026-06-25T12:50:00Z",
+   "end": "2026-06-25T14:28:20Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 98.33333333333333,
+   "total_energy_kcal": 659.7,
+   "total_distance_km": 7.8,
+   "start_time": "2026-06-25T12:50:00Z",
+   "end_time": "2026-06-25T14:28:20Z",
+   "duration": 5900
+  },
+  {
+   "record_id": 35,
+   "user_id": "user_magnhild",
+   "start": "2026-06-27T13:40:00Z",
+   "end": "2026-06-27T16:15:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 155.0,
+   "total_energy_kcal": 862.7,
+   "total_distance_km": 10.2,
+   "start_time": "2026-06-27T13:40:00Z",
+   "end_time": "2026-06-27T16:15:00Z",
+   "duration": 9300
+  },
+  {
+   "record_id": 36,
+   "user_id": "user_magnhild",
+   "start": "2026-06-29T00:35:00Z",
+   "end": "2026-06-29T03:30:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 175.0,
+   "total_energy_kcal": 219.0,
+   "total_distance_km": 3.34,
+   "start_time": "2026-06-29T00:35:00Z",
+   "end_time": "2026-06-29T03:30:00Z",
+   "duration": 10500
+  },
+  {
+   "record_id": 37,
+   "user_id": "user_magnhild",
+   "start": "2026-07-03T23:10:00Z",
+   "end": "2026-07-04T00:23:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 73.0,
+   "total_energy_kcal": 490.5,
+   "total_distance_km": 5.8,
+   "start_time": "2026-07-03T23:10:00Z",
+   "end_time": "2026-07-04T00:23:00Z",
+   "duration": 4380
+  },
+  {
+   "record_id": 38,
+   "user_id": "user_magnhild",
+   "start": "2026-07-05T14:20:00Z",
+   "end": "2026-07-05T17:05:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 165.0,
+   "total_energy_kcal": 930.3,
+   "total_distance_km": 11.0,
+   "start_time": "2026-07-05T14:20:00Z",
+   "end_time": "2026-07-05T17:05:00Z",
+   "duration": 9900
+  },
+  {
+   "record_id": 39,
+   "user_id": "user_magnhild",
+   "start": "2026-07-06T00:35:00Z",
+   "end": "2026-07-06T03:30:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 175.0,
+   "total_energy_kcal": 182.3,
+   "total_distance_km": 2.78,
+   "start_time": "2026-07-06T00:35:00Z",
+   "end_time": "2026-07-06T03:30:00Z",
+   "duration": 10500
+  },
+  {
+   "record_id": 40,
+   "user_id": "user_magnhild",
+   "start": "2026-07-09T01:06:00Z",
+   "end": "2026-07-09T03:25:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 139.0,
+   "total_energy_kcal": 140.3,
+   "total_distance_km": 2.14,
+   "start_time": "2026-07-09T01:06:00Z",
+   "end_time": "2026-07-09T03:25:00Z",
+   "duration": 8340
+  },
+  {
+   "record_id": 41,
+   "user_id": "user_magnhild",
+   "start": "2026-07-09T13:00:00Z",
+   "end": "2026-07-09T14:41:40Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 101.66666666666667,
+   "total_energy_kcal": 693.5,
+   "total_distance_km": 8.2,
+   "start_time": "2026-07-09T13:00:00Z",
+   "end_time": "2026-07-09T14:41:40Z",
+   "duration": 6100
+  },
+  {
+   "record_id": 42,
+   "user_id": "user_magnhild",
+   "start": "2026-07-11T14:00:00Z",
+   "end": "2026-07-11T16:50:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 170.0,
+   "total_energy_kcal": 998.0,
+   "total_distance_km": 11.8,
+   "start_time": "2026-07-11T14:00:00Z",
+   "end_time": "2026-07-11T16:50:00Z",
+   "duration": 10200
+  },
+  {
+   "record_id": 43,
+   "user_id": "user_magnhild",
+   "start": "2026-07-12T15:10:00Z",
+   "end": "2026-07-12T17:02:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 112.0,
+   "total_energy_kcal": 710.4,
+   "total_distance_km": 8.4,
+   "start_time": "2026-07-12T15:10:00Z",
+   "end_time": "2026-07-12T17:02:00Z",
+   "duration": 6720
+  },
+  {
+   "record_id": 44,
+   "user_id": "user_magnhild",
+   "start": "2026-07-13T00:40:00Z",
+   "end": "2026-07-13T03:30:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 170.0,
+   "total_energy_kcal": 198.0,
+   "total_distance_km": 3.02,
+   "start_time": "2026-07-13T00:40:00Z",
+   "end_time": "2026-07-13T03:30:00Z",
+   "duration": 10200
+  },
+  {
+   "record_id": 45,
+   "user_id": "user_magnhild",
+   "start": "2026-07-18T13:30:00Z",
+   "end": "2026-07-18T17:10:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 220.0,
+   "total_energy_kcal": 1184.0,
+   "total_distance_km": 14.0,
+   "start_time": "2026-07-18T13:30:00Z",
+   "end_time": "2026-07-18T17:10:00Z",
+   "duration": 13200
+  },
+  {
+   "record_id": 46,
+   "user_id": "user_magnhild",
+   "start": "2026-07-20T00:35:00Z",
+   "end": "2026-07-20T03:30:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 175.0,
+   "total_energy_kcal": 213.8,
+   "total_distance_km": 3.26,
+   "start_time": "2026-07-20T00:35:00Z",
+   "end_time": "2026-07-20T03:30:00Z",
+   "duration": 10500
+  },
+  {
+   "record_id": 47,
+   "user_id": "user_magnhild",
+   "start": "2026-07-21T12:45:00Z",
+   "end": "2026-07-21T14:13:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 88.0,
+   "total_energy_kcal": 583.6,
+   "total_distance_km": 6.9,
+   "start_time": "2026-07-21T12:45:00Z",
+   "end_time": "2026-07-21T14:13:00Z",
+   "duration": 5280
+  },
+  {
+   "record_id": 48,
+   "user_id": "user_magnhild",
+   "start": "2026-07-23T01:12:00Z",
+   "end": "2026-07-23T04:02:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 170.0,
+   "total_energy_kcal": 263.6,
+   "total_distance_km": 4.02,
+   "start_time": "2026-07-23T01:12:00Z",
+   "end_time": "2026-07-23T04:02:00Z",
+   "duration": 10200
+  },
+  {
+   "record_id": 49,
+   "user_id": "user_magnhild",
+   "start": "2026-07-24T01:00:00Z",
+   "end": "2026-07-24T01:51:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 51.0,
+   "total_energy_kcal": 228.2,
+   "total_distance_km": 3.48,
+   "start_time": "2026-07-24T01:00:00Z",
+   "end_time": "2026-07-24T01:51:00Z",
+   "duration": 3060
+  },
+  {
+   "record_id": 50,
+   "user_id": "user_magnhild",
+   "start": "2026-07-24T17:30:00Z",
+   "end": "2026-07-24T20:27:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 177.0,
+   "total_energy_kcal": 972.6,
+   "total_distance_km": 11.5,
+   "start_time": "2026-07-24T17:30:00Z",
+   "end_time": "2026-07-24T20:27:00Z",
+   "duration": 10620
+  },
+  {
+   "record_id": 51,
+   "user_id": "user_magnhild",
+   "start": "2026-07-25T14:00:00Z",
+   "end": "2026-07-25T16:32:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 152.0,
+   "total_energy_kcal": 837.3,
+   "total_distance_km": 9.9,
+   "start_time": "2026-07-25T14:00:00Z",
+   "end_time": "2026-07-25T16:32:00Z",
+   "duration": 9120
+  },
+  {
+   "record_id": 52,
+   "user_id": "user_magnhild",
+   "start": "2026-07-26T15:05:00Z",
+   "end": "2026-07-26T17:42:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 157.0,
+   "total_energy_kcal": 879.6,
+   "total_distance_km": 10.4,
+   "start_time": "2026-07-26T15:05:00Z",
+   "end_time": "2026-07-26T17:42:00Z",
+   "duration": 9420
+  },
+  {
+   "record_id": 53,
+   "user_id": "user_magnhild",
+   "start": "2026-07-28T23:20:00Z",
+   "end": "2026-07-29T00:40:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 80.0,
+   "total_energy_kcal": 532.8,
+   "total_distance_km": 6.3,
+   "start_time": "2026-07-28T23:20:00Z",
+   "end_time": "2026-07-29T00:40:00Z",
+   "duration": 4800
+  },
+  {
+   "record_id": 54,
+   "user_id": "user_magnhild",
+   "start": "2026-08-02T14:15:00Z",
+   "end": "2026-08-02T17:04:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 169.0,
+   "total_energy_kcal": 964.1,
+   "total_distance_km": 11.4,
+   "start_time": "2026-08-02T14:15:00Z",
+   "end_time": "2026-08-02T17:04:00Z",
+   "duration": 10140
+  },
+  {
+   "record_id": 55,
+   "user_id": "user_magnhild",
+   "start": "2026-08-03T00:35:00Z",
+   "end": "2026-08-03T03:30:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 175.0,
+   "total_energy_kcal": 205.9,
+   "total_distance_km": 3.14,
+   "start_time": "2026-08-03T00:35:00Z",
+   "end_time": "2026-08-03T03:30:00Z",
+   "duration": 10500
+  },
+  {
+   "record_id": 56,
+   "user_id": "user_magnhild",
+   "start": "2026-08-06T01:02:00Z",
+   "end": "2026-08-06T03:14:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 132.0,
+   "total_energy_kcal": 187.5,
+   "total_distance_km": 2.86,
+   "start_time": "2026-08-06T01:02:00Z",
+   "end_time": "2026-08-06T03:14:00Z",
+   "duration": 7920
+  },
+  {
+   "record_id": 57,
+   "user_id": "user_magnhild",
+   "start": "2026-08-06T13:05:00Z",
+   "end": "2026-08-06T14:39:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 94.0,
+   "total_energy_kcal": 634.3,
+   "total_distance_km": 7.5,
+   "start_time": "2026-08-06T13:05:00Z",
+   "end_time": "2026-08-06T14:39:00Z",
+   "duration": 5640
+  },
+  {
+   "record_id": 58,
+   "user_id": "user_magnhild",
+   "start": "2026-08-08T13:45:00Z",
+   "end": "2026-08-08T17:18:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 213.0,
+   "total_energy_kcal": 1150.2,
+   "total_distance_km": 13.6,
+   "start_time": "2026-08-08T13:45:00Z",
+   "end_time": "2026-08-08T17:18:00Z",
+   "duration": 12780
+  },
+  {
+   "record_id": 59,
+   "user_id": "user_magnhild",
+   "start": "2026-08-09T14:30:00Z",
+   "end": "2026-08-09T16:46:40Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 136.66666666666666,
+   "total_energy_kcal": 688.4,
+   "total_distance_km": 8.14,
+   "start_time": "2026-08-09T14:30:00Z",
+   "end_time": "2026-08-09T16:46:40Z",
+   "duration": 8200
+  },
+  {
+   "record_id": 60,
+   "user_id": "user_magnhild",
+   "start": "2026-08-11T23:00:00Z",
+   "end": "2026-08-12T00:26:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 86.0,
+   "total_energy_kcal": 524.4,
+   "total_distance_km": 6.2,
+   "start_time": "2026-08-11T23:00:00Z",
+   "end_time": "2026-08-12T00:26:00Z",
+   "duration": 5160
+  },
+  {
+   "record_id": 61,
+   "user_id": "user_magnhild",
+   "start": "2026-08-13T23:05:00Z",
+   "end": "2026-08-14T00:52:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 107.0,
+   "total_energy_kcal": 676.6,
+   "total_distance_km": 8.0,
+   "start_time": "2026-08-13T23:05:00Z",
+   "end_time": "2026-08-14T00:52:00Z",
+   "duration": 6420
+  },
+  {
+   "record_id": 62,
+   "user_id": "user_magnhild",
+   "start": "2026-08-15T11:40:00Z",
+   "end": "2026-08-15T22:40:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 660.0,
+   "total_energy_kcal": 2664.1,
+   "total_distance_km": 31.5,
+   "start_time": "2026-08-15T11:40:00Z",
+   "end_time": "2026-08-15T22:40:00Z",
+   "duration": 39600
+  },
+  {
+   "record_id": 63,
+   "user_id": "user_magnhild",
+   "start": "2026-08-18T00:15:00Z",
+   "end": "2026-08-18T03:10:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 175.0,
+   "total_energy_kcal": 223.0,
+   "total_distance_km": 3.4,
+   "start_time": "2026-08-18T00:15:00Z",
+   "end_time": "2026-08-18T03:10:00Z",
+   "duration": 10500
+  },
+  {
+   "record_id": 64,
+   "user_id": "user_magnhild",
+   "start": "2026-08-20T01:08:00Z",
+   "end": "2026-08-20T03:31:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 143.0,
+   "total_energy_kcal": 212.5,
+   "total_distance_km": 3.24,
+   "start_time": "2026-08-20T01:08:00Z",
+   "end_time": "2026-08-20T03:31:00Z",
+   "duration": 8580
+  },
+  {
+   "record_id": 65,
+   "user_id": "user_magnhild",
+   "start": "2026-08-20T23:15:00Z",
+   "end": "2026-08-21T01:57:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 162.0,
+   "total_energy_kcal": 947.2,
+   "total_distance_km": 11.2,
+   "start_time": "2026-08-20T23:15:00Z",
+   "end_time": "2026-08-21T01:57:00Z",
+   "duration": 9720
+  },
+  {
+   "record_id": 66,
+   "user_id": "user_magnhild",
+   "start": "2026-08-27T01:10:00Z",
+   "end": "2026-08-27T03:46:00Z",
+   "activity_type": "Walking",
+   "duration_minutes": 156.0,
+   "total_energy_kcal": 240.0,
+   "total_distance_km": 3.66,
+   "start_time": "2026-08-27T01:10:00Z",
+   "end_time": "2026-08-27T03:46:00Z",
+   "duration": 9360
+  },
+  {
+   "record_id": 67,
+   "user_id": "user_magnhild",
+   "start": "2026-08-28T23:20:00Z",
+   "end": "2026-08-29T00:16:40Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 56.666666666666664,
+   "total_energy_kcal": 367.1,
+   "total_distance_km": 4.34,
+   "start_time": "2026-08-28T23:20:00Z",
+   "end_time": "2026-08-29T00:16:40Z",
+   "duration": 3400
+  },
+  {
+   "record_id": 68,
+   "user_id": "user_magnhild",
+   "start": "2026-08-29T14:00:00Z",
+   "end": "2026-08-29T16:23:00Z",
+   "activity_type": "Hiking",
+   "duration_minutes": 143.0,
+   "total_energy_kcal": 795.0,
+   "total_distance_km": 9.4,
+   "start_time": "2026-08-29T14:00:00Z",
+   "end_time": "2026-08-29T16:23:00Z",
+   "duration": 8580
+  }
+ ],
+ "vo2max_records": [],
+ "body_mass_records": [
+  {
+   "record_id": 52001,
+   "user_id": "user_magnhild",
+   "date": "2026-03-01T07:20:00",
+   "value": 68.4,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52002,
+   "user_id": "user_magnhild",
+   "date": "2026-03-08T07:25:00",
+   "value": 68.28,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52003,
+   "user_id": "user_magnhild",
+   "date": "2026-03-15T07:15:00",
+   "value": 68.26,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52004,
+   "user_id": "user_magnhild",
+   "date": "2026-03-22T07:30:00",
+   "value": 68.26,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52005,
+   "user_id": "user_magnhild",
+   "date": "2026-03-29T07:20:00",
+   "value": 67.86,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52006,
+   "user_id": "user_magnhild",
+   "date": "2026-04-05T07:10:00",
+   "value": 68.28,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52007,
+   "user_id": "user_magnhild",
+   "date": "2026-04-19T07:25:00",
+   "value": 67.88,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52008,
+   "user_id": "user_magnhild",
+   "date": "2026-04-26T07:20:00",
+   "value": 67.68,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52009,
+   "user_id": "user_magnhild",
+   "date": "2026-05-03T07:15:00",
+   "value": 67.98,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52010,
+   "user_id": "user_magnhild",
+   "date": "2026-05-10T07:35:00",
+   "value": 67.36,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52011,
+   "user_id": "user_magnhild",
+   "date": "2026-05-24T07:20:00",
+   "value": 67.58,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52012,
+   "user_id": "user_magnhild",
+   "date": "2026-05-31T07:25:00",
+   "value": 67.71,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52013,
+   "user_id": "user_magnhild",
+   "date": "2026-06-07T07:10:00",
+   "value": 67.24,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52014,
+   "user_id": "user_magnhild",
+   "date": "2026-06-14T07:30:00",
+   "value": 67.44,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52015,
+   "user_id": "user_magnhild",
+   "date": "2026-06-21T07:15:00",
+   "value": 67.08,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52016,
+   "user_id": "user_magnhild",
+   "date": "2026-06-28T07:20:00",
+   "value": 67.95,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52017,
+   "user_id": "user_magnhild",
+   "date": "2026-07-05T07:25:00",
+   "value": 67.1,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52018,
+   "user_id": "user_magnhild",
+   "date": "2026-07-12T07:15:00",
+   "value": 66.96,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52019,
+   "user_id": "user_magnhild",
+   "date": "2026-07-19T07:30:00",
+   "value": 66.6,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52020,
+   "user_id": "user_magnhild",
+   "date": "2026-08-02T07:20:00",
+   "value": 67.38,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52021,
+   "user_id": "user_magnhild",
+   "date": "2026-08-09T07:10:00",
+   "value": 66.72,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52022,
+   "user_id": "user_magnhild",
+   "date": "2026-08-16T08:05:00",
+   "value": 66.56,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52023,
+   "user_id": "user_magnhild",
+   "date": "2026-08-23T07:25:00",
+   "value": 66.86,
+   "unit": "kg"
+  },
+  {
+   "record_id": 52024,
+   "user_id": "user_magnhild",
+   "date": "2026-08-30T07:20:00",
+   "value": 66.9,
+   "unit": "kg"
+  }
+ ],
+ "activity_summaries": [
+  {
+   "record_id": 8030725,
+   "user_id": "user_magnhild",
+   "date": "2026-03-01",
+   "active_energy_kcal": 247.9,
+   "basal_energy_kcal": 1443.3,
+   "exercise_minutes": 92.0,
+   "stand_hours": 12,
+   "distance_km": 14.2,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": 8030733,
+   "user_id": "user_magnhild",
+   "date": "2026-03-02",
+   "active_energy_kcal": 438.4,
+   "basal_energy_kcal": 1499.7,
+   "exercise_minutes": 33.9,
+   "stand_hours": 10,
+   "distance_km": 8.3,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8030741,
+   "user_id": "user_magnhild",
+   "date": "2026-03-03",
+   "active_energy_kcal": 542.4,
+   "basal_energy_kcal": 1601.0,
+   "exercise_minutes": 61.0,
+   "stand_hours": 6,
+   "distance_km": 9.6,
+   "flights_climbed": 8
+  },
+  {
+   "record_id": 8030749,
+   "user_id": "user_magnhild",
+   "date": "2026-03-04",
+   "active_energy_kcal": 204.6,
+   "basal_energy_kcal": 1588.1,
+   "exercise_minutes": 85.9,
+   "stand_hours": 12,
+   "distance_km": 4.88,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8030757,
+   "user_id": "user_magnhild",
+   "date": "2026-03-05",
+   "active_energy_kcal": 335.3,
+   "basal_energy_kcal": 1608.7,
+   "exercise_minutes": 58.0,
+   "stand_hours": 7,
+   "distance_km": 11.8,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8030765,
+   "user_id": "user_magnhild",
+   "date": "2026-03-06",
+   "active_energy_kcal": 712.0,
+   "basal_energy_kcal": 1513.9,
+   "exercise_minutes": 118.0,
+   "stand_hours": 13,
+   "distance_km": 12.4,
+   "flights_climbed": 38
+  },
+  {
+   "record_id": 8030773,
+   "user_id": "user_magnhild",
+   "date": "2026-03-07",
+   "active_energy_kcal": 617.3,
+   "basal_energy_kcal": 1655.6,
+   "exercise_minutes": 300.0,
+   "stand_hours": 9,
+   "distance_km": 16.8,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8030781,
+   "user_id": "user_magnhild",
+   "date": "2026-03-08",
+   "active_energy_kcal": 539.5,
+   "basal_energy_kcal": 1419.2,
+   "exercise_minutes": 240.0,
+   "stand_hours": 14,
+   "distance_km": 13.4,
+   "flights_climbed": 13
+  },
+  {
+   "record_id": 8030789,
+   "user_id": "user_magnhild",
+   "date": "2026-03-09",
+   "active_energy_kcal": 527.8,
+   "basal_energy_kcal": 1468.7,
+   "exercise_minutes": 25.9,
+   "stand_hours": 12,
+   "distance_km": 11.04,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8030797,
+   "user_id": "user_magnhild",
+   "date": "2026-03-10",
+   "active_energy_kcal": 183.1,
+   "basal_energy_kcal": 1402.4,
+   "exercise_minutes": 21.1,
+   "stand_hours": 6,
+   "distance_km": 4.2,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8030805,
+   "user_id": "user_magnhild",
+   "date": "2026-03-11",
+   "active_energy_kcal": 438.2,
+   "basal_energy_kcal": 1547.0,
+   "exercise_minutes": 55.0,
+   "stand_hours": 8,
+   "distance_km": 8.4,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": 8030813,
+   "user_id": "user_magnhild",
+   "date": "2026-03-12",
+   "active_energy_kcal": 535.7,
+   "basal_energy_kcal": 1470.4,
+   "exercise_minutes": 22.5,
+   "stand_hours": 10,
+   "distance_km": 11.21,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8030821,
+   "user_id": "user_magnhild",
+   "date": "2026-03-13",
+   "active_energy_kcal": 268.8,
+   "basal_energy_kcal": 1605.6,
+   "exercise_minutes": 79.0,
+   "stand_hours": 12,
+   "distance_km": 12.6,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8030829,
+   "user_id": "user_magnhild",
+   "date": "2026-03-14",
+   "active_energy_kcal": 398.1,
+   "basal_energy_kcal": 1401.6,
+   "exercise_minutes": 20.7,
+   "stand_hours": 8,
+   "distance_km": 8.27,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8030837,
+   "user_id": "user_magnhild",
+   "date": "2026-03-15",
+   "active_energy_kcal": 479.1,
+   "basal_energy_kcal": 1541.7,
+   "exercise_minutes": 138.0,
+   "stand_hours": 14,
+   "distance_km": 21.6,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8030845,
+   "user_id": "user_magnhild",
+   "date": "2026-03-16",
+   "active_energy_kcal": 284.7,
+   "basal_energy_kcal": 1510.2,
+   "exercise_minutes": 38.9,
+   "stand_hours": 12,
+   "distance_km": 5.52,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8030853,
+   "user_id": "user_magnhild",
+   "date": "2026-03-17",
+   "active_energy_kcal": 399.9,
+   "basal_energy_kcal": 1568.7,
+   "exercise_minutes": 51.0,
+   "stand_hours": 12,
+   "distance_km": 10.4,
+   "flights_climbed": 9
+  },
+  {
+   "record_id": 8030861,
+   "user_id": "user_magnhild",
+   "date": "2026-03-18",
+   "active_energy_kcal": 369.9,
+   "basal_energy_kcal": 1528.2,
+   "exercise_minutes": 76.9,
+   "stand_hours": 7,
+   "distance_km": 7.4,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8030869,
+   "user_id": "user_magnhild",
+   "date": "2026-03-19",
+   "active_energy_kcal": 522.1,
+   "basal_energy_kcal": 1543.3,
+   "exercise_minutes": 36.8,
+   "stand_hours": 12,
+   "distance_km": 11.68,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8030877,
+   "user_id": "user_magnhild",
+   "date": "2026-03-20",
+   "active_energy_kcal": 450.1,
+   "basal_energy_kcal": 1661.9,
+   "exercise_minutes": 83.0,
+   "stand_hours": 6,
+   "distance_km": 13.1,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8030885,
+   "user_id": "user_magnhild",
+   "date": "2026-03-21",
+   "active_energy_kcal": 269.6,
+   "basal_energy_kcal": 1463.9,
+   "exercise_minutes": 65.4,
+   "stand_hours": 10,
+   "distance_km": 5.68,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8030893,
+   "user_id": "user_magnhild",
+   "date": "2026-03-22",
+   "active_energy_kcal": 634.2,
+   "basal_energy_kcal": 1443.1,
+   "exercise_minutes": 117.0,
+   "stand_hours": 9,
+   "distance_km": 18.3,
+   "flights_climbed": 1
+  },
+  {
+   "record_id": 8030901,
+   "user_id": "user_magnhild",
+   "date": "2026-03-23",
+   "active_energy_kcal": 345.8,
+   "basal_energy_kcal": 1607.3,
+   "exercise_minutes": 54.0,
+   "stand_hours": 9,
+   "distance_km": 8.11,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8030909,
+   "user_id": "user_magnhild",
+   "date": "2026-03-24",
+   "active_energy_kcal": 328.9,
+   "basal_energy_kcal": 1681.2,
+   "exercise_minutes": 45.0,
+   "stand_hours": 12,
+   "distance_km": 9.2,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8030917,
+   "user_id": "user_magnhild",
+   "date": "2026-03-25",
+   "active_energy_kcal": 322.6,
+   "basal_energy_kcal": 1612.8,
+   "exercise_minutes": 46.5,
+   "stand_hours": 13,
+   "distance_km": 6.36,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8030925,
+   "user_id": "user_magnhild",
+   "date": "2026-03-26",
+   "active_energy_kcal": 476.1,
+   "basal_energy_kcal": 1685.7,
+   "exercise_minutes": 40.1,
+   "stand_hours": 7,
+   "distance_km": 10.82,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8030933,
+   "user_id": "user_magnhild",
+   "date": "2026-03-27",
+   "active_energy_kcal": 414.9,
+   "basal_energy_kcal": 1621.8,
+   "exercise_minutes": 98.0,
+   "stand_hours": 9,
+   "distance_km": 15.4,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8030941,
+   "user_id": "user_magnhild",
+   "date": "2026-03-28",
+   "active_energy_kcal": 556.7,
+   "basal_energy_kcal": 1573.1,
+   "exercise_minutes": 35.6,
+   "stand_hours": 7,
+   "distance_km": 12.11,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8030949,
+   "user_id": "user_magnhild",
+   "date": "2026-03-29",
+   "active_energy_kcal": 323.1,
+   "basal_energy_kcal": 1469.6,
+   "exercise_minutes": 31.4,
+   "stand_hours": 10,
+   "distance_km": 6.31,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": 8030957,
+   "user_id": "user_magnhild",
+   "date": "2026-03-30",
+   "active_energy_kcal": 629.9,
+   "basal_energy_kcal": 1505.9,
+   "exercise_minutes": 24.9,
+   "stand_hours": 8,
+   "distance_km": 11.12,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8030965,
+   "user_id": "user_magnhild",
+   "date": "2026-03-31",
+   "active_energy_kcal": 425.4,
+   "basal_energy_kcal": 1439.8,
+   "exercise_minutes": 71.0,
+   "stand_hours": 8,
+   "distance_km": 11.1,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8030973,
+   "user_id": "user_magnhild",
+   "date": "2026-04-01",
+   "active_energy_kcal": 285.1,
+   "basal_energy_kcal": 1475.2,
+   "exercise_minutes": 34.8,
+   "stand_hours": 9,
+   "distance_km": 6.97,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8030981,
+   "user_id": "user_magnhild",
+   "date": "2026-04-02",
+   "active_energy_kcal": 542.0,
+   "basal_energy_kcal": 1446.7,
+   "exercise_minutes": 56.7,
+   "stand_hours": 8,
+   "distance_km": 10.94,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8030989,
+   "user_id": "user_magnhild",
+   "date": "2026-04-03",
+   "active_energy_kcal": 237.4,
+   "basal_energy_kcal": 1537.6,
+   "exercise_minutes": 64.9,
+   "stand_hours": 12,
+   "distance_km": 4.75,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": 8030997,
+   "user_id": "user_magnhild",
+   "date": "2026-04-04",
+   "active_energy_kcal": 229.1,
+   "basal_energy_kcal": 1469.3,
+   "exercise_minutes": 330.0,
+   "stand_hours": 6,
+   "distance_km": 24.6,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8031005,
+   "user_id": "user_magnhild",
+   "date": "2026-04-05",
+   "active_energy_kcal": 668.6,
+   "basal_energy_kcal": 1646.0,
+   "exercise_minutes": 30.3,
+   "stand_hours": 7,
+   "distance_km": 11.88,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8031013,
+   "user_id": "user_magnhild",
+   "date": "2026-04-06",
+   "active_energy_kcal": 619.9,
+   "basal_energy_kcal": 1524.1,
+   "exercise_minutes": 79.4,
+   "stand_hours": 7,
+   "distance_km": 11.36,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031021,
+   "user_id": "user_magnhild",
+   "date": "2026-04-07",
+   "active_energy_kcal": 317.3,
+   "basal_energy_kcal": 1418.5,
+   "exercise_minutes": 66.6,
+   "stand_hours": 14,
+   "distance_km": 7.24,
+   "flights_climbed": 1
+  },
+  {
+   "record_id": 8031029,
+   "user_id": "user_magnhild",
+   "date": "2026-04-08",
+   "active_energy_kcal": 180.6,
+   "basal_energy_kcal": 1508.8,
+   "exercise_minutes": 61.7,
+   "stand_hours": 11,
+   "distance_km": 3.96,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8031037,
+   "user_id": "user_magnhild",
+   "date": "2026-04-09",
+   "active_energy_kcal": 401.6,
+   "basal_energy_kcal": 1542.2,
+   "exercise_minutes": 50.8,
+   "stand_hours": 6,
+   "distance_km": 8.19,
+   "flights_climbed": 13
+  },
+  {
+   "record_id": 8031045,
+   "user_id": "user_magnhild",
+   "date": "2026-04-10",
+   "active_energy_kcal": 421.4,
+   "basal_energy_kcal": 1420.3,
+   "exercise_minutes": 71.3,
+   "stand_hours": 10,
+   "distance_km": 7.41,
+   "flights_climbed": 13
+  },
+  {
+   "record_id": 8031053,
+   "user_id": "user_magnhild",
+   "date": "2026-04-11",
+   "active_energy_kcal": 604.0,
+   "basal_energy_kcal": 1534.6,
+   "exercise_minutes": 152.0,
+   "stand_hours": 13,
+   "distance_km": 9.8,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8031061,
+   "user_id": "user_magnhild",
+   "date": "2026-04-12",
+   "active_energy_kcal": 636.0,
+   "basal_energy_kcal": 1631.6,
+   "exercise_minutes": 168.0,
+   "stand_hours": 13,
+   "distance_km": 10.2,
+   "flights_climbed": 9
+  },
+  {
+   "record_id": 8031069,
+   "user_id": "user_magnhild",
+   "date": "2026-04-13",
+   "active_energy_kcal": 251.4,
+   "basal_energy_kcal": 1446.9,
+   "exercise_minutes": 45.0,
+   "stand_hours": 9,
+   "distance_km": 3.4,
+   "flights_climbed": 8
+  },
+  {
+   "record_id": 8031077,
+   "user_id": "user_magnhild",
+   "date": "2026-04-14",
+   "active_energy_kcal": 408.1,
+   "basal_energy_kcal": 1645.8,
+   "exercise_minutes": 16.7,
+   "stand_hours": 9,
+   "distance_km": 6.93,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8031085,
+   "user_id": "user_magnhild",
+   "date": "2026-04-15",
+   "active_energy_kcal": 290.9,
+   "basal_energy_kcal": 1618.2,
+   "exercise_minutes": 25.7,
+   "stand_hours": 8,
+   "distance_km": 5.83,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8031093,
+   "user_id": "user_magnhild",
+   "date": "2026-04-16",
+   "active_energy_kcal": 318.9,
+   "basal_energy_kcal": 1496.0,
+   "exercise_minutes": 44.8,
+   "stand_hours": 8,
+   "distance_km": 7.83,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031101,
+   "user_id": "user_magnhild",
+   "date": "2026-04-17",
+   "active_energy_kcal": 390.5,
+   "basal_energy_kcal": 1403.9,
+   "exercise_minutes": 73.1,
+   "stand_hours": 8,
+   "distance_km": 9.42,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": "c82a1f60d7b394e0a5c16b28",
+   "user_id": "user_magnhild",
+   "date": "2026-04-18",
+   "active_energy_kcal": 842.0,
+   "basal_energy_kcal": 1418.0,
+   "exercise_minutes": 214.0,
+   "stand_hours": 13,
+   "distance_km": 10.4,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8031109,
+   "user_id": "user_magnhild",
+   "date": "2026-04-19",
+   "active_energy_kcal": 411.9,
+   "basal_energy_kcal": 1620.2,
+   "exercise_minutes": 48.1,
+   "stand_hours": 9,
+   "distance_km": 8.55,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031117,
+   "user_id": "user_magnhild",
+   "date": "2026-04-20",
+   "active_energy_kcal": 426.4,
+   "basal_energy_kcal": 1519.8,
+   "exercise_minutes": 47.8,
+   "stand_hours": 7,
+   "distance_km": 10.63,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": 8031125,
+   "user_id": "user_magnhild",
+   "date": "2026-04-21",
+   "active_energy_kcal": 459.3,
+   "basal_energy_kcal": 1683.1,
+   "exercise_minutes": 53.5,
+   "stand_hours": 10,
+   "distance_km": 9.76,
+   "flights_climbed": 1
+  },
+  {
+   "record_id": 8031133,
+   "user_id": "user_magnhild",
+   "date": "2026-04-22",
+   "active_energy_kcal": 330.2,
+   "basal_energy_kcal": 1441.2,
+   "exercise_minutes": 27.1,
+   "stand_hours": 12,
+   "distance_km": 5.78,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8031141,
+   "user_id": "user_magnhild",
+   "date": "2026-04-23",
+   "active_energy_kcal": 334.3,
+   "basal_energy_kcal": 1476.7,
+   "exercise_minutes": 17.2,
+   "stand_hours": 7,
+   "distance_km": 6.29,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8031149,
+   "user_id": "user_magnhild",
+   "date": "2026-04-24",
+   "active_energy_kcal": 495.9,
+   "basal_energy_kcal": 1469.6,
+   "exercise_minutes": 38.8,
+   "stand_hours": 14,
+   "distance_km": 8.68,
+   "flights_climbed": 7
+  },
+  {
+   "record_id": 8031157,
+   "user_id": "user_magnhild",
+   "date": "2026-04-25",
+   "active_energy_kcal": 270.0,
+   "basal_energy_kcal": 1667.0,
+   "exercise_minutes": 54.0,
+   "stand_hours": 10,
+   "distance_km": 4.1,
+   "flights_climbed": 7
+  },
+  {
+   "record_id": 8031165,
+   "user_id": "user_magnhild",
+   "date": "2026-04-26",
+   "active_energy_kcal": 362.1,
+   "basal_energy_kcal": 1586.1,
+   "exercise_minutes": 79.9,
+   "stand_hours": 14,
+   "distance_km": 8.52,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8031173,
+   "user_id": "user_magnhild",
+   "date": "2026-04-27",
+   "active_energy_kcal": 258.6,
+   "basal_energy_kcal": 1577.0,
+   "exercise_minutes": 71.7,
+   "stand_hours": 14,
+   "distance_km": 5.57,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8031181,
+   "user_id": "user_magnhild",
+   "date": "2026-04-28",
+   "active_energy_kcal": 324.0,
+   "basal_energy_kcal": 1520.0,
+   "exercise_minutes": 51.5,
+   "stand_hours": 9,
+   "distance_km": 5.7,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8031189,
+   "user_id": "user_magnhild",
+   "date": "2026-04-29",
+   "active_energy_kcal": 379.3,
+   "basal_energy_kcal": 1550.2,
+   "exercise_minutes": 37.3,
+   "stand_hours": 7,
+   "distance_km": 8.31,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": 8031197,
+   "user_id": "user_magnhild",
+   "date": "2026-04-30",
+   "active_energy_kcal": 394.7,
+   "basal_energy_kcal": 1642.7,
+   "exercise_minutes": 50.7,
+   "stand_hours": 9,
+   "distance_km": 7.34,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8031205,
+   "user_id": "user_magnhild",
+   "date": "2026-05-01",
+   "active_energy_kcal": 370.6,
+   "basal_energy_kcal": 1673.5,
+   "exercise_minutes": 46.9,
+   "stand_hours": 14,
+   "distance_km": 8.63,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8031213,
+   "user_id": "user_magnhild",
+   "date": "2026-05-02",
+   "active_energy_kcal": 634.1,
+   "basal_energy_kcal": 1420.8,
+   "exercise_minutes": 20.2,
+   "stand_hours": 9,
+   "distance_km": 10.63,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031221,
+   "user_id": "user_magnhild",
+   "date": "2026-05-03",
+   "active_energy_kcal": 213.1,
+   "basal_energy_kcal": 1553.8,
+   "exercise_minutes": 58.8,
+   "stand_hours": 11,
+   "distance_km": 5.2,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8031229,
+   "user_id": "user_magnhild",
+   "date": "2026-05-04",
+   "active_energy_kcal": 507.8,
+   "basal_energy_kcal": 1573.3,
+   "exercise_minutes": 34.8,
+   "stand_hours": 14,
+   "distance_km": 11.47,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031237,
+   "user_id": "user_magnhild",
+   "date": "2026-05-05",
+   "active_energy_kcal": 485.9,
+   "basal_energy_kcal": 1654.3,
+   "exercise_minutes": 64.1,
+   "stand_hours": 14,
+   "distance_km": 8.98,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031245,
+   "user_id": "user_magnhild",
+   "date": "2026-05-06",
+   "active_energy_kcal": 315.1,
+   "basal_energy_kcal": 1550.6,
+   "exercise_minutes": 19.4,
+   "stand_hours": 14,
+   "distance_km": 6.79,
+   "flights_climbed": 13
+  },
+  {
+   "record_id": 8031253,
+   "user_id": "user_magnhild",
+   "date": "2026-05-07",
+   "active_energy_kcal": 377.4,
+   "basal_energy_kcal": 1432.8,
+   "exercise_minutes": 89.0,
+   "stand_hours": 7,
+   "distance_km": 8.57,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031261,
+   "user_id": "user_magnhild",
+   "date": "2026-05-08",
+   "active_energy_kcal": 380.6,
+   "basal_energy_kcal": 1408.6,
+   "exercise_minutes": 36.0,
+   "stand_hours": 11,
+   "distance_km": 8.52,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8031269,
+   "user_id": "user_magnhild",
+   "date": "2026-05-09",
+   "active_energy_kcal": 446.6,
+   "basal_energy_kcal": 1489.9,
+   "exercise_minutes": 89.1,
+   "stand_hours": 9,
+   "distance_km": 8.33,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031277,
+   "user_id": "user_magnhild",
+   "date": "2026-05-10",
+   "active_energy_kcal": 380.3,
+   "basal_energy_kcal": 1694.1,
+   "exercise_minutes": 49.0,
+   "stand_hours": 9,
+   "distance_km": 3.8,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031285,
+   "user_id": "user_magnhild",
+   "date": "2026-05-11",
+   "active_energy_kcal": 457.9,
+   "basal_energy_kcal": 1464.2,
+   "exercise_minutes": 49.9,
+   "stand_hours": 12,
+   "distance_km": 11.06,
+   "flights_climbed": 1
+  },
+  {
+   "record_id": 8031293,
+   "user_id": "user_magnhild",
+   "date": "2026-05-12",
+   "active_energy_kcal": 520.3,
+   "basal_energy_kcal": 1685.8,
+   "exercise_minutes": 22.2,
+   "stand_hours": 11,
+   "distance_km": 9.38,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8031301,
+   "user_id": "user_magnhild",
+   "date": "2026-05-13",
+   "active_energy_kcal": 596.0,
+   "basal_energy_kcal": 1552.4,
+   "exercise_minutes": 68.2,
+   "stand_hours": 10,
+   "distance_km": 11.07,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8031309,
+   "user_id": "user_magnhild",
+   "date": "2026-05-14",
+   "active_energy_kcal": 557.1,
+   "basal_energy_kcal": 1404.0,
+   "exercise_minutes": 27.5,
+   "stand_hours": 7,
+   "distance_km": 11.85,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8031317,
+   "user_id": "user_magnhild",
+   "date": "2026-05-15",
+   "active_energy_kcal": 307.0,
+   "basal_energy_kcal": 1692.7,
+   "exercise_minutes": 87.6,
+   "stand_hours": 10,
+   "distance_km": 6.45,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8031325,
+   "user_id": "user_magnhild",
+   "date": "2026-05-16",
+   "active_energy_kcal": 458.9,
+   "basal_energy_kcal": 1677.2,
+   "exercise_minutes": 63.6,
+   "stand_hours": 6,
+   "distance_km": 8.75,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8031333,
+   "user_id": "user_magnhild",
+   "date": "2026-05-17",
+   "active_energy_kcal": 556.2,
+   "basal_energy_kcal": 1506.5,
+   "exercise_minutes": 38.2,
+   "stand_hours": 7,
+   "distance_km": 9.69,
+   "flights_climbed": 9
+  },
+  {
+   "record_id": 8031341,
+   "user_id": "user_magnhild",
+   "date": "2026-05-18",
+   "active_energy_kcal": 493.5,
+   "basal_energy_kcal": 1687.8,
+   "exercise_minutes": 28.9,
+   "stand_hours": 11,
+   "distance_km": 11.25,
+   "flights_climbed": 7
+  },
+  {
+   "record_id": 8031349,
+   "user_id": "user_magnhild",
+   "date": "2026-05-19",
+   "active_energy_kcal": 276.2,
+   "basal_energy_kcal": 1589.6,
+   "exercise_minutes": 73.6,
+   "stand_hours": 12,
+   "distance_km": 5.04,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8031357,
+   "user_id": "user_magnhild",
+   "date": "2026-05-20",
+   "active_energy_kcal": 280.3,
+   "basal_energy_kcal": 1530.3,
+   "exercise_minutes": 68.9,
+   "stand_hours": 9,
+   "distance_km": 4.94,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8031365,
+   "user_id": "user_magnhild",
+   "date": "2026-05-21",
+   "active_energy_kcal": 301.4,
+   "basal_energy_kcal": 1427.5,
+   "exercise_minutes": 43.8,
+   "stand_hours": 8,
+   "distance_km": 6.64,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8031373,
+   "user_id": "user_magnhild",
+   "date": "2026-05-22",
+   "active_energy_kcal": 390.3,
+   "basal_energy_kcal": 1548.0,
+   "exercise_minutes": 56.7,
+   "stand_hours": 6,
+   "distance_km": 8.01,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8031381,
+   "user_id": "user_magnhild",
+   "date": "2026-05-23",
+   "active_energy_kcal": 351.6,
+   "basal_energy_kcal": 1540.9,
+   "exercise_minutes": 33.4,
+   "stand_hours": 9,
+   "distance_km": 6.3,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8031389,
+   "user_id": "user_magnhild",
+   "date": "2026-05-24",
+   "active_energy_kcal": 342.9,
+   "basal_energy_kcal": 1642.1,
+   "exercise_minutes": 58.0,
+   "stand_hours": 9,
+   "distance_km": 4.4,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031397,
+   "user_id": "user_magnhild",
+   "date": "2026-05-25",
+   "active_energy_kcal": 566.2,
+   "basal_energy_kcal": 1449.7,
+   "exercise_minutes": 19.5,
+   "stand_hours": 10,
+   "distance_km": 9.45,
+   "flights_climbed": 1
+  },
+  {
+   "record_id": 8031405,
+   "user_id": "user_magnhild",
+   "date": "2026-05-26",
+   "active_energy_kcal": 568.2,
+   "basal_energy_kcal": 1665.8,
+   "exercise_minutes": 39.5,
+   "stand_hours": 14,
+   "distance_km": 11.8,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8031413,
+   "user_id": "user_magnhild",
+   "date": "2026-05-27",
+   "active_energy_kcal": 369.0,
+   "basal_energy_kcal": 1505.2,
+   "exercise_minutes": 15.9,
+   "stand_hours": 7,
+   "distance_km": 6.32,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8031421,
+   "user_id": "user_magnhild",
+   "date": "2026-05-28",
+   "active_energy_kcal": 414.8,
+   "basal_energy_kcal": 1642.8,
+   "exercise_minutes": 65.6,
+   "stand_hours": 9,
+   "distance_km": 8.3,
+   "flights_climbed": 13
+  },
+  {
+   "record_id": "48d6b019ce732a5f8d10b64c",
+   "date": "2026-05-29",
+   "active_energy_kcal": 338.0,
+   "basal_energy_kcal": 1412.0,
+   "exercise_minutes": 26.0,
+   "stand_hours": 13,
+   "distance_km": 6.7,
+   "flights_climbed": 8,
+   "user_id": "user_magnhild"
+  },
+  {
+   "record_id": 8031429,
+   "user_id": "user_magnhild",
+   "date": "2026-05-30",
+   "active_energy_kcal": 439.1,
+   "basal_energy_kcal": 1634.6,
+   "exercise_minutes": 57.3,
+   "stand_hours": 7,
+   "distance_km": 8.76,
+   "flights_climbed": 13
+  },
+  {
+   "record_id": 8031437,
+   "user_id": "user_magnhild",
+   "date": "2026-05-31",
+   "active_energy_kcal": 541.0,
+   "basal_energy_kcal": 1477.5,
+   "exercise_minutes": 50.1,
+   "stand_hours": 6,
+   "distance_km": 11.99,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031445,
+   "user_id": "user_magnhild",
+   "date": "2026-06-01",
+   "active_energy_kcal": 259.7,
+   "basal_energy_kcal": 1597.7,
+   "exercise_minutes": 65.0,
+   "stand_hours": 9,
+   "distance_km": 4.95,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8031453,
+   "user_id": "user_magnhild",
+   "date": "2026-06-02",
+   "active_energy_kcal": 403.2,
+   "basal_energy_kcal": 1467.2,
+   "exercise_minutes": 61.0,
+   "stand_hours": 9,
+   "distance_km": 4.8,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8031461,
+   "user_id": "user_magnhild",
+   "date": "2026-06-03",
+   "active_energy_kcal": 487.1,
+   "basal_energy_kcal": 1610.3,
+   "exercise_minutes": 56.4,
+   "stand_hours": 8,
+   "distance_km": 8.56,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031469,
+   "user_id": "user_magnhild",
+   "date": "2026-06-04",
+   "active_energy_kcal": 419.2,
+   "basal_energy_kcal": 1542.9,
+   "exercise_minutes": 71.7,
+   "stand_hours": 13,
+   "distance_km": 5.4,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8031477,
+   "user_id": "user_magnhild",
+   "date": "2026-06-05",
+   "active_energy_kcal": 237.1,
+   "basal_energy_kcal": 1625.9,
+   "exercise_minutes": 90.0,
+   "stand_hours": 13,
+   "distance_km": 4.83,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031485,
+   "user_id": "user_magnhild",
+   "date": "2026-06-06",
+   "active_energy_kcal": 923.0,
+   "basal_energy_kcal": 1535.2,
+   "exercise_minutes": 165.0,
+   "stand_hours": 13,
+   "distance_km": 11.4,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031493,
+   "user_id": "user_magnhild",
+   "date": "2026-06-07",
+   "active_energy_kcal": 748.0,
+   "basal_energy_kcal": 1658.8,
+   "exercise_minutes": 149.0,
+   "stand_hours": 13,
+   "distance_km": 9.6,
+   "flights_climbed": 62
+  },
+  {
+   "record_id": 8031501,
+   "user_id": "user_magnhild",
+   "date": "2026-06-08",
+   "active_energy_kcal": 431.8,
+   "basal_energy_kcal": 1505.8,
+   "exercise_minutes": 44.3,
+   "stand_hours": 14,
+   "distance_km": 10.0,
+   "flights_climbed": 8
+  },
+  {
+   "record_id": 8031509,
+   "user_id": "user_magnhild",
+   "date": "2026-06-09",
+   "active_energy_kcal": 447.0,
+   "basal_energy_kcal": 1420.9,
+   "exercise_minutes": 79.0,
+   "stand_hours": 6,
+   "distance_km": 6.2,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031517,
+   "user_id": "user_magnhild",
+   "date": "2026-06-10",
+   "active_energy_kcal": 530.7,
+   "basal_energy_kcal": 1606.0,
+   "exercise_minutes": 83.6,
+   "stand_hours": 6,
+   "distance_km": 10.72,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8031525,
+   "user_id": "user_magnhild",
+   "date": "2026-06-11",
+   "active_energy_kcal": 265.9,
+   "basal_energy_kcal": 1410.5,
+   "exercise_minutes": 78.0,
+   "stand_hours": 8,
+   "distance_km": 6.1,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8031533,
+   "user_id": "user_magnhild",
+   "date": "2026-06-12",
+   "active_energy_kcal": 537.0,
+   "basal_energy_kcal": 1634.7,
+   "exercise_minutes": 45.7,
+   "stand_hours": 14,
+   "distance_km": 9.43,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031541,
+   "user_id": "user_magnhild",
+   "date": "2026-06-13",
+   "active_energy_kcal": 1180.0,
+   "basal_energy_kcal": 1632.4,
+   "exercise_minutes": 210.0,
+   "stand_hours": 13,
+   "distance_km": 13.2,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8031549,
+   "user_id": "user_magnhild",
+   "date": "2026-06-14",
+   "active_energy_kcal": 448.8,
+   "basal_energy_kcal": 1607.9,
+   "exercise_minutes": 170.0,
+   "stand_hours": 6,
+   "distance_km": 2.96,
+   "flights_climbed": 13
+  },
+  {
+   "record_id": 8031557,
+   "user_id": "user_magnhild",
+   "date": "2026-06-15",
+   "active_energy_kcal": 444.1,
+   "basal_energy_kcal": 1422.3,
+   "exercise_minutes": 21.8,
+   "stand_hours": 9,
+   "distance_km": 8.28,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031565,
+   "user_id": "user_magnhild",
+   "date": "2026-06-16",
+   "active_energy_kcal": 774.0,
+   "basal_energy_kcal": 1478.4,
+   "exercise_minutes": 143.2,
+   "stand_hours": 13,
+   "distance_km": 10.6,
+   "flights_climbed": 33
+  },
+  {
+   "record_id": 8031573,
+   "user_id": "user_magnhild",
+   "date": "2026-06-17",
+   "active_energy_kcal": 569.0,
+   "basal_energy_kcal": 1609.6,
+   "exercise_minutes": 15.9,
+   "stand_hours": 12,
+   "distance_km": 10.69,
+   "flights_climbed": 7
+  },
+  {
+   "record_id": 8031581,
+   "user_id": "user_magnhild",
+   "date": "2026-06-18",
+   "active_energy_kcal": 371.8,
+   "basal_energy_kcal": 1422.0,
+   "exercise_minutes": 76.0,
+   "stand_hours": 7,
+   "distance_km": 6.0,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8031589,
+   "user_id": "user_magnhild",
+   "date": "2026-06-19",
+   "active_energy_kcal": 462.2,
+   "basal_energy_kcal": 1426.5,
+   "exercise_minutes": 21.3,
+   "stand_hours": 6,
+   "distance_km": 10.93,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031597,
+   "user_id": "user_magnhild",
+   "date": "2026-06-20",
+   "active_energy_kcal": 864.0,
+   "basal_energy_kcal": 1654.7,
+   "exercise_minutes": 148.0,
+   "stand_hours": 8,
+   "distance_km": 9.6,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8031605,
+   "user_id": "user_magnhild",
+   "date": "2026-06-21",
+   "active_energy_kcal": 294.3,
+   "basal_energy_kcal": 1424.1,
+   "exercise_minutes": 160.0,
+   "stand_hours": 13,
+   "distance_km": 3.12,
+   "flights_climbed": 7
+  },
+  {
+   "record_id": 8031613,
+   "user_id": "user_magnhild",
+   "date": "2026-06-22",
+   "active_energy_kcal": 489.2,
+   "basal_energy_kcal": 1531.7,
+   "exercise_minutes": 88.3,
+   "stand_hours": 12,
+   "distance_km": 8.32,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8031621,
+   "user_id": "user_magnhild",
+   "date": "2026-06-23",
+   "active_energy_kcal": 406.2,
+   "basal_energy_kcal": 1693.8,
+   "exercise_minutes": 18.4,
+   "stand_hours": 11,
+   "distance_km": 7.39,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031629,
+   "user_id": "user_magnhild",
+   "date": "2026-06-24",
+   "active_energy_kcal": 428.0,
+   "basal_energy_kcal": 1655.4,
+   "exercise_minutes": 162.0,
+   "stand_hours": 13,
+   "distance_km": 3.48,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8031637,
+   "user_id": "user_magnhild",
+   "date": "2026-06-25",
+   "active_energy_kcal": 274.3,
+   "basal_energy_kcal": 1630.3,
+   "exercise_minutes": 98.3,
+   "stand_hours": 9,
+   "distance_km": 7.8,
+   "flights_climbed": 13
+  },
+  {
+   "record_id": 8031645,
+   "user_id": "user_magnhild",
+   "date": "2026-06-26",
+   "active_energy_kcal": 455.0,
+   "basal_energy_kcal": 1513.4,
+   "exercise_minutes": 72.0,
+   "stand_hours": 6,
+   "distance_km": 10.34,
+   "flights_climbed": 9
+  },
+  {
+   "record_id": 8031653,
+   "user_id": "user_magnhild",
+   "date": "2026-06-27",
+   "active_energy_kcal": 856.0,
+   "basal_energy_kcal": 1537.4,
+   "exercise_minutes": 155.0,
+   "stand_hours": 6,
+   "distance_km": 10.2,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031661,
+   "user_id": "user_magnhild",
+   "date": "2026-06-28",
+   "active_energy_kcal": 305.2,
+   "basal_energy_kcal": 1592.1,
+   "exercise_minutes": 175.0,
+   "stand_hours": 13,
+   "distance_km": 3.34,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031669,
+   "user_id": "user_magnhild",
+   "date": "2026-06-29",
+   "active_energy_kcal": 173.4,
+   "basal_energy_kcal": 1553.3,
+   "exercise_minutes": 27.3,
+   "stand_hours": 6,
+   "distance_km": 4.32,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8031677,
+   "user_id": "user_magnhild",
+   "date": "2026-06-30",
+   "active_energy_kcal": 472.1,
+   "basal_energy_kcal": 1678.3,
+   "exercise_minutes": 85.4,
+   "stand_hours": 10,
+   "distance_km": 9.3,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031685,
+   "user_id": "user_magnhild",
+   "date": "2026-07-01",
+   "active_energy_kcal": 251.0,
+   "basal_energy_kcal": 1449.9,
+   "exercise_minutes": 87.6,
+   "stand_hours": 10,
+   "distance_km": 4.68,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8031693,
+   "user_id": "user_magnhild",
+   "date": "2026-07-02",
+   "active_energy_kcal": 652.5,
+   "basal_energy_kcal": 1575.6,
+   "exercise_minutes": 43.2,
+   "stand_hours": 13,
+   "distance_km": 11.52,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8031701,
+   "user_id": "user_magnhild",
+   "date": "2026-07-03",
+   "active_energy_kcal": 504.0,
+   "basal_energy_kcal": 1577.5,
+   "exercise_minutes": 73.0,
+   "stand_hours": 12,
+   "distance_km": 5.8,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031709,
+   "user_id": "user_magnhild",
+   "date": "2026-07-04",
+   "active_energy_kcal": 498.4,
+   "basal_energy_kcal": 1428.9,
+   "exercise_minutes": 49.2,
+   "stand_hours": 12,
+   "distance_km": 9.08,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8031717,
+   "user_id": "user_magnhild",
+   "date": "2026-07-05",
+   "active_energy_kcal": 1876.0,
+   "basal_energy_kcal": 1574.0,
+   "exercise_minutes": 340.0,
+   "stand_hours": 8,
+   "distance_km": 13.78,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031725,
+   "user_id": "user_magnhild",
+   "date": "2026-07-06",
+   "active_energy_kcal": 494.4,
+   "basal_energy_kcal": 1430.3,
+   "exercise_minutes": 86.0,
+   "stand_hours": 14,
+   "distance_km": 8.54,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8031733,
+   "user_id": "user_magnhild",
+   "date": "2026-07-07",
+   "active_energy_kcal": 398.3,
+   "basal_energy_kcal": 1658.1,
+   "exercise_minutes": 56.9,
+   "stand_hours": 6,
+   "distance_km": 8.33,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031741,
+   "user_id": "user_magnhild",
+   "date": "2026-07-08",
+   "active_energy_kcal": 406.0,
+   "basal_energy_kcal": 1557.6,
+   "exercise_minutes": 139.0,
+   "stand_hours": 13,
+   "distance_km": 2.14,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8031749,
+   "user_id": "user_magnhild",
+   "date": "2026-07-09",
+   "active_energy_kcal": 466.3,
+   "basal_energy_kcal": 1633.2,
+   "exercise_minutes": 101.7,
+   "stand_hours": 10,
+   "distance_km": 8.2,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8031757,
+   "user_id": "user_magnhild",
+   "date": "2026-07-10",
+   "active_energy_kcal": 329.7,
+   "basal_energy_kcal": 1672.8,
+   "exercise_minutes": 34.8,
+   "stand_hours": 8,
+   "distance_km": 6.39,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031765,
+   "user_id": "user_magnhild",
+   "date": "2026-07-11",
+   "active_energy_kcal": 982.0,
+   "basal_energy_kcal": 1581.1,
+   "exercise_minutes": 170.0,
+   "stand_hours": 10,
+   "distance_km": 11.8,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8031773,
+   "user_id": "user_magnhild",
+   "date": "2026-07-12",
+   "active_energy_kcal": 773.9,
+   "basal_energy_kcal": 1493.9,
+   "exercise_minutes": 282.0,
+   "stand_hours": 9,
+   "distance_km": 11.42,
+   "flights_climbed": 1
+  },
+  {
+   "record_id": 8030713,
+   "user_id": "user_magnhild",
+   "date": "2026-07-13",
+   "active_energy_kcal": 486.0,
+   "basal_energy_kcal": 1408.0,
+   "exercise_minutes": 41.0,
+   "stand_hours": 13,
+   "distance_km": 9.6,
+   "flights_climbed": 18
+  },
+  {
+   "record_id": 8030714,
+   "user_id": "user_magnhild",
+   "date": "2026-07-14",
+   "active_energy_kcal": 441.0,
+   "basal_energy_kcal": 1408.0,
+   "exercise_minutes": 34.0,
+   "stand_hours": 12,
+   "distance_km": 8.7,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031781,
+   "user_id": "user_magnhild",
+   "date": "2026-07-15",
+   "active_energy_kcal": 325.4,
+   "basal_energy_kcal": 1493.3,
+   "exercise_minutes": 28.3,
+   "stand_hours": 10,
+   "distance_km": 6.88,
+   "flights_climbed": 9
+  },
+  {
+   "record_id": 8031789,
+   "user_id": "user_magnhild",
+   "date": "2026-07-16",
+   "active_energy_kcal": 479.1,
+   "basal_energy_kcal": 1511.5,
+   "exercise_minutes": 43.1,
+   "stand_hours": 13,
+   "distance_km": 10.12,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031797,
+   "user_id": "user_magnhild",
+   "date": "2026-07-17",
+   "active_energy_kcal": 217.6,
+   "basal_energy_kcal": 1552.1,
+   "exercise_minutes": 20.7,
+   "stand_hours": 11,
+   "distance_km": 5.03,
+   "flights_climbed": 7
+  },
+  {
+   "record_id": 8031805,
+   "user_id": "user_magnhild",
+   "date": "2026-07-18",
+   "active_energy_kcal": 2058.0,
+   "basal_energy_kcal": 1528.3,
+   "exercise_minutes": 220.0,
+   "stand_hours": 6,
+   "distance_km": 14.0,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": 8031813,
+   "user_id": "user_magnhild",
+   "date": "2026-07-19",
+   "active_energy_kcal": 612.7,
+   "basal_energy_kcal": 1435.2,
+   "exercise_minutes": 175.0,
+   "stand_hours": 10,
+   "distance_km": 3.26,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 84201,
+   "user_id": "user_magnhild",
+   "date": "2026-07-20",
+   "active_energy_kcal": 402.0,
+   "basal_energy_kcal": 1348.0,
+   "exercise_minutes": 44.0,
+   "stand_hours": 13,
+   "distance_km": 9.3,
+   "flights_climbed": 8
+  },
+  {
+   "record_id": 84202,
+   "user_id": "user_magnhild",
+   "date": "2026-07-21",
+   "active_energy_kcal": 561.0,
+   "basal_energy_kcal": 1352.0,
+   "exercise_minutes": 88.0,
+   "stand_hours": 14,
+   "distance_km": 6.9,
+   "flights_climbed": 22
+  },
+  {
+   "record_id": 84203,
+   "user_id": "user_magnhild",
+   "date": "2026-07-22",
+   "active_energy_kcal": 498.0,
+   "basal_energy_kcal": 1345.0,
+   "exercise_minutes": 170.0,
+   "stand_hours": 13,
+   "distance_km": 4.02,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8030723,
+   "user_id": "user_magnhild",
+   "date": "2026-07-23",
+   "active_energy_kcal": 412.0,
+   "basal_energy_kcal": 1406.0,
+   "exercise_minutes": 51.0,
+   "stand_hours": 12,
+   "distance_km": 3.48,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8030724,
+   "user_id": "user_magnhild",
+   "date": "2026-07-24",
+   "active_energy_kcal": 388.0,
+   "basal_energy_kcal": 1406.0,
+   "exercise_minutes": 177.0,
+   "stand_hours": 11,
+   "distance_km": 11.5,
+   "flights_climbed": 9
+  },
+  {
+   "record_id": 8031821,
+   "user_id": "user_magnhild",
+   "date": "2026-07-25",
+   "active_energy_kcal": 917.0,
+   "basal_energy_kcal": 1570.9,
+   "exercise_minutes": 152.0,
+   "stand_hours": 11,
+   "distance_km": 9.9,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8031829,
+   "user_id": "user_magnhild",
+   "date": "2026-07-26",
+   "active_energy_kcal": 854.0,
+   "basal_energy_kcal": 1424.7,
+   "exercise_minutes": 157.0,
+   "stand_hours": 14,
+   "distance_km": 10.4,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031837,
+   "user_id": "user_magnhild",
+   "date": "2026-07-27",
+   "active_energy_kcal": 408.2,
+   "basal_energy_kcal": 1584.8,
+   "exercise_minutes": 23.2,
+   "stand_hours": 12,
+   "distance_km": 8.12,
+   "flights_climbed": 8
+  },
+  {
+   "record_id": 8031845,
+   "user_id": "user_magnhild",
+   "date": "2026-07-28",
+   "active_energy_kcal": 448.0,
+   "basal_energy_kcal": 1693.4,
+   "exercise_minutes": 80.0,
+   "stand_hours": 14,
+   "distance_km": 6.3,
+   "flights_climbed": 2
+  },
+  {
+   "record_id": 8031853,
+   "user_id": "user_magnhild",
+   "date": "2026-07-29",
+   "active_energy_kcal": 414.0,
+   "basal_energy_kcal": 1537.0,
+   "exercise_minutes": 25.8,
+   "stand_hours": 11,
+   "distance_km": 7.06,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8031861,
+   "user_id": "user_magnhild",
+   "date": "2026-07-30",
+   "active_energy_kcal": 529.7,
+   "basal_energy_kcal": 1614.5,
+   "exercise_minutes": 64.0,
+   "stand_hours": 10,
+   "distance_km": 9.48,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": 8031869,
+   "user_id": "user_magnhild",
+   "date": "2026-07-31",
+   "active_energy_kcal": 480.9,
+   "basal_energy_kcal": 1538.9,
+   "exercise_minutes": 63.6,
+   "stand_hours": 12,
+   "distance_km": 9.49,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031877,
+   "user_id": "user_magnhild",
+   "date": "2026-08-01",
+   "active_energy_kcal": 578.4,
+   "basal_energy_kcal": 1499.3,
+   "exercise_minutes": 43.1,
+   "stand_hours": 13,
+   "distance_km": 10.94,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8031885,
+   "user_id": "user_magnhild",
+   "date": "2026-08-02",
+   "active_energy_kcal": 1913.0,
+   "basal_energy_kcal": 1577.3,
+   "exercise_minutes": 344.0,
+   "stand_hours": 6,
+   "distance_km": 14.54,
+   "flights_climbed": 0
+  },
+  {
+   "record_id": 8031893,
+   "user_id": "user_magnhild",
+   "date": "2026-08-03",
+   "active_energy_kcal": 503.0,
+   "basal_energy_kcal": 1599.8,
+   "exercise_minutes": 79.5,
+   "stand_hours": 8,
+   "distance_km": 10.49,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": "c93e6f20b5d84a172329c4d5",
+   "user_id": "user_magnhild",
+   "date": "2026-08-04",
+   "active_energy_kcal": 96.0,
+   "basal_energy_kcal": 1418.0,
+   "exercise_minutes": 14.0,
+   "stand_hours": 7,
+   "distance_km": 0.46,
+   "flights_climbed": 1
+  },
+  {
+   "record_id": "d04f7031c6e95b28343ad5e6",
+   "user_id": "user_magnhild",
+   "date": "2026-08-05",
+   "active_energy_kcal": 542.0,
+   "basal_energy_kcal": 1418.0,
+   "exercise_minutes": 132.0,
+   "stand_hours": 16,
+   "distance_km": 2.86,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031901,
+   "user_id": "user_magnhild",
+   "date": "2026-08-06",
+   "active_energy_kcal": 246.0,
+   "basal_energy_kcal": 1642.1,
+   "exercise_minutes": 94.0,
+   "stand_hours": 9,
+   "distance_km": 7.5,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8031909,
+   "user_id": "user_magnhild",
+   "date": "2026-08-07",
+   "active_energy_kcal": 478.1,
+   "basal_energy_kcal": 1659.0,
+   "exercise_minutes": 79.3,
+   "stand_hours": 7,
+   "distance_km": 8.78,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8031917,
+   "user_id": "user_magnhild",
+   "date": "2026-08-08",
+   "active_energy_kcal": 1178.0,
+   "basal_energy_kcal": 1612.9,
+   "exercise_minutes": 213.0,
+   "stand_hours": 14,
+   "distance_km": 13.6,
+   "flights_climbed": 1
+  },
+  {
+   "record_id": 8031925,
+   "user_id": "user_magnhild",
+   "date": "2026-08-09",
+   "active_energy_kcal": 702.0,
+   "basal_energy_kcal": 1404.0,
+   "exercise_minutes": 136.7,
+   "stand_hours": 13,
+   "distance_km": 8.14,
+   "flights_climbed": 56
+  },
+  {
+   "record_id": 8031933,
+   "user_id": "user_magnhild",
+   "date": "2026-08-10",
+   "active_energy_kcal": 425.5,
+   "basal_energy_kcal": 1691.4,
+   "exercise_minutes": 21.5,
+   "stand_hours": 13,
+   "distance_km": 9.46,
+   "flights_climbed": 12
+  },
+  {
+   "record_id": 8031941,
+   "user_id": "user_magnhild",
+   "date": "2026-08-11",
+   "active_energy_kcal": 499.0,
+   "basal_energy_kcal": 1625.4,
+   "exercise_minutes": 86.0,
+   "stand_hours": 6,
+   "distance_km": 6.2,
+   "flights_climbed": 10
+  },
+  {
+   "record_id": 8031949,
+   "user_id": "user_magnhild",
+   "date": "2026-08-12",
+   "active_energy_kcal": 348.3,
+   "basal_energy_kcal": 1616.6,
+   "exercise_minutes": 37.9,
+   "stand_hours": 14,
+   "distance_km": 6.05,
+   "flights_climbed": 4
+  },
+  {
+   "record_id": 8031957,
+   "user_id": "user_magnhild",
+   "date": "2026-08-13",
+   "active_energy_kcal": 610.5,
+   "basal_energy_kcal": 1413.0,
+   "exercise_minutes": 107.0,
+   "stand_hours": 8,
+   "distance_km": 8.0,
+   "flights_climbed": 8
+  },
+  {
+   "record_id": 8031965,
+   "user_id": "user_magnhild",
+   "date": "2026-08-14",
+   "active_energy_kcal": 251.6,
+   "basal_energy_kcal": 1668.6,
+   "exercise_minutes": 45.6,
+   "stand_hours": 13,
+   "distance_km": 4.97,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8031973,
+   "user_id": "user_magnhild",
+   "date": "2026-08-15",
+   "active_energy_kcal": 504.1,
+   "basal_energy_kcal": 1424.0,
+   "exercise_minutes": 660.0,
+   "stand_hours": 14,
+   "distance_km": 31.5,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8031981,
+   "user_id": "user_magnhild",
+   "date": "2026-08-16",
+   "active_energy_kcal": 393.6,
+   "basal_energy_kcal": 1475.8,
+   "exercise_minutes": 56.7,
+   "stand_hours": 13,
+   "distance_km": 9.71,
+   "flights_climbed": 15
+  },
+  {
+   "record_id": 8031989,
+   "user_id": "user_magnhild",
+   "date": "2026-08-17",
+   "active_energy_kcal": 335.9,
+   "basal_energy_kcal": 1422.6,
+   "exercise_minutes": 175.0,
+   "stand_hours": 10,
+   "distance_km": 3.4,
+   "flights_climbed": 1
+  },
+  {
+   "record_id": 8031997,
+   "user_id": "user_magnhild",
+   "date": "2026-08-18",
+   "active_energy_kcal": 551.8,
+   "basal_energy_kcal": 1524.1,
+   "exercise_minutes": 22.7,
+   "stand_hours": 9,
+   "distance_km": 11.92,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8032005,
+   "user_id": "user_magnhild",
+   "date": "2026-08-19",
+   "active_energy_kcal": 654.7,
+   "basal_energy_kcal": 1600.3,
+   "exercise_minutes": 143.0,
+   "stand_hours": 11,
+   "distance_km": 3.24,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8032013,
+   "user_id": "user_magnhild",
+   "date": "2026-08-20",
+   "active_energy_kcal": 949.0,
+   "basal_energy_kcal": 1575.2,
+   "exercise_minutes": 162.0,
+   "stand_hours": 12,
+   "distance_km": 11.2,
+   "flights_climbed": 6
+  },
+  {
+   "record_id": 8032021,
+   "user_id": "user_magnhild",
+   "date": "2026-08-21",
+   "active_energy_kcal": 486.7,
+   "basal_energy_kcal": 1516.1,
+   "exercise_minutes": 39.1,
+   "stand_hours": 8,
+   "distance_km": 11.67,
+   "flights_climbed": 7
+  },
+  {
+   "record_id": "09fb31ae7c25d84610b2fa73",
+   "user_id": "user_magnhild",
+   "date": "2026-08-22",
+   "active_energy_kcal": 812.0,
+   "basal_energy_kcal": 1418.0,
+   "exercise_minutes": 186.0,
+   "stand_hours": 13,
+   "distance_km": 12.7,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": "73e2c108ba49f5d607a1c3be",
+   "user_id": "user_magnhild",
+   "date": "2026-08-23",
+   "active_energy_kcal": 734.0,
+   "basal_energy_kcal": 1421.0,
+   "exercise_minutes": 168.0,
+   "stand_hours": 12,
+   "distance_km": 11.4,
+   "flights_climbed": 11
+  },
+  {
+   "record_id": 8032029,
+   "user_id": "user_magnhild",
+   "date": "2026-08-24",
+   "active_energy_kcal": 226.7,
+   "basal_energy_kcal": 1469.7,
+   "exercise_minutes": 61.0,
+   "stand_hours": 8,
+   "distance_km": 4.11,
+   "flights_climbed": 5
+  },
+  {
+   "record_id": 8032037,
+   "user_id": "user_magnhild",
+   "date": "2026-08-25",
+   "active_energy_kcal": 542.0,
+   "basal_energy_kcal": 1571.6,
+   "exercise_minutes": 83.4,
+   "stand_hours": 10,
+   "distance_km": 9.69,
+   "flights_climbed": 3
+  },
+  {
+   "record_id": 8032045,
+   "user_id": "user_magnhild",
+   "date": "2026-08-26",
+   "active_energy_kcal": 424.0,
+   "basal_energy_kcal": 1481.3,
+   "exercise_minutes": 156.0,
+   "stand_hours": 14,
+   "distance_km": 3.66,
+   "flights_climbed": 13
+  },
+  {
+   "record_id": 8032053,
+   "user_id": "user_magnhild",
+   "date": "2026-08-27",
+   "active_energy_kcal": 363.2,
+   "basal_energy_kcal": 1462.9,
+   "exercise_minutes": 18.4,
+   "stand_hours": 14,
+   "distance_km": 7.73,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8032061,
+   "user_id": "user_magnhild",
+   "date": "2026-08-28",
+   "active_energy_kcal": 402.0,
+   "basal_energy_kcal": 1488.1,
+   "exercise_minutes": 56.7,
+   "stand_hours": 13,
+   "distance_km": 4.34,
+   "flights_climbed": 27
+  },
+  {
+   "record_id": 8032069,
+   "user_id": "user_magnhild",
+   "date": "2026-08-29",
+   "active_energy_kcal": 809.0,
+   "basal_energy_kcal": 1539.3,
+   "exercise_minutes": 143.0,
+   "stand_hours": 8,
+   "distance_km": 9.4,
+   "flights_climbed": 14
+  },
+  {
+   "record_id": 8032077,
+   "user_id": "user_magnhild",
+   "date": "2026-08-30",
+   "active_energy_kcal": 469.5,
+   "basal_energy_kcal": 1578.7,
+   "exercise_minutes": 62.4,
+   "stand_hours": 9,
+   "distance_km": 9.04,
+   "flights_climbed": 10
+  }
+ ]
+}

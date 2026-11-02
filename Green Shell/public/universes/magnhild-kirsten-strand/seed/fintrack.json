@@ -1,0 +1,4598 @@
+{
+ "accounts": [
+  {
+   "account_id": "838e2cfc4597c671c2ce653a",
+   "account_type": "checking",
+   "balance": 163226.46,
+   "institution_name": "First Interstate Bank",
+   "last_four": "3318",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_id": "d85a643fc13cb50f27c62cd0",
+   "account_type": "savings",
+   "balance": 14206.8,
+   "institution_name": "First Interstate Bank",
+   "last_four": "3327",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_id": "7dc34b3d1ce72aa7ce31e062",
+   "account_type": "savings",
+   "balance": 4318.0,
+   "institution_name": "First Interstate Bank",
+   "last_four": "3341",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_id": "4cda0c9fa5e38236f5899a9d",
+   "account_type": "credit_card",
+   "balance": -1896.44,
+   "institution_name": "First Interstate Visa",
+   "last_four": "7742",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_id": "b994b2a85526af56ae1d2a7a",
+   "account_type": "investment",
+   "balance": 42120.0,
+   "institution_name": "Montana Family Education Savings Program",
+   "last_four": "8814",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_id": "aec1c9df56993a80ac18f851",
+   "account_type": "investment",
+   "balance": 47480.0,
+   "institution_name": "Montana Family Education Savings Program",
+   "last_four": "8827",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_id": "70986c956d115bb2bf4a54c1",
+   "account_type": "investment",
+   "balance": 214800.0,
+   "institution_name": "TIAA",
+   "last_four": "2260",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_id": "ea38cdfdc08618227b3fd713",
+   "account_type": "investment",
+   "balance": 286300.0,
+   "institution_name": "Fidelity",
+   "last_four": "4409",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_id": "6bbb472192b1adfbb5c1bcb9",
+   "account_type": "mortgage",
+   "balance": 149944.1,
+   "institution_name": "First Interstate Bank",
+   "last_four": "6613",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  }
+ ],
+ "subscriptions": [
+  {
+   "amount": 2.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-09-03",
+   "service_name": "Apple iCloud 200GB",
+   "status": "active",
+   "subscription_id": "9c4b5f6db5df724ff2a74555",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "amount": 19.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-09-07",
+   "service_name": "Spotify Family",
+   "status": "active",
+   "subscription_id": "caa08b74c5adb487f37f2d93",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "amount": 17.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-09-16",
+   "service_name": "Netflix",
+   "status": "active",
+   "subscription_id": "70bae63419d6ab9a922ab734",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "amount": 14.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-09-19",
+   "service_name": "Amazon Prime",
+   "status": "active",
+   "subscription_id": "2138807e60dc26ae77876b61",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "amount": 7.99,
+   "billing_frequency": "monthly",
+   "next_billing_date": "2026-09-22",
+   "service_name": "MHz Choice",
+   "status": "active",
+   "subscription_id": "9fe5934c05bc3d70c8d49299",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  }
+ ],
+ "transactions": [
+  {
+   "account_last_four": "3318",
+   "amount": -2281.79,
+   "category": "housing",
+   "date": "2026-03-01",
+   "merchant": "First Interstate Bank Mortgage 6613",
+   "timestamp": 1772396696.0,
+   "transaction_id": "171626bcc487e210aa92f88f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -525.0,
+   "category": "other",
+   "date": "2026-03-01",
+   "merchant": "Bridger Creek Stables",
+   "timestamp": 1772380123.0,
+   "transaction_id": "b1c2d3e4f5a6071829304a51",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -89.0,
+   "category": "other",
+   "date": "2026-03-02",
+   "merchant": "Sons of Norway Gallatin Fjord Lodge 6-142",
+   "timestamp": 1772478542.0,
+   "transaction_id": "2c07be49a1d5f38607b2e9c4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-03-02",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1772475522.0,
+   "transaction_id": "36a0c7a69ea7dc72fe0110a1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2.99,
+   "category": "subscription",
+   "date": "2026-03-03",
+   "merchant": "Apple iCloud 200GB",
+   "timestamp": 1772557200.0,
+   "transaction_id": "380bc287ada0770103464725",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -34.8,
+   "category": "shopping",
+   "date": "2026-03-02",
+   "merchant": "Round House Ski and Sports",
+   "timestamp": 1772491333.0,
+   "transaction_id": "9f2b71ce048a63d5127eb0a4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -12.0,
+   "category": "entertainment",
+   "date": "2026-03-03",
+   "merchant": "Bohart Ranch Cross Country Ski Center",
+   "timestamp": 1772574786.0,
+   "transaction_id": "3d8054ba71ce29f6084d1b73",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -22.0,
+   "category": "recreation",
+   "date": "2026-03-03",
+   "merchant": "Bohart Ranch Cross Country Ski Center",
+   "timestamp": 1772572268.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20002",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -19.5,
+   "category": "dining",
+   "date": "2026-03-04",
+   "merchant": "Bridger Brewing, West College Street",
+   "timestamp": 1772652234.0,
+   "transaction_id": "6f30a92c4b18d75e0a3c9147",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -195.0,
+   "category": "entertainment",
+   "date": "2026-03-04",
+   "merchant": "Bell Lake Yurt",
+   "timestamp": 1772667902.0,
+   "transaction_id": "c169e07a3b482df51ac60973",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -600.0,
+   "category": "savings",
+   "date": "2026-03-05",
+   "merchant": "First Interstate Bank - Transfer to Savings 3327",
+   "timestamp": 1772723201.0,
+   "transaction_id": "0aa8f6515413d643c67675e8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -31.0,
+   "category": "entertainment",
+   "date": "2026-03-05",
+   "merchant": "Montana Fish, Wildlife and Parks",
+   "timestamp": 1772716192.0,
+   "transaction_id": "5e8c2a9d4b1f37065e8c2a9d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-03-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8814",
+   "timestamp": 1772730567.0,
+   "transaction_id": "626805c065d4fa73f2f31c4f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -153.6,
+   "category": "groceries",
+   "date": "2026-03-05",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1772753193.0,
+   "transaction_id": "af03e91c7d5b2846e017c3ba",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -21.0,
+   "category": "dining",
+   "date": "2026-03-04",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1772677323.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20004",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8827",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-03-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1772736681.0,
+   "transaction_id": "d9eb29348a0fd2637b4713a0",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3327",
+   "amount": 600.0,
+   "category": "savings",
+   "date": "2026-03-05",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1772738758.0,
+   "transaction_id": "dceb8cf2265b5da1a22577d6",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8814",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-03-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1772745214.0,
+   "transaction_id": "e43a553e402d3d314faa999b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -52.4,
+   "category": "gas",
+   "date": "2026-03-06",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1772818869.0,
+   "transaction_id": "740ba9c2e51f38d609ba7e12",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -142.86,
+   "category": "groceries",
+   "date": "2026-03-05",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1772757942.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20005",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -14.6,
+   "category": "dining",
+   "date": "2026-03-07",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1772911890.0,
+   "transaction_id": "07205c2cc59f27c3adb78f88",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -19.99,
+   "category": "subscription",
+   "date": "2026-03-07",
+   "merchant": "Spotify Family",
+   "timestamp": 1772907100.0,
+   "transaction_id": "4507c4025d82987929c654a9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -178.4,
+   "category": "utilities",
+   "date": "2026-03-08",
+   "merchant": "NorthWestern Energy",
+   "timestamp": 1772995626.0,
+   "transaction_id": "17fa3a951670cc97d8f87f44",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -48.6,
+   "category": "gas",
+   "date": "2026-03-09",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1773097303.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20006",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -22.0,
+   "category": "dining",
+   "date": "2026-03-09",
+   "merchant": "Bridger Brewing, West College Street",
+   "timestamp": 1773100909.0,
+   "transaction_id": "18b5c0d7e34a96f20b81d5c3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3341",
+   "amount": 150.0,
+   "category": "savings",
+   "date": "2026-03-10",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1773169691.0,
+   "transaction_id": "5f9468bbbf0ff00a20346629",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -150.0,
+   "category": "savings",
+   "date": "2026-03-10",
+   "merchant": "First Interstate Bank - Transfer to Horse Fund 3341",
+   "timestamp": 1773145032.0,
+   "transaction_id": "6ae43148b29df5d72ef6e478",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -271.0,
+   "category": "health",
+   "date": "2026-03-10",
+   "merchant": "Bozeman Health",
+   "timestamp": 1773164729.0,
+   "transaction_id": "e86f1daad5f31e40bb964867",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -168.4,
+   "category": "groceries",
+   "date": "2026-03-11",
+   "merchant": "Costco Wholesale, Catron Street",
+   "timestamp": 1773270693.0,
+   "transaction_id": "488567fe9baf9434735ca714",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -38.94,
+   "category": "shopping",
+   "date": "2026-03-10",
+   "merchant": "Amazon",
+   "timestamp": 1773187944.0,
+   "transaction_id": "7f21ba09c4de3568071ab2c9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -22.4,
+   "category": "dining",
+   "date": "2026-03-11",
+   "merchant": "Bridger Brewing, West College Street",
+   "timestamp": 1773268992.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20008",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -11.4,
+   "category": "health",
+   "date": "2026-03-11",
+   "merchant": "Costco Pharmacy, 2505 Catron Street",
+   "timestamp": 1773235109.0,
+   "transaction_id": "c906a0caa63874d98164fb4e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -46.8,
+   "category": "utilities",
+   "date": "2026-03-12",
+   "merchant": "Republic Services",
+   "timestamp": 1773340405.0,
+   "transaction_id": "096e4df6a0d799e2e4b6a9e3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -22.0,
+   "category": "recreation",
+   "date": "2026-03-12",
+   "merchant": "Bohart Ranch Cross Country Ski Center",
+   "timestamp": 1773326420.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20009",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2704.18,
+   "category": "income",
+   "date": "2026-03-13",
+   "merchant": "Montana State University",
+   "timestamp": 1773419756.0,
+   "transaction_id": "76eef6fcb1ad38958eac23a7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -18.5,
+   "category": "dining",
+   "date": "2026-03-13",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1773419421.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20010",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -28.4,
+   "category": "groceries",
+   "date": "2026-03-13",
+   "merchant": "Heebs Grocery, East Main Street",
+   "timestamp": 1773437428.0,
+   "transaction_id": "e4b1be49be71796df728f62b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -120.0,
+   "category": "utilities",
+   "date": "2026-03-14",
+   "merchant": "Starlink",
+   "timestamp": 1773507331.0,
+   "transaction_id": "32ce7a95c27121dd043e21b8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -96.4,
+   "category": "groceries",
+   "date": "2026-03-14",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1773524293.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20011",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -17.99,
+   "category": "subscription",
+   "date": "2026-03-16",
+   "merchant": "Netflix",
+   "timestamp": 1773693510.0,
+   "transaction_id": "72268a05356c35faa338fb7a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -148.6,
+   "category": "insurance",
+   "date": "2026-03-16",
+   "merchant": "Mountain West Farm Bureau Mutual",
+   "timestamp": 1773687408.0,
+   "transaction_id": "e19cf02bd279c93e628d8077",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -86.4,
+   "category": "shopping",
+   "date": "2026-03-16",
+   "merchant": "Round House Ski and Sports, North 19th Avenue",
+   "timestamp": 1773686017.0,
+   "transaction_id": "e340cb18a7925df6071c3b2a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-03-16",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1773698662.0,
+   "transaction_id": "ee107ecfdf0f058d6765252f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.0,
+   "category": "coffee",
+   "date": "2026-03-17",
+   "merchant": "Wild Joe's Coffee Spot, East Main Street",
+   "timestamp": 1773748227.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20012",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -12.0,
+   "category": "entertainment",
+   "date": "2026-03-17",
+   "merchant": "Bohart Ranch Cross Country Ski Center",
+   "timestamp": 1773769621.0,
+   "transaction_id": "e5137c60ad924b81f3072cd5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -118.41,
+   "category": "groceries",
+   "date": "2026-03-19",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1773943200.0,
+   "transaction_id": "5c9b2708d3e41fa60b8e2957",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -185.0,
+   "category": "other",
+   "date": "2026-03-18",
+   "merchant": "Ambrose Tallchief, Farrier",
+   "timestamp": 1773854801.0,
+   "transaction_id": "b7c8d9e0f1a26374859ab0c7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -23.6,
+   "category": "dining",
+   "date": "2026-03-18",
+   "merchant": "Bridger Brewing, West College Street",
+   "timestamp": 1773853155.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20013",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -24.8,
+   "category": "dining",
+   "date": "2026-03-18",
+   "merchant": "Bridger Brewing, West College Street",
+   "timestamp": 1773855794.0,
+   "transaction_id": "d94e17f0b625c3a80fd41927",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -14.99,
+   "category": "subscription",
+   "date": "2026-03-19",
+   "merchant": "Amazon Prime",
+   "timestamp": 1773936000.0,
+   "transaction_id": "ff8acd3911d24f77732c6c1b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -22.0,
+   "category": "recreation",
+   "date": "2026-03-20",
+   "merchant": "Bohart Ranch Cross Country Ski Center",
+   "timestamp": 1774017901.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20014",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -34.8,
+   "category": "dining",
+   "date": "2026-03-19",
+   "merchant": "Nova Cafe, East Main Street",
+   "timestamp": 1773969641.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20015",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -9.4,
+   "category": "coffee",
+   "date": "2026-03-21",
+   "merchant": "Wild Joe's Coffee Spot, East Main Street",
+   "timestamp": 1774095604.0,
+   "transaction_id": "04c6f2b98a3e1750db29ce43",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -24.0,
+   "category": "entertainment",
+   "date": "2026-03-20",
+   "merchant": "Bohart Ranch Cross Country Ski Center",
+   "timestamp": 1774057790.0,
+   "transaction_id": "28ac604f1b7d3e95602ac8f1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -164.2,
+   "category": "utilities",
+   "date": "2026-03-21",
+   "merchant": "Verizon Wireless",
+   "timestamp": 1774097093.0,
+   "transaction_id": "299e9c0623346cab5c3af52c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -124.6,
+   "category": "groceries",
+   "date": "2026-03-21",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1774133534.0,
+   "transaction_id": "f0eb64378e17474cc206c90f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -7.99,
+   "category": "subscription",
+   "date": "2026-03-22",
+   "merchant": "MHz Choice",
+   "timestamp": 1774194104.0,
+   "transaction_id": "3011cd38a078fe9df25a0c63",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -42.15,
+   "category": "gas",
+   "date": "2026-03-22",
+   "merchant": "Costco Gas, Catron Street",
+   "timestamp": 1774227068.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20017",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -88.3,
+   "category": "groceries",
+   "date": "2026-03-24",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1774388597.0,
+   "transaction_id": "4f2132b7ebd3db685dc8dfb6",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -21.4,
+   "category": "dining",
+   "date": "2026-03-25",
+   "merchant": "Bridger Brewing, West College Street",
+   "timestamp": 1774460465.0,
+   "transaction_id": "27a0f6c39b1e84d5c072b3ea",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8814",
+   "amount": -11400.0,
+   "category": "education",
+   "date": "2026-03-26",
+   "merchant": "University of Oregon",
+   "timestamp": 1774540800.0,
+   "transaction_id": "fc8f049bfe629473470bcf1f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.5,
+   "category": "coffee",
+   "date": "2026-03-27",
+   "merchant": "Treeline Coffee Roasters, North Wallace Avenue",
+   "timestamp": 1774617781.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20018",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -46.85,
+   "category": "gas",
+   "date": "2026-03-27",
+   "merchant": "Exxon, North 7th Avenue",
+   "timestamp": 1774647202.0,
+   "transaction_id": "e8be5d0d1fca2bf25f2db25c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -61.2,
+   "category": "groceries",
+   "date": "2026-03-28",
+   "merchant": "Bozeman Community Food Co-op, North Rouse Avenue",
+   "timestamp": 1774733165.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20019",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -42.8,
+   "category": "groceries",
+   "date": "2026-03-29",
+   "merchant": "Heebs Grocery, East Main Street",
+   "timestamp": 1774824984.0,
+   "transaction_id": "61acef5a046ea80e4558f7bb",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -37.4,
+   "category": "dining",
+   "date": "2026-03-29",
+   "merchant": "Nova Cafe, East Main Street",
+   "timestamp": 1774815959.0,
+   "transaction_id": "87d207832e57529488bba5dc",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -60.0,
+   "category": "entertainment",
+   "date": "2026-03-30",
+   "merchant": "Bozeman Curling Club",
+   "timestamp": 1774910180.0,
+   "transaction_id": "b103e58af762d940c81a37e5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2704.18,
+   "category": "income",
+   "date": "2026-03-31",
+   "merchant": "Montana State University",
+   "timestamp": 1774971549.0,
+   "transaction_id": "2593957fe0f71676b27b52f5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 18400.0,
+   "category": "income",
+   "date": "2026-03-31",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1774959152.0,
+   "transaction_id": "760196225c027623f6f8fdf7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-04-01",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1775048163.0,
+   "transaction_id": "058709a862ddbe86e2043a00",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -525.0,
+   "category": "other",
+   "date": "2026-04-01",
+   "merchant": "Bridger Creek Stables",
+   "timestamp": 1775070735.0,
+   "transaction_id": "c2d3e4f5a6b7182930415b62",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2281.79,
+   "category": "housing",
+   "date": "2026-04-01",
+   "merchant": "First Interstate Bank Mortgage 6613",
+   "timestamp": 1775059243.0,
+   "transaction_id": "de4089a636d3f5e37c9b97a4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -138.26,
+   "category": "groceries",
+   "date": "2026-04-02",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1775173795.0,
+   "transaction_id": "10e7a4bc09d3562f8a17be04",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2.99,
+   "category": "subscription",
+   "date": "2026-04-03",
+   "merchant": "Apple iCloud 200GB",
+   "timestamp": 1775223836.0,
+   "transaction_id": "36e958b11b28d4bda6895d6c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -19.5,
+   "category": "dining",
+   "date": "2026-04-03",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1775254673.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20021",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -89.0,
+   "category": "recreation",
+   "date": "2026-04-02",
+   "merchant": "Bridger Bowl",
+   "timestamp": 1775174652.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20023",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -128.4,
+   "category": "groceries",
+   "date": "2026-04-04",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1775346989.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20022",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -69.0,
+   "category": "entertainment",
+   "date": "2026-04-04",
+   "merchant": "Bridger Bowl",
+   "timestamp": 1775332617.0,
+   "transaction_id": "bd41e97250ac638f1d0b7452",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-04-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8827",
+   "timestamp": 1775404610.0,
+   "transaction_id": "03b0509a29d4f615cb25bd87",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3327",
+   "amount": 600.0,
+   "category": "savings",
+   "date": "2026-04-05",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1775405142.0,
+   "transaction_id": "28e48cfe0c1e27da87fa5d8a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8814",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-04-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1775418489.0,
+   "transaction_id": "534b3dfc1311e017775ac758",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -600.0,
+   "category": "savings",
+   "date": "2026-04-05",
+   "merchant": "First Interstate Bank - Transfer to Savings 3327",
+   "timestamp": 1775417280.0,
+   "transaction_id": "6e308094a5e58279e4e90d03",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-04-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8814",
+   "timestamp": 1775430473.0,
+   "transaction_id": "9779cf9c07f6f07688ef7958",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8827",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-04-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1775424834.0,
+   "transaction_id": "ad01d129bcf2ca6d91437224",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -45.0,
+   "category": "other",
+   "date": "2026-04-06",
+   "merchant": "Gallatin Valley Weavers Guild",
+   "timestamp": 1775486219.0,
+   "transaction_id": "8c40b7e219da53f6082ce1b4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -19.99,
+   "category": "subscription",
+   "date": "2026-04-07",
+   "merchant": "Spotify Family",
+   "timestamp": 1775600328.0,
+   "transaction_id": "781c7c8483decfe335667e75",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -158.9,
+   "category": "groceries",
+   "date": "2026-04-07",
+   "merchant": "Costco Wholesale, Catron Street",
+   "timestamp": 1775597462.0,
+   "transaction_id": "def1245d3870e0328bad8599",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -161.2,
+   "category": "utilities",
+   "date": "2026-04-08",
+   "merchant": "NorthWestern Energy",
+   "timestamp": 1775679307.0,
+   "transaction_id": "9a1db22e617d9ac054e2e51b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -46.8,
+   "category": "gas",
+   "date": "2026-04-08",
+   "merchant": "Exxon, North 7th Avenue",
+   "timestamp": 1775664630.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20025",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -38.6,
+   "category": "groceries",
+   "date": "2026-04-09",
+   "merchant": "Heebs Grocery, East Main Street",
+   "timestamp": 1775770867.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20026",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -46.2,
+   "category": "gas",
+   "date": "2026-04-10",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1775849326.0,
+   "transaction_id": "5e78d21c093ba6f47c10d8e2",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3341",
+   "amount": 150.0,
+   "category": "savings",
+   "date": "2026-04-10",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1775835856.0,
+   "transaction_id": "788e745c7f9da0baaaed39ff",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -96.0,
+   "category": "travel",
+   "date": "2026-04-09",
+   "merchant": "Comfort Inn Butte",
+   "timestamp": 1775784612.0,
+   "transaction_id": "7f1a04c8b3e29d650fa7b21c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -150.0,
+   "category": "savings",
+   "date": "2026-04-10",
+   "merchant": "First Interstate Bank - Transfer to Horse Fund 3341",
+   "timestamp": 1775864026.0,
+   "transaction_id": "a0c3654a2de7ef4399d400a9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -24.0,
+   "category": "dining",
+   "date": "2026-04-10",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1775839148.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20027",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -41.8,
+   "category": "gas",
+   "date": "2026-04-09",
+   "merchant": "Town Pump, Butte",
+   "timestamp": 1775785863.0,
+   "transaction_id": "c093e7b21fa845d60c8b3e17",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -96.0,
+   "category": "travel",
+   "date": "2026-04-11",
+   "merchant": "Finlen Hotel and Motor Inn, Butte",
+   "timestamp": 1775923669.0,
+   "transaction_id": "a61f4b70c8d2e953107bf40c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -16.8,
+   "category": "dining",
+   "date": "2026-04-10",
+   "merchant": "Pork Chop John's, Butte",
+   "timestamp": 1775868299.0,
+   "transaction_id": "f37b1a049c6e2d580b41a7c3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -23.4,
+   "category": "dining",
+   "date": "2026-04-12",
+   "merchant": "Pork Chop John's, Butte",
+   "timestamp": 1776010796.0,
+   "transaction_id": "1b8d06f4a72ce539b0d1ca82",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -46.8,
+   "category": "utilities",
+   "date": "2026-04-12",
+   "merchant": "Republic Services",
+   "timestamp": 1776005774.0,
+   "transaction_id": "8451665e0e24c805bcf680f4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -36.4,
+   "category": "housing",
+   "date": "2026-04-13",
+   "merchant": "Owenhouse Ace Hardware",
+   "timestamp": 1776094686.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20029",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.4,
+   "category": "coffee",
+   "date": "2026-04-14",
+   "merchant": "Wild Joe's Coffee Spot, East Main Street",
+   "timestamp": 1776170690.0,
+   "transaction_id": "c72e05d3b8a146f9ce30d817",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -120.0,
+   "category": "utilities",
+   "date": "2026-04-14",
+   "merchant": "Starlink",
+   "timestamp": 1776182211.0,
+   "transaction_id": "f9b11ab481b1ec4be11b57e1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -240.0,
+   "category": "utilities",
+   "date": "2026-04-15",
+   "merchant": "Sourdough Creek Ditch Users Association",
+   "timestamp": 1776256596.0,
+   "transaction_id": "4c1b8e0d97a3f562d0e4a71b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -31.6,
+   "category": "dining",
+   "date": "2026-04-15",
+   "merchant": "Sweet Chili, North 7th Avenue",
+   "timestamp": 1776287179.0,
+   "transaction_id": "7cdb3e8f832bc2d2cf0f10ce",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2704.18,
+   "category": "income",
+   "date": "2026-04-15",
+   "merchant": "Montana State University",
+   "timestamp": 1776265999.0,
+   "transaction_id": "add73cf3f328a19438c01294",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-04-15",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1776287194.0,
+   "transaction_id": "b8ea4c123656283750848f3b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -148.6,
+   "category": "insurance",
+   "date": "2026-04-16",
+   "merchant": "Mountain West Farm Bureau Mutual",
+   "timestamp": 1776353960.0,
+   "transaction_id": "5617e149bc44bd8048d85f04",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -17.99,
+   "category": "subscription",
+   "date": "2026-04-16",
+   "merchant": "Netflix",
+   "timestamp": 1776376523.0,
+   "transaction_id": "730ef38131e7b0293ed08201",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -140.18,
+   "category": "groceries",
+   "date": "2026-04-16",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1776379287.0,
+   "transaction_id": "7e2d9061b4a3c85f10de462b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -11.4,
+   "category": "coffee",
+   "date": "2026-04-16",
+   "merchant": "Rockford Coffee, North Grand Avenue",
+   "timestamp": 1776340033.0,
+   "transaction_id": "a8d3f10c7b26e594a03c8b71",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -38.6,
+   "category": "groceries",
+   "date": "2026-04-16",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1776386019.0,
+   "transaction_id": "7e2a5f9c31b0d84e6a2c1f70",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.5,
+   "category": "coffee",
+   "date": "2026-04-17",
+   "merchant": "Wild Joe's Coffee Spot, East Main Street",
+   "timestamp": 1776431804.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20030",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -20.5,
+   "category": "dining",
+   "date": "2026-04-17",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1776445517.0,
+   "transaction_id": "b8c4d1e2a7f9b3c6d8e20031",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -27.4,
+   "category": "shopping",
+   "date": "2026-04-17",
+   "merchant": "Owenhouse Ace Hardware, North 7th Avenue",
+   "timestamp": 1776435742.0,
+   "transaction_id": "b93d0a6f2e5c81704fa3d2c8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -14.99,
+   "category": "subscription",
+   "date": "2026-04-19",
+   "merchant": "Amazon Prime",
+   "timestamp": 1776612566.0,
+   "transaction_id": "a518df1cd4f92650f796561f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -164.2,
+   "category": "utilities",
+   "date": "2026-04-21",
+   "merchant": "Verizon Wireless",
+   "timestamp": 1776776573.0,
+   "transaction_id": "0b6a0d902bebbb69b0daf91f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -112.4,
+   "category": "groceries",
+   "date": "2026-04-21",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1776811002.0,
+   "transaction_id": "1405243c2ace09b92b349905",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -7.99,
+   "category": "subscription",
+   "date": "2026-04-22",
+   "merchant": "MHz Choice",
+   "timestamp": 1776900831.0,
+   "transaction_id": "2fbe4751905b3d6d2da43ea4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -19.5,
+   "category": "dining",
+   "date": "2026-04-23",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1776962709.0,
+   "transaction_id": "f71dbbc304bceb913a7ec26a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -186.4,
+   "category": "shopping",
+   "date": "2026-04-24",
+   "merchant": "Vavstuga",
+   "timestamp": 1777045427.0,
+   "transaction_id": "05c8f31da62b74e09fc12d38",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 17340.0,
+   "category": "transfer",
+   "date": "2026-04-24",
+   "merchant": "Mountain West Farm Bureau Mutual - Claim MT-2026-041882",
+   "timestamp": 1777041499.0,
+   "transaction_id": "32b426f8703f5690a8f1d2fa",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -14.2,
+   "category": "dining",
+   "date": "2026-04-24",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1777050401.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10002",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -74.85,
+   "category": "shopping",
+   "date": "2026-04-25",
+   "merchant": "Murdoch's Ranch & Home Supply",
+   "timestamp": 1777142765.0,
+   "transaction_id": "a2b3c4d5e6f7b0c1d2e3f01c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -104.2,
+   "category": "groceries",
+   "date": "2026-04-25",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1777151804.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10003",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -29.8,
+   "category": "dining",
+   "date": "2026-04-25",
+   "merchant": "Nova Cafe, East Main Street",
+   "timestamp": 1777137187.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10004",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -18.4,
+   "category": "shopping",
+   "date": "2026-04-26",
+   "merchant": "Owenhouse Ace Hardware",
+   "timestamp": 1777217316.0,
+   "transaction_id": "c81f0a3e7b25d94c60e1a8b3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -50.6,
+   "category": "groceries",
+   "date": "2026-04-26",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1777248936.0,
+   "transaction_id": "d99848c293d7acfb57b1331f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.0,
+   "category": "coffee",
+   "date": "2026-04-29",
+   "merchant": "Rockford Coffee, North Grand Avenue",
+   "timestamp": 1777469974.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10005",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -8.75,
+   "category": "coffee",
+   "date": "2026-04-30",
+   "merchant": "Wild Joe's Coffee Spot, East Main Street",
+   "timestamp": 1777546038.0,
+   "transaction_id": "3f7c091ea48b25d6c0f39a12",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -111.62,
+   "category": "groceries",
+   "date": "2026-04-30",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1777585424.0,
+   "transaction_id": "c85d3f01792ab6e40d15c827",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -26.2,
+   "category": "dining",
+   "date": "2026-04-30",
+   "merchant": "Nova Cafe, East Main Street",
+   "timestamp": 1777572267.0,
+   "transaction_id": "d48da823321df047219d9e5a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2704.18,
+   "category": "income",
+   "date": "2026-04-30",
+   "merchant": "Montana State University",
+   "timestamp": 1777572977.0,
+   "transaction_id": "f88f7101fd7f8737491601a9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-05-01",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1777675189.0,
+   "transaction_id": "01b59352827486fee7a5c253",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2281.79,
+   "category": "housing",
+   "date": "2026-05-01",
+   "merchant": "First Interstate Bank Mortgage 6613",
+   "timestamp": 1777638993.0,
+   "transaction_id": "896d3b6633131ed6bc618a60",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.0,
+   "category": "coffee",
+   "date": "2026-05-01",
+   "merchant": "Wild Joe's Coffee Spot, East Main Street",
+   "timestamp": 1777633712.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10006",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -22.0,
+   "category": "dining",
+   "date": "2026-05-01",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1777653030.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10007",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -525.0,
+   "category": "other",
+   "date": "2026-05-01",
+   "merchant": "Bridger Creek Stables",
+   "timestamp": 1777663592.0,
+   "transaction_id": "d3e4f5a6b7c8293041526c73",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 310.0,
+   "category": "income",
+   "date": "2026-05-02",
+   "merchant": "Gallatin Valley Weavers Guild spring sale",
+   "timestamp": 1777748425.0,
+   "transaction_id": "3a7e51cd06b9f24810c7e3ba",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -40.0,
+   "category": "other",
+   "date": "2026-05-02",
+   "merchant": "Gallatin Valley Weavers Guild, Emerson sale table fee",
+   "timestamp": 1777724738.0,
+   "transaction_id": "d509a2f873bc10e64a7b3d85",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2.99,
+   "category": "subscription",
+   "date": "2026-05-03",
+   "merchant": "Apple iCloud 200GB",
+   "timestamp": 1777844028.0,
+   "transaction_id": "5fe4249b6066ec883afe13f2",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -612.4,
+   "category": "travel",
+   "date": "2026-05-02",
+   "merchant": "Delta Air Lines",
+   "timestamp": 1777772491.0,
+   "transaction_id": "a71c0e4b9d3f2685c01b7ea4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -142.0,
+   "category": "other",
+   "date": "2026-05-04",
+   "merchant": "AAA Membership",
+   "timestamp": 1777905128.0,
+   "transaction_id": "cf38d09ed0240f2d166128dc",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-05-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8814",
+   "timestamp": 1778003743.0,
+   "transaction_id": "1fc946af2af675c6537630f3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8814",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-05-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1778023187.0,
+   "transaction_id": "591b1213d2f64602e1ae55b8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -165.0,
+   "category": "healthcare",
+   "date": "2026-05-05",
+   "merchant": "Bozeman Eye Care",
+   "timestamp": 1778004029.0,
+   "transaction_id": "6b0d4a91c7e3528fa04d1b76",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -600.0,
+   "category": "savings",
+   "date": "2026-05-05",
+   "merchant": "First Interstate Bank - Transfer to Savings 3327",
+   "timestamp": 1778003203.0,
+   "transaction_id": "6b7b8f7a6a94ed2a0484f29f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3327",
+   "amount": 600.0,
+   "category": "savings",
+   "date": "2026-05-05",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1777994061.0,
+   "transaction_id": "7c275a96511eca61e46e1d89",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8827",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-05-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1778005555.0,
+   "transaction_id": "b101c4683f6efd1a840e4710",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -44.9,
+   "category": "gas",
+   "date": "2026-05-06",
+   "merchant": "Costco Gas, Catron Street",
+   "timestamp": 1778090655.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10008",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -185.0,
+   "category": "other",
+   "date": "2026-05-06",
+   "merchant": "Ambrose Tallchief, Farrier",
+   "timestamp": 1778104813.0,
+   "transaction_id": "c8d9e0f1a2b374859ab0c1d8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -27.65,
+   "category": "shopping",
+   "date": "2026-05-07",
+   "merchant": "Amazon",
+   "timestamp": 1778175908.0,
+   "transaction_id": "1ac720b93ed458f6071b2c38",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -19.99,
+   "category": "subscription",
+   "date": "2026-05-07",
+   "merchant": "Spotify Family",
+   "timestamp": 1778165888.0,
+   "transaction_id": "ac6c324eeecfbcc3290bd05d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -41.8,
+   "category": "groceries",
+   "date": "2026-05-07",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1778197888.0,
+   "transaction_id": "d3407ecfbd91ffc129e588dd",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -138.6,
+   "category": "utilities",
+   "date": "2026-05-08",
+   "merchant": "NorthWestern Energy",
+   "timestamp": 1778258230.0,
+   "transaction_id": "728059955ba1d96020aea7c5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -18.0,
+   "category": "dining",
+   "date": "2026-05-08",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1778275731.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10010",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -117.6,
+   "category": "groceries",
+   "date": "2026-05-09",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1778369756.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10011",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -27.8,
+   "category": "housing",
+   "date": "2026-05-09",
+   "merchant": "Owenhouse Ace Hardware",
+   "timestamp": 1778355519.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10012",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3341",
+   "amount": 150.0,
+   "category": "savings",
+   "date": "2026-05-10",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1778445001.0,
+   "transaction_id": "1ae291782ee8196c6cd03ae4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -150.0,
+   "category": "savings",
+   "date": "2026-05-10",
+   "merchant": "First Interstate Bank - Transfer to Horse Fund 3341",
+   "timestamp": 1778444806.0,
+   "transaction_id": "47c064359bd37e437001132c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -59.4,
+   "category": "gas",
+   "date": "2026-05-09",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1778373325.0,
+   "transaction_id": "b34f8ee5645932b9444bdef6",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -12.4,
+   "category": "dining",
+   "date": "2026-05-11",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1778545805.0,
+   "transaction_id": "008dfcd4b8791a56a6ba0948",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -46.8,
+   "category": "utilities",
+   "date": "2026-05-12",
+   "merchant": "Republic Services",
+   "timestamp": 1778606551.0,
+   "transaction_id": "5bff3f5711f28bc46280ae59",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -13920.0,
+   "category": "housing",
+   "date": "2026-05-12",
+   "merchant": "Tolliver & Sons Metal Roofing",
+   "timestamp": 1778589666.0,
+   "transaction_id": "af0c00fa66ca13efc3acc23a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -74.86,
+   "category": "groceries",
+   "date": "2026-05-14",
+   "merchant": "Costco Wholesale, Catron Street",
+   "timestamp": 1778801257.0,
+   "transaction_id": "61ba0e97c34d825f70ea1cb3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -212.4,
+   "category": "groceries",
+   "date": "2026-05-14",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1778803045.0,
+   "transaction_id": "8f13d5602ea94b7c1f30d86a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -120.0,
+   "category": "utilities",
+   "date": "2026-05-14",
+   "merchant": "Starlink",
+   "timestamp": 1778770014.0,
+   "transaction_id": "94d7aab9ab2cd457e06e4704",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -186.4,
+   "category": "groceries",
+   "date": "2026-05-15",
+   "merchant": "Costco Wholesale, Catron Street",
+   "timestamp": 1778881737.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10014",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -21.5,
+   "category": "dining",
+   "date": "2026-05-15",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1778868888.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10015",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -31.28,
+   "category": "groceries",
+   "date": "2026-05-15",
+   "merchant": "Bozeman Community Food Co-op, North Rouse Avenue",
+   "timestamp": 1778886599.0,
+   "transaction_id": "d40e6c81b7a5390f2ce4b608",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2704.18,
+   "category": "income",
+   "date": "2026-05-15",
+   "merchant": "Montana State University",
+   "timestamp": 1778885396.0,
+   "transaction_id": "d6cf62f7705512b2389b49cd",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-05-15",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1778859219.0,
+   "transaction_id": "f7fd3c92afc8a60fd31c8121",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -148.6,
+   "category": "insurance",
+   "date": "2026-05-16",
+   "merchant": "Mountain West Farm Bureau Mutual",
+   "timestamp": 1778970865.0,
+   "transaction_id": "3a72dac69c4ace6e62c6fa46",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -17.99,
+   "category": "subscription",
+   "date": "2026-05-16",
+   "merchant": "Netflix",
+   "timestamp": 1778942897.0,
+   "transaction_id": "fe084419cc93e1640709f481",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -9.4,
+   "category": "coffee",
+   "date": "2026-05-18",
+   "merchant": "Twenty Below Coffee Co, Fargo",
+   "timestamp": 1779111049.0,
+   "transaction_id": "0e6d95b271ca38f4d017b6e5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -387.6,
+   "category": "travel",
+   "date": "2026-05-18",
+   "merchant": "Kelly Inn, 19th Avenue North, Fargo",
+   "timestamp": 1779137767.0,
+   "transaction_id": "5f28d31ba60c94e7d215a08f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -56.0,
+   "category": "travel",
+   "date": "2026-05-18",
+   "merchant": "Hertz, Hector International Airport",
+   "timestamp": 1779113719.0,
+   "transaction_id": "c3901fa87b2e46d50a3c81b7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -14.99,
+   "category": "subscription",
+   "date": "2026-05-19",
+   "merchant": "Amazon Prime",
+   "timestamp": 1779206400.0,
+   "transaction_id": "fa4714afb92c9f5b0d13925a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -36.0,
+   "category": "gas",
+   "date": "2026-05-19",
+   "merchant": "Sunmart Fuel, Fargo",
+   "timestamp": 1779223647.0,
+   "transaction_id": "16ac5d38e0b72f94a3d105c8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -34.2,
+   "category": "dining",
+   "date": "2026-05-19",
+   "merchant": "Blackbird Woodfire, Fargo",
+   "timestamp": 1779210310.0,
+   "transaction_id": "b284f7013ce6d9a5028f4b17",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -49.7,
+   "category": "gas",
+   "date": "2026-05-20",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1779283573.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10017",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -164.2,
+   "category": "utilities",
+   "date": "2026-05-21",
+   "merchant": "Verizon Wireless",
+   "timestamp": 1779381752.0,
+   "transaction_id": "035aa6cab2c7adb90a4b43f5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -118.6,
+   "category": "groceries",
+   "date": "2026-05-21",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1779400968.0,
+   "transaction_id": "b0dd4d583fcf5c81de16b606",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -19.0,
+   "category": "dining",
+   "date": "2026-05-20",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1779325061.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10019",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.5,
+   "category": "coffee",
+   "date": "2026-05-22",
+   "merchant": "Rockford Coffee, North Grand Avenue",
+   "timestamp": 1779457742.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10018",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -7.99,
+   "category": "subscription",
+   "date": "2026-05-22",
+   "merchant": "MHz Choice",
+   "timestamp": 1779488228.0,
+   "transaction_id": "c9c9fb93ee0a623d37f1e435",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -88.9,
+   "category": "groceries",
+   "date": "2026-05-23",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1779577714.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10020",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -12.2,
+   "category": "dining",
+   "date": "2026-05-26",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1779826322.0,
+   "transaction_id": "a241cb68eabd4c780b077b10",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -4.0,
+   "category": "coffee",
+   "date": "2026-05-27",
+   "merchant": "Rockford Coffee, North Grand Avenue",
+   "timestamp": 1779880642.0,
+   "transaction_id": "37ce531bb551fe7a563b6654",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -104.56,
+   "category": "groceries",
+   "date": "2026-05-28",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1780003492.0,
+   "transaction_id": "36a1c0e8b47d925f0e63a1db",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2704.18,
+   "category": "income",
+   "date": "2026-05-29",
+   "merchant": "Montana State University",
+   "timestamp": 1780075171.0,
+   "transaction_id": "89c99340e59f71a000f2c5c8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -34.2,
+   "category": "dining",
+   "date": "2026-05-29",
+   "merchant": "Sweet Chili, North 7th Avenue",
+   "timestamp": 1780087881.0,
+   "transaction_id": "c47a9d130e6b25f8a3d17b04",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -33.2,
+   "category": "dining",
+   "date": "2026-05-30",
+   "merchant": "Nova Cafe, East Main Street",
+   "timestamp": 1780166028.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10022",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -44.2,
+   "category": "groceries",
+   "date": "2026-05-31",
+   "merchant": "Heebs Grocery, East Main Street",
+   "timestamp": 1780262915.0,
+   "transaction_id": "464868818174b6a494ff3ae9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -525.0,
+   "category": "other",
+   "date": "2026-06-01",
+   "merchant": "Bridger Creek Stables",
+   "timestamp": 1780329600.0,
+   "transaction_id": "e4f5a6b7c8d9304152637d84",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2281.79,
+   "category": "housing",
+   "date": "2026-06-01",
+   "merchant": "First Interstate Bank Mortgage 6613",
+   "timestamp": 1780327273.0,
+   "transaction_id": "6ea0d564007be6a3ca362266",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-06-01",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1780316420.0,
+   "transaction_id": "c33a8b5fc5dd2413d55aa79d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -6.5,
+   "category": "coffee",
+   "date": "2026-06-01",
+   "merchant": "Treeline Coffee Roasters, North Wallace Avenue",
+   "timestamp": 1780314761.0,
+   "transaction_id": "d21a68f0c95b3e47a80d2c16",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -65.0,
+   "category": "shopping",
+   "date": "2026-06-02",
+   "merchant": "Costco Wholesale Membership, Catron Street",
+   "timestamp": 1780442738.0,
+   "transaction_id": "0e5d7ba14283fc960b1a4d75",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2.99,
+   "category": "subscription",
+   "date": "2026-06-03",
+   "merchant": "Apple iCloud 200GB",
+   "timestamp": 1780507656.0,
+   "transaction_id": "5e480f3ed0e248cb45db3e05",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-06-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8814",
+   "timestamp": 1780675200.0,
+   "transaction_id": "1db5835f6009296f4bb032f7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -600.0,
+   "category": "savings",
+   "date": "2026-06-05",
+   "merchant": "First Interstate Bank - Transfer to Savings 3327",
+   "timestamp": 1780675200.0,
+   "transaction_id": "8b9d354cef3ab035eeb3a8cf",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -14.6,
+   "category": "groceries",
+   "date": "2026-06-04",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1780614054.0,
+   "transaction_id": "b19c48e7a05d3f26017ab2c4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -47.2,
+   "category": "gas",
+   "date": "2026-06-03",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1780535286.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10024",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -20.0,
+   "category": "dining",
+   "date": "2026-06-03",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1780533906.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10025",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8827",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-06-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1780661235.0,
+   "transaction_id": "2779142264c5b17fd216c3cd",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 1184.2,
+   "category": "income",
+   "date": "2026-06-05",
+   "merchant": "North Dakota State University — candidate travel reimbursement",
+   "timestamp": 1780685224.0,
+   "transaction_id": "2d6df54ff6673a03bd33db4b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3327",
+   "amount": 600.0,
+   "category": "savings",
+   "date": "2026-06-05",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1780676356.0,
+   "transaction_id": "a6c5a6a2187f33086bf57a2e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8814",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-06-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1780681601.0,
+   "transaction_id": "e71ed7fb77f02576a833e5b1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-06-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8827",
+   "timestamp": 1780683526.0,
+   "transaction_id": "ec3d1c33f655eb29da4210f4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -52.4,
+   "category": "shopping",
+   "date": "2026-06-06",
+   "merchant": "Murdoch's Ranch & Home Supply",
+   "timestamp": 1780772139.0,
+   "transaction_id": "b3c4d5e6f7a8c1d2e3f0122d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -132.1,
+   "category": "groceries",
+   "date": "2026-06-06",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1780787434.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10026",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -19.99,
+   "category": "subscription",
+   "date": "2026-06-07",
+   "merchant": "Spotify Family",
+   "timestamp": 1780838871.0,
+   "transaction_id": "154970db1c29307f7a36ff59",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -118.4,
+   "category": "utilities",
+   "date": "2026-06-08",
+   "merchant": "NorthWestern Energy",
+   "timestamp": 1780944773.0,
+   "transaction_id": "64dce3a0a01ae557e326d601",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.0,
+   "category": "coffee",
+   "date": "2026-06-08",
+   "merchant": "Treeline Coffee Roasters, North Wallace Avenue",
+   "timestamp": 1780916198.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10027",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -8.2,
+   "category": "health",
+   "date": "2026-06-09",
+   "merchant": "Costco Pharmacy, 2505 Catron Street",
+   "timestamp": 1781017740.0,
+   "transaction_id": "2ee0a7dd6ea6cc27b4e4b294",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -150.0,
+   "category": "savings",
+   "date": "2026-06-10",
+   "merchant": "First Interstate Bank - Transfer to Horse Fund 3341",
+   "timestamp": 1781107200.0,
+   "transaction_id": "4d93a3f93ee0ca6921bd6ea5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -164.3,
+   "category": "groceries",
+   "date": "2026-06-09",
+   "merchant": "Costco Wholesale, Catron Street",
+   "timestamp": 1781048003.0,
+   "transaction_id": "4fa615c8253ef350f0634939",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -11.4,
+   "category": "health",
+   "date": "2026-06-09",
+   "merchant": "Costco Pharmacy, 2505 Catron Street",
+   "timestamp": 1781018800.0,
+   "transaction_id": "510cc3ecfbf7e14296c424ea",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -24.6,
+   "category": "shopping",
+   "date": "2026-06-09",
+   "merchant": "The River's Edge, North 7th Avenue",
+   "timestamp": 1781038250.0,
+   "transaction_id": "9a4f1c7b8d2e36059a4f1c7b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3341",
+   "amount": 150.0,
+   "category": "savings",
+   "date": "2026-06-10",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1781121455.0,
+   "transaction_id": "8c33773529301c9218ea682f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -89.05,
+   "category": "groceries",
+   "date": "2026-06-11",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1781200800.0,
+   "transaction_id": "e4720db9153ca86f2b09d47e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -48.9,
+   "category": "gas",
+   "date": "2026-06-11",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1781180653.0,
+   "transaction_id": "52eca3deb208a299d10b9b58",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -23.5,
+   "category": "dining",
+   "date": "2026-06-12",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1781289677.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10029",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -46.8,
+   "category": "utilities",
+   "date": "2026-06-12",
+   "merchant": "Republic Services",
+   "timestamp": 1781280509.0,
+   "transaction_id": "eee59538900158d4a8d1c222",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -42.3,
+   "category": "groceries",
+   "date": "2026-06-13",
+   "merchant": "Heebs Grocery, East Main Street",
+   "timestamp": 1781389212.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10030",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -19.4,
+   "category": "housing",
+   "date": "2026-06-13",
+   "merchant": "Owenhouse Ace Hardware",
+   "timestamp": 1781394820.0,
+   "transaction_id": "c1d7e3a94f2b806ce5a10031",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.5,
+   "category": "coffee",
+   "date": "2026-06-15",
+   "merchant": "Treeline Coffee Roasters, North Wallace Avenue",
+   "timestamp": 1781521410.0,
+   "transaction_id": "080e47a05469d1bd051774f3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2704.18,
+   "category": "income",
+   "date": "2026-06-15",
+   "merchant": "Montana State University",
+   "timestamp": 1781528658.0,
+   "transaction_id": "25aff067d62423f787981d78",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-06-15",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1781546127.0,
+   "transaction_id": "b4829a68faf591a53f201a47",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -148.6,
+   "category": "insurance",
+   "date": "2026-06-16",
+   "merchant": "Mountain West Farm Bureau Mutual",
+   "timestamp": 1781613433.0,
+   "transaction_id": "524c39260d044fbd3ce4ed4c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -17.99,
+   "category": "subscription",
+   "date": "2026-06-16",
+   "merchant": "Netflix",
+   "timestamp": 1781637129.0,
+   "transaction_id": "54ef598183cd8b29a4140495",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -52.31,
+   "category": "shopping",
+   "date": "2026-06-16",
+   "merchant": "Amazon",
+   "timestamp": 1781640507.0,
+   "transaction_id": "90b3ce4a17d2568f071ca3b2",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -121.4,
+   "category": "groceries",
+   "date": "2026-06-16",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1781654620.0,
+   "transaction_id": "61e50aeffe622774f182fb71",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -17.5,
+   "category": "dining",
+   "date": "2026-06-17",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1781743690.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20002",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -14.99,
+   "category": "subscription",
+   "date": "2026-06-19",
+   "merchant": "Amazon Prime",
+   "timestamp": 1781888097.0,
+   "transaction_id": "2d51d7aae792dd0f95d86db9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -50.4,
+   "category": "gas",
+   "date": "2026-06-19",
+   "merchant": "Exxon, North 7th Avenue",
+   "timestamp": 1781889526.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20001",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -30.6,
+   "category": "dining",
+   "date": "2026-06-20",
+   "merchant": "Nova Cafe, East Main Street",
+   "timestamp": 1781983886.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20003",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -164.2,
+   "category": "utilities",
+   "date": "2026-06-21",
+   "merchant": "Verizon Wireless",
+   "timestamp": 1782071616.0,
+   "transaction_id": "1197d77c40cbff6950beb8df",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -68.2,
+   "category": "groceries",
+   "date": "2026-06-21",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1782082989.0,
+   "transaction_id": "c5449a3f395d27278d7972d8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -138.4,
+   "category": "dining",
+   "date": "2026-06-22",
+   "merchant": "Blackbird Kitchen, East Main Street",
+   "timestamp": 1782169861.0,
+   "transaction_id": "012a6f9fa3f595c937bf2b54",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -7.99,
+   "category": "subscription",
+   "date": "2026-06-22",
+   "merchant": "MHz Choice",
+   "timestamp": 1782162197.0,
+   "transaction_id": "d006bfc071dcda3e37fcec6b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.25,
+   "category": "coffee",
+   "date": "2026-06-22",
+   "merchant": "Rockford Coffee, North Grand Avenue",
+   "timestamp": 1782130787.0,
+   "transaction_id": "f7f90835bd3406c33e570f26",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -285.0,
+   "category": "health",
+   "date": "2026-06-23",
+   "merchant": "Gallatin Orthopedic and Sports Medicine",
+   "timestamp": 1782223014.0,
+   "transaction_id": "7a6d2b508e13c94f2b70da16",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.5,
+   "category": "coffee",
+   "date": "2026-06-23",
+   "merchant": "Treeline Coffee Roasters, North Wallace Avenue",
+   "timestamp": 1782221747.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20004",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": 12.99,
+   "category": "shopping",
+   "date": "2026-06-24",
+   "merchant": "Amazon",
+   "timestamp": 1782323585.0,
+   "transaction_id": "58ed013c9ba7246f071b3ac2",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -107.53,
+   "category": "groceries",
+   "date": "2026-06-25",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1782410400.0,
+   "transaction_id": "9d15b6023ef7c48a105be93c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -185.0,
+   "category": "other",
+   "date": "2026-06-24",
+   "merchant": "Ambrose Tallchief, Farrier",
+   "timestamp": 1782336366.0,
+   "transaction_id": "d9e0f1a2b3c4859ab0c1d2e9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -21.0,
+   "category": "dining",
+   "date": "2026-06-24",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1782346361.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20005",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -9.2,
+   "category": "dining",
+   "date": "2026-06-25",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1782434348.0,
+   "transaction_id": "d0a5c40137fe302696c6c92e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -74.6,
+   "category": "groceries",
+   "date": "2026-06-25",
+   "merchant": "Bozeman Community Food Co-op, North Rouse Avenue",
+   "timestamp": 1782432649.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20006",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -43.6,
+   "category": "gas",
+   "date": "2026-06-27",
+   "merchant": "Costco Gas, Catron Street",
+   "timestamp": 1782602621.0,
+   "transaction_id": "45373e04937c9b63eed0d25e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2704.18,
+   "category": "income",
+   "date": "2026-06-30",
+   "merchant": "Montana State University",
+   "timestamp": 1782826510.0,
+   "transaction_id": "5f07de154ebe2ded8a5bbdaf",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -94.2,
+   "category": "shopping",
+   "date": "2026-06-30",
+   "merchant": "The Woolery",
+   "timestamp": 1782834763.0,
+   "transaction_id": "f3092ae671bc85d40e2f79b3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -45.0,
+   "category": "health",
+   "date": "2026-07-02",
+   "merchant": "Alpenglow Physical Therapy",
+   "timestamp": 1783032300.0,
+   "transaction_id": "16b7d4e830a52fc907d6e2b8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-07-01",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1782934295.0,
+   "transaction_id": "bdd03085320626d78faeb2be",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -14.6,
+   "category": "groceries",
+   "date": "2026-06-30",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1782864739.0,
+   "transaction_id": "bf9ff409a7dd634ce8850dbe",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.25,
+   "category": "coffee",
+   "date": "2026-07-01",
+   "merchant": "Wild Joe's Coffee Spot, East Main Street",
+   "timestamp": 1782907088.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20008",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2281.79,
+   "category": "housing",
+   "date": "2026-07-01",
+   "merchant": "First Interstate Bank Mortgage 6613",
+   "timestamp": 1782917655.0,
+   "transaction_id": "d6c2b1c656cdff789cd623ab",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -525.0,
+   "category": "other",
+   "date": "2026-07-01",
+   "merchant": "Bridger Creek Stables",
+   "timestamp": 1782925587.0,
+   "transaction_id": "f5a6b7c8d9e0415263748e95",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -19.5,
+   "category": "dining",
+   "date": "2026-07-01",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1782950724.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20009",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2.99,
+   "category": "subscription",
+   "date": "2026-07-03",
+   "merchant": "Apple iCloud 200GB",
+   "timestamp": 1783084123.0,
+   "transaction_id": "45981734cf243a195ed24671",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -108.7,
+   "category": "groceries",
+   "date": "2026-07-04",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1783205196.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20010",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-07-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8827",
+   "timestamp": 1783256738.0,
+   "transaction_id": "37b5236b1d1a79aaad583edf",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -178.4,
+   "category": "groceries",
+   "date": "2026-07-05",
+   "merchant": "Costco Wholesale, Catron Street",
+   "timestamp": 1783294017.0,
+   "transaction_id": "9dbb8119878b2562e39dad86",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-07-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8814",
+   "timestamp": 1783281940.0,
+   "transaction_id": "b7b115a836fefb2d9a19b3fc",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -31.2,
+   "category": "housing",
+   "date": "2026-07-05",
+   "merchant": "Owenhouse Ace Hardware",
+   "timestamp": 1783268196.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20011",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3327",
+   "amount": 600.0,
+   "category": "savings",
+   "date": "2026-07-05",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1783259517.0,
+   "transaction_id": "db826b8e6bc94da041567452",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8814",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-07-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1783293033.0,
+   "transaction_id": "e65c82c82e4c7823983828af",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -600.0,
+   "category": "savings",
+   "date": "2026-07-05",
+   "merchant": "First Interstate Bank - Transfer to Savings 3327",
+   "timestamp": 1783273786.0,
+   "transaction_id": "ec5518543a67a4da3922d8d4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8827",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-07-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1783282363.0,
+   "transaction_id": "fd5d896a0fb1afa663163cc7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -14.2,
+   "category": "coffee",
+   "date": "2026-07-06",
+   "merchant": "Wild Joe's Coffee Spot, East Main Street",
+   "timestamp": 1783345358.0,
+   "transaction_id": "5b90e3c1a7d48f26b03e1a58",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -43.6,
+   "category": "gas",
+   "date": "2026-07-06",
+   "merchant": "Costco Gas, Catron Street",
+   "timestamp": 1783363610.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20012",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -45.0,
+   "category": "health",
+   "date": "2026-07-07",
+   "merchant": "Alpenglow Physical Therapy",
+   "timestamp": 1783428265.0,
+   "transaction_id": "8c50123fab97e6d451ac30f2",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -19.99,
+   "category": "subscription",
+   "date": "2026-07-07",
+   "merchant": "Spotify Family",
+   "timestamp": 1783464798.0,
+   "transaction_id": "b933bcb37a4106ba072eaced",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -74.2,
+   "category": "groceries",
+   "date": "2026-07-09",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1783638572.0,
+   "transaction_id": "36c829759bb49d2bb6bb89c0",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3341",
+   "amount": 150.0,
+   "category": "savings",
+   "date": "2026-07-10",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1783699200.0,
+   "transaction_id": "9f9e2c45e4acdf50d7201d10",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -22.0,
+   "category": "dining",
+   "date": "2026-07-08",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1783557933.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20015",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.0,
+   "category": "coffee",
+   "date": "2026-07-10",
+   "merchant": "Treeline Coffee Roasters, North Wallace Avenue",
+   "timestamp": 1783689039.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20014",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -150.0,
+   "category": "savings",
+   "date": "2026-07-10",
+   "merchant": "First Interstate Bank - Transfer to Horse Fund 3341",
+   "timestamp": 1783715788.0,
+   "transaction_id": "f34e3554e199c1d4c4811d5e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -91.4,
+   "category": "groceries",
+   "date": "2026-07-11",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1783809589.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20016",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -46.8,
+   "category": "utilities",
+   "date": "2026-07-12",
+   "merchant": "Republic Services",
+   "timestamp": 1783886689.0,
+   "transaction_id": "9afd5770ed1e4cbbec6870b3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -26.8,
+   "category": "dining",
+   "date": "2026-07-13",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1783979579.0,
+   "transaction_id": "5d92c14b8f0e63a7d21c8be0",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -45.0,
+   "category": "health",
+   "date": "2026-07-14",
+   "merchant": "Alpenglow Physical Therapy",
+   "timestamp": 1784032252.0,
+   "transaction_id": "b23c8de5107f64a92e5c807b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -120.0,
+   "category": "utilities",
+   "date": "2026-07-14",
+   "merchant": "Starlink",
+   "timestamp": 1784034844.0,
+   "transaction_id": "bd95b17e18e4e9d25a9ff96e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -11.4,
+   "category": "shopping",
+   "date": "2026-07-14",
+   "merchant": "Bob Ward and Sons, North 19th Avenue",
+   "timestamp": 1784059853.0,
+   "transaction_id": "c1b7e4a9d8f23506c1b7e4a9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-07-15",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1784117490.0,
+   "transaction_id": "6f1489eae1e2610a30cfebad",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2891.62,
+   "category": "income",
+   "date": "2026-07-15",
+   "merchant": "Montana State University",
+   "timestamp": 1784155783.0,
+   "transaction_id": "cb2f10fbe281df6b82400d88",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -17.99,
+   "category": "subscription",
+   "date": "2026-07-16",
+   "merchant": "Netflix",
+   "timestamp": 1784229404.0,
+   "transaction_id": "7b5cd10e8150b3b1fbcbcdaa",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -45.0,
+   "category": "health",
+   "date": "2026-07-16",
+   "merchant": "Alpenglow Physical Therapy",
+   "timestamp": 1784240464.0,
+   "transaction_id": "d70185ac3b6e29f4c81d5a06",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -148.6,
+   "category": "insurance",
+   "date": "2026-07-16",
+   "merchant": "Mountain West Farm Bureau Mutual",
+   "timestamp": 1784243576.0,
+   "transaction_id": "eae0f8144ea37b19336cf889",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -52.8,
+   "category": "gas",
+   "date": "2026-07-17",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1784315063.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20018",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -18.5,
+   "category": "dining",
+   "date": "2026-07-17",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1784328826.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20019",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -32.4,
+   "category": "dining",
+   "date": "2026-07-18",
+   "merchant": "Nova Cafe, East Main Street",
+   "timestamp": 1784411890.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20020",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -62.8,
+   "category": "gas",
+   "date": "2026-07-18",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1784424119.0,
+   "transaction_id": "25e9b70c4a1d68f390b5c2e4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -14.99,
+   "category": "subscription",
+   "date": "2026-07-19",
+   "merchant": "Amazon Prime",
+   "timestamp": 1784464142.0,
+   "transaction_id": "8a3f645a59cb017a5e347f4d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -41.3,
+   "category": "groceries",
+   "date": "2026-07-20",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1784585245.0,
+   "transaction_id": "1c967bec1aeceb160a4418d3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -71.4,
+   "category": "gas",
+   "date": "2026-07-19",
+   "merchant": "Town Pump, Reserve Street Missoula",
+   "timestamp": 1784507630.0,
+   "transaction_id": "8a406dc1b95f2307e64d1b70",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -118.0,
+   "category": "travel",
+   "date": "2026-07-20",
+   "merchant": "Wingate by Wyndham, Missoula",
+   "timestamp": 1784557395.0,
+   "transaction_id": "e07a5b138d46c2903f1b7ae6",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -31.85,
+   "category": "dining",
+   "date": "2026-07-20",
+   "merchant": "Wheat Montana Bakery and Deli, Three Forks",
+   "timestamp": 1784586103.0,
+   "transaction_id": "f3a90c21b85d47e6103c9ab2",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -164.2,
+   "category": "utilities",
+   "date": "2026-07-21",
+   "merchant": "Verizon Wireless",
+   "timestamp": 1784662772.0,
+   "transaction_id": "0e60a7ac856618d55f445d02",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -46.2,
+   "category": "dining",
+   "date": "2026-07-21",
+   "merchant": "The Notorious P.I.G. BBQ, Missoula",
+   "timestamp": 1784667632.0,
+   "transaction_id": "27de6b1408af35c9d201e7f6",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -45.0,
+   "category": "health",
+   "date": "2026-07-21",
+   "merchant": "Alpenglow Physical Therapy",
+   "timestamp": 1784642045.0,
+   "transaction_id": "5a4e13c7280bd96f0a71e3c9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -58.2,
+   "category": "gas",
+   "date": "2026-07-22",
+   "merchant": "Exxon, Harrison Avenue Butte",
+   "timestamp": 1784740165.0,
+   "transaction_id": "307be5a2f0946d185c73e0b9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3341",
+   "amount": -6000.0,
+   "category": "transfer",
+   "date": "2026-07-22",
+   "merchant": "First Interstate Bank - Transfer to Checking 3318",
+   "timestamp": 1784732155.0,
+   "transaction_id": "6019d2452392fee3b8bad1e8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -24.75,
+   "category": "dining",
+   "date": "2026-07-22",
+   "merchant": "Pork Chop John's, Butte",
+   "timestamp": 1784760376.0,
+   "transaction_id": "8c04b7e5219daf6301cb54d8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -124.0,
+   "category": "travel",
+   "date": "2026-07-22",
+   "merchant": "Best Western University Inn, Moscow",
+   "timestamp": 1784738521.0,
+   "transaction_id": "9d520af6c3187be40725d9c1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -91.98,
+   "category": "groceries",
+   "date": "2026-07-23",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1784829600.0,
+   "transaction_id": "b60e21d59a3c07f4e81b526d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 6000.0,
+   "category": "transfer",
+   "date": "2026-07-22",
+   "merchant": "First Interstate Bank - Transfer from Savings 3341",
+   "timestamp": 1784743036.0,
+   "transaction_id": "bf92cd2a18e80d940b6a0a44",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -7.99,
+   "category": "subscription",
+   "date": "2026-07-22",
+   "merchant": "MHz Choice",
+   "timestamp": 1784760096.0,
+   "transaction_id": "f0f77bf0f83e2a40821f2033",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -38.6,
+   "category": "dining",
+   "date": "2026-07-23",
+   "merchant": "One World Cafe, Moscow",
+   "timestamp": 1784822889.0,
+   "transaction_id": "5b1fa38c60d2e947183ac0b5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3327",
+   "amount": -11000.0,
+   "category": "transfer",
+   "date": "2026-07-23",
+   "merchant": "First Interstate Bank - Transfer to Checking 3318",
+   "timestamp": 1784821746.0,
+   "transaction_id": "7b2db76d3e6f544664764d25",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -112.0,
+   "category": "travel",
+   "date": "2026-07-23",
+   "merchant": "Holiday Inn Express, Missoula",
+   "timestamp": 1784818712.0,
+   "transaction_id": "a8e174b0526f9d3ce14a80b7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -66.9,
+   "category": "gas",
+   "date": "2026-07-23",
+   "merchant": "Conoco, West Pullman Road Moscow",
+   "timestamp": 1784842194.0,
+   "transaction_id": "c6194f0d2b78a5e3106df84b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 11000.0,
+   "category": "transfer",
+   "date": "2026-07-23",
+   "merchant": "First Interstate Bank - Transfer from Savings 3327",
+   "timestamp": 1784832066.0,
+   "transaction_id": "e888bea181d7e265a70f0185",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -20880.0,
+   "category": "housing",
+   "date": "2026-07-24",
+   "merchant": "Tolliver & Sons Metal Roofing",
+   "timestamp": 1784895697.0,
+   "transaction_id": "0ef630ade780915005d349f5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -24.8,
+   "category": "dining",
+   "date": "2026-07-24",
+   "merchant": "Big Dipper Ice Cream, Missoula",
+   "timestamp": 1784908226.0,
+   "transaction_id": "1a94c85f0b3e72d6c40718af",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -53.1,
+   "category": "gas",
+   "date": "2026-07-24",
+   "merchant": "Sinclair, 21st Street Lewiston",
+   "timestamp": 1784923805.0,
+   "transaction_id": "4b8d02e7619ca3f578e0b241",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -18.4,
+   "category": "dining",
+   "date": "2026-07-24",
+   "merchant": "Zip Trip, Lewiston",
+   "timestamp": 1784910446.0,
+   "transaction_id": "e6720d9b41c85a3f0b2d76e1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -58.2,
+   "category": "gas",
+   "date": "2026-07-26",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1785074232.0,
+   "transaction_id": "20fbd94c73e158a6c04d21ef",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -114.8,
+   "category": "groceries",
+   "date": "2026-07-27",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1785196465.0,
+   "transaction_id": "1f86afb008db1c12dc3411e7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -1486.4,
+   "category": "auto",
+   "date": "2026-07-27",
+   "merchant": "Bozeman Import Service",
+   "timestamp": 1785171156.0,
+   "transaction_id": "c53a08e1b6d2f47908ac13be",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.5,
+   "category": "coffee",
+   "date": "2026-07-27",
+   "merchant": "Rockford Coffee, North Grand Avenue",
+   "timestamp": 1785160363.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20021",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -48.2,
+   "category": "shopping",
+   "date": "2026-07-29",
+   "merchant": "The River's Edge, North 7th Avenue",
+   "timestamp": 1785353085.0,
+   "transaction_id": "7f3d9b1c4a8e26057f3d9b1c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -4.0,
+   "category": "coffee",
+   "date": "2026-07-29",
+   "merchant": "Treeline Coffee Roasters, North Wallace Avenue",
+   "timestamp": 1785330370.0,
+   "transaction_id": "af7358b4e1c20126a0072dad",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -48.1,
+   "category": "gas",
+   "date": "2026-07-29",
+   "merchant": "Exxon, North 7th Avenue",
+   "timestamp": 1785349017.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20022",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -54.2,
+   "category": "gas",
+   "date": "2026-07-29",
+   "merchant": "Costco Gas, Catron Street",
+   "timestamp": 1785331258.0,
+   "transaction_id": "f81c3a05d267be49102cf7ab",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -58.9,
+   "category": "groceries",
+   "date": "2026-07-30",
+   "merchant": "Heebs Grocery, East Main Street",
+   "timestamp": 1785455258.0,
+   "transaction_id": "b61015003c93fe0259bed961",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -126.8,
+   "category": "groceries",
+   "date": "2026-07-29",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1785372199.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20024",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -525.0,
+   "category": "other",
+   "date": "2026-08-01",
+   "merchant": "Bridger Creek Stables",
+   "timestamp": 1785600000.0,
+   "transaction_id": "a6b7c8d9e0f1526374859fa6",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2891.62,
+   "category": "income",
+   "date": "2026-07-31",
+   "merchant": "Montana State University",
+   "timestamp": 1785502239.0,
+   "transaction_id": "c4d621ec9c4ba191bd9e6d52",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -20.5,
+   "category": "dining",
+   "date": "2026-07-31",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1785518330.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20025",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2281.79,
+   "category": "housing",
+   "date": "2026-08-01",
+   "merchant": "First Interstate Bank Mortgage 6613",
+   "timestamp": 1785613464.0,
+   "transaction_id": "6cc08ea20b2eee7aab58f21f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -172.6,
+   "category": "groceries",
+   "date": "2026-08-02",
+   "merchant": "Costco Wholesale, Catron Street",
+   "timestamp": 1785710052.0,
+   "transaction_id": "9985953d60a36310b4aad291",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2.99,
+   "category": "subscription",
+   "date": "2026-08-03",
+   "merchant": "Apple iCloud 200GB",
+   "timestamp": 1785777290.0,
+   "transaction_id": "0878b8097c113eafd3a43b92",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-08-03",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1785776525.0,
+   "transaction_id": "2a61793d2fdd2e9f394bbf11",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-08-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8814",
+   "timestamp": 1785945600.0,
+   "transaction_id": "27ae48474300348fabce0d7a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -21.4,
+   "category": "dining",
+   "date": "2026-08-03",
+   "merchant": "Bridger Brewing, West College Street",
+   "timestamp": 1785802833.0,
+   "transaction_id": "35d00f3df8c23120d751a9ee",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3327",
+   "amount": 600.0,
+   "category": "savings",
+   "date": "2026-08-05",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1785971864.0,
+   "transaction_id": "026e0ab103dd6cc80f3495c1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8827",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-08-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1785956832.0,
+   "transaction_id": "4713c9e50cb72adfaaf95c07",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-08-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8827",
+   "timestamp": 1785968704.0,
+   "transaction_id": "8c5abc1d0641f51050a83d65",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -600.0,
+   "category": "savings",
+   "date": "2026-08-05",
+   "merchant": "First Interstate Bank - Transfer to Savings 3327",
+   "timestamp": 1785944607.0,
+   "transaction_id": "8ded1ae1dc56c2e6d4bde606",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8814",
+   "amount": 250.0,
+   "category": "education",
+   "date": "2026-08-05",
+   "merchant": "Achieve Montana 529 - Contribution from Checking 3318",
+   "timestamp": 1785949307.0,
+   "transaction_id": "bb77c174b2d87d4213c25d0f",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -122.96,
+   "category": "groceries",
+   "date": "2026-08-06",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1786058541.0,
+   "transaction_id": "47ca9e30f16b258d0b73e1a9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -91.2,
+   "category": "shopping",
+   "date": "2026-08-06",
+   "merchant": "Murdoch's Ranch & Home Supply",
+   "timestamp": 1786025901.0,
+   "transaction_id": "c4d5e6f7a8b9d2e3f012233e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -50.2,
+   "category": "gas",
+   "date": "2026-08-06",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1786043058.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20027",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4340.0,
+   "category": "transfer",
+   "date": "2026-08-07",
+   "merchant": "Mountain West Farm Bureau Mutual - Claim MT-2026-041882",
+   "timestamp": 1786114930.0,
+   "transaction_id": "a95b62e4b265cf88afd7f45a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.0,
+   "category": "coffee",
+   "date": "2026-08-07",
+   "merchant": "Rockford Coffee, North Grand Avenue",
+   "timestamp": 1786101585.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20028",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -21.0,
+   "category": "dining",
+   "date": "2026-08-07",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1786119420.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20029",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -19.99,
+   "category": "subscription",
+   "date": "2026-08-07",
+   "merchant": "Spotify Family",
+   "timestamp": 1786129111.0,
+   "transaction_id": "d8ce4364e9eaa7112d122c2c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -10.1,
+   "category": "dining",
+   "date": "2026-08-08",
+   "merchant": "Nova Cafe, East Main Street",
+   "timestamp": 1786219173.0,
+   "transaction_id": "5fd00eed54bb6dba4020551d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -96.2,
+   "category": "utilities",
+   "date": "2026-08-08",
+   "merchant": "NorthWestern Energy",
+   "timestamp": 1786199044.0,
+   "transaction_id": "b135ea87f6f27fc9631b8776",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -119.3,
+   "category": "groceries",
+   "date": "2026-08-08",
+   "merchant": "Rosauers Supermarket, West Main Street",
+   "timestamp": 1786224621.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20030",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3341",
+   "amount": 150.0,
+   "category": "savings",
+   "date": "2026-08-10",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1786378647.0,
+   "transaction_id": "0c4fee3556ceabbb6e02770e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -4340.0,
+   "category": "transfer",
+   "date": "2026-08-10",
+   "merchant": "First Interstate Bank - Transfer to Savings 3327",
+   "timestamp": 1786368073.0,
+   "transaction_id": "693cba5789a45f8ba11077d3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3327",
+   "amount": 4340.0,
+   "category": "savings",
+   "date": "2026-08-10",
+   "merchant": "First Interstate Bank - Transfer from Checking 3318",
+   "timestamp": 1786395487.0,
+   "transaction_id": "98309aff7621b43ba77da148",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -150.0,
+   "category": "savings",
+   "date": "2026-08-10",
+   "merchant": "First Interstate Bank - Transfer to Horse Fund 3341",
+   "timestamp": 1786368127.0,
+   "transaction_id": "bccedcda259ea6df9b306ecc",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -4.0,
+   "category": "coffee",
+   "date": "2026-08-11",
+   "merchant": "Treeline Coffee Roasters, North Wallace Avenue",
+   "timestamp": 1786449116.0,
+   "transaction_id": "7cb0301290cc07075ca4b1db",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -18.5,
+   "category": "dining",
+   "date": "2026-08-11",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1786475118.0,
+   "transaction_id": "dc76792ace8826b797b70ef3",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -46.8,
+   "category": "utilities",
+   "date": "2026-08-12",
+   "merchant": "Republic Services",
+   "timestamp": 1786566387.0,
+   "transaction_id": "a342299f6e108d6bf7101fa9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -185.0,
+   "category": "other",
+   "date": "2026-08-12",
+   "merchant": "Ambrose Tallchief, Farrier",
+   "timestamp": 1786563880.0,
+   "transaction_id": "e0f1a2b3c4d59ab0c1d2e3fa",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -41.2,
+   "category": "shopping",
+   "date": "2026-08-13",
+   "merchant": "Amazon",
+   "timestamp": 1786665238.0,
+   "transaction_id": "c27a904be1365df8071ab3c2",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.25,
+   "category": "coffee",
+   "date": "2026-08-13",
+   "merchant": "Treeline Coffee Roasters, North Wallace Avenue",
+   "timestamp": 1786623712.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20031",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -120.0,
+   "category": "utilities",
+   "date": "2026-08-14",
+   "merchant": "Starlink",
+   "timestamp": 1786733769.0,
+   "transaction_id": "93d31203270727277a32fecf",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -19.5,
+   "category": "dining",
+   "date": "2026-08-14",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1786732198.0,
+   "transaction_id": "d4e8f1a26b3c9d05e7f20032",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -14.8,
+   "category": "dining",
+   "date": "2026-08-14",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1786728311.0,
+   "transaction_id": "eb62074d95a1c38f7b02e5d4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 2891.62,
+   "category": "income",
+   "date": "2026-08-14",
+   "merchant": "Montana State University",
+   "timestamp": 1786729860.0,
+   "transaction_id": "fec6e88446f5052947fcf1e0",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -41.2,
+   "category": "gas",
+   "date": "2026-08-15",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1786822296.0,
+   "transaction_id": "1f9d3b8e0c47a625d3f80b19",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -17.99,
+   "category": "subscription",
+   "date": "2026-08-16",
+   "merchant": "Netflix",
+   "timestamp": 1786894935.0,
+   "transaction_id": "39bcdd008c51acf5e12c4b6b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -148.6,
+   "category": "insurance",
+   "date": "2026-08-16",
+   "merchant": "Mountain West Farm Bureau Mutual",
+   "timestamp": 1786890161.0,
+   "transaction_id": "67400d59f46b38af2bb97d87",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -36.9,
+   "category": "groceries",
+   "date": "2026-08-16",
+   "merchant": "Heebs Grocery, East Main Street",
+   "timestamp": 1786920483.0,
+   "transaction_id": "e7a1b4c82d0f6935a1c40001",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": 4850.0,
+   "category": "income",
+   "date": "2026-08-17",
+   "merchant": "GVVP PARTNER DRAW",
+   "timestamp": 1786975477.0,
+   "transaction_id": "59bcb1b99841a5e436f1e540",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -142.8,
+   "category": "shopping",
+   "date": "2026-08-18",
+   "merchant": "The Woolery, Frankfort KY",
+   "timestamp": 1787076723.0,
+   "transaction_id": "6f2c48a0b91d3e75c48a1f60",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -9.8,
+   "category": "shopping",
+   "date": "2026-08-18",
+   "merchant": "Bob Ward and Sons, North 19th Avenue",
+   "timestamp": 1787069897.0,
+   "transaction_id": "e4a8c1b7d9f36205e4a8c1b7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8814",
+   "amount": -17600.0,
+   "category": "education",
+   "date": "2026-08-19",
+   "merchant": "University of Oregon",
+   "timestamp": 1787181161.0,
+   "transaction_id": "1ebb466d01e5f66d4bcd487a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -14.99,
+   "category": "subscription",
+   "date": "2026-08-19",
+   "merchant": "Amazon Prime",
+   "timestamp": 1787175839.0,
+   "transaction_id": "5387abb1b70d7dd77273b9b2",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -33.6,
+   "category": "dining",
+   "date": "2026-08-19",
+   "merchant": "Sweet Chili, North 7th Avenue",
+   "timestamp": 1787178919.0,
+   "transaction_id": "ee00ea2e0b248017a0f45f75",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -9.85,
+   "category": "coffee",
+   "date": "2026-08-20",
+   "merchant": "Rockford Coffee, North Grand Avenue",
+   "timestamp": 1787225249.0,
+   "transaction_id": "5070a4ec9e3fd461465c9d71",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -117.64,
+   "category": "groceries",
+   "date": "2026-08-20",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1787263859.0,
+   "transaction_id": "d095f2b83c6e14a70d52b869",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -64.2,
+   "category": "home_improvement",
+   "date": "2026-08-21",
+   "merchant": "Owenhouse Ace Hardware, East Main Street",
+   "timestamp": 1787348522.0,
+   "transaction_id": "7f1c9d4a3b82e065c14f7a29",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -164.2,
+   "category": "utilities",
+   "date": "2026-08-21",
+   "merchant": "Verizon Wireless",
+   "timestamp": 1787329321.0,
+   "transaction_id": "d42c16771ccaf266c6382b5a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -45.7,
+   "category": "gas",
+   "date": "2026-08-21",
+   "merchant": "Costco Gas, Catron Street",
+   "timestamp": 1787347826.0,
+   "transaction_id": "e7a1b4c82d0f6935a1c40003",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -23.0,
+   "category": "dining",
+   "date": "2026-08-21",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1787344242.0,
+   "transaction_id": "e7a1b4c82d0f6935a1c40004",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -7.99,
+   "category": "subscription",
+   "date": "2026-08-22",
+   "merchant": "MHz Choice",
+   "timestamp": 1787430185.0,
+   "transaction_id": "1b06bb39b906d900d2caa231",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -18.4,
+   "category": "dining",
+   "date": "2026-08-22",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1787417762.0,
+   "transaction_id": "8b40d17ec9a25f36180be4c7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -46.85,
+   "category": "gas",
+   "date": "2026-08-21",
+   "merchant": "Town Pump, North 7th Avenue",
+   "timestamp": 1787360978.0,
+   "transaction_id": "c9d251a8073e4b6f2ca108d5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -1340.0,
+   "category": "other",
+   "date": "2026-08-22",
+   "merchant": "Marlowe Hay & Feed",
+   "timestamp": 1787404897.0,
+   "transaction_id": "f1a2b3c4d5e6ab0c1d2e3f0b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -35.6,
+   "category": "dining",
+   "date": "2026-08-23",
+   "merchant": "Nova Cafe, East Main Street",
+   "timestamp": 1787524680.0,
+   "transaction_id": "e7a1b4c82d0f6935a1c40005",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -71.4,
+   "category": "groceries",
+   "date": "2026-08-24",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1787615434.0,
+   "transaction_id": "4fc0ae4b7f46286087168c7a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -5.5,
+   "category": "coffee",
+   "date": "2026-08-25",
+   "merchant": "Rockford Coffee, North Grand Avenue",
+   "timestamp": 1787664810.0,
+   "transaction_id": "e7a1b4c82d0f6935a1c40006",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -12.8,
+   "category": "dining",
+   "date": "2026-08-26",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1787767282.0,
+   "transaction_id": "81eaf0182a7507f31a7d2d5a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -139.05,
+   "category": "groceries",
+   "date": "2026-08-27",
+   "merchant": "Amazon Fresh",
+   "timestamp": 1787866426.0,
+   "transaction_id": "6b32089cae51d7f40c9e3b21",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -18.5,
+   "category": "dining",
+   "date": "2026-08-28",
+   "merchant": "Plonk, East Main Street",
+   "timestamp": 1787960915.0,
+   "transaction_id": "e7a1b4c82d0f6935a1c40008",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -34.2,
+   "category": "groceries",
+   "date": "2026-08-28",
+   "merchant": "Heebs Grocery, East Main Street",
+   "timestamp": 1787957839.0,
+   "transaction_id": "e9f92c35bb37683d9b040181",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -141.64,
+   "category": "groceries",
+   "date": "2026-08-29",
+   "merchant": "Town & Country Foods, North 11th Avenue",
+   "timestamp": 1788046538.0,
+   "transaction_id": "e7a1b4c82d0f6935a1c40009",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -12.8,
+   "category": "dining",
+   "date": "2026-08-29",
+   "merchant": "Wild Crumb, North Rouse Avenue",
+   "timestamp": 1788035176.0,
+   "transaction_id": "e7a1b4c82d0f6935a1c40010",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -88.0,
+   "category": "entertainment",
+   "date": "2026-03-03",
+   "merchant": "Ticketmaster",
+   "timestamp": 1772594100.0,
+   "transaction_id": "3e075163c77500aa36fee412",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -142.0,
+   "category": "entertainment",
+   "date": "2026-04-21",
+   "merchant": "Ticketmaster",
+   "timestamp": 1776823800.0,
+   "transaction_id": "1e09c1552c0e064b6cd22cda",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -196.0,
+   "category": "entertainment",
+   "date": "2026-07-08",
+   "merchant": "Ticketmaster",
+   "timestamp": 1783567200.0,
+   "transaction_id": "29e07968be575ffe01475b19",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -118.0,
+   "category": "entertainment",
+   "date": "2026-08-25",
+   "merchant": "Ticketmaster",
+   "timestamp": 1787707200.0,
+   "transaction_id": "61cf70d7efd0514c3d3a1837",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -612.0,
+   "category": "entertainment",
+   "date": "2026-05-18",
+   "merchant": "Syttende Mai, Gallatin Fjord Lodge",
+   "timestamp": 1779123600.0,
+   "transaction_id": "5a14e358dbfab9e939d108f9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -400.0,
+   "category": "housing",
+   "date": "2026-08-01",
+   "merchant": "Anneke Eugene lease — parental share",
+   "timestamp": 1785607200.0,
+   "transaction_id": "6f4b13aa62ab43276a654286",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-03-13",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1773410400.0,
+   "transaction_id": "093ed100941fc310875d57db",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-03-31",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1774965600.0,
+   "transaction_id": "b4800eebe94a9b5db96878b1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-04-15",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1776261600.0,
+   "transaction_id": "7eec234c8713da9484219530",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-04-30",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1777557600.0,
+   "transaction_id": "5bf6de1519d0e9dfde7b231a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-05-15",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1778853600.0,
+   "transaction_id": "237550d70790dcdad0d2a6cd",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-05-29",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1780063200.0,
+   "transaction_id": "753823a1b5e1d39b2faa8b94",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-06-15",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1781532000.0,
+   "transaction_id": "f48d135468e39861d999239b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-06-30",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1782828000.0,
+   "transaction_id": "5a785fb588feb504f6a01876",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-07-15",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1784124000.0,
+   "transaction_id": "f396679874066f91f5a281f5",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-07-31",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1785506400.0,
+   "transaction_id": "3747ecb231c1b5ad28b15814",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "2260",
+   "amount": 500.0,
+   "category": "retirement",
+   "date": "2026-08-14",
+   "merchant": "TIAA 403(b) Employee Deferral",
+   "timestamp": 1786716000.0,
+   "transaction_id": "1db6a502287b3910e60ba367",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "4409",
+   "amount": 2400.0,
+   "category": "retirement",
+   "date": "2026-03-01",
+   "merchant": "Fidelity Individual 401(k) Contribution",
+   "timestamp": 1772377200.0,
+   "transaction_id": "50c5d8e9cc1482545d1fdf3b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "4409",
+   "amount": 2400.0,
+   "category": "retirement",
+   "date": "2026-04-01",
+   "merchant": "Fidelity Individual 401(k) Contribution",
+   "timestamp": 1775052000.0,
+   "transaction_id": "e31cc35fcd80abd26ef4448a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "4409",
+   "amount": 2400.0,
+   "category": "retirement",
+   "date": "2026-05-01",
+   "merchant": "Fidelity Individual 401(k) Contribution",
+   "timestamp": 1777644000.0,
+   "transaction_id": "040383191e9e2ecc33f7c636",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "4409",
+   "amount": 2400.0,
+   "category": "retirement",
+   "date": "2026-06-01",
+   "merchant": "Fidelity Individual 401(k) Contribution",
+   "timestamp": 1780322400.0,
+   "transaction_id": "a6a4ab82a09a5ad1977760f7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "4409",
+   "amount": 2400.0,
+   "category": "retirement",
+   "date": "2026-07-01",
+   "merchant": "Fidelity Individual 401(k) Contribution",
+   "timestamp": 1782914400.0,
+   "transaction_id": "4ddf6ae4cf1485fb0141956a",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "4409",
+   "amount": 2400.0,
+   "category": "retirement",
+   "date": "2026-08-01",
+   "merchant": "Fidelity Individual 401(k) Contribution",
+   "timestamp": 1785592800.0,
+   "transaction_id": "c87b8c3bd33fa7fa2ac077bd",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "4409",
+   "amount": 8400.0,
+   "category": "retirement",
+   "date": "2026-03-31",
+   "merchant": "Fidelity Individual 401(k) Profit Sharing — GVVP prior year",
+   "timestamp": 1774994400.0,
+   "transaction_id": "b70d0f1138bc5d71042741a4",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -120.0,
+   "category": "utilities",
+   "date": "2026-06-14",
+   "merchant": "Starlink",
+   "timestamp": 1781452800.0,
+   "transaction_id": "2cced08a12a7e81d16c6763c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -96.2,
+   "category": "utilities",
+   "date": "2026-07-08",
+   "merchant": "NorthWestern Energy",
+   "timestamp": 1783526400.0,
+   "transaction_id": "623f9ec9bc30937b86c75d2c",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "transfer",
+   "date": "2026-03-05",
+   "merchant": "Achieve Montana 529 Torvald 8827",
+   "timestamp": 1772730300.0,
+   "transaction_id": "3f6ea3068ebaf153f89ebbf1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8814",
+   "amount": 2200.0,
+   "category": "investment",
+   "date": "2026-08-30",
+   "merchant": "Achieve Montana 529 — market gain",
+   "timestamp": 1788098400.0,
+   "transaction_id": "66180c7fd58268ef842c6ce7",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "8827",
+   "amount": 1860.0,
+   "category": "investment",
+   "date": "2026-08-30",
+   "merchant": "Achieve Montana 529 — market gain",
+   "timestamp": 1788098400.0,
+   "transaction_id": "8441b9e335cd6138a7f31059",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "6613",
+   "amount": -1216.33,
+   "category": "housing",
+   "date": "2026-03-01",
+   "merchant": "First Interstate Bank Mortgage 6613 — principal",
+   "timestamp": 1772377200.0,
+   "transaction_id": "b022c6559a60b1cbcb0327a0",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "6613",
+   "amount": -1218.99,
+   "category": "housing",
+   "date": "2026-04-01",
+   "merchant": "First Interstate Bank Mortgage 6613 — principal",
+   "timestamp": 1775052000.0,
+   "transaction_id": "bffeccdc9acc7c8c1f236737",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "6613",
+   "amount": -1221.65,
+   "category": "housing",
+   "date": "2026-05-01",
+   "merchant": "First Interstate Bank Mortgage 6613 — principal",
+   "timestamp": 1777644000.0,
+   "transaction_id": "174a1ad633e1c50aae423a50",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "6613",
+   "amount": -1224.33,
+   "category": "housing",
+   "date": "2026-06-01",
+   "merchant": "First Interstate Bank Mortgage 6613 — principal",
+   "timestamp": 1780322400.0,
+   "transaction_id": "b2ffe0753afbb89d15a27cee",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "6613",
+   "amount": -1227.0,
+   "category": "housing",
+   "date": "2026-07-01",
+   "merchant": "First Interstate Bank Mortgage 6613 — principal",
+   "timestamp": 1782914400.0,
+   "transaction_id": "aba21898d445be53e8ad006d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "6613",
+   "amount": -1234.0,
+   "category": "housing",
+   "date": "2026-08-01",
+   "merchant": "First Interstate Bank Mortgage 6613 — principal",
+   "timestamp": 1785592800.0,
+   "transaction_id": "56b49931051a908651c4cbbf",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": -45.0,
+   "category": "medical",
+   "date": "2026-07-09",
+   "merchant": "Alpenglow Physical Therapy",
+   "timestamp": 1783637100.0,
+   "transaction_id": "934b8055a74b103abb60720e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -1940.0,
+   "category": "payment",
+   "date": "2026-03-18",
+   "merchant": "First Interstate Visa 7742 — statement paid in full",
+   "timestamp": 1773846000.0,
+   "transaction_id": "849e0b5e044bf2802a360f14",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": 1940.0,
+   "category": "payment",
+   "date": "2026-03-18",
+   "merchant": "Payment thank you — First Interstate 3318",
+   "timestamp": 1773846060.0,
+   "transaction_id": "95609d6798fa0a096605193e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2514.41,
+   "category": "payment",
+   "date": "2026-04-18",
+   "merchant": "First Interstate Visa 7742 — statement paid in full",
+   "timestamp": 1776524400.0,
+   "transaction_id": "0f3f73e30f2aa52e4769ca4b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": 2514.41,
+   "category": "payment",
+   "date": "2026-04-18",
+   "merchant": "Payment thank you — First Interstate 3318",
+   "timestamp": 1776524460.0,
+   "transaction_id": "d87fb0f607af685bed1633ac",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -2298.56,
+   "category": "payment",
+   "date": "2026-05-18",
+   "merchant": "First Interstate Visa 7742 — statement paid in full",
+   "timestamp": 1779116400.0,
+   "transaction_id": "74794f78ec7e17d6a0556493",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": 2298.56,
+   "category": "payment",
+   "date": "2026-05-18",
+   "merchant": "Payment thank you — First Interstate 3318",
+   "timestamp": 1779116460.0,
+   "transaction_id": "4fcad6bc4d457d9f9bde654d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -3511.65,
+   "category": "payment",
+   "date": "2026-06-18",
+   "merchant": "First Interstate Visa 7742 — statement paid in full",
+   "timestamp": 1781794800.0,
+   "transaction_id": "c8eba43bf6872fae4206f2a1",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": 3511.65,
+   "category": "payment",
+   "date": "2026-06-18",
+   "merchant": "Payment thank you — First Interstate 3318",
+   "timestamp": 1781794860.0,
+   "transaction_id": "c323153a403ec2f9ed9e7a35",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -1919.24,
+   "category": "payment",
+   "date": "2026-07-18",
+   "merchant": "First Interstate Visa 7742 — statement paid in full",
+   "timestamp": 1784386800.0,
+   "transaction_id": "43c37d0a2c77c2c612b1058d",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": 1919.24,
+   "category": "payment",
+   "date": "2026-07-18",
+   "merchant": "Payment thank you — First Interstate 3318",
+   "timestamp": 1784386860.0,
+   "transaction_id": "521e1513c1f3e1a89c606f7e",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -4211.23,
+   "category": "payment",
+   "date": "2026-08-18",
+   "merchant": "First Interstate Visa 7742 — statement paid in full",
+   "timestamp": 1787065200.0,
+   "transaction_id": "db7108fb9fc002449079c0d8",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "7742",
+   "amount": 4211.23,
+   "category": "payment",
+   "date": "2026-08-18",
+   "merchant": "Payment thank you — First Interstate 3318",
+   "timestamp": 1787065260.0,
+   "transaction_id": "a2e37bf603e631d82ce80b8b",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  },
+  {
+   "account_last_four": "3318",
+   "amount": -250.0,
+   "category": "education",
+   "date": "2026-05-05",
+   "merchant": "Achieve Montana 529 - Contribution to account 8827",
+   "timestamp": 1777994100.0,
+   "transaction_id": "d56319024af8a312de29d6c9",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  }
+ ],
+ "users": [
+  {
+   "date_of_birth": "1974-11-08",
+   "email": "magnhild.strand@gmail.com",
+   "linked_accounts_count": 9,
+   "member_since": "2026-07-19",
+   "mothers_maiden_name": null,
+   "name": "Magnhild Kirsten Strand",
+   "phone": "(406) 555-0134",
+   "ssn": "***-**-3471",
+   "status": "active",
+   "user_id": "7c1f3a9e2b58d04c6ea17b93"
+  }
+ ]
+}

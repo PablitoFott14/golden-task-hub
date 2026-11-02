@@ -1621,9 +1621,12 @@ def persona_meta(u: Universe, shell: Optional[list[dict[str, Any]]], prev: Optio
     if not base.get("name"):
         raw = str(p.get("name") or u.page.title)
         base["name"] = re.split(r",|\(", raw)[0].strip()
-        m = re.search(r",\s*(\d{1,3})\b", raw)
+        # The age follows the name, in the name itself or in the header's Name line.
+        named = next((str(x["value"]) for x in p.get("identity") or [] if str(x.get("key", "")).lower() == "name"), "")
+        m = re.search(r",\s*(\d{1,3})\b", raw) or re.search(r",\s*(\d{1,3})\b", named)
         base["age"] = m.group(1) if m else ""
-        base["role"] = str(p.get("subtitle") or "").split(" · ")[0]
+        # "Title · Employer" in the header, "Title, Employer" on the card.
+        base["role"] = str(p.get("subtitle") or "").replace(" · ", ", ")
         home = next((x["value"] for x in p.get("identity") or [] if str(x.get("key", "")).lower().startswith("home")), "")
         cm = re.search(r",\s*([A-Z][A-Za-z .'-]+),\s*([A-Z]{2})\b", home)
         base["city"] = f"{cm.group(1)}, {cm.group(2)}" if cm else ""

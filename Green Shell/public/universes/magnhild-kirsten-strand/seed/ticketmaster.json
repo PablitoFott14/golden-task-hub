@@ -1,0 +1,876 @@
+{
+ "users": [
+  {
+   "user_id": "6b21f9a70c48d3e5b019278c",
+   "name": "Magnhild Kirsten Strand",
+   "email": "magnhild.strand@gmail.com",
+   "address": "4482 Sourdough Ridge Road",
+   "city": "Bozeman",
+   "state": "MT",
+   "zip": "59715",
+   "is_user": true
+  }
+ ],
+ "venues": [
+  {
+   "id": "7c1a4e93bd02f5a8c6d31e40",
+   "name": "The ELM",
+   "city": "Bozeman",
+   "state": "MT",
+   "capacity": 1500,
+   "venue_type": "club",
+   "address": "506 North 7th Avenue",
+   "zip": "59715"
+  },
+  {
+   "id": "c4a71f83d9e206b5148c37ea",
+   "name": "Willson Auditorium",
+   "city": "Bozeman",
+   "state": "MT",
+   "capacity": 800,
+   "venue_type": "theater",
+   "address": "404 West Main Street",
+   "zip": "59715"
+  },
+  {
+   "id": "7b2e59cd4a1f8036db95c2e7",
+   "name": "Brick Breeden Fieldhouse",
+   "city": "Bozeman",
+   "state": "MT",
+   "capacity": 7250,
+   "venue_type": "arena",
+   "address": "1 Bobcat Circle",
+   "zip": "59717"
+  },
+  {
+   "id": "7b0d6e41f2953ac816b0d472",
+   "name": "Hult Center for the Performing Arts",
+   "city": "Eugene",
+   "state": "OR",
+   "capacity": 2448,
+   "venue_type": "concert_hall",
+   "address": "1 Eugene Center",
+   "zip": "97401"
+  }
+ ],
+ "events": [
+  {
+   "id": "e07a45cb92d1f83b6ce24a70",
+   "name": "Bozeman Symphony: Grieg and Sibelius",
+   "date": "2026-03-21",
+   "time": "19:30",
+   "venue_id": "c4a71f83d9e206b5148c37ea",
+   "status": "completed",
+   "min_price": 32.0,
+   "max_price": 68.0,
+   "segment": "Music",
+   "genre": "Classical",
+   "sub_genre": "Symphonic",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-01-12",
+   "presale_date": "2026-01-05"
+  },
+  {
+   "id": "1eee6d824ed811323ca0d1d9",
+   "name": "Sundog Highway",
+   "date": "2026-05-08",
+   "time": "20:00",
+   "venue_id": "7c1a4e93bd02f5a8c6d31e40",
+   "status": "completed",
+   "min_price": 28.0,
+   "max_price": 42.0,
+   "segment": "Music",
+   "genre": "Country",
+   "sub_genre": "Americana",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-04-03",
+   "presale_date": "2026-04-02"
+  },
+  {
+   "id": "75de50ebe3f589e90d0d6960",
+   "name": "Bozeman Symphony: Season Finale, Beethoven Nine",
+   "date": "2026-05-09",
+   "time": "19:30",
+   "venue_id": "c4a71f83d9e206b5148c37ea",
+   "status": "completed",
+   "min_price": 32.0,
+   "max_price": 68.0,
+   "segment": "Music",
+   "genre": "Classical",
+   "sub_genre": "Symphonic",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-01-12",
+   "presale_date": "2026-01-05"
+  },
+  {
+   "id": "3a67974731b1593acb27e994",
+   "name": "The Fenwick Sisters",
+   "date": "2026-05-16",
+   "time": "20:30",
+   "venue_id": "7c1a4e93bd02f5a8c6d31e40",
+   "status": "completed",
+   "min_price": 34.0,
+   "max_price": 48.0,
+   "segment": "Music",
+   "genre": "Folk",
+   "sub_genre": "Bluegrass",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-04-03",
+   "presale_date": "2026-04-02"
+  },
+  {
+   "id": "93f66c71aac6362a364619a3",
+   "name": "Halden Vex",
+   "date": "2026-05-22",
+   "time": "21:00",
+   "venue_id": "7c1a4e93bd02f5a8c6d31e40",
+   "status": "completed",
+   "min_price": 30.0,
+   "max_price": 45.0,
+   "segment": "Music",
+   "genre": "Electronic",
+   "sub_genre": "House",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-04-03",
+   "presale_date": "2026-04-02"
+  },
+  {
+   "id": "b40e97c1d3a25f68e0b4197c",
+   "name": "Gravel Radio",
+   "date": "2026-05-29",
+   "time": "20:00:00",
+   "venue_id": "7c1a4e93bd02f5a8c6d31e40",
+   "status": "completed",
+   "min_price": 58.0,
+   "max_price": 72.0,
+   "segment": "Music",
+   "genre": "Rock",
+   "sub_genre": "Alternative Rock",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-03-06",
+   "presale_date": "2026-03-05"
+  },
+  {
+   "id": "71360ebf2b8791a7d9ef9942",
+   "name": "Copper Kettle Revue",
+   "date": "2026-06-05",
+   "time": "20:00",
+   "venue_id": "7c1a4e93bd02f5a8c6d31e40",
+   "status": "completed",
+   "min_price": 29.0,
+   "max_price": 41.0,
+   "segment": "Music",
+   "genre": "Blues",
+   "sub_genre": "Roots",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-04-03",
+   "presale_date": "2026-04-02"
+  },
+  {
+   "id": "822038317456846316d08f74",
+   "name": "Ninebark",
+   "date": "2026-06-13",
+   "time": "20:00",
+   "venue_id": "7c1a4e93bd02f5a8c6d31e40",
+   "status": "completed",
+   "min_price": 32.0,
+   "max_price": 44.0,
+   "segment": "Music",
+   "genre": "Rock",
+   "sub_genre": "Indie Rock",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-04-03",
+   "presale_date": "2026-04-02"
+  },
+  {
+   "id": "76f371bf9b205781212abea1",
+   "name": "Absaroka Sound",
+   "date": "2026-06-26",
+   "time": "20:00",
+   "venue_id": "7c1a4e93bd02f5a8c6d31e40",
+   "status": "completed",
+   "min_price": 35.0,
+   "max_price": 52.0,
+   "segment": "Music",
+   "genre": "Country",
+   "sub_genre": "Red Dirt",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-04-03",
+   "presale_date": "2026-04-02"
+  },
+  {
+   "id": "5c9b30fe1a742d86ef03b5c9",
+   "name": "Montana State Bobcats Volleyball vs. Idaho",
+   "date": "2026-09-12",
+   "time": "19:30",
+   "venue_id": "7b2e59cd4a1f8036db95c2e7",
+   "status": "on_sale",
+   "min_price": 22.0,
+   "max_price": 54.0,
+   "segment": "Sports",
+   "genre": "Volleyball",
+   "sub_genre": "College",
+   "ticket_limit": 10,
+   "on_sale_date": "2026-06-15",
+   "presale_date": null
+  },
+  {
+   "id": "09e32df8cd7ad6ad72fd20b5",
+   "name": "Bozeman Symphony: Season Opening, Dvorak and Florence Price",
+   "date": "2026-10-03",
+   "time": "19:30",
+   "venue_id": "c4a71f83d9e206b5148c37ea",
+   "status": "on_sale",
+   "min_price": 34.0,
+   "max_price": 72.0,
+   "segment": "Music",
+   "genre": "Classical",
+   "sub_genre": "Symphonic",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-08-14",
+   "presale_date": "2026-08-07"
+  },
+  {
+   "id": "8ade352994b877eaec345228",
+   "name": "Ninebark",
+   "date": "2026-10-09",
+   "time": "20:00",
+   "venue_id": "7c1a4e93bd02f5a8c6d31e40",
+   "status": "on_sale",
+   "min_price": 32.0,
+   "max_price": 46.0,
+   "segment": "Music",
+   "genre": "Rock",
+   "sub_genre": "Indie Rock",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-08-28",
+   "presale_date": "2026-08-27"
+  },
+  {
+   "id": "2e5c8b0947d3f61ab082e59c",
+   "name": "Eugene Symphony: Sibelius and Grieg",
+   "date": "2026-10-10",
+   "time": "19:30",
+   "venue_id": "7b0d6e41f2953ac816b0d472",
+   "status": "on_sale",
+   "min_price": 32.0,
+   "max_price": 78.0,
+   "segment": "Music",
+   "genre": "Classical",
+   "sub_genre": "Symphonic",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-05-15",
+   "presale_date": "2026-05-08"
+  },
+  {
+   "id": "716a3732e75dd458f1304b40",
+   "name": "Tanner Wexford-Blaine",
+   "date": "2026-10-24",
+   "time": "19:30",
+   "venue_id": "7b2e59cd4a1f8036db95c2e7",
+   "status": "on_sale",
+   "min_price": 45.0,
+   "max_price": 129.0,
+   "segment": "Music",
+   "genre": "Country",
+   "sub_genre": "Contemporary Country",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-08-28",
+   "presale_date": "2026-08-27"
+  },
+  {
+   "id": "4f9bf581887b4376e0518e11",
+   "name": "The Copperhead Line",
+   "date": "2026-11-07",
+   "time": "20:00",
+   "venue_id": "7b2e59cd4a1f8036db95c2e7",
+   "status": "on_sale",
+   "min_price": 39.0,
+   "max_price": 98.0,
+   "segment": "Music",
+   "genre": "Rock",
+   "sub_genre": "Classic Rock",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-08-28",
+   "presale_date": "2026-08-27"
+  },
+  {
+   "id": "0bbfe389cd92fbea6c597d71",
+   "name": "Sundog Highway",
+   "date": "2026-11-13",
+   "time": "20:00",
+   "venue_id": "7c1a4e93bd02f5a8c6d31e40",
+   "status": "on_sale",
+   "min_price": 30.0,
+   "max_price": 44.0,
+   "segment": "Music",
+   "genre": "Country",
+   "sub_genre": "Americana",
+   "ticket_limit": 8,
+   "on_sale_date": "2026-08-28",
+   "presale_date": "2026-08-27"
+  },
+  {
+   "id": "79ed204cd404982343c51b6e",
+   "name": "Cirque Boreal",
+   "date": "2026-11-21",
+   "time": "19:00",
+   "venue_id": "7b2e59cd4a1f8036db95c2e7",
+   "status": "on_sale",
+   "min_price": 32.0,
+   "max_price": 86.0,
+   "segment": "Arts & Theater",
+   "genre": "Circus",
+   "sub_genre": "Family",
+   "ticket_limit": 10,
+   "on_sale_date": "2026-08-28",
+   "presale_date": "2026-08-27"
+  }
+ ],
+ "orders": [
+  {
+   "id": "6b04ae7c3f19d258ca70e3b1",
+   "user_id": "6b21f9a70c48d3e5b019278c",
+   "event_id": "e07a45cb92d1f83b6ce24a70",
+   "ticket_type_id": "a63f27c0b84e91d5cf3a08b2",
+   "quantity": 2,
+   "subtotal": 76.0,
+   "service_fee": 9.0,
+   "order_processing_fee": 3.0,
+   "total_price": 88.0,
+   "confirmation_code": "TM-8841-MTBZN",
+   "purchased_at": "2026-03-03T20:15:00-07:00"
+  },
+  {
+   "id": "5a7d3f21c0b94e68da125f03",
+   "event_id": "b40e97c1d3a25f68e0b4197c",
+   "ticket_type_id": "d21f6a8043bce957120fa3d6",
+   "quantity": 2,
+   "subtotal": 116.0,
+   "service_fee": 20.0,
+   "order_processing_fee": 6.0,
+   "total_price": 142.0,
+   "confirmation_code": "8QK4RM2N",
+   "purchased_at": "2026-04-21T20:10:00-06:00",
+   "user_id": "6b21f9a70c48d3e5b019278c"
+  },
+  {
+   "id": "cd318f0a76b2e94517cf60da",
+   "user_id": "6b21f9a70c48d3e5b019278c",
+   "event_id": "5c9b30fe1a742d86ef03b5c9",
+   "ticket_type_id": "38c0b9e5714af2d6a0c81437",
+   "quantity": 2,
+   "subtotal": 178.0,
+   "service_fee": 14.0,
+   "order_processing_fee": 4.0,
+   "total_price": 196.0,
+   "confirmation_code": "TM-2216-BRKBR",
+   "purchased_at": "2026-07-08T21:20:00-06:00"
+  },
+  {
+   "id": "43ad9e1508c6b7f2d1590a4e",
+   "user_id": "6b21f9a70c48d3e5b019278c",
+   "event_id": "2e5c8b0947d3f61ab082e59c",
+   "ticket_type_id": "9f68b023d47a1ce95b30f78a",
+   "quantity": 2,
+   "subtotal": 96.0,
+   "service_fee": 17.0,
+   "order_processing_fee": 5.0,
+   "total_price": 118.0,
+   "confirmation_code": "1174-2088-4460",
+   "purchased_at": "2026-08-25T19:20:00-06:00"
+  }
+ ],
+ "attractions": [
+  {
+   "id": "3f8b25d7ac91e0463b7d5c28",
+   "name": "Gravel Radio",
+   "type": "artist",
+   "genre": "Rock",
+   "segment": "Music",
+   "description": "Four piece rock band out of Missoula. Two records out and a third one cut live on the Long Way Round run through the Mountain West."
+  },
+  {
+   "id": "9f13c6ea78b0d245cb37e901",
+   "name": "Bozeman Symphony",
+   "type": "company",
+   "genre": "Classical",
+   "segment": "Music",
+   "description": "The valley's orchestra and symphonic choir, playing a five-concert season at the Willson Auditorium under a music director who programs one Nordic piece a year and knows exactly who that is for."
+  },
+  {
+   "id": "2d84b7f01ce593a6d71fb428",
+   "name": "Montana State Bobcats Volleyball",
+   "type": "team",
+   "genre": "Volleyball",
+   "segment": "Sports",
+   "description": "Montana State's volleyball program, playing home matches at the Brick Breeden Fieldhouse. September openers draw students, families and about nine hundred people who came for the band."
+  },
+  {
+   "id": "c1470ad63b98e2f506c41d8b",
+   "name": "Eugene Symphony",
+   "type": "artist",
+   "genre": "Classical",
+   "segment": "Music",
+   "description": "Resident orchestra of the Hult Center, Silva Concert Hall, in its forty-second season."
+  },
+  {
+   "id": "be4c65de19de07df811dc9f3",
+   "name": "Sundog Highway",
+   "type": "artist",
+   "genre": "Country",
+   "segment": "Music",
+   "description": "Six piece Americana outfit out of Livingston, playing the Highway 89 corridor since 2016 and selling records off the back of the van."
+  },
+  {
+   "id": "f0c2dea93e814ea450e1e963",
+   "name": "The Fenwick Sisters",
+   "type": "artist",
+   "genre": "Folk",
+   "segment": "Music",
+   "description": "Three sisters from Whitefish singing close harmony over guitar, fiddle and a standup bass their father built."
+  },
+  {
+   "id": "5b252e1ed6378ce542f4b142",
+   "name": "Halden Vex",
+   "type": "artist",
+   "genre": "Electronic",
+   "segment": "Music",
+   "description": "Missoula producer and DJ, two EPs out and a room that stays full from ten until close."
+  },
+  {
+   "id": "7ad845c5c6a60960bcdc2157",
+   "name": "Copper Kettle Revue",
+   "type": "artist",
+   "genre": "Blues",
+   "segment": "Music",
+   "description": "Eight players, two horns and a Hammond organ, out of Butte by way of every roadhouse between there and Spokane."
+  },
+  {
+   "id": "0e40cc20a2f0cc858481a2fb",
+   "name": "Ninebark",
+   "type": "artist",
+   "genre": "Rock",
+   "segment": "Music",
+   "description": "Bozeman four piece named after the shrub, loud in a way that reads as polite right up until the second half."
+  },
+  {
+   "id": "e1e2070178a2982793d33a79",
+   "name": "Absaroka Sound",
+   "type": "artist",
+   "genre": "Country",
+   "segment": "Music",
+   "description": "Paradise Valley band whose pedal steel player also shoes horses, working the Montana circuit forty weekends a year."
+  },
+  {
+   "id": "0eb993a68933f80fa356f5b2",
+   "name": "Tanner Wexford-Blaine",
+   "type": "artist",
+   "genre": "Country",
+   "segment": "Music",
+   "description": "Nashville by way of Great Falls, out on a Mountain West run behind a third record that went gold in February."
+  },
+  {
+   "id": "5627efbb08f7e02f266692c7",
+   "name": "The Copperhead Line",
+   "type": "artist",
+   "genre": "Rock",
+   "segment": "Music",
+   "description": "Classic rock five piece with two original members, playing arenas and fieldhouses on a thirty date fall run."
+  },
+  {
+   "id": "68f7f4b5d0b2cb65799e00a7",
+   "name": "Cirque Boreal",
+   "type": "company",
+   "genre": "Circus",
+   "segment": "Arts & Theater",
+   "description": "Touring aerial and acrobatic company out of Calgary. Ninety minutes, no interval, and a live four piece score."
+  }
+ ],
+ "event_attractions": [
+  {
+   "event_id": "e07a45cb92d1f83b6ce24a70",
+   "attraction_id": "9f13c6ea78b0d245cb37e901",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "1eee6d824ed811323ca0d1d9",
+   "attraction_id": "be4c65de19de07df811dc9f3",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "75de50ebe3f589e90d0d6960",
+   "attraction_id": "9f13c6ea78b0d245cb37e901",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "3a67974731b1593acb27e994",
+   "attraction_id": "f0c2dea93e814ea450e1e963",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "93f66c71aac6362a364619a3",
+   "attraction_id": "5b252e1ed6378ce542f4b142",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "b40e97c1d3a25f68e0b4197c",
+   "attraction_id": "3f8b25d7ac91e0463b7d5c28",
+   "billing": "headline"
+  },
+  {
+   "event_id": "71360ebf2b8791a7d9ef9942",
+   "attraction_id": "7ad845c5c6a60960bcdc2157",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "822038317456846316d08f74",
+   "attraction_id": "0e40cc20a2f0cc858481a2fb",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "76f371bf9b205781212abea1",
+   "attraction_id": "e1e2070178a2982793d33a79",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "5c9b30fe1a742d86ef03b5c9",
+   "attraction_id": "2d84b7f01ce593a6d71fb428",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "09e32df8cd7ad6ad72fd20b5",
+   "attraction_id": "9f13c6ea78b0d245cb37e901",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "8ade352994b877eaec345228",
+   "attraction_id": "0e40cc20a2f0cc858481a2fb",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "2e5c8b0947d3f61ab082e59c",
+   "attraction_id": "c1470ad63b98e2f506c41d8b",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "716a3732e75dd458f1304b40",
+   "attraction_id": "0eb993a68933f80fa356f5b2",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "4f9bf581887b4376e0518e11",
+   "attraction_id": "5627efbb08f7e02f266692c7",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "0bbfe389cd92fbea6c597d71",
+   "attraction_id": "be4c65de19de07df811dc9f3",
+   "billing": "headliner"
+  },
+  {
+   "event_id": "79ed204cd404982343c51b6e",
+   "attraction_id": "68f7f4b5d0b2cb65799e00a7",
+   "billing": "headliner"
+  }
+ ],
+ "ticket_types": [
+  {
+   "id": "a63f27c0b84e91d5cf3a08b2",
+   "event_id": "e07a45cb92d1f83b6ce24a70",
+   "name": "Main Floor, center",
+   "price": 38.0,
+   "quantity_total": 260,
+   "quantity_available": 0,
+   "section": "Main Floor"
+  },
+  {
+   "id": "81d5e40a7c2963bf1e08ad34",
+   "event_id": "e07a45cb92d1f83b6ce24a70",
+   "name": "Balcony, side",
+   "price": 32.0,
+   "quantity_total": 180,
+   "quantity_available": 44,
+   "section": "Balcony"
+  },
+  {
+   "id": "168330774bdb99fb5a1aaf3c",
+   "event_id": "1eee6d824ed811323ca0d1d9",
+   "name": "Balcony, reserved seat",
+   "price": 42.0,
+   "quantity_total": 300,
+   "quantity_available": 12,
+   "section": "Balcony"
+  },
+  {
+   "id": "0ec276b2d45707f89b9f9bd3",
+   "event_id": "1eee6d824ed811323ca0d1d9",
+   "name": "General Admission, standing floor",
+   "price": 28.0,
+   "quantity_total": 900,
+   "quantity_available": 0,
+   "section": "Floor"
+  },
+  {
+   "id": "5b8c549cf040e30e1c88b08e",
+   "event_id": "75de50ebe3f589e90d0d6960",
+   "name": "Main Floor, center",
+   "price": 68.0,
+   "quantity_total": 260,
+   "quantity_available": 0,
+   "section": "Main Floor"
+  },
+  {
+   "id": "f7420612bb8b0a21fce18c71",
+   "event_id": "75de50ebe3f589e90d0d6960",
+   "name": "Balcony, side",
+   "price": 32.0,
+   "quantity_total": 180,
+   "quantity_available": 23,
+   "section": "Balcony"
+  },
+  {
+   "id": "a8ba6496e80d085f8d16fc8e",
+   "event_id": "3a67974731b1593acb27e994",
+   "name": "Balcony, reserved seat",
+   "price": 48.0,
+   "quantity_total": 300,
+   "quantity_available": 44,
+   "section": "Balcony"
+  },
+  {
+   "id": "a6c4151e458b3693c841545b",
+   "event_id": "3a67974731b1593acb27e994",
+   "name": "General Admission, standing floor",
+   "price": 34.0,
+   "quantity_total": 900,
+   "quantity_available": 61,
+   "section": "Floor"
+  },
+  {
+   "id": "d0c676faa2813f94ba6de88f",
+   "event_id": "93f66c71aac6362a364619a3",
+   "name": "Balcony, reserved seat",
+   "price": 45.0,
+   "quantity_total": 300,
+   "quantity_available": 97,
+   "section": "Balcony"
+  },
+  {
+   "id": "467eadd9cec71601cd0b6762",
+   "event_id": "93f66c71aac6362a364619a3",
+   "name": "General Admission, standing floor",
+   "price": 30.0,
+   "quantity_total": 900,
+   "quantity_available": 128,
+   "section": "Floor"
+  },
+  {
+   "id": "e93c05b7a1d248f6039bc71e",
+   "event_id": "b40e97c1d3a25f68e0b4197c",
+   "name": "Balcony, reserved seat",
+   "price": 72.0,
+   "quantity_total": 300,
+   "quantity_available": 27,
+   "section": "Balcony"
+  },
+  {
+   "id": "d21f6a8043bce957120fa3d6",
+   "event_id": "b40e97c1d3a25f68e0b4197c",
+   "name": "General Admission, standing floor",
+   "price": 58.0,
+   "quantity_total": 900,
+   "quantity_available": 0,
+   "section": "Floor"
+  },
+  {
+   "id": "5e43884e04081f566d92468a",
+   "event_id": "71360ebf2b8791a7d9ef9942",
+   "name": "Balcony, reserved seat",
+   "price": 41.0,
+   "quantity_total": 300,
+   "quantity_available": 38,
+   "section": "Balcony"
+  },
+  {
+   "id": "31169568c73ff68229ee58f0",
+   "event_id": "71360ebf2b8791a7d9ef9942",
+   "name": "General Admission, standing floor",
+   "price": 29.0,
+   "quantity_total": 900,
+   "quantity_available": 74,
+   "section": "Floor"
+  },
+  {
+   "id": "d68a6fd3e036c42af62bd1cc",
+   "event_id": "822038317456846316d08f74",
+   "name": "Balcony, reserved seat",
+   "price": 44.0,
+   "quantity_total": 300,
+   "quantity_available": 16,
+   "section": "Balcony"
+  },
+  {
+   "id": "2eebeae4bfb3ffca83e0dcfa",
+   "event_id": "822038317456846316d08f74",
+   "name": "General Admission, standing floor",
+   "price": 32.0,
+   "quantity_total": 900,
+   "quantity_available": 0,
+   "section": "Floor"
+  },
+  {
+   "id": "12dafb59e775934466f3dd23",
+   "event_id": "76f371bf9b205781212abea1",
+   "name": "Balcony, reserved seat",
+   "price": 52.0,
+   "quantity_total": 300,
+   "quantity_available": 9,
+   "section": "Balcony"
+  },
+  {
+   "id": "8559b2cd2fbcb17285e408cb",
+   "event_id": "76f371bf9b205781212abea1",
+   "name": "General Admission, standing floor",
+   "price": 35.0,
+   "quantity_total": 900,
+   "quantity_available": 0,
+   "section": "Floor"
+  },
+  {
+   "id": "38c0b9e5714af2d6a0c81437",
+   "event_id": "5c9b30fe1a742d86ef03b5c9",
+   "name": "Lower Bowl, sideline",
+   "price": 89.0,
+   "quantity_total": 1400,
+   "quantity_available": 612,
+   "section": "Lower Bowl"
+  },
+  {
+   "id": "f2a7c1b60d95834e17be2c05",
+   "event_id": "5c9b30fe1a742d86ef03b5c9",
+   "name": "Upper Bowl, end",
+   "price": 22.0,
+   "quantity_total": 2200,
+   "quantity_available": 1836,
+   "section": "Upper Bowl"
+  },
+  {
+   "id": "fcdc4a5d084414c17e75d835",
+   "event_id": "09e32df8cd7ad6ad72fd20b5",
+   "name": "Main Floor, center",
+   "price": 72.0,
+   "quantity_total": 260,
+   "quantity_available": 118,
+   "section": "Main Floor"
+  },
+  {
+   "id": "6fa2797357e11caee9c0b20d",
+   "event_id": "09e32df8cd7ad6ad72fd20b5",
+   "name": "Balcony, side",
+   "price": 34.0,
+   "quantity_total": 180,
+   "quantity_available": 96,
+   "section": "Balcony"
+  },
+  {
+   "id": "cee658a150e69e0c6ac8ccee",
+   "event_id": "8ade352994b877eaec345228",
+   "name": "Balcony, reserved seat",
+   "price": 46.0,
+   "quantity_total": 300,
+   "quantity_available": 241,
+   "section": "Balcony"
+  },
+  {
+   "id": "bfb6aae6f740bd94eaea8356",
+   "event_id": "8ade352994b877eaec345228",
+   "name": "General Admission, standing floor",
+   "price": 32.0,
+   "quantity_total": 900,
+   "quantity_available": 703,
+   "section": "Floor"
+  },
+  {
+   "id": "9f68b023d47a1ce95b30f78a",
+   "event_id": "2e5c8b0947d3f61ab082e59c",
+   "name": "Orchestra Left, Row K",
+   "price": 48.0,
+   "quantity_total": 240,
+   "quantity_available": 94,
+   "section": "Silva Concert Hall, Orchestra Left"
+  },
+  {
+   "id": "01e62314094a546878e5032b",
+   "event_id": "716a3732e75dd458f1304b40",
+   "name": "Floor, reserved",
+   "price": 129.0,
+   "quantity_total": 1100,
+   "quantity_available": 842,
+   "section": "Floor"
+  },
+  {
+   "id": "3492326252bef0e2a8ba0d86",
+   "event_id": "716a3732e75dd458f1304b40",
+   "name": "Upper Bowl, end",
+   "price": 45.0,
+   "quantity_total": 2200,
+   "quantity_available": 1974,
+   "section": "Upper Bowl"
+  },
+  {
+   "id": "330808e6400ac6ba4e0a9967",
+   "event_id": "4f9bf581887b4376e0518e11",
+   "name": "Lower Bowl, sideline",
+   "price": 98.0,
+   "quantity_total": 1400,
+   "quantity_available": 1211,
+   "section": "Lower Bowl"
+  },
+  {
+   "id": "1c3e39c0ea23c83361ed2c0a",
+   "event_id": "4f9bf581887b4376e0518e11",
+   "name": "Upper Bowl, end",
+   "price": 39.0,
+   "quantity_total": 2200,
+   "quantity_available": 2038,
+   "section": "Upper Bowl"
+  },
+  {
+   "id": "6b491aa562ed0ddfef9be20c",
+   "event_id": "0bbfe389cd92fbea6c597d71",
+   "name": "Balcony, reserved seat",
+   "price": 44.0,
+   "quantity_total": 300,
+   "quantity_available": 266,
+   "section": "Balcony"
+  },
+  {
+   "id": "eaaeb63b52e938a4fa2d1d98",
+   "event_id": "0bbfe389cd92fbea6c597d71",
+   "name": "General Admission, standing floor",
+   "price": 30.0,
+   "quantity_total": 900,
+   "quantity_available": 812,
+   "section": "Floor"
+  },
+  {
+   "id": "3095f393ef630cfa56ae41ce",
+   "event_id": "79ed204cd404982343c51b6e",
+   "name": "Floor, reserved",
+   "price": 86.0,
+   "quantity_total": 1100,
+   "quantity_available": 968,
+   "section": "Floor"
+  },
+  {
+   "id": "78b3799637f300fd6b926d4b",
+   "event_id": "79ed204cd404982343c51b6e",
+   "name": "Upper Bowl, end",
+   "price": 32.0,
+   "quantity_total": 2200,
+   "quantity_available": 2104,
+   "section": "Upper Bowl"
+  }
+ ]
+}

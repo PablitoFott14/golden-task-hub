@@ -116,4 +116,18 @@ export const universeCatalog: UniverseEntry[] = [
     artifactId: "openclaw-grace_liu_20261020-universe",
     lastUpdated: "2026-10-22",
   },
+  {
+    slug: "magnhild-kirsten-strand",
+    name: "Magnhild Kirsten Strand",
+    age: "51",
+    role: "Director of Space Planning and Allocation, Montana State University",
+    city: "Bozeman, MT",
+    hue: 155,
+    apps: ["Amazon Fresh", "Apple Health", "Calendar", "Contacts", "Email", "Fintrack", "Messages", "Slack", "Strava", "Ticketmaster", "Zillow"],
+    files: 0,
+    loadBytes: 3016565,
+    services: ["amazon_fresh", "apple_health", "calendar", "contacts", "email", "fintrack", "messaging", "slack", "strava", "ticketmaster", "zillow"],
+    artifactId: "openclaw-openclaw_mm_magnhild_kirsten_strand_20260831-universe",
+    lastUpdated: "2026-09-09",
+  },
 ];
