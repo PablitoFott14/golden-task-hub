@@ -10,6 +10,15 @@ const A = "tasks/charge-disputes";
  * two runs. `GTFA.md` is the authority on the answer, because the folder's
  * earlier notes describe a design that was replaced before the task shipped.
  *
+ * Checked against the QC spec and its appendix of Oct 16, 2026 on Nov 4, 2026,
+ * so a few fields no longer match the folder word for word. Criteria 2, 13, 19
+ * to 22, 24 and 25 accept the variations `GTFA.md` accepts, carry the items
+ * the prompt asks every draft for, and name the charges they mean so they can
+ * be rated without the inputs. Subjective criteria 5 and 6 are hierarchy and
+ * ordering, which the appendix weighs at 3. The parameters are the ones in
+ * `prompt.md`, with the two modalities read off the scenario as the audit
+ * does for a task older than those fields.
+ *
  * The page is a build, not a gallery: `stages` is one entry per method step, in
  * the order the work happened, and every other field below belongs to exactly
  * one of them.
@@ -48,8 +57,8 @@ export const chargeDisputes: GoldenTask = {
       step: 1,
       id: "parameters",
       title: "The parameters arrive already decided",
-      did: "The sheet fixes the pair before any design starts: Personal finance, detecting and disputing erroneous charges, with reconciling amounts as the primary capability and OCR, contradiction handling and computation behind it. The universe is named, and the output is one file called disputes.html. This task was built when seven parameters were assigned; a task today carries fourteen.",
-      why: "Every decision after this is checked back against the parameters, and a deviation is allowed only where the universe cannot support one or the scenario is too simple to reach the failure threshold. A task that fits the neighbouring subcategory better is a category relevance failure even when the use case is right.",
+      did: "The assigned parameters fix the pair before any design starts: Personal finance, detecting and disputing erroneous charges, with reconciling amounts as the primary capability and OCR, contradiction handling and computation behind it. The universe is named, and the scenario asks for an HTML page. This task was built when seven parameters were assigned; a task today carries fourteen, in a table at the top of the task.",
+      why: "Every decision after this is checked back against the parameters, and a deviation is allowed only where the universe cannot support one or the scenario is too simple to reach the failure threshold. A task that fits the neighbouring subcategory better is marked down on subcategory relevance even when the use case is right.",
       handoff: "A pair to design inside, and the scope check that says why the receipts belong to it.",
     },
     {
@@ -89,7 +98,7 @@ export const chargeDisputes: GoldenTask = {
       id: "draft-history",
       title: "The same task, filed formally",
       did: "The Agent Objective says why Marisela needs help and what success looks like. The Desired Outcome states the end state in inspectable terms: the page, what is on each tab, the six drafts, and what stays off the page entirely.",
-      why: "The agent is handed none of it. It is the record the rubrics and the golden are both measured against, which is why every item is checked back against the line of the prompt that asks for it.",
+      why: "The agent is handed none of it, and the audit reads it as context only: the golden and the criteria are measured against the prompt. That is why every item is checked back against the line of the prompt that asks for it.",
       handoff: "A filed end state, and the proof that nothing in it was invented after the prompt was written.",
     },
     {
@@ -105,7 +114,7 @@ export const chargeDisputes: GoldenTask = {
       id: "rubrics",
       title: "Twenty six criteria, none of them about process",
       did: "Every criterion was written against the downloaded page and the mailbox, with the value, the transaction id, the filename or the date copied in rather than described. Twenty land on the artifact and six on the state of the mailbox.",
-      why: "At least 80% of a block grades completion, and zero process criteria is the preferred number. A criterion that only checks that something exists fails the task on its own.",
+      why: "At least 80% of the objective criteria grade completion, and zero process criteria is the preferred number. A criterion that only checks that something exists is not valid at any weight.",
       handoff: "A block someone who was never in the room can rate, and the definition of what passing means.",
     },
     {
@@ -130,12 +139,12 @@ export const chargeDisputes: GoldenTask = {
 
   parameters: [
     {
-      label: "Use case",
+      label: "Use Case (L1)",
       value: "Personal finance",
       binds: "Her own money. Business bookkeeping would be a different use case, and the company purchases are still hers because they went on her employee account.",
     },
     {
-      label: "Subcategory",
+      label: "Subcategory (L2)",
       value: "detecting_disputing_erroneous_charges",
       literal: true,
       binds: "Double or unauthorised charge detection, and then the dispute. It is why the page has to end in drafts rather than in a summary.",
@@ -159,22 +168,27 @@ export const chargeDisputes: GoldenTask = {
       binds: "Marisela Ybarra's records. The loadout decided which wrong charges could be evidenced at all.",
     },
     {
-      label: "Output artifact",
-      value: "disputes.html",
-      literal: true,
-      binds: "One page. Spelled exactly this way in the prompt, because every criterion names the file.",
+      label: "Scenario",
+      value:
+        "I think the garden centre charged me twice. Two paper receipts attached, one is faded. Go through my accounts for the last sixty days, find the charges these belong to, and tell me whether it is a real duplicate or a hold and a settlement. If it is a real duplicate, draft the dispute with the dates and amounts. Do not send it.",
+      binds: "The brief as assigned, cut before its Required Output: an HTML page with each receipt matched to its transaction and the drafted dispute rendered in full. The audit reads the prompt against it for relevance. This task keeps its goal and its deliverable and raises the complexity inside them, with nine receipts instead of two and May to July instead of sixty days.",
     },
     {
-      label: "Scenario",
-      value: "Receipts against the registers, the real duplicates separated from the charges that hold up, each dispute drafted and left unsent.",
-      binds: "The assigned situation. Its nature and intent stayed as assigned; the complexity was raised inside it.",
+      label: "Input modalities",
+      value: "Paper receipts, read from the scenario",
+      binds: "This task predates the field, so the audit reads the input types off the scenario: paper receipts, one of them faded. They arrive as phone photos, a web screenshot, a Word document and a cropped scan, beside her typed layout notes.",
+    },
+    {
+      label: "Output modalities",
+      value: "An HTML page, read from the scenario",
+      binds: "Also older than the field, so it comes from the scenario's Required Output. The prompt names the page disputes.html, spelled exactly, because every criterion names the file.",
     },
   ],
 
   scopeCheck: {
     body: "What fixes the pair is the user's intent. She is contesting charges she believes are wrong, and the receipts and the bank records are only how that intent is evidenced. Assigned by the inputs instead, the same files would have pointed somewhere else.",
     neighbour:
-      "The neighbour inside the same use case is detecting and cancelling wasteful recurring charges, and that subcategory's own definition rules this out: it is subscription waste, not an erroneous charge. Nothing on this page is a subscription. Fitting the neighbour better is a category relevance failure even with the use case right.",
+      "The neighbour inside the same use case is detecting and cancelling wasteful recurring charges, and that subcategory's own definition rules this out: it is subscription waste, not an erroneous charge. Nothing on this page is a subscription. Fitting the neighbour better is marked down on subcategory relevance, even with the use case right.",
   },
 
   /* ------------------------------------------------------------------ step 2 */
@@ -842,7 +856,7 @@ Also, while you at it, take a look at anything I bought from my company during t
       },
       {
         title: "A dispute addressed to a mailbox that does not read mail",
-        expected: "The Kohl's draft written to Kohl's.",
+        expected: "The Kohl's draft written to Kohl's, or raised with INTRUST as a card dispute.",
         actual:
           "It went to alerts@intrustbank.com, whose own mail says do not reply, and which Model A's page itself calls an unmonitored alerts box. The content was right; the recipient could not act on it.",
         rubrics: [22],
@@ -851,8 +865,8 @@ Also, while you at it, take a look at anything I bought from my company during t
     ],
     score: [
       { label: "Objective block", lost: "36", of: "69", pct: "52%" },
-      { label: "Subjective block", lost: "23", of: "23", pct: "100%" },
-      { label: "Both blocks together", lost: "59", of: "92", pct: "64%" },
+      { label: "Subjective block", lost: "27", of: "27", pct: "100%" },
+      { label: "Both blocks together", lost: "63", of: "96", pct: "66%" },
     ],
     artifacts: [
       {
@@ -881,12 +895,12 @@ Also, while you at it, take a look at anything I bought from my company during t
     {
       label: "Graded on process",
       value: "0",
-      note: "The cap is 20% of the block and zero is the preferred number. Nothing here targets the trajectory.",
+      note: "The cap is 20% of the objective criteria by count, and zero is the preferred number. Nothing here targets the trajectory.",
     },
     {
       label: "Criteria at weight 5",
       value: "6",
-      note: "One for each of the five card disputes, and one for the company charges the page has to find without a receipt.",
+      note: "One for each of the five card disputes, where a value read off the media has to be reconciled against her other records, and one for the company charges, found without a receipt and capped month by month.",
     },
   ],
 
@@ -902,7 +916,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     },
     {
       n: 2,
-      text: "'disputes.html' first tab references the Hobby Lobby $71 receipt ('receipt.jpg') as a $17.20 overcharge to dispute (the receipt's 40% discount not applied to the fat quarter bundle and the quilt panel), with the date 2026-06-13, transaction ID 39d5a70c164ef82b9507c3d1, amount $71.00, and last 4 account digits 7742.",
+      text: "'disputes.html' first tab references the Hobby Lobby $71 receipt ('receipt.jpg') as a $17.20 overcharge to dispute, or $17.19 if the 40% is taken on both items together (the receipt's 40% discount not applied to the fat quarter bundle and the quilt panel), with the date 2026-06-13, transaction ID 39d5a70c164ef82b9507c3d1, amount $71.00, and last 4 account digits 7742.",
       weight: 5,
       category: "Task Completion",
       target: "Final answer/artifact",
@@ -1012,7 +1026,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     },
     {
       n: 13,
-      text: "'disputes.html' first tab has a \"Dispute draft\" button for the Kohl's dispute that opens the draft body, which cites transaction 6703 and states that the $10.00 gift card payment was also charged.",
+      text: "'disputes.html' first tab has a \"Dispute draft\" button for the Kohl's dispute that opens the draft body, which cites transaction 6703 and the items bought (the Big One plush throw, the LC gold hoop earrings and the 11 oz jar candle), and states that the $10.00 gift card payment was also charged.",
       weight: 3,
       category: "Instruction Following",
       target: "Final answer/artifact",
@@ -1068,7 +1082,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     },
     {
       n: 19,
-      text: "A Gmail draft written to Hobby Lobby disputing the $17.20 (or $17.19 if discount is calculated from both items together) overcharge is left unsent, referencing receipt TRN 6624 and the 40% discount not applied to the fat quarter bundle and the quilt panel.",
+      text: "A Gmail draft written to Hobby Lobby, or raised as a card dispute with INTRUST Bank but not addressed to its no-reply alerts inbox (alerts@intrustbank.com), disputing the $17.20 (or $17.19 if discount is calculated from both items together) overcharge is left unsent, referencing receipt TRN 6624 and the 40% discount not applied to the fat quarter bundle and the quilt panel.",
       weight: 1,
       category: "Task Completion",
       target: "State change",
@@ -1078,7 +1092,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     },
     {
       n: 20,
-      text: "A Gmail draft written to Carlos O'Kelly's disputing the $4.75 overcharge is left unsent, referencing check 2187 and the $13.99 signed total against the $18.74 charged.",
+      text: "A Gmail draft written to Carlos O'Kelly's, or raised as a card dispute with INTRUST Bank but not addressed to its no-reply alerts inbox (alerts@intrustbank.com), disputing the $4.75 overcharge is left unsent, referencing check 2187 and the $13.99 signed total against the $18.74 charged.",
       weight: 1,
       category: "Task Completion",
       target: "State change",
@@ -1088,7 +1102,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     },
     {
       n: 21,
-      text: "A Gmail draft written to El Dorado State Park disputing the $62.00 overcharge is left unsent, referencing receipt 26-04173 and the 3 nights billed at Campsite 41, Loop C, for a 2-night stay.",
+      text: "A Gmail draft written to El Dorado State Park, or raised as a card dispute with INTRUST Bank but not addressed to its no-reply alerts inbox (alerts@intrustbank.com), disputing the $62.00 overcharge is left unsent, referencing receipt 26-04173 and the 3 nights billed at Campsite 41, Loop C, for a 2-night stay.",
       weight: 1,
       category: "Task Completion",
       target: "State change",
@@ -1098,14 +1112,14 @@ Also, while you at it, take a look at anything I bought from my company during t
     },
     {
       n: 22,
-      text: "A Gmail draft written to Kohl's disputing the $10.00 overcharge is left unsent, referencing transaction 6703 and the gift card payment that was also charged.",
+      text: "A Gmail draft written to Kohl's, or raised as a card dispute with INTRUST Bank but not addressed to its no-reply alerts inbox (alerts@intrustbank.com), disputing the $10.00 overcharge is left unsent, referencing transaction 6703, the items bought (the Big One plush throw, the LC gold hoop earrings and the 11 oz jar candle) and the gift card payment that was also charged.",
       weight: 1,
       category: "Task Completion",
       target: "State change",
       polarity: "positive",
       status: "not-present",
       observed:
-        "The draft exists and the content is right, but it is addressed to the card issuer's automated alerts inbox rather than to Kohl's.",
+        "The draft exists and the content is right, but it is addressed to INTRUST's automated alerts inbox, whose mail says not to reply, so the dispute reaches nobody who can act on it.",
     },
     {
       n: 23,
@@ -1118,7 +1132,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     },
     {
       n: 24,
-      text: "'disputes.html' first tab references a non-disputable charge (e.g., the Christian Brothers Automotive $380.00 charge from 2026-05-23) as an erroneous charge to dispute, meaning any charge other than those supported by 'screenshot_2.png' (Tillie's Flower Shop), 'receipt.jpg' (Hobby Lobby), 'IMG_163541.jpg' (Carlos O'Kelly's and El Dorado State Park), 'IMG_2026.jpg' (Kohl's), or Hollenbeck Garden & Hardware company purchases that remain unreimbursed and are eligible under the $50 monthly employee allowance.",
+      text: "'disputes.html' first tab references a non-disputable charge (e.g., the Christian Brothers Automotive $380.00 charge from 2026-05-23) as an erroneous charge to dispute, meaning any charge other than those supported by 'screenshot_2.png' (Tillie's Flower Shop, $58.00 on 2026-05-09), 'receipt.jpg' (Hobby Lobby, $71.00 on 2026-06-13), 'IMG_163541.jpg' (Carlos O'Kelly's, $18.74 on 2026-06-23, and El Dorado State Park, $186.00 on 2026-06-27), 'IMG_2026.jpg' (Kohl's, $40.00 on 2026-07-11), or Hollenbeck Garden & Hardware company purchases that remain unreimbursed and are eligible under the $50 monthly employee allowance.",
       weight: -3,
       category: "Task Completion",
       target: "Final answer/artifact",
@@ -1127,7 +1141,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     },
     {
       n: 25,
-      text: "'disputes.html' second tab references as checked any charge for which no supporting evidence was provided, even though 'page.txt' limits that tab to charges the user explicitly asked to check and that were confirmed as correct ('the charges I asked you to check that turned out to be correct').",
+      text: "'disputes.html' second tab references as checked any charge for which no supporting evidence was provided, meaning any charge other than those the attached receipts cover (Tillie's Flower Shop $58.00 on 2026-05-09, Hobby Lobby $71.00 on 2026-06-13, Carlos O'Kelly's $18.74 on 2026-06-23, El Dorado State Park $186.00 on 2026-06-27, Kohl's $40.00 on 2026-07-11, Hollenbeck Garden & Hardware $46.00 on 2026-06-06, Northrock Lanes $46.00 on 2026-05-07, Wichita Foot & Ankle $385.00 on 2026-05-08 and Woodlawn Animal Hospital $284.50 on 2026-06-26) and the Tillie's Flower Shop $58.50 charge from 2026-05-08 shown with its order email, even though 'page.txt' limits that tab to charges the user explicitly asked to check and that were confirmed as correct ('the charges I asked you to check that turned out to be correct').",
       weight: -3,
       category: "Instruction Following",
       target: "Final answer/artifact",
@@ -1183,6 +1197,7 @@ Also, while you at it, take a look at anything I bought from my company during t
           "Points at the parts she filled in by hand, which she knows she wrote.",
           "Says a first read of small print is worth repeating, which is a method, not a value.",
           "Scopes the second tab back using the words her own notes already use.",
+          "Asks to read the receipts on the page, which is the prompt's own 'so I can go through it all in one place' and the receipt her notes tie to every verified charge.",
         ],
         avoids: [
           "The slip, the restaurant, the fold, the figure.",
@@ -1364,7 +1379,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     {
       n: 5,
       text: "The first tab of 'disputes.html' places the merchant card disputes and the company-account purchases under separate section headings.",
-      weight: 1,
+      weight: 3,
       artifact: "disputes.html, first tab",
       asks: "Whether the two kinds of claim, which go to different people, are told apart before any detail is read.",
       status: "not-present",
@@ -1379,12 +1394,12 @@ Also, while you at it, take a look at anything I bought from my company during t
         view: { src: `${A}/compare/gt-sections.jpg`, canvas: { w: 1300, h: 414 } },
       },
       derived:
-        "A card refund and an employer credit are different conversations. Grouping them is a layout decision, and the heading is a visible element with a visible property.",
+        "A card refund and an employer credit are different conversations. Grouping them is a layout decision, and the heading is a visible element with a visible property. It gets weight 3 because it is the hierarchy of the whole tab, not the styling of one label.",
     },
     {
       n: 6,
       text: "'disputes.html' lists the disputed entries on the first tab in date order within each labelled section, or across the whole list when there are no sections.",
-      weight: 1,
+      weight: 3,
       artifact: "disputes.html, first tab",
       asks: "Whether the list reads as a timeline, which is also what keeps it predictable once it is filtered.",
       status: "not-present",
@@ -1398,7 +1413,7 @@ Also, while you at it, take a look at anything I bought from my company during t
         view: { src: `${A}/compare/gt-company.jpg`, canvas: { w: 852, h: 1300 } },
       },
       derived:
-        "Order is a property of the rendered list and nothing in the notes asks for it. It matters more as the page fills up, which is exactly what she says she will do with it.",
+        "Order is a property of the rendered list and nothing in the notes asks for it. It matters more as the page fills up, which is exactly what she says she will do with it. It gets weight 3 because it is the order of every entry on the tab, not the placement of one.",
     },
     {
       n: 7,

@@ -43,8 +43,8 @@ export const methodSteps: MethodStep[] = [
       body: "Omitting or substituting one makes the task invalid, however good the rest of it is. The 6 categories and 16 subcategories are retired: the taxonomy is now 11 use cases and 68 subcategories.",
     },
     inTask: {
-      body: "A receipts and disputes task sits in Personal finance, under detecting and disputing erroneous charges. What fixes the pair is the user's intent, contesting charges she believes are wrong. The receipts and the bank records are only how that intent is evidenced, and they would have pointed at a different subcategory on their own. It was built when seven parameters were assigned, so its walkthrough shows those seven.",
-      link: { to: `${GT}#parameters`, tag: "GT", label: "The seven it was assigned, and what each one binds" },
+      body: "A receipts and disputes task sits in Personal finance, under detecting and disputing erroneous charges. What fixes the pair is the user's intent, contesting charges she believes are wrong. The receipts and the bank records are only how that intent is evidenced, and they would have pointed at a different subcategory on their own. It was built when seven parameters were assigned, so its walkthrough also shows how the audit reads the two modalities a task that old never carried: off the scenario.",
+      link: { to: `${GT}#parameters`, tag: "GT", label: "What it was assigned, and what each one binds" },
     },
   },
   {

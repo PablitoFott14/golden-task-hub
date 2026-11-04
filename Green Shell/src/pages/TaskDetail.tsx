@@ -969,8 +969,8 @@ function RubricBlock({ t }: { t: GoldenTask }) {
 
       <div className="my-5 grid gap-4 lg:grid-cols-2">
         <Callout title="The 80/20 rule, with nothing spent" tone="ok" icon={<Scale size={12} />}>
-          At least 80% of a block grades completion and at most 20% grades process. This block is
-          100% completion. Every reasoning decision is graded where it lands: in a row on the page,
+          At least 80% of the objective criteria grade completion and at most 20% grade process.
+          This block is 100% completion. Every reasoning decision is graded where it lands: in a row on the page,
           in the body of a draft, or in the mailbox.
         </Callout>
         <Callout title="No criterion only checks that something exists" tone="accent" icon={<Target size={12} />}>
@@ -1153,7 +1153,7 @@ function Subjective({ t }: { t: GoldenTask }) {
         className="mt-5"
         links={[
           { to: "/reference#s7", tag: "G1", label: "Is every subjective criterion judged on the render?" },
-          { to: "/spec#rubric-quality", tag: "SPEC", label: "Filler language, and why it fails" },
+          { to: "/spec#dim-subjective-block-scope", tag: "SPEC", label: "One observable property of the render per criterion" },
         ]}
       />
     </>

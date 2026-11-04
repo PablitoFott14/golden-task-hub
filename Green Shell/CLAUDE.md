@@ -215,8 +215,8 @@ The consequence is the load-bearing contract: **editing a source document is onl
 | `task 1/GTFA.md`, the answer, the must nots and the accepted variations | `answer`, `ledger`, `mustNot`, `variations` in the same file |
 | `task 1/prompt.md`, the `## PROMPT` section only | `prompt.text`, **verbatim**, with `prompt.marks` matched against it at render time |
 | `task 1/draft_history.md` | `draftHistory`, one entry per numbered item |
-| `task 1/rubrics.md` + `rubric_justifications.md` | `rubrics`, text verbatim, `observed` from the justification |
-| `task 1/subjective_rubrics.md` (the **FINAL** block) + its justifications | `subjective` |
+| `task 1/rubrics.md` + `rubric_justifications.md` | `rubrics`, text verbatim except criteria 2, 13, 19 to 22, 24 and 25 (see the file's header), `observed` from the justification |
+| `task 1/subjective_rubrics.md` (the **FINAL** block) + its justifications | `subjective`, with criteria 5 and 6 at weight 3 rather than 1 |
 | `task 1/golden_solution.md` | `goldenRun`, one `Steer` per user message after the first |
 | `task 1/OT/trajectory1.json` and `OT/disputes (4).html` | `run`, and `public/tasks/charge-disputes/ot/` |
 | `Evals/Universes/*.zip` on Drive (generated, see below) | [src/data/universes.ts](src/data/universes.ts) + `complexity-api/universes.ts` |
@@ -1259,9 +1259,9 @@ shape is part of what the page teaches, so [Rubrics.tsx](src/components/Rubrics.
 countable: a `Trajectory` filter that reads **0**, a weight chip on every criterion, and a
 `rubricShape` row stating each count above the block.
 
-- **At most 20% of the weight may grade process, and zero is the preferred number.** This block has
-  no Trajectory criterion at all. The filter stays even though it is empty, because a filter reading
-  zero is the clearest way to show the shape.
+- **At most 20% of the objective criteria, by count, may grade process, and zero is the preferred
+  number.** This block has no Trajectory criterion at all. The filter stays even though it is
+  empty, because a filter reading zero is the clearest way to show the shape.
 - **No criterion may only check that a file, section, column or record exists.** Every one here
   carries its own transaction id, amount, date, receipt reference or filename.
 
@@ -1273,7 +1273,7 @@ Both are guideline rules rather than hub preferences, so they belong to
 words, and nothing validates them.
 
 `run.score` is the failure bar (30% at least, 50% preferred), computed by hand from `rubrics` and `subjective`: 36 of the 69 positive
-objective weight, 23 of the 23 subjective weight, 59 of 92 together. Criterion 22 carries no weight
+objective weight, 27 of the 27 subjective weight, 63 of 96 together. Criterion 22 carries no weight
 line in `rubrics.md`; the 1 comes from `rubric_justifications.md`, which is the only place the
 source states it.
 
