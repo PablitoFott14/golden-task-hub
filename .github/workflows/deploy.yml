@@ -53,6 +53,10 @@ jobs:
           # secret: it exists so the function's ACCESS_CODE can be switched on.
           # The spend cap on the API account is the real backstop.
           VITE_COMPLEXITY_CODE: ${{ secrets.COMPLEXITY_ACCESS_CODE }}
+      # The Universes tab is parked, so the persona viewers it ran stay off the
+      # site. The build still copies public/universes/ into dist/, and they are
+      # taken out here; they stay in the repo and still pack into the ZIPs.
+      - run: rm -rf dist/universes
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

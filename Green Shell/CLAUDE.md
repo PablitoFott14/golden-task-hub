@@ -6,15 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A static React site, the practical reference for contributors (CBs) on the Green Shell / OpenClaw MM
 Rubrics single turn project. **Nine tabs**, and the detail of why is in
-[Nine tabs, and where everything lives](#nine-tabs-and-where-everything-lives). One of them,
-Complexity, is [parked](#the-complexity-tab-is-parked): off the site for now, kept in the source,
-so eight show.
+[Nine tabs, and where everything lives](#nine-tabs-and-where-everything-lives). Two of them,
+Complexity and Universes, are parked ([Complexity](#the-complexity-tab-is-parked),
+[Universes](#the-universes-tab-is-parked)): off the site for now, kept in the source, so seven show.
 
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
-| The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the Universe Viewers, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
+| The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
 | Urgent Alignments | `/alignments` | [UrgentAlignments.tsx](src/pages/UrgentAlignments.tsx) | The issues the client flagged in delivered tasks, each as the mistake beside the fix with the check to run before submitting, led into by a band at the top of `/`. See [The Urgent Alignments tab](#the-urgent-alignments-tab). |
-| Universes | `/universes` | [Universes.tsx](src/pages/Universes.tsx) | The three persona universes, run inside the hub: a grid of persona cards, then one persona's own viewer at a time under a bar of persona tabs (`/universes/:slug`), the viewer alone at `/universes/:slug/full`, and Explore, the same universe as a research tool, at `/universes/:slug/explore`. See [The Universes tab](#the-universes-tab). |
+| Universes | `/universes` | [Universes.tsx](src/pages/Universes.tsx) | **Parked, not on the site**, and every `/universes` route redirects to `/`. See [The Universes tab is parked](#the-universes-tab-is-parked). The persona universes, run inside the hub: a grid of persona cards, then one persona's own viewer at a time under a bar of persona tabs (`/universes/:slug`), the viewer alone at `/universes/:slug/full`, and Explore, the same universe as a research tool, at `/universes/:slug/explore`. See [The Universes tab](#the-universes-tab). |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
 | Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make Model A (Opus 5) fail for real: where the cases come from, then seven failure types as cards, 28 patterns, and the 89 real cases from graded Opus runs behind them, each with why it failed, a filter by what the task has, and a "Model A passed?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
@@ -119,13 +119,13 @@ checklist persistence and every cross-link were verified that way.
 
 The hub was eight tabs and it had stopped being navigable. It went to six, one per thing someone is
 actually doing, and one of those is parked; Universes made it seven, My Performance eight and
-Urgent Alignments nine, so eight show.
+Urgent Alignments nine. Complexity and Universes are parked, so seven show.
 
 | Tab | Route | Panes inside it | Was |
 | --- | --- | --- | --- |
-| The Method | `/` | one scrolling page: hero with the Universe Viewers card, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
+| The Method | `/` | one scrolling page: hero, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
 | Urgent Alignments | `/alignments` | one scrolling page: the issues at a glance, then each issue as the mistake beside the fix, then the checks before submitting | new; the flags were the newest Must Read entries |
-| Universes | `/universes`, `/universes/:slug`, `/universes/:slug/full`, `/universes/:slug/explore` | the persona grid, then one persona's viewer or Explore at a time under the persona bar | new, in place of the external Universe Viewers site |
+| Universes | `/universes`, `/universes/:slug`, `/universes/:slug/full`, `/universes/:slug/explore` | the persona grid, then one persona's viewer or Explore at a time under the persona bar, **parked** and off the site | new, in place of the external Universe Viewers site |
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
 | Failure Approach | `/failure-approach` | **three levels**, all off the hash: the overview (seven type cards and the diagnosis tile, the task filter), a type (`#looking` … `#finishing`), a pattern (`#<pattern-id>`), and `#keeps-passing` | new, in the slot Complexity held; rebuilt from a thirteen pane rail |
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
@@ -906,6 +906,32 @@ noise in a closed row. The `#taxonomy` anchor lives on the component rather than
 it survives being rendered anywhere.
 
 `useCaseCount()` and `subcategoryCount()` are read off the data. Never hardcode either.
+
+### The Universes tab is parked
+
+The persona viewers are **off the published site for now and kept in the source**, as Complexity
+is. Only the ways in were removed:
+
+| Way in | Where it was | Now |
+| --- | --- | --- |
+| The tab, in the nav and the footer | `links` in [Layout.tsx](src/components/Layout.tsx) | Gone |
+| The routes, `/universes/*` | [App.tsx](src/App.tsx) | Every one redirects to `/`, and the page is no longer imported |
+| The Universe Viewers card in the hero | [Method.tsx](src/pages/Method.tsx) | Gone, both copies, with its `Orbit` import |
+| The Oct 18 Universe Viewers notice | `hubUpdates` in [hubLog.ts](src/data/hubLog.ts) | Gone |
+| The ⌘K entries, kind `Universe` | `searchIndex` in [index.ts](src/data/index.ts) | Gone. The kind and its palette tint stay |
+| The viewers' files on the site | `public/universes/`, copied into `dist/` | Taken out of the Pages artifact by the deploy workflow (`rm -rf dist/universes`). A local build still has them |
+
+Nothing behind those was touched: [Universes.tsx](src/pages/Universes.tsx), `universeHost.ts`,
+`universeDownloads.ts`, Explore, `universeCatalog.ts`, `universeViewers.ts`, `public/universes/`,
+the `universe-zips` plugin, the release job and its ZIPs, and every `scripts/universes*` file are as
+they were. Like Complexity, the page **has to keep compiling** while it is parked. Steps 5 to 7 of
+`scripts/universes_validate.sh` open the tab in a browser, so they cannot pass until it is back.
+
+The My Performance card can still link to the tab: `hub-universes` is in the guidance hub's
+`HUB_PAGES`, and its `guidance/catalog.json` names the route. `src/performance/card/` is a verbatim copy, so it is not
+removed here, and until the guidance hub drops it the link lands on the method.
+
+**To bring it back**, revert the commit "Park the Universes tab", or put the ways in back by hand.
 
 ### The Universes tab
 

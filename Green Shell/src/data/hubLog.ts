@@ -1,6 +1,5 @@
 import { guidelinesOnlyChanges } from "./changes";
 import { onboardingItems } from "./onboarding";
-import { universeViewers } from "./universeViewers";
 
 /**
  * The notice bar under the nav on the landing page.
@@ -95,15 +94,6 @@ export const hubUpdates: HubUpdate[] = [
     where: "Spec Doc → Change Log",
     why: "Expertise, Existence Check, Rubric Spot Checks, Architectural Depth & Friction Exposure and Genuine Media Inspection are no longer scored, and Domain Relevance is now Subcategory Relevance. Reasoning Requirement scores 2 or 5, Valid Model Failure is judged against corrected criteria, and flagged missing criteria join the rubric quality denominator. The Guidelines' rules on existence checks and spot checks still apply.",
     to: "/spec#log",
-  },
-  {
-    id: "universe-viewers",
-    date: "Oct 18, 2026",
-    kind: "resource",
-    what: "Explore your universe in the Universe Viewers",
-    where: "The Method → top of the page",
-    why: "Each viewer holds one persona's apps, files and messages, so you can see what the data holds before you build a task on it. The card at the top of this page opens it too.",
-    to: universeViewers.url,
   },
   {
     id: "scenario-adherence",

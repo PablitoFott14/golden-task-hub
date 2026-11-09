@@ -7,7 +7,7 @@ import { useTheme } from "../lib/useTheme";
 import CommandPalette from "./CommandPalette";
 
 /**
- * Nine tabs, one of them parked, and the number is the point.
+ * Nine tabs, two of them parked, and the number is the point.
  *
  * It was eight. Four of those were things a contributor looks something up in
  * rather than works from — onboarding, what moved from Red Shell, the FAQ, and
@@ -44,7 +44,7 @@ import CommandPalette from "./CommandPalette";
  * a method step, which is three sentences and a panel, and it is not the
  * standard. It used to be a separate site the hero linked out to. It sits
  * second, right after the method, because exploring the universe is the
- * method's second step.
+ * method's second step. It is parked for now, below.
  *
  * **Urgent Alignments is second, and this is the argument for it.** It holds
  * the issues the client flagged in delivered tasks, each with the mistake as it
@@ -69,9 +69,10 @@ import CommandPalette from "./CommandPalette";
  * section and the hub page it rests on. It sits last because it is read after
  * the work is audited, and its star marks it as the one tab that is personal.
  *
- * **Complexity is parked.** The proposals tool is off the site for now, so its
- * entry is out of this list and eight tabs show. The page and everything behind
- * it are still in the source, and CLAUDE.md has the way back.
+ * **Complexity and Universes are parked.** The proposals tool and the persona
+ * viewers are off the site for now, so their entries are out of this list and
+ * seven tabs show. The pages and everything behind them are still in the
+ * source, and CLAUDE.md has the way back.
  *
  * **Anything new goes inside one of these.** A tenth tab needs an argument
  * for why it is not a pane of an existing one.
@@ -79,7 +80,6 @@ import CommandPalette from "./CommandPalette";
 const links = [
   { to: "/", label: "The Method", end: true },
   { to: "/alignments", label: "Urgent Alignments", short: "Urgent", urgent: true },
-  { to: "/universes", label: "Universes" },
   { to: "/golden-tasks", label: "Golden Tasks" },
   { to: "/failure-approach", label: "Failure Approach" },
   { to: "/spec", label: "Spec Doc" },

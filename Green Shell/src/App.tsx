@@ -4,7 +4,6 @@ import Method from "./pages/Method";
 import GoldenTasks from "./pages/GoldenTasks";
 import TaskDetail from "./pages/TaskDetail";
 import FailureApproach from "./pages/FailureApproach";
-import Universes from "./pages/Universes";
 import SpecDoc from "./pages/SpecDoc";
 import UrgentAlignments from "./pages/UrgentAlignments";
 import Reference from "./pages/Reference";
@@ -70,10 +69,10 @@ export default function App() {
         <Route path="/" element={<Method />} />
         {/* The issues the client flagged in delivered tasks, and their fixes. */}
         <Route path="/alignments" element={<UrgentAlignments />} />
-        {/* One route for the grid, a persona and its full page, so the page
-            stays mounted between them and a loaded universe survives a visit
-            to the grid. */}
-        <Route path="/universes/*" element={<Universes />} />
+        {/* The Universes tab is parked: off the site, kept in the source, and
+            no longer imported, so it is not in the bundle either. An old link,
+            a persona's included, lands on the method rather than on a 404. */}
+        <Route path="/universes/*" element={<Navigate to="/" replace />} />
         <Route path="/golden-tasks" element={<GoldenTasks />} />
         {/* The vendor closeout task was replaced wholesale, so an old link
             lands on the index rather than on a task that is not the one it
