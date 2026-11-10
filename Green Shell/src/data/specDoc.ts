@@ -127,7 +127,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "MM Inputs",
         "question": "Rate the MM Inputs of the Task Parameters dimension.",
-        "description": "Check against the \"Input Modalities\" field assigned in-task.\nNote: Some older tasks may be missing this field - in these cases, use the scenario in the in-task task parameters to determine the input types, not the task json.",
+        "description": "Check against the \"Input Modalities\" field assigned in-task.\nNote: Some older tasks may be missing this field - in these cases, use the scenario in the in-task task parameters to determine the input types, not the task json.\n\nNOTE: Modality is determined by both file type and content. An image with text in it satisfies both the image and the text modality, and it counts toward the minimum of 3 multimodal inputs.",
         "errorTags": [
           {
             "label": "Fail - MM Input Mismatch",
@@ -136,7 +136,7 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - MM Input Mismatch]\nNone of the MM inputs used in the trajectories aligns with the assigned input type.",
+            "text": "[Fail - MM Input Mismatch]\nNone of the MM inputs used in the trajectories aligns with the assigned input types.",
             "score": 2,
             "justify": true
           },
@@ -178,7 +178,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Minimum Multimodal Inputs",
         "question": "Rate the Minimum Multimodal Inputs of the Input Artifacts dimension.",
-        "description": "Minimum 3 multimodal inputs in the Model A conversation. Intentional distractors count.  For all options except the last, apply the error category.",
+        "description": "Minimum 3 multimodal inputs in the Model A conversation. Intentional distractors count.\n\nNOTE: The \"Text\" input modality also covers images where written text is present.\n\nFor all options except the last, apply the error category.",
         "errorTags": [
           {
             "label": "Fail - Below Minimum Multimodal Inputs",
@@ -192,7 +192,7 @@ export const specGroups: SpecGroup[] = [
             "justify": true
           },
           {
-            "text": "The Model A conversation has 3 or more multimodal input files. (5)",
+            "text": "The Model A conversation has 3 or more multimodal input files.",
             "score": 5,
             "justify": false
           }
@@ -201,10 +201,14 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Realism",
         "question": "Rate the Realism of the Input Artifacts dimension.",
-        "description": "Real user data is messy (IMG_0427.jpg, duplicates, missing timestamps, blurry phone shots, skewed scans). The intent is to catch super-clean, machine-made inputs. At most 20% of input files may be AI-generated; AI is never allowed for pdf/csv/xlsx/docx. CB-created files are allowed (using the files from the provided artifact is not mandatory) and are held to the same standard.  For all options except the last, apply an error category.",
+        "description": "Real user data is messy, but legible where it matters (IMG_0427.jpg, duplicates, missing timestamps, blurry phone shots, skewed scans). The intent is to catch super-clean, machine-made inputs. At most 20% of input files may be AI-generated; AI is never allowed for pdf/csv/xlsx/docx. CB-created files are allowed (using the files from the provided artifact is not mandatory) and are held to the same standard. A value a criterion grades must be readable with confidence; the fix for an unreadable one is a sharper scan or a tolerance in the criterion. A typed copy of the value in the inputs is a fix only if the task still needs the media for other graded values, since a task that can be done without its media fails Prompt - MM Dependence.  For all options except the last, apply an error category.",
         "errorTags": [
           {
             "label": "Fail - Contrived Inputs",
+            "type": "fail"
+          },
+          {
+            "label": "Fail - Illegible Graded Value",
             "type": "fail"
           },
           {
@@ -215,6 +219,11 @@ export const specGroups: SpecGroup[] = [
         "options": [
           {
             "text": "[Fail - Contrived Inputs]\n>20% of the necessary multimodal inputs (or 1+ xlsx, docx or pdf inputs) are highly unrealistic for the prompt: artificial, overly curated or 'too perfect' for a real use case, with no reasonable explanation.",
+            "score": 2,
+            "justify": true
+          },
+          {
+            "text": "[Fail - Illegible Graded Value]\nA value a criterion grades sits in media a careful reader cannot read with confidence (handwriting, a small or angled photo, a cut-off digit), and no other input settles it.",
             "score": 2,
             "justify": true
           },
@@ -293,16 +302,25 @@ export const specGroups: SpecGroup[] = [
           {
             "label": "Non-Fail - Basic Constraints",
             "type": "non-fail"
+          },
+          {
+            "label": "Non-Fail - Stacked Constraints",
+            "type": "non-fail"
           }
         ],
         "options": [
           {
-            "text": "[Fail - Bad Constraints]\nConstraints feel clearly unrealistic or contrived based on the provided context, do not believe that a real user would add these constraints (e.g., sort these books by alphabetical order according to the 2nd letter of the title)\n -OR-\nConstraints are clearly unrealistically stacked (e.g., 3 or more formatting constraints)",
+            "text": "[Fail - Bad Constraints]\nConstraints feel clearly unrealistic or contrived based on the provided context, do not believe that a real user would add these constraints (e.g., sort these books by alphabetical order according to the 2nd letter of the title)",
             "score": 2,
             "justify": true
           },
           {
             "text": "[Non-Fail - Basic Constraints]\nConstraints are pretty basic or may be overused (e.g., keep it brief / I’m in a hurry, explain it to a child, formatting based constraints)\n -OR-\nSubjective constraints, where it’s believable that somebody in this situation of the prompt may find the constraint useful.",
+            "score": 3,
+            "justify": true
+          },
+          {
+            "text": "[Non-Fail - Stacked Constraints]\nConstraints are clearly unrealistically stacked (e.g., 3 or more formatting constraints)",
             "score": 3,
             "justify": true
           },
@@ -316,7 +334,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Valid Model Failure",
         "question": "Rate the Valid Model Failure of the Prompt dimension.",
-        "description": "Applies to: Model A (unhinted) trajectory.\nEvaluate Model A against the true intent of each criterion, not the included evaluations. For an incorrect criterion, judge Model A against the corrected version (what the criterion should have checked). A valid model failure exists if Model A fails at least one correct criterion, or fails the corrected version of an incorrect criterion. If an incorrect criterion can’t be meaningfully corrected (irrelevant, out of scope), ignore it for this dimension.",
+        "description": "Applies to: Model A (unhinted) trajectory.\nEvaluate Model A against the true intent of each criterion, not the included evaluations. For an incorrect criterion, judge Model A against the corrected version (what the criterion should have checked). A valid model failure exists if Model A fails at least one correct criterion, or fails the corrected version of an incorrect criterion. If an incorrect criterion can’t be meaningfully corrected (irrelevant, out of scope), ignore it for this dimension.\nA failure counts only when Model A's run completed and could open every input the failed criterion depends on. A criterion failed because the run broke (an error, a timeout, an input it could not open) is not a model failure; judge the run under Trajectory - Model A Run Completed.",
         "errorTags": [
           {
             "label": "Fail - No Model Failure",
@@ -325,12 +343,12 @@ export const specGroups: SpecGroup[] = [
         ],
         "options": [
           {
-            "text": "[Fail - No Model Failure] The prompt does not cause at least one model to fail one or more criteria, OR the only criterion failed is incorrect, and the model response would fulfil a correctly written version.",
+            "text": "[Fail - No Model Failure] The prompt does not cause Model A to fail one or more criteria; OR the only criterion failed is incorrect and the model response would fulfil a correctly written version.",
             "score": 2,
             "justify": true
           },
           {
-            "text": "The model failure is pronounced and is based on a clear request in the prompt",
+            "text": "Model A's failure is pronounced and is based on a clear request in the prompt",
             "score": 5,
             "justify": false
           }
@@ -445,6 +463,172 @@ export const specGroups: SpecGroup[] = [
             "justify": false
           }
         ]
+      },
+      {
+        "name": "Date Alignment",
+        "question": "Rate the Date Alignment of the Task Data dimension.",
+        "description": "Check that the task's dates are consistent. When the answer depends on what today is (\"today\", \"this month\", \"upcoming\", \"next week\", \"overdue\"), there are two ways to determine the context of the \"current date\" (in order of priority):\n1. A date stated by the prompt (e.g., \"Today is Sept. 13\")\n2. [If no date is stated by the prompt] The date associated with the generated trajectory's timestamp\n\nOnce a date is established—whether by prompt or by timestamp—the records, the golden and the criteria must treat events before it as past and events after it as upcoming.\nA task whose answer does not depend on today needs no date. Live tools, such as flight search or booking, are fine.\n\nExamples:\n- Assuming that the Calendar contains a party scheduled for Sept. 18:\n    - [GOOD] \"Today's Sept. 13—when is the upcoming party?\"\n    - [BAD] \"Today's Sept. 20—when is the upcoming party?\"\n    - [GOOD] \"When's the upcoming party?\" (Assuming that the prompt doesn't state a date, but the trajectory's timestamp is set to Sept. 14)\n    - [GOOD] \"When is Luke's birthday?\" (Doesn't depend on relation to time—it's a set date)\n\nA date mistake Model A makes on its own, against valid criteria, is a model failure, not a fail here.\nFor all options except the last, apply an error category.",
+        "errorTags": [
+          {
+            "label": "Fail - Date Misalignment",
+            "type": "fail"
+          }
+        ],
+        "options": [
+          {
+            "text": "[Fail - Date Misalignment]\nThe prompt contains date-related misalignments between its constraints (e.g., \"upcoming\"), the Universe data, and the established date (whether prompt-stated or timestamp)",
+            "score": 2,
+            "justify": true
+          },
+          {
+            "text": "• Nothing in the task depends on the current date\n• The prompt and the Universe data are fully aligned with the established date (whether prompt-stated or timestamp)",
+            "score": 5,
+            "justify": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Prompt | Criteria",
+    "dimensions": [
+      {
+        "name": "Plain text",
+        "question": "Rate the Plain Text Prompt and Criteria of the Task Data dimension.",
+        "description": "The prompt and every criterion must be plain text: no markdown link code (square brackets followed by a URL in parentheses), no escaped characters (a backslash before [, * or |), and no editor notes such as [EDIT].\nThe editor can turn text that looks like a domain, such as a file name ending in .md, into a markdown link, so the delivered criterion no longer names the file.\nFor all options except the last, apply an error category.",
+        "errorTags": [
+          {
+            "label": "Fail - Changed Literal",
+            "type": "fail"
+          },
+          {
+            "label": "Non-Fail - Editor Residue",
+            "type": "non-fail"
+          }
+        ],
+        "options": [
+          {
+            "text": "[Fail - Changed Literal]\nA file name, value or name that a criterion grades was turned into link code or escaped, so the criterion no longer states it.",
+            "score": 2,
+            "justify": true
+          },
+          {
+            "text": "[Non-Fail - Editor Residue]\nLink code, escapes or editor notes appear elsewhere in the prompt or the criteria.",
+            "score": 3,
+            "justify": true
+          },
+          {
+            "text": "The prompt and every criterion are plain text.",
+            "score": 5,
+            "justify": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Trajectory",
+    "dimensions": [
+      {
+        "name": "Model A Run Completed",
+        "question": "Rate the Model A Run Completed of the Trajectory dimension.",
+        "description": "Applies to: Trajectory A only.\nA criterion Model A failed counts as a model failure only when the run completed and could open the inputs that criterion depends on. Check for a run that ends in an error or a timeout, an input the run could not open or decode (e.g., audio), and an input the package did not ship.\nFor all options except the last, apply the error category.",
+        "errorTags": [
+          {
+            "label": "Fail - Broken Run",
+            "type": "fail"
+          }
+        ],
+        "options": [
+          {
+            "text": "[Fail - Broken Run]\nModel A's run ends in an error or a timeout before it writes the deliverable, OR it could not open an input that a failed criterion depends on.",
+            "score": 2,
+            "justify": true
+          },
+          {
+            "text": "Model A's run completed and opened every input the failed criteria depend on.",
+            "score": 5,
+            "justify": false
+          }
+        ]
+      },
+      {
+        "name": "Feasibility With Tools",
+        "question": "Rate the Feasibility With Tools of the Trajectory dimension.",
+        "description": "Applies to: Requests in Trajectory A or B\nThe primary request is the deliverable the scenario's goal depends on (or the one the prompt depends on, in the case the assigned scenario was infeasible); other asks are secondary.\nFor all options except the last, apply an error category.",
+        "errorTags": [
+          {
+            "label": "Fail - Feasibility with Tools",
+            "type": "fail"
+          },
+          {
+            "label": "Non-Fail - Feasibility with Tools",
+            "type": "non-fail"
+          }
+        ],
+        "options": [
+          {
+            "text": "[Fail - Feasibility with Tools]\nThe primary request is impractical or impossible and cannot be answered by the tools available or enabled for the task.",
+            "score": 2,
+            "justify": true
+          },
+          {
+            "text": "[Non-Fail - Feasibility with Tools]\nOne or more secondary requests are impractical or impossible with the available tools.",
+            "score": 3,
+            "justify": true
+          },
+          {
+            "text": "The requests are completely actionable by the tool framework.",
+            "score": 5,
+            "justify": false
+          }
+        ]
+      },
+      {
+        "name": "Completeness",
+        "question": "Rate the Completeness of the Trajectory dimension.",
+        "description": "Only a missing trajectory is penalized here (not truncation). A truncated, timed-out or errored Model A run is judged under Trajectory - Model A Run Completed.  For all options except the last, apply the error category.",
+        "errorTags": [
+          {
+            "label": "Fail - Missing Trajectory",
+            "type": "fail"
+          }
+        ],
+        "options": [
+          {
+            "text": "[Fail - Missing Trajectory]\nAt least one of the agent trajectories is missing.",
+            "score": 2,
+            "justify": true
+          },
+          {
+            "text": "All trajectories are present.",
+            "score": 5,
+            "justify": false
+          }
+        ]
+      },
+      {
+        "name": "Golden/Preferred Run Selection",
+        "question": "Rate the Golden/Preferred Run Selection of the Trajectory dimension.",
+        "description": "Binary: only penalized (non-fail) when no preferred run is selected.  For all options except the last, apply the error category.",
+        "errorTags": [
+          {
+            "label": "Non-Fail - No Run Selected",
+            "type": "non-fail"
+          }
+        ],
+        "options": [
+          {
+            "text": "[Non-Fail - No Run Selected]\nNo preferred run is selected for the golden trajectory.",
+            "score": 3,
+            "justify": true
+          },
+          {
+            "text": "A run is selected for the golden trajectory.",
+            "score": 5,
+            "justify": false
+          }
+        ]
       }
     ]
   },
@@ -454,7 +638,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Artifact Completeness",
         "question": "Rate the Artifact Completeness of the Golden Solution dimension.",
-        "description": "The golden is reached by hinting Model B with intent-level follow-ups (no milestones). Measured against the prompt's requirements, not the rubric criteria. Narration of how the answer was reached is a Minor Golden Defect.  For all options except the last, apply an error category.",
+        "description": "The golden is reached by hinting Model B with intent-level follow-ups (no milestones). Measured against the prompt's requirements, not the rubric criteria. Narration of how the answer was reached is a Minor Golden Defect. Do not count a golden that fails a rubric criterion here; judge it under Golden Solution - Passes Own Rubric.  For all options except the last, apply an error category.",
         "errorTags": [
           {
             "label": "Non-Fail - Minor Golden Defects",
@@ -523,6 +707,38 @@ export const specGroups: SpecGroup[] = [
             "justify": false
           }
         ]
+      },
+      {
+        "name": "Passes Rubric",
+        "question": "Does the Golden Solution actually pass",
+        "description": "Applies to: Trajectory B (golden) only.\nRate every criterion in both blocks, objective and subjective, against the golden. The golden should score 100%: every positive criterion \"Present\" and every negative criterion \"Not Present\".\n(This question is measured against the rubric; Artifact Completeness is measured against the prompt.)\n\nFor all options except the last, apply an error category.",
+        "errorTags": [
+          {
+            "label": "Fail - Golden Fails Own Rubric",
+            "type": "fail"
+          },
+          {
+            "label": "Non-Fail - Minor Golden Miss on Subjective",
+            "type": "non-fail"
+          }
+        ],
+        "options": [
+          {
+            "text": "[Fail - Golden Fails Own Rubric]\nThe golden fails at least one Objective criteria; OR weight-3/5 Subjective criteria; OR 2+ weight-1 Subjective criteria",
+            "score": 2,
+            "justify": true
+          },
+          {
+            "text": "[Non-Fail - Minor Golden Miss on Subjective]\nThe golden passes all criteria EXCEPT for up to ONE weight-1 Subjective criteria",
+            "score": 3,
+            "justify": true
+          },
+          {
+            "text": "The golden scores 100% on the rubric",
+            "score": 5,
+            "justify": false
+          }
+        ]
       }
     ]
   },
@@ -564,7 +780,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Overall Rubric Quality - 15%",
         "question": "Rate the Overall Rubric Quality - 15% of the Rubric Criteria dimension.",
-        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, plus any missing criteria flagged as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
+        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, plus any missing criteria flagged as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues. A Moderate issue whose fix would leave every Present and Not Present rating unchanged counts as Minor.",
         "errorTags": [
           {
             "label": "Fail - 15%+ Moderate Rubric Errors",
@@ -596,7 +812,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Overall Rubric Quality - 20%",
         "question": "Rate the Overall Rubric Quality - 20% of the Rubric Criteria dimension.",
-        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, plus any missing criteria flagged as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues.",
+        "description": "Use the number of criteria that the CB wrote, objective and subjective blocks together, plus any missing criteria flagged as the denominator while calculating % values. Numerator: each written criterion with an issue this band counts is counted once, at its highest severity; a set of overlapping criteria counts as one issue. Issue types and severities are in the Appendix (Rubric Quality Definitions). Do NOT double count criteria while tallying even if it has multiple issues. A Moderate issue whose fix would leave every Present and Not Present rating unchanged counts as Minor.",
         "errorTags": [
           {
             "label": "Fail - 20%+ Minor Rubric Errors",
@@ -626,23 +842,32 @@ export const specGroups: SpecGroup[] = [
         ]
       },
       {
-        "name": "All Criteria Scoring",
-        "question": "Rate the All Criteria Scoring of the Rubric Criteria dimension.",
-        "description": "This is based on the evaluations present in-task for Model A (not Model B, which is expected to fulfill the rubric).  For all options except the last, apply the error category.",
+        "name": "Verifiable Live Data",
+        "question": "Are Criteria referencing Live data, verifiable",
+        "description": "Every value a criterion grades must be reachable from the package on any day the task runs: the input files, the universe, or a saved copy of a page the prompt relies on.\nA run without web access, or a run on a later day, cannot reach a value that exists only on a live page (e.g., a deadline, a store's hours, an airline rule) or in an offer that has since expired.\nFor a live page, compare the criterion's example value with the saved copy in the package, not with the live page on the day of the audit. This replaces the appendix note on outdated live-page examples: under Overall Rubric Quality, do not count an example as Incorrect Criteria because the live page changed after the task was written. For all options except the last, apply an error category.",
         "errorTags": [
           {
-            "label": "Fail - Trivial Task",
+            "label": "Fail - Graded Value Out of Reach",
             "type": "fail"
+          },
+          {
+            "label": "Non-Fail - Live Value Graded as Retrieved",
+            "type": "non-fail"
           }
         ],
         "options": [
           {
-            "text": "[Fail - Trivial Task] The rubric score for Model A's response is strictly greater than 70%.",
+            "text": "[Fail - Graded Value Out of Reach]\nA criterion grades a fixed value found only on a live page with no saved copy, in a file the bundle does not ship, or in a record that expires before delivery.",
             "score": 2,
             "justify": true
           },
           {
-            "text": "Model A scores less than or equal to 70% on the rubric",
+            "text": "[Non-Fail - Live Value Graded as Retrieved]\nA criterion grades a live value as retrieved, with the author's figure only as an example, and the package holds no saved copy.",
+            "score": 3,
+            "justify": true
+          },
+          {
+            "text": "Every graded value is in the input files, the universe, or a saved copy in the package.",
             "score": 5,
             "justify": false
           }
@@ -706,7 +931,7 @@ export const specGroups: SpecGroup[] = [
       {
         "name": "Subjective Block Scope",
         "question": "Rate the Subjective Block Scope of the Rubric Criteria dimension.",
-        "description": "Tasks producing decks, HTML, PDFs, catalogs or video carry a subjective block: presentation only (layout, legibility, hierarchy, structure, cross-artifact consistency, register), one observable property per criterion, rated for Model A and Model B side by side. A deterministic value check must mandate which content appears, not how it is presented, how much a field carries, or where it sits.  For all options except the last, apply an error category.",
+        "description": "Tasks producing decks, HTML, PDFs, catalogs or video carry a subjective block: presentation only (layout, legibility, hierarchy, structure, cross-artifact consistency, register), one observable property per criterion, rated for Model A and Model B side by side. A deterministic value check must mandate which content appears, not how it is presented, how much a field carries, or where it sits.\n\nNOTE: Presentation requirements the prompt states outright (e.g., ‘put the data in a table’) are graded as objective criteria and are not block bleed. The subjective block grades presentation the prompt doesn’t spell out.\n\nFor all options except the last, apply an error category.",
         "errorTags": [
           {
             "label": "Non-Fail - Minor Scope Bleed",
@@ -807,81 +1032,26 @@ export const specGroups: SpecGroup[] = [
     ]
   },
   {
-    "group": "Trajectory",
+    "group": "Complexity",
     "dimensions": [
       {
-        "name": "Feasibility With Tools",
-        "question": "Rate the Feasibility With Tools of the Trajectory dimension.",
-        "description": "Applies to: Requests in Trajectory A or B\nThe primary request is the deliverable the scenario's goal depends on (or the one the prompt depends on, in the case the assigned scenario was infeasible); other asks are secondary.\nFor all options except the last, apply an error category.",
+        "name": "Pass@k Scores",
+        "question": "Are the Pass@k scores under 70%?",
+        "description": "",
         "errorTags": [
           {
-            "label": "Fail - Feasibility with Tools",
-            "type": "fail"
-          },
-          {
-            "label": "Non-Fail - Feasibility with Tools",
+            "label": "Non-Fail - Pass@k Too High",
             "type": "non-fail"
           }
         ],
         "options": [
           {
-            "text": "[Fail - Feasibility with Tools]\nThe primary request is impractical or impossible and cannot be answered by the tools available or enabled for the task.",
-            "score": 2,
-            "justify": true
-          },
-          {
-            "text": "[Non-Fail - Feasibility with Tools]\nOne or more secondary requests are impractical or impossible with the available tools.",
+            "text": "[Non-Fail - Pass@k Too High]\nThe Pass@k score is ≥ 70%",
             "score": 3,
             "justify": true
           },
           {
-            "text": "The requests are completely actionable by the tool framework.",
-            "score": 5,
-            "justify": false
-          }
-        ]
-      },
-      {
-        "name": "Completeness",
-        "question": "Rate the Completeness of the Trajectory dimension.",
-        "description": "Only a missing trajectory is penalized (not truncation).  For all options except the last, apply the error category.",
-        "errorTags": [
-          {
-            "label": "Fail - Missing Trajectory",
-            "type": "fail"
-          }
-        ],
-        "options": [
-          {
-            "text": "[Fail - Missing Trajectory]\nAt least one of the agent trajectories is missing.",
-            "score": 2,
-            "justify": true
-          },
-          {
-            "text": "All trajectories are present.",
-            "score": 5,
-            "justify": false
-          }
-        ]
-      },
-      {
-        "name": "Golden/Preferred Run Selection",
-        "question": "Rate the Golden/Preferred Run Selection of the Trajectory dimension.",
-        "description": "Binary: only penalized (non-fail) when no preferred run is selected.  For all options except the last, apply the error category.",
-        "errorTags": [
-          {
-            "label": "Non-Fail - No Run Selected",
-            "type": "non-fail"
-          }
-        ],
-        "options": [
-          {
-            "text": "[Non-Fail - No Run Selected]\nNo preferred run is selected for the golden trajectory.",
-            "score": 3,
-            "justify": true
-          },
-          {
-            "text": "A run is selected for the golden trajectory.",
+            "text": "The Pass@k score is < 70%",
             "score": 5,
             "justify": false
           }
@@ -1167,9 +1337,6 @@ export const dimensionLinks: Record<string, XLink[]> = {
   "80/20 Outcome Split (Process Over Cap)": [
     { to: "/reference#outcome-over-process", tag: "WN", label: "Eighty per cent outcome, and the cap that bites" },
     { to: "/#rubrics", tag: "M8", label: "Where the split is decided" },
-  ],
-  "All Criteria Scoring": [
-    { to: "/reference#literal-matching", tag: "WN", label: "Literal matching, and what it costs" },
   ],
   "Rubric Structure": [
     { to: "/#rubrics", tag: "M8", label: "One criterion, one observable outcome" },

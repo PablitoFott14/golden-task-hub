@@ -276,7 +276,6 @@ export const guidelineChanges: GuidelineChange[] = [
     detail: {
       label: "Reading the bar",
       items: [
-        "The QA rubric draws the same line from the other side: a Model A score above 70% fails the task as trivial.",
         "Only genuine failures count toward it. A raised weight, an ask added after the run, or one miss repeated across several criteria is exactly what the rule rules out.",
         "Where the assigned scenario is too simple to reach 30%, its complexity may be raised, and only as far as needed, while every other parameter stays as assigned.",
       ],
@@ -284,7 +283,6 @@ export const guidelineChanges: GuidelineChange[] = [
     links: [
       { to: "/#failure", tag: "M7", label: "If the model sails through, the task is not ready" },
       { to: "/failure-approach", tag: "FA", label: "How Opus actually fails, case by case" },
-      { to: "/spec#dim-all-criteria-scoring", tag: "QC", label: "All Criteria Scoring" },
     ],
   },
   {

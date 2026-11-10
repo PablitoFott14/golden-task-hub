@@ -129,7 +129,7 @@ Urgent Alignments nine. Complexity and Universes are parked, so seven show.
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
 | Failure Approach | `/failure-approach` | **three levels**, all off the hash: the overview (seven type cards and the diagnosis tile, the task filter), a type (`#looking` … `#finishing`), a pattern (`#<pattern-id>`), and `#keeps-passing` | new, in the slot Complexity held; rebuilt from a thirteen pane rail |
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
-| Spec Doc | `/spec` | **7 dimension groups** (default: Task Parameters) · 3 appendix sections · Change log | `/spec` |
+| Spec Doc | `/spec` | **9 dimension groups** (default: Task Parameters) · 3 appendix sections · Change log | `/spec` |
 | Reference | `/reference`, `/reference/:pane` | **Onboarding** (default) · Pre-Submit · Must Read: Project Updates · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
 | My Performance | `/performance` | the landing (CB ID), then the contributor's card under the hub's header | new |
 
@@ -323,7 +323,7 @@ check that line when a regeneration produces no diff.
 multi-turn viewer at <https://qc-spec-mt-rubrics.vercel.app/>. That viewer serves the multi-turn
 spec and says nothing about Green Shell. The two projects therefore keep **separate specs,
 separate change logs and separate generators**, and neither can write over the other: Green Shell's
-spec is 28 dimensions in 7 groups built for single turn, Red Shell's is 22 in 8 built for
+spec is 33 dimensions in 9 groups built for single turn, Red Shell's is 22 in 8 built for
 multi-turn. A Green Shell re-export never touches `Red Shell/src/data/`.
 
 The appendix carries four sections and all four are transcribed. One of them is a **superseded

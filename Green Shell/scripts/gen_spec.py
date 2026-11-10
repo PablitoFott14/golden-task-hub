@@ -258,9 +258,6 @@ DIMENSION_LINKS = """export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/reference#outcome-over-process", tag: "WN", label: "Eighty per cent outcome, and the cap that bites" },
     { to: "/#rubrics", tag: "M8", label: "Where the split is decided" },
   ],
-  "All Criteria Scoring": [
-    { to: "/reference#literal-matching", tag: "WN", label: "Literal matching, and what it costs" },
-  ],
   "Rubric Structure": [
     { to: "/#rubrics", tag: "M8", label: "One criterion, one observable outcome" },
   ],

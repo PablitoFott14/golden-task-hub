@@ -7,7 +7,7 @@
  *
  * **The log is the last five changes, not a history.** A change is a group:
  * one thing an author or reviewer now does differently, with every dimension it
- * touches listed under it. V6 touched twenty dimensions and is five changes
+ * touches listed under it. V7 touched seventeen dimensions and is five changes
  * here. When a new revision lands, diff its export against the one the hub was
  * carrying, write what moved as grouped changes, most important first, and put
  * the revision on top. Then delete changes from the bottom until five remain,
@@ -72,95 +72,108 @@ export const specLogNote =
 /**
  * Newest first, and five changes at most across every revision here.
  *
- * V6 was diffed against V4, since V5 never reached the hub, so it carries
- * everything in between. Constraints, Hint Leak (Leg B), All Criteria Scoring,
- * the 80/20 split and Single-Turn Structure were reworded without changing what
- * they score, so they carry no entry.
+ * V7 was diffed against V6. Its five changes fill the log, so V6 came out.
+ * MM Inputs and Minimum Multimodal Inputs also had an option reworded without
+ * changing what it scores, which carries no entry.
  */
 export const specRevisions: SpecRevision[] = [
   {
-    id: "green-shell-v6",
-    version: "V6",
-    date: "Oct 26, 2026",
-    title: "Five dimensions leave the spec, and the parameter checks read the fields in the task",
+    id: "green-shell-v7",
+    version: "V7",
+    date: "Nov 10, 2026",
+    title: "Six dimensions join the spec, and All Criteria Scoring leaves it",
     changes: [
       {
-        kind: "removed",
-        title: "Five dimensions are no longer scored",
-        note: "The spec now scores 28 dimensions, down from 33. The Guidelines' rules on existence checks and spot checks still apply.",
+        kind: "scoring",
+        title: "Four new checks on the prompt, the criteria and Model A's run",
         items: [
-          { dimension: "Expertise" },
-          { dimension: "Existence Check" },
-          { dimension: "Rubric Spot Checks" },
-          { dimension: "Architectural Depth & Friction Exposure" },
-          { dimension: "Genuine Media Inspection" },
+          {
+            dimension: "Plain text",
+            text: "The prompt and every criterion are plain text, with no link code, escapes or editor notes. A graded file name or value turned into link code fails.",
+          },
+          {
+            dimension: "Date Alignment",
+            text: "When the answer depends on today, the records, the golden and the criteria agree with the date the prompt states, or with the run's timestamp where it states none.",
+          },
+          {
+            dimension: "Model A Run Completed",
+            text: "Model A's run has to finish and open every input its failed criteria depend on. An error, a timeout or an input it could not open fails.",
+          },
+          {
+            dimension: "Verifiable Live Data",
+            text: "Every graded value is reachable from the package: the inputs, the universe, or a saved copy of the page. A fixed value found only on a live page fails. Examples are checked against the saved copy, so a live page that changed later does not make a criterion incorrect.",
+          },
         ],
       },
       {
         kind: "scoring",
-        title: "Three prompt dimensions are judged differently",
+        title: "The golden is rated against its own rubric, and pass@k is scored",
         items: [
           {
-            dimension: "Reasoning Requirement",
-            text: "The Non-Fail band is gone, so a prompt scores 2 or 5. It passes when it needs reasoning beyond simple factual lookup or definition.",
+            dimension: "Passes Rubric",
+            text: "Every criterion in both blocks is rated against the golden, which has to score 100%. Missing one weight 1 subjective criterion is a Non-Fail, anything more fails.",
+          },
+          {
+            dimension: "Pass@k Scores",
+            text: "A pass@k of 70% or more is a Non-Fail.",
+          },
+        ],
+      },
+      {
+        kind: "scoring",
+        title: "Five dimensions score differently",
+        items: [
+          {
+            dimension: "Realism",
+            text: "A new Fail, Illegible Graded Value: a graded value a careful reader cannot read with confidence, and no other input settles it. Fix it with a sharper scan or a tolerance in the criterion.",
+          },
+          {
+            dimension: "Constraints",
+            text: "Stacked constraints, such as three or more formatting constraints, are a Non-Fail now, not a Fail.",
           },
           {
             dimension: "Valid Model Failure",
-            text: "Model A is judged against what each criterion should have checked, so a failure that disappears once the criterion is corrected does not count. The Fail no longer names a weak failure or one built on an ambiguous prompt.",
+            text: "Judged on Model A alone. A criterion failed because the run broke, through an error, a timeout or an input it could not open, is not a model failure.",
           },
           {
-            dimension: "Professionalism",
-            text: "Judged against the assigned L1 category, not the domain.",
+            dimension: "Overall Rubric Quality - 15%",
+            text: "A Moderate issue whose fix leaves every Present and Not Present rating unchanged counts as Minor.",
+          },
+          {
+            dimension: "Overall Rubric Quality - 20%",
+            text: "A Moderate issue whose fix leaves every Present and Not Present rating unchanged counts as Minor.",
           },
         ],
       },
       {
-        kind: "scoring",
-        title: "Flagged missing criteria join the rubric quality denominator",
-        note: "The denominator is now every criterion written, objective and subjective blocks together, plus any missing criteria flagged. With 20 written and 2 flagged missing, it is 22.",
-        items: [
-          { dimension: "Overall Rubric Quality - 10%" },
-          { dimension: "Overall Rubric Quality - 15%" },
-          { dimension: "Overall Rubric Quality - 20%" },
-        ],
+        kind: "removed",
+        title: "All Criteria Scoring is no longer scored",
+        note: "A Model A score above 70% no longer fails the task as trivial. The Guidelines' 30% failure floor still applies. With the six new dimensions, the spec scores 33, up from 28.",
+        items: [{ dimension: "All Criteria Scoring" }],
       },
       {
         kind: "guidance",
-        title: "Parameter checks read the fields assigned in the task",
-        note: "Each is checked against a field assigned in the task instead of the task parameter sheet. The scored options are unchanged.",
+        title: "Smaller changes to five dimensions",
         items: [
-          { dimension: "Assigned Universe", text: "The “Universe” field." },
           {
             dimension: "MM Inputs",
-            text: "The “Input Modalities” field. Where an older task has none, use the scenario in the in-task task parameters, not the task json.",
+            text: "Modality is read from the content as well as the file type. An image with text in it covers both the image and the text modality, and counts toward the minimum of three.",
           },
-          { dimension: "Output Artifact", text: "The “Output Modalities” field." },
-          { dimension: "Category Relevance", text: "The “Use Case (L1)” field." },
-          {
-            dimension: "Subcategory Relevance",
-            text: "The “Subcategory (L2)” field. Renamed from Domain Relevance.",
-          },
-        ],
-      },
-      {
-        kind: "guidance",
-        title: "Smaller changes to four dimensions",
-        items: [
           {
             dimension: "Minimum Multimodal Inputs",
-            text: "The 5 no longer asks that every file has a purpose. Intentional distractors still count.",
-          },
-          {
-            dimension: "Artifact Completeness",
-            text: "A requested file under the wrong name is not a missing artifact. Match it to its request by content.",
+            text: "The Text modality also covers images with written text in them.",
           },
           {
             dimension: "Subjective Block Scope",
-            text: "The guidance no longer says the block is positives only.",
+            text: "Presentation the prompt states outright, such as putting the data in a table, is graded in the objective block and is not block bleed.",
           },
           {
-            dimension: "Feasibility With Tools",
-            text: "Judged on the requests in Trajectory A or B. Where the assigned scenario was infeasible, the primary request is the one the prompt depends on.",
+            dimension: "Artifact Completeness",
+            text: "A golden that fails a rubric criterion is judged under Passes Rubric, not here.",
+          },
+          {
+            dimension: "Completeness",
+            text: "A truncated, timed out or errored Model A run is judged under Model A Run Completed, not here.",
           },
         ],
       },

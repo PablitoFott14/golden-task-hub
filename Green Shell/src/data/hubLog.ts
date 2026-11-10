@@ -57,6 +57,15 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "spec-v7",
+    date: "Nov 10, 2026",
+    kind: "guidelines",
+    what: "The V7 rubric adds six dimensions and drops All Criteria Scoring",
+    where: "Spec Doc → Change Log",
+    why: "Plain text, Date Alignment, Model A Run Completed, Verifiable Live Data, Passes Rubric and Pass@k Scores are now scored, and a Model A score above 70% no longer fails the task as trivial. Realism now fails a graded value a careful reader cannot read with confidence, stacked constraints are a Non-Fail, and a criterion failed because Model A's run broke is not a model failure.",
+    to: "/spec#log",
+  },
+  {
     id: "client-flags-nov-2",
     date: "Nov 2, 2026",
     kind: "guidelines",
