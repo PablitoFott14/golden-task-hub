@@ -129,7 +129,7 @@ export const guidelineChanges: GuidelineChange[] = [
     detail: {
       label: "Reading the score",
       items: [
-        "Add the eight run scores and divide by 8. With four graded runs per model, that is the midpoint of the two means: an Opus mean of 0.74 and a Muse mean of 0.52 give 0.63, inside the range.",
+        "Grading results shows the average as the mean score, as a percentage: 66% is 0.66. To check it, add the eight run scores and divide by 8. With four graded runs per model, that is the midpoint of the two means: an Opus mean of 0.74 and a Muse mean of 0.52 give 0.63, inside the range.",
         "Selecting a preferred run has no impact. All 8 runs are generated and all 8 are graded, whichever run is marked as preferred.",
         "A criterion added, dropped, reworded or reweighted only to move the average into range is manipulation, whichever way it moves the score.",
         "Where the assigned scenario is too simple to bring the average down to 0.7 or below, its complexity may be raised, and only as far as needed, while every other parameter stays as assigned.",

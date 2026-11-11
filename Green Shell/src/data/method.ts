@@ -330,7 +330,7 @@ export const methodSteps: MethodStep[] = [
     means:
       "Click Grade runs and the agentic judge grades all 8 runs against your rubrics. Their average score has to fall between 0.3 and 0.7, and it has to come from genuine rubrics aligned with the golden. Then verify every prefilled Present or Not Present on the first valid Opus run, and justify every failure.",
     moves: [
-      "Add the eight run scores, four Opus and four Muse, and divide by 8. The panel is for information and does not block submission: the range is yours to check.",
+      "Read the average as the mean score in Grading results: 66% is 0.66. To check it, add the eight run scores, four Opus and four Muse, and divide by 8. The pass@k panel is for information and does not block submission: the range is yours to check.",
       "Above 0.7, the task is too easy: revisit the scenario's complexity, never the rubric set.",
       "Below 0.3, check that every criterion accepts every valid answer and that no run broke. If both hold, revisit the scenario.",
       "Change a criterion only to fix a genuine defect, then grade the 8 runs again. A change to the prompt or the inputs means a new golden and new runs.",
@@ -352,6 +352,70 @@ export const methodSteps: MethodStep[] = [
     ],
   },
 ];
+
+/** One screen of the task page, shown under the step that happens on it. */
+export interface StepScreen {
+  /** Path under public/. */
+  src: string;
+  /** Natural size, so the frame holds its space before the image loads. */
+  w: number;
+  h: number;
+  /** The screen's name on the platform, which leads the caption. */
+  title: string;
+  /** What the screen shows and how it ties back to the step. */
+  caption: string;
+  alt: string;
+}
+
+/**
+ * The platform screens for the two steps that run on the task page itself:
+ * pass@k generation (step 8) and grading (step 11). Captions match Figures 16
+ * to 19 of the Nov 11, 2026 guidelines. All four screenshots come from one
+ * real task, so the numbers agree across them: Grade 8 is Opus Run 1, and the
+ * eight scores average 0.66, the 66% mean score in Grading results.
+ */
+export const stepScreens: Partial<Record<string, StepScreen[]>> = {
+  passk: [
+    {
+      src: "method/passk-claude-runs.png",
+      w: 1408,
+      h: 328,
+      title: "The Claude step",
+      caption:
+        "Four Claude Opus 5.5 runs of your prompt, all completed. Run 1 is the first valid Opus run, the reference run you download with Download trajectories. The 4/8 runs used counter means up to four more runs can still replace a failed one.",
+      alt: "The Claude step on the task page: Agent runs (4), four completed Opus runs, each with Mark as preferred, Download trajectories and View.",
+    },
+    {
+      src: "method/passk-muse-runs.png",
+      w: 1436,
+      h: 579,
+      title: "The Muse step",
+      caption:
+        "Four Muse Wonder runs of the same prompt, started together with the Claude runs and all completed. Complete 4 runs (4/4) confirms the step is done. You can move on once both steps have four runs completed without errors.",
+      alt: "The Muse step on the task page: four completed Muse Wonder runs and the line Complete 4 runs (4/4).",
+    },
+  ],
+  failure: [
+    {
+      src: "method/grading-runs.png",
+      w: 1434,
+      h: 568,
+      title: "Grading runs",
+      caption:
+        "After you click Grade runs, each of the 8 pass@k runs is graded against your rubrics, with its model and its score. Grade numbers are not run numbers: here Grades 1 to 4 are the Muse runs, and Grade 8 is Opus Run 1, the reference run.",
+      alt: "Grading runs (8): eight completed grades, four Opus and four Muse, each with its score.",
+    },
+    {
+      src: "method/grading-results.png",
+      w: 1468,
+      h: 396,
+      title: "Grading results",
+      caption:
+        "One row per run and one column per criterion, green where the run passed the criterion and red where it failed it. The mean score in the header is the average across all 8 runs, the number that has to fall between 0.3 and 0.7: 66% here, so 0.66, inside the range.",
+      alt: "Grading results: 8 runs graded, mean score 66%, and a grid of passed and failed criteria for each run.",
+    },
+  ],
+};
 
 /** The three habits that decide whether the method above produces anything. */
 export const mindset = [

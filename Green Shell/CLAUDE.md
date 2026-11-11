@@ -423,6 +423,14 @@ Adding a method step means adding it to `methodSteps`, adding the matching stage
 the walkthrough is the method, so a heading with no step behind it is exactly the second flow this
 structure exists to prevent. Sub-headings inside a stage are fine and carry no rail entry.
 
+**Steps 8 and 11 also show the platform screens.** `stepScreens` in
+[src/data/method.ts](src/data/method.ts), keyed by step id, holds the task-page screenshots for the
+two steps that happen on the page itself, the pass@k runs and grading, and the panel renders them
+full width under "On the platform", each opening at full size. The images are in `public/method/`,
+trimmed only at their broken edges, and the captions match Figures 16 to 19 of the Nov 11
+guidelines. All four come from one task, so their numbers agree with each other (Grade 8 is Opus
+Run 1, and the eight scores average the 66% mean score): replace them as a set or not at all.
+
 ### The spec and the checklist follow the Golden Task Viewer's layout
 
 Both pages deliberately reproduce the structure of

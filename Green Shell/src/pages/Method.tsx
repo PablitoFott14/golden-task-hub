@@ -21,7 +21,7 @@ import {
   Sparkles,
   Target,
 } from "lucide-react";
-import { methodSteps, mindset, hardRequirements } from "../data/method";
+import { methodSteps, mindset, hardRequirements, stepScreens } from "../data/method";
 import {
   universeVideoLinks,
   universeVideoPitch,
@@ -39,7 +39,7 @@ import AlignmentsBand from "../components/AlignmentsBand";
 import HubLog from "../components/HubLog";
 import QuickAnswers from "../components/QuickAnswers";
 import VideoStrip from "../components/VideoStrip";
-import { cx } from "../lib/util";
+import { asset, cx } from "../lib/util";
 
 const phaseTone: Record<string, { chip: string; badge: string; bar: string }> = {
   Design: {
@@ -127,6 +127,7 @@ export default function Method() {
   const [active, setActive] = useState(1);
   const panelRef = useRef<HTMLDivElement>(null);
   const step = methodSteps.find((s) => s.n === active)!;
+  const screens = stepScreens[step.id];
   const { hash, key } = useLocation();
 
   /** A step id in the hash selects that step and opens its panel. The
@@ -443,6 +444,40 @@ export default function Method() {
                     </p>
                   )}
                 </div>
+
+                {/* The screens a step happens on, for the steps that run on the
+                    task page itself. Full width so the platform text stays
+                    legible, and each one opens at full size. */}
+                {screens && (
+                  <div className="lg:col-span-2">
+                    <div className="mono-label mb-3 text-ink-400">On the platform</div>
+                    <div className="space-y-6">
+                      {screens.map((sc) => (
+                        <figure key={sc.src}>
+                          <a
+                            href={asset(sc.src)}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`${sc.title}, open at full size`}
+                            className="block overflow-hidden rounded-xl border border-ink-200"
+                          >
+                            <img
+                              src={asset(sc.src)}
+                              alt={sc.alt}
+                              width={sc.w}
+                              height={sc.h}
+                              loading="lazy"
+                              className="block h-auto w-full"
+                            />
+                          </a>
+                          <figcaption className="mt-2.5 max-w-4xl text-[13px] leading-relaxed text-ink-600">
+                            <span className="font-semibold text-ink-800">{sc.title}.</span> {sc.caption}
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-2 lg:col-span-2">
                   <button
