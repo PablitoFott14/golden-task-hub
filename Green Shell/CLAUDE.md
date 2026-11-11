@@ -12,12 +12,12 @@ Complexity and Universes, are parked ([Complexity](#the-complexity-tab-is-parked
 
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
-| The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, the ten method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
+| The Method | `/` | [Method.tsx](src/pages/Method.tsx) | The landing page. The latest guideline changes, the universe videos, the eleven method steps, the mindset, the quick answers block, the hard requirements, where to go next. |
 | Urgent Alignments | `/alignments` | [UrgentAlignments.tsx](src/pages/UrgentAlignments.tsx) | The issues the client flagged in delivered tasks, each as the mistake beside the fix with the check to run before submitting, led into by a band at the top of `/`. See [The Urgent Alignments tab](#the-urgent-alignments-tab). |
 | Universes | `/universes` | [Universes.tsx](src/pages/Universes.tsx) | **Parked, not on the site**, and every `/universes` route redirects to `/`. See [The Universes tab is parked](#the-universes-tab-is-parked). The persona universes, run inside the hub: a grid of persona cards, then one persona's own viewer at a time under a bar of persona tabs (`/universes/:slug`), the viewer alone at `/universes/:slug/full`, and Explore, the same universe as a research tool, at `/universes/:slug/explore`. See [The Universes tab](#the-universes-tab). |
 | Golden Tasks | `/golden-tasks` | [GoldenTasks.tsx](src/pages/GoldenTasks.tsx) | The reference-only disclaimer, then one card per worked task. |
 | | `/golden-tasks/:id` | [TaskDetail.tsx](src/pages/TaskDetail.tsx) | The walkthrough, its sections nested under the method steps, rail on the left. |
-| Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make Model A (Opus 5) fail for real: where the cases come from, then seven failure types as cards, 28 patterns, and the 89 real cases from graded Opus runs behind them, each with why it failed, a filter by what the task has, and a "Model A passed?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
+| Failure Approach | `/failure-approach` | [FailureApproach.tsx](src/pages/FailureApproach.tsx) | How Opus actually fails, and how to make the pass@k runs fail for real: where the cases come from, then seven failure types as cards, 28 patterns, and the 89 real cases from graded Opus runs behind them, each with why it failed, a filter by what the task has, and a "Score above 0.7?" diagnosis. Hash routed, three levels. See [The Failure Approach tab](#the-failure-approach-tab). |
 | Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | **Parked, not on the site**, and the route redirects to `/`. The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
 | Spec Doc | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec: the dimensions, the appendix and the change log, one pane at a time off a vertical rail, under one search. |
 | Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, the must-read project updates, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
@@ -123,7 +123,7 @@ Urgent Alignments nine. Complexity and Universes are parked, so seven show.
 
 | Tab | Route | Panes inside it | Was |
 | --- | --- | --- | --- |
-| The Method | `/` | one scrolling page: hero, universe videos, the 10 steps, hard requirements, quick answers, where to go next | unchanged |
+| The Method | `/` | one scrolling page: hero, universe videos, the 11 steps, hard requirements, quick answers, where to go next | unchanged |
 | Urgent Alignments | `/alignments` | one scrolling page: the issues at a glance, then each issue as the mistake beside the fix, then the checks before submitting | new; the flags were the newest Must Read entries |
 | Universes | `/universes`, `/universes/:slug`, `/universes/:slug/full`, `/universes/:slug/explore` | the persona grid, then one persona's viewer or Explore at a time under the persona bar, **parked** and off the site | new, in place of the external Universe Viewers site |
 | Golden Tasks | `/golden-tasks`, `/golden-tasks/:id` | index, then one walkthrough per task | unchanged |
@@ -233,7 +233,7 @@ that lived beside the guidelines on Drive; that script is gone, and `checklist.m
 multi-turn gate. On Oct 11, 2026 the gate was rewritten against the Green Shell guidelines (single
 turn, fourteen parameters, the 80/20 rule and the two automatic fails, the subjective block in
 section 7, Leg B as Leg B), keeping the original's purpose and frame: one pass when the task is
-finished, seven sections in build order, a question and a footnote per check, refs into the
+finished, sections in build order, a question and a footnote per check, refs into the
 guidelines, the Ready and Fix boxes. Reprint it after any change to the gate:
 
 ```bash
@@ -280,7 +280,9 @@ with them. That is the shape of every reorder.
 The gate is **one Letter page**, and the generator holds it there by stepping the type scale down
 two points at a time until it fits, refusing to write below 80%. Sections stay whole, and the cut
 between the two columns is measured, not guessed: each cut is rendered small and the one whose
-taller column is shortest wins. At 29 checks it prints at 82% with sections 1 to 4 on the left.
+taller column is shortest wins. On Nov 11, 2026 it was reordered to the v3 build order: eight
+sections, the golden (s5) before the objective block (s6), grading and rating last (s8). At 29
+checks it prints at 80%, the floor, with sections 1 to 4 on the left.
 Thirty one checks did not fit at the original's type size, which is why two pairs were merged (self
 contained criteria with literal matching, Leg B with the golden passing its block). So a new rule
 goes into an existing check's wording unless it genuinely needs its own tick box.
@@ -376,10 +378,13 @@ is a `removed` change: the dimension is gone, so the entry names it as it was an
 
 ### The method is the spine
 
-`methodSteps` in [src/data/method.ts](src/data/method.ts) is ten steps, rewritten against the
+`methodSteps` in [src/data/method.ts](src/data/method.ts) is eleven steps, rewritten against the
 Green Shell guidelines and brought up to their Oct 8, 2026 revision: fourteen assigned parameters,
-every assigned input modality covered, the execution target stated in the prompt, Leg A named as the
-Opus 5 leg. The Golden Task was built when seven parameters were assigned, and its step 1 says so.
+every assigned input modality covered, the execution target stated in the prompt. The Nov 11, 2026
+revision (v3) reordered the back half: golden (7), pass@k runs (8, `passk`), objective (9) and
+subjective (10) rubrics built from the golden, grading and rating (11, still `failure`, because
+links from outside the hub name it). Phases are Design, Golden, Pass@k and Rubrics. The Golden Task
+predates that order (one Opus 5 run before its golden) and its stages say so. The Golden Task was built when seven parameters were assigned, and its step 1 says so.
 The headings that count the steps and the hard requirements read the count off the data. **The
 order is the argument**: step 1 fixes the assigned pair, step 2
 explores the universe inside that pair, step 3 is the one situation where both are true, step 4 is
@@ -511,12 +516,13 @@ im.resize((880, 495), Image.LANCZOS).save("public/onboarding/<id>-cover.png", op
 
 [src/data/failureApproach.ts](src/data/failureApproach.ts) holds the tab and
 [FailureApproach.tsx](src/pages/FailureApproach.tsx) lays it out. **Its one job is helping a
-contributor make Model A fail for real**: real cases of how Opus fails as an agent, why each one
-failed, and how to build the same pressure into a Green Shell Leg A. It deliberately carries no
-planning sequence, rating guidance or Leg B hints, because the method, the Golden Task and the spec
+contributor make the pass@k runs fail for real**: real cases of how Opus fails as an agent, why each one
+failed, and how to build the same pressure into a Green Shell task. It deliberately carries no
+planning sequence, rating guidance or golden hints, because the method, the Golden Task and the spec
 own those; where it touches them it links rather than restates.
 
-**Leg A runs Opus 5**, as guidelines section 3 names it ("Leg A (Opus 5 leg)"). `legAModel` holds
+**Leg A is gone since Nov 11, 2026**: tasks are graded on 8 pass@k runs (4 Claude Opus 5.5, 4 Muse
+Wonder 1.1). `legAModel` still holds "Opus 5", the newest Opus among the cases, and holds
 the string once; every case names its version, the Opus 5 ones are filled in the brand colour, a
 pattern with an Opus 5 case says "Seen on Opus 5", and the sources strip counts them.
 
@@ -601,7 +607,7 @@ renders as a link to its pattern, while the pattern's Golden Task case links bac
 ⌘K index has one row per type, one per pattern with every case in its `terms`, and one for the
 diagnosis, under the kind `Failure approach`.
 
-**It follows the guidelines where the studies do not**: the 30% failure floor with 50% preferred,
+**It follows the guidelines where the studies do not**: the 0.3 to 0.7 average of the 8 pass@k runs,
 an assigned universe you explore rather than build, grading where it lands, no breaking tools or
 files on purpose, deviation from a parameter only as the guidelines allow.
 
@@ -1298,7 +1304,7 @@ Both are guideline rules rather than hub preferences, so they belong to
 [checklist.ts](src/data/checklist.ts) and [method.ts](src/data/method.ts) all state the totals in
 words, and nothing validates them.
 
-`run.score` is the failure bar (30% at least, 50% preferred), computed by hand from `rubrics` and `subjective`: 36 of the 69 positive
+`run.score` is the weight the Golden Task's one rated run lost (the task predates pass@k, so it has no 8-run average), computed by hand from `rubrics` and `subjective`: 36 of the 69 positive
 objective weight, 27 of the 27 subjective weight, 63 of 96 together. Criterion 22 carries no weight
 line in `rubrics.md`; the 1 comes from `rubric_justifications.md`, which is the only place the
 source states it.
@@ -1307,7 +1313,8 @@ source states it.
 
 **Subjective criteria are judged on the render, never on source.** That is the rule the whole
 section is built to hold. Each criterion shows the same artifact from both runs side by side, with
-the rated part boxed on each: Leg A is the observed run, Leg B the golden.
+the rated part boxed on each: the golden (`legB`, shown first, since the block is built from it) and the
+reference run (`legA`, the run it is rated on). The field names predate the Nov 11 workflow.
 
 `SubjectiveRubric` in [types.ts](src/data/types.ts) gives each leg a `verdict` and a `view`. The
 view is the artifact as a reader sees it: `canvas` is the image's natural size and every `Box` is
@@ -1341,8 +1348,8 @@ validates them, and a wrong one distorts the aspect ratio rather than failing.
 
 ### The golden run is steers, not turns
 
-The project is single turn, so there is no milestone set and no turn structure. Leg A is one prompt
-answered once; Leg B is the **same prompt**, word for word, in a new conversation, steered until the
+The project is single turn, so there is no milestone set and no turn structure. Each pass@k run is one
+prompt answered once; the golden is the **same prompt**, word for word, run first and steered until the
 model reaches the ideal answer. `goldenRun` in
 [chargeDisputes.ts](src/data/tasks/chargeDisputes.ts) is that run:
 
@@ -1389,7 +1396,7 @@ is how a search for a vendor name finds the evidence ledger.
 
 ### Adding a golden task
 
-1. `src/data/tasks/<id>.ts` exporting a `GoldenTask`, **including all ten `stages`**.
+1. `src/data/tasks/<id>.ts` exporting a `GoldenTask`, **including all eleven `stages`**.
 2. Real artifacts under `public/tasks/<id>/`: `inputs/` (plus `inputs/straight/` for the renders the
    golden had to make before a photograph could be read), `gt/`, `ot/`, and `compare/` for the
    subjective clips.

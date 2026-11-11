@@ -26,9 +26,9 @@ it, and where the two disagree the guidelines win.
 
 | Tab | Route | What is in it |
 | --- | --- | --- |
-| **The Method** | `/` | The project update notice, the Universe Viewers link, the universe interaction videos, the ten method steps in the order they happen (each with its principle, the moves it takes, its rule and where it landed in the Golden Task), the quick answers, the hard requirements and the way into the rest of the hub. |
-| **Golden Tasks** | `/golden-tasks` | One card per worked task, and a walkthrough behind each one, one section per method step: the assigned parameters, the universe, the resolved answer, the inputs, the prompt, the Draft History, the Model A run, the objective and subjective rubrics, and the golden run. Reference only, never something to copy. |
-| **Failure Approach** | `/failure-approach` | Real cases of how Opus fails as an agent and how to build the same pressure into a Leg A, which runs Opus 5. Where the cases come from first, then seven failure types in the order a run breaks, twenty eight patterns, and eighty nine graded runs behind them, each with why it failed. A "Model A passed?" view diagnoses a Leg A that passed. See below. |
+| **The Method** | `/` | The project update notice, the Universe Viewers link, the universe interaction videos, the eleven method steps in the order they happen (each with its principle, the moves it takes, its rule and where it landed in the Golden Task), the quick answers, the hard requirements and the way into the rest of the hub. |
+| **Golden Tasks** | `/golden-tasks` | One card per worked task, and a walkthrough behind each one, one section per method step: the assigned parameters, the universe, the resolved answer, the inputs, the prompt, the Draft History, the golden run, the run it was measured on, the objective and subjective rubrics, and how that run was rated. Reference only, never something to copy. |
+| **Failure Approach** | `/failure-approach` | Real cases of how Opus fails as an agent and how to build the same pressure into a task graded on 8 pass@k runs (4 Claude Opus 5.5, 4 Muse Wonder 1.1). Where the cases come from first, then seven failure types in the order a run breaks, twenty eight patterns, and eighty nine graded runs behind them, each with why it failed. A "Score above 0.7?" view diagnoses a task the runs passed too easily. See below. |
 | **Spec Doc** | `/spec` | The QC spec the task is scored against: 33 dimensions in 9 groups, the appendix (rubric quality issues, weights, authoring standards) and the change log, one pane at a time, under one search. |
 | **Reference** | `/reference` | Onboarding, the 29 check pre-submit gate written for single turn (with its printable PDF, generated from the same data), Must Read: Project Updates, and the FAQ, one pane at a time. |
 | **My Performance** | `/performance` | Your own performance card: where you stand and what your next audits can do to it, the issues to fix first, what to do in your next task, and the feedback of every audited attempt. It opens with your CB ID. See below. |
@@ -39,19 +39,19 @@ its route redirects to `/`, and its source is kept so it can come back. `/gradin
 
 Every resource is cross-linked in both directions. A pre-submit check points at the part of the
 Golden Task that demonstrates it, and that section points back at the check, the spec dimension and
-the method step behind it. Each of the Golden Task's Model A misses links to the failure pattern it
+the method step behind it. Each of the Golden Task's rated-run misses links to the failure pattern it
 is a case of, and the pattern links back to the run.
 
 ### The Failure Approach
 
-Built for the contributor who is struggling to make Model A fail: open the tab, find the failures
+Built for the contributor who is struggling to make the pass@k runs fail: open the tab, find the failures
 that fit the task in front of you, see why they happened in real runs, and leave with a concrete way
 to build one.
 
 - **Where the cases come from**, first: the two studies of graded Opus runs (68,280 failed criteria
-  in 8,626 tasks), OpenClaw MM, the project closest to Green Shell, and the Leg A run of the hub's
+  in 8,626 tasks), OpenClaw MM, the project closest to Green Shell, and the one rated run of the hub's
   Golden Task, with how to read a case. Every case names its Opus version, and the ones on Opus 5,
-  the model Leg A runs, are marked.
+  the newest Opus among the cases, are marked.
 - **Seven failure types**, as cards, in the order an agent's run breaks: stops looking too soon,
   misreads the media, trusts the wrong source, applies its own version of the rule, never works out
   the deciding number or match, makes calls the evidence does not support, does not finish the job.
@@ -59,12 +59,12 @@ to build one.
   lever that turns it into a failure point.
 - **A pattern** opens with its real cases, each one a graded run: what was asked, what the model
   did, the right answer beside the one it wrote, and why it failed, the trigger in the task you can
-  build yourself. Then the ways to build it into a Green Shell Leg A, each naming the cases it is
+  build yourself. Then the ways to build it into a Green Shell task, each naming the cases it is
   drawn from (a click opens that case), the test that keeps it a real failure, and what it looks
   like in the trajectory.
 - **Start from what your task has**: pick your inputs, services and asks, and the patterns that can
   be built on them are listed, the ones that repeat most first.
-- **Model A passed?** reads why each planned failure point passed and what to change, how to raise
+- **Score above 0.7?** reads why each planned failure point passed and what to change, how to raise
   the odds, and what rarely makes the model fail.
 
 Everything is hash routed: `/failure-approach#<type>`, `#<pattern>` and `#keeps-passing` deep link
@@ -73,7 +73,7 @@ and two studies of graded Opus failures, and nothing else: a summary of a run wi
 right answer is not a case. The studies and the notes written from them sit in `failure approach/`,
 which is gitignored: they are internal and this repository is public.
 
-The tab carries no planning sequence, rating guidance or Leg B hints of its own. The method, the
+The tab carries no planning sequence, rating guidance or golden hints of its own. The method, the
 Golden Task and the spec own those, and the tab links to them instead.
 
 ### My Performance
@@ -133,7 +133,7 @@ follows.
 
 ## Adding the next golden task
 
-1. Add `src/data/tasks/<id>.ts` exporting a `GoldenTask`, including all ten `stages`.
+1. Add `src/data/tasks/<id>.ts` exporting a `GoldenTask`, including all eleven `stages`.
 2. Put the real artifacts under `public/tasks/<id>/`: `inputs/`, `gt/`, `ot/`, and `compare/` for
    the subjective clips.
 3. Register it in the `tasks` array in [`src/data/index.ts`](src/data/index.ts).
