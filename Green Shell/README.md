@@ -11,7 +11,6 @@ It answers the questions a contributor has while building a task, and then gets 
 - **How does the model actually fail, and how do I make it fail for real?** → Failure Approach
 - **What will a reviewer score me against?** → Spec Doc
 - **What changed, what do I check before submitting, what does everyone ask?** → Reference
-- **Where do I stand, and what should I fix first?** → My Performance
 
 Press <kbd>⌘K</kbd> (or <kbd>Ctrl</kbd>+<kbd>K</kbd>) anywhere to search every method step, task
 section, failure pattern and case, pre-submit check, spec dimension, project update and FAQ answer
@@ -31,7 +30,7 @@ it, and where the two disagree the guidelines win.
 | **Failure Approach** | `/failure-approach` | Real cases of how Opus fails as an agent and how to build the same pressure into a task graded on 8 pass@k runs (4 Claude Opus 5.5, 4 Muse Wonder 1.1). Where the cases come from first, then seven failure types in the order a run breaks, twenty eight patterns, and eighty nine graded runs behind them, each with why it failed. A "Score above 0.7?" view diagnoses a task the runs passed too easily. See below. |
 | **Spec Doc** | `/spec` | The QC spec the task is scored against: 33 dimensions in 9 groups, the appendix (rubric quality issues, weights, authoring standards) and the change log, one pane at a time, under one search. |
 | **Reference** | `/reference` | Onboarding, the 29 check pre-submit gate written for single turn (with its printable PDF, generated from the same data), Must Read: Project Updates, and the FAQ, one pane at a time. |
-| **My Performance** | `/performance` | Your own performance card: where you stand and what your next audits can do to it, the issues to fix first, what to do in your next task, and the feedback of every audited attempt. It opens with your CB ID. See below. |
+| **My Performance** | `/performance` | **Parked for now**: off the site, and the route redirects to `/`. Your own performance card: where you stand and what your next audits can do to it, the issues to fix first, what to do in your next task, and the feedback of every audited attempt. It opens with your CB ID. See below. |
 
 A seventh tab, **Complexity** (the Increase Complexity Proposals tool), is **parked**: off the site,
 its route redirects to `/`, and its source is kept so it can come back. `/grading`, `/checklist`,
@@ -78,6 +77,7 @@ Golden Task and the spec own those, and the tab links to them instead.
 
 ### My Performance
 
+**Parked for now**: off the published site and kept in the source, so it can come back.
 Each contributor's own card: where they stand and what their next audits can do to it, the areas
 where improvement is expected, what to do in the next task with the hub pages that help, and the
 feedback of every audited attempt. It opens with the contributor's CB ID alone. Nothing of it is in

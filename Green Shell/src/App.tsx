@@ -7,7 +7,6 @@ import FailureApproach from "./pages/FailureApproach";
 import SpecDoc from "./pages/SpecDoc";
 import UrgentAlignments from "./pages/UrgentAlignments";
 import Reference from "./pages/Reference";
-import Performance from "./pages/Performance";
 import { checklist } from "./data/checklist";
 
 function NotFound() {
@@ -91,8 +90,10 @@ export default function App() {
         {/* One route for the bare tab and each pane, `/reference/<pane>`, so
             the page stays mounted while the bar switches between them. */}
         <Route path="/reference/:pane?" element={<Reference />} />
-        {/* A contributor's own card, opened with their CB ID. */}
-        <Route path="/performance" element={<Performance />} />
+        {/* The My Performance tab is parked: off the site, kept in the source,
+            and no longer imported, so the card is not in the bundle either. A
+            bookmarked link lands on the method rather than on a 404. */}
+        <Route path="/performance" element={<Navigate to="/" replace />} />
 
         {/* Where the retired tabs went. */}
         <Route path="/grading" element={<MovedFromGrading />} />

@@ -7,7 +7,7 @@ import { useTheme } from "../lib/useTheme";
 import CommandPalette from "./CommandPalette";
 
 /**
- * Nine tabs, two of them parked, and the number is the point.
+ * Nine tabs, three of them parked, and the number is the point.
  *
  * It was eight. Four of those were things a contributor looks something up in
  * rather than works from — onboarding, what moved from Red Shell, the FAQ, and
@@ -68,23 +68,33 @@ import CommandPalette from "./CommandPalette";
  * not the standard either, though each finding in it names the Guidelines
  * section and the hub page it rests on. It sits last because it is read after
  * the work is audited, and its star marks it as the one tab that is personal.
+ * It is parked for now, below.
  *
- * **Complexity and Universes are parked.** The proposals tool and the persona
- * viewers are off the site for now, so their entries are out of this list and
- * seven tabs show. The pages and everything behind them are still in the
- * source, and CLAUDE.md has the way back.
+ * **Complexity, Universes and My Performance are parked.** The proposals tool,
+ * the persona viewers and the contributor's card are off the site for now, so
+ * their entries are out of this list and six tabs show. The pages and
+ * everything behind them are still in the source, and CLAUDE.md has the way
+ * back.
  *
  * **Anything new goes inside one of these.** A tenth tab needs an argument
  * for why it is not a pane of an existing one.
  */
-const links = [
+/** Typed rather than inferred, so `star` stays part of the shape while the one
+ *  starred tab, My Performance, is parked. */
+const links: {
+  to: string;
+  label: string;
+  end?: boolean;
+  short?: string;
+  urgent?: boolean;
+  star?: boolean;
+}[] = [
   { to: "/", label: "The Method", end: true },
   { to: "/alignments", label: "Urgent Alignments", short: "Urgent", urgent: true },
   { to: "/golden-tasks", label: "Golden Tasks" },
   { to: "/failure-approach", label: "Failure Approach" },
   { to: "/spec", label: "Spec Doc" },
   { to: "/reference", label: "Reference" },
-  { to: "/performance", label: "My Performance", star: true },
 ];
 
 /** A tab's label, with the gold star of the hub's mark on the one tab that is

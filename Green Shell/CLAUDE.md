@@ -6,9 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A static React site, the practical reference for contributors (CBs) on the Green Shell / OpenClaw MM
 Rubrics single turn project. **Nine tabs**, and the detail of why is in
-[Nine tabs, and where everything lives](#nine-tabs-and-where-everything-lives). Two of them,
-Complexity and Universes, are parked ([Complexity](#the-complexity-tab-is-parked),
-[Universes](#the-universes-tab-is-parked)): off the site for now, kept in the source, so seven show.
+[Nine tabs, and where everything lives](#nine-tabs-and-where-everything-lives). Three of them,
+Complexity, Universes and My Performance, are parked
+([Complexity](#the-complexity-tab-is-parked), [Universes](#the-universes-tab-is-parked),
+[My Performance](#the-my-performance-tab-is-parked)): off the site for now, kept in the
+source, so six show.
 
 | Tab | Route | Page | What it holds |
 | --- | --- | --- | --- |
@@ -21,7 +23,7 @@ Complexity and Universes, are parked ([Complexity](#the-complexity-tab-is-parked
 | Complexity | `/complexity` | [Complexity.tsx](src/pages/Complexity.tsx) | **Parked, not on the site**, and the route redirects to `/`. The Increase Complexity Proposals tool. Closed-list form, then proposals from the model. |
 | Spec Doc | `/spec` | [SpecDoc.tsx](src/pages/SpecDoc.tsx) | The QC spec: the dimensions, the appendix and the change log, one pane at a time off a vertical rail, under one search. |
 | Reference | `/reference` | [Reference.tsx](src/pages/Reference.tsx) | Onboarding, the pre-submit gate, the must-read project updates, and the FAQ, one pane at a time. Embeds [Onboarding.tsx](src/pages/Onboarding.tsx), [PreSubmit.tsx](src/pages/PreSubmit.tsx), [WhatsNew.tsx](src/pages/WhatsNew.tsx) and [Faq.tsx](src/pages/Faq.tsx). |
-| My Performance | `/performance` | [Performance.tsx](src/pages/Performance.tsx) | A contributor's own performance card: their standing and what the next audits can do to it, the issues to fix first, what to do in the next task, and every audited attempt's feedback, opened with their CB ID. The card is fetched from Green Shell Insights for that one contributor. See [The My Performance tab](#the-my-performance-tab). |
+| My Performance | `/performance` | [Performance.tsx](src/pages/Performance.tsx) | **Parked, not on the site**, and the route redirects to `/`. See [The My Performance tab is parked](#the-my-performance-tab-is-parked). A contributor's own performance card: their standing and what the next audits can do to it, the issues to fix first, what to do in the next task, and every audited attempt's feedback, opened with their CB ID. The card is fetched from Green Shell Insights for that one contributor. See [The My Performance tab](#the-my-performance-tab). |
 
 `/grading`, `/checklist`, `/onboarding`, `/whats-new` and `/faq` are kept as redirects that carry
 the hash across.
@@ -119,7 +121,7 @@ checklist persistence and every cross-link were verified that way.
 
 The hub was eight tabs and it had stopped being navigable. It went to six, one per thing someone is
 actually doing, and one of those is parked; Universes made it seven, My Performance eight and
-Urgent Alignments nine. Complexity and Universes are parked, so seven show.
+Urgent Alignments nine. Complexity, Universes and My Performance are parked, so six show.
 
 | Tab | Route | Panes inside it | Was |
 | --- | --- | --- | --- |
@@ -131,7 +133,7 @@ Urgent Alignments nine. Complexity and Universes are parked, so seven show.
 | Complexity | `/complexity` | the proposals tool, **parked** and off the site | unchanged |
 | Spec Doc | `/spec` | **9 dimension groups** (default: Task Parameters) · 3 appendix sections · Change log | `/spec` |
 | Reference | `/reference`, `/reference/:pane` | **Onboarding** (default) · Pre-Submit · Must Read: Project Updates · FAQ | `/onboarding` + `/checklist` + `/whats-new` + `/faq` |
-| My Performance | `/performance` | the landing (CB ID), then the contributor's card under the hub's header | new |
+| My Performance | `/performance` | the landing (CB ID), then the contributor's card under the hub's header, **parked** and off the site | new |
 
 **The spec doc is the destination, not a pane of something else.** It is the one piece of content
 nothing else in the hub can stand in for: the exact rubric a reviewer scores against. The gate, the
@@ -656,6 +658,21 @@ step link, add its row to `alignments.ts`, and work it into its method step. **R
 delete its row; the Must Read entry stays as the record. A flag that turns out not to be a
 contributor's mistake comes out entirely, its Must Read entry, method move and notice wording with
 it: the Oct 27 graded files flag was a bundling error and came out that way on Nov 2, 2026.
+
+### The My Performance tab is parked
+
+The contributor's card is **off the published site for now and kept in the source**, as Complexity
+and Universes are. Only the ways in were removed:
+
+| Way in | Where it was | Now |
+| --- | --- | --- |
+| The tab, in the nav and the footer | `links` in [Layout.tsx](src/components/Layout.tsx) | Gone. `links` is typed rather than inferred, so `star` stays part of its shape with no starred entry left |
+| The route, `/performance` | [App.tsx](src/App.tsx) | Redirects to `/`, and the page is no longer imported |
+
+Nothing behind those was touched: [Performance.tsx](src/pages/Performance.tsx), `src/performance/`
+(still the verbatim copy of the card), `api.ts` and `VITE_CARDS_API` are as they were, and Green
+Shell Insights keeps serving the same cards in its CB Cards tab. Like the other parked pages, it
+**has to keep compiling**. **To bring it back**, revert the commit "Park the My Performance tab".
 
 ### The My Performance tab
 
