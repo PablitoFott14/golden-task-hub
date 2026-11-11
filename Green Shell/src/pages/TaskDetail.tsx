@@ -967,7 +967,7 @@ function ModelA({ t }: { t: GoldenTask }) {
       <Crosslinks
         className="mt-6"
         links={[
-          { to: "/reference#s8", tag: "H1", label: "Did the model fail on things that matter?" },
+          { to: "/reference#s8", tag: "H1", label: "Is the 8-run average in range, on rubrics nobody tuned?" },
           { to: "/golden-tasks/charge-disputes#subjective", tag: "GT", label: "The same page, beside the golden" },
           { to: "/failure-approach", tag: "FA", label: "The same failures in other runs, by type" },
         ]}
