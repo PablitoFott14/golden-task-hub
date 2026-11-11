@@ -80,12 +80,12 @@ import { cx } from "../lib/util";
 
 /**
  * The Failure Approach: how Opus actually fails, case by case, and how to make
- * Model A fail the same way for real.
+ * a task's pass@k runs fail the same way for real.
  *
  * **Three levels, one hash.** The overview holds the seven failure types as
  * cards; a type holds its patterns; a pattern holds its real cases and the ways
- * to build it into a Leg A. `#<category>` opens a type, `#<pattern>` opens a
- * pattern and `#keeps-passing` opens the diagnosis for a Leg A that passed.
+ * to build it into a task. `#<category>` opens a type, `#<pattern>` opens a
+ * pattern and `#keeps-passing` opens the diagnosis for runs that keep passing.
  * The view is derived from the hash on every render, never held in state, so
  * a deep link renders the right view first time, the back button walks back
  * through the levels, and every crumb and card is an ordinary link.
@@ -105,7 +105,7 @@ import { cx } from "../lib/util";
 /* -------------------------------------------------------------- text layer */
 
 /**
- * The data keeps its provenance in brackets: `[G 4]`, `[Q Prompt, Constraints]`,
+ * The data keeps its provenance in brackets: `[G 4.2]`, `[Q Prompt, Constraints]`,
  * `[R 3.1; C Overview]`. None of it reaches the screen. A section number tells
  * a contributor nothing they can act on, and every string goes through this.
  */
@@ -218,10 +218,10 @@ function viewOf(id: string): View {
 /* ------------------------------------------------------------------ pieces */
 
 /**
- * A case says which Opus it ran on before anything else, because Leg A runs
- * Opus 5 and a case on that version is the closest evidence a contributor has.
- * The Leg A version is filled; the source sits beside it where it means
- * something to a contributor.
+ * A case says which Opus it ran on before anything else, because Opus 5 is the
+ * newest version among the cases, and a case on it is the closest evidence a
+ * contributor has for the Claude Opus 5.5 pass@k runs. That version is filled;
+ * the source sits beside it where it means something to a contributor.
  */
 function SourceChip({ c }: { c: FailureCase }) {
   const latest = c.model === legAModel;
@@ -237,18 +237,18 @@ function SourceChip({ c }: { c: FailureCase }) {
         )}
       >
         {c.model ?? "Opus"}
-        {latest && <span className="sr-only">, the model Leg A runs</span>}
+        {latest && <span className="sr-only">, the newest Opus in these cases</span>}
       </span>
       {where && <span className="font-mono text-[11px] text-ink-500">{where}</span>}
     </span>
   );
 }
 
-/** Marks a pattern one of whose cases ran on the Leg A model. */
+/** Marks a pattern one of whose cases ran on the newest Opus in the cases. */
 function LegAChip() {
   return (
     <span
-      title={`At least one case here ran on ${legAModel}, the model Leg A runs`}
+      title={`At least one case here ran on ${legAModel}, the newest Opus in these cases`}
       className="chip bg-brand-500/15 text-brand-700 ring-1 ring-brand-500/25 dark:text-brand-300"
     >
       <BadgeCheck size={11} aria-hidden /> Seen on {legAModel}
@@ -272,7 +272,7 @@ function RunDots({ c, short }: { c: FailureCase; short?: boolean }) {
       ? `${r.failed} of ${r.of} runs`
       : `failed ${r.failed} of ${r.of} runs`
     : c.source === "golden"
-      ? "the Leg A run"
+      ? "the Golden Task run"
       : "one graded run";
   return (
     <span className="inline-flex items-center gap-1.5">
@@ -401,7 +401,7 @@ function StepLink({ dir, to, kicker, label }: { dir: "prev" | "next"; to: To; ki
 
 /**
  * The seven types in run order, then the diagnosis, set apart because it is a
- * different moment: after the run rather than while building. One row from
+ * different moment: after grading rather than while building. One row from
  * 1280px; below that the row scrolls sideways and keeps the open type in view.
  * The way back to the overview is the crumb, the band's link and the nav tab.
  */
@@ -510,7 +510,7 @@ function SourcesStrip() {
           {faSources.title}
         </h2>
         <p className="font-mono text-[11.5px] text-ink-500">
-          {allCases.length} real cases, {legACases} of them on {legAModel}, the model Leg A runs
+          {allCases.length} real cases, {legACases} of them on {legAModel}, the closest to your Opus 5.5 runs
         </p>
       </div>
       <div className="mt-3 grid gap-3 md:grid-cols-3">
@@ -606,13 +606,13 @@ function PassingTile() {
       <span className="grid h-11 w-11 place-items-center rounded-xl bg-amber-500/15 text-amber-700 dark:text-amber-300">
         <RotateCcw size={20} />
       </span>
-      <div className="mono-label mt-4 text-amber-700 dark:text-amber-300">After the run</div>
+      <div className="mono-label mt-4 text-amber-700 dark:text-amber-300">After grading</div>
       <h3 className="mt-1 font-display text-[17px] font-bold leading-snug tracking-tight text-ink-900">
         {faPassing.short}
       </h3>
       <p className="mt-1.5 text-[13px] leading-relaxed text-ink-600">
-        Find out why each planned failure point passed, and what to change before you run Leg A
-        again.
+        Find out why each planned failure point passed, and what to change in the scenario, never
+        in the rubric.
       </p>
       <ul className="mt-4 flex-1 space-y-1 border-t border-amber-300/50 pt-3.5 dark:border-amber-500/20">
         {[
@@ -627,7 +627,7 @@ function PassingTile() {
         ))}
       </ul>
       <span className="mt-4 inline-flex items-center gap-1 text-[12.5px] font-semibold text-amber-700 dark:text-amber-300">
-        Diagnose the run
+        Diagnose the runs
         <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" aria-hidden />
       </span>
     </Link>
@@ -906,7 +906,7 @@ function CategoryView({ c }: { c: FailureCategory }) {
         <SectionTitle
           title="The patterns"
           count={ps.length}
-          note="Each one opens with the real runs behind it and why each one failed, then the ways to build it into your Leg A."
+          note="Each one opens with the real runs behind it and why each one failed, then the ways to build it into your task."
         />
       </div>
       <div className="mt-5 grid gap-4 md:grid-cols-2">
@@ -926,7 +926,7 @@ function CategoryView({ c }: { c: FailureCategory }) {
         {next ? (
           <StepLink dir="next" to={{ hash: `#${next.id}` }} kicker="Next type" label={next.name} />
         ) : (
-          <StepLink dir="next" to={{ hash: `#${faPassing.id}` }} kicker="After the run" label={faPassing.short} />
+          <StepLink dir="next" to={{ hash: `#${faPassing.id}` }} kicker="After grading" label={faPassing.short} />
         )}
       </div>
     </div>
@@ -935,9 +935,9 @@ function CategoryView({ c }: { c: FailureCategory }) {
 
 /* -------------------------------------------------------------- one pattern */
 
-/** Who the run belongs to: the Golden Task is a Model A run, the studies measured Opus. */
+/** Who the run belongs to: the Golden Task's one graded run was Opus 5, the studies measured Opus. */
 const actor: Record<CaseSource, string> = {
-  golden: "Model A",
+  golden: "Opus 5",
   "openclaw-mm": "Opus",
   study: "Opus",
 };
@@ -945,7 +945,7 @@ const actor: Record<CaseSource, string> = {
 /**
  * One graded run, read top to bottom the way a contributor uses it: what was
  * asked, what the model did, the right answer beside what it wrote, then why it
- * failed, which is the part to copy into a Leg A. `flash` rings the card when a
+ * failed, which is the part to copy into a task. `flash` rings the card when a
  * build idea below has just pointed at it.
  */
 function CaseCard({ c, flash }: { c: FailureCase; flash: boolean }) {
@@ -1172,7 +1172,8 @@ function PatternView({ p }: { p: FailurePattern }) {
           note={
             <>
               Each case is a graded run: what was asked, what the model did, the right answer beside
-              what it wrote, and why it failed. {legAModel} is the model your Leg A runs.{" "}
+              what it wrote, and why it failed. {legAModel} is the newest Opus here, the closest to
+              your Opus 5.5 runs.{" "}
               <Link
                 to={{ pathname: "/failure-approach", hash: `#${faSources.id}` }}
                 className="font-semibold text-brand-600 hover:text-brand-700 dark:text-brand-300"
@@ -1203,7 +1204,7 @@ function PatternView({ p }: { p: FailurePattern }) {
       <section className="mt-10">
         <SectionTitle
           icon={Hammer}
-          title="Build it into your Leg A"
+          title="Build it into your task"
           note="Ways to put the same pressure into a task built on your assigned universe and your own inputs, each drawn from the cases above. They are starting points: confirm the structure exists in your universe before you build on it."
         />
         <ol className="mt-5 grid gap-3 md:grid-cols-2">
@@ -1259,7 +1260,7 @@ function PatternView({ p }: { p: FailurePattern }) {
         <div className="card p-5">
           <h3 className="flex items-center gap-2 font-display text-[16px] font-bold text-ink-900">
             <Radar size={16} className="text-brand-500" aria-hidden />
-            Spot it in your run
+            Spot it in the runs
           </h3>
           <ul className="mt-3 space-y-2.5">
             {p.spot.map((s) => (
@@ -1281,14 +1282,14 @@ function PatternView({ p }: { p: FailurePattern }) {
         {next ? (
           <StepLink dir="next" to={{ hash: `#${next.id}` }} kicker={`Next · ${patternNo(next)}`} label={next.name} />
         ) : (
-          <StepLink dir="next" to={{ hash: `#${faPassing.id}` }} kicker="After the run" label={faPassing.short} />
+          <StepLink dir="next" to={{ hash: `#${faPassing.id}` }} kicker="After grading" label={faPassing.short} />
         )}
       </div>
     </div>
   );
 }
 
-/* ------------------------------------------------------------ Model A passed */
+/* ---------------------------------------------------- the runs keep passing */
 
 function DiagnosisCard({ d, n }: { d: PassDiagnosis; n: number }) {
   return (
@@ -1335,7 +1336,7 @@ function PassingView() {
 
       <header className="mt-4 rounded-2xl border border-amber-300/70 bg-amber-50/60 p-6 shadow-soft sm:p-8 dark:border-amber-500/30 dark:bg-amber-500/10">
         <div className="mono-label flex items-center gap-2 text-amber-700 dark:text-amber-300">
-          <RotateCcw size={13} aria-hidden /> After the run
+          <RotateCcw size={13} aria-hidden /> After grading
         </div>
         <h2 className="mt-3 font-display text-[26px] font-bold leading-tight tracking-tight text-ink-900 sm:text-[32px]">
           {faPassing.title}
@@ -1379,7 +1380,7 @@ function PassingView() {
         <SectionTitle
           icon={X}
           title="What rarely makes it fail"
-          note="Recorded as reliable for both models, or set aside by the studies for a task like yours. Spend the effort elsewhere."
+          note="Recorded as reliable for Opus in the guidelines, or set aside by the studies for a task like yours. Spend the effort elsewhere."
         />
         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {faPassing.rarely.map((r) => (

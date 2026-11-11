@@ -106,7 +106,7 @@ export default function QuickAnswers() {
         </h2>
         <p className="mt-3 text-[14.5px] leading-relaxed text-ink-500">
           Assigned tools against assigned capabilities, the three input minimum, inputs.zip
-          against the inputs folder, what Leg B actually does. Open one and read it without
+          against the inputs folder, what the golden and the pass@k runs actually do. Open one and read it without
           leaving the page.
         </p>
         <Link to="/reference#faq" className="btn-primary mt-6">

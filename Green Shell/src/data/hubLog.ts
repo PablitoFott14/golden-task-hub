@@ -57,6 +57,15 @@ const hardRules = guidelinesOnlyChanges.filter((c) => c.impact === "hard").lengt
 
 export const hubUpdates: HubUpdate[] = [
   {
+    id: "golden-first-pass-at-k",
+    date: "Nov 11, 2026",
+    kind: "guidelines",
+    what: "The golden runs first, and 8 pass@k runs replace Leg A",
+    where: "The Method → steps 7 to 11, and Reference → Must Read: Project Updates",
+    why: "The golden is now the first run, and both rubric blocks are built from it. Once it is complete, 8 runs launch on their own, 4 on Claude Opus 5.5 and 4 on Muse Wonder 1.1. All 8 are graded against your rubrics, and their average has to fall between 0.3 and 0.7 with no rubric tuned to get there. Present and Not Present are rated on the first valid Opus run, and a prefilled rating is never trusted until you have checked it.",
+    to: "/reference#golden-first",
+  },
+  {
     id: "spec-v7",
     date: "Nov 10, 2026",
     kind: "guidelines",

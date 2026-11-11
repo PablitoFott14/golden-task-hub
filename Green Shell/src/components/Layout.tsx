@@ -23,17 +23,17 @@ import CommandPalette from "./CommandPalette";
  *
  * **Failure Approach is the sixth, and this is the argument for it.** It is
  * worked from, not looked up in: a contributor opens it while designing the
- * scenario, to find a failure their task can build on, and again when Model A
- * passed, to find out why. It is not a pane of the method: a step there is
+ * scenario, to find a failure their task can build on, and again when the
+ * pass@k score came out above 0.7, to find out why. It is not a pane of the method: a step there is
  * three sentences and a panel, and this is seven failure types, twenty eight
  * patterns and the real runs behind each, which would turn step 7 into the
  * whole page. It deliberately carries no planning sequence, rating guidance or
- * Leg B hints of its own, because the method and the spec already own those.
+ * golden hints of its own, because the method and the spec already own those.
  * It is not the standard, so it is not the spec doc. It sits where the parked
  * Complexity tool did, between the worked example and the standard, because it
  * is that same step of the work: making the task hard for the right reasons.
- * Steps 3 and 7 of the method, gate check A5 and the Golden Task's Model A run
- * link into it.
+ * Steps 3, 8 and 11 of the method, the gate's grading check and the Golden
+ * Task's rated run link into it.
  *
  * **Universes is a tab of its own, and this is the argument for it.** It is
  * the data every task is built on, and a contributor works in it rather than

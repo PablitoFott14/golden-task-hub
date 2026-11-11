@@ -47,7 +47,7 @@ const rows: Omit<Alignment, "change" | "step">[] = [
     short: "Genuine complexity",
     status: "new",
     check:
-      "Every criterion grades something the request requires, and Model A still fails 30% on the scenario itself.",
+      "Every criterion grades something the request requires, and the scenario alone keeps the 8-run average at 0.7 or below.",
     rejected: { tasks: 44, share: "30%" },
   },
   {

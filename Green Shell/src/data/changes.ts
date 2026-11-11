@@ -52,9 +52,18 @@ import type { GuidelineChange } from "./types";
  * values rule (5.1, 8.3.1), restated as a flag to reinforce it, not a new rule,
  * and the `dynamic-values` entry below stays as the record of it.
  *
+ * The Nov 11 entries are the v3 revision of the guidelines, which put the
+ * task in the platform's order: the golden runs first, 8 pass@k runs follow on
+ * their own and replace Leg A, all 8 are graded against the rubrics (average
+ * between 0.3 and 0.7), and ratings are verified on the first valid Opus run.
+ * They leave `before` unset for the same reason the flags do: the rule they
+ * replace was Green Shell's own, not Red Shell's. `failure-threshold` keeps its
+ * id and now carries the pass@k range, because the Oct 8 notice links to it
+ * and the 30% rule it used to state is gone.
+ *
  * Newest first.
  */
-export const guidelinesVersion = { version: "Green Shell v1", updated: "Oct 8, 2026" };
+export const guidelinesVersion = { version: "Green Shell v3", updated: "Nov 11, 2026" };
 
 /**
  * The `version` a client flag carries, in place of a guidelines version. Read
@@ -64,6 +73,114 @@ export const guidelinesVersion = { version: "Green Shell v1", updated: "Oct 8, 2
 export const clientFlagVersion = "Client flag";
 
 export const guidelineChanges: GuidelineChange[] = [
+  {
+    id: "golden-first",
+    date: "Nov 11, 2026",
+    version: "Green Shell v3",
+    title: "The golden runs first, and both rubric blocks are built from it",
+    body: "The golden is now the first run of the task, before the pass@k runs and before any rubric exists. When it came last, many goldens failed their own rubrics: the rubric was already written, and feasibility limits kept the expected solution out of reach. Building it first proves what the task can achieve in this universe, with these inputs, and every criterion is then built from that validated golden.",
+    does: "Run the golden as soon as the setup is done: steer with intent-level hints until the model reaches the ideal response, and check every output against your GTFA before you complete the conversation. Where they differ, fix whichever side is wrong, and if the universe cannot deliver what the prompt asks, fix the task and restart the golden. Download its trajectory and final artifacts, then build both rubric blocks from it. A criterion the golden could not satisfy is a broken criterion, not a harder task.",
+    refs: [
+      { section: "Project Overview", title: "The golden comes first" },
+      { section: "Task Workflow", title: "The workflow has a new order" },
+      { section: "3", title: "Golden Solution" },
+      { section: "3.1", title: "Why the Golden Comes First" },
+      { section: "3.5", title: "Before You Wrap the Golden Up" },
+      { section: "5.6", title: "Final Rubric Checklist" },
+    ],
+    impact: "hard",
+    links: [
+      { to: "/#golden", tag: "M7", label: "Point at the intent. Never at the answer" },
+      { to: "/#rubrics", tag: "M9", label: "Criteria built from the golden and the GTFA" },
+    ],
+  },
+  {
+    id: "pass-at-k-runs",
+    date: "Nov 11, 2026",
+    version: "Green Shell v3",
+    title: "Leg A is gone: 8 pass@k runs follow the golden on their own",
+    body: "Once the golden is complete, 8 pass@k runs launch automatically on the same prompt, word for word: 4 on Claude Opus 5.5 and 4 on Muse Wonder 1.1, each answering once with no follow-ups. They replace the single Leg A run. Nothing is needed from you while they run, which usually takes 15 to 20 minutes. The first valid Opus run, the first of the four Opus runs to complete without errors, is the reference run: where the platform says Model A, it means this run.",
+    does: "Use the 15 to 20 minutes to plan the rubric from the golden and your GTFA, walking the prompt for every ask that needs a criterion. Once the first valid Opus run finishes, download its trajectory and final artifacts. Retry or replace any run that fails or ends with an error: a broken run is never a model failure.",
+    refs: [
+      { section: "Task Workflow", title: "The workflow has a new order" },
+      { section: "4", title: "Pass@k Generation" },
+      { section: "4.1", title: "The Reference Run" },
+      { section: "4.2", title: "Valid vs. Invalid Model Failures" },
+    ],
+    impact: "hard",
+    links: [
+      { to: "/#passk", tag: "M8", label: "Eight runs start on their own" },
+    ],
+  },
+  {
+    id: "failure-threshold",
+    date: "Nov 11, 2026",
+    version: "Green Shell v3",
+    title: "The average score of all 8 runs falls between 0.3 and 0.7",
+    body: "Once both rubric blocks are built, Grade runs grades all 8 pass@k runs against them. The average score across the 8 has to fall between 0.3 and 0.7, as the client expects. It replaces the old rule that Model A fail at least 30% of the objective weight. The score has to come from genuine, meaningful rubrics aligned with the golden: no rubric stretching, no artificial criteria and no other manipulation to reach the range.",
+    does: "Grade the runs once the rubric is final and check the average yourself: the panel is shown for information and does not block submission. Above 0.7, the task is too easy, so revisit the scenario's complexity, never the rubric set. Below 0.3, check first that every criterion accepts every valid answer and that no run broke, then revisit the scenario. Change a criterion only to fix a genuine defect, and grade the 8 runs again after any change.",
+    refs: [
+      { section: "Hard Client Requirements", title: "Pass@k score in range" },
+      { section: "Complexity Bar", title: "The pass@k range is part of the bar" },
+      { section: "1.1", title: "Task Parameters & Execution Rules" },
+      { section: "7.1", title: "Grading All 8 Runs" },
+    ],
+    impact: "hard",
+    detail: {
+      label: "Reading the score",
+      items: [
+        "Add the eight run scores and divide by 8. With four graded runs per model, that is the midpoint of the two means: an Opus mean of 0.74 and a Muse mean of 0.52 give 0.63, inside the range.",
+        "Selecting a preferred run has no impact. All 8 runs are generated and all 8 are graded, whichever run is marked as preferred.",
+        "A criterion added, dropped, reworded or reweighted only to move the average into range is manipulation, whichever way it moves the score.",
+        "Where the assigned scenario is too simple to bring the average down to 0.7 or below, its complexity may be raised, and only as far as needed, while every other parameter stays as assigned.",
+        "A change to the prompt or the inputs means a new golden and new pass@k runs, because every run uses the same prompt word for word.",
+      ],
+    },
+    links: [
+      { to: "/#failure", tag: "M11", label: "Read the score. Never tune the rubric to it" },
+      { to: "/failure-approach", tag: "FA", label: "How Opus actually fails, case by case" },
+    ],
+  },
+  {
+    id: "reference-run-ratings",
+    date: "Nov 11, 2026",
+    version: "Green Shell v3",
+    title: "Ratings are made on the first valid Opus run, and prefilled ones are never trusted",
+    body: "Present and Not Present are rated against the first valid Opus run, the reference run, in both rubric blocks. Never rate the golden, or whichever run is marked as preferred, in its place. The rating steps arrive prefilled with the agentic judge's verdicts on that run, and those values are a starting point only: validating each one is your responsibility.",
+    does: "Download the first valid Opus run, its trajectory and its final artifacts, and review its outcomes. Verify every prefilled rating against them: for each Not Present, find the line, value or state change that fails it, and for each Present, the evidence that satisfies it. Correct every inaccurate or unsupported rating, and justify every failure in three parts. If the judge misread a criterion because it can be read two ways, fix the criterion and grade the 8 runs again.",
+    refs: [
+      { section: "4.1", title: "The Reference Run" },
+      { section: "7.2", title: "Rating the Reference Run and Justifying the Failures" },
+      { section: "7.3", title: "Rating the Subjective Block and Justifications" },
+    ],
+    impact: "hard",
+    detail: {
+      label: "On the platform",
+      items: [
+        "Present - Green is a present positive criterion, Present - Red a present negative one, and Not Present - Grey a criterion of either kind that is not present.",
+        "The subjective block is rated on the same reference run, looking at its rendered artifact. There is no second set to rate for the golden.",
+      ],
+    },
+    links: [
+      { to: "/#failure", tag: "M11", label: "Verify every prefilled rating" },
+    ],
+  },
+  {
+    id: "validators",
+    date: "Nov 11, 2026",
+    version: "Green Shell v3",
+    title: "Validators flag, you decide",
+    body: "The Multimodal Checklist comes right after the inputs upload, while anything it flags is still cheap to fix. The Prompt, Trajectory, Objective Rubric and Subjective Rubric validators then flag possible issues along the way. A flag is a review signal, not a conclusion, and the same goes for the Auto-Generated Summary and the Rubric Generator Preview: they are starting points, never ground truth.",
+    does: "Answer the checklist as soon as the upload is done. Check every validator flag against the task, the inputs and the Guidelines, and change only what is genuinely wrong. Check every value in a generated summary or preview against your GTFA and the inputs before you keep it.",
+    refs: [
+      { section: "Task Workflow", title: "Validators flag, you decide" },
+      { section: "2.2", title: "Upload Folders" },
+    ],
+    impact: "shape",
+    links: [
+      { to: "/#passk", tag: "M8", label: "Read the validators' flags as signals" },
+    ],
+  },
   {
     id: "flag-live-dates",
     date: "Nov 2, 2026",
@@ -101,14 +218,14 @@ export const guidelineChanges: GuidelineChange[] = [
     does: "Go through every criterion that names a value the model has to fetch live, from the web or from a live server: a price, a rate, a fare, a seat or room count. Grade the retrieval and what the model does with it, never the frozen figure: “invoice_summary.md converts the €1,240 invoice at the EUR to USD rate retrieved during the run (e.g., 1.085, giving $1,345.40)”. Your figure goes in parentheses as an example, and the file, the item and the source stay named so the criterion can still be rated with the prompt closed. Fixed values stay fixed: anything from an attachment, a universe record or the GTFA still has to match its source exactly.",
     refs: [
       { section: "5.1", title: "Rubric Fundamentals" },
-      { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "5.6", title: "Final Rubric Checklist" },
       { section: "8.3.1", title: "The Built-in Tools" },
     ],
     impact: "hard",
     links: [
-      { to: "/#rubrics", tag: "M8", label: "Grade the retrieval, not the figure" },
+      { to: "/#rubrics", tag: "M9", label: "Grade the retrieval, not the figure" },
       { to: "/reference#dynamic-values", tag: "WN", label: "The rule as the Guidelines have set it from the start" },
-      { to: "/reference#s6", tag: "F2", label: "No criterion pinned to a value that can change" },
+      { to: "/reference#s6", tag: "F9", label: "No criterion pinned to a value that can change" },
       { to: "/spec#rubric-quality", tag: "QC", label: "Overfitting and Underfitting" },
     ],
   },
@@ -117,24 +234,25 @@ export const guidelineChanges: GuidelineChange[] = [
     date: "Nov 1, 2026",
     version: clientFlagVersion,
     title: "Complexity has to come from the scenario, not from a stretched rubric",
-    body: "The client rejected 44 tasks, 30% of the total delivery, because they were not genuinely complex. The scenarios were simple enough for Model A to handle, and the rubrics were stretched until it failed 30%: criteria graded things the user never asked for, or accepted one answer where several were right. The model failed the rubric, not the task, and the client does not count those as failures. New in this review.",
+    body: "The client rejected 44 tasks, 30% of the total delivery, because they were not genuinely complex. The scenarios were simple enough for the model to handle, and the rubrics were stretched until it failed: criteria graded things the user never asked for, or accepted one answer where several were right. The model failed the rubric, not the task, and the client does not count those as failures. New in this review.",
     example: [
-      "The scenario is a simple lookup: find the dentist appointment in this week's emails and put it on the calendar. Model A does it correctly.",
-      "To reach 30%, criteria then grade what the user never asked for: the event title in one exact wording, a reminder exactly 30 minutes before, the clinic's phone number in the notes.",
-      "The criteria Model A passed are left out, so its misses weigh more. The rate clears 30%, and the task is still a simple lookup.",
+      "The scenario is a simple lookup: find the dentist appointment in this week's emails and put it on the calendar. The run does it correctly.",
+      "To make it fail, criteria then grade what the user never asked for: the event title in one exact wording, a reminder exactly 30 minutes before, the clinic's phone number in the notes.",
+      "The criteria the run passed are left out, so its misses weigh more. The score looks hard enough, and the task is still a simple lookup.",
     ],
-    does: "Build the complexity into the scenario itself, while you design it, before the first run. Give it a situation that is hard because of what the agent has to find, read and reconcile: a later email that corrects an earlier one, a rule kept in a document rather than the prompt, a detail that only shows in a photo. Then write criteria only for what the prompt, its inputs and the universe require, cover what Model A gets right as well as what it misses, and check that each one passes every valid answer. If honest criteria, rated honestly, still land below 30%, make the scenario harder, never the rubric.",
+    does: "Build the complexity into the scenario itself, while you design it, before the first run. Give it a situation that is hard because of what the agent has to find, read and reconcile: a later email that corrects an earlier one, a rule kept in a document rather than the prompt, a detail that only shows in a photo. Then write criteria only for what the prompt, its inputs and the universe require, build them from the golden and your GTFA, cover what the runs get right as well as what they miss, and check that each one passes every valid answer. If honest criteria still put the average of the 8 pass@k runs above 0.7, make the scenario harder, never the rubric.",
     refs: [
-      { section: "Complexity Bar", title: "Genuine complexity and the 30% threshold" },
-      { section: "Hard Client Requirements", title: "Model A has to fail" },
+      { section: "Complexity Bar", title: "Genuine complexity and the pass@k range" },
+      { section: "Hard Client Requirements", title: "Pass@k score in range" },
       { section: "1.2", title: "Building the Idea" },
       { section: "5.1", title: "Rubric Fundamentals" },
-      { section: "5.5", title: "Rating Model A and Justifying the Failures" },
+      { section: "7.1", title: "Grading All 8 Runs" },
+      { section: "7.2", title: "Rating the Reference Run and Justifying the Failures" },
     ],
     impact: "hard",
     links: [
       { to: "/#scenario", tag: "M3", label: "Complexity is planned, never patched in" },
-      { to: "/#rubrics", tag: "M8", label: "Criteria only for what the request requires" },
+      { to: "/#rubrics", tag: "M9", label: "Criteria only for what the request requires" },
       { to: "/failure-approach", tag: "FA", label: "Real Opus failures to build the scenario around" },
     ],
   },
@@ -149,15 +267,15 @@ export const guidelineChanges: GuidelineChange[] = [
       "The golden says not to commit to either option yet.",
       "Another criterion expects Saturday evening drop-off hours, and the golden's table only lists Sunday hours.",
     ],
-    does: "Rate the golden against every objective criterion, as you rated Model A, and point at the place where it passes each one. Where it fails one, decide which side is wrong and fix that side: rewrite the criterion if it misreads the prompt, the inputs or the data, and steer again if the golden missed a valid requirement. After any fix to the prompt, the rubric or the golden, rate the golden against every criterion again.",
+    does: "Build every criterion from the golden and your GTFA, and point at the place in the golden where it passes each one. Where it fails one, decide which side is wrong and fix that side: rewrite the criterion if it misreads the prompt, the inputs or the data, and steer again if the golden missed a valid requirement. After any fix to the prompt, the rubric or the golden, rate the golden against every criterion again.",
     refs: [
-      { section: "5.7", title: "Final Rubric Checklist" },
-      { section: "6.3", title: "Before You Wrap the Golden Up" },
+      { section: "5.6", title: "Final Rubric Checklist" },
+      { section: "3.5", title: "Before You Wrap the Golden Up" },
     ],
     impact: "hard",
     links: [
-      { to: "/#golden", tag: "M9", label: "The golden and the rubric agree" },
-      { to: "/reference#s6", tag: "F1", label: "The golden passes the complete set" },
+      { to: "/#golden", tag: "M7", label: "The golden and the GTFA agree" },
+      { to: "/reference#s5", tag: "E1", label: "The golden passes the complete set" },
     ],
   },
   {
@@ -175,11 +293,11 @@ export const guidelineChanges: GuidelineChange[] = [
     refs: [
       { section: "1.2.3", title: "Create the Prompt" },
       { section: "5.1", title: "Rubric Fundamentals" },
-      { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "5.6", title: "Final Rubric Checklist" },
     ],
     impact: "hard",
     links: [
-      { to: "/#rubrics", tag: "M8", label: "Search for link code before you submit" },
+      { to: "/#rubrics", tag: "M9", label: "Search for link code before you submit" },
       { to: "/reference#literal-matching", tag: "WN", label: "Every literal has to match its source exactly" },
     ],
   },
@@ -220,11 +338,11 @@ export const guidelineChanges: GuidelineChange[] = [
     refs: [
       { section: "5.1", title: "Rubric Fundamentals" },
       { section: "5.1.2", title: "Stacked Rubrics (OR Logic)" },
-      { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "5.6", title: "Final Rubric Checklist" },
     ],
     impact: "hard",
     links: [
-      { to: "/#rubrics", tag: "M8", label: "Use the user's own boundary" },
+      { to: "/#rubrics", tag: "M9", label: "Use the user's own boundary" },
       { to: "/spec#rubric-quality", tag: "QC", label: "Overfitting and Underfitting" },
     ],
   },
@@ -236,7 +354,7 @@ export const guidelineChanges: GuidelineChange[] = [
     before:
       "Red Shell assigned four: task type, category, subcategory and universe. The rest of the brief was treated as guidance.",
     body: "Fourteen parameters are assigned with every task: the task type, the use case and subcategory, the universe, the scenario, the assigned tools, the output artifact, the primary and secondary capabilities, the input and output modalities, the execution target, the verification condition, and the access the scenario assumes. All of them have to be followed exactly and visible in the finished task. Omitting, substituting or drifting from any one makes the task invalid.",
-    does: "Plan from the parameter sheet, and check the finished task against every line of it before you submit, not just the category pair. Deviate only where the universe genuinely cannot support a parameter or the scenario is too simple to reach the failure threshold, and only as far as that strictly needs.",
+    does: "Plan from the parameter sheet, and check the finished task against every line of it before you submit, not just the category pair. Deviate only where the universe genuinely cannot support a parameter or the scenario is too simple to bring the average pass@k score down to 0.7 or below, and only as far as that strictly needs.",
     refs: [
       { section: "Hard Client Requirements", title: "Task parameters are mandatory" },
       { section: "1.1", title: "Task Parameters & Execution Rules" },
@@ -257,32 +375,6 @@ export const guidelineChanges: GuidelineChange[] = [
     links: [
       { to: "/#parameters", tag: "M1", label: "Fourteen are assigned. None of them is a suggestion" },
       { to: "/reference#pre-submit", tag: "GATE", label: "A1 checks every one of them" },
-    ],
-  },
-  {
-    id: "failure-threshold",
-    date: "Oct 8, 2026",
-    version: "Green Shell v1",
-    title: "Model A has to fail at least 30%, and 50% is still preferred",
-    before: "Red Shell required Model A to fail at least 50% of the final rubric score.",
-    body: "The Model A trajectory has to show genuine failures worth at least 30% of the final rubric score, with meaningful impact on task completion and on what the user receives. A genuine failure rate of 50% or higher is still preferred. The failures have to be authentic, never forced or artificially scored to reach the threshold.",
-    does: "Aim for 50% or more, and submit a task whose genuine failures clear 30% rather than inflating a weight, adding asks after the run or forcing a miss to reach the higher number. If the model passes too easily, revisit the scenario's complexity while keeping it realistic and planned.",
-    refs: [
-      { section: "Hard Client Requirements", title: "Model A has to fail" },
-      { section: "1.1", title: "Task Parameters & Execution Rules" },
-      { section: "1.2", title: "Building the Idea" },
-    ],
-    impact: "hard",
-    detail: {
-      label: "Reading the bar",
-      items: [
-        "Only genuine failures count toward it. A raised weight, an ask added after the run, or one miss repeated across several criteria is exactly what the rule rules out.",
-        "Where the assigned scenario is too simple to reach 30%, its complexity may be raised, and only as far as needed, while every other parameter stays as assigned.",
-      ],
-    },
-    links: [
-      { to: "/#failure", tag: "M7", label: "If the model sails through, the task is not ready" },
-      { to: "/failure-approach", tag: "FA", label: "How Opus actually fails, case by case" },
     ],
   },
   {
@@ -378,7 +470,7 @@ export const guidelineChanges: GuidelineChange[] = [
     does: "Go through every criterion that names a value the model has to fetch, and rewrite the ones that state it as the answer. Phrase it as the current value retrieved during the run, put your figure in parentheses after it, and keep the file, the product and the source named so a grader can still rate it with the prompt closed.",
     refs: [
       { section: "5.1", title: "Rubric Fundamentals" },
-      { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "5.6", title: "Final Rubric Checklist" },
       { section: "8.3.1", title: "The Built-in Tools" },
     ],
     impact: "hard",
@@ -395,7 +487,7 @@ export const guidelineChanges: GuidelineChange[] = [
       ],
     },
     links: [
-      { to: "/#rubrics", tag: "M8", label: "Grade what was delivered, not how it got there" },
+      { to: "/#rubrics", tag: "M9", label: "Grade what was delivered, not how it got there" },
       { to: "/reference#assigned-tool-use", tag: "WN", label: "Assigned tools have to be used, not just assigned" },
       { to: "/reference#literal-matching", tag: "WN", label: "Every literal has to match its source exactly" },
       { to: "/spec#rubric-quality", tag: "QC", label: "Overfitting and Underfitting" },
@@ -409,12 +501,12 @@ export const guidelineChanges: GuidelineChange[] = [
     title: "Tasks are single turn, so milestones are gone",
     before:
       "Red Shell ran 3 to 5 turns, with a milestone set per turn, a revision turn, and a milestone check deciding whether the next prompt was a turn or a hint.",
-    body: "The task type is always single turn. One initial prompt goes in, it is sent automatically when you submit, and the agent answers it once. There are no further turns, so there is no milestone set to write. Leg B still runs that same prompt word for word, steered at intent level until the model reaches the ideal response.",
+    body: "The task type is always single turn. One initial prompt goes in and it is sent automatically when you submit. There are no further turns, so there is no milestone set to write. The golden is steered from that prompt at intent level until the model reaches the ideal response, and each of the 8 pass@k runs answers the same prompt, word for word, once.",
     does: "Put every requirement into the one prompt. Anything it does not ask for cannot be graded, whatever the Draft History records.",
     refs: [
       { section: "1.1", title: "Task Parameters & Execution Rules" },
       { section: "2.1", title: "Sending the Prompt" },
-      { section: "6", title: "Golden Solution, Leg B" },
+      { section: "3", title: "Golden Solution" },
     ],
     impact: "hard",
     detail: {
@@ -423,7 +515,7 @@ export const guidelineChanges: GuidelineChange[] = [
         "No milestone set, and no milestone check between turns.",
         "No revision turn, and no deferred asset arriving later in the conversation.",
         "No turn structure or dependency to design, so difficulty has to come from the scenario instead.",
-        "Hinting survives, but only inside Leg B, where you steer the same prompt toward the ideal response.",
+        "Hinting survives, but only inside the golden, where you steer the same prompt toward the ideal response. The pass@k runs get no follow-ups.",
       ],
     },
   },
@@ -475,7 +567,7 @@ export const guidelineChanges: GuidelineChange[] = [
     title: "Three multimodal inputs is the floor, not the target",
     before:
       "Red Shell set the same minimum of three, and in practice it was read as the number to hit.",
-    body: "The Model A conversation needs a minimum of three multimodal inputs, and together they have to cover every assigned input modality. Three is the requirement, not the goal, and many tasks need substantially more than that to meet the complexity bar the client expects.",
+    body: "Every task needs a minimum of three multimodal inputs, and together they have to cover every assigned input modality. Three is the requirement, not the goal, and many tasks need substantially more than that to meet the complexity bar the client expects.",
     does: "Use as many inputs as the scenario naturally needs, and never trim a task down to three or slightly more.",
     refs: [
       { section: "1.1.2", title: "Rest of the Parameters" },
@@ -498,9 +590,9 @@ export const guidelineChanges: GuidelineChange[] = [
       { section: "5.1", title: "Rubric Fundamentals" },
       { section: "5.2", title: "Rubric Weights" },
       { section: "5.4", title: "Category & Evaluation Target" },
-      { section: "5.6", title: "How the Client Defines Rubric Issue Severity" },
-      { section: "5.7", title: "Final Rubric Checklist" },
-      { section: "7.4", title: "Categories and Evaluation Targets for Subjective Rubrics" },
+      { section: "5.5", title: "How the Client Defines Rubric Issue Severity" },
+      { section: "5.6", title: "Final Rubric Checklist" },
+      { section: "6.4", title: "Categories and Evaluation Targets for Subjective Rubrics" },
       { section: "8.2", title: "What the Model Actually Does" },
     ],
     impact: "hard",
@@ -523,7 +615,7 @@ export const guidelineChanges: GuidelineChange[] = [
     does: "Copy each literal straight from the attachment, the universe record or the GTFA. Open the source and check every one of them before you submit.",
     refs: [
       { section: "5.1", title: "Rubric Fundamentals" },
-      { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "5.6", title: "Final Rubric Checklist" },
     ],
     impact: "hard",
   },
@@ -537,8 +629,8 @@ export const guidelineChanges: GuidelineChange[] = [
     refs: [
       { section: "5.1", title: "Rubric Fundamentals" },
       { section: "5.2", title: "Rubric Weights" },
-      { section: "5.6", title: "How the Client Defines Rubric Issue Severity" },
-      { section: "5.7", title: "Final Rubric Checklist" },
+      { section: "5.5", title: "How the Client Defines Rubric Issue Severity" },
+      { section: "5.6", title: "Final Rubric Checklist" },
     ],
     impact: "hard",
     detail: {

@@ -75,6 +75,12 @@ function RenderFrame({
 
 /* ----------------------------------------------------------------------- leg */
 
+/**
+ * One side of the comparison. `side` keeps the data's field names: A is the
+ * reference run (`legA`), B the golden (`legB`). On screen they read R and G,
+ * because the workflow no longer has legs: the golden runs first and the block
+ * is built from its render.
+ */
 function Leg({ leg, side, whole }: { leg: RubricLeg; side: "A" | "B"; whole: boolean }) {
   const isA = side === "A";
   return (
@@ -93,7 +99,7 @@ function Leg({ leg, side, whole }: { leg: RubricLeg; side: "A" | "B"; whole: boo
             isA ? "bg-rose-600" : "bg-emerald-600"
           )}
         >
-          {side}
+          {isA ? "R" : "G"}
         </span>
         <span
           className={cx(
@@ -101,7 +107,7 @@ function Leg({ leg, side, whole }: { leg: RubricLeg; side: "A" | "B"; whole: boo
             isA ? "text-rose-700 dark:text-rose-300" : "text-emerald-700 dark:text-emerald-300"
           )}
         >
-          Leg {side}, {isA ? "the observed run" : "the golden"}
+          {isA ? "The reference run" : "The golden"}
         </span>
         <a
           href={asset(leg.view.src)}
@@ -188,7 +194,7 @@ export default function SubjectiveRubrics({ rubrics }: { rubrics: SubjectiveRubr
                       )}
                     >
                       {failed ? <X size={11} /> : <Check size={11} />}
-                      {failed ? "Model A failed" : "Model A passed"}
+                      {failed ? "Reference run failed" : "Reference run passed"}
                     </span>
                     <span className="inline-flex items-center gap-1 text-[11.5px] font-semibold text-ink-400">
                       <GitCompare size={11} />
@@ -238,8 +244,8 @@ export default function SubjectiveRubrics({ rubrics }: { rubrics: SubjectiveRubr
                       </div>
 
                       <div className="mt-3 grid items-start gap-3 lg:grid-cols-2">
-                        <Leg leg={s.legA} side="A" whole={full} />
                         <Leg leg={s.legB} side="B" whole={full} />
+                        <Leg leg={s.legA} side="A" whole={full} />
                       </div>
 
                       <div className="mt-3 border-l-2 border-brand-400/60 pl-3">

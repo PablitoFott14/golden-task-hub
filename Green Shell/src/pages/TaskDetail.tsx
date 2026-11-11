@@ -65,6 +65,10 @@ import { asset, cx } from "../lib/util";
 
 const step = (n: number) => methodSteps.find((m) => m.n === n)!;
 
+/** Stage counts are read off the data, so a new method step cannot leave a stale number. */
+const WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen"];
+const counted = (n: number) => WORDS[n] ?? String(n);
+
 /* ------------------------------------------------------------------- pieces */
 
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
@@ -800,7 +804,7 @@ function DraftHistoryBlock({ t }: { t: GoldenTask }) {
   );
 }
 
-/* ------------------------------------------------------------------- step 7 */
+/* ------------------------------------------------------------------- step 8 */
 
 function ArtifactLink({
   file,
@@ -837,16 +841,45 @@ function ArtifactLink({
   );
 }
 
-function ModelA({ t }: { t: GoldenTask }) {
+/**
+ * Step 8. The task predates pass@k generation, so this is its one run: what it
+ * cost and what it handed over. How it rated sits at step 11, in `ModelA`.
+ */
+function Runs({ t }: { t: GoldenTask }) {
   return (
     <>
-      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
+      <Callout title="Eight runs today, one run here" tone="warn" icon={<AlertTriangle size={12} />}>
+        Once the golden is complete, eight runs now launch on their own, on the same prompt word for
+        word with no follow-ups: four on Claude Opus 5.5 and four on Muse Wonder 1.1. Nothing is asked
+        of you while they run. This task was built before that step existed, so it has the one Opus 5
+        run below, and it stands where the first valid Opus run stands today: the reference run every
+        rating is checked against.
+      </Callout>
+
+      <div className="mt-5 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
         {t.run.stats.map((s) => (
           <Stat key={s.k} label={s.k} value={s.v} />
         ))}
       </div>
 
-      <div className="mt-5 grid gap-3 sm:grid-cols-3">
+      <div className="mt-6">
+        <div className="mono-label mb-3 text-ink-400">What the reference run shipped</div>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {t.run.artifacts.map((a) => (
+            <ArtifactLink key={a.file} file={a.file} what={a.what} src={a.src} />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ step 11 */
+
+function ModelA({ t }: { t: GoldenTask }) {
+  return (
+    <>
+      <div className="grid gap-3 sm:grid-cols-3">
         {t.run.score.map((s) => (
           <div
             key={s.label}
@@ -861,9 +894,9 @@ function ModelA({ t }: { t: GoldenTask }) {
         ))}
       </div>
       <p className="mt-2.5 text-[12.5px] leading-relaxed text-ink-500">
-        The bar is genuine failures on at least 30% of the final rubric score, with 50% or more
-        preferred, on failures that materially affect what the user asked for. One negative
-        criterion was also triggered.
+        This is the weight the reference run lost, and one negative criterion was also triggered.
+        Today the bar is the average score of all eight pass@k runs, which has to fall between 0.3
+        and 0.7 on genuine criteria. This task predates pass@k grading, so it has no such average.
       </p>
 
       <Callout title="What it did reach" tone="ok" icon={<Check size={12} />}>
@@ -931,19 +964,10 @@ function ModelA({ t }: { t: GoldenTask }) {
         ))}
       </div>
 
-      <div className="mt-6">
-        <div className="mono-label mb-3 text-ink-400">What Model A shipped</div>
-        <div className="grid gap-2 sm:grid-cols-2">
-          {t.run.artifacts.map((a) => (
-            <ArtifactLink key={a.file} file={a.file} what={a.what} src={a.src} />
-          ))}
-        </div>
-      </div>
-
       <Crosslinks
-        className="mt-4"
+        className="mt-6"
         links={[
-          { to: "/reference#s1", tag: "A5", label: "Did the model fail on things that matter?" },
+          { to: "/reference#s8", tag: "H1", label: "Did the model fail on things that matter?" },
           { to: "/golden-tasks/charge-disputes#subjective", tag: "GT", label: "The same page, beside the golden" },
           { to: "/failure-approach", tag: "FA", label: "The same failures in other runs, by type" },
         ]}
@@ -952,7 +976,7 @@ function ModelA({ t }: { t: GoldenTask }) {
   );
 }
 
-/* ------------------------------------------------------------------- step 8 */
+/* ------------------------------------------------------------------- step 9 */
 
 function RubricBlock({ t }: { t: GoldenTask }) {
   return (
@@ -986,14 +1010,14 @@ function RubricBlock({ t }: { t: GoldenTask }) {
         className="mt-5"
         links={[
           { to: "/spec#rubric-quality", tag: "SPEC", label: "The rubric quality issues a reviewer scores" },
-          { to: "/reference#s5", tag: "E4", label: "Is every criterion ratable without you?" },
+          { to: "/reference#s6", tag: "F4", label: "Is every criterion ratable without you?" },
         ]}
       />
     </>
   );
 }
 
-/* ------------------------------------------------------------------- step 9 */
+/* ------------------------------------------------------------------- step 7 */
 
 function SteerCard({ s }: { s: Steer }) {
   const [open, setOpen] = useState(s.n === 1);
@@ -1134,7 +1158,7 @@ function Golden({ t }: { t: GoldenTask }) {
       <Crosslinks
         className="mt-4"
         links={[
-          { to: "/reference#s6", tag: "F1", label: "Does the golden pass its own block?" },
+          { to: "/reference#s5", tag: "E1", label: "Does the golden pass its own block?" },
           { to: "/reference#faq", tag: "FAQ", label: "How much may a hint carry?" },
         ]}
       />
@@ -1201,14 +1225,16 @@ export default function TaskDetail() {
         return <AnnotatedPrompt t={t} />;
       case "draft-history":
         return <DraftHistoryBlock t={t} />;
-      case "model-a":
-        return <ModelA t={t} />;
-      case "rubrics":
-        return <RubricBlock t={t} />;
       case "golden":
         return <Golden t={t} />;
+      case "runs":
+        return <Runs t={t} />;
+      case "rubrics":
+        return <RubricBlock t={t} />;
       case "subjective":
         return <Subjective t={t} />;
+      case "model-a":
+        return <ModelA t={t} />;
       default:
         return null;
     }
@@ -1251,7 +1277,7 @@ export default function TaskDetail() {
             <Stat label="Universe" value={<span className="font-mono text-[12px]">{t.meta.universe}</span>} />
             <Stat label="Persona" value={t.meta.persona} />
             <Stat label="Deliverable" value={<span className="font-mono">{t.meta.deliverable}</span>} />
-            <Stat label="Model A result" value={`${t.run.score[2].pct} of the weight lost`} tone="no" />
+            <Stat label="Reference run result" value={`${t.run.score[2].pct} of the weight lost`} tone="no" />
           </div>
 
           <div className="mt-8 grid gap-3 lg:grid-cols-2">
@@ -1275,11 +1301,12 @@ export default function TaskDetail() {
         <div className="wrap flex flex-wrap items-center gap-x-3 gap-y-1.5 py-3.5">
           <Eye size={14} className="shrink-0 text-brand-600 dark:text-brand-300" />
           <span className="text-[12.5px] font-bold text-ink-900">
-            Ten stages, in the order the work happened.
+            {counted(t.stages.length)} stages, one per method step, in method order.
           </span>
           <span className="min-w-0 flex-1 text-[12.5px] leading-relaxed text-ink-500">
             Each one says what was decided, why the step exists, and what it hands to the next. Read
-            the handoffs and the task builds itself.
+            the handoffs and the task builds itself. It was built before the golden moved first, and
+            the stages that changed say so.
           </span>
         </div>
       </div>
@@ -1302,14 +1329,14 @@ export default function TaskDetail() {
               <div className="flex flex-wrap items-center gap-2">
                 <Mail size={15} className="text-gold-600 dark:text-gold-300" />
                 <h2 className="font-display text-[17px] font-bold tracking-tight text-ink-900">
-                  Ten steps later, the task is submittable
+                  {counted(t.stages.length)} steps later, the task is submittable
                 </h2>
               </div>
               <p className="mt-2 max-w-2xl text-[13.5px] leading-relaxed text-ink-600">
-                One prompt, nine attachments, a resolved answer, a run that failed on things that
-                matter, {t.rubrics.length} objective criteria, {t.subjective.length} subjective ones
-                and a golden that passes its own block. The gate is the last thing between here and
-                handing it in.
+                One prompt, nine attachments, a resolved answer, a golden that passes its own block,{" "}
+                {t.rubrics.length} objective criteria, {t.subjective.length} subjective ones, and a
+                reference run rated against them that failed on things that matter. The gate is the
+                last thing between here and handing it in.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <Link to="/reference#pre-submit" className="btn">

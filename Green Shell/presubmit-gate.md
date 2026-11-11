@@ -35,7 +35,7 @@
 
 **Fix title:** Fix before submitting
 
-**Fix body:** Any box left empty. Fix the item, then re-run the section it sits in. Changing a rule in the prompt or the inputs usually moves something in the rubric block too.
+**Fix body:** Any box left empty. Fix the item, then re-run the section it sits in. Changing the prompt or the inputs means a new golden and new pass@k runs, and usually moves something in the rubric block too.
 
 ## 1. Parameters and scenario
 
@@ -43,7 +43,7 @@
 
 ### A1
 
-**Q:** Does the finished task implement all fourteen assigned parameters exactly, with any deviation limited to what the universe or the failure threshold genuinely forced?
+**Q:** Does the finished task implement all fourteen assigned parameters exactly, with any deviation limited to what the universe or the pass@k range genuinely forced?
 
 **Fix:** Go down the parameter sheet line by line, not just the category pair. Drift from any one of them is an automatic rejection.
 
@@ -82,7 +82,7 @@
 
 **Q:** Does the output artifact clear the complexity bar for its type, with work across all three stages that a short linear exchange could not finish?
 
-**Fix:** Plan the complexity before the run, never patch it in after. Add a cross-system handoff, not more asks.
+**Fix:** Plan the complexity before the golden runs, never patch it in after. Add a cross-system handoff, not more asks.
 
 **Ref:** §Hard Client Requirements · Complexity Bar · 1
 
@@ -90,19 +90,6 @@
 - `M3` Complexity is planned, never patched in -> /#scenario
 - `WN` The floor each deliverable has to clear -> /reference#planned-complexity
 - `GT` Seven designed friction points -> /golden-tasks/charge-disputes#gtfa
-
-### A5
-
-**Q:** Did Model A genuinely fail at least 30% of the final rubric score, ideally 50% or more, with failures that materially affect task completion?
-
-**Fix:** If the run sailed through, redesign inside your parameters and run Leg A again. Never force a failure, add an ask after the run or inflate a weight to reach the bar.
-
-**Ref:** §Hard Client Requirements · 1.2 · 4
-
-**Links:**
-- `M7` If the model sails through, the task is not ready -> /#failure
-- `GT` 52% of the objective weight lost -> /golden-tasks/charge-disputes#model-a
-- `FA` Model A passed? Find out why -> /failure-approach#keeps-passing
 
 ## 2. Universe and evidence
 
@@ -134,7 +121,7 @@
 
 ### B3
 
-**Q:** Do the inputs cover every assigned input modality, with at least three of them in the Model A conversation and most images needing real visual interpretation rather than being screenshots of text?
+**Q:** Do the inputs cover every assigned input modality, with at least three per task and most images needing real visual interpretation rather than being screenshots of text?
 
 **Fix:** A page of text in picture form is a document, not an image. Three is the floor, and many tasks need substantially more.
 
@@ -175,9 +162,9 @@
 
 **Q:** Is the prompt built from the assigned scenario, in the user's own voice, with everything the agent needs in it, its inputs or the universe, and a call to action it can finish in a single turn?
 
-**Fix:** Model A gets the initial prompt and no follow-ups. Leave room for subjectivity: a visual requirement the prompt states becomes objective.
+**Fix:** Every pass@k run gets the initial prompt and no follow-ups. Leave room for subjectivity: a visual requirement the prompt states becomes objective.
 
-**Ref:** §1.1.2 · 1.2.3 · 3
+**Ref:** §1.1.2 · 1.2.3 · 4
 
 **Links:**
 - `M5` One prompt, and everything in it -> /#prompt
@@ -233,78 +220,106 @@
 - `M3` Solve it yourself first -> /#scenario
 - `GT` The resolved answer, charge by charge -> /golden-tasks/charge-disputes#gtfa
 
-## 5. Objective rubrics
+## 5. Golden
 
-**Prompt:** Every criterion has to be ratable, correct at runtime, and grounded in something the prompt said.
+**Prompt:** The first run of the task, and the reference both rubric blocks are built from.
 
 ### E1
+
+**Q:** Did the golden run first, on the prompt the 8 pass@k runs receive word for word, with every hint at intent level and in the same persona, and does it agree with your GTFA and pass every valid criterion built from it?
+
+**Fix:** If the model could copy your hint straight into the artifact, you gave away the answer. Where the golden and the GTFA or a criterion disagree, fix whichever side is wrong; if the universe cannot deliver an ask, fix the task and run the golden again.
+
+**Ref:** §3.1 · 3.4 · 3.5 · 5.6
+
+**Links:**
+- `M7` Point at the intent, never at the answer -> /#golden
+- `GT` The golden run, steer by steer -> /golden-tasks/charge-disputes#golden
+- `UA` The golden has to pass its own rubric -> /alignments#flag-golden-agrees
+
+### E2
+
+**Q:** Are the golden's trajectory and final artifacts downloaded, and the preferred run starred if there is more than one?
+
+**Fix:** Both rubric blocks are built from them. The star only marks your golden: all 8 pass@k runs are generated and graded whichever run is preferred.
+
+**Ref:** §3.2 · 3.3
+
+**Links:**
+- `QC` Trajectory completeness -> /spec#trajectory
+
+## 6. Objective rubrics
+
+**Prompt:** Built from the golden and the GTFA. Every criterion has to be ratable, correct at runtime, and grounded in something the prompt said.
+
+### F1
 
 **Q:** Walking the prompt, is every ask covered by a criterion, with each core decision graded where it lands in the deliverable?
 
 **Fix:** Missing Criteria is a Major issue. No target count: thorough coverage usually lands around 15 to 30.
 
-**Ref:** §5 · 5.1 · 5.7
+**Ref:** §5 · 5.1 · 5.6
 
 **Links:**
 - `QC` The rubric error catalogue -> /spec#rubric-criteria
 
-### E2
+### F2
 
 **Q:** Do at least 80% of the objective criteria grade completion, and is every process criterion one that no deliverable could show?
 
 **Fix:** Tool Use, Agent Behavior, any Trajectory target and narration of the model's own work are process. Over 20% fails the task automatically, and zero is preferred.
 
-**Ref:** §5.1 · 5.4 · 5.6
+**Ref:** §5.1 · 5.4 · 5.5
 
 **Links:**
-- `M8` Grade what was delivered, not how it got there -> /#rubrics
+- `M9` Grade what was delivered, not how it got there -> /#rubrics
 - `WN` 80/20: grade the outcome, not the route -> /reference#outcome-over-process
 - `GT` Zero Trajectory criteria, which is the target -> /golden-tasks/charge-disputes#rubrics
 
-### E3
+### F3
 
 **Q:** Does every criterion grade content, and none only that a file, section, column or record exists?
 
 **Fix:** An existence check fails the task automatically at any weight. A criterion on the value inside the file already proves the file exists.
 
-**Ref:** §5.1 · 5.6
+**Ref:** §5.1 · 5.5
 
 **Links:**
 - `WN` Existence is never a criterion -> /reference#no-existence-checks
 
-### E4
+### F4
 
 **Q:** Read with the prompt closed: can a grader rate every criterion Present or Not Present from the criterion and its evaluation target alone, and does every literal in it match its source exactly?
 
 **Fix:** Embed the exact value, filename, date or classification, copied from the source, never typed from memory. A literal the source does not carry is an Incorrect Criteria issue.
 
-**Ref:** §5.1 · 5.5 · 5.7
+**Ref:** §5.1 · 5.6 · 7.2
 
 **Links:**
-- `M8` A grader with the prompt closed can still rate it -> /#rubrics
+- `M9` A grader with the prompt closed can still rate it -> /#rubrics
 - `WN` Every literal matches its source -> /reference#literal-matching
 - `GT` 26 criteria that each pin their own value -> /golden-tasks/charge-disputes#rubrics
 
-### E5
+### F5
 
 **Q:** Is each criterion atomic and positively phrased, with no two checking the same thing or demanding outcomes that cannot both hold?
 
 **Fix:** Split only where two halves could pass independently; several values serving one finding stay in one criterion. Use OR only for outcomes that are genuinely equivalent.
 
-**Ref:** §5.1 · 5.1.2 · 5.6
+**Ref:** §5.1 · 5.1.2 · 5.5
 
-### E6
+### F6
 
 **Q:** Is every weight in {−5, −3, −1, +1, +3, +5}, and does each answer how hard the criterion was to satisfy rather than how much it matters?
 
 **Fix:** Any value outside the set fails Rubric Structure on its own. A value read off the media and reconciled against another source is usually +5.
 
-**Ref:** §5.2 · 5.7
+**Ref:** §5.2 · 5.6
 
 **Links:**
 - `QC` Rubric structure -> /spec#rubric-criteria
 
-### E7
+### F7
 
 **Q:** Is every criterion in the category and evaluation target it would actually be graded under?
 
@@ -315,7 +330,7 @@
 **Links:**
 - `GT` Every criterion carries its own value -> /golden-tasks/charge-disputes#rubrics
 
-### E8
+### F8
 
 **Q:** Are negatives around a quarter of the block and under 30%, and does any group of more than eight similar outcomes use one completeness criterion plus at most five spot checks?
 
@@ -326,24 +341,7 @@
 **Links:**
 - `GT` Nine charges, nine criteria, no group to collapse -> /golden-tasks/charge-disputes#gtfa
 
-## 6. Golden, dynamic values and final state
-
-**Prompt:** The last things that break a task after everything else is right.
-
-### F1
-
-**Q:** Did Leg B run the same prompt word for word, every hint at intent level and in the same persona, and does the golden pass the complete objective rubric set?
-
-**Fix:** If the model could copy your hint straight into the artifact, you gave away the answer. Where the golden fails a criterion, fix whichever side is wrong: the criterion if it misreads the prompt, the inputs or the data, the golden if it missed a valid requirement.
-
-**Ref:** §5.7 · 6.1 · 6.2 · 6.3
-
-**Links:**
-- `M9` Point at the intent, never at the answer -> /#golden
-- `GT` The golden run, steer by steer -> /golden-tasks/charge-disputes#golden
-- `UA` The golden has to pass its own rubric -> /alignments#flag-golden-agrees
-
-### F2
+### F9
 
 **Q:** If the scenario touches the public internet or another dynamic type of information, essentially prices, is no criterion pinned to a value that can legitimately change between runs?
 
@@ -351,16 +349,8 @@
 
 **Ref:** §8.3.1
 
-### F3
-
-**Q:** Are the trajectories and final artifacts downloaded, the preferred run starred, and does every failed criterion carry all three justification parts?
-
-**Fix:** A failure is a positive rated Not Present or a negative rated Present. Every one carries a justification; the golden needs none.
-
-**Ref:** §3 · 5.5
-
 **Links:**
-- `QC` Trajectory completeness -> /spec#trajectory
+- `UA` A live value is graded as retrieved, never as a fixed figure -> /alignments#flag-dynamic-values
 
 ## 7. Subjective block
 
@@ -370,9 +360,9 @@
 
 **Q:** Does the block hold 10 or more natural criteria, each anchored to one identifiable element and one visible property the prompt never asked for?
 
-**Fix:** Do not force extra criteria to hit the number. No “looks professional”, “well designed” or “high quality”: name the property a reviewer can locate and score.
+**Fix:** Write each one against what the golden's render shows, and do not force extra criteria to hit the number. No “looks professional”, “well designed” or “high quality”: name the property a reviewer can locate and score.
 
-**Ref:** §7.1
+**Ref:** §6.1
 
 **Links:**
 - `M10` Judge the render -> /#subjective
@@ -384,15 +374,33 @@
 
 **Fix:** A PDF cannot respond to hover and a static graphic cannot play audio. The category is Task Completion and the target the Final Answer Artifact, with User-Facing Message a rare exception.
 
-**Ref:** §7.1 · 7.2 · 7.4
+**Ref:** §6.1 · 6.2 · 6.4
 
-### G3
+## 8. Grading and rating
 
-**Q:** Did you rate every subjective criterion Present or Not Present against both models yourself, with justifications written at the user-experience level?
+**Prompt:** All 8 runs graded on the final rubric, and every rating checked by you.
 
-**Fix:** Pre-filled selections are not to be trusted, and the Model B set is entirely yours to determine. Literal matching applies here as rigorously as in the objective block.
+### H1
 
-**Ref:** §5.1 · 7.5
+**Q:** Did you grade all 8 pass@k runs on the final rubric, and does their average score fall between 0.3 and 0.7, from genuine criteria with nothing tuned to the score?
+
+**Fix:** Above 0.7, raise the scenario's complexity inside your parameters; below 0.3, check that every criterion accepts every valid answer and no run broke. Never add, drop, reword or reweight a criterion only to move the average.
+
+**Ref:** §Hard Client Requirements · Complexity Bar · 4.2 · 7.1
 
 **Links:**
+- `M11` Read the score, never tune the rubric to it -> /#failure
+- `GT` Where its rated run actually broke -> /golden-tasks/charge-disputes#model-a
+- `FA` Runs scoring too high? Find out why -> /failure-approach#keeps-passing
+
+### H2
+
+**Q:** Did you verify every prefilled Present or Not Present, in both blocks, against the first valid Opus run's trajectory and artifacts, and does every failure carry all three justification parts?
+
+**Fix:** Prefilled does not mean verified: correct every wrong verdict. A failure is a positive rated Not Present or a negative rated Present; subjective justifications stay at the user-experience level, and the golden needs none.
+
+**Ref:** §4.1 · 7.2 · 7.3
+
+**Links:**
+- `M11` Verify every prefilled rating yourself -> /#failure
 - `QC` Subjective block scope -> /spec#rubric-criteria

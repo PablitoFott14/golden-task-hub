@@ -194,7 +194,7 @@ export interface MethodStep {
    */
   links?: XLink[];
   /** Which phase of the workflow the step belongs to. */
-  phase: "Design" | "Leg A" | "Leg B" | "Grade";
+  phase: "Design" | "Golden" | "Pass@k" | "Rubrics";
 }
 
 /* --------------------------------------------------------------- golden task */
@@ -398,7 +398,7 @@ export interface Rubric {
   category: string;
   target: string;
   polarity: "positive" | "negative";
-  /** Result against the Model A run. */
+  /** Result against the reference run. */
   status: "present" | "not-present";
   /** One line on what actually happened. */
   observed?: string;
@@ -425,7 +425,11 @@ export interface RunObservation {
   pattern?: string;
 }
 
-/** Leg A: the one prompt, answered once, measured against the GTFA. */
+/**
+ * The run the task was measured on: the one prompt, answered once, with no
+ * follow-ups. On the Golden Task, which predates pass@k, that is its single
+ * Opus 5 run, the part the reference run (the first valid Opus run) plays now.
+ */
 export interface ObservedRun {
   summary: string;
   /** Countable facts about the run itself. */
@@ -433,7 +437,7 @@ export interface ObservedRun {
   /** What it did reach, so the failure reads as real rather than total. */
   kept: string[];
   observations: RunObservation[];
-  /** The weight it lost, stated so the failure bar can be checked: 30% at least, 50% preferred. */
+  /** The weight it lost on the rated run, criterion by criterion. */
   score: { label: string; lost: string; of: string; pct: string }[];
   artifacts: Deliverable[];
 }
@@ -457,9 +461,9 @@ export interface Steer {
   recovered: string;
 }
 
-/** Leg B: the same prompt, a new conversation, steered to the ideal answer. */
+/** The golden: the prompt, steered to the ideal answer. It runs first. */
 export interface GoldenRun {
-  /** How the opening message relates to Leg A. */
+  /** How the opening message relates to the prompt the runs receive. */
   opening: string;
   steers: Steer[];
   /** The answer after each reply, so the climb is visible. */
@@ -524,11 +528,11 @@ export interface SubjectiveRubric {
   artifact: string;
   /** What the criterion is actually checking, in one line. */
   asks: string;
-  /** Result against the Model A run. */
+  /** Result against the reference run. */
   status: "present" | "not-present";
-  /** Leg A, the observed task run. */
+  /** The reference run, the observed run the criterion is rated on. The field keeps its old name. */
   legA: RubricLeg;
-  /** Leg B, the golden. */
+  /** The golden, the render the criterion is built from. The field keeps its old name. */
   legB: RubricLeg;
   /** The difference between the two renders, and why it is writable as a criterion. */
   derived: string;
@@ -795,7 +799,7 @@ export interface FailureCategory {
 }
 
 /**
- * Where a case comes from. `golden` is the Leg A run of the hub's own Golden
+ * Where a case comes from. `golden` is the one graded Opus 5 run of the hub's own Golden
  * Task, on Opus 5. `openclaw-mm` is the study project closest to Green Shell,
  * and `study` is every other project in the studies.
  */
@@ -839,7 +843,7 @@ export interface FailureCase {
 }
 
 /**
- * One way to put a pattern's pressure into a Leg A. `from` names the cases on
+ * One way to put a pattern's pressure into a task. `from` names the cases on
  * the same page it is drawn from, which render as links to them; an idea with
  * no case behind it on the page says where its evidence is in its own words.
  */
@@ -850,7 +854,7 @@ export interface BuildIdea {
 
 /**
  * One way Opus fails, with the cases that show it and the moves that build it
- * into a Leg A. Strings may carry `[G x]`, `[Q …]`, `[R …]` and `[C …]`
+ * into a task. Strings may carry `[G x]`, `[Q …]`, `[R …]` and `[C …]`
  * brackets, which are provenance and never reach the screen.
  */
 export interface FailurePattern {
@@ -866,7 +870,7 @@ export interface FailurePattern {
   why: string[];
   /** The Golden Task first, then OpenClaw MM, then the runs that repeat most. */
   cases: FailureCase[];
-  /** Ways to build the same pressure into a Green Shell Leg A. */
+  /** Ways to build the same pressure into a Green Shell task. */
   build: BuildIdea[];
   /** What keeps it a real failure rather than a manufactured one. */
   fair: string[];
@@ -876,13 +880,13 @@ export interface FailurePattern {
   caveat?: string;
 }
 
-/** One row of the "Model A passed?" diagnosis. */
+/** One row of the "Score above 0.7?" diagnosis. */
 export interface PassDiagnosis {
   /** Why the planned failure point passed. */
   gave: string;
   /** What in the trajectory shows it. */
   tell: string;
-  /** What to change before the next Leg A. */
+  /** What to change before the next runs. */
   change: string;
   /** The patterns the change builds on. */
   patterns: string[];

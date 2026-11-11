@@ -20,6 +20,12 @@ const GT = "/golden-tasks/charge-disputes";
  * questions were added: assigned tools, assigned capabilities, the Text
  * modality against the three input minimum, missing preseeded images, and War
  * Room hours.
+ *
+ * Nov 11, 2026: brought up to the Guidelines' v3 order, where the golden runs
+ * first and two pass@k steps replace Leg A. Every `refs` entry was renumbered
+ * against the new headings, the Leg B and Model A / Model B wording went, and
+ * one question on the pass@k runs and the preferred run was added. The id
+ * `model-b-prompts` is kept because links outside the hub may carry it.
  */
 export const faq: FaqItem[] = [
   {
@@ -180,22 +186,43 @@ export const faq: FaqItem[] = [
     n: 10,
     id: "model-b-prompts",
     topic: "Conversation",
-    q: "How do I correct the model in Leg B?",
+    q: "How do I correct the model in the golden run?",
     a: [
-      "Leg B opens a new conversation on the same prompt, word for word. From there you are the user simulator: you send what the conversation needs next to reach the golden solution.",
+      "The golden is the first run of the task. The prompt is sent for you, and from there you are the user simulator: you send what the conversation needs next to reach the golden solution, on the same prompt the pass@k runs will later receive word for word.",
       "Correct the model with hints, as many as it takes, each saying what is still missing from the user's point of view. Never tell it what to write, name the answer, or step outside the persona.",
     ],
     refs: [
-      { section: "6.1", title: "What Changes from Leg A" },
-      { section: "6.2", title: "Steering the Run & Hinting" },
+      { section: "3.3", title: "The Golden and the Pass@k Runs" },
+      { section: "3.4", title: "Steering the Run & Hinting" },
     ],
     links: [
-      { to: "/#golden", tag: "M9", label: "Point at the intent, never at the answer" },
+      { to: "/#golden", tag: "M7", label: "Point at the intent, never at the answer" },
       { to: `${GT}#golden`, tag: "GT", label: "How a misread $8.74 was recovered without naming it" },
     ],
   },
   {
     n: 11,
+    id: "pass-k-runs",
+    topic: "Conversation",
+    q: "Do I have to wait for the pass@k runs, and does the preferred run change the score?",
+    a: [
+      "There is nothing to run. Once the golden is complete, 8 pass@k runs launch automatically on the same prompt, word for word: 4 on Claude Opus 5.5 and 4 on Muse Wonder 1.1, each answering once with no follow ups. They typically take 15 to 20 minutes, so use that time to start planning your rubrics from the golden and your GTFA.",
+      "The preferred run has no impact on them. It only marks your golden: all 8 runs are generated and graded against your rubrics whichever run is starred, and their average score has to fall between 0.3 and 0.7.",
+      "Present and Not Present are rated against the first valid Opus run, the reference run, never against the golden or the preferred run. Download it once it finishes, and verify every prefilled rating against it yourself.",
+    ],
+    refs: [
+      { section: "4", title: "Pass@k Generation" },
+      { section: "4.1", title: "The Reference Run" },
+      { section: "7.1", title: "Grading All 8 Runs" },
+    ],
+    links: [
+      { to: "/#passk", tag: "M8", label: "What the 8 pass@k runs are for" },
+      { to: "/#failure", tag: "M11", label: "Read the score, never tune the rubric to it" },
+      { to: "/reference#s8", tag: "H1", label: "All 8 runs graded, the average in range" },
+    ],
+  },
+  {
+    n: 12,
     id: "subjective-negative",
     topic: "Rubrics",
     q: "Can a subjective rubric be negative, or does the block have to be positive criteria?",
@@ -205,8 +232,8 @@ export const faq: FaqItem[] = [
       "Write the flaw the way you write a property: one named element, one thing a reader can see. Text overflowing the slide frame, two body sizes across one document, a placeholder caption left under a photograph.",
     ],
     refs: [
-      { section: "7.1", title: "Writing Subjective Rubrics" },
-      { section: "7.2", title: "Subjective Rubric Weights" },
+      { section: "6.1", title: "Writing Subjective Rubrics" },
+      { section: "6.2", title: "Subjective Rubric Weights" },
     ],
     links: [
       { to: "/#subjective", tag: "M10", label: "Judge the render, nothing the prompt asked for" },
@@ -214,26 +241,26 @@ export const faq: FaqItem[] = [
     ],
   },
   {
-    n: 12,
+    n: 13,
     id: "subjective-presence",
     topic: "Rubrics",
-    q: "Does every subjective criterion have to be Not Present for Model A?",
+    q: "Does every subjective criterion have to be Not Present on the reference run?",
     a: [
-      "No. There is no Present or Not Present requirement on either model. The criteria come out of comparing the two final artifacts, so positives naturally end up tied to the golden and negatives to the weaker run, because those are the runs that earned them. That is a tendency, not a rule.",
-      "A positive can be Present in Model A, and a negative can be Not Present in both. Neither is a fault in the set. A criterion the observed run already satisfies stays in the block, because it is still a property the artifact needs.",
-      "One outcome is not intended: a negative Present in the golden. The golden is the best available solution, so nothing that damages the reader's experience can survive in it. If a negative does come out Present for Model B, the artifact is what needs fixing, not the criterion.",
+      "No. There is no Present or Not Present requirement. The criteria come out of comparing the golden's render with the reference run's, so positives naturally end up tied to the golden and negatives to the weaker render, because those are the outputs that earned them. That is a tendency, not a rule.",
+      "A positive can be Present on the reference run, and a negative can be Not Present on it. Neither is a fault in the set. A criterion the reference run already satisfies stays in the block, because it is still a property the artifact needs.",
+      "One outcome is not intended: a negative present in the golden. The golden is the best available solution and the reference the block is built from, so nothing that damages the reader's experience can survive in it. If it carries one, the golden is what needs fixing, not the criterion.",
     ],
     refs: [
-      { section: "7.1", title: "Writing Subjective Rubrics" },
-      { section: "7.5", title: "Rating Against both Models and Justifications" },
+      { section: "6.1", title: "Writing Subjective Rubrics" },
+      { section: "7.3", title: "Rating the Subjective Block and Justifications" },
     ],
     links: [
-      { to: "/reference#s7", tag: "G3", label: "Rate every criterion against both models yourself" },
+      { to: "/reference#s8", tag: "H2", label: "Verify every rating against the first valid Opus run" },
       { to: `${GT}#subjective`, tag: "GT", label: "Eleven criteria, each on the two renders" },
     ],
   },
   {
-    n: 13,
+    n: 14,
     id: "war-room",
     topic: "Support",
     q: "Is War Room support available on weekdays?",
@@ -246,7 +273,7 @@ export const faq: FaqItem[] = [
 ];
 
 export const guidelinesTitle =
-  "[External] Green Shell, Guidelines v1";
+  "[External] Green Shell, Guidelines v3";
 
 export const faqTopics = [
   "All",

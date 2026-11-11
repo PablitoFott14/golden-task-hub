@@ -108,7 +108,7 @@ export default function GoldenTasks() {
             as="h1"
             eyebrow="Golden Tasks"
             title="Finished tasks, opened up"
-            sub="Each one is the method walked end to end on a real task: the assigned pair, the universe, the resolved answer, the inputs, the one prompt, the run that failed, the criteria, and the golden. Read them to calibrate the level of complexity your own task has to reach."
+            sub="Each one is the method walked end to end on a real task: the assigned pair, the universe, the resolved answer, the inputs, the one prompt, the golden, the run, the criteria, and how the run rated against them. Read them to calibrate the level of complexity your own task has to reach."
           />
         </div>
       </section>

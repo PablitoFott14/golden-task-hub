@@ -20,8 +20,13 @@ const A = "tasks/charge-disputes";
  * does for a task older than those fields.
  *
  * The page is a build, not a gallery: `stages` is one entry per method step, in
- * the order the work happened, and every other field below belongs to exactly
- * one of them.
+ * method order, and every other field below belongs to exactly one of them.
+ *
+ * The task was built before the Nov 11, 2026 workflow put the golden first. Its
+ * one Opus 5 run (the run the platform calls Model A) came before its rubric
+ * and its golden, and it has no pass@k runs and no 8 run average. The stages
+ * follow the current method, so where the order changed what a step meant for
+ * this task, the stage says so rather than claiming the old order.
  */
 export const chargeDisputes: GoldenTask = {
   meta: {
@@ -47,7 +52,7 @@ export const chargeDisputes: GoldenTask = {
     "**Five disputes, and none of them is found the same way.** One is a duplicate in the statement. Two are errors inside a receipt whose total matches the bank to the penny. One is only visible in her calendar. One is in the tender lines under the total.",
     "**The media is load bearing.** Three of the five turn on lines that exist nowhere but on paper she photographed, and two of those photographs arrive rotated, folded and out of focus.",
     "**Twenty six objective criteria, and not one of them grades the trajectory.** Every criterion lands on the page, on a draft, or on the state of the mailbox.",
-    "**Model A had the evidence and still lost 36 of the 69 positive weight.** It opened the receipt and found the sale email, then cleared the charge anyway.",
+    "**The reference run had the evidence and still lost 36 of the 69 positive weight.** It opened the receipt and found the sale email, then cleared the charge anyway.",
   ],
 
   /* ------------------------------------------------------------------ stages */
@@ -58,7 +63,7 @@ export const chargeDisputes: GoldenTask = {
       id: "parameters",
       title: "The parameters arrive already decided",
       did: "The assigned parameters fix the pair before any design starts: Personal finance, detecting and disputing erroneous charges, with reconciling amounts as the primary capability and OCR, contradiction handling and computation behind it. The universe is named, and the scenario asks for an HTML page. This task was built when seven parameters were assigned; a task today carries fourteen, in a table at the top of the task.",
-      why: "Every decision after this is checked back against the parameters, and a deviation is allowed only where the universe cannot support one or the scenario is too simple to reach the failure threshold. A task that fits the neighbouring subcategory better is marked down on subcategory relevance even when the use case is right.",
+      why: "Every decision after this is checked back against the parameters, and a deviation is allowed only where the universe cannot support one or the scenario is too simple to bring the average pass@k score down to 0.7. A task that fits the neighbouring subcategory better is marked down on subcategory relevance even when the use case is right.",
       handoff: "A pair to design inside, and the scope check that says why the receipts belong to it.",
     },
     {
@@ -91,7 +96,7 @@ export const chargeDisputes: GoldenTask = {
       title: "Everything the agent will ever be told",
       did: "One message, in her own voice, sent once. It names the output file, fixes the window, says the drafts are not to be sent, states the $50 monthly rule, and points at the layout notes without repeating them.",
       why: "The task is single turn. Anything expected of the agent has to be asked for here, out loud, or no criterion may grade it.",
-      handoff: "The only context the graded run receives, and the wording every criterion has to be traceable to.",
+      handoff: "The only context the pass@k runs receive, and the wording every criterion has to be traceable to.",
     },
     {
       step: 6,
@@ -103,27 +108,27 @@ export const chargeDisputes: GoldenTask = {
     },
     {
       step: 7,
-      id: "model-a",
-      title: "The prompt goes out once",
-      did: "Model A answered the prompt in one pass: 71 tool calls, nine and a half minutes, one page and three drafts. It found two of the five disputes and cleared the other three as correct.",
-      why: "A task the model sails through is not ready. The failures have to be genuine, found rather than manufactured, and they have to matter to what the user asked for.",
-      handoff: "A trajectory and a page to write criteria against, and a measured failure of 52% of the objective weight.",
+      id: "golden",
+      title: "The prompt, steered to the ideal answer",
+      did: "The prompt, word for word, steered in Marisela's voice. The first reply reached two of the five disputes. Four steers took it to all five and to $257.35, and none of them named a merchant, an amount or a record. This task was built before the golden moved first, so its golden ran after its one Opus 5 run.",
+      why: "The golden proves the task can be solved, in this universe and with these inputs, before a single criterion exists. Hinting is how you get there, and the no leak rule holds on every message you type, however late it is.",
+      handoff: "The golden artifacts: a page that reaches all five disputes and $257.35, and six drafts, nothing sent.",
     },
     {
       step: 8,
-      id: "rubrics",
-      title: "Twenty six criteria, none of them about process",
-      did: "Every criterion was written against the downloaded page and the mailbox, with the value, the transaction id, the filename or the date copied in rather than described. Twenty land on the artifact and six on the state of the mailbox.",
-      why: "At least 80% of the objective criteria grade completion, and zero process criteria is the preferred number. A criterion that only checks that something exists is not valid at any weight.",
-      handoff: "A block someone who was never in the room can rate, and the definition of what passing means.",
+      id: "runs",
+      title: "The prompt goes out with no follow-ups",
+      did: "This task predates pass@k generation. Its prompt went out once, word for word, to one Opus 5 run with no follow-ups: 71 tool calls, nine and a half minutes, one page and three drafts. That run plays the part the first valid Opus run plays today, the reference run.",
+      why: "The runs record how the models actually behave on the prompt, with nobody steering. Today eight of them launch on their own once the golden is complete, and nothing is asked of you while they run.",
+      handoff: "A reference run kept for the rating. The criteria still come from the GTFA and the golden, never from what a run happened to do.",
     },
     {
       step: 9,
-      id: "golden",
-      title: "The same prompt, steered to the ideal answer",
-      did: "A new conversation on the identical prompt. The first reply reached the same two disputes Model A did. Four steers, all in Marisela's voice, took it to all five and to $257.35, and none of them named a merchant, an amount or a record.",
-      why: "The criteria are only legitimate if the set is passable. Hinting is how you get there, and the no leak rule holds on every message you type, however late it is.",
-      handoff: "The golden artifacts, and a second render of the same page to compare the first one against.",
+      id: "rubrics",
+      title: "Twenty six criteria, none of them about process",
+      did: "Every criterion pins a value the GTFA resolved: the transaction id, the amount, the filename or the date, copied in rather than described. Twenty land on the page and six on the state of the mailbox, and the golden passes every one.",
+      why: "At least 80% of the objective criteria grade completion, and zero process criteria is the preferred number. A criterion that only checks that something exists is not valid at any weight.",
+      handoff: "A block someone who was never in the room can rate, and the definition of what passing means.",
     },
     {
       step: 10,
@@ -131,7 +136,15 @@ export const chargeDisputes: GoldenTask = {
       title: "What is left once the prompt is satisfied",
       did: "The two pages were put side by side and the real differences wrote the criteria: receipts you can read, arithmetic in a table, a total that follows the filter. Thirty candidates came out of the comparison and eleven survived.",
       why: "Everything the prompt and the layout notes demanded is already graded above. This block is the presentation, judged on the render alone, with no criterion that cannot be pointed at.",
-      handoff: "A presentation block a reviewer can locate and score without opening a single file.",
+      handoff: "A presentation block a reviewer can locate and score on the render alone, and both blocks ready to rate against the reference run.",
+    },
+    {
+      step: 11,
+      id: "model-a",
+      title: "The reference run, rated against both blocks",
+      did: "Every criterion was rated Present or Not Present against the one Opus 5 run. It found two of the five disputes and cleared the other three as correct, losing 36 of the 69 positive objective weight, and every failure carries its justification. The task predates pass@k grading, so it has no average across eight runs.",
+      why: "The score has to come from genuine criteria rated against what the run actually delivered. Today the average score of all eight runs has to land between 0.3 and 0.7, and every prefilled rating is checked by hand.",
+      handoff: "A rated run with every failure justified, and a task ready for the gate.",
     },
   ],
 
@@ -795,11 +808,11 @@ Also, while you at it, take a look at anything I bought from my company during t
     ],
   },
 
-  /* ------------------------------------------------------------------ step 7 */
+  /* ------------------------------------------------------------- steps 8, 11 */
 
   run: {
     summary:
-      "One prompt, one answer. Model A had every attachment open and every email it needed, and still cleared three of the five wrong charges as correct.",
+      "One prompt, one answer. The reference run had every attachment open and every email it needed, and still cleared three of the five wrong charges as correct.",
     stats: [
       { k: "Tool calls", v: "71" },
       { k: "Run time", v: "9m 39s" },
@@ -858,7 +871,7 @@ Also, while you at it, take a look at anything I bought from my company during t
         title: "A dispute addressed to a mailbox that does not read mail",
         expected: "The Kohl's draft written to Kohl's, or raised with INTRUST as a card dispute.",
         actual:
-          "It went to alerts@intrustbank.com, whose own mail says do not reply, and which Model A's page itself calls an unmonitored alerts box. The content was right; the recipient could not act on it.",
+          "It went to alerts@intrustbank.com, whose own mail says do not reply, and which the run's own page calls an unmonitored alerts box. The content was right; the recipient could not act on it.",
         rubrics: [22],
         pattern: "wrong-owner",
       },
@@ -871,7 +884,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     artifacts: [
       {
         file: "disputes.html",
-        what: "The page as Model A wrote it: four rows on the first tab, nineteen charges cleared on the second, no receipt images beside any dispute.",
+        what: "The page as the reference run wrote it: four rows on the first tab, nineteen charges cleared on the second, no receipt images beside any dispute.",
         src: `${A}/ot/disputes.html`,
         kind: "html",
       },
@@ -883,7 +896,7 @@ Also, while you at it, take a look at anything I bought from my company during t
     ],
   },
 
-  /* ------------------------------------------------------------------ step 8 */
+  /* ------------------------------------------------------------------ step 9 */
 
   rubricShape: [
     { label: "Criteria", value: "26", note: "23 positive and 3 negative." },
@@ -1161,11 +1174,11 @@ Also, while you at it, take a look at anything I bought from my company during t
     },
   ],
 
-  /* ------------------------------------------------------------------ step 9 */
+  /* ------------------------------------------------------------------ step 7 */
 
   goldenRun: {
     opening:
-      "The same prompt, word for word, in a new conversation. The first reply reached Tillie's and Kohl's, which is the same pair Leg A reached, and cleared three real disputes. Everything below is the user simulator closing that gap without ever naming a merchant, an amount or a record.",
+      "The task's prompt, word for word, the same one every run receives. The first reply reached Tillie's and Kohl's, the same pair the reference run reached, and cleared three real disputes. Everything below is the user simulator closing that gap without ever naming a merchant, an amount or a record.",
     steers: [
       {
         n: 1,

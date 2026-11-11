@@ -11,7 +11,7 @@ import type {
 
 /**
  * The Failure Approach: how Opus actually fails as an agent, shown through real
- * graded runs, and how to build the same pressure into a Leg A.
+ * graded runs, and how to build the same pressure into a task's pass@k runs.
  *
  * Sources, all inside `failure approach/` beside this project and gitignored:
  *
@@ -20,15 +20,17 @@ import type {
  * - `task_writer_cheat_sheet (3).html`, cited [C card, trap n]: the traps that
  *   repeat across runs on Opus 4.8 and 5, each with a real example.
  * - `failure_approach.md`: the Green Shell translation of both, which is where
- *   the scenario ideas, the fairness rules and the "Model A passed" diagnosis
- *   were first worked out against the guidelines.
+ *   the scenario ideas, the fairness rules and the diagnosis for runs that keep
+ *   passing were first worked out against the guidelines.
  *
- * One more source is this project's own: the hub's Golden Task, whose Model A
- * run is `run.observations` in `tasks/chargeDisputes.ts`. Its trajectory names
- * the model, `claude-opus-5`, which is the model the guidelines give Leg A
- * (section 3, "Leg A (Opus 5 leg)"). Those six cases carry the `golden` source
- * and come first in every pattern that has one. The runs the guidelines record
- * in section 8.2 were cases here once and are not any more: they are the
+ * One more source is this project's own: the hub's Golden Task, whose one
+ * graded run (the run the platform called Model A, from before the pass@k runs
+ * replaced Leg A on Nov 11, 2026) is `run.observations` in
+ * `tasks/chargeDisputes.ts`. Its trajectory names the model, `claude-opus-5`,
+ * the newest Opus in any case here and so the closest evidence for the Claude
+ * Opus 5.5 pass@k runs (guidelines section 4). Those six cases carry the
+ * `golden` source and come first in every pattern that has one. The runs the
+ * guidelines record in section 8.2 were cases here once and are not any more: they are the
  * guidelines' summary of a run, with no ask and no right answer, and every
  * case on the page has to be a graded run with both.
  *
@@ -48,12 +50,12 @@ import type {
  * page says where its evidence is in its own words.
  *
  * **Selection.** The studies hold 17 capabilities and 85 traps. What is here is
- * what applies to a Green Shell Leg A: an assigned universe, your own
- * multimodal inputs, one prompt. Left out on purpose: deliverable formatting,
- * memory and logging order, and every trap that needs control of the
- * environment (page sizes, exclusive bounds, broken tools), which the "Model A
- * passed" view lists as what rarely pays off. Hints and Leg B are not here at
- * all: this tab is about making Model A fail.
+ * what applies to Green Shell's pass@k runs: an assigned universe, your own
+ * multimodal inputs, one prompt answered once. Left out on purpose: deliverable
+ * formatting, memory and logging order, and every trap that needs control of
+ * the environment (page sizes, exclusive bounds, broken tools), which the
+ * diagnosis for runs that keep passing lists as what rarely pays off. Hints and
+ * the golden are not here at all: this tab is about making the pass@k runs fail.
  *
  * Citation brackets are provenance only: `[G x]`, `[Q Group, Dimension]`,
  * `[R …]` and `[C …]` say where a line comes from and never reach the screen,
@@ -64,9 +66,11 @@ const GT = "/golden-tasks/charge-disputes";
 const gtRun: XLink = { to: `${GT}#model-a`, tag: "GT", label: "This run in the Golden Task" };
 
 /**
- * The model Leg A runs, as guidelines section 3 names it. Cases on this
- * version are marked on the page, because they are the closest evidence a
- * contributor has for their own run.
+ * The newest Opus among the cases. A task's 8 pass@k runs are 4 on Claude Opus
+ * 5.5 and 4 on Muse Wonder 1.1 (guidelines section 4), and no case here ran on
+ * either, so cases on this version are marked on the page: they are the
+ * closest evidence a contributor has for their own runs. The identifier keeps
+ * its name from Leg A, which the pass@k runs replaced on Nov 11, 2026.
  */
 export const legAModel = "Opus 5";
 
@@ -75,15 +79,15 @@ export const legAModel = "Opus 5";
 export const faHeader = {
   eyebrow: "Failure Approach",
   title: "Where Opus really breaks",
-  sub: "Leg A runs Opus 5. These are real failures from graded Opus runs: what it was asked, what it did instead, and why it failed. Each pattern ends with ways to build the same pressure into your own Leg A, and the test that keeps the failure real.",
+  sub: "Your task is graded on 8 pass@k runs, 4 on Claude Opus 5.5 and 4 on Muse Wonder 1.1. These are real failures from graded Opus runs: what it was asked, what it did instead, and why it failed. Each pattern ends with ways to build the same pressure into your own task, and the test that keeps the failure real.",
 };
 
 /** The one test every failure point has to pass, said once on the way in. */
 export const faPrinciple = {
   title: "A failure only counts if a careful agent would have passed",
-  body: "Same prompt, same inputs, same tools: the evidence was reachable, the request was clear, and nothing was hidden, broken or forced. Every pattern carries its own version of that test, under Keep it a real failure. [G 4]",
+  body: "Same prompt, same inputs, same tools: the evidence was reachable, the request was clear, and nothing was hidden, broken or forced. Every pattern carries its own version of that test, under Keep it a real failure. [G 4.2]",
   links: [
-    { to: "/#failure", tag: "M7", label: "Not every failure is yours to keep" },
+    { to: "/#passk", tag: "M8", label: "Not every failure is yours to keep" },
     { to: "/spec#dim-valid-model-failure", tag: "QC", label: "Valid Model Failure" },
   ] as XLink[],
 };
@@ -96,7 +100,7 @@ export const faPrinciple = {
 export const sourceLabel: Record<CaseSource, { label: string; hint: string }> = {
   golden: {
     label: "Golden Task",
-    hint: "The Leg A run of the hub's own Golden Task, on Opus 5.",
+    hint: "The one graded run of the hub's own Golden Task, on Opus 5, from before the pass@k runs.",
   },
   "openclaw-mm": {
     label: "OpenClaw MM",
@@ -402,7 +406,7 @@ export const failurePatterns: FailurePattern[] = [
     fair: [
       "The deeper level must be reachable with the agent's tools: a thread tool, a folder parameter, paging.",
       "“Most recent” needs one answer, with the later record clearly dated after the earlier one.",
-      "If the second sheet or page disagrees with the first, the prompt asks for mismatches to be flagged, or the file says which value is current. [G 4]",
+      "If the second sheet or page disagrees with the first, the prompt asks for mismatches to be flagged, or the file says which value is current. [G 4.2]",
     ],
     spot: [
       "Channel history read, thread never opened.",
@@ -538,8 +542,8 @@ export const failurePatterns: FailurePattern[] = [
     ],
     fair: [
       "Leave a cue that tells a wrong query from a true absence: an identifier already in hand, a second system, a count.",
-      "Never break a tool or a file on purpose. A crash, a timeout or a broken session is never a model failure. [G 4]",
-      "An unplanned tool error counts only when a working route existed and the model wrote the deliverable without it. [G 4; G 8.2]",
+      "Never break a tool or a file on purpose. A crash, a timeout or a broken session is never a model failure. [G 4.2]",
+      "An unplanned tool error counts only when a working route existed and the model wrote the deliverable without it. [G 4.2; G 8.2]",
     ],
     spot: [
       "An empty result followed by a definite claim of absence.",
@@ -774,10 +778,10 @@ export const failurePatterns: FailurePattern[] = [
       { text: "A printed form or list with marks made by hand that select items, beside a typed note that seems to answer the same question.", from: ["x-marks"] },
     ],
     fair: [
-      "Keep audio clear, MP3 at 64 kbps, and well under 5 to 10 minutes, so a miss is the model's choice, not a timeout. [G 1.2.2; G 4]",
+      "Keep audio clear, MP3 at 64 kbps, and well under 5 to 10 minutes, so a miss is the model's choice, not a timeout. [G 1.2.2; G 4.2]",
       "Keep any figure shown in a video legible at 480p. [G 1.2.2]",
       "Leave no transcript of the same audio anywhere in the environment, or the media stops being necessary. [Q Prompt, MM Dependence]",
-      "The spoken rule adds to the prompt, never contradicts it. [G 4]",
+      "The spoken rule adds to the prompt, never contradicts it. [G 4.2]",
     ],
     spot: [
       "A transcript read only in part, or made with a low fidelity model.",
@@ -942,7 +946,7 @@ export const failurePatterns: FailurePattern[] = [
       { text: "An older and a newer version of the same thing among your own inputs: two photos of a whiteboard taken an hour apart." },
     ],
     fair: [
-      "One source must be the record, and the task has to say so: the request (“what I actually spend”, “the latest”) or a rule in an input decides which wins. A winner the prompt never names is an undecided source conflict. [G 4]",
+      "One source must be the record, and the task has to say so: the request (“what I actually spend”, “the latest”) or a rule in an input decides which wins. A winner the prompt never names is an undecided source conflict. [G 4.2]",
       "Make the newer version recognizably newer from its content: a written date, a visible correction, a dated universe record that refers to it. A filename number or EXIF alone is a weak cue.",
     ],
     spot: [
@@ -1167,7 +1171,7 @@ export const failurePatterns: FailurePattern[] = [
     fair: [
       "The rule must be retrievable and cued by the request.",
       "The tempting alternative must be wrong for the question asked, not a defensible reading.",
-      "The rule must not contradict the prompt. [G 4]",
+      "The rule must not contradict the prompt. [G 4.2]",
     ],
     spot: [
       "The agent's own summary of the rule is shorter than the rule.",
@@ -2107,7 +2111,7 @@ export const failurePatterns: FailurePattern[] = [
       { text: "A message the prompt asks to carry the key figures itself, beside a file that also holds them.", from: ["cover-note", "all-done"] },
       { text: "Facts the record must state that are absences, no team, no project, no ticket, each confirmed by a lookup.", from: ["absences-never-stated"] },
     ],
-    fair: ["Require a value on a surface only when the prompt asks for it there. [G 4]"],
+    fair: ["Require a value on a surface only when the prompt asks for it there. [G 4.2]"],
     spot: [
       "Figures rounded or softened between the trajectory and the artifact.",
       "“See attached” where the message was asked to carry the finding.",
@@ -2186,7 +2190,7 @@ export const failurePatterns: FailurePattern[] = [
   },
 ];
 
-/* ---------------------------------------------------- when Model A passes */
+/* ----------------------------------------------- when the runs keep passing */
 
 /**
  * The diagnosis is the md's section 6, step 1, with the patterns renamed. The
@@ -2195,15 +2199,15 @@ export const failurePatterns: FailurePattern[] = [
  */
 export const faPassing = {
   id: "keeps-passing",
-  title: "Model A passed? Find out why first",
-  short: "Model A passed?",
-  lead: "Most passes have a reason you can read in the trajectory. Find it for each planned failure point before you change anything.",
-  rule: "Do not add asks to the prompt you ran, and do not rate or reweight criteria to reach 30%. Go back to planning, redesign inside your parameters, and run Leg A again with the revised prompt and inputs. [G 1; G Hard Client Requirements]",
+  title: "Score above 0.7? Find out why first",
+  short: "Score above 0.7?",
+  lead: "When the average of the 8 pass@k runs lands above 0.7, the task is too easy for the models. Most passes have a reason you can read in the trajectories. Find it for each planned failure point before you change anything.",
+  rule: "Do not add asks to the prompt you ran, and do not add, drop, reword or reweight criteria to bring the average down. Go back to planning and redesign the scenario inside your parameters. A new prompt or new inputs mean a new golden and 8 new pass@k runs, because every run uses the same prompt word for word. [G 1; G Hard Client Requirements; G Complexity Bar; G 7.1]",
   links: [
     { to: "/#scenario", tag: "M3", label: "Complexity is planned, never patched in" },
-    { to: "/#failure", tag: "M7", label: "If the model sails through, the task is not ready" },
+    { to: "/#failure", tag: "M11", label: "The average of the 8 runs has to land between 0.3 and 0.7" },
   ] as XLink[],
-  diagnoseLead: "Open the trajectory at the step where Model A found the truth, then read across.",
+  diagnoseLead: "Open each passing run's trajectory at the step where it found the truth, then read across.",
   diagnose: [
     {
       gave: "The fact was in the input folder or the prompt",
@@ -2226,7 +2230,7 @@ export const faPassing = {
     {
       gave: "Only one source existed",
       tell: "There was nothing to reconcile.",
-      change: "Find a second universe record that disagrees, and let the request or an input decide which one wins. [G 4]",
+      change: "Find a second universe record that disagrees, and let the request or an input decide which one wins. [G 4.2]",
       patterns: ["one-story", "proxy-source"],
     },
     {
@@ -2245,14 +2249,14 @@ export const faPassing = {
   odds: [
     {
       id: "plan-above",
-      title: "Plan more failure points than the bar needs",
-      // [R 2] most failed criteria failed in half the runs or fewer.
-      body: "Where the same task ran six times, most failed criteria failed in half the runs or fewer, and your Leg A is graded on one run. A rule of thumb, not a measurement: plan well above 30%, so the bar still holds if only about half of your points fire.",
+      title: "Plan more failure points than the range needs",
+      // [R 2] most failed criteria failed in half the runs or fewer. [G 7.1]
+      body: "Where the same task ran six times, most failed criteria failed in half the runs or fewer, and your task is graded on the average of 8 runs on two models. A rule of thumb, not a measurement: plan more failure points than the range needs, so the average still lands at 0.7 or below when only about half of them fire in a run.",
     },
     {
       id: "spread",
       title: "Spread them out",
-      body: "Put the points across the three stages every task has, finding the evidence, reasoning over it and delivering, and across at least two modalities, so the bar never rests on one fragile miss. [G Hard Client Requirements]",
+      body: "Put the points across the three stages every task has, finding the evidence, reasoning over it and delivering, and across at least two modalities, so the score never rests on one fragile miss. [G Hard Client Requirements]",
     },
     {
       id: "repeat",
@@ -2270,7 +2274,7 @@ export const faPassing = {
       id: "reuse",
       title: "Reuse what already worked",
       // [R When nothing is working, 2]
-      body: "Read where Model A failed in your own graded tasks and in the Golden Task: the trigger, the wrong move, the value that caught it. Rebuild the same mechanism with fresh data. It is the only lever with direct evidence on Model A.",
+      body: "Read where the runs failed in your own graded tasks and in the Golden Task: the trigger, the wrong move, the value that caught it. Rebuild the same mechanism with fresh data. It is the only lever with direct evidence on the models your task runs on.",
       link: gtRun,
     },
     {
@@ -2321,7 +2325,7 @@ export const faPassing = {
     {
       id: "environment",
       title: "Traps that need control of the environment",
-      body: "Page sizes, exclusive date bounds, hidden default scopes, a converter that fails, an unreadable file. You cannot configure the universe, and breaking a file or a tool on purpose produces an invalid failure. [G 4]",
+      body: "Page sizes, exclusive date bounds, hidden default scopes, a converter that fails, an unreadable file. You cannot configure the universe, and breaking a file or a tool on purpose produces an invalid failure. [G 4.2]",
     },
   ] as { id: string; title: string; body: string }[],
 };
@@ -2355,9 +2359,9 @@ export const faSources = {
     },
     {
       id: "golden",
-      unit: "Leg A misses",
+      unit: "misses in one graded run",
       name: "The Golden Task",
-      body: "The hub's own worked task, run on Opus 5 like your Leg A. Each of its misses links to the walkthrough of that run.",
+      body: "The hub's own worked task, graded on one Opus 5 run before the pass@k runs replaced it. Each of its misses links to the walkthrough of that run.",
     },
   ] as { id: string; value?: string; unit: string; name: string; body: string }[],
   notes: [
@@ -2399,5 +2403,5 @@ export const allCases = failurePatterns.flatMap((p) => p.cases);
 
 export const caseById: Record<string, FailureCase> = Object.fromEntries(allCases.map((c) => [c.id, c]));
 
-/** A pattern was seen on the model Leg A runs when any of its cases was. */
+/** A pattern was seen on the newest Opus in the cases when any of its cases ran on it. */
 export const seenOnLegA = (p: FailurePattern) => p.cases.some((c) => c.model === legAModel);

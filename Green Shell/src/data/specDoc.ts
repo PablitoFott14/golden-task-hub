@@ -1313,7 +1313,8 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#prompt", tag: "M5", label: "Everything lands in one prompt" },
   ],
   "Valid Model Failure": [
-    { to: "/#failure", tag: "M7", label: "If the model sails through, the task is not ready" },
+    { to: "/#passk", tag: "M8", label: "Not every failure is yours to keep" },
+    { to: "/#failure", tag: "M11", label: "Read the score, never tune the rubric to it" },
   ],
   "MM Dependence": [
     { to: "/#inputs", tag: "M4", label: "Take the attachments away and the prompt dies" },
@@ -1326,41 +1327,41 @@ export const dimensionLinks: Record<string, XLink[]> = {
     { to: "/#universe", tag: "M2", label: "Grounded in what the universe actually holds" },
   ],
   "Overall Rubric Quality - 10%": [
-    { to: "/#rubrics", tag: "M8", label: "A grader with the prompt closed can still rate it" },
+    { to: "/#rubrics", tag: "M9", label: "A grader with the prompt closed can still rate it" },
   ],
   "Overall Rubric Quality - 15%": [
-    { to: "/#rubrics", tag: "M8", label: "A grader with the prompt closed can still rate it" },
+    { to: "/#rubrics", tag: "M9", label: "A grader with the prompt closed can still rate it" },
   ],
   "Overall Rubric Quality - 20%": [
-    { to: "/#rubrics", tag: "M8", label: "A grader with the prompt closed can still rate it" },
+    { to: "/#rubrics", tag: "M9", label: "A grader with the prompt closed can still rate it" },
   ],
   "80/20 Outcome Split (Process Over Cap)": [
     { to: "/reference#outcome-over-process", tag: "WN", label: "Eighty per cent outcome, and the cap that bites" },
-    { to: "/#rubrics", tag: "M8", label: "Where the split is decided" },
+    { to: "/#rubrics", tag: "M9", label: "Where the split is decided" },
   ],
   "Rubric Structure": [
-    { to: "/#rubrics", tag: "M8", label: "One criterion, one observable outcome" },
+    { to: "/#rubrics", tag: "M9", label: "One criterion, one observable outcome" },
   ],
   "Subjective Block Scope": [
     { to: "/#subjective", tag: "M10", label: "Presentation only, graded on the render" },
   ],
   "Artifact Verification": [
-    { to: "/#rubrics", tag: "M8", label: "What a verifier can settle on its own" },
+    { to: "/#rubrics", tag: "M9", label: "What a verifier can settle on its own" },
   ],
   "Artifact Completeness": [
-    { to: "/#golden", tag: "M9", label: "Every artifact the prompt asked for" },
+    { to: "/#golden", tag: "M7", label: "Every artifact the prompt asked for" },
   ],
   "Hint Leak (Leg B)": [
-    { to: "/#golden", tag: "M9", label: "Point at the intent, never at the answer" },
+    { to: "/#golden", tag: "M7", label: "Point at the intent, never at the answer" },
   ],
   "Feasibility With Tools": [
-    { to: "/reference#s1", tag: "A2", label: "Confirm the loadout before you design" },
+    { to: "/reference#s1", tag: "A3", label: "Confirm the loadout before you design" },
     { to: "/reference#assigned-tools", tag: "WN", label: "Assigned tools have to be named in the scenario" },
   ],
   Completeness: [
-    { to: "/reference#s6", tag: "F3", label: "Download the trajectories, star the preferred run" },
+    { to: "/reference#s5", tag: "E2", label: "Download the trajectories, star the preferred run" },
   ],
   "Golden/Preferred Run Selection": [
-    { to: "/#golden", tag: "M9", label: "The run you file is part of the task" },
+    { to: "/#golden", tag: "M7", label: "The run you file is part of the task" },
   ],
 };

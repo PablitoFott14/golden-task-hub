@@ -47,17 +47,17 @@ const phaseTone: Record<string, { chip: string; badge: string; bar: string }> = 
     badge: "bg-brand-600",
     bar: "from-brand-600 to-brand-400",
   },
-  "Leg A": {
-    chip: "bg-amber-500/12 text-amber-700 dark:text-amber-300",
-    badge: "bg-amber-500",
-    bar: "from-amber-500 to-gold-400",
-  },
-  "Leg B": {
+  Golden: {
     chip: "bg-emerald-500/12 text-emerald-700 dark:text-emerald-300",
     badge: "bg-emerald-600",
     bar: "from-emerald-600 to-teal-400",
   },
-  Grade: {
+  "Pass@k": {
+    chip: "bg-amber-500/12 text-amber-700 dark:text-amber-300",
+    badge: "bg-amber-500",
+    bar: "from-amber-500 to-gold-400",
+  },
+  Rubrics: {
     chip: "bg-sky-500/12 text-sky-700 dark:text-sky-300",
     badge: "bg-sky-600",
     bar: "from-sky-600 to-cyan-400",

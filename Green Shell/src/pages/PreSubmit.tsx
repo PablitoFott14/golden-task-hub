@@ -31,9 +31,10 @@ const sectionIcon: Record<string, typeof FileText> = {
   s2: ImageIcon,
   s3: FileText,
   s4: ClipboardList,
-  s5: ScrollText,
-  s6: Wand2,
-  s7: Gauge,
+  s5: Wand2,
+  s6: ScrollText,
+  s7: Eye,
+  s8: Gauge,
 };
 
 export default function PreSubmit({ embedded = false }: { embedded?: boolean }) {

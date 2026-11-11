@@ -204,7 +204,7 @@ export const searchIndex: SearchEntry[] = [
     {
       kind: "Golden task",
       title: "Objective rubrics",
-      hint: `${t.rubrics.length} criteria, rated against Model A`,
+      hint: `${t.rubrics.length} criteria, rated against the reference run`,
       to: `/golden-tasks/${t.meta.id}#rubrics`,
       terms: t.rubrics.map((r) => `${r.text} ${r.category} ${r.target}`).join(" "),
     },
@@ -227,12 +227,12 @@ export const searchIndex: SearchEntry[] = [
         t.goldenRun.steers
           .map((x) => `${x.prompt} ${x.missed} ${x.does.join(" ")} ${x.avoids.join(" ")} ${x.recovered}`)
           .join(" "),
-        "golden solution steer hint user simulator leg b",
+        "golden solution first run steer hint user simulator leg b",
       ].join(" "),
     },
     {
       kind: "Golden task",
-      title: "Where Model A broke",
+      title: "Where the reference run broke",
       hint: t.run.summary,
       to: `/golden-tasks/${t.meta.id}#model-a`,
       terms: t.run.observations.map((o) => `${o.title} ${o.expected} ${o.actual}`).join(" "),
@@ -253,8 +253,8 @@ export const searchIndex: SearchEntry[] = [
     },
   ]),
 
-  /* One row per failure type, one per pattern and one for the "Model A
-     passed?" view. A pattern is what a contributor searches for ("sent
+  /* One row per failure type, one per pattern and one for the "Score above
+     0.7?" view. A pattern is what a contributor searches for ("sent
      folder", "pen correction", "Framebridge"), and every case it holds rides
      along in `terms`, so a word from any of them finds the pattern. */
   ...failureCategories.map<SearchEntry>((c) => ({
@@ -274,7 +274,7 @@ export const searchIndex: SearchEntry[] = [
     to: `/failure-approach#${p.id}`,
     terms: [
       faPlain(textOf([p.happens, p.why, p.cases, p.build, p.fair, p.spot])),
-      "failure pattern opus model a leg a fail real case",
+      "failure pattern opus muse pass@k runs reference run model a fail real case",
     ].join(" "),
   })),
 
@@ -285,7 +285,7 @@ export const searchIndex: SearchEntry[] = [
     to: `/failure-approach#${faPassing.id}`,
     terms: [
       faPlain(textOf([faPassing.rule, faPassing.diagnose, faPassing.odds, faPassing.rarely])),
-      "keeps passing passed too easy trivial redesign rerun raise the odds",
+      "keeps passing passed too easy trivial score above 0.7 pass@k average redesign rerun raise the odds",
     ].join(" "),
   },
 

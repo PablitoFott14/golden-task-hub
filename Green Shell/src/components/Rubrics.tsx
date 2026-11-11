@@ -28,8 +28,8 @@ type Filter = "all" | "failed" | "passed" | "negative" | "trajectory";
 
 const filters: { k: Filter; label: string }[] = [
   { k: "all", label: "All criteria" },
-  { k: "failed", label: "Model A failed" },
-  { k: "passed", label: "Model A passed" },
+  { k: "failed", label: "Reference run failed" },
+  { k: "passed", label: "Reference run passed" },
   { k: "negative", label: "Negatives" },
   { k: "trajectory", label: "Trajectory" },
 ];
@@ -144,7 +144,7 @@ export default function Rubrics({ rubrics }: { rubrics: Rubric[] }) {
                       )}
                     >
                       {isFail ? <X size={11} /> : <Check size={11} />}
-                      {isFail ? "Model A failed" : "Model A passed"}
+                      {isFail ? "Reference run failed" : "Reference run passed"}
                     </span>
                   </div>
 

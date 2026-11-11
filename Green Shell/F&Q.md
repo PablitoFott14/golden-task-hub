@@ -33,18 +33,21 @@ A: Yes, noise and distractor files are encouraged, as long as they feel naturall
 9. **Q: Is the use of MEMORY.md mandatory in every single task?**
 A: No, MEMORY.md can or can't be used, but its use is not mandatory. Its only requirement is that when used, it needs to be made in a NATURAL way, the way an actual user would require MEMORY.md (planning to come back to the conversation later).
 
-10. **Q: How do I correct the model in Leg B?**
-A: Leg B starts a new conversation on the same prompt, word for word. You are the user simulator: you send what the conversation needs next to reach the golden solution, and hint when the model does not get there. Hints stay at the intent level, from the user's point of view, and never leak the answer.
+10. **Q: How do I correct the model in the golden run?**
+A: The golden is the first run of the task, on the same prompt the pass@k runs later receive word for word. You are the user simulator: you send what the conversation needs next to reach the golden solution, and hint when the model does not get there. Hints stay at the intent level, from the user's point of view, and never leak the answer.
+
+11. **Q: Do I have to wait for the pass@k runs, and does the preferred run change the score?**
+A: There is nothing to run. Once the golden is complete, 8 pass@k runs launch automatically on the same prompt: 4 on Claude Opus 5.5 and 4 on Muse Wonder 1.1, each answering once with no follow ups. They typically take 15 to 20 minutes, so start planning your rubrics from the golden and your GTFA meanwhile. The preferred run has no impact: it only marks your golden, and all 8 runs are generated and graded whichever run is starred, with an average score that has to fall between 0.3 and 0.7. Present / Not Present is rated against the first valid Opus run, the reference run: download it and verify every prefilled rating yourself.
 
 ## Rubrics
 
-11. **Q: Can a subjective rubric be negative, or does the block have to be positive criteria?**
+12. **Q: Can a subjective rubric be negative, or does the block have to be positive criteria?**
 A: Negatives are expected. One gets written whenever something negatively impacting the UX is spotted in the comparison. The weight set is the same as the objective block, −5, −3, −1, +1, +3, +5, and the meaning is the impact on the user experience: a positive weight is the benefit when the property is there, a negative weight is the damage when the flaw is there, never how hard it was to achieve.
 
-12. **Q: Does every subjective criterion have to be not present in Model A?**
-A: No, no present / not present requirement exists on either model. Subjective rubrics are created by comparing the Model A and Model B outputs, so positives naturally end up more tied to Model B and negatives to Model A, as those are the runs performing better and worse respectively. That is a tendency, not a rule: a positive can be present in Model A, and a negative can be not present in both. What is not intended is a negative being present in the golden solution, as that is the best possible solution and nothing negatively impacting the user can exist in it.
+13. **Q: Does every subjective criterion have to be not present on the reference run?**
+A: No, no present / not present requirement exists. Subjective rubrics are created by comparing the golden's render with the reference run's (the first valid Opus run), so positives naturally end up more tied to the golden and negatives to the weaker render. That is a tendency, not a rule: a positive can be present on the reference run, and a negative can be not present on it. What is not intended is a negative being present in the golden solution, as that is the best possible solution and nothing negatively impacting the user can exist in it.
 
 ## Support
 
-13. **Q: Are support War Rooms available on weekdays?**
+14. **Q: Are support War Rooms available on weekdays?**
 A: Weekday War Room support is expected, although availability may vary. Pablo generally covers 7 AM to 11 AM PDT, and additional support may be available outside those hours. Contributors can reach out when they need clarification, and support can join when available.
